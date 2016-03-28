@@ -9,22 +9,22 @@
 <meta content="telephone=no" name="format-detection">
 <meta content="email=no" name="format-detection">
 <script type="text/javascript">
-    var currClientWidth, fontValue,originWidth;
-    originWidth=640;
-    __resize();
-    window.addEventListener('resize', __resize, false);
-    function __resize() {
-        currClientWidth = document.documentElement.clientWidth;
-        if (currClientWidth > 640) currClientWidth = 640;
-        if (currClientWidth < 320) currClientWidth = 320;
-        fontValue = ((62.5 * currClientWidth) /originWidth).toFixed(2);
-        document.documentElement.style.fontSize = fontValue + '%';
-    }
+var currClientWidth, fontValue,originWidth;
+originWidth=640;
+__resize();
+window.addEventListener('resize', __resize, false);
+function __resize() {
+  currClientWidth = document.documentElement.clientWidth;
+  if (currClientWidth > 640) currClientWidth = 640;
+  if (currClientWidth < 320) currClientWidth = 320;
+  fontValue = ((62.5 * currClientWidth) /originWidth).toFixed(2);
+  document.documentElement.style.fontSize = fontValue + '%';
+}
 </script>
 <link rel="stylesheet" href="https://raw.githubusercontent.com/zhenbinjing/onebase/master/onebase.css">
 <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
+
 </body>
 </html>
