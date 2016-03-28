@@ -1,8 +1,33 @@
+/*设置移动端默认样式*/
 body{font-family:Helvetica;-webkit-overflow-scrolling:touch; margin:0;}
 a,button,input,optgroup,select,textarea {-webkit-tap-highlight-color:rgba(0,0,0,0);}
 a,img {-webkit-touch-callout: none;}
 img{ max-width:100%;}
+/*设置移动端默认样式end*/
 
-/*定义pc端查看宽度*/
+/*定义容器*/
 .rq{max-width: 640px;min-width: 320px;}
 
+/*字体颜色*/
+.cl-{}
+
+/*字体大小*/
+.fz{}
+
+/*行高*/
+.lh{}
+
+/*背景颜色*/
+.bc{}
+
+/*宽度*/
+.w{}
+
+/*高度*/
+.h{}
+
+/*内边距*/
+.pt{}
+
+/*外边距*/
+.mt{}

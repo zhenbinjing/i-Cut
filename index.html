@@ -22,9 +22,36 @@ function __resize() {
 }
 </script>
 <link rel="stylesheet" href="https://raw.githubusercontent.com/zhenbinjing/onebase/master/onebase.css">
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/t.css">
 </head>
 <body>
 
+
+
+<!--滑动组件-->
+<div id="focus" class="focus">
+      <div class="hd">
+        <ul></ul>
+      </div>
+      <div class="bd">
+        <ul>
+          <li><a href="http://kefu5.kuaishang.cn/bs/im.htm?cas=56262___678688&amp;fi=64770&amp;ism=1" target="_blank" ><img  src="img/box8_1.png"  class="image" alt="" /></a></li>
+          <li><a href="http://kefu5.kuaishang.cn/bs/im.htm?cas=56262___678688&amp;fi=64770&amp;ism=1" target="_blank" ><img  src="img/box8_2.png"  class="image" alt="" /></a></li>
+          <li><a href="http://kefu5.kuaishang.cn/bs/im.htm?cas=56262___678688&amp;fi=64770&amp;ism=1" target="_blank" ><img  src="img/box8_3.png"  class="image" alt="" /></a></li>          
+        </ul>
+      </div>
+</div>
+<script src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+  TouchSlide({ 
+	  slideCell:"#focus",
+	  titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+	  mainCell:".bd ul", 
+	  effect:"left", 
+	  autoPlay:true,//自动播放
+	  autoPage:true, //自动分页
+  });
+</script>
 </body>
 </html>
