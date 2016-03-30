@@ -1,9 +1,9 @@
-//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-minify-css gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin --save-dev
+﻿//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-minify-css gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin --save-dev
 var gulp = require('gulp');
 var concat = require('gulp-concat');                            //- 多个文件合并为一个
 var imagemin = require('gulp-imagemin');       					//- 图片压缩
-var pngquant = require('imagemin-pngquant');					//- 使用pngquant深度压缩png图片的imagemin插件
-var cache = require('gulp-cache');
+var pngquant = require('imagemin-pngquant');					//- 深度压缩png插件
+var cache = require('gulp-cache');								//- 只压缩修改的图片，没有修改的图片直接从缓存文件读取
 var minifyCss = require('gulp-minify-css');                     //- 压缩CSS为一行
 var uglify = require('gulp-uglify');							//- js合并压缩
 var jshint = require('gulp-jshint');							//- js检测
@@ -16,11 +16,11 @@ var y_Sz="dist";
 
 gulp.task('imagemin', function () {
 	gulp.src('./'+y_Dz+'/img/*.{png,jpg,gif,ico}')
- 		.pipe(cache(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        })))
+ 		 .pipe(imagemin({
+          progressive: true,
+          svgoPlugins: [{removeViewBox: false}],				//不要移除svg的viewbox属性
+          use: [pngquant()] 									//使用pngquant深度压缩png图片的imagemin插件
+        }))
 	.pipe(gulp.dest('./'+y_Sz+'/img'));							//-输出路径
 });
 
