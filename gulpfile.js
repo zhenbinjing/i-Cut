@@ -4,7 +4,7 @@ var concat = require('gulp-concat');						//- 多个文件合并为一个
 var imagemin = require('gulp-imagemin'); 					//- 图片压缩
 var pngquant = require('imagemin-pngquant');					//- 深度压缩png插件
 var cache = require('gulp-cache');						//- 只压缩修改的图片，没有修改的图片直接从缓存文件读取
-var minifyCss = require('gulp-minify-css'); 					 //- 压缩CSS为一行
+var minifyCss = require('gulp-minify-css');					//- 压缩CSS为一行
 var uglify = require('gulp-uglify');						//- js合并压缩
 var jshint = require('gulp-jshint');						//- js检测
 var replace = require('gulp-replace');						//- 文本替换
@@ -16,12 +16,12 @@ var y_Sz="dist";
 
 gulp.task('imagemin', function () {
 	gulp.src('./'+y_Dz+'/img/*.{png,jpg,gif,ico}')
- 		 .pipe(imagemin({
-          progressive: true,
-          svgoPlugins: [{removeViewBox: false}],					//不要移除svg的viewbox属性
-          use: [pngquant()]								//使用pngquant深度压缩png图片的imagemin插件
-        }))
-	.pipe(gulp.dest('./'+y_Sz+'/img'));					//-输出路径
+		 .pipe(imagemin({
+		progressive: true,
+		svgoPlugins: [{removeViewBox: false}],				//不要移除svg的viewbox属性
+		use: [pngquant()]						//使用pngquant深度压缩png图片的imagemin插件
+		}))
+		.pipe(gulp.dest('./'+y_Sz+'/img'));				//-输出路径
 });
 
 gulp.task('concat', function() {							 //- 创建一个名为 concat 的 task
@@ -49,10 +49,10 @@ gulp.task('jshint', function() {							//检查文件
 
 gulp.task('processhtml', function () {
 	var date = new Date().getTime();
-    gulp.src('./'+y_Dz+'/*.html')
+	gulp.src('./'+y_Dz+'/*.html')
 	.pipe(replace(/_VERSION_/gi, date))
-    .pipe(processhtml())
-    .pipe(gulp.dest('./'+y_Sz+'/'));
+	.pipe(processhtml())
+	.pipe(gulp.dest('./'+y_Sz+'/'));
 });
 
 gulp.task('htmlys', function () {							//需要时单独执行
