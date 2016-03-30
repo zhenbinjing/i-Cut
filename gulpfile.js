@@ -1,7 +1,9 @@
-//npm install gulp-concat gulp-imagemin gulp-minify-css gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin --save-dev
+//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-minify-css gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin --save-dev
 var gulp = require('gulp');
 var concat = require('gulp-concat');                            //- 多个文件合并为一个
 var imagemin = require('gulp-imagemin');       					//- 图片压缩
+var pngquant = require('imagemin-pngquant');					//- 使用pngquant深度压缩png图片的imagemin插件
+var cache = require('gulp-cache');
 var minifyCss = require('gulp-minify-css');                     //- 压缩CSS为一行
 var uglify = require('gulp-uglify');							//- js合并压缩
 var jshint = require('gulp-jshint');							//- js检测
@@ -14,13 +16,12 @@ var y_Sz="dist";
 
 gulp.task('imagemin', function () {
 	gulp.src('./'+y_Dz+'/img/*.{png,jpg,gif,ico}')
-	.pipe(imagemin({
-	      optimizationLevel: 5, 								//类型：Number  默认：3  取值范围：0-7（优化等级）
-		  progressive: true,									//类型：Boolean 默认：false 无损压缩jpg图片
-		  interlaced: true, 									//类型：Boolean 默认：false 隔行扫描gif进行渲染
-		  multipass: true 									    //类型：Boolean 默认：false 多次优化svg直到完全优化
-		}))
-	.pipe(gulp.dest('./'+y_Sz+'/img'));							//输出路径
+ 		.pipe(cache(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        })))
+	.pipe(gulp.dest('./'+y_Sz+'/img'));							//-输出路径
 });
 
 gulp.task('concat', function() {                                //- 创建一个名为 concat 的 task
