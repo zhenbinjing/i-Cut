@@ -1,9 +1,10 @@
-﻿//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-minify-css gulp-uncss gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin --save-dev
+﻿//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-autoprefixer gulp-minify-css gulp-uncss gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin --save-dev
 var gulp = require('gulp');
 var concat = require('gulp-concat');								//- 多个文件合并为一个
 var imagemin = require('gulp-imagemin'); 							//- 图片压缩
 var pngquant = require('imagemin-pngquant');						//- 深度压缩png插件
 var cache = require('gulp-cache');									//- 只压缩修改的图片，没有修改的图片直接从缓存文件读取
+var autoprefixer = require('gulp-autoprefixer');					//- 补充浏览器前缀
 var minifyCss = require('gulp-minify-css');							//- 压缩CSS为一行
 var uncss = require('gulp-uncss');									//- 删除没用到的css
 var uglify = require('gulp-uglify');								//- js合并压缩
@@ -30,6 +31,16 @@ gulp.task('concat', function() {									//- 创建一个名为 concat 的 task
 	gulp.src(['./'+y_Dz+'/css/*.css'])								//- 需要处理的css文件，放到一个字符串数组里	
 	.pipe(replace(/_VERSION_/gi, date))								//- 文件指纹							
 	.pipe(concat('index.css'))										//- 合并后的文件名
+	.pipe(autoprefixer({
+            browsers: [
+			'last 2 version',										//- 主流浏览器的最新两个版本
+			'ios 7',												//- IOS7版本
+			'android 4',											//- android4版本
+			'Firefox >= 20',										//- 火狐浏览器的版本大于或等于20
+			'last 2 Explorer versions'],							//- IE的最新两个版本
+            cascade: true,											//- 是否美化属性值 默认：true 像这样：-webkit-transform: rotate(45deg); transform: rotate(45deg);
+            remove:true 											//- 是否去掉不必要的前缀 默认：true 
+    }))
 	.pipe(uncss({
       html: ['./'+y_Dz+'/*.html'],									//- 检查的页面
       ignore: ['abc','.abc','#abc']			    					//- 忽略的标签 class or id or 分号隔开
