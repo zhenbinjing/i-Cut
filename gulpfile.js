@@ -12,8 +12,8 @@ var replace = require('gulp-replace');								//- 文本替换
 var processhtml = require('gulp-processhtml');						//- html更改模板
 var htmlmin = require('gulp-htmlmin');								//- html压缩
 
-var y_Dz="src";
-var y_Sz="dist";
+var y_Dz="src";														//- 生产环境路径
+var y_Sz="dist";													//- 上线环境路径
 
 gulp.task('imagemin', function () {
 	gulp.src('./'+y_Dz+'/img/*.{png,jpg,gif,ico}')
