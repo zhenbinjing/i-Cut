@@ -17,18 +17,18 @@ var y_Sz="dist";													//- 上线环境路径
 
 gulp.task('imagemin', function () {
 	gulp.src('./'+y_Dz+'/img/*.{png,jpg,gif,ico}')
-		 .pipe(imagemin({
-		progressive: true,
-		svgoPlugins: [{removeViewBox: false}],						//- 不要移除svg的viewbox属性
-		use: [pngquant()]											//- 使用pngquant深度压缩png图片的imagemin插件
-		}))
-		.pipe(gulp.dest('./'+y_Sz+'/img'));							//-输出路径
+	.pipe(cache(imagemin({
+          progressive: true,
+          svgoPlugins: [{removeViewBox: false}],					//- 不要移除svg的viewbox属性
+          use: [pngquant()]											//- 使用pngquant深度压缩png图片的imagemin插件							
+        })))
+	.pipe(gulp.dest('./'+y_Sz+'/img'));								//-输出路径
 });
 
 gulp.task('concat', function() {									//- 创建一个名为 concat 的 task
 	var date = new Date().getTime();								//- 创建版本时间	
 	gulp.src(['./'+y_Dz+'/css/*.css'])								//- 需要处理的css文件，放到一个字符串数组里	
-	.pipe(replace(/_VERSION_/gi, date))								
+	.pipe(replace(/_VERSION_/gi, date))								//- 文件指纹							
 	.pipe(concat('index.css'))										//- 合并后的文件名
 	.pipe(uncss({
       html: ['./'+y_Dz+'/*.html'],									//- 检查的页面
@@ -52,7 +52,7 @@ gulp.task('jshint', function() {									//- 检查文件
 	.pipe(jshint.reporter('default'));								//- 检查错误
 });
 
-gulp.task('processhtml', function () {
+gulp.task('processhtml', function () {								//- 修改该html的dom
 	var date = new Date().getTime();
 	gulp.src('./'+y_Dz+'/*.html')
 	.pipe(replace(/_VERSION_/gi, date))
