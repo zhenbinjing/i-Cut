@@ -35,7 +35,7 @@ gulp.task('concat', function() {									//- 创建一个名为 concat 的 task
             browsers: [
 			'last 2 version',										//- 主流浏览器的最新两个版本
 			'ios 7',												//- IOS7版本
-			'android 4',											//- android4版本
+			'android 2.3',											//- android4版本
 			'Firefox >= 20',										//- 火狐浏览器的版本大于或等于20
 			'last 2 Explorer versions'],							//- IE的最新两个版本
             cascade: true,											//- 是否美化属性值 默认：true 像这样：-webkit-transform: rotate(45deg); transform: rotate(45deg);
