@@ -31,8 +31,8 @@ gulp.task('concat', function() {									//- 创建一个名为 concat 的 task
 	.pipe(replace(/_VERSION_/gi, date))								
 	.pipe(concat('index.css'))										//- 合并后的文件名
 	.pipe(uncss({
-      html: ['./'+y_Dz+'/*.html'],									//- 检查的頁面
-      ignore: ['.focus .hd ul .on','.abc'] 							//- 忽略的class or id
+      html: ['./'+y_Dz+'/*.html'],									//- 检查的页面
+      ignore: ['.focus .hd ul .on'] 							    //- 忽略的标签 class or id or 分号隔开
      }))
 	.pipe(minifyCss({compatibility: 'ie8', keepBreaks:false}))		//- 压缩处理成一行,兼容ie
 	.pipe(gulp.dest('./'+y_Sz+'/css'));								//- 输出文件本地
