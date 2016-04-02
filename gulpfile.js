@@ -74,16 +74,19 @@ gulp.task('processhtml',function(){					//- 修改该html的dom
 });
 
 gulp.task('fs',function(){
-	return FontSpider(['./'+y_Dz+'/*.html'],{			//- 删除多余的字体，添加return返回最终的数据流
-	ignore:['']							//- 忽略的文件
-	});		
+	return FontSpider(['./'+y_Dz+'/*.html']);		//- 删除多余的字体，添加return返回最终的数据流		
 });		
 
 gulp.task('cp',['fs'],function(){					//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
 	gulp.src(['./'+y_Dz+'/font/**'],{				//- 被复制的文件夹下的所有文件
 	base: './'+y_Dz+'/font'						//- 被复制的目标路径  
 	})
-	.pipe(gulp.dest('./'+y_Sz+'/font'));				//- 输出路径
+	.pipe(gulp.dest('./'+y_Sz+'/font'))				//- 输出路径	
+	
+	gulp.src(['./'+y_Dz+'/icon/**'],{				//- 被复制的文件夹下的所有文件
+	base: './'+y_Dz+'/icon'						//- 被复制的目标路径  
+	})
+	.pipe(gulp.dest('./'+y_Sz+'/icon'));
 });
 
 /*-------------bs,html这两个命令是需要时手动执行-----------------*/
