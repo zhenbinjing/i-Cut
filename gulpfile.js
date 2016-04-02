@@ -2,30 +2,30 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');								//- 多个文件合并为一个
 var imagemin = require('gulp-imagemin'); 							//- 图片压缩
-var pngquant = require('imagemin-pngquant');						//- 深度压缩png插件
-var cache = require('gulp-cache');									//- 只压缩修改的图片，没有修改的图片直接从缓存文件读取
-var autoprefixer = require('gulp-autoprefixer');					//- 补充浏览器前缀
+var pngquant = require('imagemin-pngquant');							//- 深度压缩png插件
+var cache = require('gulp-cache');								//- 只压缩修改的图片，没有修改的图片直接从缓存文件读取
+var autoprefixer = require('gulp-autoprefixer');							//- 补充浏览器前缀
 var minifyCss = require('gulp-minify-css');							//- 压缩CSS为一行
-var uncss = require('gulp-uncss');									//- 删除没用到的css
-var FontSpider = require('font-spider');							//- 删除没用到的字体
+var uncss = require('gulp-uncss');								//- 删除没用到的css
+var FontSpider = require('font-spider');								//- 删除没用到的字体
 var uglify = require('gulp-uglify');								//- js合并压缩
 var jshint = require('gulp-jshint');								//- js检测
 var replace = require('gulp-replace');								//- 文本替换
-var processhtml = require('gulp-processhtml');						//- html更改模板
+var processhtml = require('gulp-processhtml');							//- html更改模板
 var htmlmin = require('gulp-htmlmin');								//- html压缩
 var browserSync = require('browser-sync');							//- 同步测试工具
 
-var y_Dz="src";														//- 生产环境路径
-var y_Sz="dist";													//- 上线环境路径
+var y_Dz="src";											//- 生产环境路径
+var y_Sz="dist";											//- 上线环境路径
 
 gulp.task('imagemin', function () {
 	gulp.src('./'+y_Dz+'/img/*.{png,jpg,gif,ico}')
 		.pipe(cache(imagemin({
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],					//- 不要移除svg的viewbox属性
-			use: [pngquant()]										//- 使用pngquant深度压缩png图片的imagemin插件							
+			use: [pngquant()]							//- 使用pngquant深度压缩png图片的imagemin插件							
         })))
-		.pipe(gulp.dest('./'+y_Sz+'/img'));							//- 输出路径
+		.pipe(gulp.dest('./'+y_Sz+'/img'));						//- 输出路径
 });
 
 gulp.task('concat', function() {									//- 创建一个名为 concat 的 task
