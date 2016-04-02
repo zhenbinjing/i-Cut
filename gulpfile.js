@@ -1,4 +1,4 @@
-﻿//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-autoprefixer gulp-minify-css gulp-uncss font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync --save-dev
+﻿//npm install gulp gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-autoprefixer gulp-minify-css gulp-uncss font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync --save-dev
 var gulp = require('gulp');
 var concat = require('gulp-concat');								//- 多个文件合并为一个
 var imagemin = require('gulp-imagemin'); 							//- 图片压缩
