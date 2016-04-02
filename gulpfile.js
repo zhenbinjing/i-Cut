@@ -1,4 +1,4 @@
-//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-autoprefixer gulp-minify-css gulp-uncss font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync --save-dev
+﻿//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-autoprefixer gulp-minify-css gulp-uncss font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync --save-dev
 var gulp = require('gulp');
 var concat = require('gulp-concat');								//- 多个文件合并为一个
 var imagemin = require('gulp-imagemin'); 							//- 图片压缩
@@ -73,8 +73,6 @@ gulp.task('processhtml', function () {								//- 修改该html的dom
 		.pipe(gulp.dest('./'+y_Sz+'/'));
 });
 
-/*-------------bs,html这两个命令是需要时手动执行-----------------*/
-
 gulp.task('fs', function() {
 	return FontSpider(['./'+y_Dz+'/*.html'],{						//- 删除多余的字体，添加return返回最终的数据流
 			ignore:['']												//- 忽略的文件
@@ -87,6 +85,8 @@ gulp.task('cp',['fs'],function () {									//- 先把fs命令执行完后，再
     })
 		.pipe(gulp.dest('./'+y_Sz+'/font'));						//- 输出路径
 });
+
+/*-------------bs,html这两个命令是需要时手动执行-----------------*/
 
 gulp.task('html', function () {										
 	var options = {
