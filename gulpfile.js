@@ -29,7 +29,7 @@ gulp.task('imagemin', function() {
 });
 
 gulp.task('concat', function() {									//- 创建一个名为 concat 的 task
-	var date = new Date().getTime();							//- 创建版本时间	
+	var date=new Date().getTime();								//- 创建版本时间	
 	gulp.src(['./'+y_Dz+'/css/*.css'])								//- 需要处理的css文件，放到一个字符串数组里	
 		.pipe(replace(/_VERSION_/gi, date))						//- 文件指纹							
 		.pipe(concat('index.css'))							//- 合并后的文件名
