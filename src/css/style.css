@@ -1,9 +1,21 @@
-/*设置移动端默认样式*/
+﻿/*设置移动端默认样式*/
 body{font-family:Helvetica;-webkit-overflow-scrolling:touch; margin:0;}
 a,button,input,optgroup,select,textarea {-webkit-tap-highlight-color:rgba(0,0,0,0);}
 a,img {-webkit-touch-callout: none;}
 img{ max-width:100%;}
 /*设置移动端默认样式end*/
+
+@font-face {
+	font-family: 'fzcjjt';
+	src: url('../font/fzcjjt.eot');
+	src: url('../font/fzcjjt.eot?#font-spider') format('embedded-opentype'),
+		 url('../font/fzcjjt.woff') format('woff'),
+		 url('../font/fzcjjt.ttf') format('truetype'),
+		 url('../font/fzcjjt.svg#FontName') format('svg');
+  font-weight: normal;
+  font-style: normal;		 
+}
+.fzcjjt{font-family: 'fzcjjt';}
 
 /*定义容器*/
 .rq{max-width: 640px;min-width: 320px;}
@@ -12,7 +24,7 @@ img{ max-width:100%;}
 .cl-{}
 
 /*字体大小*/
-.fz{}
+.fz60{ font-size: 6rem;}
 
 /*行高*/
 .lh{}
