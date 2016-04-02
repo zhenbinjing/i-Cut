@@ -74,7 +74,7 @@ gulp.task('processhtml',function(){					//- 修改该html的dom
 });
 
 gulp.task('fs',function(){
-	return FontSpider(['./'+y_Dz+'/*.html']);		//- 删除多余的字体，添加return返回最终的数据流		
+	return FontSpider(['./'+y_Dz+'/*.html']);		//- 删除多余的字体和图标，添加return返回最终的数据流		
 });		
 
 gulp.task('cp',['fs'],function(){					//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
