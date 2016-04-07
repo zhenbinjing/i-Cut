@@ -17,12 +17,13 @@ img{ max-width:100%;}
 .fzcjjt{font-family: 'fzcjjt';}
 
 /*自定义图标*/
-@font-face {font-family: "iconfont";
-  src: url('../icon/iconfont.eot'); /* IE9*/
-  src: url('../icon/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
-  url('../icon/iconfont.woff') format('woff'), /* chrome, firefox */
-  url('../icon/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('../icon/iconfont.svg') format('svg'); /* iOS 4.1- */
+@font-face {
+	font-family: "iconfont";
+	src: url('../icon/iconfont.eot'); 
+	src: url('../icon/iconfont.eot') format('embedded-opentype'), 
+	     url('../icon/iconfont.woff') format('woff'), 
+	     url('../icon/iconfont.ttf') format('truetype'),
+	     url('../icon/iconfont.svg') format('svg');
 }
 .iconfont {
   font-family:"iconfont" !important;
@@ -57,3 +58,43 @@ img{ max-width:100%;}
 
 /*外边距*/
 .mt{}
+
+/*响应式栅格*/
+[class*="col-"] {float: left;}
+
+/*m*/
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {width: 100%; float:none;}
+}
+
+/*ipad*/
+@media (min-width: 768px) {	
+	.col-p-12 {width: 100%;}
+	.col-p-11 {width: 91.66666667%;}
+	.col-p-10 {width: 83.33333333%;}
+	.col-p-9 {width: 75%;}
+	.col-p-8 {width: 66.66666667%;}
+	.col-p-7 {width: 58.33333333%;}
+	.col-p-6 {width: 50%;}
+	.col-p-5 {width: 41.66666667%;}
+	.col-p-4 {width: 33.33333333%;}
+	.col-p-3 {width: 25%;}
+	.col-p-2 {width: 16.66666667%;}
+	.col-p-1 {width: 8.33333333%;}
+}
+
+/*pc*/
+@media (min-width: 1200px) {	
+	.col-12 {width: 100%;}
+	.col-11 {width: 91.66666667%;}
+	.col-10 {width: 83.33333333%;}
+	.col-9 {width: 75%;}
+	.col-8 {width: 66.66666667%;}
+	.col-7 {width: 58.33333333%;}
+	.col-6 {width: 50%;}
+	.col-5 {width: 41.66666667%;}
+	.col-4 {width: 33.33333333%;}
+	.col-3 {width: 25%;}
+	.col-2 {width: 16.66666667%;}
+	.col-1 {width: 8.33333333%;}
+}

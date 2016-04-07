@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>移动框架模版</title>
+<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<script type="text/javascript">
+var currClientWidth, fontValue,originWidth;
+originWidth=1920;
+__resize();
+window.addEventListener('resize', __resize, false);
+function __resize() {
+  currClientWidth = document.documentElement.clientWidth;
+  if (currClientWidth > 1920) currClientWidth = 1920;
+  if (currClientWidth < 320) currClientWidth = 320;
+  fontValue = ((62.5 * currClientWidth) /originWidth).toFixed(2);
+  document.documentElement.style.fontSize = fontValue + '%';
+}
+</script>
+<!-- build:css css/index.css?v=_VERSION_-->
+<link rel="stylesheet" href="css/onebase.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/t.css">
+<!-- /build -->
+</head>
+<body>
+
+<div class="box1 tac">
+<div class="col-3 col-p-6">ol-3 col-p-6</div><div class="col-3 col-p-6">ol-3 col-p-6</div><div class="col-3 col-p-6">ol-3 col-p-6</div><div class="col-3 col-p-6">ol-3 col-p-6</div>
+</div>
+
+<!-- build:js js/index.js?v=_VERSION_ -->
+<script src="js/TouchSlide.1.1.js"></script>
+<script src="js/z.js"></script>
+<!-- /build -->
+</body>
+</html>
