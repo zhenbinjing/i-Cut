@@ -40,6 +40,7 @@ img{ max-width:100%;}
 
 /*字体大小*/
 .fz60{ font-size: 6rem;}
+.fz50{ font-size: 5rem;}
 
 /*行高*/
 .lh{}
@@ -64,11 +65,13 @@ img{ max-width:100%;}
 
 /*m*/
 @media only screen and (max-width: 767px) {
+	.row {width:100%;}
     [class*="col-"] {width: 100%; float:none;}
 }
 
 /*ipad*/
 @media (min-width: 768px) {	
+	.row {width:100%;}
 	.col-p-12 {width: 100%;}
 	.col-p-11 {width: 91.66666667%;}
 	.col-p-10 {width: 83.33333333%;}
@@ -84,7 +87,8 @@ img{ max-width:100%;}
 }
 
 /*pc*/
-@media (min-width: 1200px) {	
+@media (min-width: 1200px) {
+	.row {width:1200px;}	
 	.col-12 {width: 100%;}
 	.col-11 {width: 91.66666667%;}
 	.col-10 {width: 83.33333333%;}
