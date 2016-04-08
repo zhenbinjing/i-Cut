@@ -36,21 +36,33 @@ img{ max-width:100%;}
 .rq{max-width: 640px;min-width: 320px;}
 
 /*字体颜色*/
-.cl-{}
+.cl-fff{color: #fff;}
 
 /*字体大小*/
 .fz60{ font-size: 6rem;}
 .fz50{ font-size: 5rem;}
-.fz30{ font-size: 3rem;}
+
 
 /*行高*/
 .lh100{ line-height:100%;}
 
 /*背景颜色*/
-.bc{}
+.bc-04578B{background-color: #04578B;}
+.bc-f36{background-color: #f36;}
 
 /*宽度*/
-.w{}
+.w12 {width: 100%;}
+.w11 {width: 91.66666667%;}
+.w10 {width: 83.33333333%;}
+.w9 {width: 75%;}
+.w8 {width: 66.66666667%;}
+.w7 {width: 58.33333333%;}
+.w6 {width: 50%;}
+.w5 {width: 41.66666667%;}
+.w4 {width: 33.33333333%;}
+.w3 {width: 25%;}
+.w2 {width: 16.66666667%;}
+.w1 {width: 8.33333333%;}
 
 /*高度*/
 .h{}
@@ -67,7 +79,7 @@ img{ max-width:100%;}
 /*m*/
 @media only screen and (max-width: 768px) {
 	.row {width:100%;}
-    [class*="col-"] {width: 100%; float:none;}
+    [class*="col-"] {width: 100%;}
 }
 
 /*ipad*/
