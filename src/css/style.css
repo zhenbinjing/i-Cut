@@ -41,9 +41,10 @@ img{ max-width:100%;}
 /*字体大小*/
 .fz60{ font-size: 6rem;}
 .fz50{ font-size: 5rem;}
+.fz30{ font-size: 3rem;}
 
 /*行高*/
-.lh{}
+.lh100{ line-height:100%;}
 
 /*背景颜色*/
 .bc{}
@@ -64,13 +65,13 @@ img{ max-width:100%;}
 [class*="col-"] {float: left;}
 
 /*m*/
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.row {width:100%;}
     [class*="col-"] {width: 100%; float:none;}
 }
 
 /*ipad*/
-@media (min-width: 768px) {	
+@media (min-width: 769px) {	
 	.row {width:100%;}
 	.col-p-12 {width: 100%;}
 	.col-p-11 {width: 91.66666667%;}

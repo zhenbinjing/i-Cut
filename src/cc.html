@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>移动框架模版</title>
+<title>响应式模版</title>
 <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
 <meta content="yes" name="apple-mobile-web-app-capable">
 <meta content="black" name="apple-mobile-web-app-status-bar-style">
@@ -10,12 +10,12 @@
 <meta content="email=no" name="format-detection">
 <script type="text/javascript">
 var currClientWidth, fontValue,originWidth;
-originWidth=1920;
+originWidth=750;
 __resize();
 window.addEventListener('resize', __resize, false);
 function __resize() {
   currClientWidth = document.documentElement.clientWidth;
-  if (currClientWidth > 1920) currClientWidth = 1920;
+  if (currClientWidth > 750) currClientWidth = 750;
   if (currClientWidth < 320) currClientWidth = 320;
   fontValue = ((62.5 * currClientWidth) /originWidth).toFixed(2);
   document.documentElement.style.fontSize = fontValue + '%';
@@ -30,7 +30,7 @@ function __resize() {
 <body>
 
 <div class="box1 tac fz50">
-<div class="row clearfix mlra">
+<div class="row clearfix mlra lh100">
 <div class="col-3 col-p-6">col-3 col-p-6</div><div class="col-3 col-p-6">col-3 col-p-6</div><div class="col-3 col-p-6">col-3 col-p-6</div><div class="col-3 col-p-6">col-3 col-p-6</div>
 </div>
 </div>
