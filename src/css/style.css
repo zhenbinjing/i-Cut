@@ -73,43 +73,51 @@ img{ max-width:100%;}
 /*外边距*/
 .mt{}
 
-/*响应式栅格*/
-[class*="col-"] {float: left;}
-.row {width:100%;}
+/*响应式栅格(移动优先)*/
 /*m*/
-@media only screen and (max-width: 768px) {	
-    [class*="col-"] {width: 100%;}
-}
-
+[class*="col-"] {float: left;width: 100%;}
+.row {width:100%;}
+.col-m-12 {width: 100%;}
+.col-m-11 {width: 91.66666667%;}
+.col-m-10 {width: 83.33333333%;}
+.col-m-9 {width: 75%;}
+.col-m-8 {width: 66.66666667%;}
+.col-m-7 {width: 58.33333333%;}
+.col-m-6 {width: 50%;}
+.col-m-5 {width: 41.66666667%;}
+.col-m-4 {width: 33.33333333%;}
+.col-m-3 {width: 25%;}
+.col-m-2 {width: 16.66666667%;}
+.col-m-1 {width: 8.33333333%;}
 /*ipad*/
 @media (min-width: 769px) {	
-	.col-p-12 {width: 100%;}
-	.col-p-11 {width: 91.66666667%;}
-	.col-p-10 {width: 83.33333333%;}
-	.col-p-9 {width: 75%;}
-	.col-p-8 {width: 66.66666667%;}
-	.col-p-7 {width: 58.33333333%;}
-	.col-p-6 {width: 50%;}
-	.col-p-5 {width: 41.66666667%;}
-	.col-p-4 {width: 33.33333333%;}
-	.col-p-3 {width: 25%;}
-	.col-p-2 {width: 16.66666667%;}
-	.col-p-1 {width: 8.33333333%;}
+.col-p-12 {width: 100%;}
+.col-p-11 {width: 91.66666667%;}
+.col-p-10 {width: 83.33333333%;}
+.col-p-9 {width: 75%;}
+.col-p-8 {width: 66.66666667%;}
+.col-p-7 {width: 58.33333333%;}
+.col-p-6 {width: 50%;}
+.col-p-5 {width: 41.66666667%;}
+.col-p-4 {width: 33.33333333%;}
+.col-p-3 {width: 25%;}
+.col-p-2 {width: 16.66666667%;}
+.col-p-1 {width: 8.33333333%;}
 }
 
 /*pc*/
 @media (min-width: 1200px) {
-	.row {width:1200px;}	
-	.col-12 {width: 100%;}
-	.col-11 {width: 91.66666667%;}
-	.col-10 {width: 83.33333333%;}
-	.col-9 {width: 75%;}
-	.col-8 {width: 66.66666667%;}
-	.col-7 {width: 58.33333333%;}
-	.col-6 {width: 50%;}
-	.col-5 {width: 41.66666667%;}
-	.col-4 {width: 33.33333333%;}
-	.col-3 {width: 25%;}
-	.col-2 {width: 16.66666667%;}
-	.col-1 {width: 8.33333333%;}
+.row {width:1200px;}
+.col-12 {width: 100%;}
+.col-11 {width: 91.66666667%;}
+.col-10 {width: 83.33333333%;}
+.col-9 {width: 75%;}
+.col-8 {width: 66.66666667%;}
+.col-7 {width: 58.33333333%;}
+.col-6 {width: 50%;}
+.col-5 {width: 41.66666667%;}
+.col-4 {width: 33.33333333%;}
+.col-3 {width: 25%;}
+.col-2 {width: 16.66666667%;}
+.col-1 {width: 8.33333333%;}
 }
