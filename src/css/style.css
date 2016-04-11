@@ -74,6 +74,7 @@ img{ max-width:100%;}
 .mt{}
 
 /*响应式栅格(移动优先)*/
+
 /*m*/
 [class*="col-"] {float: left;width: 100%;}
 .row {width:100%;}
@@ -89,6 +90,7 @@ img{ max-width:100%;}
 .col-m-3 {width: 25%;}
 .col-m-2 {width: 16.66666667%;}
 .col-m-1 {width: 8.33333333%;}
+
 /*ipad*/
 @media (min-width: 769px) {	
 .col-p-12 {width: 100%;}
