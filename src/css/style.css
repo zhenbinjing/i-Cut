@@ -75,16 +75,14 @@ img{ max-width:100%;}
 
 /*响应式栅格*/
 [class*="col-"] {float: left;}
-
+.row {width:100%;}
 /*m*/
-@media only screen and (max-width: 768px) {
-	.row {width:100%;}
+@media only screen and (max-width: 768px) {	
     [class*="col-"] {width: 100%;}
 }
 
 /*ipad*/
 @media (min-width: 769px) {	
-	.row {width:100%;}
 	.col-p-12 {width: 100%;}
 	.col-p-11 {width: 91.66666667%;}
 	.col-p-10 {width: 83.33333333%;}
