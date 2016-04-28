@@ -14,7 +14,7 @@ var jshint = require('gulp-jshint');					//- js检测
 var replace = require('gulp-replace');					//- 文本替换
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
-var browserSync = require('browser-sync');				//- 同步测试工具
+var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 
 var y_Sz="src";								//- 生产环境路径
 var y_Dz="dist";							//- 上线环境路径
