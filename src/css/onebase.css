@@ -1,4 +1,4 @@
-﻿/*去除默认样式,可以用normalize.css代替,这里是按照我平时有的标签做的reset*/
+﻿/*去除默认样式,可以用normalize.css代替,这里是按照我平时用的标签做的reset*/
 
 *{  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 body,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,h2,p,img,a,em{ margin:0; padding:0; outline:0; border:0; list-style:none; text-decoration:none; border-collapse:collapse; border-spacing:0; font-family:"微软雅黑";}
