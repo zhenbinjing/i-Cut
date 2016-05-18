@@ -86,6 +86,8 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .vam{vertical-align: middle;}
 .vatb{vertical-align: text-bottom;}
 .vatt{vertical-align: text-top;}
+.vasup{vertical-align:super;}
+.vasub{vertical-align:sub;}
 
 /*内联定位(左右)*/
 .drtl{direction:ltr;}
@@ -96,6 +98,14 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .tal{text-align: left;}
 .tar{text-align: right;}
 .taj{text-align: justify;}
+
+/*字体垂直排版*/
+.verticle-mode {
+    writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;      
+    writing-mode: vertical-rl;
+    *writing-mode: tb-rl;
+}
 
 /*字体样式*/
 .fwb{font-weight: bold;}
