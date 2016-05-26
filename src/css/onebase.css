@@ -7,9 +7,6 @@ body,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,h2,p
 .clearfix:after {visibility: hidden; display: block; clear: both; content:" "; font-size: 0; height: 0;}
 .clearfix{*zoom:1;}
 
-/*略号文字截断*/
-.cut{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
-
 /*元素状态*/
 .dn{display: none;}
 .db{display: block;}
@@ -99,13 +96,11 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .tar{text-align: right;}
 .taj{text-align: justify;}
 
+/*略号文字截断*/
+.cut{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+
 /*字体垂直排版*/
-.wm {
-    writing-mode: tb-rl;
-    -webkit-writing-mode: vertical-rl;      
-    writing-mode: vertical-rl;
-    *writing-mode: tb-rl;
-}
+.wm {writing-mode: tb-rl; -webkit-writing-mode: vertical-rl;  writing-mode: vertical-rl; *writing-mode: tb-rl;}
 
 /*字体样式*/
 .fwb{font-weight: bold;}
@@ -122,6 +117,12 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .bgptc{background-position: top center;}
 .bgpbc{background-position: bottom center;}
 .bgrn{ background-repeat: no-repeat;}
+
+/*背景色被裁剪到盒子的内边距框中显示(border-box,content-box)*/
+.bgcpd{-webkit-background-clip: padding-box;-moz-background-clip: padding-box;background-clip: padding-box;}
+
+/*背景图像相对于盒子的内边距框中定位(border-box,content-box)*/
+.bgopd{-webkit-background-origin:padding-box;background-origin:padding-box;}
 
 /*背景填充*/
 .bgscv{background-size: cover;}
