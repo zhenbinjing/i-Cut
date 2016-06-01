@@ -5,6 +5,9 @@ a,img {-webkit-touch-callout: none;}
 img{ max-width:100%;}
 /*设置移动端默认样式end*/
 
+html{ font-size:100px}
+.m{ max-width:640px; min-width:320px; overflow:hidden; margin:0 auto;}
+.pc{max-width:1200px; min-width:320px; overflow:hidden; margin:0 auto;}
 /*自定义字体*/
 @font-face {
 	font-family: 'fzcjjt';
@@ -32,15 +35,13 @@ img{ max-width:100%;}
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*定义容器*/
-.rq{max-width: 640px;min-width: 320px;}
 
 /*字体颜色*/
 .cl-fff{color: #fff;}
 
 /*字体大小*/
-.fz60{ font-size: 6rem;}
-.fz50{ font-size: 5rem;}
+.fz30{ font-size: 0.3rem;}
+
 
 /*行高*/
 .lh100{ line-height:100%;}
@@ -67,7 +68,7 @@ img{ max-width:100%;}
 .h{}
 
 /*内边距*/
-.pt{}
+.pt20{ padding-top: 0.2rem;}
 
 /*外边距*/
 .mt{}

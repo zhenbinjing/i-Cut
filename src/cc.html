@@ -9,17 +9,22 @@
 <meta content="telephone=no" name="format-detection">
 <meta content="email=no" name="format-detection">
 <script type="text/javascript">
-var currClientWidth, fontValue,originWidth;
-originWidth=750;
-__resize();
-window.addEventListener('resize', __resize, false);
-function __resize() {
-  currClientWidth = document.documentElement.clientWidth;
-  if (currClientWidth > 750) currClientWidth = 750;
-  if (currClientWidth < 320) currClientWidth = 320;
-  fontValue = ((62.5 * currClientWidth) /originWidth).toFixed(2);
-  document.documentElement.style.fontSize = fontValue + '%';
+function resi() {
+	var html = document.querySelector("html");
+	var wW = document.body.clientWidth || document.documentElement.clientWidth;
+	var maxW = 640;
+	var minW = 320;
+	if (wW > maxW) wW = maxW;
+	var ratio = wW / minW;
+	html.style.fontSize = 50 * ratio + "px"
 }
+window.addEventListener("DOMContentLoaded", function() {
+	var bodys = document.querySelector("body").style;
+	bodys.opacity = "1";
+	bodys.filter = "alpha(opacity=100)";
+	resi()
+});
+window.addEventListener("resize", resi);
 </script>
 <!-- build:css css/index.css?v=_VERSION_-->
 <link rel="stylesheet" href="css/onebase.css">
@@ -29,7 +34,8 @@ function __resize() {
 </head>
 <body>
 
-<div class="box1 tac fz50">
+<div class="pc">
+<div class="box1 tac fz30">
 <div class="row clearfix mlra cl-fff bc-04578B">
 <div class="col-3 col-p-6">col-3 col-p-6</div><div class="col-3 col-p-6">col-3 col-p-6</div><div class="col-3 col-p-6">col-3 col-p-6</div><div class="col-3 col-p-6">col-3 col-p-6</div>
 </div>
@@ -46,6 +52,7 @@ function __resize() {
 </div>
 <div class="row clearfix mlra cl-fff bc-f36">
 <div class="col-2 col-p-3 col-m-6">col-2-3-6</div><div class="col-2 col-p-3 col-m-6">col-2-3-6</div><div class="col-2 col-p-3">col-2-3</div><div class="col-2 col-p-3">col-2-3</div><div class="col-2 col-p-6">col-2-6</div><div class="col-2 col-p-6">col-2-6</div>
+</div>
 </div>
 </div>
 

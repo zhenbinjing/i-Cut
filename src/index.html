@@ -9,17 +9,22 @@
 <meta content="telephone=no" name="format-detection">
 <meta content="email=no" name="format-detection">
 <script type="text/javascript">
-var currClientWidth, fontValue,originWidth;
-originWidth=640;
-__resize();
-window.addEventListener('resize', __resize, false);
-function __resize() {
-  currClientWidth = document.documentElement.clientWidth;
-  if (currClientWidth > 640) currClientWidth = 640;
-  if (currClientWidth < 320) currClientWidth = 320;
-  fontValue = ((62.5 * currClientWidth) /originWidth).toFixed(2);
-  document.documentElement.style.fontSize = fontValue + '%';
+function resi() {
+	var html = document.querySelector("html");
+	var wW = document.body.clientWidth || document.documentElement.clientWidth;
+	var maxW = 640;
+	var minW = 320;
+	if (wW > maxW) wW = maxW;
+	var ratio = wW / minW;
+	html.style.fontSize = 50 * ratio + "px"
 }
+window.addEventListener("DOMContentLoaded", function() {
+	var bodys = document.querySelector("body").style;
+	bodys.opacity = "1";
+	bodys.filter = "alpha(opacity=100)";
+	resi()
+});
+window.addEventListener("resize", resi);
 </script>
 <!-- build:css css/index.css?v=_VERSION_-->
 <link rel="stylesheet" href="css/onebase.css">
@@ -29,8 +34,9 @@ function __resize() {
 </head>
 <body>
 
-<div class="fzcjjt fz60">自定义字体123abcABC!</div>
-<div class="fzcjjt fz60">自定义图标-<span class="iconfont">&#xe603;</span></div>
+<div class="m">
+<div class="fzcjjt fz30 pt20">自定义字体123abcABC!</div>
+<div class="fzcjjt fz30">自定义图标-<span class="iconfont">&#xe603;</span></div>
 <!--滑动组件-->
 <div id="focus" class="focus">
       <div class="hd">
@@ -43,6 +49,7 @@ function __resize() {
           <li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img  src="img/c.png?v=_VERSION_"  alt="" /></a></li>          
         </ul>
       </div>
+</div>
 </div>
 <!-- build:js js/index.js?v=_VERSION_ -->
 <script src="js/TouchSlide.1.1.js"></script>
