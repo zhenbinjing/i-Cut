@@ -37,7 +37,7 @@ html{ font-size:100px}
 
 
 /*字体颜色*/
-.cl-fff{color: #fff;}
+.c-FF5700{color:#FF5700;}
 
 /*字体大小*/
 .fz30{ font-size: 0.3rem;}
@@ -71,7 +71,7 @@ html{ font-size:100px}
 .pt20{ padding-top: 0.2rem;}
 
 /*外边距*/
-.mt{}
+.mb20{margin-bottom: 0.2rem;}
 
 /*响应式栅格(移动优先)*/
 
