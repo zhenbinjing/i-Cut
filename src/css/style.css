@@ -5,9 +5,12 @@ a,img {-webkit-touch-callout: none;}
 img{ max-width:100%;}
 /*设置移动端默认样式end*/
 
-html{ font-size:100px}
-.m{ max-width:640px; min-width:320px; overflow:hidden; margin:0 auto;}
-.pc{max-width:1200px; min-width:320px; overflow:hidden; margin:0 auto;}
+html{font-size:100px}
+
+.m,.pc{ min-width:320px; overflow:hidden; margin:0 auto;}
+.m{max-width:640px;/*no*/}
+.pc{max-width:1200px;}
+
 /*自定义字体*/
 @font-face {
 	font-family: 'fzcjjt';
@@ -31,7 +34,7 @@ html{ font-size:100px}
 .iconfont {
   font-family:"iconfont" !important;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-width: 0.2px;/*no*/
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -40,8 +43,8 @@ html{ font-size:100px}
 .c-FF5700{color:#FF5700;}
 
 /*字体大小*/
-.fz30{ font-size: 0.3rem;}
-.fz25{ font-size: 0.25rem;}
+.fz30{ font-size: 30px;}
+.fz25{ font-size: 25px;}
 
 /*行高*/
 .lh100{ line-height:100%;}
@@ -68,10 +71,10 @@ html{ font-size:100px}
 .h{}
 
 /*内边距*/
-.pt20{ padding-top: 0.2rem;}
+.pt20{ padding-top: 20px;}
 
 /*外边距*/
-.mb20{margin-bottom: 0.2rem;}
+.mb20{margin-bottom: 20px;}
 
 /*响应式栅格(移动优先)*/
 
