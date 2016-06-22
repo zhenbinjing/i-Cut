@@ -5,7 +5,7 @@ a,img {-webkit-touch-callout: none;}
 img{ max-width:100%;}
 /*设置移动端默认样式end*/
 
-html{font-size:100px}
+html{font-size:100px;/*no*/}
 
 .m,.pc{ min-width:320px; overflow:hidden; margin:0 auto;}
 .m{max-width:640px;/*no*/}
