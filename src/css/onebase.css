@@ -90,11 +90,17 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .drtl{direction:ltr;}
 .drtl{direction:rtl;}
 
-/*字体排版*/
+/*文字排版*/
 .tac{text-align: center;}
 .tal{text-align: left;}
 .tar{text-align: right;}
 .taj{text-align: justify;}
+
+/*文字排版最后一行*/
+.talc{text-align-last: center;}
+.tall{text-align-last: left;}
+.talr{text-align-last: right;}
+.talj{text-align-last: justify;}
 
 /*略号文字截断*/
 .cut{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
