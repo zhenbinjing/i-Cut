@@ -10,6 +10,10 @@ src/css/style.css是设置关于有数值的样式的文件（有响应式栅格
 
 src/css/t.css是设置关于组件样式的文件。
 
+src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
+
+src/font/、src/icon/、src/img/分别是自定义字体、适量图标、图片。
+
 ##移动端开发
 
 规则1：要求设计师设计的PSD宽度为640px或其他标准尺寸，但DPI必须是为72,这样才接近一比一还原。
