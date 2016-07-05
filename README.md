@@ -6,7 +6,7 @@
 
 src/css/onebase.css是底层文件，没有设置任何关于数值的属性。
 
-src/css/style.css是设置关于有数值的样式的文件（有响应式栅格）。
+src/css/style.css是设置关于有数值的样式的文件（有响应式栅格和代码注释）。
 
 src/css/t.css是设置关于组件样式的文件。
 
@@ -22,7 +22,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、适量图标、图片
 
 从而告别繁琐的媒体查询。★★★（变量maxW就是设计稿的画布宽度值）★★★
 
-规则3：样式表里的单位写px，已内置gulp-px3rem，建议用Flexbox布局。
+规则3：样式表里所有单位写px，设计稿里的值是多少就写多少，已内置gulp-px3rem，建议用Flexbox布局。
 
 ##PC端开发
 
