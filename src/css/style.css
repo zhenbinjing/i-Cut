@@ -5,6 +5,7 @@ a,img {-webkit-touch-callout: none;}
 img{ max-width:100%;}
 /*设置移动端默认样式end*/
 
+/*为了方便计算html的值，所以初始化设置100px,对应的其他数值相当于除以100，在gulpfile文件的px3rem方法中设置。*/
 html{font-size:100px;/*no*/}
 
 .m,.pc{ min-width:320px; overflow:hidden; margin:0 auto;}
