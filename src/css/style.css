@@ -44,8 +44,36 @@ html{font-size:100px;/*no*/}
 .c-FF5700{color:#FF5700;}
 
 /*字体大小*/
-.fz30{ font-size: 30px;}
-.fz25{ font-size: 25px;}
+.fz12{font-size:12px}
+.fz14{font-size:14px}
+.fz16{font-size:16px}
+.fz18{font-size:18px}
+.fz20{font-size:20px}
+.fz22{font-size:22px}
+.fz24{font-size:24px}
+.fz26{font-size:26px}
+.fz28{font-size:28px}
+.fz30{font-size:30px}
+.fz32{font-size:32px}
+.fz34{font-size:34px}
+.fz36{font-size:36px}
+.fz38{font-size:38px}
+.fz40{font-size:40px}
+.fz42{font-size:42px}
+.fz44{font-size:44px}
+.fz46{font-size:46px}
+.fz48{font-size:48px}
+.fz50{font-size:50px}
+.fz52{font-size:52px}
+.fz54{font-size:54px}
+.fz56{font-size:56px}
+.fz58{font-size:58px}
+.fz60{font-size:60px}
+.fz62{font-size:62px}
+.fz64{font-size:64px}
+.fz66{font-size:66px}
+.fz68{font-size:68px}
+.fz70{font-size:70px}
 
 /*行高*/
 .lh100{ line-height:100%;}
