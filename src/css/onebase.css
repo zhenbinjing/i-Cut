@@ -3,21 +3,10 @@
 *{  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 body,div,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,h2,p,span,img,a,em{ margin:0; padding:0; outline:0; border:0; list-style:none; text-decoration:none; border-collapse:collapse; border-spacing:0; font-family:"微软雅黑";}
 
-/*清除浮动*/
-.clearfix:after {visibility: hidden; display: block; clear: both; content:" "; font-size: 0; height: 0;}
-.clearfix{*zoom:1;}
-
-/*元素状态*/
-.dn{display: none;}
-.db{display: block;}
-.dt{display: table;}
-.dtc{display: table-cell;}
-.dib{display: inline-block; *display: inline; *zoom: 1;}
-
 /*-----弹性伸缩start------*/
-.df{display:-webkit-box;display:-webkit-flex;display:flex;}
 
-/*
+/*------------------------
+
 水平的主轴:
 flex-direction: row | row-reverse | column | column-reverse; 
 row（默认值）：主轴为水平方向，起点在左端。
@@ -33,7 +22,10 @@ wrap-reverse：换行，第一行在下方
 
 flex-flow 是flex-direction与flex-wrap简写版。
 flex-flow: <flex-direction> || <flex-wrap>;
-*/ 
+
+------------------------*/
+
+.df{display:-webkit-box;display:-webkit-flex;display:flex;}
 
 /*项目水平垂直方向*/
 .ffrw{-webkit-flex-flow:row wrap; flex-flow:row wrap;}
@@ -41,6 +33,7 @@ flex-flow: <flex-direction> || <flex-wrap>;
 
 /*项目水平轴*/
 .jcc{-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center; }
+
 /*这里旧版语法有4个参数，而新版语法有5个参数，兼容写法新版语法的 space-around 是不可用的：*/
 .jcsa{ -webkit-justify-content:space-around; justify-content:space-around;}
 .jcsb{-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;}
@@ -67,6 +60,31 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .order3{-webkit-box-ordinal-group: 3; -webkit-order: 3; order: 3;}
 
 /*-----弹性伸缩end------*/
+
+
+/*-----排版解决方案start------*/
+
+/*清除浮动*/
+.clearfix:after {visibility: hidden; display: block; clear: both; content:" "; font-size: 0; height: 0;}
+.clearfix{*zoom:1;}
+
+/*略号文字截断(单行)*/
+.cut{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+
+/*略号文字截断(多行 -webkit-line-clamp 设置第几行截断)*/
+.cut2{overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; word-break: break-all;}
+
+/*字体垂直排版*/
+.wm {writing-mode: tb-rl; -webkit-writing-mode: vertical-rl;  writing-mode: vertical-rl; *writing-mode: tb-rl;}
+
+/*-----排版解决方案end------*/
+
+/*元素状态*/
+.dn{display: none;}
+.db{display: block;}
+.dt{display: table;}
+.dtc{display: table-cell;}
+.dib{display: inline-block; *display: inline; *zoom: 1;}
 
 /*元素可见性*/
 .vh{visibility: hidden;}
@@ -101,12 +119,6 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .tall{text-align-last: left;}
 .talr{text-align-last: right;}
 .talj{text-align-last: justify;}
-
-/*略号文字截断*/
-.cut{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
-
-/*字体垂直排版*/
-.wm {writing-mode: tb-rl; -webkit-writing-mode: vertical-rl;  writing-mode: vertical-rl; *writing-mode: tb-rl;}
 
 /*字体样式*/
 .fwb{font-weight: bold;}
