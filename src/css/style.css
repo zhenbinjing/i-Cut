@@ -76,7 +76,7 @@ html{font-size:100px;/*no*/}
 .fz70{font-size:70px}
 
 /*行高*/
-.lh100{ line-height:100%;}
+.lh{}
 
 /*背景颜色*/
 .bc-04578B{background-color: #04578B;}

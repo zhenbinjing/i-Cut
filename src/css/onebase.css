@@ -1,7 +1,7 @@
 ﻿/*去除默认样式,可以用normalize.css代替,这里是按照我平时用的标签做的reset*/
 
 *{  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-body,div,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,h2,p,span,img,a,em{ margin:0; padding:0; outline:0; border:0; list-style:none; text-decoration:none; border-collapse:collapse; border-spacing:0; font-family:"微软雅黑";}
+body,div,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,h2,p,span,img,a,em{ margin:0; padding:0; outline:0; border:0; border-spacing:0; line-height:1; list-style:none; text-decoration:none; border-collapse:collapse;  font-family:"微软雅黑";}
 
 /*-----弹性伸缩start------*/
 
