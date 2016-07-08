@@ -24,7 +24,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 规则3：样式表里所有单位写px，设计稿里的值是多少就写多少，已内置gulp-px3rem，建议用Flexbox布局。
 
-案例1：https://github.com/zhenbinjing/qietu/m
+案例1：https://github.com/zhenbinjing/qietu/tree/master/m
 
 ##PC端开发
 
