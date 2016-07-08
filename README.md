@@ -12,7 +12,7 @@ src/css/t.css是设置关于组件样式的文件。
 
 src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
 
-src/font/、src/icon/、src/img/分别是自定义字体、适量图标、图片。
+src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片。
 
 ##移动端开发
 
@@ -23,6 +23,8 @@ src/font/、src/icon/、src/img/分别是自定义字体、适量图标、图片
 从而告别繁琐的媒体查询。★★★（变量maxW就是设计稿的画布宽度值）★★★
 
 规则3：样式表里所有单位写px，设计稿里的值是多少就写多少，已内置gulp-px3rem，建议用Flexbox布局。
+
+案例1：https://github.com/zhenbinjing/qietu/m
 
 ##PC端开发
 

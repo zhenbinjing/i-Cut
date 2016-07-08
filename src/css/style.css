@@ -9,6 +9,8 @@ img{ max-width:100%;}
 html{font-size:100px;/*no*/}
 
 .m,.pc{ min-width:320px; overflow:hidden; margin:0 auto;}
+
+/*最大的宽度640是移动设计稿宽度，方便在PC上查看，如果想适屏这里也可以改成100%。*/
 .m{max-width:640px;/*no*/}
 .pc{max-width:1200px;}
 
