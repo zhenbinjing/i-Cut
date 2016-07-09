@@ -7,7 +7,7 @@ var pngquant = require('imagemin-pngquant');				//- 深度压缩png插件
 var cache = require('gulp-cache');					//- 只压缩修改的图片，没有修改的图片直接从缓存文件读取
 var autoprefixer = require('gulp-autoprefixer');			//- 补充浏览器前缀
 var minifyCss = require('gulp-minify-css');				//- 压缩CSS为一行
-var px2rem = require('gulp-px3rem');					//- px转rem
+var px3rem = require('gulp-px3rem');					//- px转rem
 var uncss = require('gulp-uncss');					//- 删除没用到的css
 var FontSpider = require('font-spider');				//- 删除没用到的字体
 var uglify = require('gulp-uglify');					//- js合并压缩
@@ -48,7 +48,7 @@ gulp.task('concat',function(){						//- 创建一个名为 concat 的 task
 	html: ['./'+y_Sz+'/*.html'],					//- 检查的页面
 	ignore: ['abc','.abc','#abc']					//- 忽略的标签 class or id or 分号隔开
 	}))
-	.pipe(px2rem({remUnit: 100}))					//- px/100转rem值，如果有不想转换的类在值后面加/*no*/
+	.pipe(px3rem({remUnit: 100}))					//- px/100转rem值，如果有不想转换的类在值后面加/*no*/
 	.pipe(minifyCss({compatibility: 'ie8', keepBreaks:false}))	//- 压缩处理成一行,兼容ie
 	.pipe(concat('index.css'))						//- 合并后的文件名
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				//- 输出文件本地
