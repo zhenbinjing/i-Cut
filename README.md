@@ -26,7 +26,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 关键的设置1:头部的js的maxW的值;
 
-关键的设置2：src/css/style.css中，( html{font-size:100px}，m{max-width:640px;})
+关键的设置2：src/css/style.css中，html{font-size:100px}，m{max-width:640px;}
 
 关键的设置3：gulpfile.js px3rem({remUnit: 100})
 
