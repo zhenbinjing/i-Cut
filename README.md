@@ -24,7 +24,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 规则3：样式表里所有单位写px，设计稿里的值是多少就写多少，已内置gulp-px3rem，建议用Flexbox布局。
 
-关键的设置1:头部的js的maxW的值;
+关键的设置1：头部的js的maxW的值;
 
 关键的设置2：src/css/style.css中，html{font-size:100px}，m{max-width:640px;}
 
