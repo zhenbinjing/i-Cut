@@ -26,7 +26,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 关键的设置1:头部的js的maxW的值;
 
-关键的设置2：src/css/style.css中，html{font-size:100px}，m{max-width:640px;}
+关键的设置2：src/css/style.css中，( html{font-size:100px}，m{max-width:640px;})
 
 关键的设置3：gulpfile.js px3rem({remUnit: 100})
 
@@ -36,12 +36,11 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 在src/cc.html作为例子，对于平常用的Bootstrap框架的同学一下就能看懂，本框架只采用栅格系统用于自己的项目中。
 
-这里有篇文章讲得挺好的，推荐一下，希望对大家有帮助（对布局与设计的讲得很好）。
+这里有篇文章安利一下，希望对大家有帮助（对布局与设计的讲得很好）https://www.douban.com/note/489518516/
 
-https://www.douban.com/note/489518516/
+如果想要兼容ie8的同学就respond.js吧。https://github.com/scottjehl/Respond
 
 ##关于工作流
 
 框架配有gulp内置的插件，有需要的朋友可以自行修改里面的代码。
-
 
