@@ -38,9 +38,9 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 这里有篇文章安利一下，希望对大家有帮助（对布局与设计的讲得很好）https://www.douban.com/note/489518516/
 
-如果想要兼容ie8的同学就respond.js吧。https://github.com/scottjehl/Respond
+如果想要兼容ie8的同学就用respond.js吧。https://github.com/scottjehl/Respond
 
 ##关于工作流
 
-框架配有gulp内置的插件，有需要的朋友可以自行修改里面的代码。
+框架配有gulp内置的插件，有需要的同学可以自行修改里面的代码。
 
