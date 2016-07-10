@@ -14,11 +14,11 @@
 function resi() {
 	var html = document.querySelector("html");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
-	var maxW = 640;
-	var minW = 320;
+	var maxW = 640;  //设计稿画布宽度
+	var minW = 320;  //设置最小宽度
 	if (wW > maxW) wW = maxW;
-	var ratio = wW / minW;
-	html.style.fontSize = 50 * ratio + "px"
+	var dpr = wW / minW;
+	html.style.fontSize = 50 * dpr + "px"
 }
 window.addEventListener("DOMContentLoaded", function() {
 	var bodys = document.querySelector("body").style;
