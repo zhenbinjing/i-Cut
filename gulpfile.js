@@ -92,17 +92,17 @@ gulp.task('cp',['fs'],function(){					//- 先把fs命令执行完后，再去执
 	.pipe(gulp.dest('./'+y_Dz+'/icon'));
 });
 
-/*-------------bs,html这两个命令是需要时手动执行-----------------*/
-
 gulp.task('sass', function () {
   return gulp.src('./'+y_Sz+'/sass/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./'+y_Dz+'/sass'));
 });
- 
+
 gulp.task('sass:watch', function () {
   gulp.watch('./'+y_Sz+'/sass/*.scss', ['sass']);
 });
+
+/*-------------bs,html这两个命令是需要时手动执行-----------------*/
 
 gulp.task('html',function(){										
 	var options = {
