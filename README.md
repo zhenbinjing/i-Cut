@@ -10,6 +10,8 @@ src/css/style.css是设置关于有数值的样式的文件（有响应式栅格
 
 src/css/t.css是设置关于组件样式的文件。
 
+src/sass/n.scss是编译常用的数值用的sass文件（字体大小，行高，内外边距）
+
 src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
 
 src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片。

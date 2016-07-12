@@ -9,7 +9,7 @@ var autoprefixer = require('gulp-autoprefixer');			//- 补充浏览器前缀
 var minifyCss = require('gulp-minify-css');				//- 压缩CSS为一行
 var px3rem = require('gulp-px3rem');					//- px转rem
 var uncss = require('gulp-uncss');					//- 删除没用到的css
-var sass = require('gulp-sass');						//- scss文件编译
+var sass = require('gulp-sass');					//- scss文件编译
 var FontSpider = require('font-spider');				//- 删除没用到的字体
 var uglify = require('gulp-uglify');					//- js合并压缩
 var jshint = require('gulp-jshint');					//- js检测
@@ -18,8 +18,8 @@ var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 
-var y_Sz="src";								//- 生产环境路径
-var y_Dz="dist";							//- 上线环境路径
+var y_Sz="src";											//- 生产环境路径
+var y_Dz="dist";										//- 上线环境路径
 
 gulp.task('imagemin',function(){
 	gulp.src('./'+y_Sz+'/img/*.{png,jpg,gif,ico}')
