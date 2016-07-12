@@ -2,15 +2,15 @@
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');					//- 多个文件合并为一个
-var imagemin = require('gulp-imagemin');				//- 图片压缩
+var imagemin = require('gulp-imagemin');					//- 图片压缩
 var pngquant = require('imagemin-pngquant');				//- 深度压缩png插件
 var cache = require('gulp-cache');					//- 只压缩修改的图片，没有修改的图片直接从缓存文件读取
-var autoprefixer = require('gulp-autoprefixer');			//- 补充浏览器前缀
+var autoprefixer = require('gulp-autoprefixer');				//- 补充浏览器前缀
 var minifyCss = require('gulp-minify-css');				//- 压缩CSS为一行
 var px3rem = require('gulp-px3rem');					//- px转rem
 var uncss = require('gulp-uncss');					//- 删除没用到的css
-var sass = require('gulp-sass');					//- scss文件编译
-var FontSpider = require('font-spider');				//- 删除没用到的字体
+var sass = require('gulp-sass');						//- scss文件编译
+var FontSpider = require('font-spider');					//- 删除没用到的字体
 var uglify = require('gulp-uglify');					//- js合并压缩
 var jshint = require('gulp-jshint');					//- js检测
 var replace = require('gulp-replace');					//- 文本替换
@@ -19,7 +19,7 @@ var htmlmin = require('gulp-htmlmin');					//- html压缩
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 
 var y_Sz="src";								//- 生产环境路径
-var y_Dz="dist";							//- 上线环境路径
+var y_Dz="dist";								//- 上线环境路径
 
 gulp.task('imagemin',function(){
 	gulp.src('./'+y_Sz+'/img/*.{png,jpg,gif,ico}')
@@ -56,7 +56,7 @@ gulp.task('concat',function(){						//- 创建一个名为 concat 的 task
 });
 
 gulp.task('jsmin',function(){						//- 合并多个文件
-	gulp.src(['./'+y_Sz+'/js/*.js'])				//- 多个文件以数组形式传入
+	gulp.src(['./'+y_Sz+'/js/*.js'])					//- 多个文件以数组形式传入
 	.pipe(uglify())
 	.pipe(concat('index.js'))  
 	.pipe(gulp.dest('./'+y_Dz+'/js'));
@@ -109,13 +109,13 @@ gulp.task('html',function(){
 };
 gulp.src('./'+y_Dz+'/*.html')						//- 压缩页面路径
 	.pipe(htmlmin(options))
-	.pipe(gulp.dest('./'+y_Dz+'/'));				//- 输出路径	
+	.pipe(gulp.dest('./'+y_Dz+'/'));					//- 输出路径	
 });
 
 gulp.task('bs',function(){
 	browserSync({
 	files: "**",							//- 监控所有文件
-	server: {baseDir: './'+y_Sz+'/'}				//- 目标文件夹路径
+	server: {baseDir: './'+y_Sz+'/'}					//- 目标文件夹路径
 	});
 });
 
