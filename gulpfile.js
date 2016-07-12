@@ -1,4 +1,4 @@
-﻿//npm install gulp gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-autoprefixer gulp-minify-css gulp-px3rem gulp-uncss font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync --save-dev
+﻿//npm install gulp gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-autoprefixer gulp-minify-css gulp-px3rem gulp-uncss gulp-sass font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync --save-dev
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');					//- 多个文件合并为一个
@@ -9,6 +9,7 @@ var autoprefixer = require('gulp-autoprefixer');			//- 补充浏览器前缀
 var minifyCss = require('gulp-minify-css');				//- 压缩CSS为一行
 var px3rem = require('gulp-px3rem');					//- px转rem
 var uncss = require('gulp-uncss');					//- 删除没用到的css
+var sass = require('gulp-sass');						//- scss文件编译
 var FontSpider = require('font-spider');				//- 删除没用到的字体
 var uglify = require('gulp-uglify');					//- js合并压缩
 var jshint = require('gulp-jshint');					//- js检测
@@ -93,6 +94,16 @@ gulp.task('cp',['fs'],function(){					//- 先把fs命令执行完后，再去执
 
 /*-------------bs,html这两个命令是需要时手动执行-----------------*/
 
+gulp.task('sass', function () {
+  return gulp.src('./'+y_Sz+'/sass/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./'+y_Dz+'/sass'));
+});
+ 
+gulp.task('sass:watch', function () {
+  gulp.watch('./'+y_Sz+'/sass/*.scss', ['sass']);
+});
+
 gulp.task('html',function(){										
 	var options = {
 	removeComments: true,						//- 清除HTML注释
@@ -113,4 +124,4 @@ gulp.task('bs',function(){
 });
 
 //执行插件函数
-gulp.task('default',['concat','imagemin','jsmin','jshint','processhtml','cp']);
+gulp.task('default',['concat','imagemin','jsmin','jshint','processhtml','cp','sass']);
