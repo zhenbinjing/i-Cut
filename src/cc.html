@@ -17,8 +17,8 @@ function resi() {
 	var maxW = 640;  //设计稿画布宽度
 	var minW = 320;  //设置最小宽度
 	if (wW > maxW) wW = maxW;
-	var dpr = wW / minW;
-	html.style.fontSize = 50 * dpr + "px"
+	var ratio  = wW / minW;
+	html.style.fontSize = 50 * ratio  + "px"
 }
 window.addEventListener("DOMContentLoaded", function() {
 	var bodys = document.querySelector("body").style;
