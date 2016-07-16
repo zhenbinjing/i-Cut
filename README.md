@@ -5,7 +5,6 @@
 ##文件目录
 
 ```txt
-
   onetoui/
   |__ gulpfile.js
   |__ README.md
@@ -34,7 +33,6 @@
       |__ z.js
     |__ sass/
       |__ n.scss
-
 ```
 
 ##文件目录解释
