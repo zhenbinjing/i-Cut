@@ -39,17 +39,17 @@
 
 ##文件目录解释
 
-src/css/onebase.css是底层文件，没有设置任何关于数值的属性。
+>src/css/onebase.css是底层文件，没有设置任何关于数值的属性。
 
-src/css/style.css是设置关于有数值的样式的文件（有响应式栅格和代码注释）。
+>src/css/style.css是设置关于有数值的样式的文件（有响应式栅格和代码注释）。
 
-src/css/t.css是设置关于组件样式的文件。
+>src/css/t.css是设置关于组件样式的文件。
 
-src/sass/n.scss是循环常用 `字体大小` `行高` `内外边距` 值的文件。
+>src/sass/n.scss是循环常用 `字体大小`,`行高`,`内外边距` 值的文件。
 
-src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
+>src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
 
-src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片。
+>src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片。
 
 ##移动端开发
 
