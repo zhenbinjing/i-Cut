@@ -2,6 +2,68 @@
 
 框架适合移动端（自适应）和PC端（响应式）制作，陆续更新中，不断实践和修复bug。
 
+##文件目录
+
+```txt
+
+  onetoui
+
+  |__ gulpfile.js
+
+  |__ README.md
+
+  |__ src
+
+    |__ cc.html
+
+    |__ index.html
+
+    |__ css
+
+      |__ onebase.css
+
+      |__ style.css
+
+      |__ t.css
+
+    |__ font
+
+      |__ fzcjjt.ttf
+
+    |__ icon
+
+      |__ iconfont.eot
+
+      |__ iconfont.svg
+
+      |__ iconfont.ttf
+
+      |__ iconfont.woff
+
+    |__ img
+
+      |__ a.png
+
+      |__ b.png
+
+      |__ c.png
+
+      |__ d.jpg
+
+    |__ js
+
+      |__ scrollLoad.js
+
+      |__ TouchSlide.1.1.js
+
+      |__ z.js
+
+    |__ sass
+
+      |__ n.scss
+
+```
+
 ##项目的文件解释
 
 src/css/onebase.css是底层文件，没有设置任何关于数值的属性。
