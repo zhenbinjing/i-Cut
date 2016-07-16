@@ -45,7 +45,7 @@ src/css/style.css是设置关于有数值的样式的文件（有响应式栅格
 
 src/css/t.css是设置关于组件样式的文件。
 
-src/sass/n.scss是（字体大小，行高，内外边距）sass文件
+src/sass/n.scss是循环常用 `字体大小` `行高` `内外边距` 值的文件。
 
 src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
 
@@ -61,11 +61,11 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 规则3：样式表里所有单位写`px`，设计稿里的值是多少就写多少，已内置gulp-px3rem，建议用Flexbox布局。
 
->关键设置1：头部的js的maxW的值;
+>关键设置1：头部js的`maxW`变量值;
 
->关键设置2：src/css/style.css中，html{font-size:100px}，m{max-width:640px;}
+>关键设置2：src/css/style.css中，`html{font-size:100px}` `.m{max-width:640px;}`
 
->关键设置3：gulpfile.js px3rem({remUnit: 100})
+>关键设置3：gulpfile.js `px3rem({remUnit: 100})`
 
 案例1：https://github.com/zhenbinjing/qietu/tree/master/m
 
