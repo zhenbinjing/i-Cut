@@ -6,60 +6,33 @@
 
 ```txt
 
-  onetoui
-
+  onetoui/
   |__ gulpfile.js
-
   |__ README.md
-
-  |__ src
-
+  |__ src/
     |__ cc.html
-
     |__ index.html
-
-    |__ css
-
+    |__ css/
       |__ onebase.css
-
       |__ style.css
-
       |__ t.css
-
-    |__ font
-
+    |__ font/
       |__ fzcjjt.ttf
-
-    |__ icon
-
+    |__ icon/
       |__ iconfont.eot
-
       |__ iconfont.svg
-
       |__ iconfont.ttf
-
       |__ iconfont.woff
-
-    |__ img
-
+    |__ img/
       |__ a.png
-
       |__ b.png
-
       |__ c.png
-
       |__ d.jpg
-
-    |__ js
-
+    |__ js/
       |__ scrollLoad.js
-
       |__ TouchSlide.1.1.js
-
       |__ z.js
-
-    |__ sass
-
+    |__ sass/
       |__ n.scss
 
 ```
