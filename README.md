@@ -1,6 +1,6 @@
 ﻿##UI开发框架
 
-框架适合移动端（自适应）和PC端（响应式）制作，陆续更新中，不断实践和修复bug。
+框架适合移动端[自适应]和PC端[响应式]制作，陆续更新中，不断实践和修复bug。
 
 ##文件目录
 
@@ -53,19 +53,19 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 ##移动端开发
 
-规则1：要求设计师设计的PSD宽度为640px或其他标准尺寸，但DPI必须是为72,这样才接近一比一还原。
+规则1：要求设计师设计的PSD宽度为640px或其他标准尺寸，但**DPI**必须是为72,这样才接近一比一还原。
 
 规则2：在src/index.html的头部加了一段js，实现动态改变根元素的值令字体与盒子模型的值以及iframe等比例缩放，
 
-从而告别繁琐的媒体查询。★★★（变量maxW就是设计稿的画布宽度值）★★★
+从而告别繁琐的媒体查询。`变量maxW就是设计稿的画布宽度值`
 
-规则3：样式表里所有单位写px，设计稿里的值是多少就写多少，已内置gulp-px3rem，建议用Flexbox布局。
+规则3：样式表里所有单位写*px*，设计稿里的值是多少就写多少，已内置gulp-px3rem，建议用Flexbox布局。
 
-关键设置1：头部的js的maxW的值;
+>关键设置1：头部的js的maxW的值;
 
-关键设置2：src/css/style.css中，html{font-size:100px}，m{max-width:640px;}
+>关键设置2：src/css/style.css中，html{font-size:100px}，m{max-width:640px;}
 
-关键设置3：gulpfile.js px3rem({remUnit: 100})
+>关键设置3：gulpfile.js px3rem({remUnit: 100})
 
 案例1：https://github.com/zhenbinjing/qietu/tree/master/m
 
