@@ -1094,6 +1094,23 @@ html{font-size:100px;/*no*/}
 
 /*ipad*/
 @media (min-width: 769px) {	
+.col-i-12 {width: 100%;}
+.col-i-11 {width: 91.66666667%;}
+.col-i-10 {width: 83.33333333%;}
+.col-i-9 {width: 75%;}
+.col-i-8 {width: 66.66666667%;}
+.col-i-7 {width: 58.33333333%;}
+.col-i-6 {width: 50%;}
+.col-i-5 {width: 41.66666667%;}
+.col-i-4 {width: 33.33333333%;}
+.col-i-3 {width: 25%;}
+.col-i-2 {width: 16.66666667%;}
+.col-i-1 {width: 8.33333333%;}
+}
+
+/*pc*/
+@media (min-width: 1200px) {
+.row {width:1200px;}
 .col-p-12 {width: 100%;}
 .col-p-11 {width: 91.66666667%;}
 .col-p-10 {width: 83.33333333%;}
@@ -1106,23 +1123,6 @@ html{font-size:100px;/*no*/}
 .col-p-3 {width: 25%;}
 .col-p-2 {width: 16.66666667%;}
 .col-p-1 {width: 8.33333333%;}
-}
-
-/*pc*/
-@media (min-width: 1200px) {
-.row {width:1200px;}
-.col-12 {width: 100%;}
-.col-11 {width: 91.66666667%;}
-.col-10 {width: 83.33333333%;}
-.col-9 {width: 75%;}
-.col-8 {width: 66.66666667%;}
-.col-7 {width: 58.33333333%;}
-.col-6 {width: 50%;}
-.col-5 {width: 41.66666667%;}
-.col-4 {width: 33.33333333%;}
-.col-3 {width: 25%;}
-.col-2 {width: 16.66666667%;}
-.col-1 {width: 8.33333333%;}
 }
 
 /*-----响应式栅格end-----*/
