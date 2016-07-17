@@ -9,7 +9,7 @@
   |__ gulpfile.js
   |__ README.md
   |__ src/
-    |__ cc.html
+    |__ mip.html
     |__ index.html
     |__ css/
       |__ onebase.css
