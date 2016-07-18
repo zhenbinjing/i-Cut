@@ -13,6 +13,7 @@
     |__ index.html
     |__ css/
       |__ onebase.css
+      |__ number.css
       |__ style.css
       |__ t.css
     |__ font/
@@ -37,13 +38,15 @@
 
 ##文件目录解释
 
->src/css/onebase.css是底层文件，没有设置任何关于数值的属性。
+>src/css/onebase.css是一些没有数值的属性底层表。
 
->src/css/style.css是设置关于有数值的样式的文件（有响应式栅格和代码注释）。
+>src/css/number.css是平时常用的`字体大小`,`行高`,`内外边距`属性表。
 
->src/css/t.css是设置关于组件样式的文件。
+>src/css/style.css是自定义项目样式表（有响应式栅格和代码注释）。
 
->src/sass/n.scss是循环常用 `字体大小`,`行高`,`内外边距` 值的文件。
+>src/css/t.css是组件样式表。
+
+>src/sass/n.scss是预编译文件。
 
 >src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
 
