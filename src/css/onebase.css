@@ -99,7 +99,9 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .fr{float: right;}
 
 /*内联定位(上中下)*/
+.vat{vertical-align: top;}
 .vam{vertical-align: middle;}
+.vab{vertical-align: bottom;}
 .vatb{vertical-align: text-bottom;}
 .vatt{vertical-align: text-top;}
 .vasup{vertical-align:super;}
