@@ -1,4 +1,5 @@
 ﻿/*字体大小*/
+.fz0{ font-size: 0;}
 .fz1{ font-size: 1px;/*no*/ font-size: 1px;}
 .fz2{ font-size: 2px;/*no*/ font-size: 2px;}
 .fz3{ font-size: 3px;/*no*/ font-size: 3px;}
@@ -101,6 +102,7 @@
 .fz100{ font-size: 100px;/*no*/ font-size: 100px;}
 
 /*行高*/
+.lh0{line-height: 100%;}
 .lh1{ line-height: 1px;/*no*/ line-height: 1px;}
 .lh2{ line-height: 2px;/*no*/ line-height: 2px;}
 .lh3{ line-height: 3px;/*no*/ line-height: 3px;}

@@ -128,12 +128,6 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .fwn{font-weight: normal;}
 .fsn{font-style: normal;}
 
-/*字体大小*/
-.fz0{font-size: 0;}
-
-/*宽度大小*/
-.w0{width: 0%;}
-
 /*背景定位*/
 .bgptc{background-position: top center;}
 .bgpbc{background-position: bottom center;}
