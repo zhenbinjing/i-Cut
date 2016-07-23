@@ -14,7 +14,7 @@
 function resi() {
 	var html = document.querySelector("html");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
-	var maxW = 640;  //设计稿画布宽度
+	var maxW = 768;  //设计稿画布宽度,跟媒体查询宽度一致。
 	var minW = 320;  //设置最小宽度
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;
@@ -36,21 +36,19 @@ window.addEventListener("resize", resi);
 <!-- /build -->
 </head>
 <body>
-
-<div class="pc">
-	<div class="box1 tac fz30">
-		<div class="row clearfix mlra cl-fff bc-04578B">
-			<div class="col-p-3 col-i-6">col-p-3 col-i-6</div>
-			<div class="col-p-3 col-i-6">col-p-3 col-i-6</div>
-			<div class="col-p-3 col-i-6">col-p-3 col-i-6</div>
-			<div class="col-p-3 col-i-6">col-p-3 col-i-6</div>
+<div class="mip mlra">	
+		<div class="row clearfix mlra c-fff tac fz30">
+			<div class="col-p-3 col-i-6"><div class="w9 mlra bc-04578B">col-p-3 col-i-6</div></div>
+			<div class="col-p-3 col-i-6"><div class="w9 mlra bc-04578B">col-p-3 col-i-6</div></div>
+			<div class="col-p-3 col-i-6"><div class="w9 mlra bc-04578B">col-p-3 col-i-6</div></div>
+			<div class="col-p-3 col-i-6"><div class="w9 mlra bc-04578B">col-p-3 col-i-6</div></div>
 		</div>
-		<div class="row clearfix mlra cl-fff bc-f36">
-			<div class="col-p-4 col-i-6">col-p-4 col-i-6</div>
-			<div class="col-p-4 col-i-6">col-p-4 col-i-6</div>
-			<div class="col-p-4 col-i-12">col-p-4 col-i-12</div>
+		<div class="row clearfix mlra tac fz30">
+			<div class="col-p-4 col-i-6"><div class="w11 mlra bc-f36">col-p-4 col-i-6</div></div>
+			<div class="col-p-4 col-i-6"><div class="w11 mlra bc-f36">col-p-4 col-i-6</div></div>
+			<div class="col-p-4 col-i-12"><div class="w11 mlra bc-f36">col-p-4 col-i-12</div></div>
 		</div>
-		<div class="row clearfix mlra cl-fff bc-04578B">
+		<div class="row clearfix mlra c-fff bc-04578B tac fz30">
 			<div class="col-p-12 col-i-12 clearfix">
 				<div class="col-p-6 col-i-6">col-p-6 col-i-6</div>
 				<div class="col-p-6 col-i-6 clearfix">
@@ -59,15 +57,14 @@ window.addEventListener("resize", resi);
 				</div>
 			</div>
 		</div>
-		<div class="row clearfix mlra cl-fff bc-f36 fz24">
+		<div class="row clearfix mlra bc-f36 fz24 tac">
 			<div class="col-p-2 col-i-3 col-m-6">col-p-2 col-i-3 col-m-6</div>
 			<div class="col-p-2 col-i-3 col-m-6">col-p-2 col-i-3 col-m-6</div>
 			<div class="col-p-2 col-i-3">col-p-2 col-i-3</div>
 			<div class="col-p-2 col-i-3">col-p-2 col-i-3</div>
 			<div class="col-p-2 col-i-6">col-p-2 col-i-6</div>
 			<div class="col-p-2 col-i-6">col-p-2 col-i-6</div>
-		</div>
-	</div>
+		</div>	
 </div>
 </body>
 </html>

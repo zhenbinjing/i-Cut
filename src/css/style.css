@@ -7,12 +7,8 @@ img{ max-width:100%;}
 /*为了方便计算html的值，所以初始化设置100px,对应的其他数值相当于除以100，在gulpfile文件的px3rem方法中设置。*/
 html{font-size:100px;/*no*/}
 
-/*main*/
-.m,.pc{ min-width:320px; overflow:hidden; margin:0 auto;}
-
-/*最大的宽度640是移动设计稿宽度，方便在PC上查看，如果想适屏这里也可以改成100%。*/
-.m{max-width:640px;/*no*/}
-.pc{max-width:1200px;}
+/*最大的宽度640是移动设计稿宽度，方便在PC上查看。*/
+.m{max-width:640px;/*no*/ min-width:320px; overflow:hidden; margin:0 auto;}
 
 /*自定义字体*/
 @font-face {
@@ -49,6 +45,7 @@ html{font-size:100px;/*no*/}
 
 /*字体颜色*/
 .c-FF5700{color:#FF5700;}
+.c-fff{color: #fff;}
 
 /*-----自定义样式end-------*/
 
@@ -67,11 +64,11 @@ html{font-size:100px;/*no*/}
 .w1 {width: 8.33333333%;}
 .w0 {width:0;}
 
-/*-----响应式栅格-----*/
+/*-----响应式-----*/
+.mip{max-width:1200px;}
 
 /*m*/
 [class*="col-"] {float: left;width: 100%;}
-.row {width:100%;}
 .col-m-12 {width: 100%;}
 .col-m-11 {width: 91.66666667%;}
 .col-m-10 {width: 83.33333333%;}
@@ -103,7 +100,6 @@ html{font-size:100px;/*no*/}
 
 /*pc*/
 @media (min-width: 1200px) {
-.row {width:1200px;}
 .col-p-12 {width: 100%;}
 .col-p-11 {width: 91.66666667%;}
 .col-p-10 {width: 83.33333333%;}
@@ -118,4 +114,4 @@ html{font-size:100px;/*no*/}
 .col-p-1 {width: 8.33333333%;}
 }
 
-/*-----响应式栅格end-----*/
+/*-----响应式-----*/

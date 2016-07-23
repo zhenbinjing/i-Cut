@@ -52,7 +52,7 @@
 
 >src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片。
 
-##移动端开发
+##移动端(自适应)开发
 
 规则1：要求设计师设计的PSD宽度为640px或其他标准尺寸，但`DPI`必须是为72,这样才接近一比一还原。
 
@@ -70,9 +70,13 @@
 
 案例1：https://github.com/zhenbinjing/qietu/tree/master/m
 
-##PC端开发
+##PC端(响应式)开发
 
-在src/mip.html作为例子，对于平常用的`Bootstrap`框架的同学一下就能看懂，本框架只采用栅格系统用于自己的项目中。
+规则1:根据设计稿的宽度，`DPI`统一72，在src/css/style.css文件中填写对应的媒体查询尺寸（m,ipad,pc）。
+
+规则2：在src/mip.html的头部js填写手机版psd的宽度，具体根据自己的psd尺寸来修改。
+
+对于平常用的`Bootstrap`框架的同学一下就能看懂，本框架只采用栅格系统用于自己的项目中。
 
 这里有篇文章安利一下，希望对大家有帮助（对布局与设计的讲得很好）https://www.douban.com/note/489518516/
 
