@@ -72,15 +72,13 @@
 
 ##PC端(响应式)开发
 
-规则1:根据设计稿的宽度，`DPI`统一72，在src/css/style.css文件中填写对应的媒体查询尺寸（m,ipad,pc）。
+规则1：根据设计稿的宽度，`DPI`统一72，在src/css/style.css文件中填写对应的媒体查询尺寸（m,ipad,pc）。
 
 规则2：在src/mip.html的头部js填写手机版psd的宽度，具体根据自己的psd尺寸来修改。
 
-对于平常用的`Bootstrap`框架的同学一下就能看懂，本框架只采用栅格系统用于自己的项目中。
+对于平常用的`Bootstrap`框架的同学一下就能看懂，本框架只采用栅格系统用于自己的项目中（阉割版）。
 
 这里有篇文章安利一下，希望对大家有帮助（对布局与设计的讲得很好）https://www.douban.com/note/489518516/
-
-如果想要兼容ie8的同学就用respond.js吧。https://github.com/scottjehl/Respond
 
 ##关于工作流
 
