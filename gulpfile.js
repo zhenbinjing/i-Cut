@@ -1,9 +1,10 @@
-﻿//npm install gulp gulp-concat gulp-imagemin imagemin-pngquant gulp-cache gulp-autoprefixer gulp-minify-css gulp-px3rem gulp-uncss gulp-sass font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync --save-dev
+﻿//npm install gulp gulp-concat gulp-imagemin imagemin-pngquant gulp-webp gulp-cache gulp-autoprefixer gulp-minify-css gulp-px3rem gulp-uncss gulp-sass font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync --save-dev
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');					//- 多个文件合并为一个
 var imagemin = require('gulp-imagemin');					//- 图片压缩
 var pngquant = require('imagemin-pngquant');				//- 深度压缩png插件
+var webp = require('gulp-webp');							//- 转webp图片
 var cache = require('gulp-cache');					//- 只压缩修改的图片，没有修改的图片直接从缓存文件读取
 var autoprefixer = require('gulp-autoprefixer');				//- 补充浏览器前缀
 var minifyCss = require('gulp-minify-css');				//- 压缩CSS为一行
@@ -17,6 +18,7 @@ var replace = require('gulp-replace');					//- 文本替换
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
+var del = require('del');
 
 var y_Sz="src";								//- 生产环境路径
 var y_Dz="dist";								//- 上线环境路径
@@ -102,7 +104,32 @@ gulp.task('sass:watch', function () {
   gulp.watch('./'+y_Sz+'/sass/*.scss', ['sass']);
 });
 
-/*-------------bs,html这两个命令是需要时手动执行-----------------*/
+/*-------------webp,html,bs这三个命令是需要时手动执行-----------------*/
+
+gulp.task('webp',['webp_img'],function(){
+	del(['./'+y_Dz+'/img/*.{png,jpg,gif,ico}', '!./'+y_Dz+'/img/*.{webp}']).then(paths => {
+    console.log('Deleted files and folders:\n', paths.join('\n'));
+	});	 
+});	 
+
+gulp.task('webp_img',['webp_css'],function(){
+	return gulp.src('./'+y_Dz+'/img/*.{png,jpg,gif,ico}')	
+	.pipe(webp())
+	.pipe(gulp.dest('./'+y_Dz+'/img/'))
+});
+
+gulp.task('webp_css',['webp_html'],function(){
+	return gulp.src(['./'+y_Dz+'/css/*.css'])	
+	.pipe(replace(/.(jpg|png|gif)/gi,'.webp'))
+	.pipe(gulp.dest('./'+y_Dz+'/css'));				
+});
+
+gulp.task('webp_html',function(){					
+	return gulp.src('./'+y_Dz+'/*.html')
+	.pipe(replace(/.(jpg|png|gif)/gi,'.webp'))
+	.pipe(processhtml())
+	.pipe(gulp.dest('./'+y_Dz+'/'));
+});
  
 gulp.task('html',function(){										
 	var options = {
