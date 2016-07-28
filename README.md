@@ -44,9 +44,7 @@ src/css/number.css是平时常用的`字体大小`,`行高`,`内外边距`属性
 
 src/css/style.css是自定义项目样式表（有响应式栅格和代码注释）。
 
-src/css/t.css是组件样式表。
-
-src/sass/n.scss是预编译文件。
+src/css/t.css是组件样式表。src/sass/n.scss是预编译文件。
 
 src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
 
