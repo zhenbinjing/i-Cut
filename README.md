@@ -80,7 +80,11 @@
 
 这里有篇文章安利一下，希望对大家有帮助（对布局与设计的讲得很好）https://www.douban.com/note/489518516/
 
-##关于工作流
+##Gulp自动化流程
 
-框架配有gulp插件，一般是自己常用的，有需要的同学可以自行修改里面的代码。
+框架配有gulp插件，一键gulp，或gulp (插件名)，这里我只说重要的几个插件，具体可以查看gulpfile.js里的注释。
+
+gulp-webp（图片转webp）、gulp-px3rem（px转rem）、gulp-uncss（去除没调用的css）、
+
+font-spider（去除没引用的中文字体）、browser-sync（浏览器同步测试）
 
