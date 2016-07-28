@@ -1,8 +1,6 @@
 ﻿##UI开发框架
 
 框架适合移动端`(自适应)`和PC端`(响应式)`制作，陆续更新中，不断实践和修复bug。
-
-##
 ```txt
 onetoui/
 |__ gulpfile.js
@@ -34,7 +32,6 @@ onetoui/
   |__ sass/
     |__ n.scss
 ```
-
 ##文件目录解释
 
 src/css/onebase.css是一些没有数值的属性底层表。
