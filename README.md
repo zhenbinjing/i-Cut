@@ -68,7 +68,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 规则1：要求设计师的设计稿，`DPI`统一72，栅格宽度和媒体查询尺寸与src/css/style.css互相对应。
 
-可以用Assistor PS这个插件辅助，[下载地址](http://witstudio.net/)
+可以用Assistor PS这个插件辅助已免费，[下载地址](http://witstudio.net/)，最新的PS CC已经集成部分功能了。
 
 规则2：在src/mip.html的头部js填写手机版psd的宽度。
 
