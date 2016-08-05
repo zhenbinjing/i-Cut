@@ -18,7 +18,7 @@ function resi() {
 	var minW = 320;  //设置最小宽度
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;
-	html.style.fontSize = 50 * ratio  + "px"
+	html.style.fontSize = (100/(maxW/minW)) * ratio  + "px"
 }
 window.addEventListener("DOMContentLoaded", function() {
 	var bodys = document.querySelector("body").style;

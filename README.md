@@ -52,13 +52,13 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 规则2：在src/index.html的头部加了一段js，实现动态改变根元素的值令字体与盒子模型的值以及iframe等比例缩放，
 
-从而告别繁琐的媒体查询。`(变量maxW就是设计稿的画布宽度值)`
+从而告别繁琐的媒体查询。`(变量maxW就是设计稿的宽度)`
 
 规则3：样式表里所有单位写`px`，设计稿里的值是多少就写多少，已内置gulp-px3rem，一键转换，省心方便。
 
 **关键设置1**：头部js的`maxW`变量值;
 
-**关键设置2**：src/css/style.css中，`html{font-size:100px}` `.m{max-width:640px;}`
+**关键设置2**：src/css/style.css中，`html{font-size:100px}` `.m{max-width:640px;}`设计稿宽度
 
 **关键设置3**：gulpfile.js `px3rem({remUnit: 100})`
 
