@@ -74,7 +74,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 当然，如果你是重度依赖它的话，你也可以直接用Bootstrap，本人只采取其精华的部分，方便自己扩张。
 
-这里有篇文章安利一下，希望对大家有帮助（对布局与设计的讲得很好）https://www.douban.com/note/489518516/
+案例：src/mip.html 安利一篇文章，希望对大家有帮助。https://www.douban.com/note/489518516/
 
 ##Gulp自动化流程
 
