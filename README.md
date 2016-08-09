@@ -56,21 +56,19 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 规则3：样式表里所有单位写`px`，设计稿里的值是多少就写多少，已内置gulp-px3rem，一键转换，省心方便。
 
-**关键设置1**：头部js的`maxW`变量值;
+**关键设置1**：头部js的`maxW`变量值
 
 **关键设置2**：src/css/style.css中，`html{font-size:100px}` `.m{max-width:640px;}`设计稿宽度
 
 **关键设置3**：gulpfile.js `px3rem({remUnit: 100})`
 
-案例1：https://github.com/zhenbinjing/qietu/tree/master/m
+案例：https://github.com/zhenbinjing/qietu/tree/master/m
 
 ##PC端(响应式)开发
 
 规则1：要求设计师的设计稿，`DPI`统一72，栅格宽度和媒体查询尺寸与src/css/style.css互相对应。
 
 可以用Assistor PS这个插件辅助，[下载地址](http://witstudio.net/)，最新的PS CC已经集成部分功能。
-
-规则2：在src/mip.html的头部js填写手机版psd的宽度。
 
 对于平常用的`Bootstrap`框架的同学一下就能看懂，本框架只采用栅格系统用于自己的项目中（阉割版）。
 
@@ -82,5 +80,5 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 gulp-webp（图片转webp）、gulp-px3rem（px转rem）、gulp-uncss（去除没调用的css）、
 
-font-spider（去除没引用的中文字体）、browser-sync（浏览器同步测试）
+font-spider（去除没引用的中文字体）、browser-sync（浏览器同步测试）。
 
