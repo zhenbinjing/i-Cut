@@ -10,24 +10,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="email=no">
-<script type="text/javascript">
-function resi() {
-	var html = document.querySelector("html");
-	var wW = document.body.clientWidth || document.documentElement.clientWidth;
-	var maxW = 768;  //手机版设计稿画布宽度
-	var minW = 320;  //设置最小宽度
-	if (wW > maxW) wW = maxW;
-	var ratio  = wW / minW;
-	html.style.fontSize = (100/(maxW/minW)) * ratio  + "px"
-}
-window.addEventListener("DOMContentLoaded", function() {
-	var bodys = document.querySelector("body").style;
-	bodys.opacity = "1";
-	bodys.filter = "alpha(opacity=100)";
-	resi()
-});
-window.addEventListener("resize", resi);
-</script>
 <!-- build:css css/index.css?v=_VERSION_-->
 <link rel="stylesheet" href="css/onebase.css">
 <link rel="stylesheet" href="css/number.css">
@@ -37,13 +19,13 @@ window.addEventListener("resize", resi);
 </head>
 <body>
 <div class="mip mlra">	
-		<div class="row clearfix  c-fff tac fz30">
+		<div class="row clearfix c-fff tac fz30">
 			<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
 			<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
 			<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
 			<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
 		</div>
-		<div class="row clearfix  c-fff tac fz30">
+		<div class="row clearfix c-fff tac fz30">
 			<div class="col-p-4 col-i-6"><div class="bc-04578B">col-p-4 col-i-6</div></div>
 			<div class="col-p-4 col-i-6"><div class="bc-04578B">col-p-4 col-i-6</div></div>
 			<div class="col-p-4 col-i-12"><div class="bc-04578B">col-p-4 col-i-12</div></div>
@@ -52,11 +34,11 @@ window.addEventListener("resize", resi);
 			<div class="col-p-6 col-i-6"><div class="bc-f36">col-p-6 col-i-6</div></div>
 			<div class="col-p-6 col-i-6"><div class="bc-f36">col-p-6 col-i-6</div></div>
 		</div>
-		<div class="row clearfix  c-fff tac fz30">
+		<div class="row clearfix c-fff tac fz30">
 			<div class="col-p-3 col-i-6"><div class="bc-04578B">col-p-3 col-i-6</div></div>
 			<div class="col-p-9 col-i-6"><div class="bc-04578B">col-p-9 col-i-6</div></div>
 		</div>
-		<div class="row clearfix  c-fff tac fz30">
+		<div class="row clearfix c-fff tac fz30">
 			<div class="col-i-4"><div class="row clearfix"><div class="col-i-12"><div class="bc-f36" >col-i-4 col-i-12</div></div></div></div>
 			<div class="col-i-4"><div class="row clearfix"><div class="col-i-12"><div class="bc-f36" >col-i-4 col-i-12</div></div></div></div>
 			<div class="col-i-4"><div class="row clearfix"><div class="col-i-12"><div class="bc-f36" >col-i-4 col-i-12</div></div></div></div>
