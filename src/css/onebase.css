@@ -88,7 +88,7 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .db{display: block;}
 .dt{display: table;}
 .dtc{display: table-cell;}
-.dib{display: inline-block; *display: inline; *zoom: 1;}
+.dib{display: inline-block;}
 
 /*元素可见性*/
 .vh{visibility: hidden;}
