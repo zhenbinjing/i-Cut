@@ -36,7 +36,7 @@ onetoui/
 
 src/css/onebase.css是一些没有数值的属性底层表。
 
-src/css/number.css是平时常用的`字体大小`,`行高`,`内外边距`属性表。
+src/css/number.css是平时常用的`字体大小`,`行高`,`内外边距`,`边框`属性表。
 
 src/css/style.css是自定义项目样式表（有响应式栅格和代码注释）。
 

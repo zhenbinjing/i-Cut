@@ -131,6 +131,12 @@ flex-flow: <flex-direction> || <flex-wrap>;
 .fwn{font-weight: normal;}
 .fsn{font-style: normal;}
 
+/*边框样式*/
+.bdsdt{border-style:dotted;}/*点*/
+.bdsds{border-style:dashed;}/*虚线*/
+.bdssl{border-style:solid;}/*实线*/
+.bdsdb{border-style:double}/*双实线*/
+
 /*背景定位*/
 .bgptc{background-position: top center;}
 .bgpcc{background-position: center center;}
