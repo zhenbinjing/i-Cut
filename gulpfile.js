@@ -86,7 +86,6 @@ gulp.task('cp',['fs'],function(){					//- 先把fs命令执行完后，再去执
 	gulp.src(['./'+y_Sz+'/font/**'],{				//- 被复制的文件夹下的所有文件
 	base: './'+y_Sz+'/font'})					//- 被复制的目标路径 	
 	.pipe(gulp.dest('./'+y_Dz+'/font'))				//- 输出路径	
-	
 	gulp.src(['./'+y_Sz+'/icon/**'],{				
 	base: './'+y_Sz+'/icon'})					
 	.pipe(gulp.dest('./'+y_Dz+'/icon'));
@@ -135,8 +134,8 @@ gulp.task('html',function(){
 	collapseWhitespace: true,					//- 压缩HTML
 	minifyJS: true,							//- 压缩页面JS
 	minifyCSS: true							//- 压缩页面CSS
-};
-gulp.src('./'+y_Dz+'/**/*.html')					//- 压缩页面路径
+	};
+	gulp.src('./'+y_Dz+'/**/*.html')				//- 压缩页面路径
 	.pipe(htmlmin(options))
 	.pipe(gulp.dest('./'+y_Dz+'/'));				//- 输出路径	
 });
