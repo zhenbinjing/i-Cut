@@ -19,13 +19,13 @@ var replace = require('gulp-replace');					//- 文本替换
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
-var del = require('del');						//-管理文件
+var del = require('del');						//- 管理文件
 
 var y_Sz="src";								//- 生产环境路径
 var y_Dz="dist";							//- 上线环境路径
 
 gulp.task('imagemin',function(){
-	gulp.src('./'+y_Sz+'/img/**')
+	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
 	.pipe(cache(imagemin({
 	progressive: true,
 	svgoPlugins: [{removeViewBox: false}],				//- 不要移除svg的viewbox属性
@@ -36,7 +36,7 @@ gulp.task('imagemin',function(){
 
 gulp.task('concat',function(){						//- 创建一个名为 concat 的 task
 	var date=new Date().getTime();					//- 创建版本时间	
-	gulp.src(['./'+y_Sz+'/css/*.css'])				//- 需要处理的css文件，放到一个字符串数组里	
+	gulp.src(['./'+y_Sz+'/css/**/*.css'])				//- 需要处理的css文件，放到一个字符串数组里	
 	.pipe(replace(/_VERSION_/gi,date))				//- 文件指纹							
 	.pipe(autoprefixer({
 	browsers: [
@@ -49,7 +49,7 @@ gulp.task('concat',function(){						//- 创建一个名为 concat 的 task
 	remove:true							//- 是否去掉不必要的前缀 默认：true 
 	}))
 	.pipe(uncss({
-	html: ['./'+y_Sz+'/*.html'],					//- 检查的页面
+	html: ['./'+y_Sz+'/**/*.html'],					//- 检查的页面
 	ignore: ['abc','.abc','#abc']					//- 忽略的标签 class or id or 分号隔开
 	}))
 	.pipe(px3rem({remUnit: 100}))					//- px/100转rem值，如果有不想转换的类在值后面加/*no*/
@@ -59,28 +59,28 @@ gulp.task('concat',function(){						//- 创建一个名为 concat 的 task
 });
 
 gulp.task('jsmin',function(){						//- 合并多个文件
-	gulp.src(['./'+y_Sz+'/js/*.js'])				//- 多个文件以数组形式传入
+	gulp.src(['./'+y_Sz+'/js/**/*.js'])				//- 多个文件以数组形式传入
 	.pipe(uglify())
 	.pipe(concat('index.js'))  
 	.pipe(gulp.dest('./'+y_Dz+'/js'));
 });
 
 gulp.task('jshint',function(){						//- 检查文件
-	gulp.src('./'+y_Dz+'/js/*.js')
+	gulp.src('./'+y_Dz+'/js/**/*.js')
 	.pipe(jshint())
 	.pipe(jshint.reporter('default'));				//- 检查错误
 });
 
 gulp.task('processhtml',function(){					//- 修改该html的dom
 	var date = new Date().getTime();
-	gulp.src('./'+y_Sz+'/*.html')
+	gulp.src('./'+y_Sz+'/**/*.html')
 	.pipe(replace(/_VERSION_/gi, date))
 	.pipe(processhtml())
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
 gulp.task('fs',function(){
-	return FontSpider(['./'+y_Sz+'/*.html']);			//- 删除多余的字体和图标，添加return返回最终的数据流		
+	return FontSpider(['./'+y_Sz+'/**/*.html']);			//- 删除多余的字体和图标，添加return返回最终的数据流		
 });		
 
 gulp.task('cp',['fs'],function(){					//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
@@ -96,37 +96,37 @@ gulp.task('cp',['fs'],function(){					//- 先把fs命令执行完后，再去执
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./'+y_Sz+'/sass/*.scss')
+  return gulp.src('./'+y_Sz+'/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./'+y_Dz+'/sass'));
 });
  
 gulp.task('sass:watch', function () {
-  gulp.watch('./'+y_Sz+'/sass/*.scss', ['sass']);
+  gulp.watch('./'+y_Sz+'/sass/**/*.scss', ['sass']);
 });
 
 /*-------------webp,html,bs这三个命令是需要时手动执行-----------------*/
 
 gulp.task('webp',['webp_img'],function(){
-	del(['./'+y_Dz+'/img/*.{png,jpg,gif,ico}', '!./'+y_Dz+'/img/*.{webp}']).then(paths => {
+	del(['./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}', '!./'+y_Dz+'/img/**/*.{webp}']).then(paths => {
     console.log('Deleted files and folders:\n', paths.join('\n'));
 	});	 
 });	 
 
 gulp.task('webp_img',['webp_css'],function(){
-	return gulp.src('./'+y_Dz+'/img/*.{png,jpg,gif,ico}')	
+	return gulp.src('./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}')	
 	.pipe(webp())
 	.pipe(gulp.dest('./'+y_Dz+'/img/'))
 });
 
 gulp.task('webp_css',['webp_html'],function(){
-	return gulp.src(['./'+y_Dz+'/css/*.css'])	
+	return gulp.src(['./'+y_Dz+'/css/**/*.css'])	
 	.pipe(replace(/.(jpg|png|gif)/gi,'.webp'))
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				
 });
 
 gulp.task('webp_html',function(){					
-	return gulp.src('./'+y_Dz+'/*.html')
+	return gulp.src('./'+y_Dz+'/**/*.html')
 	.pipe(replace(/.(jpg|png|gif)/gi,'.webp'))
 	.pipe(processhtml())
 	.pipe(gulp.dest('./'+y_Dz+'/'));
@@ -139,7 +139,7 @@ gulp.task('html',function(){
 	minifyJS: true,							//- 压缩页面JS
 	minifyCSS: true							//- 压缩页面CSS
 };
-gulp.src('./'+y_Dz+'/*.html')						//- 压缩页面路径
+gulp.src('./'+y_Dz+'/**/*.html')					//- 压缩页面路径
 	.pipe(htmlmin(options))
 	.pipe(gulp.dest('./'+y_Dz+'/'));				//- 输出路径	
 });
