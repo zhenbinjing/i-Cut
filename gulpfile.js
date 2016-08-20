@@ -29,8 +29,7 @@ gulp.task('imagemin',function(){
 	.pipe(cache(imagemin({
 	progressive: true,
 	svgoPlugins: [{removeViewBox: false}],				//- 不要移除svg的viewbox属性
-	use: [pngquant()]						//- 使用pngquant深度压缩png图片的imagemin插件							
-	})))
+	use: [pngquant()]})))						//- 使用pngquant深度压缩png图片的imagemin插件						
 	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
 });
 
@@ -71,7 +70,7 @@ gulp.task('jshint',function(){						//- 检查文件
 	.pipe(jshint.reporter('default'));				//- 检查错误
 });
 
-gulp.task('processhtml',function(){					//- 修改该html的dom
+gulp.task('processhtml',function(){					//- 修改html的dom
 	var date = new Date().getTime();
 	gulp.src('./'+y_Sz+'/**/*.html')
 	.pipe(replace(/_VERSION_/gi, date))
@@ -85,31 +84,29 @@ gulp.task('fs',function(){
 
 gulp.task('cp',['fs'],function(){					//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
 	gulp.src(['./'+y_Sz+'/font/**'],{				//- 被复制的文件夹下的所有文件
-	base: './'+y_Sz+'/font'						//- 被复制的目标路径  
-	})
+	base: './'+y_Sz+'/font'})					//- 被复制的目标路径 	
 	.pipe(gulp.dest('./'+y_Dz+'/font'))				//- 输出路径	
 	
-	gulp.src(['./'+y_Sz+'/icon/**'],{				//- 被复制的文件夹下的所有文件
-	base: './'+y_Sz+'/icon'						//- 被复制的目标路径  
-	})
+	gulp.src(['./'+y_Sz+'/icon/**'],{				
+	base: './'+y_Sz+'/icon'})					
 	.pipe(gulp.dest('./'+y_Dz+'/icon'));
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./'+y_Sz+'/sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./'+y_Dz+'/sass'));
+	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
+	.pipe(sass().on('error', sass.logError))
+	.pipe(gulp.dest('./'+y_Dz+'/sass'));
 });
  
 gulp.task('sass:watch', function () {
-  gulp.watch('./'+y_Sz+'/sass/**/*.scss', ['sass']);
+	gulp.watch('./'+y_Sz+'/sass/**/*.scss', ['sass']);
 });
 
 /*-------------webp,html,bs这三个命令是需要时手动执行-----------------*/
 
 gulp.task('webp',['webp_img'],function(){
 	del(['./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}', '!./'+y_Dz+'/img/**/*.{webp}']).then(paths => {
-    console.log('Deleted files and folders:\n', paths.join('\n'));
+	console.log('Deleted files and folders:\n', paths.join('\n'));
 	});	 
 });	 
 
