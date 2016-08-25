@@ -14,7 +14,7 @@
 function resi() {
 	var html = document.querySelector("html");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
-	var maxW = 768;  //手机设计稿画布宽度对应媒体查询
+	var maxW = 750;  //手机设计稿画布宽度对应媒体查询
 	var minW = 320;  //设置最小宽度
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;
@@ -37,30 +37,56 @@ window.addEventListener("resize", resi);
 </head>
 <body>
 <div class="mip mlra">	
-		<div class="row clearfix c-fff tac fz30">
-			<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
-			<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
-			<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
-			<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
+	<div class="row c-fff tac fz30">
+		<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
+		<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
+		<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
+		<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
+	</div>
+	<div class="row c-fff tac fz30">
+		<div class="col-p-4 col-i-6"><div class="bc-04578B">col-p-4 col-i-6</div></div>
+		<div class="col-p-4 col-i-6"><div class="bc-04578B">col-p-4 col-i-6</div></div>
+		<div class="col-p-4 col-i-12"><div class="bc-04578B">col-p-4 col-i-12</div></div>
+	</div>
+	<div class="row c-fff tac fz30">
+		<div class="col-p-3 col-i-6"><div class="bc-f36">col-p-3 col-i-6</div></div>
+		<div class="col-p-9 col-i-6"><div class="bc-f36">col-p-9 col-i-6</div></div>
+	</div>
+	<div class="row c-fff tac fz30">
+		<div class="col-i-4">
+			<div class="row">
+				<div class="col-i-12">
+						<div class="bc-04578B">col-i-4 col-i-12</div>
+					</div>
+			</div>
 		</div>
-		<div class="row clearfix c-fff tac fz30">
-			<div class="col-p-4 col-i-6"><div class="bc-04578B">col-p-4 col-i-6</div></div>
-			<div class="col-p-4 col-i-6"><div class="bc-04578B">col-p-4 col-i-6</div></div>
-			<div class="col-p-4 col-i-12"><div class="bc-04578B">col-p-4 col-i-12</div></div>
+		<div class="col-i-4">
+			<div class="row">
+				<div class="col-i-12">
+					<div class="clearfix">
+						<div class="w4 fl bc-f36">4</div>
+						<div class="w8 fl bc-04578B">8</div>						
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="row clearfix c-fff tac fz30">
-			<div class="col-p-6 col-i-6"><div class="bc-f36">col-p-6 col-i-6</div></div>
-			<div class="col-p-6 col-i-6"><div class="bc-f36">col-p-6 col-i-6</div></div>
+		<div class="col-i-4">
+			<div class="row">
+				<div class="col-i-12">
+					<div class="row">
+						<div class="col-m-5"><div class="bc-f36">5</div></div>
+						<div class="col-m-7"><div class="bc-04578B">7</div></div>
+					</div>
+				</div>				
+			</div>
 		</div>
-		<div class="row clearfix c-fff tac fz30">
-			<div class="col-p-3 col-i-6"><div class="bc-04578B">col-p-3 col-i-6</div></div>
-			<div class="col-p-9 col-i-6"><div class="bc-04578B">col-p-9 col-i-6</div></div>
-		</div>
-		<div class="row clearfix c-fff tac fz30">
-			<div class="col-i-4"><div class="row clearfix"><div class="col-i-12"><div class="bc-f36" >col-i-4 col-i-12</div></div></div></div>
-			<div class="col-i-4"><div class="row clearfix"><div class="col-i-12"><div class="bc-f36" >col-i-4 col-i-12</div></div></div></div>
-			<div class="col-i-4"><div class="row clearfix"><div class="col-i-12"><div class="bc-f36" >col-i-4 col-i-12</div></div></div></div>
-		</div>
+	</div>
+	<div class="row c-fff tac fz30">
+	<div class="col-m-4"></div>
+		<div class="col-m-4"><div class="bc-f36">5</div></div>
+		<div class="col-m-4"><div class="bc-f36">5</div></div>
+		<div class="col-m-4"><div class="bc-f36">5</div></div>
+	</div>
 </div>
 </body>
 </html>

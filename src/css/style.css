@@ -70,18 +70,19 @@ html{font-size:100px;/*no*/}
 
 /*------------------------------响应式------------------------------*/
 
+/*PC设计稿的内容区宽度*/
 .mip{max-width:1200px;/*no*/padding-left: 15px;/*no*/padding-right: 15px;/*no*/}
 .row{margin-left: -15px;/*no*/margin-right: -15px;/*no*/}
+.row:before,.row:after{display: table; content: " ";}
+.row:after{clear: both;}
 
 /*间距*/
 .col-m-12, .col-m-11, .col-m-10, .col-m-9, .col-m-8, .col-m-7, .col-m-6, .col-m-5, .col-m-4, .col-m-3, .col-m-2, .col-m-1,
 .col-i-12, .col-i-11, .col-i-10, .col-i-9, .col-i-8, .col-i-7, .col-i-6, .col-i-5, .col-i-4, .col-i-3, .col-i-2, .col-i-1,
 .col-p-12, .col-p-11, .col-p-10, .col-p-9, .col-p-8, .col-p-7, .col-p-6, .col-p-5, .col-p-4, .col-p-3, .col-p-2, .col-p-1
-{
-	padding-right: 15px;/*no*/  padding-left: 15px;/*no*/
-}
+{padding-right: 15px;/*no*/  padding-left: 15px;/*no*/}
 
-/*m*/
+/*M*/
 [class*="col-"] {float: left;width: 100%;}
 .col-m-12 {width: 100%;}
 .col-m-11 {width: 91.66666667%;}
@@ -96,7 +97,6 @@ html{font-size:100px;/*no*/}
 .col-m-2 {width: 16.66666667%;}
 .col-m-1 {width: 8.33333333%;}
 
-.col-m-ml-12 {margin-left: 100%;}
 .col-m-ml-11 {margin-left: 91.66666667%;}
 .col-m-ml-10 {margin-left: 83.33333333%;}
 .col-m-ml-9 {margin-left: 75%;}
@@ -110,8 +110,8 @@ html{font-size:100px;/*no*/}
 .col-m-ml-1 {margin-left: 8.33333333%;}	
 .col-m-ml-0 {margin-left: 0;}
 
-/*ipad*/
-@media (min-width: 769px) {	
+/**/
+@media (min-width: 751px) {	
 .col-i-12 {width: 100%;}
 .col-i-11 {width: 91.66666667%;}
 .col-i-10 {width: 83.33333333%;}
@@ -125,7 +125,6 @@ html{font-size:100px;/*no*/}
 .col-i-2 {width: 16.66666667%;}
 .col-i-1 {width: 8.33333333%;}
 
-.col-i-ml-12 {margin-left: 100%;}
 .col-i-ml-11 {margin-left: 91.66666667%;}
 .col-i-ml-10 {margin-left: 83.33333333%;}
 .col-i-ml-9 {margin-left: 75%;}
@@ -140,7 +139,7 @@ html{font-size:100px;/*no*/}
 .col-i-ml-0 {margin-left: 0;}
 }
 
-/*pc*/
+/*PC*/
 @media (min-width: 1200px) {	
 .col-p-12 {width: 100%;}
 .col-p-11 {width: 91.66666667%;}
@@ -155,7 +154,6 @@ html{font-size:100px;/*no*/}
 .col-p-2 {width: 16.66666667%;}
 .col-p-1 {width: 8.33333333%;}
 
-.col-p-ml-12 {margin-left: 100%;}
 .col-p-ml-11 {margin-left: 91.66666667%;}
 .col-p-ml-10 {margin-left: 83.33333333%;}
 .col-p-ml-9 {margin-left: 75%;}
