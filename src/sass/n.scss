@@ -1,5 +1,5 @@
-@for $i from 0 through 100 {.fz#{$i}{font-size:1px * $i;}}
-@for $i from 0 through 100 {.lh#{$i}{line-height:1px * $i;}}
+@for $i from 12 through 100 {.fz#{$i}{font-size:1px * $i;}}
+@for $i from 12 through 100 {.lh#{$i}{line-height:1px * $i;}}
 @for $i from 0 through 100 {.p#{$i}{padding:1px * $i;}}
 @for $i from 0 through 100 {.pt#{$i}{padding-top:1px * $i;}}
 @for $i from 0 through 100 {.pr#{$i}{padding-right:1px * $i;}}
