@@ -6,13 +6,13 @@ onetoui/
 |__ gulpfile.js
 |__ README.md
 |__ src/
-  |__ mip.html
+  |__ flexboxgrid.html
   |__ index.html
   |__ css/
     |__ onebase.css
     |__ number.css
+    |__ flexboxgrid.css
     |__ style.css
-    |__ t.css
   |__ font/
     |__ fzcjjt.ttf
   |__ icon/
@@ -38,9 +38,11 @@ src/css/onebase.css是一些没有数值的属性底层表。
 
 src/css/number.css是平时常用的`字体大小`,`行高`,`内边距`,`外边距`,`圆角`,`边框`属性表。
 
-src/css/style.css是自定义项目样式表（有响应式栅格和代码注释）。
+src/css/flexboxgrid.css是flexbox布局与grid栅格的合体，是本框架的核心。
 
-src/css/t.css是组件样式表。src/sass/n.scss是预编译文件。
+src/css/style.css是自定义项目样式表。
+
+src/sass/n.scss是预编译文件。
 
 src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
 
@@ -70,11 +72,13 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 可以用Assistor PS这个插件辅助，[下载地址](http://witstudio.net/)，最新的PS CC已经集成部分功能。
 
-对于平常用的`Bootstrap`框架的同学一下就能看懂，本框架只采用栅格系统用于自己的项目中（阉割版）。
+在这特别感谢flexboxgrid的作者[项目地址](https://github.com/kristoferjoseph/flexboxgrid)，案例：src/flexboxgrid.html。
+
+对于平常用的`Bootstrap`框架的同学一下就能看懂，本框架采用Flexbox与栅格系统一起开发！
 
 当然，如果你是重度依赖它的话，你也可以直接用Bootstrap，本人只采取其核心的部分，方便自己扩张。
 
-案例：src/mip.html。顺便推荐一篇文章，希望对大家有所帮助：https://www.douban.com/note/489518516/
+顺便推荐一篇文章，希望对大家有所帮助：https://www.douban.com/note/489518516/
 
 ##Gulp自动化流程
 

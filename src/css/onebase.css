@@ -7,65 +7,6 @@ body,div,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,
 *{  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 *:before,*:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
-/*-----Flexbox------*/
-
-/*------------------------
-
-水平的主轴:
-flex-direction: row | row-reverse | column | column-reverse; 
-row（默认值）：主轴为水平方向，起点在左端。
-row-reverse：主轴为水平方向，起点在右端。
-column：主轴为垂直方向，起点在上沿。
-column-reverse：主轴为垂直方向，起点在下沿
-
-垂直的交叉轴:
-flex-wrap: nowrap | wrap | wrap-reverse;
-nowrap（默认）：不换行
-wrap：换行，第一行在上方
-wrap-reverse：换行，第一行在下方
-
-flex-flow 是flex-direction与flex-wrap简写版。
-flex-flow: <flex-direction> || <flex-wrap>;
-
-------------------------*/
-
-.df{display:-webkit-box;display:-webkit-flex;display:flex;}
-
-/*项目水平垂直方向*/
-.ffrw{-webkit-flex-flow:row wrap; flex-flow:row wrap;}
-.ffrwr{-webkit-flex-flow:row wrap-reverse; flex-flow:row wrap-reverse; }
-
-/*项目水平轴*/
-.jcc{-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center; }
-
-/*这里旧版语法有4个参数，而新版语法有5个参数，兼容写法新版语法的 space-around 是不可用的：*/
-.jcsa{ -webkit-justify-content:space-around; justify-content:space-around;}
-.jcsb{-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;}
-
-/*项目单条垂直轴*/
-.aic{-webkit-box-align: center;-webkit-align-items:center; align-items: center; }
-.aifs{-webkit-box-align: start; -webkit-align-items:flex-start; align-items:flex-start; }
-.aife{-webkit-box-align: end;-webkit-align-items:flex-end; align-items:flex-end;}
-
-/*项目多条垂直轴(如果项目只有一根轴线，该属性不起作用)*/
-.acc{-webkit-align-content:center; align-content:center; }
-.acsa{-webkit-align-content:space-around; align-content:space-around; }
-.acsb{-webkit-align-content:space-between; align-content:space-between; }
-
-/*项目比例*/
-.flex1{-webkit-flex:1;flex:1;-webkit-box-flex:1;}
-.flex2{-webkit-flex:2;flex:2;-webkit-box-flex:2; }
-.flex3{-webkit-flex:3;flex:3;-webkit-box-flex:3;}
-.flexi{-webkit-flex: initial; flex: initial; }
-
-/*项目顺序*/
-.order1{-webkit-box-ordinal-group: 1; -webkit-order: 1; order: 1;}
-.order2{-webkit-box-ordinal-group: 2; -webkit-order: 2; order: 2;}
-.order3{-webkit-box-ordinal-group: 3; -webkit-order: 3; order: 3;}
-
-/*-----Flexbox End------*/
-
-
 /*-----排版解决方案start------*/
 
 /*清除浮动*/

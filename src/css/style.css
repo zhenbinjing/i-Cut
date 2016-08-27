@@ -1,15 +1,29 @@
-﻿/*------------------------------设置移动端样式------------------------------*/
+﻿/*-------为了方便计算html的值，所以初始化设置100px,对应的其他数值相当于除以100，在gulpfile文件的px3rem方法中设置。-------*/
+html{font-size:100px;/*no*/}
+
+/*------------------------------设置移动端样式------------------------------*/
+
+/*移动reset*/
 body{font-family:Helvetica;-webkit-overflow-scrolling:touch; margin:0;}
 a,button,input,optgroup,select,textarea {-webkit-tap-highlight-color:rgba(0,0,0,0);}
 a,img {-webkit-touch-callout: none;}
 img{ max-width:100%;}
+
+/*最大的宽度640是移动设计稿宽度，方便在PC上查看*/
+.m{max-width:640px;/*no*/ min-width:320px; overflow:hidden; margin:0 auto;}
+
+/*移动组件*/
+.focus{ width:100%;  margin:0 auto; position:relative;}
+.focus .hd{ width:100%; height:11px;/*no*/  position:absolute; z-index:1; bottom:6px;/*no*/ text-align:center; }
+.focus .hd ul{ display:inline-block; height:11px;/*no*/ padding:3px 5px;/*no*/ background-color:rgba(255,255,255,0.7); border-radius:6px;/*no*/ font-size:0; vertical-align:top;}
+.focus .hd ul li{ display:inline-block; width:5px;/*no*/ height:5px;/*no*/ border-radius:5px;/*no*/ background:#ccc; margin:0 5px;/*no*/  vertical-align:top; overflow:hidden;   }
+.focus .hd ul .on{ background:#e75223;  }
+.focus .bd{ position:relative; z-index:0; }
+.focus .bd li img{ width:100%; }
+
 /*------------------------------设置移动端样式end------------------------------*/
 
-/*为了方便计算html的值，所以初始化设置100px,对应的其他数值相当于除以100，在gulpfile文件的px3rem方法中设置。*/
-html{font-size:100px;/*no*/}
-
-/*最大的宽度640是移动设计稿宽度，方便在PC上查看。*/
-.m{max-width:640px;/*no*/ min-width:320px; overflow:hidden; margin:0 auto;}
+/*---------------------------------自定义样式---------------------------------*/
 
 /*自定义字体*/
 @font-face {
@@ -31,14 +45,7 @@ html{font-size:100px;/*no*/}
 	     url('../icon/iconfont.ttf') format('truetype'),
 	     url('../icon/iconfont.svg') format('svg');
 }
-.iconfont {
-  font-family:"iconfont" !important;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;/*no*/
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/*-----自定义样式-------*/
+.iconfont {font-family:"iconfont" !important; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px;/*no*/ -moz-osx-font-smoothing: grayscale;}
 
 /*背景颜色*/
 .bc-04578B{background-color: #04578B;}
@@ -50,8 +57,6 @@ html{font-size:100px;/*no*/}
 
 /*边框颜色*/
 .bdc-000{border-color: #000;}
-
-/*-----自定义样式end-------*/
 
 /*宽度*/
 .w12 {width: 100%;}
@@ -68,104 +73,6 @@ html{font-size:100px;/*no*/}
 .w1 {width: 8.33333333%;}
 .w0 {width:0;}
 
-/*------------------------------响应式------------------------------*/
+/*---------------------------------自定义样式end---------------------------------*/
 
-/*PC设计稿的内容区宽度*/
-.mip{max-width:1200px;/*no*/padding-left: 15px;/*no*/padding-right: 15px;/*no*/}
-.row{margin-left: -15px;/*no*/margin-right: -15px;/*no*/}
-.row:before,.row:after{display: table; content: " ";}
-.row:after{clear: both;}
 
-/*间距*/
-.col-m-12, .col-m-11, .col-m-10, .col-m-9, .col-m-8, .col-m-7, .col-m-6, .col-m-5, .col-m-4, .col-m-3, .col-m-2, .col-m-1,
-.col-i-12, .col-i-11, .col-i-10, .col-i-9, .col-i-8, .col-i-7, .col-i-6, .col-i-5, .col-i-4, .col-i-3, .col-i-2, .col-i-1,
-.col-p-12, .col-p-11, .col-p-10, .col-p-9, .col-p-8, .col-p-7, .col-p-6, .col-p-5, .col-p-4, .col-p-3, .col-p-2, .col-p-1
-{padding-right: 15px;/*no*/  padding-left: 15px;/*no*/}
-
-/*M*/
-[class*="col-"] {float: left;width: 100%;}
-.col-m-12 {width: 100%;}
-.col-m-11 {width: 91.66666667%;}
-.col-m-10 {width: 83.33333333%;}
-.col-m-9 {width: 75%;}
-.col-m-8 {width: 66.66666667%;}
-.col-m-7 {width: 58.33333333%;}
-.col-m-6 {width: 50%;}
-.col-m-5 {width: 41.66666667%;}
-.col-m-4 {width: 33.33333333%;}
-.col-m-3 {width: 25%;}
-.col-m-2 {width: 16.66666667%;}
-.col-m-1 {width: 8.33333333%;}
-
-.col-m-ml-11 {margin-left: 91.66666667%;}
-.col-m-ml-10 {margin-left: 83.33333333%;}
-.col-m-ml-9 {margin-left: 75%;}
-.col-m-ml-8 {margin-left: 66.66666667%;}
-.col-m-ml-7 {margin-left: 58.33333333%;}
-.col-m-ml-6 {margin-left: 50%;}
-.col-m-ml-5 {margin-left: 41.66666667%;}
-.col-m-ml-4 {margin-left: 33.33333333%;}
-.col-m-ml-3 {margin-left: 25%;}
-.col-m-ml-2 {margin-left: 16.66666667%;}
-.col-m-ml-1 {margin-left: 8.33333333%;}	
-.col-m-ml-0 {margin-left: 0;}
-
-/**/
-@media (min-width: 751px) {	
-.col-i-12 {width: 100%;}
-.col-i-11 {width: 91.66666667%;}
-.col-i-10 {width: 83.33333333%;}
-.col-i-9 {width: 75%;}
-.col-i-8 {width: 66.66666667%;}
-.col-i-7 {width: 58.33333333%;}
-.col-i-6 {width: 50%;}
-.col-i-5 {width: 41.66666667%;}
-.col-i-4 {width: 33.33333333%;}
-.col-i-3 {width: 25%;}
-.col-i-2 {width: 16.66666667%;}
-.col-i-1 {width: 8.33333333%;}
-
-.col-i-ml-11 {margin-left: 91.66666667%;}
-.col-i-ml-10 {margin-left: 83.33333333%;}
-.col-i-ml-9 {margin-left: 75%;}
-.col-i-ml-8 {margin-left: 66.66666667%;}
-.col-i-ml-7 {margin-left: 58.33333333%;}
-.col-i-ml-6 {margin-left: 50%;}
-.col-i-ml-5 {margin-left: 41.66666667%;}
-.col-i-ml-4 {margin-left: 33.33333333%;}
-.col-i-ml-3 {margin-left: 25%;}
-.col-i-ml-2 {margin-left: 16.66666667%;}
-.col-i-ml-1 {margin-left: 8.33333333%;}	
-.col-i-ml-0 {margin-left: 0;}
-}
-
-/*PC*/
-@media (min-width: 1200px) {	
-.col-p-12 {width: 100%;}
-.col-p-11 {width: 91.66666667%;}
-.col-p-10 {width: 83.33333333%;}
-.col-p-9 {width: 75%;}
-.col-p-8 {width: 66.66666667%;}
-.col-p-7 {width: 58.33333333%;}
-.col-p-6 {width: 50%;}
-.col-p-5 {width: 41.66666667%;}
-.col-p-4 {width: 33.33333333%;}
-.col-p-3 {width: 25%;}
-.col-p-2 {width: 16.66666667%;}
-.col-p-1 {width: 8.33333333%;}
-
-.col-p-ml-11 {margin-left: 91.66666667%;}
-.col-p-ml-10 {margin-left: 83.33333333%;}
-.col-p-ml-9 {margin-left: 75%;}
-.col-p-ml-8 {margin-left: 66.66666667%;}
-.col-p-ml-7 {margin-left: 58.33333333%;}
-.col-p-ml-6 {margin-left: 50%;}
-.col-p-ml-5 {margin-left: 41.66666667%;}
-.col-p-ml-4 {margin-left: 33.33333333%;}
-.col-p-ml-3 {margin-left: 25%;}
-.col-p-ml-2 {margin-left: 16.66666667%;}
-.col-p-ml-1 {margin-left: 8.33333333%;}	
-.col-p-ml-0 {margin-left: 0;}	
-}
-
-/*------------------------------响应式end------------------------------*/
