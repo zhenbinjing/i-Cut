@@ -40,9 +40,7 @@ src/css/number.css是平时常用的`字体大小`,`行高`,`内边距`,`外边�
 
 src/css/flexboxgrid.css是flexbox布局与grid栅格的合体，是本框架的核心。
 
-src/css/style.css是自定义项目样式表。
-
-src/sass/n.scss是预编译文件。
+src/css/style.css是自定义项目样式表。src/sass/n.scss是预编译文件。
 
 src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
 
