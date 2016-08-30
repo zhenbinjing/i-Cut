@@ -1,25 +1,25 @@
 ﻿/*-------为了方便计算html的值，所以初始化设置100px,对应的其他数值相当于除以100，在gulpfile文件的px3rem方法中设置。-------*/
-html{font-size:100px;/*no*/}
+html{font-size: 100px;/*no*/}
 
 /*------------------------------设置移动端样式------------------------------*/
 
 /*移动reset*/
-body{font-family:Helvetica;-webkit-overflow-scrolling:touch; margin:0;}
-a,button,input,optgroup,select,textarea {-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body{font-family:Helvetica;-webkit-overflow-scrolling: touch;}
+a,button,input,optgroup,select,textarea {-webkit-tap-highlight-color: rgba(0,0,0,0);}
 a,img {-webkit-touch-callout: none;}
-img{ max-width:100%;}
+img{max-width: 100%;}
 
 /*最大的宽度640是移动设计稿宽度，方便在PC上查看*/
-.m{max-width:640px;/*no*/ min-width:320px; overflow:hidden; margin:0 auto;}
+.m{max-width: 640px;/*no*/ min-width: 320px; overflow: hidden; margin: 0 auto;}
 
 /*移动组件*/
-.focus{ width:100%;  margin:0 auto; position:relative;}
-.focus .hd{ width:100%; height:11px;/*no*/  position:absolute; z-index:1; bottom:6px;/*no*/ text-align:center; }
-.focus .hd ul{ display:inline-block; height:11px;/*no*/ padding:3px 5px;/*no*/ background-color:rgba(255,255,255,0.7); border-radius:6px;/*no*/ font-size:0; vertical-align:top;}
-.focus .hd ul li{ display:inline-block; width:5px;/*no*/ height:5px;/*no*/ border-radius:5px;/*no*/ background:#ccc; margin:0 5px;/*no*/  vertical-align:top; overflow:hidden;   }
-.focus .hd ul .on{ background:#e75223;  }
-.focus .bd{ position:relative; z-index:0; }
-.focus .bd li img{ width:100%; }
+.focus{width: 100%; margin: 0 auto; position: relative;}
+.focus .hd{ width: 100%; height:11px;/*no*/  position: absolute; z-index: 1; bottom: 6px;/*no*/ text-align: center;}
+.focus .hd ul{display: inline-block; height: 11px;/*no*/ padding: 3px 5px;/*no*/ background-color: rgba(255,255,255,0.7); border-radius: 6px;/*no*/ font-size: 0; vertical-align: top;}
+.focus .hd ul li{display: inline-block; width: 5px;/*no*/ height: 5px;/*no*/ border-radius:5px;/*no*/ background: #ccc; margin: 0 5px;/*no*/  vertical-align: top; overflow: hidden;}
+.focus .hd ul .on{background: #e75223;}
+.focus .bd{position: relative; z-index: 0;}
+.focus .bd li img{width: 100%;}
 
 /*------------------------------设置移动端样式end------------------------------*/
 
@@ -59,19 +59,19 @@ img{ max-width:100%;}
 .bdc-000{border-color: #000;}
 
 /*宽度*/
-.w12 {width: 100%;}
-.w11 {width: 91.66666667%;}
-.w10 {width: 83.33333333%;}
-.w9 {width: 75%;}
-.w8 {width: 66.66666667%;}
-.w7 {width: 58.33333333%;}
-.w6 {width: 50%;}
-.w5 {width: 41.66666667%;}
-.w4 {width: 33.33333333%;}
-.w3 {width: 25%;}
-.w2 {width: 16.66666667%;}
-.w1 {width: 8.33333333%;}
-.w0 {width:0;}
+.w12{width: 100%;}
+.w11{width: 91.66666667%;}
+.w10{width: 83.33333333%;}
+.w9{width: 75%;}
+.w8{width: 66.66666667%;}
+.w7{width: 58.33333333%;}
+.w6{width: 50%;}
+.w5{width: 41.66666667%;}
+.w4{width: 33.33333333%;}
+.w3{width: 25%;}
+.w2{width: 16.66666667%;}
+.w1{width: 8.33333333%;}
+.w0{width:0;}
 
 /*---------------------------------自定义样式end---------------------------------*/
 
