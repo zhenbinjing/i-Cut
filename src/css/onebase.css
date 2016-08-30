@@ -96,7 +96,7 @@ body,div,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,
 .lstd{list-style-type: disc;}/*实心*/
 .lstc{list-style-type: circle;}/*空心*/
 .lsts{list-style-type: square;}/*小方块*/
-.lstsd{list-style-type: decimal;}/*数字*/
+.lstdc{list-style-type: decimal;}/*数字*/
 .lstu{list-style-type: upper-roman;}/*罗马*/
 .lstl{list-style-type: lower-alpha;}/*字母*/
 
