@@ -5,13 +5,13 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 *:before,*:after{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
 /*平时用的标签做的reset*/
-body,div,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,h2,p,span,img,a,em{ margin: 0; padding: 0; outline: 0; border: 0; border-spacing: 0; list-style: none; text-decoration: none; border-collapse:collapse; font-family:"微软雅黑";}
+body,div,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,h2,p,span,img,a,em{margin: 0; padding: 0; outline: 0; border: 0; border-spacing: 0; list-style: none; text-decoration: none; border-collapse: collapse; font-family:"微软雅黑";}
 
 /*-----排版解决方案start------*/
 
 /*清除浮动*/
 .clearfix:after {visibility: hidden; display: block; clear: both; content:" "; font-size: 0; height: 0;}
-.clearfix{*zoom:1;}
+.clearfix{*zoom: 1;}
 
 /*略号文字截断(单行)*/
 .cut{white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
@@ -45,8 +45,8 @@ body,div,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,
 .vab{vertical-align: bottom;}
 .vatb{vertical-align: text-bottom;}
 .vatt{vertical-align: text-top;}
-.vasup{vertical-align:super;}
-.vasub{vertical-align:sub;}
+.vasup{vertical-align: super;}
+.vasub{vertical-align: sub;}
 
 /*块状定位*/
 .fl{float: left;}
@@ -121,4 +121,3 @@ body,div,dl,dt,dd,ul,ol,li,table,tr,td,form,input,select,textarea,blockquote,h1,
 
 /*鼠标指针*/
 .curp{cursor: pointer;}/*手指*/
-
