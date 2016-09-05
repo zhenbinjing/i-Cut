@@ -20,13 +20,3 @@
 @for $i from 0 through 10 {.bdrw#{$i}{border-right-width:1px * $i;}}
 @for $i from 0 through 10 {.bdbw#{$i}{border-bottom-width:1px * $i;}}
 @for $i from 0 through 10 {.bdlw#{$i}{border-left-width:1px * $i;}}
-
-
-
-
-
-
-
-
-
-
