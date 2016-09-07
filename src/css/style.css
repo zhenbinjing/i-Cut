@@ -51,14 +51,23 @@ img{max-width: 100%;}
 .bdc-000{border-color: #000;}
 
 /*背景颜色*/
-.bc-04578B{background-color: #04578B;}
-.bc-f36{background-color: #f36;}
+.bgc-04578B{background-color: #04578B;}
+.bgc-f36{background-color: #f36;}
 
 /*字体颜色*/
 .c-FF5700{color:#FF5700;}
 .c-fff{color: #fff;}
 
-/*宽度*/
+/*边框图片*/
+.bdi{border-image: url();}
+
+/*背景图片*/
+.bgi{background-image: url();}
+
+/*模块投影(内与外)*/
+.bxsh{box-shadow: inset hoff voff blur spread rgba(0, 0, 0, .5); /*内外（inset outset） 水平 垂直 模糊距离 阴影的尺寸 颜色（#）*/}
+
+/*常用宽度*/
 .w12{width: 100%;}
 .w11{width: 91.66666667%;}
 .w10{width: 83.33333333%;}
