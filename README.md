@@ -37,7 +37,7 @@ onetoui/
 
 src/css/reset.css是重置表。 src/css/common.css是常用表。  
 
-src/css/box.css是平时常用的`字体大小`,`行高`,`内边距`,`外边距`,`圆角`,`边框`,`宽度`属性表。
+src/css/box.css是平时常用的（字体大小、行高、内边距、外边距、圆角、边框、宽度）属性表。
 
 src/css/flexboxgrid.css是flexbox布局与grid栅格的合体，是本框架的核心。
 
@@ -49,17 +49,17 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 ##移动端(自适应)开发
 
-规则1：要求设计师设计的PSD宽度为640,750或其他标准尺寸，但`DPI`必须是为72,这样才接近一比一还原。
+规则1：要求设计师设计的PSD宽度为640,750或其他标准尺寸，但DPI必须是为72,这样才接近一比一还原。
 
 规则2：在src/index.html的头部加了一段js，实现动态改变根元素的值令字体与盒子模型的值以及iframe等比例缩放，
 
-从而告别繁琐的媒体查询。`(变量maxW就是设计稿的宽度)`
+从而告别繁琐的媒体查询。(变量maxW就是设计稿的宽度)
 
-规则3：样式表里所有单位写`px`，设计稿里的值是多少就写多少，已内置gulp-px3rem，一键转换，省心方便。
+规则3：样式表里所有单位写PX，设计稿里的值是多少就写多少，已内置gulp-px3rem，一键转换，省心方便。
 
-**关键设置1**：头部js的`maxW`变量值
+**关键设置1**：头部js的 maxW 变量值
 
-**关键设置2**：src/css/style.css中，`html{font-size:100px}` `.m{max-width:640px;}`设计稿宽度
+**关键设置2**：src/css/style.css中，`html{font-size:100px}` `.m{max-width:640px;}` 设计稿宽度
 
 **关键设置3**：gulpfile.js `px3rem({remUnit: 100})`
 
@@ -73,7 +73,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 在这特别感谢flexboxgrid的作者[项目地址](https://github.com/kristoferjoseph/flexboxgrid)，案例：src/flexboxgrid.html。
 
-对于平常用的`Bootstrap`框架的同学一下就能看懂，本框架采用Flexbox与栅格系统一起开发！
+对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用Flexbox与栅格系统一起开发！
 
 当然，如果你是重度依赖它的话，你也可以直接用Bootstrap，本人只采取其核心的部分，方便自己扩展。
 
