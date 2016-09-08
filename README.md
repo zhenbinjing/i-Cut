@@ -9,8 +9,9 @@ onetoui/
   |__ flexboxgrid.html
   |__ index.html
   |__ css/
-    |__ onebase.css
-    |__ number.css
+    |__ reset.css
+    |__ common.css
+    |__ box.css
     |__ flexboxgrid.css
     |__ style.css
   |__ font/
@@ -34,9 +35,9 @@ onetoui/
 ```
 ##文件目录解释
 
-src/css/onebase.css是一些没有数值的属性底层表。
+src/css/reset.css是重置表。 src/css/common.css是常用表。  
 
-src/css/number.css是平时常用的`字体大小`,`行高`,`内边距`,`外边距`,`圆角`,`边框`属性表。
+src/css/box.css是平时常用的`字体大小`,`行高`,`内边距`,`外边距`,`圆角`,`边框`,`宽度`属性表。
 
 src/css/flexboxgrid.css是flexbox布局与grid栅格的合体，是本框架的核心。
 
@@ -85,4 +86,3 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 gulp-webp（图片转webp）、gulp-px3rem（px转rem）、gulp-uncss（去除没调用的css）、
 
 font-spider（去除没引用的中文字体）、browser-sync（浏览器同步测试）。
-
