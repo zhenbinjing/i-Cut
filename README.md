@@ -14,6 +14,7 @@ onetoui/
     |__ box.css
     |__ flexboxgrid.css
     |__ style.css
+    |__ group.css
   |__ font/
     |__ fzcjjt.ttf
   |__ icon/
@@ -41,7 +42,7 @@ src/css/box.css是平时常用的（字体大小、行高、内边距、外边�
 
 src/css/flexboxgrid.css是flexbox布局与grid栅格的合体，是本框架的核心。
 
-src/css/style.css是自定义项目样式表。src/sass/n.scss是预编译文件。
+src/css/style.css是风格样式表。src/css/group.css是组件样式表。src/sass/n.scss是预编译文件。
 
 src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
 
@@ -59,7 +60,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 **关键设置1**：头部js的 maxW 变量值
 
-**关键设置2**：src/css/style.css中，`html{font-size:100px}` `.m{max-width:640px;}` 设计稿宽度
+**关键设置2**：src/css/group.css中，`html{font-size:100px}` `.m{max-width:640px;}` 设计稿宽度
 
 **关键设置3**：gulpfile.js `px3rem({remUnit: 100})`
 
@@ -67,7 +68,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 ##PC端(响应式)开发
 
-规则1：要求设计师的设计稿，`DPI`统一72，栅格宽度和媒体查询尺寸与src/css/style.css互相对应。
+规则1：要求设计师的设计稿，DPI统一72，栅格宽度和媒体查询尺寸与src/css/flexboxgrid.css互相对应。
 
 可以用Assistor PS这个插件辅助，[下载地址](http://witstudio.net/)，最新的PS CC已经集成部分功能。
 
