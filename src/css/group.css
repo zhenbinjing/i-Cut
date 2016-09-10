@@ -18,7 +18,7 @@ html{font-size: 100px;/*no*/}
 /*----------------------------移动端样式-----------------------------*/
 
 /*最大的宽度640是移动设计稿宽度，方便在PC上查看*/
-.m{max-width: 640px;/*no*/ min-width: 320px; overflow: hidden; margin: 0 auto;}
+.m{max-width: 640px; min-width: 320px; overflow: hidden; margin: 0 auto;}
 
 /*移动组件*/
 .focus{width: 100%; margin: 0 auto; position: relative;}

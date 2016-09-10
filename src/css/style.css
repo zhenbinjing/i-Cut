@@ -67,5 +67,5 @@
 .bgrg{background: radial-gradient(circle, #f00, #ff0, #080);}
 
 /*重复径向渐变*/
-.bgrlg{background: repeating-linear-gradient(45deg,#fb3, #fb3 15px,#58a 0,#58a 30px);}
-.bgrrg{background: repeating-radial-gradient(circle, #f00 0, #ff0 10%, #f00 15%);}
+.bg-rlg{background: repeating-linear-gradient(45deg,#fb3, #fb3 15px,#58a 0,#58a 30px);}
+.bg-rrg{background: repeating-radial-gradient(circle, #f00 0, #ff0 10%, #f00 15%);}

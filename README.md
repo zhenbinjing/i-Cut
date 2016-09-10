@@ -1,6 +1,6 @@
 ﻿##UI开发框架
 
-框架适合移动端`(自适应)`和PC端`(响应式)`制作，陆续更新中，不断实践和修复bug。
+框架适合移动端 (自适应) 和 PC端 (响应式) 制作，陆续更新中，不断实践和修复bug。
 ```txt
 onetoui/
 |__ gulpfile.js
@@ -10,9 +10,9 @@ onetoui/
   |__ index.html
   |__ css/
     |__ reset.css
-    |__ common.css
-    |__ box.css
     |__ flexboxgrid.css
+    |__ box.css
+    |__ common.css
     |__ style.css
     |__ group.css
   |__ font/
@@ -36,15 +36,13 @@ onetoui/
 ```
 ##文件目录解释
 
-src/css/reset.css是重置表。 src/css/common.css是常用表。  
+src/css/reset.css是重置表。 src/css/flexboxgrid.css是flexbox布局与grid栅格的合体，是本框架的核心。
 
 src/css/box.css是平时常用的（字体大小、行高、内边距、外边距、圆角、边框、宽度）属性表。
 
-src/css/flexboxgrid.css是flexbox布局与grid栅格的合体，是本框架的核心。
+src/css/common.css是常用属性表。 src/css/style.css是风格样式表。 src/css/group.css是组件样式表。
 
-src/css/style.css是风格样式表。src/css/group.css是组件样式表。src/sass/n.scss是预编译文件。
-
-src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
+src/sass/n.scss是预编译文件。src/js/scrollLoad.js与TouchSlide.1.1.js分别是图片延迟加载和滑动插件。
 
 src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片。
 
