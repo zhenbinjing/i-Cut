@@ -34,7 +34,7 @@ onetoui/
   |__ sass/
     |__ n.scss
 ```
-##文件目录解释
+##文件描述
 
 src/css/reset.css是重置表。 src/css/flexboxgrid.css是flexbox布局与grid栅格的合体，是本框架的核心。
 
@@ -60,7 +60,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 **关键设置2**：src/css/group.css中，`html{font-size:100px}` `.m{max-width:640px;}` 设计稿宽度
 
-**关键设置3**：gulpfile.js `px3rem({remUnit: 100})`
+**关键设置3**：gulpfile.js `px3rem({remUnit: 100})` 这要和上面html的 font-size 一致。
 
 案例：https://github.com/zhenbinjing/qietu/tree/master/m
 

@@ -8,11 +8,10 @@ a,img {-webkit-touch-callout: none;}
 img{max-width: 100%;}
 
 /*pc-reset*/
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, th, td{margin: 0;padding: 0;}
+body, iframe, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, th, td{margin: 0;padding: 0;}
 body{font-family:'微软雅黑';}
-address, cite, dfn, em, var { font-style: normal; }
-code, kbd, pre, samp { font-family: courier new, courier, monospace; } 
-ul,ol{list-style-type: none;}
+address, cite, dfn, em, var {font-style: normal;}
+ul, ol{list-style-type: none;}
 a{text-decoration: none;}
-fieldset,img{border: none;}
-table { border-collapse: collapse; border-spacing: 0; }
+iframe, fieldset, img{border: none;}
+table {border-collapse: collapse; border-spacing: 0;}
