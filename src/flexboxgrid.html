@@ -10,23 +10,16 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="email=no">
-<!-- build:css css/index.css?v=_VERSION_-->
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/flexboxgrid.css">
-<link rel="stylesheet" href="css/box.css">
-<link rel="stylesheet" href="css/common.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/group.css">
-<!-- /build -->
 <script type="text/javascript">
 function resi() {
 	var html = document.querySelector("html");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
-	var maxW = 750;  //手机设计稿画布宽度对应媒体查询+1
+	var maxW = 750;  //手机设计稿画布宽度
 	var minW = 320;  //设置最小宽度
+	var htmlfs = 100; //与 group.css 中 html 标签的 fontSize 值以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
 	if (wW > maxW) wW = maxW;
-	var ratio  = wW / minW;
-	html.style.fontSize = (100/(maxW/minW)) * ratio  + "px"
+	var ratio  = wW / minW;	
+	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px"
 }
 window.addEventListener("DOMContentLoaded", function() {
 	var bodys = document.querySelector("body").style;
@@ -36,6 +29,14 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 window.addEventListener("resize", resi);
 </script>
+<!-- build:css css/index.css?v=_VERSION_-->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/flexboxgrid.css">
+<link rel="stylesheet" href="css/box.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/group.css">
+<!-- /build -->
 </head>
 
 <body>

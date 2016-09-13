@@ -55,13 +55,13 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 从而告别繁琐的媒体查询。(变量maxW就是设计稿的宽度)
 
-规则3：样式表里所有单位写PX，设计稿里的值是多少就写多少，已内置gulp-px3rem，一键转换，省心方便。
+规则3：样式表里所有单位写PX，设计稿里的值是多少就写多少，已内置 gulp-px3rem ，一键转换，省心方便。
 
-**关键设置1**：头部js的 maxW 变量值
+**关键设置1**：头部js的 maxW 变量与 src/css/group.css 中的 `.m{max-width:640px;}` 的值对应一致。
 
-**关键设置2**：src/css/group.css中，`html{font-size:100px}` `.m{max-width:640px;}` 设计稿宽度
+**关键设置2**：头部js的 htmlfs 变量与 src/css/group.css 中的 `html{font-size:100px}` 以及 
 
-**关键设置3**：gulpfile.js `px3rem({remUnit: 100})` 这要和上面html的 font-size 一致。
+gulpfile.js 中的 `px3rem({remUnit: 100})` 的值对应一致。
 
 案例：https://github.com/zhenbinjing/qietu/tree/master/m
 
