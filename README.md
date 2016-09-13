@@ -61,9 +61,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 **关键设置2**：头部js的 htmlfs 变量与 src/css/group.css 中的 `html{font-size:100px}` 以及 gulpfile.js 中的
 
- `px3rem({remUnit: 100})` 的值对应一致。
-
-案例：https://github.com/zhenbinjing/qietu/tree/master/m
+ `px3rem({remUnit: 100})` 的值对应一致。DOM：https://github.com/zhenbinjing/qietu/tree/master/m
 
 ##PC端(响应式)开发
 
@@ -71,7 +69,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 可以用 Assistor PS 这个插件辅助，[下载地址](http://witstudio.net/)，最新的 PS CC 已经集成部分功能。
 
-对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用 Flexbox 与栅格系统一起开发！案例：src/flexboxgrid.html。
+对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用 Flexbox 与栅格系统一起开发！DOM：src/flexboxgrid.html。
 
 当然，如果你是重度依赖它的话，你也可以直接用 Bootstrap ，本人只采取其核心的部分，方便自己扩展。
 
