@@ -71,9 +71,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 可以用Assistor PS这个插件辅助，[下载地址](http://witstudio.net/)，最新的PS CC已经集成部分功能。
 
-在这特别感谢flexboxgrid的作者[项目地址](https://github.com/kristoferjoseph/flexboxgrid)，案例：src/flexboxgrid.html。
-
-对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用Flexbox与栅格系统一起开发！
+对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用Flexbox与栅格系统一起开发！案例：src/flexboxgrid.html。
 
 当然，如果你是重度依赖它的话，你也可以直接用Bootstrap，本人只采取其核心的部分，方便自己扩展。
 
