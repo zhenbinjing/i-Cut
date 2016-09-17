@@ -9,10 +9,6 @@
 .vh{visibility: hidden;}
 .vv{visibility: visible;}
 
-/*内联定位(左右)*/
-.drtl{direction:ltr;}
-.drtl{direction:rtl;}
-
 /*内联定位(上中下)*/
 .vat{vertical-align: top;}
 .vam{vertical-align: middle;}
@@ -52,6 +48,12 @@
 .tdl{text-decoration: line-through;}/*中划线*/
 .tdu{text-decoration: underline;}/*下划线*/
 
+/*字母大小写*/
+.ttn{text-transform: none;}
+.ttc{text-transform: capitalize;}
+.ttu{text-transform: uppercase;}
+.ttl{text-transform: lowercase;}
+
 /*内容溢出*/
 .ovh{overflow: hidden;}
 .ovs{overflow: scroll;}
@@ -88,14 +90,21 @@
 .bgs-cv{background-size: cover;}
 .bgs-ct{background-size: contain;}
 
-/*背景色被裁剪到盒子的内边距框中显示(border-box,content-box)*/
+/*背景色相对于盒子中显示*/
 .bgc-pd{-webkit-background-clip: padding-box; -moz-background-clip: padding-box; background-clip: padding-box;}
+.bgc-bb{-webkit-background-clip: border-box; -moz-background-clip: border-box; background-clip: border-box;}
+.bgc-cb{-webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box;}
 
-/*背景图像相对于盒子的内边距框中定位(border-box,content-box)*/
+/*背景图像相对于盒子中定位*/
 .bgo-pd{-webkit-background-origin:padding-box; background-origin:padding-box;}
+.bgo-bb{-webkit-background-origin: border-box; background-origin: border-box;}
+.bgo-cb{-webkit-background-origin: content-box; background-origin: content-box;}
 
 /*文字书写模式*/
 .wm-tbl{-webkit-writing-mode: tb-lr;-ms-writing-mode: tb-lr;writing-mode: tb-lr;}
+
+/*内联方向排序(左右)*/
+.drtl{direction:rtl;}
 
 /*鼠标指针*/
 .cur-p{cursor: pointer;}/*手指*/
