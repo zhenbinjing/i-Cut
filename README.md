@@ -3,9 +3,10 @@
 框架适合移动端 (自适应) 和 PC端 (响应式) 制作。
 
 ```txt
-onetoui/
+CSSOO/
 |__ gulpfile.js
 |__ README.md
+|__ dist/
 |__ src/
   |__ flexboxgrid.html
   |__ index.html
@@ -45,7 +46,7 @@ src/css/common.css 是常用属性表。 src/css/style.css 是风格样式表。
 
 src/sass/n.scss 是预编译文件。src/js/scrollLoad.js 与 TouchSlide.1.1.js 分别是图片延迟加载和滑动插件。
 
-src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片。
+src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片。dist文件夹是上线版本。
 
 ##移动端(自适应)开发
 
@@ -59,7 +60,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 **关键设置2**：头部js的 htmlfs 变量与 src/css/group.css 中的 `html{font-size:100px}` 以及 gulpfile.js 中的
 
- `px3rem({remUnit: 100})` 的值对应一致。DOM：https://github.com/zhenbinjing/qietu/tree/master/m
+ `px3rem({remUnit: 100})` 的值对应一致。DOM：src/index.html。
 
 ##PC端(响应式)开发
 
