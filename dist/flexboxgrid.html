@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FlexboxGrid模版</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<script type="text/javascript">
+function resi() {
+	var html = document.querySelector("html");
+	var wW = document.body.clientWidth || document.documentElement.clientWidth;
+	var maxW = 750;  //手机设计稿画布宽度
+	var minW = 320;  //设置最小宽度
+	var htmlfs = 100; //与 group.css 中 html 标签的 fontSize 值以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
+	if (wW > maxW) wW = maxW;
+	var ratio  = wW / minW;	
+	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px"
+}
+window.addEventListener("DOMContentLoaded", function() {
+	var bodys = document.querySelector("body").style;
+	bodys.opacity = "1";
+	bodys.filter = "alpha(opacity=100)";
+	resi()
+});
+window.addEventListener("resize", resi);
+</script>
+<link rel="stylesheet" href="css/index.css?v=1474185343574"/>
+</head>
+
+<body>
+<div class="container">	
+		<div class="row c-fff tac fz30">
+				<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-f36">2-3-4-12</div></div>
+				<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-f36">2-3-4-12</div></div>
+				<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-f36">2-3-4-12</div></div>
+				<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-f36">2-3-4-12</div></div>
+				<div class="col-lg-2 col-md-6 col-sm-4"><div class="bgc-f36">2-3-4-12</div></div>
+				<div class="col-lg-2 col-md-6 col-sm-4"><div class="bgc-f36">2-3-4-12</div></div>												
+		</div>
+		<div class="row c-fff tac fz30">
+				<div class="col-lg-3 col-sm-4"><div class="bgc-04578B">3-4-12</div></div>
+				<div class="col-lg-8 col-sm-8 offset-lg-1">
+				<div class="row">
+				<div class="col-xs-3"><div class="bgc-04578B">3</div></div>
+				<div class="col-xs-9"><div class="bgc-04578B">9</div></div>
+				</div>
+				</div>
+		</div>
+		<div class="row c-fff tac fz30 fxd-lg-rr">
+				<div class="ratio-xs-1"><div class="bgc-f36">1</div></div>
+				<div class="ratio-xs-1"><div class="bgc-f36">1</div></div>
+				<div class="ratio-xs-1"><div class="bgc-f36">1</div></div>
+				<div class="ratio-xs-1"><div class="bgc-f36">1</div></div>
+				<div class="ratio-xs-1"><div class="bgc-f36">1</div></div>
+		</div>	
+		<div class="row c-fff tac fz30">
+				<div class="ratio-xs-1"><div class="bgc-04578B">1</div></div>
+				<div class="ratio-xs-2"><div class="bgc-04578B">2</div></div>
+				<div class="ratio-xs-3"><div class="bgc-04578B">3</div></div>
+				<div class="ratio-xs-4"><div class="bgc-04578B">4</div></div>
+				<div class="ratio-xs-5"><div class="bgc-04578B">5</div></div>
+		</div>
+		<div class="row c-fff tac fz30">
+				<div class="col-lg-4 col-md-6"><div class="bgc-f36">a</div></div>
+				<div class="col-lg-4 col-md-12 order-lg-same order-md-first order-xs-last"><div class="bgc-f36">b</div></div>
+				<div class="col-lg-4 col-md-6 "><div class="bgc-f36">c</div></div>
+		</div>
+</div>
+</body>
+</html>
