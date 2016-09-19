@@ -68,9 +68,9 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 推荐 Assistor PS 这款辅助插件，[下载地址](http://witstudio.net/)，PS CC 已经集成部分功能，以及一篇文章，希望对大家有所帮助。[文章地址](http://blog.163.com/zbj_jbz/blog/static/21261516420168184538395/)
 
-对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用 Flexbox 与栅格系统一起开发！DOM：src/flexboxgrid.html。
+对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用与其一致的命名方式！DOM：src/flexboxgrid.html。
 
-当然，如果你是重度依赖它的话，你也可以直接用 Bootstrap ，本人只采取其核心的部分，方便自己扩展。
+当然，如果你是重度依赖它的话，你也可以直接用 Bootstrap ，框架只采取其核心的部分，方便自己扩展。
 
 ##Gulp自动化流程
 
