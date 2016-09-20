@@ -4,6 +4,7 @@
 
 ```txt
 CSSOO/
+|__ package.json
 |__ gulpfile.js
 |__ README.md
 |__ dist/

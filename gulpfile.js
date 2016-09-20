@@ -92,6 +92,8 @@ gulp.task('copy',['fontSpider'],function(){				//- 先把fs命令执行完后，
 	.pipe(gulp.dest('./'+y_Dz+'/icon'));
 });
 
+/*-------------sass,webp,htmlmin,bs这些个命令需要时手动添加执行-----------------*/
+
 gulp.task('sass', function () {
 	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
@@ -101,8 +103,6 @@ gulp.task('sass', function () {
 gulp.task('sass:watch', function () {
 	gulp.watch('./'+y_Sz+'/sass/**/*.scss', ['sass']);
 });
-
-/*-------------webp,html,bs这三个命令是需要时手动执行-----------------*/
 
 gulp.task('webp',['webp_img'],function(){
 	del(['./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}', '!./'+y_Dz+'/img/**/*.{webp}']).then(paths => {
@@ -129,7 +129,7 @@ gulp.task('webp_html',function(){
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
  
-gulp.task('minhtml',function(){										
+gulp.task('htmlmin',function(){										
 	var options = {
 	removeComments: true,						//- 清除HTML注释
 	collapseWhitespace: true,					//- 压缩HTML
@@ -149,4 +149,4 @@ gulp.task('bs',function(){
 });
 
 //执行插件函数
-gulp.task('default',['cssall','imagemin','jsmin','jshint','processhtml','copy','sass']);
+gulp.task('default',['cssall','imagemin','jsmin','jshint','processhtml','copy']);
