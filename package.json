@@ -1,0 +1,45 @@
+{
+  "name": "cssoo",
+  "version": "1.0.0",
+  "description": "Adaptive and responsive, pixel level, one to one reduction PSD design draft",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhenbinjing/cssoo.git"
+  },
+  "keywords": [
+    "flexbox",
+    "flexboxgrid",
+    "grid"
+  ],
+  "author": "zhenbinjing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhenbinjing/cssoo/issues"
+  },
+  "homepage": "https://github.com/zhenbinjing/cssoo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-font-spider": "^0.3.6",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jshint": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-processhtml": "^1.1.0",
+    "gulp-px3rem": "^0.3.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-webp": "^2.3.0",
+    "imagemin-pngquant": "^5.0.0"
+  }
+}

@@ -1,5 +1,5 @@
-﻿//npm install gulp 
-//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-webp gulp-cache gulp-autoprefixer gulp-minify-css gulp-px3rem gulp-uncss gulp-sass font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync del --save-dev
+﻿//npm install gulp --save-dev
+//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-webp gulp-cache gulp-autoprefixer gulp-minify-css gulp-px3rem gulp-uncss gulp-sass gulp-font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync del --save-dev
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');					//- 多个文件合并为一个
@@ -12,7 +12,7 @@ var minifyCss = require('gulp-minify-css');				//- 压缩CSS为一行
 var px3rem = require('gulp-px3rem');					//- px转rem
 var uncss = require('gulp-uncss');					//- 删除没用到的css
 var sass = require('gulp-sass');					//- scss文件编译
-var FontSpider = require('font-spider');				//- 删除没用到的字体
+var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var uglify = require('gulp-uglify');					//- js合并压缩
 var jshint = require('gulp-jshint');					//- js检测
 var replace = require('gulp-replace');					//- 文本替换
@@ -79,7 +79,8 @@ gulp.task('processhtml',function(){					//- 修改html的dom
 });
 
 gulp.task('fs',function(){
-	return FontSpider(['./'+y_Sz+'/**/*.html']);			//- 删除多余的字体和图标，添加return返回最终的数据流		
+	return gulp.src(['./'+y_Sz+'/**/*.html'])			//- 删除多余的字体和图标，添加return返回最终的数据流
+	.pipe(fontSpider());
 });		
 
 gulp.task('cp',['fs'],function(){					//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
