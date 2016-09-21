@@ -68,11 +68,11 @@ $xs: xs;
 
 }
 
-$flexboxgrid-data2: ($w1 + 1, sm), ($w2 + 22, md), ($w3 + 30, lg);
+$flexboxgrid-data2: ($w1, sm, 1), ($w2, md, 22), ($w3, lg, 30);
 
-@each $width, $grid in $flexboxgrid-data2 {			
+@each $width, $grid, $sz in $flexboxgrid-data2 {			
 
-@media only screen and (min-width:$width){	
+@media only screen and (min-width:$width + $sz){	
 
 	.container{width: $width;}	
 
