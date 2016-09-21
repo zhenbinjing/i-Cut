@@ -2,7 +2,7 @@
 *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 *:before,*:after{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
-/*flexbox-grid*/   /*栅格 1rem=100px*/
+/*! flexbox-grid 栅格 1rem=100px*/
 .container{/*width: 100%!important; max-width:1200px;*/}/*去掉注释开启适屏模式*/
 .container,.container-fluid{margin-left:auto; margin-right:auto; padding-right: 0.15rem; padding-left: 0.15rem;}
 
@@ -14,8 +14,6 @@
 -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; -webkit-flex-direction: row; 
 -moz-box-orient: horizontal; -moz-box-direction: normal; flex-direction: row; -ms-flex-wrap: wrap; -webkit-flex-wrap: wrap; flex-wrap: wrap;
 margin-left:-0.15rem; margin-right:-0.15rem;}
-.row:before,.row:after{display: table; content: " ";}
-.row:after{clear: both;}
 
 [class*="col-"],[class*="ratio-"]{padding-left:0.15rem; padding-right: 0.15rem;}
 [class*="col-"]{-webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; max-width: 100%;}

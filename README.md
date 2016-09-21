@@ -35,7 +35,8 @@ CSSOO/
     |__ TouchSlide.1.1.js
     |__ z.js
   |__ sass/
-    |__ n.scss
+    |__ box.scss
+    |__ flexboxgrid.scss
 ```
 ##文件描述
 
@@ -45,7 +46,7 @@ src/css/box.css 是平时常用的（字体大小、行高、内边距、外边�
 
 src/css/common.css 是常用属性表。 src/css/style.css 是风格样式表。 src/css/group.css 是组件样式表。
 
-src/sass/n.scss 是预编译文件。src/js/scrollLoad.js 与 TouchSlide.1.1.js 分别是图片延迟加载和滑动插件。
+src/sass/box.scss 是预编译文件。src/js/scrollLoad.js 与 TouchSlide.1.1.js 分别是图片延迟加载和滑动插件。
 
 src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片。dist文件夹是上线版本。
 
@@ -65,7 +66,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 ##PC端(响应式)开发
 
-要求设计师的设计稿，DPI 统一72，栅格宽度和媒体查询尺寸与 src/css/flexboxgrid.css 互相对应。
+要求设计师的设计稿，DPI 统一72，栅格宽度和媒体查询尺寸 src/sass/flexboxgrid.scss 互相对应以及修改。
 
 推荐 Assistor PS 这款辅助插件，[下载地址](http://witstudio.net/)，PS CC 已经集成部分功能，以及一篇文章，希望对大家有所帮助。[文章地址](http://blog.163.com/zbj_jbz/blog/static/21261516420168184538395/)
 

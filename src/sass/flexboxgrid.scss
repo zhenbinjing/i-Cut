@@ -1,0 +1,116 @@
+/*! flexbox-grid 栅格 1rem=100px*/
+
+$sg: 0.15rem;
+
+$w1: 750px;
+$w2: 970px;
+$w3: 1170px;
+$nb: 100%;
+$nb12: 12;
+
+@mixin bs {box-sizing: border-box;}
+@mixin pd15 {padding-right: $sg; padding-left: $sg;}
+@mixin mlra{margin-left: auto; margin-right: auto;}
+@mixin ma15{margin-left: -$sg; margin-right: -$sg;}
+
+/*all-border-box*/
+*{@include bs;}
+*:before,*:after{@include bs;}
+
+/*! flexbox-grid 栅格 1rem=100px*/
+.container{/*! width: 100%!important; max-width:1200px; 去掉注释开启适屏模式*/}
+.container,.container-fluid{ @include mlra; @include pd15;}
+
+.row{display: flex; flex-direction: row; flex-wrap: wrap; @include ma15;}
+
+[class*="col-"],[class*="ratio-"]{@include pd15;}
+[class*="col-"]{flex-basis: $nb; max-width: $nb;}
+
+
+$xs: xs;	
+
+@each $grid in $xs {
+
+@for $i from 1 through $nb12 {.col-#{$grid}-#{$i}{flex-basis: $nb / $nb12 * $i; max-width: $nb / $nb12 * $i}}
+@for $i from 1 through $nb12 {.ratio-#{$grid}-#{$i}{flex-grow: $i;}}
+@for $i from 0 through ($nb12 - 1) {.offset-#{$grid}-#{$i}{margin-left: $nb / $nb12 * $i;}}
+
+.fxd-#{$grid}-row{flex-direction: row;}
+.fxd-#{$grid}-rr{flex-direction: row-reverse;}
+.fxd-#{$grid}-cn{ flex-direction: column;}
+.fxd-#{$grid}-cr{flex-direction: column-reverse;}
+
+.fxw-#{$grid}-nowrap{flex-wrap: nowrap;}
+.fxw-#{$grid}-wrap{flex-wrap: wrap;}
+.fxw-#{$grid}-wr{flex-wrap: wrap-reverse;}
+
+.jc-#{$grid}-start{justify-content: flex-start; }
+.jc-#{$grid}-center{justify-content: center; }
+.jc-#{$grid}-end{justify-content: flex-end; }
+.jc-#{$grid}-around{justify-content: space-around;}
+.jc-#{$grid}-between{justify-content: space-between;}
+
+.ai-#{$grid}-top{align-items: flex-start;}
+.ai-#{$grid}-middle{align-items: center;}
+.ai-#{$grid}-bottom{align-items: flex-end;}
+.ai-#{$grid}-stretch{align-items: stretch;}
+
+.ac-#{$grid}-top{align-content: flex-start;}
+.ac-#{$grid}-middle{align-content: center;}
+.ac-#{$grid}-bottom{align-content: flex-end;}
+.ac-#{$grid}-stretch{align-content: stretch;}
+.ac-#{$grid}-around{align-content: space-around;}
+.ac-#{$grid}-between{align-content: space-between;}
+
+.order-#{$grid}-first{order: -1;}
+.order-#{$grid}-same{order: 0;}
+.order-#{$grid}-last{order: 1;}	
+
+}
+
+$flexboxgrid-data2: ($w1 + 1, sm), ($w2 + 22, md), ($w3 + 30, lg);
+
+@each $width, $grid in $flexboxgrid-data2 {			
+
+@media only screen and (min-width:$width){	
+
+	.container{width: $width;}	
+
+	@for $i from 1 through $nb12 {.col-#{$grid}-#{$i}{flex-basis: $nb / $nb12 * $i; max-width: $nb / $nb12 * $i}}
+	@for $i from 1 through $nb12 {.ratio-#{$grid}-#{$i}{flex-grow: $i;}}
+	@for $i from 0 through ($nb12 - 1) {.offset-#{$grid}-#{$i}{margin-left: $nb / $nb12 * $i;}}
+
+	.fxd-#{$grid}-row{flex-direction: row;}
+	.fxd-#{$grid}-rr{flex-direction: row-reverse;}
+	.fxd-#{$grid}-cn{ flex-direction: column;}
+	.fxd-#{$grid}-cr{flex-direction: column-reverse;}
+
+	.fxw-#{$grid}-nowrap{flex-wrap: nowrap;}
+	.fxw-#{$grid}-wrap{flex-wrap: wrap;}
+	.fxw-#{$grid}-wr{flex-wrap: wrap-reverse;}
+
+	.jc-#{$grid}-start{justify-content: flex-start; }
+	.jc-#{$grid}-center{justify-content: center; }
+	.jc-#{$grid}-end{justify-content: flex-end; }
+	.jc-#{$grid}-around{justify-content: space-around;}
+	.jc-#{$grid}-between{justify-content: space-between;}
+
+	.ai-#{$grid}-top{align-items: flex-start;}
+	.ai-#{$grid}-middle{align-items: center;}
+	.ai-#{$grid}-bottom{align-items: flex-end;}
+	.ai-#{$grid}-stretch{align-items: stretch;}
+
+	.ac-#{$grid}-top{align-content: flex-start;}
+	.ac-#{$grid}-middle{align-content: center;}
+	.ac-#{$grid}-bottom{align-content: flex-end;}
+	.ac-#{$grid}-stretch{align-content: stretch;}
+	.ac-#{$grid}-around{align-content: space-around;}
+	.ac-#{$grid}-between{align-content: space-between;}
+
+	.order-#{$grid}-first{order: -1;}
+	.order-#{$grid}-same{order: 0;}
+	.order-#{$grid}-last{order: 1;}							
+
+	}			
+}
+

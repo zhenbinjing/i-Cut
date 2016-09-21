@@ -92,7 +92,7 @@ gulp.task('copy',['fontSpider'],function(){				//- 先把fs命令执行完后，
 	.pipe(gulp.dest('./'+y_Dz+'/icon'));
 });
 
-/*-------------sass,webp,htmlmin,bs这些个命令需要时手动添加执行-----------------*/
+/*-------------sass,webp,htmlmin,bs这些命令需要时手动添加执行-----------------*/
 
 gulp.task('sass', function () {
 	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
