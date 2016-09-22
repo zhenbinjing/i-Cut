@@ -12,11 +12,11 @@ CSSOO/
   |__ flexboxgrid.html
   |__ index.html
   |__ css/
-    |__ reset.css
+    |__ again.css
     |__ flexboxgrid.css
     |__ box.css
     |__ common.css
-    |__ style.css
+    |__ color.css
     |__ group.css
   |__ font/
     |__ fzcjjt.ttf
@@ -40,11 +40,11 @@ CSSOO/
 ```
 ##文件描述
 
-src/css/reset.css 是重置表。 src/css/flexboxgrid.css 是 flexbox 布局与 grid 栅格的合体，是本框架的核心。
+src/css/again.css 是重置表。 src/css/flexboxgrid.css 是 flexbox 布局与 grid 栅格的合体，是本框架的核心。
 
 src/css/box.css 是平时常用的（字体大小、行高、内边距、外边距、圆角、边框、宽度）属性表。
 
-src/css/common.css 是常用属性表。 src/css/style.css 是风格样式表。 src/css/group.css 是组件样式表。
+src/css/common.css 是常用属性表。 src/css/color.css 是颜色样式表。 src/css/group.css 是组件样式表。
 
 src/sass/是预处理文件夹。src/js/scrollLoad.js 与 TouchSlide.1.1.js 分别是图片延迟加载和滑动插件。
 
