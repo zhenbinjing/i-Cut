@@ -1,47 +1,51 @@
-$nb:0;
-$nb2:10%;
-$nb3:12;
-
-/*！ 个别的*/
-.w#{$nb}{width:$nb}
-.bdr-r{border-radius:$nb2*5}
+$nb2:100%;
+$column:12;
 
 /*！ 常用宽度*/
-@for $i from 1 through 12 {.w#{$i}{width:100% / $nb3 * $i;}}
-
-/*! 行高百分百*/
-@for $i from 10 through 19 {.lh#{$i*10+10} { line-height: $i*10 + $nb2;}}
+@for $i from 0 through 12 {.w#{$i}{width:$nb2 / $column * $i;}}
 
 /*! 字体大小*/
 @for $i from 0 through 100 {.fz#{$i}{font-size:1px * $i;}}
+
+/*! 行高百分百*/
+@for $i from 10 through 19 {.lh#{$i*10+10} { line-height: $i*10 + $nb2;}}
 
 /*! 行高px*/
 @for $i from 0 through 100 {.lh#{$i}{line-height:1px * $i;}}
 
 /*! 内边距*/
-@for $i from 0 through 100 {.p#{$i}{padding:1px * $i;}}
-@for $i from 0 through 100 {.pt#{$i}{padding-top:1px * $i;}}
-@for $i from 0 through 100 {.pr#{$i}{padding-right:1px * $i;}}
-@for $i from 0 through 100 {.pb#{$i}{padding-bottom:1px * $i;}}
-@for $i from 0 through 100 {.pl#{$i}{padding-left:1px * $i;}}
+@for $i from 0 through 100 {
+.p#{$i}{padding:1px * $i;}
+.pt#{$i}{padding-top:1px * $i;}
+.pr#{$i}{padding-right:1px * $i;}
+.pb#{$i}{padding-bottom:1px * $i;}
+.pl#{$i}{padding-left:1px * $i;}
+}
 
 /*! 外边距*/
-@for $i from 0 through 100 {.m#{$i}{margin:1px * $i;}}
-@for $i from 0 through 100 {.mt#{$i}{margin-top:1px * $i;}}
-@for $i from 0 through 100 {.mr#{$i}{margin-right:1px * $i;}}
-@for $i from 0 through 100 {.mb#{$i}{margin-bottom:1px * $i;}}
-@for $i from 0 through 100 {.ml#{$i}{margin-left:1px * $i;}}
+@for $i from 0 through 100 {
+.m#{$i}{margin:1px * $i;}
+.mt#{$i}{margin-top:1px * $i;}
+.mr#{$i}{margin-right:1px * $i;}
+.mb#{$i}{margin-bottom:1px * $i;}
+.ml#{$i}{margin-left:1px * $i;}
+}
 
 /*! 圆角*/
-@for $i from 0 through 100 {.bdrs#{$i}{border-radius:1px * $i;}}
-@for $i from 0 through 100 {.bdtrrs#{$i}{border-top-right-radius:1px * $i;}}
-@for $i from 0 through 100 {.bdtlrs#{$i}{border-top-left-radius:1px * $i;}}
-@for $i from 0 through 100 {.bdbrrs#{$i}{border-bottom-right-radius:1px * $i;}}
-@for $i from 0 through 100 {.bdblrs#{$i}{border-bottom-left-radius:1px * $i;}}
+.bdr-r{border-radius:$nb2 / 2}
+@for $i from 0 through 100 {
+.bdrs#{$i}{border-radius:1px * $i;}
+.bdtrrs#{$i}{border-top-right-radius:1px * $i;}
+.bdtlrs#{$i}{border-top-left-radius:1px * $i;}
+.bdbrrs#{$i}{border-bottom-right-radius:1px * $i;}
+.bdblrs#{$i}{border-bottom-left-radius:1px * $i;}
+}
 
 /*! 边框*/
-@for $i from 0 through 10 {.bdw#{$i}{border-width:1px * $i;}}
-@for $i from 0 through 10 {.bdtw#{$i}{border-top-width:1px * $i;}}
-@for $i from 0 through 10 {.bdrw#{$i}{border-right-width:1px * $i;}}
-@for $i from 0 through 10 {.bdbw#{$i}{border-bottom-width:1px * $i;}}
-@for $i from 0 through 10 {.bdlw#{$i}{border-left-width:1px * $i;}}
+@for $i from 0 through 10 {
+.bdw#{$i}{border-width:1px * $i;}
+.bdtw#{$i}{border-top-width:1px * $i;}
+.bdrw#{$i}{border-right-width:1px * $i;}
+.bdbw#{$i}{border-bottom-width:1px * $i;}
+.bdlw#{$i}{border-left-width:1px * $i;}
+}
