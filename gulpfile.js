@@ -97,7 +97,7 @@ gulp.task('copy',['fontSpider'],function(){				//- 先把fs命令执行完后，
 gulp.task('sass', function () {
 	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
-	.pipe(gulp.dest('./'+y_Sz+'/sass'));
+	.pipe(gulp.dest('./'+y_Sz+'/css'));
 });
  
 gulp.task('sass:watch', function () {

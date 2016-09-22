@@ -12,11 +12,9 @@ $column: 12;
 @mixin mlra{margin-left: auto; margin-right: auto;}
 @mixin ma15{margin-left: -$sg; margin-right: -$sg;}
 
-/*all-border-box*/
 *{@include bs;}
 *:before,*:after{@include bs;}
 
-/*! flexbox-grid 栅格 1rem=100px*/
 .container{/*! width: 100%!important; max-width:1200px; 去掉注释开启适屏模式*/}
 .container,.container-fluid{ @include mlra; @include pd15;}
 
