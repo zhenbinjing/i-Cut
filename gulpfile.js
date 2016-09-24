@@ -1,12 +1,7 @@
-﻿//npm install gulp --save-dev
-//npm install gulp-concat gulp-imagemin imagemin-pngquant gulp-webp gulp-cache gulp-autoprefixer gulp-clean-css gulp-px3rem gulp-uncss gulp-sass gulp-font-spider gulp-uglify gulp-jshint gulp-replace gulp-processhtml gulp-htmlmin browser-sync del --save-dev
-
-var gulp = require('gulp');
+﻿var gulp = require('gulp');
 var concat = require('gulp-concat');					//- 多个文件合并为一个
-var imagemin = require('gulp-imagemin');				//- 图片压缩
-var pngquant = require('imagemin-pngquant');				//- 深度压缩png插件
+var tinypng = require('gulp-tinypng');					//- png图片压缩
 var webp = require('gulp-webp');					//- 转webp图片
-var cache = require('gulp-cache');					//- 只压缩修改的图片，没有修改的图片直接从缓存文件读取
 var autoprefixer = require('gulp-autoprefixer');			//- 补充浏览器前缀
 var cleanCSS = require('gulp-clean-css');				//- 压缩CSS为一行
 var px3rem = require('gulp-px3rem');					//- px转rem
@@ -50,10 +45,7 @@ gulp.task('cssall',function(){						//- 创建一个名为 concat 的 task
 
 gulp.task('imagemin',function(){
 	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
-	.pipe(cache(imagemin({
-	progressive: true,
-	svgoPlugins: [{removeViewBox: false}],				//- 不要移除svg的viewbox属性
-	use: [pngquant()]})))						//- 使用pngquant深度压缩png图片的imagemin插件						
+	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o'))		//- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩		
 	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
 });
 
