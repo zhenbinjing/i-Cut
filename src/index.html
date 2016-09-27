@@ -16,7 +16,7 @@ function resi() {
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
 	var maxW = 640;  //手机设计稿画布宽度
 	var minW = 320;  //设置最小宽度
-	var htmlfs = 100; //与 group.css 中 html 标签的 fontSize 值以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
+	var htmlfs = 100; //与 plugin.css 中 html 标签的 fontSize 值以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;
 	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px"
@@ -41,24 +41,24 @@ window.addEventListener("resize", resi);
 
 <body>
 <div class="m">
-		<div class="clearfix">
-				<div class="fl w6 fzcjjt fz30 pt20 mb20 tac">自定义字体</div>
-				<div class="fl w6 fzcjjt fz30 pt20 mb20 tac c-FF5700">自定义图标:<span class="iconfont">&#xe603;</span></div>
+	<div class="clearfix">
+		<div class="fl w6 fzcjjt fz30 pt20 mb20 tac">自定义字体</div>
+			<div class="fl w6 fzcjjt fz30 pt20 mb20 tac c-FF5700">自定义图标:<span class="iconfont">&#xe603;</span></div>
 		</div>
 		<!--滑动组件-->
 		<div id="focus" class="focus">
-				<div class="hd">
-						<ul>
-								<li class="on"></li>
-						</ul>
-				</div>
-				<div class="bd">
-						<ul>
-								<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/a.png?v=_VERSION_" alt="" /></a></li>
-								<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/b.png?v=_VERSION_" alt="" /></a></li>
-						</ul>
-				</div>
-		</div>
+			<div class="hd">
+				<ul>
+					<li class="on"></li>
+				</ul>
+			</div>
+			<div class="bd">
+				<ul>
+					<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/a.png?v=_VERSION_" alt="" /></a></li>
+					<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/b.png?v=_VERSION_" alt="" /></a></li>
+				</ul>
+			</div>
+	</div>
 <br/><br/><br/><br/><br/><br/><br/>
 <img src="img/d.jpg" xSrc="img/c.png?v=_VERSION_" class="bdtw2 bdssl bdc-000" alt="" />
 </div>
