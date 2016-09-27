@@ -1,4 +1,4 @@
-$nb:100%;
+﻿$nb:100%;
 $column:12;
 
 /*常用宽度*/
@@ -8,7 +8,7 @@ $column:12;
 @for $i from 0 through 100 {.fz#{$i}{font-size:1px * $i;}}
 
 /*行高百分百*/
-@for $i from 10 through 19 {.lh#{$i*10+10} { line-height: $i*10 + $nb;}}
+@for $i from 10 through 19 {.lh#{$i*10+10} { line-height: $i*10 + 10 + %;}}
 
 /*行高px*/
 @for $i from 0 through 100 {.lh#{$i}{line-height:1px * $i;}}
