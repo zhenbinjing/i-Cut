@@ -12,12 +12,12 @@ CSSOO/
   |__ flexboxgrid.html
   |__ index.html
   |__ css/
-    |__ again.css
-    |__ flexboxgrid.css
+    |__ adjust.css
     |__ box.css
     |__ common.css
-    |__ color.css
-    |__ group.css
+    |__ flexboxgrid.css
+    |__ imagescolor.css
+    |__ plugin.css
   |__ font/
     |__ fzcjjt.ttf
   |__ icon/
@@ -33,18 +33,17 @@ CSSOO/
   |__ js/
     |__ scrollLoad.js
     |__ TouchSlide.1.1.js
-    |__ z.js
   |__ sass/
     |__ box.scss
     |__ flexboxgrid.scss
 ```
 ##文件描述
 
-src/css/again.css 是重置表。 src/css/flexboxgrid.css 是 flexbox 布局与 grid 栅格的合体，是本框架的核心。
+src/css/adjust.css 是重置表。 src/css/box.css 是平时常用的（字体、行高、内外边距、圆角、边框、宽度）属性表。
 
-src/css/box.css 是平时常用的（字体大小、行高、内边距、外边距、圆角、边框、宽度）属性表。
+src/css/common.css 是常用属性表。 src/css/flexboxgrid.css 是 flexbox 布局与 grid 栅格的合体，是本框架的核心。
 
-src/css/common.css 是常用属性表。 src/css/color.css 是颜色样式表。 src/css/group.css 是组件样式表。
+src/css/imagescolor.css 是图片颜色样式表。 src/css/plugin.css 是插件样式表。
 
 src/sass/是预处理文件夹。src/js/scrollLoad.js 与 TouchSlide.1.1.js 分别是图片延迟加载和滑动插件。
 
@@ -58,9 +57,9 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 规则3：样式表里所有单位写px，设计稿里的值是多少就写多少，已内置 gulp-px3rem ，一键转换，省心方便。
 
-**关键设置1**：头部js的 maxW 变量与 src/css/group.css 中的 `.m{max-width:640px;}` 的值对应一致。
+**关键设置1**：头部js的 maxW 变量与 src/css/plugin.css 中的 `.m{max-width:640px;}` 的值对应一致。
 
-**关键设置2**：头部js的 htmlfs 变量与 src/css/group.css 中的 `html{font-size:100px}` 以及 gulpfile.js 中的
+**关键设置2**：头部js的 htmlfs 变量与 src/css/plugin.css 中的 `html{font-size:100px}` 以及 gulpfile.js 中的
 
  `px3rem({remUnit: 100})` 的值对应一致。DOM：src/index.html。
 
