@@ -80,7 +80,6 @@
 .as-xs-middle { -webkit-align-self: center; -ms-flex-item-align: center; align-self: center; }
 .as-xs-bottom { -webkit-align-self: flex-end; -ms-flex-item-align: end; align-self: flex-end; }
 .as-xs-stretch { -webkit-align-self: stretch; -ms-flex-item-align: stretch; align-self: stretch; }
-
 .as-xs-baseline { -webkit-align-self: baseline; -ms-flex-item-align: baseline; align-self: baseline; }
 .as-xs-auto { -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto; }
 
