@@ -45,7 +45,7 @@ $column: 12;
 		.jc-#{$grid}-#{$val}{justify-content: $direction;}	
 		}
 		
-		$ai: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch);
+		$ai: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(baseline, baseline);
 		@each $val, $direction in $ai {		
 		.ai-#{$grid}-#{$val}{align-items: $direction;}	
 		}	
@@ -53,6 +53,11 @@ $column: 12;
 		$ac: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(around, space-around),(between, space-between);
 		@each $val, $direction in $ac {		
 		.ac-#{$grid}-#{$val}{align-content: $direction;}	
+		}
+
+		$as: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(baseline, baseline),(auto, auto);
+		@each $val, $direction in $as {		
+		.as-#{$grid}-#{$val}{align-self: $direction;}	
 		}	
 
 		$order: (first, -1),(same, 0),(last, 1);
