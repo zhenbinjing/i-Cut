@@ -1,4 +1,4 @@
-/*-------为了方便计算html的值，所以初始化设置100px,对应的其他数值相当于除以100，在gulpfile文件的px3rem方法中设置。-------*/
+﻿/*-------为了方便计算html的值，所以初始化设置100px,对应的其他数值相当于除以100，在gulpfile文件的px3rem方法中设置。-------*/
 html{font-size: 100px;/*no*/}
 
 /*---------------------------排版解决方案----------------------------*/
@@ -18,7 +18,7 @@ html{font-size: 100px;/*no*/}
 /*----------------------------移动端样式-----------------------------*/
 
 /*最大的宽度640是移动设计稿宽度，方便在PC上查看*/
-.m{max-width: 640px; min-width: 320px; overflow: hidden; margin: 0 auto;}
+.adaptive{max-width: 640px; min-width: 320px;}
 
 /*移动组件*/
 .focus{width: 100%; margin: 0 auto; position: relative;}

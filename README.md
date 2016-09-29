@@ -10,7 +10,7 @@ CSSOO/
 |__ dist/
 |__ src/
   |__ flexboxgrid.html
-  |__ index.html
+  |__ adaptive.html
   |__ css/
     |__ adjust.css
     |__ box.css
@@ -57,11 +57,11 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 规则3：样式表里所有单位写px，设计稿里的值是多少就写多少，已内置 gulp-px3rem ，一键转换，省心方便。
 
-**关键设置1**：头部js的 maxW 变量与 src/css/plugin.css 中的 `.m{max-width:640px;}` 的值对应一致。
+**关键设置1**：头部js的 maxW 变量与 src/css/plugin.css 中的 `.adaptive{max-width:640px;}` 的值对应一致。
 
 **关键设置2**：头部js的 htmlfs 变量与 src/css/plugin.css 中的 `html{font-size:100px}` 以及 gulpfile.js 中的
 
- `px3rem({remUnit: 100})` 的值对应一致。DOM：src/index.html。
+ `px3rem({remUnit: 100})` 的值对应一致。DOM：src/adaptive.html。
 
 ##PC端(响应式)开发
 
