@@ -8,18 +8,18 @@ $nb: 100%; $column: 12;
 
 
 @mixin bs {box-sizing: border-box;}
-@mixin pd15 {padding-right: $sg; padding-left: $sg;}
+@mixin pdsg {padding-right: $sg; padding-left: $sg;}
 @mixin mlra{margin-left: auto; margin-right: auto;}
-@mixin ma15{margin-left: -$sg; margin-right: -$sg;}
+@mixin mgsg{margin-left: -$sg; margin-right: -$sg;}
 
 *{@include bs;}
 *:before,*:after{@include bs;}
 
 .container{/*! width: 100%!important; max-width:1200px; 去掉注释开启适屏模式*/}
-.container,.container-fluid{ @include mlra; @include pd15;}
+.container,.container-fluid{ @include mlra; @include pdsg;}
 
-.row{display: flex; flex-direction: row; flex-wrap: wrap; @include ma15;}
-[class*="col-"],[class*="ratio-"]{@include pd15;}
+.row{display: flex; flex-direction: row; flex-wrap: wrap; @include mgsg;}
+[class*="col-"],[class*="ratio-"]{@include pdsg;}
 [class*="col-"]{flex-basis: $nb; max-width: $nb;}
 
 @mixin flexboxgrid ($grid){
