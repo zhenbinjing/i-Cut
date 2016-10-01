@@ -4,13 +4,8 @@
 
 ```txt
 CSSOO/
-|__ package.json
-|__ gulpfile.js
-|__ README.md
 |__ dist/
 |__ src/
-  |__ adaptive.html
-  |__ flexboxgrid.html
   |__ css/
     |__ adjust.css
     |__ box.css
@@ -19,23 +14,19 @@ CSSOO/
     |__ imagescolor.css
     |__ plugin.css
   |__ font/
-    |__ fzcjjt.ttf
   |__ icon/
-    |__ iconfont.eot
-    |__ iconfont.svg
-    |__ iconfont.ttf
-    |__ iconfont.woff
   |__ img/
-    |__ a.png
-    |__ b.png
-    |__ c.png
-    |__ d.jpg
   |__ js/
     |__ scrollLoad.js
     |__ TouchSlide.1.1.js
   |__ sass/
     |__ box.scss
     |__ flexboxgrid.scss
+  |__ adaptive.html
+  |__ flexboxgrid.html
+|__ gulpfile.js
+|__ package.json
+|__ README.md
 ```
 ##文件描述
 
