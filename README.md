@@ -18,7 +18,7 @@ CSSOO/
   |__ img/
   |__ js/
     |__ scrollLoad.js
-    |__ TouchSlide.1.1.js
+    |__ TouchSlide.js
   |__ sass/
     |__ box.scss
     |__ flexboxgrid.scss
@@ -34,11 +34,9 @@ src/css/adjust.css 是重置表。 src/css/box.css 是平时常用的（字体�
 
 src/css/common.css 是常用属性表。 src/css/flexboxgrid.css 是 flexbox 布局与 grid 栅格的合体，是本框架的核心。
 
-src/css/imagescolor.css 是图片颜色样式表。 src/css/plugin.css 是插件样式表。
+src/css/imagescolor.css 是图片颜色样式表。 src/css/plugin.css 是插件样式表。src/sass/ 是预处理文件夹。
 
-src/sass/是预处理文件夹。src/js/scrollLoad.js 与 TouchSlide.1.1.js 分别是图片延迟加载和滑动插件。
-
-src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片。dist文件夹是上线版本。
+src/font、icon、img 分别是字体、矢量图标、图片。src/js/scrollLoad.js 与 TouchSlide.js 分别是图片延迟与滑动插件。
 
 ##移动端(自适应)开发
 
