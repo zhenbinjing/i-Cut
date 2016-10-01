@@ -40,21 +40,21 @@ src/font、icon、img 分别是字体、矢量图标、图片。src/js/scrollLoa
 
 ##移动端(自适应)开发
 
-规则1：要求设计师设计的PSD宽度为640,750或其他标准尺寸，但 DPI 必须是为72,这样才接近一比一还原。
+规则1：要求设计师设计的PSD宽度为 640 , 750 或其他标准尺寸，但 DPI 必须是为 72 ,这样才接近一比一还原。
 
-规则2：html头部的js能实现动态改变根元素的值令字体与盒子模型的值以及 iframe 等比例缩放，从而告别繁琐的媒体查询。
+规则2：html 头部的 js 能实现动态改变根元素的值令字体与盒子模型的值以及 iframe 等比例缩放，从而告别繁琐的媒体查询。
 
-规则3：样式表里所有单位写px，设计稿里的值是多少就写多少，已内置 gulp-px3rem ，一键转换，省心方便。
+规则3：样式表里所有单位写 px ,设计稿里的值是多少就写多少，已内置 gulp-px3rem ，一键转换，省心方便。
 
-**关键设置1**：头部js的 maxW,minW 变量与 src/css/plugin.css 中的 `.adaptive` 类的值对应一致。
+**关键设置1**：头部 js 的 maxW,minW 变量与 src/css/plugin.css 中的 `.adaptive` 类的值对应一致。
 
-**关键设置2**：头部js的 htmlfs 变量与 src/css/plugin.css 中的 `html{font-size:100px}` 以及 gulpfile.js 中的
+**关键设置2**：头部 js 的 htmlfs 变量与 src/css/plugin.css 中的 `html{font-size:100px}` 以及 gulpfile.js 中的
 
  `px3rem({remUnit: 100})` 的值对应一致。DOM：src/adaptive.html。
 
 ##PC端(响应式)开发
 
-要求设计师的设计稿，DPI 统一72，栅格宽度和媒体查询尺寸 src/sass/flexboxgrid.scss 互相对应以及修改。
+要求设计师的设计稿，DPI 统一 72 ,栅格宽度和媒体查询尺寸 src/sass/flexboxgrid.scss 互相对应以及修改。
 
 推荐 Assistor PS 这款辅助插件：[下载地址](http://witstudio.net/)，PS CC 已经集成部分功能，以及一篇文章：[文章地址](http://blog.163.com/zbj_jbz/blog/static/21261516420168184538395/)。
 
