@@ -67,7 +67,7 @@ src/font/、src/icon/、src/img/分别是自定义字体、矢量图标、图片
 
 要求设计师的设计稿，DPI 统一72，栅格宽度和媒体查询尺寸 src/sass/flexboxgrid.scss 互相对应以及修改。
 
-推荐 Assistor PS 这款辅助插件，[URL]：(http://witstudio.net/)，PS CC 已经集成部分功能，以及一篇文章，[URL]：(http://blog.163.com/zbj_jbz/blog/static/21261516420168184538395/)
+推荐 Assistor PS 这款辅助插件，[URL](http://witstudio.net/)，PS CC 已经集成部分功能，以及一篇文章，[URL](http://blog.163.com/zbj_jbz/blog/static/21261516420168184538395/)
 
 对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用与其一致的命名方式！DOM：src/flexboxgrid.html。
 
