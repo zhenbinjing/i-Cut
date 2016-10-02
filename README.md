@@ -17,11 +17,7 @@ CSSOO/
 | |__ icon/
 | |__ img/
 | |__ js/
-| | |__ scrollLoad.js
-| | |__ TouchSlide.js
 | |__ sass/
-| | |__ box.scss
-| | |__ flexboxgrid.scss
 | |__ adaptive.html
 | |__ flexboxgrid.html
 |__ gulpfile.js
@@ -34,7 +30,7 @@ src/css/adjust.css 是重置表。 src/css/box.css 是盒子模型表。src/css/
 
 src/css/design.css 是设计风格样式表。 src/css/flexboxgrid.css 是核心布局样式表。src/css/plugin.css 是插件样式表。
 
-src/font、icon、img 分别是字体、矢量图标、图片。src/js/ 下的 js 分别是图片延迟与滑动插件。
+src/font、icon、img、sass 分别是字体、矢量图标、图片、预处理文件。src/js/ 下的 js 分别是图片延迟与滑动插件。
 
 ##移动端(自适应)开发
 
