@@ -6,41 +6,39 @@
 CSSOO/
 |__ dist/
 |__ src/
-  |__ css/
-    |__ adjust.css
-    |__ box.css
-    |__ common.css
-    |__ flexboxgrid.css
-    |__ imagescolor.css
-    |__ plugin.css
-  |__ font/
-  |__ icon/
-  |__ img/
-  |__ js/
-    |__ scrollLoad.js
-    |__ TouchSlide.js
-  |__ sass/
-    |__ box.scss
-    |__ flexboxgrid.scss
-  |__ adaptive.html
-  |__ flexboxgrid.html
+| |__ css/
+| | |__ adjust.css
+| | |__ box.css
+| | |__ common.css
+| | |__ design.css
+| | |__ flexboxgrid.css
+| | |__ plugin.css
+| |__ font/
+| |__ icon/
+| |__ img/
+| |__ js/
+| | |__ scrollLoad.js
+| | |__ TouchSlide.js
+| |__ sass/
+| | |__ box.scss
+| | |__ flexboxgrid.scss
+| |__ adaptive.html
+| |__ flexboxgrid.html
 |__ gulpfile.js
 |__ package.json
 |__ README.md
 ```
 ##文件描述
 
-src/css/adjust.css 是重置表。 src/css/box.css 是平时常用的（字体、行高、内外边距、圆角、边框、宽度）属性表。
+src/css/adjust.css 是重置表。 src/css/box.css 是盒子模型表。src/css/common.css 是常用属性表。
 
-src/css/common.css 是常用属性表。 src/css/flexboxgrid.css 是 flexbox 布局与 grid 栅格的合体，是本框架的核心。
+src/css/design.css 是设计风格样式表。 src/css/flexboxgrid.css 是核心布局样式表。src/css/plugin.css 是插件样式表。
 
-src/css/imagescolor.css 是图片颜色样式表。 src/css/plugin.css 是插件样式表。src/sass/ 是预处理文件夹。
-
-src/font、icon、img 分别是字体、矢量图标、图片。src/js/scrollLoad.js 与 TouchSlide.js 分别是图片延迟与滑动插件。
+src/font、icon、img 分别是字体、矢量图标、图片。src/js/ 下的 js 分别是图片延迟与滑动插件。
 
 ##移动端(自适应)开发
 
-规则1：要求设计师设计的PSD宽度为 640 , 750 或其他标准尺寸，但 DPI 必须是为 72 ,这样才接近一比一还原。
+规则1：设计的 PSD 宽度最好设置为 640 , 750 或其他标准尺寸也可以 ，但 DPI 必须设置为 72 ，这样才能接近一比一还原。
 
 规则2：html 头部的 js 能实现动态改变根元素的值令字体与盒子模型的值以及 iframe 等比例缩放，从而告别繁琐的媒体查询。
 
@@ -54,7 +52,7 @@ src/font、icon、img 分别是字体、矢量图标、图片。src/js/scrollLoa
 
 ##PC端(响应式)开发
 
-要求设计师的设计稿，DPI 统一 72 ,栅格宽度和媒体查询尺寸 src/sass/flexboxgrid.scss 互相对应以及修改。
+所有的设计稿，DPI 统一 72 ,栅格宽度和媒体查询尺寸在 src/sass/flexboxgrid.scss 互相对应以及修改。
 
 推荐 Assistor PS 这款辅助插件：[下载地址](http://witstudio.net/)，PS CC 已经集成部分功能，以及一篇文章：[文章地址](http://blog.163.com/zbj_jbz/blog/static/21261516420168184538395/)。
 
