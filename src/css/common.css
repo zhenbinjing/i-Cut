@@ -1,4 +1,4 @@
-/*元素状态*/
+﻿/*元素状态*/
 .dn{display: none;}
 .db{display: block;}
 .dt{display: table;}
@@ -91,17 +91,17 @@
 .bgs-ct{background-size: contain;}
 
 /*背景色相对于盒子中显示*/
-.bgc-pd{-webkit-background-clip: padding-box; -moz-background-clip: padding-box; background-clip: padding-box;}
-.bgc-bb{-webkit-background-clip: border-box; -moz-background-clip: border-box; background-clip: border-box;}
-.bgc-cb{-webkit-background-clip: content-box; -moz-background-clip: content-box; background-clip: content-box;}
+.bgc-pd{background-clip: padding-box;}
+.bgc-bb{background-clip: border-box;}
+.bgc-cb{background-clip: content-box;}
 
 /*背景图像相对于盒子中定位*/
-.bgo-pd{-webkit-background-origin:padding-box; background-origin:padding-box;}
-.bgo-bb{-webkit-background-origin: border-box; background-origin: border-box;}
-.bgo-cb{-webkit-background-origin: content-box; background-origin: content-box;}
+.bgo-pd{background-origin:padding-box;}
+.bgo-bb{background-origin: border-box;}
+.bgo-cb{background-origin: content-box;}
 
 /*文字书写模式*/
-.wm-tbl{-webkit-writing-mode: tb-lr;-ms-writing-mode: tb-lr;writing-mode: tb-lr;}
+.wm-tbl{writing-mode: tb-lr;}
 
 /*内联方向排序(左右)*/
 .drtl{direction:rtl;}
