@@ -27,6 +27,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*------------------------------图片------------------------------*/
+
+/*边框图片*/
+.bdi{border-image: url();}
+
+/*背景图片*/
+.bgi{background-image: url();}
+
+/*列表图片*/
+.lisi{list-style-image: url();}
+
 /*------------------------------颜色------------------------------*/
 
 /*边框颜色*/
@@ -40,24 +51,13 @@
 .c-FF5700{color:#FF5700;}
 .c-fff{color: #fff;}
 
-/*------------------------------图片------------------------------*/
-
-/*边框图片*/
-.bdi{border-image: url();}
-
-/*背景图片*/
-.bgi{background-image: url();}
-
-/*列表图片*/
-.lisi{list-style-image: url();}
-
 /*------------------------------投影------------------------------*/
 
 /*字体投影*/
 .tsh{text-shadow: hoff voff blur #000;}
 
 /*模块投影*/
-.bxsh{box-shadow: inset hoff voff blur spread rgba(0, 0, 0, .5); /*内外（inset outset） 水平 垂直 模糊距离 阴影尺寸 颜色（#）*/}
+.bxsh{box-shadow: inset hoff voff blur spread rgba(0, 0, 0, .5); } /*内外（inset outset） 水平 垂直 模糊距离 阴影尺寸 颜色（#）*/
 
 /*------------------------------渐变-----------------------------*/
 
