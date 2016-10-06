@@ -9,10 +9,10 @@ CSSOO/
 | |__ css/
 | | |__ adjust.css
 | | |__ box.css
+| | |__ color.css
 | | |__ common.css
-| | |__ design.css
 | | |__ flexboxgrid.css
-| | |__ plugin.css
+| | |__ style.css
 | |__ font/
 | |__ icon/
 | |__ img/
@@ -26,9 +26,9 @@ CSSOO/
 ```
 ##文件描述
 
-src/css/adjust.css 是重置表。 src/css/box.css 是盒子模型表。src/css/common.css 是常用属性表。
+src/css/adjust.css 是重置表。 src/css/box.css 是盒子模型表。src/css/color.css 是常用颜色表。
 
-src/css/design.css 是设计风格样式表。 src/css/flexboxgrid.css 是核心布局样式表。src/css/plugin.css 是插件样式表。
+src/css/common.css 是常用属性表。 src/css/flexboxgrid.css 是核心布局样式表。src/css/style.css 是公共样式表。
 
 src/font、icon、img、sass 分别是字体、矢量图标、图片、预处理文件。src/js/ 下的 js 分别是图片延迟与滑动插件。
 
@@ -40,9 +40,9 @@ src/font、icon、img、sass 分别是字体、矢量图标、图片、预处理
 
 规则3：样式表里所有单位写 px ,设计稿里的值是多少就写多少，已内置 gulp-px3rem ，一键转换，省心方便。
 
-**关键设置1**：头部 js 的 maxW,minW 变量与 src/css/plugin.css 中的 `.adaptive` 类的值对应一致。
+**关键设置1**：头部 js 的 maxW,minW 变量与 src/css/style.css 中的 `.adaptive` 类的值对应一致。
 
-**关键设置2**：头部 js 的 htmlfs 变量与 src/css/plugin.css 中的 `html{font-size:100px}` 以及 gulpfile.js 中的
+**关键设置2**：头部 js 的 htmlfs 变量与 src/css/style.css 中的 `html{font-size:100px}` 以及 gulpfile.js 中的
 
  `px3rem({remUnit: 100})` 的值对应一致。DOM：src/adaptive.html。
 

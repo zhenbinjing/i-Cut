@@ -63,10 +63,35 @@
 .ovys{overflow-y: scroll;}
 
 /*边框样式*/
+.bds-n{border-style: none;}
 .bds-dt{border-style: dotted;}/*点*/
 .bds-ds{border-style: dashed;}/*虚线*/
 .bds-sl{border-style: solid;}/*实线*/
 .bds-db{border-style: double}/*双实线*/
+
+.bdts-n{border-top-style: none;}
+.bdts-dt{border-top-style: dotted;}
+.bdts-ds{border-top-style: dashed;}
+.bdts-sl{border-top-style: solid;}
+.bdts-db{border-top-style: double}
+
+.bdrs-n{border-right-style: none;}
+.bdrs-dt{border-right-style: dotted;}
+.bdrs-ds{border-right-style: dashed;}
+.bdrs-sl{border-right-style: solid;}
+.bdrs-db{border-right-style: double}
+
+.bdbs-n{border-bottom-style: none;}
+.bdbs-dt{border-bottom-style: dotted;}
+.bdbs-ds{border-bottom-style: dashed;}
+.bdbs-sl{border-bottom-style: solid;}
+.bdbs-db{border-bottom-style: double}
+
+.bdls-n{border-left-style: none;}
+.bdls-dt{border-left-style: dotted;}
+.bdls-ds{border-left-style: dashed;}
+.bdls-sl{border-left-style: solid;}
+.bdls-db{border-left-style: double}
 
 /*LI样式*/
 .lst-n{list-style-type: none;}
