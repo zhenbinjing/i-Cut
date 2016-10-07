@@ -1,13 +1,23 @@
-/*----------------------------初始化设置-----------------------------*/
+﻿/*---------------------------初始化设置----------------------------*/
 
 html{font-size: 100px;/*no*/}
 
-/*-------------------------设置移动设计稿宽度--------------------------*/
+/*-----------------------设置移动设计稿宽度-------------------------*/
 
-/*设置移动设计稿宽度*/
 .adaptive{max-width: 640px; min-width: 320px;}
 
-/*----------------------------移动组件-----------------------------*/
+/*----------------排版解决方案，略号文字截断(单行，多行)--------------*/
+
+.cut{overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.cutmore{-webkit-line-clamp: 7; overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-box-orient: vertical; }
+
+.clearfix:after {visibility: hidden; display: block; clear: both; content:" "; font-size: 0; height: 0;}
+.clearfix{*zoom: 1;}
+
+.trbl{top: 0; right: 0; bottom: 0; left: 0}
+.mlra{margin-left: auto; margin-right: auto;}
+
+/*----------------------------移动组件----------------------------*/
 
 .focus{width: 100%; margin: 0 auto; position: relative;}
 .focus .hd{width: 100%; height:11px;/*no*/  position: absolute; z-index: 1; bottom: 6px;/*no*/ text-align: center;}
@@ -17,22 +27,7 @@ html{font-size: 100px;/*no*/}
 .focus .bd{position: relative; z-index: 0;}
 .focus .bd li img{width: 100%;}
 
-/*---------------------------排版解决方案----------------------------*/
-
-/*清除浮动*/
-.clearfix:after {visibility: hidden; display: block; clear: both; content:" "; font-size: 0; height: 0;}
-.clearfix{*zoom: 1;}
-
-/*略号文字截断(单行)*/
-.cut{white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
-
-/*略号文字截断(多行 -webkit-line-clamp 设置第几行截断)*/
-.cut2{overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; word-break: break-all;}
-
-.trbl{top: 0; right: 0; bottom: 0; left: 0}
-.mlra{margin-left: auto; margin-right: auto;}
-
-/*------------------------------字体-------------------------------*/
+/*-----------------------------字体-----------------------------*/
 
 @font-face {
 	font-family: 'fzcjjt';
@@ -44,7 +39,7 @@ html{font-size: 100px;/*no*/}
 }
 .fzcjjt{font-family: 'fzcjjt';}
 
-/*------------------------------图标------------------------------*/
+/*-----------------------------图标----------------------------*/
 
 @font-face {
 	font-family: "iconfont";
@@ -61,7 +56,7 @@ html{font-size: 100px;/*no*/}
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*------------------------------图片------------------------------*/
+/*-----------------------------图片----------------------------*/
 
 /*边框图片*/
 .bdi{border-image: url();}
@@ -72,7 +67,7 @@ html{font-size: 100px;/*no*/}
 /*列表图片*/
 .lisi{list-style-image: url();}
 
-/*------------------------------投影------------------------------*/
+/*-----------------------------投影----------------------------*/
 
 /*字体投影*/
 .tsh{text-shadow: hoff voff blur #000;}
@@ -80,7 +75,7 @@ html{font-size: 100px;/*no*/}
 /*模块投影*/
 .bxsh{box-shadow: inset hoff voff blur spread rgba(0, 0, 0, .5); } /*内外（inset outset） 水平 垂直 模糊距离 阴影尺寸 颜色（#）*/
 
-/*------------------------------渐变-----------------------------*/
+/*-----------------------------渐变---------------------------*/
 
 /*径向渐变*/
 .bglg{background: linear-gradient(45deg,#fb3,#F40004 );}
