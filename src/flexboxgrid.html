@@ -19,7 +19,7 @@ function resi() {
 	var htmlfs = 100; //与 plugin.css 中 html 标签的 fontSize 值以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;	
-	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px"
+	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
 }
 window.addEventListener("DOMContentLoaded", function() {
 	var bodys = document.querySelector("body").style;
