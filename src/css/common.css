@@ -1,13 +1,21 @@
-﻿/*元素状态*/
+﻿/*元素可见性*/
+.vh{visibility: hidden;}
+.vv{visibility: visible;}
+
+/*元素状态*/
 .dn{display: none;}
 .db{display: block;}
 .dt{display: table;}
 .dtc{display: table-cell;}
 .dib{display: inline-block;}
 
-/*元素可见性*/
-.vh{visibility: hidden;}
-.vv{visibility: visible;}
+/*字体加粗*/
+.fwb{font-weight: bold;}
+.fwn{font-weight: normal;}
+
+/*字体斜体*/
+.fsi{font-style: italic;}
+.fsn{font-style: normal;}
 
 /*内联定位(上中下)*/
 .vat{vertical-align: top;}
@@ -15,16 +23,18 @@
 .vab{vertical-align: bottom;}
 .va-tb{vertical-align: text-bottom;}
 .va-tt{vertical-align: text-top;}
-.va-sup{vertical-align: super;}
-.va-sub{vertical-align: sub;}
+.va-sp{vertical-align: super;}
+.va-sb{vertical-align: sub;}
 
-/*块状定位*/
-.fl{float: left;}
-.fr{float: right;}
-.pos{position: static;}
-.pof{position: fixed;}
-.por{position: relative;}
-.poa{position: absolute;}
+/*字母大小写*/
+.ttn{text-transform: none;}
+.ttc{text-transform: capitalize;}
+.ttu{text-transform: uppercase;}
+.ttl{text-transform: lowercase;}
+
+/*字体划线*/
+.tdl{text-decoration: line-through;}/*中划线*/
+.tdu{text-decoration: underline;}/*下划线*/
 
 /*文字排版*/
 .tac{text-align: center;}
@@ -33,32 +43,42 @@
 .taj{text-align: justify;}
 
 /*文字排版最后一行*/
-.talc{text-align-last: center;}
-.tall{text-align-last: left;}
-.talr{text-align-last: right;}
-.talj{text-align-last: justify;}
+.tal-c{text-align-last: center;}
+.tal-l{text-align-last: left;}
+.tal-r{text-align-last: right;}
+.tal-j{text-align-last: justify;}
 
-/*字体样式*/
-.fwb{font-weight: bold;}/*加粗*/
-.fwn{font-weight: normal;}
-.fsi{font-style: italic;}/*斜体*/
-.fsn{font-style: normal;}
-.tdl{text-decoration: line-through;}/*中划线*/
-.tdu{text-decoration: underline;}/*下划线*/
+/*文字书写模式*/
+.wm-tb{writing-mode: horizontal-tb;}
+.wm-rl{writing-mode: vertical-rl;}
+.wm-lr{writing-mode: vertical-lr;}
 
-/*字母大小写*/
-.ttn{text-transform: none;}
-.ttc{text-transform: capitalize;}
-.ttu{text-transform: uppercase;}
-.ttl{text-transform: lowercase;}
+/*内联方向排序(左右)*/
+.d-rtl{direction:rtl;}
+.d-ltr{direction:ltr;}
 
-/*内容溢出*/
+/*浮动*/
+.fn{float: none;}
+.fl{float: left;}
+.fr{float: right;}
+
+/*定位*/
+.pos{position: static;}
+.pof{position: fixed;}
+.por{position: relative;}
+.poa{position: absolute;}
+
+/*滚动条*/
 .ovh{overflow: hidden;}
 .ovs{overflow: scroll;}
-.ovxh{overflow-x: hidden;}
-.ovxs{overflow-x: scroll;}
-.ovyh{overflow-y: hidden;}
-.ovys{overflow-y: scroll;}
+
+/*滚动条x轴*/
+.ovx-h{overflow-x: hidden;}
+.ovx-s{overflow-x: scroll;}
+
+/*滚动条y轴*/
+.ovy-h{overflow-y: hidden;}
+.ovy-s{overflow-y: scroll;}
 
 /*边框样式*/
 .bds-n{border-style: none;}
@@ -91,22 +111,17 @@
 .bdls-sl{border-left-style: solid;}
 .bdls-db{border-left-style: double}
 
-/*LI样式*/
-.lst-n{list-style-type: none;}
-.lst-d{list-style-type: disc;}/*实心*/
-.lst-c{list-style-type: circle;}/*空心*/
-.lst-s{list-style-type: square;}/*小方块*/
-.lst-dc{list-style-type: decimal;}/*数字*/
-.lst-u{list-style-type: upper-roman;}/*罗马*/
-.lst-l{list-style-type: lower-alpha;}/*字母*/
-
 /*背景定位*/
 .bgp-tc{background-position: top center;}
 .bgp-cc{background-position: center center;}
 .bgp-bc{background-position: bottom center;}
+
+/*背景铺垫*/
 .bgr-n{background-repeat: no-repeat;}
 .bgr-x{background-repeat: repeat-x;}
 .bgr-y{background-repeat: repeat-y;}
+
+/*背景固定*/
 .bga-f{background-attachment: fixed;}
 
 /*背景填充*/
@@ -123,11 +138,19 @@
 .bgo-bb{background-origin: border-box;}
 .bgo-cb{background-origin: content-box;}
 
-/*文字书写模式*/
-.wm-tbl{writing-mode: tb-lr;}
-
-/*内联方向排序(左右)*/
-.drtl{direction:rtl;}
+/*LI样式*/
+.lst-n{list-style-type: none;}
+.lst-d{list-style-type: disc;}/*实心*/
+.lst-c{list-style-type: circle;}/*空心*/
+.lst-s{list-style-type: square;}/*小方块*/
+.lst-u{list-style-type: upper-roman;}/*罗马*/
+.lst-l{list-style-type: lower-alpha;}/*字母*/
+.lst-dc{list-style-type: decimal;}/*数字*/
 
 /*鼠标指针*/
 .cur-p{cursor: pointer;}/*手指*/
+.cur-t{cursor: text;}/*文字*/
+.cur-m{cursor: move;}/*更多*/
+.cur-c{cursor: crosshair;}/*十字*/
+.cur-h{cursor: help;}/*求助*/
+.cur-d{cursor: default;}/*箭头*/
