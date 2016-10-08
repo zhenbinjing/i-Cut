@@ -1,11 +1,10 @@
-/*! flexbox-grid 栅格 1rem=100px*/
+﻿/*! flexbox-grid 栅格 1rem=100px*/
 
 $sg: 0.15rem;
 $w1: 751px; $ww1: 750px;
 $w2: 992px; $ww2: 970px;
 $w3: 1200px; $ww3: 1170px;
 $nb: 100%; $column: 12;
-
 
 @mixin bs {box-sizing: border-box;}
 @mixin pdsg {padding-right: $sg; padding-left: $sg;}
@@ -64,7 +63,6 @@ $nb: 100%; $column: 12;
 	@each $val, $direction in $order {		
 	.order-#{$grid}-#{$val}{order: $direction;}	
 	}
-
 }
 
 @include flexboxgrid (xs){}
@@ -73,21 +71,8 @@ $flexboxgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
 
 @each $grid, $w, $ww in $flexboxgrid-data {
 
-	@media only screen and (min-width: $w){	
-	
-		.container{width: $ww;}	
-	
+	@media only screen and (min-width: $w){		
+		.container{width: $ww;}		
 		@include flexboxgrid ($grid){}	
-		
-	}
-	
+	}	
 }
-
-
-
-
-
-
-				
-
-

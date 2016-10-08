@@ -31,15 +31,6 @@ $column:12;
 .ml#{$i}{margin-left:1px * $i;}
 }
 
-/*边框*/
-@for $i from 0 through 10 {
-.bdw#{$i}{border-width:1px * $i;}
-.bdtw#{$i}{border-top-width:1px * $i;}
-.bdrw#{$i}{border-right-width:1px * $i;}
-.bdbw#{$i}{border-bottom-width:1px * $i;}
-.bdlw#{$i}{border-left-width:1px * $i;}
-}
-
 /*圆角*/
 .round{border-radius:$nb / 2; }
 @for $i from 0 through 100 {
@@ -48,4 +39,13 @@ $column:12;
 .btlr#{$i}{border-top-left-radius:1px * $i;}
 .bbrr#{$i}{border-bottom-right-radius:1px * $i;}
 .bblr#{$i}{border-bottom-left-radius:1px * $i;}
+}
+
+/*边框*/
+@for $i from 0 through 10 {
+.bdw#{$i}{border-width:1px * $i;}
+.bdtw#{$i}{border-top-width:1px * $i;}
+.bdrw#{$i}{border-right-width:1px * $i;}
+.bdbw#{$i}{border-bottom-width:1px * $i;}
+.bdlw#{$i}{border-left-width:1px * $i;}
 }
