@@ -13,13 +13,16 @@
 <script type="text/javascript">
 function resi() {
 	var html = document.querySelector("html");
+	var adaptive = document.getElementById("adaptive");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
 	var maxW = 640;  //手机设计稿画布宽度
 	var minW = 320;  //设置最小宽度
-	var htmlfs = 100; //与 plugin.css 中 html 标签的 fontSize 值以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
+	var htmlfs = 100; //与 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;
 	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
+	adaptive.style.maxWidth = maxW + "px";
+	adaptive.style.minWidth = minW + "px";
 }
 window.addEventListener("DOMContentLoaded", function() {
 	var bodys = document.querySelector("body").style;
@@ -40,7 +43,7 @@ window.addEventListener("resize", resi);
 </head>
 
 <body>
-<div class="adaptive mlra ovh">
+<div id="adaptive" class="mlra ovh">
 	<div class="clearfix">
 	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac">自定义字体</div>
 	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac c-Yellow-5">自定义图标:<span class="iconfont">&#xe603;</span></div>

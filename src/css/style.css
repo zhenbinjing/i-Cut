@@ -1,11 +1,4 @@
-﻿/*---------------------------初始化设置----------------------------*/
-
-html{font-size: 100px;/*no*/}
-
-/*-----------------------设置移动设计稿宽度-------------------------*/
-
-.adaptive{max-width: 640px; min-width: 320px;}
-
+﻿
 /*----------------排版解决方案，略号文字截断(单行，多行)--------------*/
 
 .cut{overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
@@ -25,7 +18,7 @@ html{font-size: 100px;/*no*/}
 .focus .hd ul li{display: inline-block; width: 5px;/*no*/ height: 5px;/*no*/ border-radius:5px;/*no*/ background: #ccc; margin: 0 5px;/*no*/  vertical-align: top; overflow: hidden;}
 .focus .hd ul .on{background: #e75223;}
 .focus .bd{position: relative; z-index: 0;}
-.focus .bd li img{width: 100%;}
+.focus .bd li img{max-width: 100%;}
 
 /*-----------------------------字体-----------------------------*/
 

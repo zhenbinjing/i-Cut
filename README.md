@@ -40,11 +40,7 @@ src/font、icon、img、sass 分别是字体、矢量图标、图片、预处理
 
 规则3：样式表里所有单位写 px ,设计稿里的值是多少就写多少，已内置 gulp-px3rem ，一键转换，省心方便。
 
-**关键设置1**：头部 js 的 maxW,minW 变量与 src/css/style.css 中的 `.adaptive` 类的值对应一致。
-
-**关键设置2**：头部 js 的 htmlfs 变量与 src/css/style.css 中的 `html{font-size:100px}` 以及 gulpfile.js 中的
-
- `px3rem({remUnit: 100})` 的值对应一致。DOM：src/adaptive.html。
+**关键设置**：头部 js 的 htmlfs 变量与 gulpfile.js 中的 `px3rem({remUnit: 100})` 的值对应一致。DOM：src/adaptive.html。
 
 ##PC端(响应式)开发
 

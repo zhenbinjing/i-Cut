@@ -16,7 +16,7 @@ function resi() {
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
 	var maxW = 750;  //手机设计稿画布宽度
 	var minW = 320;  //设置最小宽度
-	var htmlfs = 100; //与 plugin.css 中 html 标签的 fontSize 值以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
+	var htmlfs = 100; //与 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;	
 	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
