@@ -13,22 +13,18 @@
 <script type="text/javascript">
 function resi() {
 	var html = document.querySelector("html");
-	var body = document.querySelector("body");
+	var bodys = document.querySelector("body");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
 	var maxW = 640;  //手机设计稿画布宽度
-	var minW = 320;  //设置最小宽度
-	var htmlfs = 100; //与 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
+  var minW = 320;  //设置最小宽度
+  var htmlfs = 100; //与 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
+  var mlra = 'margin-left:auto; margin-right:auto';
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;
 	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
-	body.style.cssText = "max-width:" + maxW + "px;" + "min-width:" + minW + "px;" + "margin-left:auto;" + "margin-right:auto;";
+	bodys.style.cssText = "max-width:" + maxW + "px;" + "min-width:" + minW + "px;" + mlra;
 }
-window.addEventListener("DOMContentLoaded", function() {
-	var bodys = document.querySelector("body").style;
-	bodys.opacity = "1";
-	bodys.filter = "alpha(opacity=100)";
-	resi()
-});
+window.addEventListener("DOMContentLoaded", function() {resi()});
 window.addEventListener("resize", resi);
 </script>
 <!-- build:css css/index.css?v=_VERSION_-->
@@ -42,12 +38,12 @@ window.addEventListener("resize", resi);
 </head>
 
 <body>
-<div class="clearfix">
+	<div class="clearfix">
 	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac">自定义字体</div>
 	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac c-Yellow-5">自定义图标:<span class="iconfont">&#xe603;</span></div>
-</div>
+	</div>
 	<!--滑动组件-->
-<div id="focus" class="focus">
+	<div id="focus" class="focus">
 	    <div class="hd">
 		<ul>
 		<li class="on"></li>
@@ -59,7 +55,7 @@ window.addEventListener("resize", resi);
 		<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/b.png?v=_VERSION_" alt="" /></a></li>
 		</ul>
 	    </div>
-</div>
+	</div>
 <br/><br/><br/><br/><br/><br/><br/>
 <img src="img/d.jpg" xSrc="img/c.png?v=_VERSION_" class="bdtw3 bdts-sl bdc-Grape-4" alt="" />
 <!-- build:js js/index.js?v=_VERSION_ -->
