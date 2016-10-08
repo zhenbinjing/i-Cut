@@ -13,7 +13,7 @@
 <script type="text/javascript">
 function resi() {
 	var html = document.querySelector("html");
-	var adaptive = document.getElementById("adaptive");
+	var body = document.querySelector("body");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
 	var maxW = 640;  //手机设计稿画布宽度
 	var minW = 320;  //设置最小宽度
@@ -21,8 +21,7 @@ function resi() {
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;
 	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
-	adaptive.style.maxWidth = maxW + "px";
-	adaptive.style.minWidth = minW + "px";
+	body.style.cssText = "max-width:" + maxW + "px;" + "min-width:" + minW + "px;" + "margin-left:auto;" + "margin-right:auto;";
 }
 window.addEventListener("DOMContentLoaded", function() {
 	var bodys = document.querySelector("body").style;
@@ -32,17 +31,16 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 window.addEventListener("resize", resi);
 </script>
-<link rel="stylesheet" href="css/index.css?v=1475896626180"/>
+<link rel="stylesheet" href="css/index.css?v=1475908161923"/>
 </head>
 
 <body>
-<div id="adaptive" class="mlra ovh">
-	<div class="clearfix">
+<div class="clearfix">
 	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac">自定义字体</div>
 	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac c-Yellow-5">自定义图标:<span class="iconfont">&#xe603;</span></div>
-	</div>
+</div>
 	<!--滑动组件-->
-	<div id="focus" class="focus">
+<div id="focus" class="focus">
 	    <div class="hd">
 		<ul>
 		<li class="on"></li>
@@ -50,14 +48,13 @@ window.addEventListener("resize", resi);
 	    </div>
 	    <div class="bd">
 		<ul>
-		<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/a.png?v=1475896626180" alt="" /></a></li>
-		<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/b.png?v=1475896626180" alt="" /></a></li>
+		<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/a.png?v=1475908161923" alt="" /></a></li>
+		<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/b.png?v=1475908161923" alt="" /></a></li>
 		</ul>
 	    </div>
-	</div>
-<br/><br/><br/><br/><br/><br/><br/>
-<img src="img/d.jpg" xSrc="img/c.png?v=1475896626180" class="bdtw3 bdts-sl bdc-Grape-4" alt="" />
 </div>
-<script src="js/index.js?v=1475896626180"></script>
+<br/><br/><br/><br/><br/><br/><br/>
+<img src="img/d.jpg" xSrc="img/c.png?v=1475908161923" class="bdtw3 bdts-sl bdc-Grape-4" alt="" />
+<script src="js/index.js?v=1475908161923"></script>
 </body>
 </html>
