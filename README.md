@@ -38,7 +38,7 @@ src/font、icon、img、sass 分别是字体、矢量图标、图片、预处理
 
 规则2：html 头部的 js 能实现动态改变根元素的值令字体与盒子模型的值以及 iframe 等比例缩放，从而告别繁琐的媒体查询。
 
-规则3：样式表里所有单位写 px ，设计稿里的值是多少就写多少，内置 gulp-px3rem ，批量转换。DOM：src/adaptive.html。
+规则3：设计稿里的值是多少 px 就写多少 px，已内置 gulp-px3rem ，批量转换rem。DOM：src/adaptive.html。
 
 ##PC端(响应式)开发
 
