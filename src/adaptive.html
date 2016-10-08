@@ -13,7 +13,7 @@
 <script type="text/javascript">
 function resi() {
 	var html = document.querySelector("html");
-	var adaptive = document.getElementById("adaptive");
+	var body = document.querySelector("body");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
 	var maxW = 640;  //手机设计稿画布宽度
 	var minW = 320;  //设置最小宽度
@@ -21,8 +21,7 @@ function resi() {
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;
 	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
-	adaptive.style.maxWidth = maxW + "px";
-	adaptive.style.minWidth = minW + "px";
+	body.style.cssText = "max-width:" + maxW + "px;" + "min-width:" + minW + "px;" + "margin-left:auto;" + "margin-right:auto;";
 }
 window.addEventListener("DOMContentLoaded", function() {
 	var bodys = document.querySelector("body").style;
@@ -43,13 +42,12 @@ window.addEventListener("resize", resi);
 </head>
 
 <body>
-<div id="adaptive" class="mlra ovh">
-	<div class="clearfix">
+<div class="clearfix">
 	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac">自定义字体</div>
 	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac c-Yellow-5">自定义图标:<span class="iconfont">&#xe603;</span></div>
-	</div>
+</div>
 	<!--滑动组件-->
-	<div id="focus" class="focus">
+<div id="focus" class="focus">
 	    <div class="hd">
 		<ul>
 		<li class="on"></li>
@@ -61,10 +59,9 @@ window.addEventListener("resize", resi);
 		<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/b.png?v=_VERSION_" alt="" /></a></li>
 		</ul>
 	    </div>
-	</div>
+</div>
 <br/><br/><br/><br/><br/><br/><br/>
 <img src="img/d.jpg" xSrc="img/c.png?v=_VERSION_" class="bdtw3 bdts-sl bdc-Grape-4" alt="" />
-</div>
 <!-- build:js js/index.js?v=_VERSION_ -->
 <script src="js/scrollLoad.js"></script>
 <script src="js/TouchSlide.js"></script>
