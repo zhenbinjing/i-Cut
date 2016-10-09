@@ -48,8 +48,6 @@ src/font、icon、img、sass 分别是字体、矢量图标、图片、预处理
 
 对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用与其一致的命名方式！DOM：src/flexboxgrid.html。
 
-当然，如果你是重度依赖它的话，你也可以直接用 Bootstrap ，框架只采取其核心的部分，方便自己扩展。
-
 ##Gulp自动化流程
 
 框架配有gulp插件，一键 gulp，或 gulp (插件名)，这里我只说重要的几个插件，具体可以查看 gulpfile.js 里的注释。
