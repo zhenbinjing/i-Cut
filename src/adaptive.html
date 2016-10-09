@@ -16,9 +16,9 @@ function resi() {
 	var bodys = document.querySelector("body");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
 	var maxW = 640;  //手机设计稿画布宽度
-  var minW = 320;  //设置最小宽度
-  var htmlfs = 100; //与 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
-  var mlra = 'margin-left:auto; margin-right:auto';
+  	var minW = 320;  //设置最小宽度
+ 	var htmlfs = 100; //与 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
+ 	var mlra = 'margin-left:auto; margin-right:auto';
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;
 	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
