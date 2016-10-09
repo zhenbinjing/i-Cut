@@ -66,11 +66,8 @@ $nb: 100%; $column: 12;
 }
 
 @include flexboxgrid (xs){}
-
 $flexboxgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
-
 @each $grid, $w, $ww in $flexboxgrid-data {
-
 	@media only screen and (min-width: $w){		
 		.container{width: $ww;}		
 		@include flexboxgrid ($grid){}	
