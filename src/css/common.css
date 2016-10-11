@@ -1,8 +1,8 @@
-﻿/*元素可见性*/
+﻿/*! 元素可见性*/
 .vh{visibility: hidden;}
 .vv{visibility: visible;}
 
-/*元素状态*/
+/*! 元素状态*/
 .dn{display: none;}
 .db{display: block;}
 .dt{display: table;}
@@ -18,9 +18,9 @@
 .fsn{font-style: normal;}
 
 /*内联定位(上中下)*/
-.vat{vertical-align: top;}
-.vam{vertical-align: middle;}
-.vab{vertical-align: bottom;}
+.va-t{vertical-align: top;}
+.va-m{vertical-align: middle;}
+.va-b{vertical-align: bottom;}
 .va-tb{vertical-align: text-bottom;}
 .va-tt{vertical-align: text-top;}
 .va-sp{vertical-align: super;}
@@ -68,6 +68,55 @@
 .por{position: relative;}
 .poa{position: absolute;}
 
+/*背景定位*/
+.bgp-tc { background-position: top center; }
+.bgp-tr { background-position: top right; }
+.bgp-lc { background-position: left center; }
+.bgp-lb { background-position: left bottom; }
+.bgp-cc { background-position: center center; }
+.bgp-cr { background-position: center right; }
+.bgp-bc { background-position: bottom center; }
+.bgp-br { background-position: bottom right; }
+
+/*背景铺垫*/
+.bgr-n{background-repeat: no-repeat;}
+.bgr-x{background-repeat: repeat-x;}
+.bgr-y{background-repeat: repeat-y;}
+
+/*背景固定*/
+.bga-f{background-attachment: fixed;}
+
+/*背景填充*/
+.bgs-cv{background-size: cover;}
+.bgs-ct{background-size: contain;}
+
+/*背景色相对于盒子中显示*/
+.bgc-pd{background-clip: padding-box;}
+.bgc-bb{background-clip: border-box;}
+.bgc-cb{background-clip: content-box;}
+
+/*背景图像相对于盒子中定位*/
+.bgo-pd{background-origin:padding-box;}
+.bgo-bb{background-origin: border-box;}
+.bgo-cb{background-origin: content-box;}
+
+/*LI样式*/
+.lst-n{list-style-type: none;}
+.lst-d{list-style-type: disc;}/*实心*/
+.lst-c{list-style-type: circle;}/*空心*/
+.lst-s{list-style-type: square;}/*小方块*/
+.lst-u{list-style-type: upper-roman;}/*罗马*/
+.lst-l{list-style-type: lower-alpha;}/*字母*/
+.lst-dc{list-style-type: decimal;}/*数字*/
+
+/*鼠标指针*/
+.cur-p{cursor: pointer;}/*手指*/
+.cur-t{cursor: text;}/*文字*/
+.cur-m{cursor: move;}/*更多*/
+.cur-c{cursor: crosshair;}/*十字*/
+.cur-h{cursor: help;}/*求助*/
+.cur-d{cursor: default;}/*箭头*/
+
 /*滚动条*/
 .ovh{overflow: hidden;}
 .ovs{overflow: scroll;}
@@ -110,47 +159,3 @@
 .bdls-ds{border-left-style: dashed;}
 .bdls-sl{border-left-style: solid;}
 .bdls-db{border-left-style: double}
-
-/*背景定位*/
-.bgp-tc{background-position: top center;}
-.bgp-cc{background-position: center center;}
-.bgp-bc{background-position: bottom center;}
-
-/*背景铺垫*/
-.bgr-n{background-repeat: no-repeat;}
-.bgr-x{background-repeat: repeat-x;}
-.bgr-y{background-repeat: repeat-y;}
-
-/*背景固定*/
-.bga-f{background-attachment: fixed;}
-
-/*背景填充*/
-.bgs-cv{background-size: cover;}
-.bgs-ct{background-size: contain;}
-
-/*背景色相对于盒子中显示*/
-.bgc-pd{background-clip: padding-box;}
-.bgc-bb{background-clip: border-box;}
-.bgc-cb{background-clip: content-box;}
-
-/*背景图像相对于盒子中定位*/
-.bgo-pd{background-origin:padding-box;}
-.bgo-bb{background-origin: border-box;}
-.bgo-cb{background-origin: content-box;}
-
-/*LI样式*/
-.lst-n{list-style-type: none;}
-.lst-d{list-style-type: disc;}/*实心*/
-.lst-c{list-style-type: circle;}/*空心*/
-.lst-s{list-style-type: square;}/*小方块*/
-.lst-u{list-style-type: upper-roman;}/*罗马*/
-.lst-l{list-style-type: lower-alpha;}/*字母*/
-.lst-dc{list-style-type: decimal;}/*数字*/
-
-/*鼠标指针*/
-.cur-p{cursor: pointer;}/*手指*/
-.cur-t{cursor: text;}/*文字*/
-.cur-m{cursor: move;}/*更多*/
-.cur-c{cursor: crosshair;}/*十字*/
-.cur-h{cursor: help;}/*求助*/
-.cur-d{cursor: default;}/*箭头*/

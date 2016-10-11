@@ -1,0 +1,100 @@
+/*! 元素可见性*/
+$visibility:(h:hidden, v:visible);
+@each $class , $var in $visibility {.v#{$class}{visibility: $var;}}
+
+/*! 元素状态*/
+$display:(n:none, b:block, t:table, tc:table-cell, ib:inline-block);
+@each $class , $var in $display {.d#{$class}{display: $var;} }
+
+/*! 字体加粗*/
+$font-weight:(b:bold, n:normal);
+@each $class , $var in $font-weight {.fw#{$class}{font-weight: $var;}}
+
+/*! 字体斜体*/
+$font-style:(i:italic, n:normal);
+@each $class , $var in $font-style {.fs#{$class}{font-style: $var;}}
+
+/*！ 内联定位(上中下)*/
+$vertical-align:(t:top, m:middle, b:bottom, tb:text-bottom, tt:text-top, sp:super, sb:sub);
+@each $class , $var in $vertical-align {.va-#{$class}{vertical-align: $var;}}
+
+/*! 字母大小写*/
+$text-transform:(n:none, c:capitalize, u:uppercase, l:lowercase);
+@each $class , $var in $text-transform {.tt#{$class}{text-transform: $var;}}
+
+/*! 字体划线*/
+$text-decoration:(l:line-through, u:underline);
+@each $class , $var in $text-decoration {.td#{$class}{text-decoration: $var;}}
+
+/*! 文字排版*/
+$text-align:(c:center, l:left, r:right, j:justify);
+@each $class , $var in $text-align {.ta#{$class}{text-align: $var;}}
+
+/*! 文字排版最后一行*/
+@each $class , $var in $text-align {.tal-#{$class}{text-align-last: $var;}}
+
+/*! 文字书写模式*/
+$writing-mode:(tb:horizontal-tb, rl:vertical-rl, lr:vertical-lr);
+@each $class , $var in $writing-mode {.wm-#{$class}{writing-mode: $var;}}
+
+/*! 内联方向排序(左右)*/
+$direction:(rtl:rtl, ltr:ltr);
+@each $class , $var in $direction {.d-#{$class}{direction: $var;}}
+
+/*! 浮动*/
+$float:(n:none, l:left, r:right);
+@each $class , $var in $float {.f#{$class}{float: $var;}}
+
+/*! 定位*/
+$position:(s:static, f:fixed, r:relative, a:absolute);
+@each $class , $var in $position {.po#{$class}{position: $var;}}
+
+/*! 背景定位*/
+$t:top; $b:bottom; $l:left; $r:right; $c:center;
+$background-position:(tc:$t $c,tr:$t $r, lc:$l $c, lb:$l $b, cc:$c $c, cr:$c $r, bc:$b $c, br:$b $r);
+@each $class , $var in $background-position {.bgp-#{$class}{background-position: $var;}}
+
+/*! 背景铺垫*/
+$background-repeat:(n:no-repeat, x:repeat-x, y:repeat-y);
+@each $class , $var in $background-repeat {.bgr-#{$class}{background-repeat: $var;}}
+
+/*! 背景固定*/
+$background-attachment:(bga-f:fixed);
+@each $class , $var in $background-attachment {.#{$class}{background-attachment: $var;}}
+
+/*! 背景填充*/
+$background-size:(cv:cover, ct:contain);
+@each $class , $var in $background-size {.bgs-#{$class}{background-size: $var;}}
+
+/*! 背景色相对于盒子中显示*/
+$background-co:(pd:padding-box, bb:border-box, cb:content-box);
+@each $class , $var in $background-co {.bgc-#{$class}{background-clip: $var;}}
+
+/*! 背景图像相对于盒子中定位*/
+@each $class , $var in $background-co {.bgo-#{$class}{background-origin: $var;}}
+
+/*! LI样式*/
+$list-style-type:(n:none, d:disc, c:circle, s:square, u:upper-roman, l:lower-alpha, dc:decimal);
+@each $class , $var in $list-style-type {.lst-#{$class}{list-style-type: $var;}}
+
+/*! 鼠标指针*/
+$cursor:(p:pointer, t:text, m:move, c:crosshair, h:help, d:default);
+@each $class , $var in $cursor {.cur-#{$class}{cursor: $var;}}
+
+/*! 滚动条*/
+$overflow: (h:hidden, s:scroll);
+@each $class, $var in $overflow {
+.ov#{$class}{overflow: $var;}
+.ov#{$class}-x{overflow-x: $var;}
+.ov#{$class}-y{overflow-y: $var;}
+}
+
+/*! 边框样式*/
+$border-style:(n:none, dt:dotted, ds:dashed, sl:solid, db:double);
+@each $class , $var in $border-style {
+.bds-#{$class}{border-style: $var;}
+.bdts-#{$class}{border-top-style: $var;}
+.bdrs-#{$class}{border-right-style: $var;}
+.bdbs-#{$class}{border-bottom-style: $var;}
+.bdls-#{$class}{border-left-style: $var;}
+}
