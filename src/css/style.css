@@ -1,12 +1,11 @@
 ﻿/*----------------------------移动组件----------------------------*/
 
 .focus{width: 100%; margin: 0 auto; position: relative;}
-.focus .hd{width: 100%; height:11px;/*no*/  position: absolute; z-index: 1; bottom: 6px;/*no*/ text-align: center;}
-.focus .hd ul{display: inline-block; height: 11px;/*no*/ padding: 3px 5px;/*no*/ background-color: rgba(255,255,255,0.7); border-radius: 6px;/*no*/ font-size: 0; vertical-align: top;}
-.focus .hd ul li{display: inline-block; width: 5px;/*no*/ height: 5px;/*no*/ border-radius:5px;/*no*/ background: #ccc; margin: 0 5px;/*no*/  vertical-align: top; overflow: hidden;}
-.focus .hd ul .on{background: #e75223;}
-.focus .bd{position: relative; z-index: 0;}
-.focus .bd li img{max-width: 100%;}
+.focus__hd{width: 100%; height:11px;/*no*/  position: absolute; z-index: 1; bottom: 6px;/*no*/ text-align: center;}
+.focus__hdul{display: inline-block; height: 11px;/*no*/ padding: 3px 5px;/*no*/ background-color: rgba(255,255,255,0.7); border-radius: 6px;/*no*/ font-size: 0; vertical-align: top;}
+.focus__hdli{display: inline-block; width: 5px;/*no*/ height: 5px;/*no*/ border-radius:5px;/*no*/ background: #ccc; margin: 0 5px;/*no*/  vertical-align: top; overflow: hidden;}
+.focus__hdli-on{background: #e75223;}
+.focus__bd {position: relative; z-index: 0;}
 
 /*----------------排版解决方案，略号文字截断(单行，多行)--------------*/
 
