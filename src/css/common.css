@@ -69,14 +69,14 @@
 .poa{position: absolute;}
 
 /*背景定位*/
-.bgp-tc { background-position: top center; }
-.bgp-tr { background-position: top right; }
-.bgp-lc { background-position: left center; }
-.bgp-lb { background-position: left bottom; }
-.bgp-cc { background-position: center center; }
-.bgp-cr { background-position: center right; }
-.bgp-bc { background-position: bottom center; }
-.bgp-br { background-position: bottom right; }
+.bgp-tc{background-position: top center;}
+.bgp-tr{background-position: top right;}
+.bgp-lc{background-position: left center;}
+.bgp-lb{background-position: left bottom;}
+.bgp-cc{background-position: center center;}
+.bgp-cr{background-position: center right;}
+.bgp-bc{background-position: bottom center;}
+.bgp-br{background-position: bottom right;}
 
 /*背景铺垫*/
 .bgr-n{background-repeat: no-repeat;}
