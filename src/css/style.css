@@ -1,4 +1,9 @@
-﻿/*----------------------------移动组件----------------------------*/
+﻿/*----------------------------自适应样式----------------------------*/
+
+html{font-size: 100px;}
+.adaptive{max-width:640px; min-width:320px; margin-left:auto; margin-right:auto;}
+
+/*----------------------------移动组件----------------------------*/
 
 .focus{width: 100%; margin: 0 auto; position: relative;}
 .focus__hd{width: 100%; height:11px;/*no*/  position: absolute; z-index: 1; bottom: 6px;/*no*/ text-align: center;}

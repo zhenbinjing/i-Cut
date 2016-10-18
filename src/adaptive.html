@@ -15,14 +15,11 @@ function resi() {
 	var html = document.querySelector("html");
 	var bodys = document.querySelector("body");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
-	var maxW = 640;  //手机设计稿画布宽度
-  	var minW = 320;  //设置最小宽度
- 	var htmlfs = 100; //与 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
- 	var mlra = 'margin-left:auto; margin-right:auto';
+	var maxW = 640;  var minW = 320; //设置手机设计稿宽度以及最小宽度与 css/style.css 中的 adaptive 类对应一致。
+ 	var htmlfs = 100; //与css/style.css 中的 html 字体大小以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致。
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;
 	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
-	bodys.style.cssText = "max-width:" + maxW + "px;" + "min-width:" + minW + "px;" + mlra;
 }
 window.addEventListener("DOMContentLoaded", function() {resi()});
 window.addEventListener("resize", resi);
@@ -38,6 +35,7 @@ window.addEventListener("resize", resi);
 </head>
 
 <body>
+<div class="adaptive">
 	<div class="clearfix">
 	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac">自定义字体</div>
 	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac c-yellow-5">自定义图标:<span class="iconfont">&#xe603;</span></div>
@@ -59,6 +57,7 @@ window.addEventListener("resize", resi);
 	</div>
 <br/><br/><br/><br/><br/><br/><br/>
 <img src="img/d.jpg" xSrc="img/c.png?v=_VERSION_" class="bdtw3 bdts-sl bdc-Grape-4" alt="" />
+</div>
 <!-- build:js js/index.js?v=_VERSION_ -->
 <script src="js/scrollLoad.js"></script>
 <script src="js/TouchSlide.js"></script>
