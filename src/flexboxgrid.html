@@ -14,7 +14,8 @@
 function resi() {
 	var html = document.querySelector("html");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
-	var maxW = 750;  var minW = 320;//设置手机设计稿宽度和最小宽度 与css/flexboxgrid.css 中的 container 类的宽度对应。
+	var maxW = 750;   //设置手机设计稿宽度和最小宽度 与css/flexboxgrid.css 中的 container 类的宽度对应。
+	var minW = 320;
 	var htmlfs = 100; //与css/style.css 中的 html 字体大小以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致。
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;	

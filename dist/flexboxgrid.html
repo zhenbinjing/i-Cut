@@ -14,9 +14,9 @@
 function resi() {
 	var html = document.querySelector("html");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
-	var maxW = 750;  //手机设计稿画布宽度
-	var minW = 320;  //设置最小宽度
-	var htmlfs = 100; //与 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致
+	var maxW = 750;   //设置手机设计稿宽度和最小宽度 与css/flexboxgrid.css 中的 container 类的宽度对应。
+	var minW = 320;
+	var htmlfs = 100; //与css/style.css 中的 html 字体大小以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致。
 	if (wW > maxW) wW = maxW;
 	var ratio  = wW / minW;	
 	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
@@ -24,7 +24,7 @@ function resi() {
 window.addEventListener("DOMContentLoaded", function() {resi()});
 window.addEventListener("resize", resi);
 </script>
-<link rel="stylesheet" href="css/index.css?v=1476261048554"/>
+<link rel="stylesheet" href="css/index.css?v=1476766837028"/>
 </head>
 
 <body>

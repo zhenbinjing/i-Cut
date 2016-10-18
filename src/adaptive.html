@@ -13,12 +13,12 @@
 <script type="text/javascript">
 function resi() {
 	var html = document.querySelector("html");
-	var bodys = document.querySelector("body");
 	var wW = document.body.clientWidth || document.documentElement.clientWidth;
-	var maxW = 640;  var minW = 320; //设置手机设计稿宽度以及最小宽度与 css/style.css 中的 adaptive 类对应一致。
- 	var htmlfs = 100; //与css/style.css 中的 html 字体大小以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致。
+	var maxW = 640;   //设置手机设计稿宽度和最小宽度 与css/style.css 中的 adaptive 类的宽度对应。
+	var minW = 320;
+	var htmlfs = 100; //与css/style.css 中的 html 字体大小以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致。
 	if (wW > maxW) wW = maxW;
-	var ratio  = wW / minW;
+	var ratio  = wW / minW;	
 	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
 }
 window.addEventListener("DOMContentLoaded", function() {resi()});
@@ -37,24 +37,21 @@ window.addEventListener("resize", resi);
 <body>
 <div class="adaptive">
 	<div class="clearfix">
-	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac">自定义字体</div>
-	    <div class="fl w6 fzcjjt fz30 pt20 mb20 tac c-yellow-5">自定义图标:<span class="iconfont">&#xe603;</span></div>
+		<div class="fl w6 fzcjjt fz30 pt20 mb20 tac">自定义字体</div>
+		<div class="fl w6 fzcjjt fz30 pt20 mb20 tac c-yellow-5">自定义图标:<span class="iconfont">&#xe603;</span></div>
 	</div>
 	<!--滑动组件-->
-	<div id="focus" class="focus">
-	  <div class="focus__hd">
-		<ul class="focus__hdul">
-		<li class="focus__hdli focus__hdli-on"></li>
-		<li class="focus__hdli"></li>
-		</ul>
-	  </div>
-	 <div class="focus__bd">
-		<ul class="focus__bdul">
-		<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/a.png?v=_VERSION_" alt="" /></a></li>
-		<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/b.png?v=_VERSION_" alt="" /></a></li>
-		</ul>
-	 </div>
+<div id="focus" class="focus">
+	<div class="hd">
+	<ul><li class="on"></li></ul>
 	</div>
+	<div class="bd">
+	<ul>
+	<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/a.png?v=_VERSION_" alt="" /></a></li>
+	<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;" ><img src="img/d.jpg" xSrc="img/b.png?v=_VERSION_" alt="" /></a></li>  
+	</ul>
+	</div>
+</div>
 <br/><br/><br/><br/><br/><br/><br/>
 <img src="img/d.jpg" xSrc="img/c.png?v=_VERSION_" class="bdtw3 bdts-sl bdc-Grape-4" alt="" />
 </div>
