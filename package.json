@@ -1,7 +1,7 @@
 {
   "name": "i-Cut",
   "version": "1.0.0",
-  "description": "Adaptive and responsive, pixel level, one to one reduction PSD design draft",
+  "description": "Adaptive, responsive, pixel level reduction PSD design draft!",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp"
@@ -11,6 +11,9 @@
     "url": "git+https://github.com/zhenbinjing/i-Cut.git"
   },
   "keywords": [
+    "Adaptive",
+    "responsive",
+    "Pixel level",
     "flexbox",
     "flexboxgrid",
     "grid"
