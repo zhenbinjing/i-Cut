@@ -1,9 +1,9 @@
-﻿##CSSOO
+﻿##i-Cut
 
 框架适合移动端 (自适应) 和 PC端 (响应式) 制作。
 
 ```txt
-CSSOO/
+i-Cut/
 |__ dist/
 |__ src/
 | |__ css/
