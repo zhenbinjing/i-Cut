@@ -1,5 +1,5 @@
 {
-  "name": "cssoo",
+  "name": "i-Cut",
   "version": "1.0.0",
   "description": "Adaptive and responsive, pixel level, one to one reduction PSD design draft",
   "main": "gulpfile.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhenbinjing/cssoo.git"
+    "url": "git+https://github.com/zhenbinjing/i-Cut.git"
   },
   "keywords": [
     "flexbox",
@@ -18,9 +18,9 @@
   "author": "zhenbinjing",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zhenbinjing/cssoo/issues"
+    "url": "https://github.com/zhenbinjing/i-Cut/issues"
   },
-  "homepage": "https://github.com/zhenbinjing/cssoo#readme",
+  "homepage": "https://github.com/zhenbinjing/i-Cut#readme",
   "devDependencies": {
     "browser-sync": "^2.16.0",
     "del": "^2.2.2",
