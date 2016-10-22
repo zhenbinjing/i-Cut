@@ -42,9 +42,9 @@ src/font、icon、img、sass 分别是字体、矢量图标、图片、预处理
 
 ##PC端(响应式)开发
 
-所有设计稿的 DPI 统一 72 ，栅格宽度和媒体查询尺寸在 src/sass/flexboxgrid.scss 互相对应以及修改。
+所有设计稿的 DPI 统一 72 ，栅格宽度和媒体查询尺寸在 src/sass/flexboxgrid.scss 中对应以及修改。[推荐文章](http://blog.163.com/zbj_jbz/blog/static/21261516420168184538395/)
 
-推荐两款插件：[Assistor PS](http://witstudio.net/) 与 [zeplin](https://zeplin.io/)。最新的 PS CC 已经集成部分功能，以及一篇文章：[文章地址](http://blog.163.com/zbj_jbz/blog/static/21261516420168184538395/)。
+推荐两款插件：[Assistor PS](http://witstudio.net/) 与 [zeplin](https://zeplin.io/)。最新的 PS CC 已经集成部分功能，[zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)
 
 对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用与其一致的命名方式！Demo：src/flexboxgrid.html。
 
