@@ -46,7 +46,7 @@ src/font、icon、img、sass 分别是字体、矢量图标、图片、预处理
 
 对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用与其一致的命名方式！Demo：src/flexboxgrid.html。
 
-推荐两款插件：[Assistor PS](http://witstudio.net/) 与 [zeplin](https://zeplin.io/)，最新的 PS CC 已经集成部分功能。[点击查看 zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)
+推荐两款插件：[Assistor PS](http://witstudio.net/) 与 [zeplin](https://zeplin.io/)，最新版的 [PS CC](http://www.adobe.com/products/photoshop.html) 已经集成部分功能。[点击查看 zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)
 
 ##Gulp自动化流程
 
