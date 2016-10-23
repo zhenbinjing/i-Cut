@@ -15,13 +15,12 @@ i-Cut/
 | | |__ style.css
 | |__ adaptive.html
 | |__ flexboxgrid.html
-|__ gulpfile.js
 ```
 ##文件描述
 
-src/css/adjust.css 是重置表。 src/css/box.css 是盒子模型表。src/css/color.css 是常用颜色表。
+src/css/ 下的 adjust.css 是重置表。 box.css 是盒子模型表。color.css 是常用颜色表。common.css 是常用属性表。
 
-src/css/common.css 是常用属性表。 src/css/flexboxgrid.css 是核心布局样式表。src/css/style.css 是公共样式表。
+flexboxgrid.css 是核心布局样式表。style.css 是公共样式表。
 
 ##移动端(自适应)开发
 
