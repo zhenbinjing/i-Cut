@@ -16,11 +16,9 @@ i-Cut/
 | |__ adaptive.html
 | |__ flexboxgrid.html
 ```
-##文件描述
+##CSS文件描述
 
-src/css/ 下的 adjust.css 是重置表。 box.css 是盒子模型表。color.css 是常用颜色表。common.css 是常用属性表。
-
-flexboxgrid.css 是核心布局样式表。style.css 是公共样式表。dist是编译过的上线版本。
+adjust.css 重置表，box.css 盒模表，color.css 颜色表，common.css 属性表，flexboxgrid.css 布局表，style.css 是公共表。
 
 ##移动端(自适应)开发
 
@@ -42,4 +40,4 @@ flexboxgrid.css 是核心布局样式表。style.css 是公共样式表。dist�
 
 框架配有gulp插件，一键 gulp，或 gulp (插件名)，这里我只说重要的几个插件，具体可以查看 gulpfile.js 里的注释。
 
-gulp-webp (图片转webp) gulp-px3rem (px转rem) gulp-uncss (去除没调用的css) font-spider（去除没引用的中文字体）
+gulp-webp (图片转webp)，gulp-px3rem (px转rem)，gulp-uncss (去除没调用的css)，font-spider（去除没引用的中文字体）
