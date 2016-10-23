@@ -3,22 +3,26 @@
 框架适合移动端 (自适应) 和 PC端 (响应式) 制作。
 
 ```txt
-i-Cut/
-|__ dist/
-|__ src/
-| |__ css/
-| | |__ adjust.css
-| | |__ box.css
-| | |__ color.css
-| | |__ common.css
-| | |__ flexboxgrid.css
-| | |__ style.css
-| |__ adaptive.html
-| |__ flexboxgrid.html
+src/
+|__ css/
+| |__ adjust.css
+| |__ box.css
+| |__ color.css
+| |__ common.css
+| |__ flexboxgrid.css
+| |__ style.css
+|__ adaptive.html
+|__ flexboxgrid.html
 ```
 ##CSS文件描述
 
 adjust.css 重置表，box.css 盒模表，color.css 颜色表，common.css 属性表，flexboxgrid.css 布局表，style.css 是公共表。
+
+##Gulp自动化流程
+
+框架配有gulp插件，一键 gulp，或 gulp (插件名)，这里我只说重要的几个插件，具体可以查看 gulpfile.js 里的注释。
+
+gulp-webp (图片转webp)，gulp-px3rem (px转rem)，gulp-uncss (去除没调用的css)，font-spider（去除没引用的中文字体）
 
 ##移动端(自适应)开发
 
@@ -35,9 +39,3 @@ adjust.css 重置表，box.css 盒模表，color.css 颜色表，common.css 属�
 对于平常用的 Bootstrap 框架的同学一下就能看懂，本框架采用与其一致的命名方式！Demo：src/flexboxgrid.html。
 
 推荐两款插件：[Assistor PS](http://witstudio.net/) 与 [Zeplin](https://zeplin.io/)，最新版的 [PS CC](http://www.adobe.com/products/photoshop.html) 已经集成部分功能。[点击查看 Zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)
-
-##Gulp自动化流程
-
-框架配有gulp插件，一键 gulp，或 gulp (插件名)，这里我只说重要的几个插件，具体可以查看 gulpfile.js 里的注释。
-
-gulp-webp (图片转webp)，gulp-px3rem (px转rem)，gulp-uncss (去除没调用的css)，font-spider（去除没引用的中文字体）
