@@ -13,24 +13,16 @@ i-Cut/
 | | |__ common.css
 | | |__ flexboxgrid.css
 | | |__ style.css
-| |__ font/
-| |__ icon/
-| |__ img/
-| |__ js/
-| |__ sass/
 | |__ adaptive.html
 | |__ flexboxgrid.html
 |__ gulpfile.js
-|__ package.json
-|__ README.md
+
 ```
 ##文件描述
 
 src/css/adjust.css 是重置表。 src/css/box.css 是盒子模型表。src/css/color.css 是常用颜色表。
 
 src/css/common.css 是常用属性表。 src/css/flexboxgrid.css 是核心布局样式表。src/css/style.css 是公共样式表。
-
-src/font、icon、img、sass 分别是字体、矢量图标、图片、预处理文件。src/js/ 下的 js 分别是图片延迟与滑动插件。
 
 ##移动端(自适应)开发
 
