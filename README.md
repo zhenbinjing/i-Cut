@@ -1,6 +1,6 @@
 ﻿##i-Cut
 
-框架适合移动端 (自适应) 和 PC端 (响应式) 制作。
+我切，我切，我切切切... :joy: 框架适合移动端 (自适应) 和 PC端 (响应式) 制作。:sunglasses: :sunglasses: :sunglasses:
 
 ```txt
 src/
