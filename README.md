@@ -20,7 +20,7 @@ adjust.css 重置表，box.css 盒模表，color.css 颜色表，common.css 属�
 
 adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) 的，同时根据自己的需求参考了 [白树](http://www.cnblogs.com/PeunZhang/p/3407453.html) 的资料调整一些 reset css 以及 html 模版。
 
-box.css、color.css、common.css 中的命名都采用了 [Emmet](http://emmet.io/) 中的命名，消化 [universal.css](https://github.com/marmelab/universal.css) 的思想与采用 [open-color.css](https://github.com/yeun/open-color) 的颜色值，其命名是非常通俗易懂、简短易读。
+box.css、color.css、common.css 中的命名都采用 [Emmet](http://emmet.io/) 中的命名，消化 [universal.css](https://github.com/marmelab/universal.css) 的思想与采用 [open-color.css](https://github.com/yeun/open-color) 的颜色值
 
 flexboxgrid.css 是参考了 [flexboxgrid.css](https://github.com/kristoferjoseph/flexboxgrid) 中的思想，其命名则与 [Bootstrap](https://github.com/twbs/bootstrap) 框架中的方式达到一致！也是本框架核心。
 
