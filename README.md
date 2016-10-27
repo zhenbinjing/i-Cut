@@ -18,9 +18,9 @@ src/
 
 adjust.css 重置表，box.css 盒模表，color.css 颜色表，common.css 属性表，flexboxgrid.css 布局表，style.css 是公共表。
 
-adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) 的，同时根据自己的需求参考了 [白树](http://www.cnblogs.com/PeunZhang/p/3407453.html) 的资料重新定制一些 reset css 以及 html 模版。
+adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) 的，同时根据自己的需求参考了 [白树](http://www.cnblogs.com/PeunZhang/p/3407453.html) 的资料调整一些 reset css 以及 html 模版。
 
-box.css、color.css、common.css 中的命名都基于 [Emmet](http://emmet.io/) 中的规则定制的，同时也消化了 [universal.css](https://github.com/marmelab/universal.css) 的思想与借鉴 [open-color.css](https://github.com/yeun/open-color) 中的颜色值，其命名是非常通俗易懂、简短易读。
+box.css、color.css、common.css 中的命名都基于 [Emmet](http://emmet.io/) 中的规则定制的，同时也消化了 [universal.css](https://github.com/marmelab/universal.css) 的思想与借鉴了 [open-color.css](https://github.com/yeun/open-color) 中的颜色值，其命名是非常通俗易懂、简短易读。
 
 flexboxgrid.css 是参考了 [flexboxgrid.css](https://github.com/kristoferjoseph/flexboxgrid) 中的思想，其命名则与 [Bootstrap](https://github.com/twbs/bootstrap) 框架中的方式达到一致。style.css 则是一个公共样式表，是组件与功能性类或特殊类的东西。
 
