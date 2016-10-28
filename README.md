@@ -20,7 +20,7 @@ adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) �
 
 box.css、color.css、common.css 中的命名都采用 [Emmet](http://emmet.io/) 的规范，消化 [universal.css](https://github.com/marmelab/universal.css) 的思想与采用 [open-color.css](https://github.com/yeun/open-color) 的颜色值。
 
-flexboxgrid.css 是参考了 kristoferjoseph 的 [flexboxgrid.css](https://github.com/kristoferjoseph/flexboxgrid) 修改而成，命名与 [Bootstrap](https://github.com/twbs/bootstrap) 框架中的命名一致！也是本框架核心。
+flexboxgrid.css 是参考了 kristoferjoseph 的 [flexboxgrid.css](https://github.com/kristoferjoseph/flexboxgrid) 修改而成，命名与 [Bootstrap](https://github.com/twbs/bootstrap) 框架中的命名一致！是本框架核心。
 
 style.css 是组件、功能性类、特殊类的公共样式表。
 
