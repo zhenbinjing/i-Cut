@@ -9,7 +9,7 @@ src/
 | |__ box.css			盒模表
 | |__ color.css			颜色表
 | |__ common.css		属性表
-| |__ flexboxgrid.css		布局表
+| |__ flexboxgrid.css	布局表
 | |__ style.css			公共表
 |__ adaptive.html
 |__ flexboxgrid.html
