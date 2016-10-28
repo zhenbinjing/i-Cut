@@ -5,26 +5,24 @@
 ```txt
 src/
 |__ css/
-| |__ adjust.css
-| |__ box.css
-| |__ color.css
-| |__ common.css
-| |__ flexboxgrid.css
-| |__ style.css
+| |__ adjust.css		重置表
+| |__ box.css			盒模表
+| |__ color.css			颜色表
+| |__ common.css		属性表
+| |__ flexboxgrid.css		布局表
+| |__ style.css			公共表
 |__ adaptive.html
 |__ flexboxgrid.html
 ```
 ##CSS文件描述
 
-adjust.css 重置表，box.css 盒模表，color.css 颜色表，common.css 属性表，flexboxgrid.css 布局表，style.css 是公共表。
-
 adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) 的，同时根据自己的需求参考了 [白树](http://www.cnblogs.com/PeunZhang/p/3407453.html) 的资料调整一些 reset css 以及 html 模版。
 
-box.css、color.css、common.css 中的命名都采用 [Emmet](http://emmet.io/) 中的命名，消化 [universal.css](https://github.com/marmelab/universal.css) 的思想与采用 [open-color.css](https://github.com/yeun/open-color) 的颜色值
+box.css、color.css、common.css 中的命名都采用 [Emmet](http://emmet.io/) 的规范，消化 [universal.css](https://github.com/marmelab/universal.css) 的思想与采用 [open-color.css](https://github.com/yeun/open-color) 的颜色值。
 
 flexboxgrid.css 是参考了 [flexboxgrid.css](https://github.com/kristoferjoseph/flexboxgrid) 中的思想，其命名则与 [Bootstrap](https://github.com/twbs/bootstrap) 框架中的方式达到一致！也是本框架核心。
 
-style.css 就是一个公共样式表，是组件与功能性类或特殊类的东西。
+style.css 是组件、功能性类、特殊类的公共样式表。
 
 ##移动端(自适应)开发
 
