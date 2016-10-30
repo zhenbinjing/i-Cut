@@ -1,7 +1,4 @@
-﻿/*! 常用宽度*/
-@for $i from 0 through 12 {.w#{$i}{width:100% / 12 * $i;}}
-
-/*! 字体大小*/
+﻿/*! 字体大小*/
 @for $i from 0 through 100 {.fz#{$i}{font-size:$i + px;}}
 
 /*! 行高百分百*/

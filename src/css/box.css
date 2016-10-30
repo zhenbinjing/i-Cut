@@ -1,18 +1,4 @@
-﻿/*! 常用宽度*/
-.w0 { width: 0%; }
-.w1 { width: 8.33333%; }
-.w2 { width: 16.66667%; }
-.w3 { width: 25%; }
-.w4 { width: 33.33333%; }
-.w5 { width: 41.66667%; }
-.w6 { width: 50%; }
-.w7 { width: 58.33333%; }
-.w8 { width: 66.66667%; }
-.w9 { width: 75%; }
-.w10 { width: 83.33333%; }
-.w11 { width: 91.66667%; }
-.w12 { width: 100%; }
-/*! 字体大小*/
+﻿/*! 字体大小*/
 .fz0 { font-size: 0px; }
 .fz1 { font-size: 1px; }
 .fz2 { font-size: 2px; }

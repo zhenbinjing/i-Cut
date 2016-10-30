@@ -15,6 +15,8 @@
 /*! 字体加粗*/
 .fwb { font-weight: bold; }
 .fwn { font-weight: normal; }
+.fwl { font-weight: lighter; }
+.fwbr { font-weight: bolder; }
 /*! 字体斜体*/
 .fsi { font-style: italic; }
 .fsn { font-style: normal; }
@@ -94,6 +96,13 @@
 .bgo-pd { background-origin: padding-box; }
 .bgo-bb { background-origin: border-box; }
 .bgo-cb { background-origin: content-box; }
+/*! 表格*/
+.tbl-a { table-layout: auto; }
+.tbl-f { table-layout: fixed; }
+.cps-t { caption-side: top; }
+.cps-b { caption-side: bottom; }
+.ec-s { empty-cells: show; }
+.ec-h { empty-cells: hide; }
 /*! LI样式 实心 空心 小方块 罗马 字母 数字*/
 .lst-n { list-style-type: none; }
 .lst-d { list-style-type: disc; }
