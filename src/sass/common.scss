@@ -21,11 +21,11 @@ $display:(n:$n, i:inline, b:block, ib:inline-block, t:table, bc:table-cell, tbr:
 
 /*! 字体加粗*/
 $font-weight:(b:bold, n:$nl, l:lighter, br:bolder);
-@each $class , $var in $font-weight {.fw#{$class}{font-weight: $var;}}
+@each $class , $var in $font-weight {.fw-#{$class}{font-weight: $var;}}
 
 /*! 字体斜体*/
 $font-style:(i:italic, n:$nl);
-@each $class , $var in $font-style {.fs#{$class}{font-style: $var;}}
+@each $class , $var in $font-style {.fs-#{$class}{font-style: $var;}}
 
 /*！ 内联定位(上中下)*/
 $vertical-align:(t:$t, m:middle, b:$b, tb:text-bottom, tt:text-top, sp:super, sb:sub);
@@ -33,15 +33,15 @@ $vertical-align:(t:$t, m:middle, b:$b, tb:text-bottom, tt:text-top, sp:super, sb
 
 /*! 字母大小写*/
 $text-transform:(n:$n, c:capitalize, u:uppercase, l:lowercase);
-@each $class , $var in $text-transform {.tt#{$class}{text-transform: $var;}}
+@each $class , $var in $text-transform {.tt-#{$class}{text-transform: $var;}}
 
 /*! 字体划线*/
 $text-decoration:(n:$n, o:overline, l:line-through, u:underline);
-@each $class , $var in $text-decoration {.td#{$class}{text-decoration: $var;}}
+@each $class , $var in $text-decoration {.td-#{$class}{text-decoration: $var;}}
 
 /*! 文字排版*/
 $text-align:(c:$c, l:$l, r:$r, j:justify);
-@each $class , $var in $text-align {.ta#{$class}{text-align: $var;}}
+@each $class , $var in $text-align {.ta-#{$class}{text-align: $var;}}
 
 /*! 文字排版最后一行*/
 @each $class , $var in $text-align {.tal-#{$class}{text-align-last: $var;}}
@@ -58,15 +58,15 @@ $direction:(rtl:rtl, ltr:ltr);
 
 /*! 浮动*/
 $float:(n:$n, l:$l, r:$r);
-@each $class , $var in $float {.f#{$class}{float: $var;}}
+@each $class , $var in $float {.fl-#{$class}{float: $var;}}
 
 /*! 清除浮动*/
 $clear:(n:$n, l:$l, r:$r,b:both);
-@each $class , $var in $clear {.cl#{$class}{clear: $var;}}
+@each $class , $var in $clear {.cl-#{$class}{clear: $var;}}
 
 /*! 定位*/
 $position:(s:static, f:$f, r:relative, a:absolute);
-@each $class , $var in $position {.po#{$class}{position: $var;}}
+@each $class , $var in $position {.pos-#{$class}{position: $var;}}
 
 //------------------------------------------------------------//
 
@@ -118,9 +118,9 @@ $cursor:(p:pointer, t:text, m:move, c:crosshair, h:help, d:default);
 /*! 滚动条*/
 $overflow: (a:$a, v:visible, h:$h, s:scroll);
 @each $class, $var in $overflow {
-.ov#{$class}{overflow: $var;}
-.ov#{$class}-x{overflow-x: $var;}
-.ov#{$class}-y{overflow-y: $var;}
+.ov-#{$class}{overflow: $var;}
+.ovx-#{$class}{overflow-x: $var;}
+.ovy-#{$class}{overflow-y: $var;}
 }
 
 /*! 边框样式 点 虚线 实线 双实线 */

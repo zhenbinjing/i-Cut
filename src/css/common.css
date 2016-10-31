@@ -13,13 +13,13 @@
 .dtbcl { display: table-column; }
 .dtbclg { display: table-column-group; }
 /*! 字体加粗*/
-.fwb { font-weight: bold; }
-.fwn { font-weight: normal; }
-.fwl { font-weight: lighter; }
-.fwbr { font-weight: bolder; }
+.fw-b { font-weight: bold; }
+.fw-n { font-weight: normal; }
+.fw-l { font-weight: lighter; }
+.fw-br { font-weight: bolder; }
 /*! 字体斜体*/
-.fsi { font-style: italic; }
-.fsn { font-style: normal; }
+.fs-i { font-style: italic; }
+.fs-n { font-style: normal; }
 /*！ 内联定位(上中下)*/
 .va-t { vertical-align: top; }
 .va-m { vertical-align: middle; }
@@ -29,20 +29,20 @@
 .va-sp { vertical-align: super; }
 .va-sb { vertical-align: sub; }
 /*! 字母大小写*/
-.ttn { text-transform: none; }
-.ttc { text-transform: capitalize; }
-.ttu { text-transform: uppercase; }
-.ttl { text-transform: lowercase; }
+.tt-n { text-transform: none; }
+.tt-c { text-transform: capitalize; }
+.tt-u { text-transform: uppercase; }
+.tt-l { text-transform: lowercase; }
 /*! 字体划线*/
-.tdn { text-decoration: none; }
-.tdo { text-decoration: overline; }
-.tdl { text-decoration: line-through; }
-.tdu { text-decoration: underline; }
+.td-n { text-decoration: none; }
+.td-o { text-decoration: overline; }
+.td-l { text-decoration: line-through; }
+.td-u { text-decoration: underline; }
 /*! 文字排版*/
-.tac { text-align: center; }
-.tal { text-align: left; }
-.tar { text-align: right; }
-.taj { text-align: justify; }
+.ta-c { text-align: center; }
+.ta-l { text-align: left; }
+.ta-r { text-align: right; }
+.ta-j { text-align: justify; }
 /*! 文字排版最后一行*/
 .tal-c { text-align-last: center; }
 .tal-l { text-align-last: left; }
@@ -56,19 +56,19 @@
 .d-rtl { direction: rtl; }
 .d-ltr { direction: ltr; }
 /*! 浮动*/
-.fn { float: none; }
-.fl { float: left; }
-.fr { float: right; }
+.fl-n { float: none; }
+.fl-l { float: left; }
+.fl-r { float: right; }
 /*! 清除浮动*/
-.cln { clear: none; }
-.cll { clear: left; }
-.clr { clear: right; }
-.clb { clear: both; }
+.cl-n { clear: none; }
+.cl-l { clear: left; }
+.cl-r { clear: right; }
+.cl-b { clear: both; }
 /*! 定位*/
-.pos { position: static; }
-.pof { position: fixed; }
-.por { position: relative; }
-.poa { position: absolute; }
+.pos-s { position: static; }
+.pos-f { position: fixed; }
+.pos-r { position: relative; }
+.pos-a { position: absolute; }
 /*! 背景定位*/
 .bgp-tl { background-position: top left; }
 .bgp-tc { background-position: top center; }
@@ -119,18 +119,18 @@
 .cur-h { cursor: help; }
 .cur-d { cursor: default; }
 /*! 滚动条*/
-.ova { overflow: auto; }
-.ova-x { overflow-x: auto; }
-.ova-y { overflow-y: auto; }
-.ovv { overflow: visible; }
-.ovv-x { overflow-x: visible; }
-.ovv-y { overflow-y: visible; }
-.ovh { overflow: hidden; }
-.ovh-x { overflow-x: hidden; }
-.ovh-y { overflow-y: hidden; }
-.ovs { overflow: scroll; }
-.ovs-x { overflow-x: scroll; }
-.ovs-y { overflow-y: scroll; }
+.ov-a { overflow: auto; }
+.ovx-a { overflow-x: auto; }
+.ovy-a { overflow-y: auto; }
+.ov-v { overflow: visible; }
+.ovx-v { overflow-x: visible; }
+.ovy-v { overflow-y: visible; }
+.ov-h { overflow: hidden; }
+.ovx-h { overflow-x: hidden; }
+.ovy-h { overflow-y: hidden; }
+.ov-s { overflow: scroll; }
+.ovx-s { overflow-x: scroll; }
+.ovy-s { overflow-y: scroll; }
 /*! 边框样式 点 虚线 实线 双实线 */
 .bds-n { border-style: none; }
 .bdts-n { border-top-style: none; }
