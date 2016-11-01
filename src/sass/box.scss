@@ -7,6 +7,12 @@
 /*! 行高px*/
 @for $i from 0 through 100 {.lh#{$i}{line-height:$i + px;}}
 
+/*! 段落缩进*/
+@for $i from 0 through 100 {.ti#{$i}{text-indent:$i + px;}}
+
+/*! 单元格与边框之间的距离*/
+@for $i from 0 through 100 {.bdsp#{$i}{border-spacing:$i + px;}}
+
 /*! 内边距*/
 @for $i from 0 through 100 {
 .p#{$i}{padding:$i + px;}
@@ -26,7 +32,6 @@
 }
 
 /*! 圆角*/
-.round{border-radius:50%;}
 @for $i from 0 through 100 {
 .bdrs#{$i}{border-radius:$i + px;}
 .btrr#{$i}{border-top-right-radius:$i + px;}

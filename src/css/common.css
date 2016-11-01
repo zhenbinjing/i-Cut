@@ -1,17 +1,31 @@
 ﻿/*! 元素可见性*/
-.vh { visibility: hidden; }
-.vv { visibility: visible; }
+.v-h { visibility: hidden; }
+.v-v { visibility: visible; }
 /*! 元素状态*/
-.dn { display: none; }
-.di { display: inline; }
-.db { display: block; }
-.dib { display: inline-block; }
-.dt { display: table; }
-.dbc { display: table-cell; }
-.dtbr { display: table-row; }
-.dtbrg { display: table-row-group; }
-.dtbcl { display: table-column; }
-.dtbclg { display: table-column-group; }
+.d-n { display: none; }
+.d-i { display: inline; }
+.d-b { display: block; }
+.d-ib { display: inline-block; }
+.d-t { display: table; }
+.d-bc { display: table-cell; }
+.d-tbr { display: table-row; }
+.d-tbrg { display: table-row-group; }
+.d-tbcl { display: table-column; }
+.d-tbclg { display: table-column-group; }
+/*! 浮动*/
+.fl-n { float: none; }
+.fl-l { float: left; }
+.fl-r { float: right; }
+/*! 清除浮动*/
+.cl-n { clear: none; }
+.cl-l { clear: left; }
+.cl-r { clear: right; }
+.cl-b { clear: both; }
+/*! 定位*/
+.pos-s { position: static; }
+.pos-f { position: fixed; }
+.pos-r { position: relative; }
+.pos-a { position: absolute; }
 /*! 字体加粗*/
 .fw-b { font-weight: bold; }
 .fw-n { font-weight: normal; }
@@ -52,23 +66,6 @@
 .wm-tb { writing-mode: horizontal-tb; }
 .wm-rl { writing-mode: vertical-rl; }
 .wm-lr { writing-mode: vertical-lr; }
-/*! 内联方向排序(左右)*/
-.d-rtl { direction: rtl; }
-.d-ltr { direction: ltr; }
-/*! 浮动*/
-.fl-n { float: none; }
-.fl-l { float: left; }
-.fl-r { float: right; }
-/*! 清除浮动*/
-.cl-n { clear: none; }
-.cl-l { clear: left; }
-.cl-r { clear: right; }
-.cl-b { clear: both; }
-/*! 定位*/
-.pos-s { position: static; }
-.pos-f { position: fixed; }
-.pos-r { position: relative; }
-.pos-a { position: absolute; }
 /*! 背景定位*/
 .bgp-tl { background-position: top left; }
 .bgp-tc { background-position: top center; }
@@ -118,6 +115,14 @@
 .cur-c { cursor: crosshair; }
 .cur-h { cursor: help; }
 .cur-d { cursor: default; }
+/*! 规定是否可由用户调整元素的尺寸*/
+.rsz-n { resize: none; }
+.rsz-b { resize: both; }
+.rsz-h { resize: horizontal; }
+.rsz-v { resize: vertical; }
+/*! 绘制元素*/
+.bxz-cb { box-sizing: content-box; }
+.bxz-bb { box-sizing: border-box; }
 /*! 滚动条*/
 .ov-a { overflow: auto; }
 .ovx-a { overflow-x: auto; }
@@ -131,6 +136,9 @@
 .ov-s { overflow: scroll; }
 .ovx-s { overflow-x: scroll; }
 .ovy-s { overflow-y: scroll; }
+/*! 合并边框模型*/
+.bdcl-c { border-collapse: collapse; }
+.bdcl-s { border-collapse: separate; }
 /*! 边框样式 点 虚线 实线 双实线 */
 .bds-n { border-style: none; }
 .bdts-n { border-top-style: none; }

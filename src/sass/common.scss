@@ -8,14 +8,31 @@ $n:none;
 $r:right;
 $t:top;
 $nl:normal;
+$bh:both;
+
+//------------------------------------------------------------//
 
 /*! 元素可见性*/
 $visibility:(h:$h, v:visible);
-@each $class , $var in $visibility {.v#{$class}{visibility: $var;}}
+@each $class , $var in $visibility {.v-#{$class}{visibility: $var;}}
 
 /*! 元素状态*/
 $display:(n:$n, i:inline, b:block, ib:inline-block, t:table, bc:table-cell, tbr:table-row, tbrg:table-row-group, tbcl:table-column, tbclg:table-column-group);
-@each $class , $var in $display {.d#{$class}{display: $var;}}
+@each $class , $var in $display {.d-#{$class}{display: $var;}}
+
+//------------------------------------------------------------//
+
+/*! 浮动*/
+$float:(n:$n, l:$l, r:$r);
+@each $class , $var in $float {.fl-#{$class}{float: $var;}}
+
+/*! 清除浮动*/
+$clear:(n:$n, l:$l, r:$r, b:$bh);
+@each $class , $var in $clear {.cl-#{$class}{clear: $var;}}
+
+/*! 定位*/
+$position:(s:static, f:$f, r:relative, a:absolute);
+@each $class , $var in $position {.pos-#{$class}{position: $var;}}
 
 //------------------------------------------------------------//
 
@@ -49,24 +66,6 @@ $text-align:(c:$c, l:$l, r:$r, j:justify);
 /*! 文字书写模式*/
 $writing-mode:(tb:horizontal-tb, rl:vertical-rl, lr:vertical-lr);
 @each $class , $var in $writing-mode {.wm-#{$class}{writing-mode: $var;}}
-
-/*! 内联方向排序(左右)*/
-$direction:(rtl:rtl, ltr:ltr);
-@each $class , $var in $direction {.d-#{$class}{direction: $var;}}
-
-//------------------------------------------------------------//
-
-/*! 浮动*/
-$float:(n:$n, l:$l, r:$r);
-@each $class , $var in $float {.fl-#{$class}{float: $var;}}
-
-/*! 清除浮动*/
-$clear:(n:$n, l:$l, r:$r,b:both);
-@each $class , $var in $clear {.cl-#{$class}{clear: $var;}}
-
-/*! 定位*/
-$position:(s:static, f:$f, r:relative, a:absolute);
-@each $class , $var in $position {.pos-#{$class}{position: $var;}}
 
 //------------------------------------------------------------//
 
@@ -115,6 +114,14 @@ $list-style-type:(n:$n, d:disc, c:circle, s:square, u:upper-roman, l:lower-alpha
 $cursor:(p:pointer, t:text, m:move, c:crosshair, h:help, d:default);
 @each $class , $var in $cursor {.cur-#{$class}{cursor: $var;}}
 
+/*! 规定是否可由用户调整元素的尺寸*/
+$resize:(n:$n, b:$bh, h:horizontal, v:vertical);
+@each $class , $var in $resize {.rsz-#{$class}{resize: $var;}}
+
+/*! 绘制元素*/
+$box-sizing:(cb:content-box, bb:border-box);
+@each $class , $var in $box-sizing {.bxz-#{$class}{box-sizing: $var;}}	
+
 /*! 滚动条*/
 $overflow: (a:$a, v:visible, h:$h, s:scroll);
 @each $class, $var in $overflow {
@@ -122,6 +129,12 @@ $overflow: (a:$a, v:visible, h:$h, s:scroll);
 .ovx-#{$class}{overflow-x: $var;}
 .ovy-#{$class}{overflow-y: $var;}
 }
+
+//------------------------------------------------------------//
+
+/*! 合并边框模型*/
+$border-collapse:(c:collapse, s:separate);
+@each $class , $var in $border-collapse {.bdcl-#{$class}{border-collapse: $var;}}	
 
 /*! 边框样式 点 虚线 实线 双实线 */
 $border-style:(n:$n, dt:dotted, ds:dashed, sl:solid, db:double);
