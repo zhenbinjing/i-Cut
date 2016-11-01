@@ -1,148 +1,112 @@
-$a:auto;
-$b:bottom;
-$c:center;
-$f:fixed;
-$h:hidden;
-$l:left;
-$n:none;
-$r:right;
-$t:top;
-$nl:normal;
-$bh:both;
+/*常用值*/
+$a:auto; $f:fixed; $j:justify; $h:hidden; $n:none; $v:visible; $s:scroll; $nl:normal; $bh:both; $pd:padding-box; $bb:border-box; $cb:content-box;
+/*方向*/
+$b:bottom; $c:center; $l:left; $r:right; $t:top;
+/*边框样式*/
+$dt:dotted; $ds:dashed; $sl:solid; $db:double;
 
 //------------------------------------------------------------//
 
 /*! 元素可见性*/
-$visibility:(h:$h, v:visible);
-@each $class , $var in $visibility {.v-#{$class}{visibility: $var;}}
-
+$vv:(v-h:$h, v-v:$v);
 /*! 元素状态*/
-$display:(n:$n, i:inline, b:block, ib:inline-block, t:table, bc:table-cell, tbr:table-row, tbrg:table-row-group, tbcl:table-column, tbclg:table-column-group);
-@each $class , $var in $display {.d-#{$class}{display: $var;}}
+$dy:(d-n:$n, d-i:inline, d-b:block, d-ib:inline-block, d-t:table, d-bc:table-cell, d-tbr:table-row, d-tbrg:table-row-group, d-tbcl:table-column, d-tbclg:table-column-group);
 
 //------------------------------------------------------------//
 
 /*! 浮动*/
-$float:(n:$n, l:$l, r:$r);
-@each $class , $var in $float {.fl-#{$class}{float: $var;}}
-
+$fl:(fl-n:$n, fl-l:$l, fl-r:$r);
 /*! 清除浮动*/
-$clear:(n:$n, l:$l, r:$r, b:$bh);
-@each $class , $var in $clear {.cl-#{$class}{clear: $var;}}
-
+$cl:(cl-n:$n, cl-l:$l, cl-r:$r, cl-b:$bh);
 /*! 定位*/
-$position:(s:static, f:$f, r:relative, a:absolute);
-@each $class , $var in $position {.pos-#{$class}{position: $var;}}
+$pos:(pos-s:static, pos-f:$f, pos-r:relative, pos-a:absolute);
 
 //------------------------------------------------------------//
 
 /*! 字体加粗*/
-$font-weight:(b:bold, n:$nl, l:lighter, br:bolder);
-@each $class , $var in $font-weight {.fw-#{$class}{font-weight: $var;}}
-
+$fw:(fw-b:bold, fw-n:$nl, fw-l:lighter, fw-br:bolder);
 /*! 字体斜体*/
-$font-style:(i:italic, n:$nl);
-@each $class , $var in $font-style {.fs-#{$class}{font-style: $var;}}
-
+$fs:(fs-i:italic, fs-n:$nl);
 /*！ 内联定位(上中下)*/
-$vertical-align:(t:$t, m:middle, b:$b, tb:text-bottom, tt:text-top, sp:super, sb:sub);
-@each $class , $var in $vertical-align {.va-#{$class}{vertical-align: $var;}}
-
+$va:(va-t:$t, va-m:middle, va-b:$b, va-tb:text-bottom, va-tt:text-top, va-sp:super, va-sb:sub);
 /*! 字母大小写*/
-$text-transform:(n:$n, c:capitalize, u:uppercase, l:lowercase);
-@each $class , $var in $text-transform {.tt-#{$class}{text-transform: $var;}}
-
+$tt:(tt-n:$n, tt-c:capitalize, tt-u:uppercase, tt-l:lowercase);
 /*! 字体划线*/
-$text-decoration:(n:$n, o:overline, l:line-through, u:underline);
-@each $class , $var in $text-decoration {.td-#{$class}{text-decoration: $var;}}
-
+$td:(td-n:$n, tt-o:overline, tt-l:line-through, tt-u:underline);
 /*! 文字排版*/
-$text-align:(c:$c, l:$l, r:$r, j:justify);
-@each $class , $var in $text-align {.ta-#{$class}{text-align: $var;}}
-
+$ta:(ta-c:$c, ta-l:$l, ta-r:$r, ta-j:$j);
 /*! 文字排版最后一行*/
-@each $class , $var in $text-align {.tal-#{$class}{text-align-last: $var;}}
-
+$tal:(tal-c:$c, tal-l:$l, tal-r:$r, tal-j:$j);
 /*! 文字书写模式*/
-$writing-mode:(tb:horizontal-tb, rl:vertical-rl, lr:vertical-lr);
-@each $class , $var in $writing-mode {.wm-#{$class}{writing-mode: $var;}}
+$wm:(wm-tb:horizontal-tb, wm-rl:vertical-rl, wm-lr:vertical-lr);
 
 //------------------------------------------------------------//
 
 /*! 背景定位*/
-$background-position:(tl:$t $l, tc:$t $c, tr:$t $r, cl:$c $l, cc:$c $c, cr:$c $r, bl:$b $l, bc:$b $c, br:$b $r);
-@each $class , $var in $background-position {.bgp-#{$class}{background-position: $var;}}
-
+$bgp:(bgp-tl:$t $l, bgp-tc:$t $c, bgp-tr:$t $r, bgp-cl:$c $l, bgp-cc:$c $c, bgp-cr:$c $r, bgp-bl:$b $l, bgp-bc:$b $c, bgp-br:$b $r);
 /*! 背景铺垫*/
-$background-repeat:(n:no-repeat, x:repeat-x, y:repeat-y);
-@each $class , $var in $background-repeat {.bgr-#{$class}{background-repeat: $var;}}
-
+$bgr:(bgr-n:no-repeat, bgr-x:repeat-x, bgr-y:repeat-y);
 /*! 背景固定*/
-$background-attachment:(bga-f:$f);
-@each $class , $var in $background-attachment {.#{$class}{background-attachment: $var;}}
-
+$bga:(bga-f:$f);
 /*! 背景填充*/
-$background-size:(cv:cover, ct:contain);
-@each $class , $var in $background-size {.bgs-#{$class}{background-size: $var;}}
-
+$bgs:(bgs-cv:cover, bgs-ct:contain);
 /*! 背景色相对于盒子中显示*/
-$background-co:(pd:padding-box, bb:border-box, cb:content-box);
-@each $class , $var in $background-co {.bgc-#{$class}{background-clip: $var;}}
-
+$bgc:(bgc-pd:$pd, bgc-bb:$bb, bgc-cb:$cb);
 /*! 背景图像相对于盒子中定位*/
-@each $class , $var in $background-co {.bgo-#{$class}{background-origin: $var;}}
+$bgo:(bgo-pd:$pd, bgo-bb:$bb, bgo-cb:$cb);
 
 //------------------------------------------------------------//
 
 /*! 表格*/
-$table-layout:(a:$a, f:$f);
-@each $class , $var in $table-layout {.tbl-#{$class}{table-layout: $var;}}
-
-$caption-side:(t:$t, b:$b);
-@each $class , $var in $caption-side {.cps-#{$class}{caption-side: $var;}}
-
-$empty-cells:(s:show, h:hide);
-@each $class , $var in $empty-cells {.ec-#{$class}{empty-cells: $var;}}
+$tbl:(tbl-a:$a, tbl-f:$f);
+$cps:(cps-t:$t, cps-b:$b);
+$ec:(ec-s:show, ec-h:hide);
 
 //------------------------------------------------------------//
 
 /*! LI样式 实心 空心 小方块 罗马 字母 数字*/
-$list-style-type:(n:$n, d:disc, c:circle, s:square, u:upper-roman, l:lower-alpha, dc:decimal);
-@each $class , $var in $list-style-type {.lst-#{$class}{list-style-type: $var;}}
-
+$lst:(lst-n:$n, lst-d:disc, lst-c:circle, lst-s:square, lst-u:upper-roman, lst-l:lower-alpha, lst-dc:decimal);
 /*! 鼠标指针 手指 文字 更多 十字 求助 箭头*/
-$cursor:(p:pointer, t:text, m:move, c:crosshair, h:help, d:default);
-@each $class , $var in $cursor {.cur-#{$class}{cursor: $var;}}
-
+$cur:(cur-p:pointer, cur-t:text, cur-m:move, cur-c:crosshair, cur-h:help, cur-d:default);
 /*! 规定是否可由用户调整元素的尺寸*/
-$resize:(n:$n, b:$bh, h:horizontal, v:vertical);
-@each $class , $var in $resize {.rsz-#{$class}{resize: $var;}}
-
+$rsz:(rsz-n:$n, rsz-b:$bh, rsz-h:horizontal, rsz-v:vertical);
 /*! 绘制元素*/
-$box-sizing:(cb:content-box, bb:border-box);
-@each $class , $var in $box-sizing {.bxz-#{$class}{box-sizing: $var;}}	
-
-/*! 滚动条*/
-$overflow: (a:$a, v:visible, h:$h, s:scroll);
-@each $class, $var in $overflow {
-.ov-#{$class}{overflow: $var;}
-.ovx-#{$class}{overflow-x: $var;}
-.ovy-#{$class}{overflow-y: $var;}
-}
+$bxz:(bxz-cb:$cb, bxz-bb:$bb);
 
 //------------------------------------------------------------//
 
-/*! 合并边框模型*/
-$border-collapse:(c:collapse, s:separate);
-@each $class , $var in $border-collapse {.bdcl-#{$class}{border-collapse: $var;}}	
+/*! 滚动条*/
+$ov: (ov-a:$a, ov-v:$v, ov-h:$h, ov-s:$s);
+$ovx: (ovx-a:$a, ovx-v:$v, ovx-h:$h, ovx-s:$s);
+$ovy: (ovy-a:$a, ovy-v:$v, ovy-h:$h, ovy-s:$s);
 
-/*! 边框样式 点 虚线 实线 双实线 */
-$border-style:(n:$n, dt:dotted, ds:dashed, sl:solid, db:double);
-@each $class , $var in $border-style {
-.bds-#{$class}{border-style: $var;}
-.bdts-#{$class}{border-top-style: $var;}
-.bdrs-#{$class}{border-right-style: $var;}
-.bdbs-#{$class}{border-bottom-style: $var;}
-.bdls-#{$class}{border-left-style: $var;}
-.ols-#{$class}{outline-style: $var;}
+//------------------------------------------------------------//
+
+/* 合并边框模型*/
+$bdcl:(bdcl-c:collapse, bdcl-s:separate);
+/* 边框样式 点 虚线 实线 双实线 */
+$bds:(bds-n:$n, bds-dt:$dt, bds-ds:$ds, bds-sl:$sl, bds-db:$db);
+$bdts:(bdts-n:$n, bdts-dt:$dt, bdts-ds:$ds, bdts-sl:$sl, bdts-db:$db);
+$bdrs:(bdrs-n:$n, bdrs-dt:$dt, bdrs-ds:$ds, bdrs-sl:$sl, bdrs-db:$db);
+$bdbs:(bdbs-n:$n, bdbs-dt:$dt, bdbs-ds:$ds, bdbs-sl:$sl, bdbs-db:$db);
+$bdls:(bdls-n:$n, bdls-dt:$dt, bdls-ds:$ds, bdls-sl:$sl, bdls-db:$db);
+$ols:(ols-n:$n, ols-dt:$dt, ols-ds:$ds, ols-sl:$sl, ols-db:$db);
+
+$css:(
+$vv:visibility, $dy:display,$fl:float, $cl:clear, $pos:position, 
+$fw:font-weight, $fs:font-style, $va:vertical-align, $tt:text-transform, $td:text-decoration, $ta:text-align, $tal:text-align-last, $wm:writing-mode,
+$bgp:background-position, $bgr:background-repeat, $bga:background-attachment, $bgs:background-size, $bgc:background-clip, $bgo:background-origin,
+$tbl:table-layout, $cps:caption-side, $ec:empty-cells,$lst:list-style-type,$cur:cursor,$rsz:resize,$bxz:box-sizing,$ov:overflow, $ovx:overflow-x, $ovy:overflow-y,
+$bdcl:border-collapse, $bds:border-style, $bdts:border-top-style, $bdrs:border-right-style, $bdbs:border-bottom-style, $bdls:border-left-style, $ols:outline-style
+);
+
+@mixin csss ($array, $numer){	
+	@content;		
+	@each $class, $var in $array {				
+		.#{$class}{#{$numer}: $var;}
+	}
+}
+
+@each $array, $numer in $css{
+	@include csss ($array, $numer){}
 }
