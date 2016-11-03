@@ -18,7 +18,7 @@ src/
 
 adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) 的，同时根据自己的需求参考了 [白树](http://www.cnblogs.com/PeunZhang/p/3407453.html) 的资料调整一些 reset css 以及 html 模版。
 
-attr.css、box.css、color.css 是分别消化 [universal.css](https://github.com/marmelab/universal.css)、[open-color.css](https://github.com/yeun/open-color)、[tachyons.css](https://github.com/tachyons-css/tachyons) 而来，其都采用 [Emmet](http://docs.emmet.io/cheat-sheet/) 中的命名。
+attr.css、box.css、color.css 是分别消化 [tachyons.css](https://github.com/tachyons-css/tachyons)、[universal.css](https://github.com/marmelab/universal.css)、[open-color.css](https://github.com/yeun/open-color) 而来，其都采用了 [Emmet](http://docs.emmet.io/cheat-sheet/) 中的命名。
 
 flexboxgrid.css 是参考 kristoferjoseph 的 [flexboxgrid.css](https://github.com/kristoferjoseph/flexboxgrid) 修改而成，命名与 [Bootstrap](https://github.com/twbs/bootstrap) 框架中的命名一致！是本框架的核心。
 
