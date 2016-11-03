@@ -1,4 +1,4 @@
-﻿/*! 字体大小*/
+﻿/*字体大小*/
 .fz0 { font-size: 0px; }
 .fz1 { font-size: 1px; }
 .fz2 { font-size: 2px; }
@@ -100,7 +100,7 @@
 .fz98 { font-size: 98px; }
 .fz99 { font-size: 99px; }
 .fz100 { font-size: 100px; }
-/*! 行高百分百*/
+/*行高百分百*/
 .lh100p { line-height: 100%; }
 .lh110p { line-height: 110%; }
 .lh120p { line-height: 120%; }
@@ -112,7 +112,7 @@
 .lh180p { line-height: 180%; }
 .lh190p { line-height: 190%; }
 .lh200p { line-height: 200%; }
-/*! 行高px*/
+/*行高px*/
 .lh0 { line-height: 0px; }
 .lh1 { line-height: 1px; }
 .lh2 { line-height: 2px; }
@@ -214,7 +214,7 @@
 .lh98 { line-height: 98px; }
 .lh99 { line-height: 99px; }
 .lh100 { line-height: 100px; }
-/*! 段落缩进*/
+/*段落缩进*/
 .ti0 { text-indent: 0px; }
 .ti1 { text-indent: 1px; }
 .ti2 { text-indent: 2px; }
@@ -316,7 +316,7 @@
 .ti98 { text-indent: 98px; }
 .ti99 { text-indent: 99px; }
 .ti100 { text-indent: 100px; }
-/*! 单元格与边框之间的距离*/
+/*单元格与边框之间的距离*/
 .bdsp0 { border-spacing: 0px; }
 .bdsp1 { border-spacing: 1px; }
 .bdsp2 { border-spacing: 2px; }
@@ -418,7 +418,7 @@
 .bdsp98 { border-spacing: 98px; }
 .bdsp99 { border-spacing: 99px; }
 .bdsp100 { border-spacing: 100px; }
-/*! 内边距*/
+/*内边距*/
 .p0 { padding: 0px; }
 .pt0 { padding-top: 0px; }
 .pr0 { padding-right: 0px; }
@@ -924,7 +924,7 @@
 .pr100 { padding-right: 100px; }
 .pb100 { padding-bottom: 100px; }
 .pl100 { padding-left: 100px; }
-/*! 外边距*/
+/*外边距*/
 .m0 { margin: 0px; }
 .mt0 { margin-top: 0px; }
 .mr0 { margin-right: 0px; }
@@ -1430,7 +1430,7 @@
 .mr100 { margin-right: 100px; }
 .mb100 { margin-bottom: 100px; }
 .ml100 { margin-left: 100px; }
-/*! 圆角*/
+/*圆角*/
 .bdrs0 { border-radius: 0px; }
 .btrr0 { border-top-right-radius: 0px; }
 .btlr0 { border-top-left-radius: 0px; }
@@ -1936,7 +1936,7 @@
 .btlr100 { border-top-left-radius: 100px; }
 .bbrr100 { border-bottom-right-radius: 100px; }
 .bblr100 { border-bottom-left-radius: 100px; }
-/*! 边框*/
+/*边框*/
 .bdw0 { border-width: 0px; }
 .bdtw0 { border-top-width: 0px; }
 .bdrw0 { border-right-width: 0px; }
