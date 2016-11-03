@@ -76,15 +76,15 @@ $bxz:(bxz-cb:$cb, bxz-bb:$bb);
 //------------------------------------------------------------//
 
 /*滚动条*/
-$ov: (ov-a:$a, ov-v:$v, ov-h:$h, ov-s:$s);
-$ovx: (ovx-a:$a, ovx-v:$v, ovx-h:$h, ovx-s:$s);
-$ovy: (ovy-a:$a, ovy-v:$v, ovy-h:$h, ovy-s:$s);
+$ov:(ov-a:$a, ov-v:$v, ov-h:$h, ov-s:$s);
+$ovx:(ovx-a:$a, ovx-v:$v, ovx-h:$h, ovx-s:$s);
+$ovy:(ovy-a:$a, ovy-v:$v, ovy-h:$h, ovy-s:$s);
 
 //------------------------------------------------------------//
 
 /*合并边框模型*/
 $bdcl:(bdcl-c:collapse, bdcl-s:separate);
-/*边框样式 点 虚线 实线 双实线 */
+/*边框样式 点 虚线 实线 双实线*/
 $bds:(bds-n:$n, bds-dt:$dt, bds-ds:$ds, bds-sl:$sl, bds-db:$db);
 $bdts:(bdts-n:$n, bdts-dt:$dt, bdts-ds:$ds, bdts-sl:$sl, bdts-db:$db);
 $bdrs:(bdrs-n:$n, bdrs-dt:$dt, bdrs-ds:$ds, bdrs-sl:$sl, bdrs-db:$db);
@@ -93,11 +93,42 @@ $bdls:(bdls-n:$n, bdls-dt:$dt, bdls-ds:$ds, bdls-sl:$sl, bdls-db:$db);
 $ols:(ols-n:$n, ols-dt:$dt, ols-ds:$ds, ols-sl:$sl, ols-db:$db);
 
 $css:(
-$vv:visibility, $dy:display,$fl:float, $cl:clear, $pos:position, 
-$fw:font-weight, $fs:font-style, $va:vertical-align, $tt:text-transform, $td:text-decoration, $ta:text-align, $tal:text-align-last, $wm:writing-mode,
-$bgp:background-position, $bgr:background-repeat, $bga:background-attachment, $bgs:background-size, $bgc:background-clip, $bgo:background-origin,
-$tbl:table-layout, $cps:caption-side, $ec:empty-cells,$lst:list-style-type,$cur:cursor,$rsz:resize,$bxz:box-sizing,$ov:overflow, $ovx:overflow-x, $ovy:overflow-y,
-$bdcl:border-collapse, $bds:border-style, $bdts:border-top-style, $bdrs:border-right-style, $bdbs:border-bottom-style, $bdls:border-left-style, $ols:outline-style
+$vv:visibility,
+$dy:display,
+$fl:float,
+$cl:clear,
+$pos:position, 
+$fw:font-weight,
+$fs:font-style,
+$va:vertical-align,
+$tt:text-transform,
+$td:text-decoration,
+$ta:text-align,
+$tal:text-align-last,
+$wm:writing-mode,
+$bgp:background-position,
+$bgr:background-repeat,
+$bga:background-attachment,
+$bgs:background-size,
+$bgc:background-clip,
+$bgo:background-origin,
+$tbl:table-layout,
+$cps:caption-side,
+$ec:empty-cells,
+$lst:list-style-type,
+$cur:cursor,
+$rsz:resize,
+$bxz:box-sizing,
+$ov:overflow,
+$ovx:overflow-x,
+$ovy:overflow-y,
+$bdcl:border-collapse,
+$bds:border-style,
+$bdts:border-top-style,
+$bdrs:border-right-style,
+$bdbs:border-bottom-style,
+$bdls:border-left-style,
+$ols:outline-style
 );
 
 @mixin csss ($array, $numer){	
