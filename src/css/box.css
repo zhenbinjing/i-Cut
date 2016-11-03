@@ -101,17 +101,17 @@
 .fz99 { font-size: 99px; }
 .fz100 { font-size: 100px; }
 /*! 行高百分百*/
-.lhp100 { line-height: 100%; }
-.lhp110 { line-height: 110%; }
-.lhp120 { line-height: 120%; }
-.lhp130 { line-height: 130%; }
-.lhp140 { line-height: 140%; }
-.lhp150 { line-height: 150%; }
-.lhp160 { line-height: 160%; }
-.lhp170 { line-height: 170%; }
-.lhp180 { line-height: 180%; }
-.lhp190 { line-height: 190%; }
-.lhp200 { line-height: 200%; }
+.lh100p { line-height: 100%; }
+.lh110p { line-height: 110%; }
+.lh120p { line-height: 120%; }
+.lh130p { line-height: 130%; }
+.lh140p { line-height: 140%; }
+.lh150p { line-height: 150%; }
+.lh160p { line-height: 160%; }
+.lh170p { line-height: 170%; }
+.lh180p { line-height: 180%; }
+.lh190p { line-height: 190%; }
+.lh200p { line-height: 200%; }
 /*! 行高px*/
 .lh0 { line-height: 0px; }
 .lh1 { line-height: 1px; }
