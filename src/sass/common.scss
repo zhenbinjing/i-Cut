@@ -1,4 +1,4 @@
-/*常用值*/
+﻿/*常用值*/
 $a:auto; $f:fixed; $j:justify; $h:hidden; $n:none; $v:visible; $s:scroll; $nl:normal; $bh:both; $pd:padding-box; $bb:border-box; $cb:content-box;
 /*方向*/
 $b:bottom; $c:center; $l:left; $r:right; $t:top;
@@ -7,84 +7,84 @@ $dt:dotted; $ds:dashed; $sl:solid; $db:double;
 
 //------------------------------------------------------------//
 
-/*! 元素可见性*/
+/*元素可见性*/
 $vv:(v-h:$h, v-v:$v);
-/*! 元素状态*/
+/*元素状态*/
 $dy:(d-n:$n, d-i:inline, d-b:block, d-ib:inline-block, d-t:table, d-bc:table-cell, d-tbr:table-row, d-tbrg:table-row-group, d-tbcl:table-column, d-tbclg:table-column-group);
 
 //------------------------------------------------------------//
 
-/*! 浮动*/
+/*浮动*/
 $fl:(fl-n:$n, fl-l:$l, fl-r:$r);
-/*! 清除浮动*/
+/*清除浮动*/
 $cl:(cl-n:$n, cl-l:$l, cl-r:$r, cl-b:$bh);
-/*! 定位*/
+/*定位*/
 $pos:(pos-s:static, pos-f:$f, pos-r:relative, pos-a:absolute);
 
 //------------------------------------------------------------//
 
-/*! 字体加粗*/
+/*字体加粗*/
 $fw:(fw-b:bold, fw-n:$nl, fw-l:lighter, fw-br:bolder);
-/*! 字体斜体*/
+/*字体斜体*/
 $fs:(fs-i:italic, fs-n:$nl);
-/*！ 内联定位(上中下)*/
+/*内联定位(上中下)*/
 $va:(va-t:$t, va-m:middle, va-b:$b, va-tb:text-bottom, va-tt:text-top, va-sp:super, va-sb:sub);
-/*! 字母大小写*/
+/*字母大小写*/
 $tt:(tt-n:$n, tt-c:capitalize, tt-u:uppercase, tt-l:lowercase);
-/*! 字体划线*/
+/*字体划线*/
 $td:(td-n:$n, tt-o:overline, tt-l:line-through, tt-u:underline);
-/*! 文字排版*/
+/*文字排版*/
 $ta:(ta-c:$c, ta-l:$l, ta-r:$r, ta-j:$j);
-/*! 文字排版最后一行*/
+/*文字排版最后一行*/
 $tal:(tal-c:$c, tal-l:$l, tal-r:$r, tal-j:$j);
-/*! 文字书写模式*/
+/*文字书写模式*/
 $wm:(wm-tb:horizontal-tb, wm-rl:vertical-rl, wm-lr:vertical-lr);
 
 //------------------------------------------------------------//
 
-/*! 背景定位*/
+/*背景定位*/
 $bgp:(bgp-tl:$t $l, bgp-tc:$t $c, bgp-tr:$t $r, bgp-cl:$c $l, bgp-cc:$c $c, bgp-cr:$c $r, bgp-bl:$b $l, bgp-bc:$b $c, bgp-br:$b $r);
-/*! 背景铺垫*/
+/*背景铺垫*/
 $bgr:(bgr-n:no-repeat, bgr-x:repeat-x, bgr-y:repeat-y);
-/*! 背景固定*/
+/*背景固定*/
 $bga:(bga-f:$f);
-/*! 背景填充*/
+/*背景填充*/
 $bgs:(bgs-cv:cover, bgs-ct:contain);
-/*! 背景色相对于盒子中显示*/
+/*背景色相对于盒子中显示*/
 $bgc:(bgc-pd:$pd, bgc-bb:$bb, bgc-cb:$cb);
-/*! 背景图像相对于盒子中定位*/
+/*背景图像相对于盒子中定位*/
 $bgo:(bgo-pd:$pd, bgo-bb:$bb, bgo-cb:$cb);
 
 //------------------------------------------------------------//
 
-/*! 表格*/
+/*表格*/
 $tbl:(tbl-a:$a, tbl-f:$f);
 $cps:(cps-t:$t, cps-b:$b);
 $ec:(ec-s:show, ec-h:hide);
 
 //------------------------------------------------------------//
 
-/*! LI样式 实心 空心 小方块 罗马 字母 数字*/
+/*LI样式 实心 空心 小方块 罗马 字母 数字*/
 $lst:(lst-n:$n, lst-d:disc, lst-c:circle, lst-s:square, lst-u:upper-roman, lst-l:lower-alpha, lst-dc:decimal);
-/*! 鼠标指针 手指 文字 更多 十字 求助 箭头*/
+/*鼠标指针 手指 文字 更多 十字 求助 箭头*/
 $cur:(cur-p:pointer, cur-t:text, cur-m:move, cur-c:crosshair, cur-h:help, cur-d:default);
-/*! 规定是否可由用户调整元素的尺寸*/
+/*规定是否可由用户调整元素的尺寸*/
 $rsz:(rsz-n:$n, rsz-b:$bh, rsz-h:horizontal, rsz-v:vertical);
-/*! 绘制元素*/
+/*绘制元素*/
 $bxz:(bxz-cb:$cb, bxz-bb:$bb);
 
 //------------------------------------------------------------//
 
-/*! 滚动条*/
+/*滚动条*/
 $ov: (ov-a:$a, ov-v:$v, ov-h:$h, ov-s:$s);
 $ovx: (ovx-a:$a, ovx-v:$v, ovx-h:$h, ovx-s:$s);
 $ovy: (ovy-a:$a, ovy-v:$v, ovy-h:$h, ovy-s:$s);
 
 //------------------------------------------------------------//
 
-/* 合并边框模型*/
+/*合并边框模型*/
 $bdcl:(bdcl-c:collapse, bdcl-s:separate);
-/* 边框样式 点 虚线 实线 双实线 */
+/*边框样式 点 虚线 实线 双实线 */
 $bds:(bds-n:$n, bds-dt:$dt, bds-ds:$ds, bds-sl:$sl, bds-db:$db);
 $bdts:(bdts-n:$n, bdts-dt:$dt, bdts-ds:$ds, bdts-sl:$sl, bdts-db:$db);
 $bdrs:(bdrs-n:$n, bdrs-dt:$dt, bdrs-ds:$ds, bdrs-sl:$sl, bdrs-db:$db);
