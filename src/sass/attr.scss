@@ -87,7 +87,7 @@ $bdcl:(bdcl-c:collapse, bdcl-s:separate);
 /*边框样式 点 虚线 实线 双实线*/
 $bds:(bds-n:$n, bds-dt:$dt, bds-ds:$ds, bds-sl:$sl, bds-db:$db);
 $bdts:(bdts-n:$n, bdts-dt:$dt, bdts-ds:$ds, bdts-sl:$sl, bdts-db:$db);
-$bdrs:(bdrs-n:$n, bdrs-dt:$dt, bdrs-ds:$ds, bdrs-sl:$sl, bdrs-db:$db);
+$bdrt:(bdrt-n:$n, bdrt-dt:$dt, bdrt-ds:$ds, bdrt-sl:$sl, bdrt-db:$db);
 $bdbs:(bdbs-n:$n, bdbs-dt:$dt, bdbs-ds:$ds, bdbs-sl:$sl, bdbs-db:$db);
 $bdls:(bdls-n:$n, bdls-dt:$dt, bdls-ds:$ds, bdls-sl:$sl, bdls-db:$db);
 $ols:(ols-n:$n, ols-dt:$dt, ols-ds:$ds, ols-sl:$sl, ols-db:$db);
@@ -125,7 +125,7 @@ $ovy:overflow-y,
 $bdcl:border-collapse,
 $bds:border-style,
 $bdts:border-top-style,
-$bdrs:border-right-style,
+$bdrt:border-right-style,
 $bdbs:border-bottom-style,
 $bdls:border-left-style,
 $ols:outline-style
