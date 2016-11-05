@@ -47,5 +47,10 @@
 .bdrw#{$i}{border-right-width:$i + px;}
 .bdbw#{$i}{border-bottom-width:$i + px;}
 .bdlw#{$i}{border-left-width:$i + px;}
+}
+
+/*轮廓*/
+@for $i from 0 through 10 {
+.olo#{$i}{outline-offset:$i + px;}
 .olw#{$i}{outline-width:$i + px;}
 }

@@ -3,9 +3,75 @@
 <head>
 <meta charset="utf-8">
 <title>i-Cut</title>
+<meta name="keywords" content="i-Cut" />
+<meta name="description" content="自适应、响应式、像素级、切割CSS" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<script type="text/javascript">
+function resi() {
+	var html = document.querySelector("html");
+	var wW = document.body.clientWidth || document.documentElement.clientWidth;
+	var maxW = 750;   //设置手机设计稿宽度和最小宽度 与css/flexboxgrid.css 中的 container 类的宽度对应。
+	var minW = 320;
+	var htmlfs = 100; //与css/style.css 中的 html 字体大小以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致。
+	if (wW > maxW) wW = maxW;
+	var ratio  = wW / minW;	
+	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
+}
+window.addEventListener("DOMContentLoaded", function() {resi()});
+window.addEventListener("resize", resi);
+</script>
+<!-- build:css css/index.css?v=_VERSION_-->
+<link rel="stylesheet" href="src/css/adjust.css">
+<link rel="stylesheet" href="src/css/attr.css">
+<link rel="stylesheet" href="src/css/box.css">
+<link rel="stylesheet" href="src/css/color.css">
+<link rel="stylesheet" href="src/css/flexboxgrid.css">
+<link rel="stylesheet" href="src/css/style.css">
+<!-- /build -->
 </head>
 
 <body>
-hello
+<div class="container">	
+	<div class="row ta-c fz30 c-white-0">
+		<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>
+		<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>
+		<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>
+		<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>
+		<div class="col-lg-2 col-md-6 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>
+		<div class="col-lg-2 col-md-6 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>												
+	</div>
+	<div class="row ta-c fz30 c-white-0">
+		<div class="col-lg-3 col-sm-4"><div class="bgc-orange-7">3-4-12</div></div>
+		<div class="col-lg-8 col-sm-8 offset-lg-1">
+			<div class="row">
+			<div class="col-xs-3"><div class="bgc-orange-7">3</div></div>
+			<div class="col-xs-9"><div class="bgc-orange-7">9</div></div>
+			</div>
+		</div>
+	</div>
+	<div class="row ta-c fz30 c-white-0 fxd-lg-rr">
+		<div class="grow-xs-1"><div class="bgc-blue-7">1</div></div>
+		<div class="grow-xs-1"><div class="bgc-blue-7">1</div></div>
+		<div class="grow-xs-1"><div class="bgc-blue-7">1</div></div>
+		<div class="grow-xs-1"><div class="bgc-blue-7">1</div></div>
+		<div class="grow-xs-1"><div class="bgc-blue-7">1</div></div>
+	</div>	
+	<div class="row ta-c fz30 c-white-0">
+		<div class="grow-xs-1"><div class="bgc-orange-7">1</div></div>
+		<div class="grow-xs-2"><div class="bgc-orange-7">2</div></div>
+		<div class="grow-xs-3"><div class="bgc-orange-7">3</div></div>
+		<div class="grow-xs-4"><div class="bgc-orange-7">4</div></div>
+		<div class="grow-xs-5"><div class="bgc-orange-7">5</div></div>
+	</div>
+	<div class="row ta-c fz30 c-white-0">
+		<div class="col-lg-4 col-md-6"><div class="bgc-blue-7">a</div></div>
+		<div class="col-lg-4 col-md-12 order-lg-same order-md-first order-xs-last"><div class="bgc-blue-7">b</div></div>
+		<div class="col-lg-4 col-md-6"><div class="bgc-blue-7">c</div></div>
+	</div>
+</div>
 </body>
 </html>

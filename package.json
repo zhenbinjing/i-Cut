@@ -1,7 +1,7 @@
 {
   "name": "i-Cut",
   "version": "1.0.0",
-  "description": "Adaptive, responsive, pixel level reduction PSD design draft!",
+  "description": "Adaptive, responsive, pixel level, cut the CSS",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp"
