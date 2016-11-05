@@ -1992,6 +1992,7 @@
 .bdrw10 { border-right-width: 10px; }
 .bdbw10 { border-bottom-width: 10px; }
 .bdlw10 { border-left-width: 10px; }
+/*轮廓*/
 .olw0 { outline-width: 0px; }
 .olo0 { outline-offset: 0px; }
 .olw1 { outline-width: 1px; }
@@ -2013,4 +2014,4 @@
 .olw9 { outline-width: 9px; }
 .olo9 { outline-offset: 9px; }
 .olw10 { outline-width: 10px; }
-.oloo10 { outline-offset: 10px; }
+.olo10 { outline-offset: 10px; }
