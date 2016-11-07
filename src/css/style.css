@@ -1,11 +1,47 @@
 ﻿/*----------------------------自适应样式----------------------------*/
 
 html { font-size: 100px; /*no*/ }
-.adaptive { max-width:640px; min-width:320px; margin-left:auto; margin-right:auto; }
+.adaptive { max-width:640px; min-width:320px;}
 
 /*-----------------------------常用宽度----------------------------*/
 
-.w0p { width: 0%; }.w25p { width: 25%;}.w50p { width: 50%; }.w75 { width: 75%; }.w100p { width: 100%; }
+.w0p { width: 0%; }
+.w25p { width: 25%; }
+.w50p { width: 50%; }
+.w75p { width: 75%; }
+.w100p { width: 100%; }
+
+/*-----------------------------背景定位----------------------------*/
+
+.bgp_50p0  { background-position: 50% 0; }/*top center*/
+.bgp_100p0 { background-position: 100% 0; }/*right top*/
+.bgp_0p-50p { background-position: 0% -50%; }/*left center*/
+.bgp_0p-100p { background-position: 0% -100%; }/*left bottom*/
+.bgp_50p-50p { background-position: 50% -50%; }/*center center*/
+.bgp_50p-100p { background-position: 50% -100%; }/*bottom center*/
+.bgp_100p-50p { background-position: 100% -50%; }/*right center*/
+.bgp_100p-100p { background-position: 100% -100%; }/*right bottom*/
+
+/*-----------------------------居中----------------------------*/
+
+.trbl { top: 0; right: 0; bottom: 0; left: 0 }
+.mlra { margin-left: auto; margin-right: auto; }
+
+/*-----------------------------边框-----------------------------*/
+
+.bdrs50p{ border-radius: 50%; }
+.bdts-n { border-top-style: none; }
+.bdrt-n { border-right-style: none; }
+.bdbs-n { border-bottom-style: none; }
+.bdls-n { border-left-style: none; }
+
+/*----------------清除浮动，文字截断(单行，多行)--------------*/
+
+.clearfix:after { visibility: hidden; display: block; clear: both; content:" "; font-size: 0; height: 0; }
+.clearfix { *zoom: 1; }
+
+.cut { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cutmore { -webkit-line-clamp: 7; overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-box-orient: vertical; }
 
 /*----------------------------移动组件----------------------------*/
 
@@ -15,19 +51,6 @@ html { font-size: 100px; /*no*/ }
 .focus .hd ul li { display: inline-block; width: 5px;/*no*/ height: 5px;/*no*/ border-radius:5px;/*no*/ background: #ccc; margin: 0 5px;/*no*/  vertical-align: top; overflow: hidden; }
 .focus .hd ul .on { background: #e75223; }
 .focus .bd { position: relative; z-index: 0; }
-
-/*----------------排版解决方案，略号文字截断(单行，多行)--------------*/
-
-.cut { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.cutmore { -webkit-line-clamp: 7; overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-box-orient: vertical; }
-
-.clearfix:after  { visibility: hidden; display: block; clear: both; content:" "; font-size: 0; height: 0; }
-.clearfix { *zoom: 1; }
-
-.trbl { top: 0; right: 0; bottom: 0; left: 0 }
-.mlra { margin-left: auto; margin-right: auto; }
-
-.round{border-radius:50%;}
 
 /*-----------------------------字体-----------------------------*/
 
@@ -57,32 +80,3 @@ html { font-size: 100px; /*no*/ }
   -webkit-font-smoothing: antialiased;	
   -moz-osx-font-smoothing: grayscale;
  }
-
-/*-----------------------------图片----------------------------*/
-
-/*边框图片*/
-.bdi { border-image: url(); }
-
-/*背景图片*/
-.bgi { background-image: url(); }
-
-/*列表图片*/
-.lisi { list-style-image: url(); }
-
-/*-----------------------------投影----------------------------*/
-
-/*字体投影*/
-.tsh { text-shadow: hoff voff blur #000; }
-
-/*模块投影*/
-.bxsh { box-shadow: inset hoff voff blur spread rgba(0, 0, 0, .5); } /*内外（inset outset） 水平 垂直 模糊距离 阴影尺寸 颜色（#）*/
-
-/*-----------------------------渐变---------------------------*/
-
-/*径向渐变*/
-.bglg { background: linear-gradient(45deg,#fb3,#F40004 ); }
-.bgrg { background: radial-gradient(circle, #f00, #ff0, #080); }
-
-/*重复径向渐变*/
-.bg-rlg { background: repeating-linear-gradient(45deg,#fb3, #fb3 15px,#58a 0,#58a 30px); }
-.bg-rrg { background: repeating-radial-gradient(circle, #f00 0, #ff0 10%, #f00 15%); }

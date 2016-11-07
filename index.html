@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>i-Cut</title>
-<meta name="keywords" content="i-Cut" />
-<meta name="description" content="自适应、响应式、像素级、切割CSS" />
+<meta name="keywords" content="自适应_响应式_像素级_切割CSS" />
+<meta name="description" content="一个记得更少，做的更多的CSS框架!" />
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -36,6 +36,7 @@ window.addEventListener("resize", resi);
 .fz0{font-size: 0;}
 .fz16{font-size: .16rem;}
 .fz20{font-size: .2rem;}
+.fz22{font-size: .22rem;}
 .fz30{font-size: .3rem;}
 .fz40{font-size: .4rem;}
 .fz50{font-size: .5rem;}
@@ -52,7 +53,10 @@ window.addEventListener("resize", resi);
 .lh40{line-height: .4rem;}
 .w250{width: 2.5rem;}
 .pl10{padding-left: .1rem;}
-.pr10{padding-right: .1rem;}
+@media only screen and (min-width: 751px) {
+	.fz16-sm{font-size: .16rem;}
+	.fz20-sm{font-size: .2rem;}
+}
 </style>
 </head>
 
@@ -63,68 +67,654 @@ window.addEventListener("resize", resi);
 		<div class="col-xs-12 fz100 mt100">i-Cut</div>
 		<div class="col-xs-12 fz30 mt30 mb30">一个记得更少，做的更多的CSS框架</div>
 		<div class="col-xs-12 fz0  ta-c">
-			<div class="d-ib w250 fz30 lh64 mr100 bdrs10 bdw1 bds-sl bdc-blue-7"><a href="https://github.com/zhenbinjing/i-Cut/archive/master.zip" target="_blank" class="c-blue-7">Download</a></div>
-			<div class="d-ib w250 fz30 lh64 bdrs10 bdw1 bds-sl bdc-blue-7"><a href="https://github.com/zhenbinjing/i-Cut" target="_blank" class="c-blue-7">Github</a></div>
+			<div class="d-ib w250 fz30 lh64 mr100 bdrs10 bd_1-solid bdc-blue-7"><a href="https://github.com/zhenbinjing/i-Cut/archive/master.zip" target="_blank" class="c-blue-7">Download</a></div>
+			<div class="d-ib w250 fz30 lh64 bdrs10 bd_1-solid bdc-blue-7"><a href="https://github.com/zhenbinjing/i-Cut" target="_blank" class="c-blue-7">Github</a></div>
 		</div>
 	</div>
 </div>
 
-<div class="bgc-gray-1 mt100">
+<div class="mt100 bgc-gray-1">
 <div class="container">	
-	<div class="row">
-	
+	<div class="row">	
 		<div class="col-xs-12 fz50 mt30">attr.css</div>
-		<div class="col-xs-12 fz16 lh40 bdbw1 bdbs-sl bdc-gray-4">基于Emmet命名的css属性简单易懂，同时也方便转换。</div>
+		<div class="col-xs-12 fz20 fz16-sm lh40 bdb_1-solid bdc-gray-4">基于Emmet命名的css属性简单易懂，同时也方便转换。</div>
 			
 		<div class="col-xs-12">
-		<div class="row fz16">		
-		<div class="col-xs-12 fz20 mt20 mb20 c-blue-7">visibility</div>
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mt20 mb20 c-blue-7">visibility</div>
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.v-h</span> {visibility: hidden;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.v-h</span> {visibility: hidden;}</code></pre>
 			</div>			
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.v-v</span> {visibility: visible;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.v-v</span> {visibility: visible;}</code></pre>
 			</div>
 		</div>			
 		</div>
 		
 		<div class="col-xs-12">
-		<div class="row fz16">		
-		<div class="col-xs-12 fz20 mb20 c-blue-7">display</div>	
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">display</div>	
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-n</span> {display: none;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-n</span> {display: none;}</code></pre>
 			</div>			
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-i</span> {display: inline;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-i</span> {display: inline;}</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-b</span> {display: block;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-b</span> {display: block;}</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-ib</span> {display: inline-block;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-ib</span> {display: inline-block;}</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-t</span> {display: table;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-t</span> {display: table;}</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-bc</span> {display: table-cell;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-bc</span> {display: table-cell;}</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbr</span> {display: table-row;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbr</span> {display: table-row;}</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbrg</span> {display: table-row-group;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbrg</span> {display: table-row-group;}</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbcl</span> {display: table-column;}</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbcl</span> {display: table-column;}</code></pre>
 			</div>
-			<div class="col-sm-6">
-			<pre class="pl10 pr10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbclg</span> {display: table-column-group;}</code></pre>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbclg</span> {display: table-column-group;}</code></pre>
 			</div>																					
 			</div>
 		</div>
 		
-	</div>
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">float</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fl-n</span> {float: none;}</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fl-l</span> {float: left;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fl-r</span> {float: right;}</code></pre>
+			</div>																						
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">clear</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cl-n</span> {clear: none; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cl-l</span> {clear: left;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cl-r</span> {clear: right;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cl-r</span> {clear: right;}</code></pre>
+			</div>																									
+			</div>
+		</div>	
+			
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">position</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.pos-s</span> {position: static; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.pos-f</span> {position: fixed;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.pos-r</span> {position: relative;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.pos-a</span> {position: absolute;}</code></pre>
+			</div>																									
+			</div>
+		</div>	
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">font-weight</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fw-b</span> {font-weight: bold; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fw-n</span> {font-weight: normal;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fw-l</span> {font-weight: lighter;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fw-br</span> {font-weight: bolder;}</code></pre>
+			</div>																									
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">font-style</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fs-i</span> {font-style: italic; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fs-n</span> {font-style: normal;}</code></pre>
+			</div>																											
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">vertical-align</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.va-t</span> {vertical-align: top; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.va-m</span> {vertical-align: middle;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.va-b</span> {vertical-align: bottom;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.va-tb</span> {vertical-align: text-bottom;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.va-tt</span> {vertical-align: text-top;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.va-sp</span> {vertical-align: super;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.va-sb</span> {vertical-align: sub;}</code></pre>
+			</div>																														
+			</div>
+		</div>			
+			
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">text-transform</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tt-n</span> {text-transform: none; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tt-c</span> {text-transform: capitalize;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tt-u</span> {text-transform: uppercase;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tt-l</span> {text-transform: lowercase;}</code></pre>
+			</div>																												
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">text-align</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ta-c</span> {text-align: center; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ta-l</span> {text-align: left;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ta-r</span> {text-align: right;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ta-j</span> {text-align: justify;}</code></pre>
+			</div>																												
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">text-align-last</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tal-c</span> {text-align-last: center; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tal-l</span> {text-align-last: left;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tal-r</span> {text-align-last: right;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tal-j</span> {text-align-last: justify;}</code></pre>
+			</div>																												
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">background-repeat</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgr-n</span> {background-repeat: no-repeat; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgr-x</span> {background-repeat: repeat-x;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgr-y</span> {background-repeat: repeat-y;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgr-r</span> {background-repeat: round;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgr-s</span> {background-repeat: space;}</code></pre>
+			</div>																															
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">background-attachment</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bga-f</span> {background-attachment: fixed; }</code></pre>
+			</div>	
+		</div>
+		</div>	
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">background-size</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgs-cv</span> {background-size: cover; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgs-ct</span> {background-size: contain; }</code></pre>
+			</div>																														
+			</div>
+		</div>
+
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">background-clip</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-pd</span> {background-clip: padding-box; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-bb</span> {background-clip: border-box; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-cb</span> {background-clip: content-box; }</code></pre>
+			</div>																																	
+			</div>
+		</div>	
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">background-origin</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgo-pd</span> {background-origin: padding-box; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgo-bb</span> {background-origin: border-box; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgo-cb</span> {background-origin: content-box; }</code></pre>
+			</div>																																	
+			</div>
+		</div>				
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">table-layout</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tbl-a</span> {table-layout: auto; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tbl-f</span> {table-layout: fixed; }</code></pre>
+			</div>																														
+			</div>			
+		</div>
+							
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">caption-side</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cps-t</span> {caption-side: top; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cps-b</span> {caption-side: bottom; }</code></pre>
+			</div>																														
+			</div>			
+		</div>
+
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">empty-cells</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ec-s</span> {empty-cells: show; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ec-h</span> {empty-cells: hide; }</code></pre>
+			</div>																														
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">list-style-type</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.lst-n</span> {list-style-type: none; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.lst-d</span> {list-style-type: disc; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.lst-c</span> {list-style-type: circle; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.lst-s</span> {list-style-type: square; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.lst-u</span> {list-style-type: upper-roman; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.lst-l</span> {list-style-type: lower-alpha; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.lst-dc</span> {list-style-type: decimal; }</code></pre>
+			</div>																																													
+			</div>			
+		</div>
+
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">cursor</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cur-p</span> {cursor: pointer; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cur-t</span> {cursor: text; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cur-m</span> {cursor: move; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cur-c</span> {cursor: crosshair; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cur-h</span> {cursor: help; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cur-d</span> {cursor: default; }</code></pre>
+			</div>																																										
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">resize</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.rsz-n</span> {resize: none; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.rsz-b</span> {resize: both; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.rsz-h</span> {resize: horizontal; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.rsz-v</span> {resize: vertical; }</code></pre>
+			</div>																																									
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">box-sizing</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bxz-cb</span> {box-sizing: content-box; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bxz-bb</span> {box-sizing: border-box; }</code></pre>
+			</div>																																										
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">overflow</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ov-a</span> {overflow: auto; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ov-v</span> {overflow: visible; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ov-h</span> {overflow: hidden; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ov-s</span> {overflow: scroll; }</code></pre>
+			</div>																																														
+			</div>			
+		</div>																																																
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">overflow-x</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ovx-a</span> {overflow-x: auto; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ovx-v</span> {overflow-x: visible; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ovx-h</span> {overflow-x: hidden; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ovx-s</span> {overflow-x: scroll; }</code></pre>
+			</div>																																														
+			</div>			
+		</div>		
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">overflow-y</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ovy-a</span> {overflow-y: auto; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ovy-v</span> {overflow-y: visible; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ovy-h</span> {overflow-y: hidden; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ovy-s</span> {overflow-y: scroll; }</code></pre>
+			</div>																																														
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">border-collapse</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdcl-c</span> {border-collapse: collapse; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdcl-s</span> {border-collapse: separate; }</code></pre>
+			</div>																																														
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">outline-style</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ols-n</span> {outline-style: none; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ols-dt</span> {outline-style: dotted; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ols-ds</span> {outline-style: dashed; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ols-sl</span> {outline-style: solid; }</code></pre>
+			</div>																																														<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ols-db</span> {outline-style: double; }</code></pre>
+			</div>						
+			</div>			
+		</div>
+		
+		<div class="col-xs-12 fz50 mt30">box.css</div>
+		<div class="col-xs-12 fz20 fz16-sm lh40 mb20 bdb_1-solid bdc-gray-4">基于Emmet命名的css属性连接数字，方便省心。Emmet默认的单位是px，其它单位为 p → %、e → em、x → ex</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">font-size、line-height、text-indent、border-spacing(0-100)</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fz1</span> {font-size: 0px; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.lh2</span> {line-height: 1px; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ti3</span> {text-indent: 2px; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdsp4</span> {border-spacing: 3px; }</code></pre>
+			</div>
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">padding、padding-top、padding-right、padding-bottom、padding-left(0-100)</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.p0</span> {padding: 0px; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.pt1</span> {padding-top: 1px; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.pr2</span> {padding-right: 2px; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.pb3</span> {padding-bottom: 3px; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.pl4</span> {padding-left: 4px; }</code></pre>
+			</div>
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">border-radius、border-top-right-radius、border-top-left-radius、border-bottom-right-radius、border-bottom-left-radius(0-100)</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdrs0</span> {border-radius: 0px; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.btrr1</span> {border-top-right-radius: 1px; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.btlr2</span> {border-top-left-radius: 2px; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bbrr3</span> {border-bottom-right-radius: 3px; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bblr4</span> {border-bottom-left-radius: 4px; }</code></pre>
+			</div>
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">margin、margin-top、margin-right、margin-bottom、margin-left(0-100)</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.m1</span> {margin: 0px; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.mt2</span> {margin-top: 1px; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.mr3</span> {margin-right: 2px; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.mb4</span> {margin-bottom: 3px; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ml4</span> {margin-left: 4px; }</code></pre>
+			</div>
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">outline-offset、outline-width(0-10)</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olo</span> {outline-offset: 0px; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olw</span> {outline-width: 1px; }</code></pre>
+			</div>	
+			</div>			
+		</div>	
+							
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">border-width & border-style_(1-10px)-(dotted, dashed, solid, double)</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bd_1-dotted</span> {border: 1px dotted; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdt_2-dashed</span> {border-top: 2px dashed; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdr_3-solid</span> {border-right: 3px solid; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdb_4-double</span> {border-bottom: 4px double; }</code></pre>
+			</div>
+			</div>			
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz20 fz16-sm">		
+		<div class="col-xs-12 fz20 fz22-sm mb20 c-blue-7">line-height(100-110-120...200%)、width(0-25-50-75-100%)、background-position(常用数值%)</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.lh100p</span> {line-height: 100%; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.w50p</span> {width: 50%; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgp_50p0</span> {background-position: 50% 0; }</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgp_100p0</span> {background-position: 100% 0; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgp_0p-50p</span> {background-position: 0% -50%; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgp_0p-100p</span> {background-position: 0% -100%; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgp_50p-50p</span> {background-position: 50% -50%; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgp_50p-100p</span> {background-position: 50% -100%; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgp_100p-50p</span> {background-position: 100% -50%; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgp_100p-100p</span> {background-position: 100% -100%; }</code></pre>
+			</div>
+			</div>			
+		</div>
+		
+			
+</div>
 </div>
 </div>
 </body>

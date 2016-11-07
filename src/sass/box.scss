@@ -40,17 +40,27 @@
 .bblr#{$i}{border-bottom-left-radius:$i + px;}
 }
 
-/*边框*/
-@for $i from 0 through 10 {
-.bdw#{$i}{border-width:$i + px;}
-.bdtw#{$i}{border-top-width:$i + px;}
-.bdrw#{$i}{border-right-width:$i + px;}
-.bdbw#{$i}{border-bottom-width:$i + px;}
-.bdlw#{$i}{border-left-width:$i + px;}
-}
-
 /*轮廓*/
-@for $i from 0 through 10 {
+@for $i from 0 through 10 {	
 .olo#{$i}{outline-offset:$i + px;}
 .olw#{$i}{outline-width:$i + px;}
 }
+
+/*边框： 点 虚线 实线 双实线*/
+$border:dotted, dashed, solid, double;
+@mixin border ($xx1){	
+	@content;		
+	@for $i from 1 through 10 {	
+	.bd_#{$i}-#{$xx1}{border:$i + px #{$xx1};}
+	.bdt_#{$i}-#{$xx1}{border-top:$i + px #{$xx1};}
+	.bdr_#{$i}-#{$xx1}{border-right:$i + px #{$xx1};}
+	.bdb_#{$i}-#{$xx1}{border-bottom:$i + px #{$xx1};}
+	.bdl_#{$i}-#{$xx1}{border-left:$i + px #{$xx1};}
+	}
+}
+
+@each $xx1 in $border{
+	@include border ($xx1){}
+}
+
+

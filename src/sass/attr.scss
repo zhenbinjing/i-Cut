@@ -3,7 +3,7 @@ $a:auto; $f:fixed; $j:justify; $h:hidden; $n:none; $v:visible; $s:scroll; $nl:no
 /*方向*/
 $b:bottom; $c:center; $l:left; $r:right; $t:top;
 /*边框样式*/
-$dt:dotted; $ds:dashed; $sl:solid; $db:double;
+$dt:dotted; $ds:dashed; $sl:solid; $du:double;
 
 //------------------------------------------------------------//
 
@@ -37,15 +37,11 @@ $td:(td-n:$n, tt-o:overline, tt-l:line-through, tt-u:underline);
 $ta:(ta-c:$c, ta-l:$l, ta-r:$r, ta-j:$j);
 /*文字排版最后一行*/
 $tal:(tal-c:$c, tal-l:$l, tal-r:$r, tal-j:$j);
-/*文字书写模式*/
-$wm:(wm-tb:horizontal-tb, wm-rl:vertical-rl, wm-lr:vertical-lr);
 
 //------------------------------------------------------------//
 
-/*背景定位*/
-$bgp:(bgp-tl:$t $l, bgp-tc:$t $c, bgp-tr:$t $r, bgp-cl:$c $l, bgp-cc:$c $c, bgp-cr:$c $r, bgp-bl:$b $l, bgp-bc:$b $c, bgp-br:$b $r);
 /*背景铺垫*/
-$bgr:(bgr-n:no-repeat, bgr-x:repeat-x, bgr-y:repeat-y);
+$bgr:(bgr-n:no-repeat, bgr-x:repeat-x, bgr-y:repeat-y, bgr-r:round, bgr-s:space);
 /*背景固定*/
 $bga:(bga-f:$f);
 /*背景填充*/
@@ -84,13 +80,8 @@ $ovy:(ovy-a:$a, ovy-v:$v, ovy-h:$h, ovy-s:$s);
 
 /*合并边框模型*/
 $bdcl:(bdcl-c:collapse, bdcl-s:separate);
-/*边框样式 点 虚线 实线 双实线*/
-$bds:(bds-n:$n, bds-dt:$dt, bds-ds:$ds, bds-sl:$sl, bds-db:$db);
-$bdts:(bdts-n:$n, bdts-dt:$dt, bdts-ds:$ds, bdts-sl:$sl, bdts-db:$db);
-$bdrt:(bdrt-n:$n, bdrt-dt:$dt, bdrt-ds:$ds, bdrt-sl:$sl, bdrt-db:$db);
-$bdbs:(bdbs-n:$n, bdbs-dt:$dt, bdbs-ds:$ds, bdbs-sl:$sl, bdbs-db:$db);
-$bdls:(bdls-n:$n, bdls-dt:$dt, bdls-ds:$ds, bdls-sl:$sl, bdls-db:$db);
-$ols:(ols-n:$n, ols-dt:$dt, ols-ds:$ds, ols-sl:$sl, ols-db:$db);
+/*轮廓*/
+$ols:(ols-n:$n, ols-dt:$dt, ols-ds:$ds, ols-sl:$sl, ols-du:$du);
 
 $css:(
 $vv:visibility,
@@ -105,8 +96,6 @@ $tt:text-transform,
 $td:text-decoration,
 $ta:text-align,
 $tal:text-align-last,
-$wm:writing-mode,
-$bgp:background-position,
 $bgr:background-repeat,
 $bga:background-attachment,
 $bgs:background-size,
@@ -123,11 +112,6 @@ $ov:overflow,
 $ovx:overflow-x,
 $ovy:overflow-y,
 $bdcl:border-collapse,
-$bds:border-style,
-$bdts:border-top-style,
-$bdrt:border-right-style,
-$bdbs:border-bottom-style,
-$bdls:border-left-style,
 $ols:outline-style
 );
 
