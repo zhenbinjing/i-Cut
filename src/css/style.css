@@ -3,37 +3,10 @@
 html { font-size: 100px; /*no*/ }
 .adaptive { max-width:640px; min-width:320px;}
 
-/*-----------------------------常用宽度----------------------------*/
-
-.w0p { width: 0%; }
-.w25p { width: 25%; }
-.w50p { width: 50%; }
-.w75p { width: 75%; }
-.w100p { width: 100%; }
-
-/*-----------------------------背景定位----------------------------*/
-
-.bgp_50p0  { background-position: 50% 0; }/*top center*/
-.bgp_100p0 { background-position: 100% 0; }/*right top*/
-.bgp_0p-50p { background-position: 0% -50%; }/*left center*/
-.bgp_0p-100p { background-position: 0% -100%; }/*left bottom*/
-.bgp_50p-50p { background-position: 50% -50%; }/*center center*/
-.bgp_50p-100p { background-position: 50% -100%; }/*bottom center*/
-.bgp_100p-50p { background-position: 100% -50%; }/*right center*/
-.bgp_100p-100p { background-position: 100% -100%; }/*right bottom*/
-
 /*-----------------------------居中----------------------------*/
 
 .trbl { top: 0; right: 0; bottom: 0; left: 0 }
 .mlra { margin-left: auto; margin-right: auto; }
-
-/*-----------------------------边框-----------------------------*/
-
-.bdrs50p{ border-radius: 50%; }
-.bdts-n { border-top-style: none; }
-.bdrt-n { border-right-style: none; }
-.bdbs-n { border-bottom-style: none; }
-.bdls-n { border-left-style: none; }
 
 /*----------------清除浮动，文字截断(单行，多行)--------------*/
 

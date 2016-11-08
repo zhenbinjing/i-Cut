@@ -100,18 +100,6 @@
 .fz98 { font-size: 98px; }
 .fz99 { font-size: 99px; }
 .fz100 { font-size: 100px; }
-/*行高百分百*/
-.lh100p { line-height: 100%; }
-.lh110p { line-height: 110%; }
-.lh120p { line-height: 120%; }
-.lh130p { line-height: 130%; }
-.lh140p { line-height: 140%; }
-.lh150p { line-height: 150%; }
-.lh160p { line-height: 160%; }
-.lh170p { line-height: 170%; }
-.lh180p { line-height: 180%; }
-.lh190p { line-height: 190%; }
-.lh200p { line-height: 200%; }
 /*行高px*/
 .lh0 { line-height: 0px; }
 .lh1 { line-height: 1px; }
@@ -2160,3 +2148,30 @@
 .bdr_10-double { border-right: 10px double; }
 .bdb_10-double { border-bottom: 10px double; }
 .bdl_10-double { border-left: 10px double; }
+/*行高百分百*/
+.lh100p { line-height: 100%; }
+.lh110p { line-height: 110%; }
+.lh120p { line-height: 120%; }
+.lh130p { line-height: 130%; }
+.lh140p { line-height: 140%; }
+.lh150p { line-height: 150%; }
+.lh160p { line-height: 160%; }
+.lh170p { line-height: 170%; }
+.lh180p { line-height: 180%; }
+.lh190p { line-height: 190%; }
+.lh200p { line-height: 200%; }
+/*常用宽度*/
+.w0p { width: 0%; }
+.w25p { width: 25%; }
+.w50p { width: 50%; }
+.w75p { width: 75%; }
+.w100p { width: 100%; }
+/*背景定位*/
+.bgp_50p0  { background-position: 50% 0; }/*top center*/
+.bgp_100p0 { background-position: 100% 0; }/*right top*/
+.bgp_0p-50p { background-position: 0% -50%; }/*left center*/
+.bgp_0p-100p { background-position: 0% -100%; }/*left bottom*/
+.bgp_50p-50p { background-position: 50% -50%; }/*center center*/
+.bgp_50p-100p { background-position: 50% -100%; }/*bottom center*/
+.bgp_100p-50p { background-position: 100% -50%; }/*right center*/
+.bgp_100p-100p { background-position: 100% -100%; }/*right bottom*/

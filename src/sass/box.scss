@@ -1,10 +1,7 @@
 ﻿/*字体大小*/
 @for $i from 0 through 100 {.fz#{$i}{font-size:$i + px;}}
 
-/*行高百分百*/
-@for $i from 10 through 20 {.lh#{$i*10}p{line-height: $i*10 + %;}}
-
-/*行高px*/
+/*行高*/
 @for $i from 0 through 100 {.lh#{$i}{line-height:$i + px;}}
 
 /*段落缩进*/
@@ -58,9 +55,21 @@ $border:dotted, dashed, solid, double;
 	.bdl_#{$i}-#{$xx1}{border-left:$i + px #{$xx1};}
 	}
 }
+@each $xx1 in $border{@include border ($xx1){}}
 
-@each $xx1 in $border{
-	@include border ($xx1){}
-}
+/*行高百分百*/
+@for $i from 10 through 20 {.lh#{$i*10}p{line-height: $i*10 + %;}}
 
+$nb0:0; $nb25:25%; $nb50:50%; $nb75:75%; $nb100:100%;
 
+/*宽度*/
+.w0p{width:$nb0;}.w25p{width:$nb25;}.w50p{width:$nb50;}.w75p{width:$nb75;}.w100p{width:$nb100;}
+/*背景定位*/
+.bgp_50p0  { background-position: $nb50 $nb0; }/*top center*/
+.bgp_100p0 { background-position: $nb100 $nb0; }/*right top*/
+.bgp_0p-50p { background-position: $nb0 #{-$nb50;} }/*left center*/
+.bgp_0p-100p { background-position: $nb0 #{-$nb100;} }/*left bottom*/
+.bgp_50p-50p { background-position: $nb50 #{-$nb50;} }/*center center*/
+.bgp_50p-100p { background-position: $nb50 #{-$nb100;} }/*bottom center*/
+.bgp_100p-50p { background-position: $nb100 #{-$nb50;} }/*right center*/
+.bgp_100p-100p { background-position: $nb100 #{-$nb100;} }/*right bottom*/

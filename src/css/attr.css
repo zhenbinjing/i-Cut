@@ -134,3 +134,9 @@
 .ols-ds { outline-style: dashed; }
 .ols-sl { outline-style: solid; }
 .ols-du { outline-style: double; }
+/*边框*/
+.bd-n { border: none;}
+.bdt-n { border-top: none; }
+.bdr-n { border-right: none; }
+.bdb-n { border-bottom: none; }
+.bdl-n { border-left: none; }
