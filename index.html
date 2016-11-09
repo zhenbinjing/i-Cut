@@ -24,14 +24,12 @@ function resi() {
 window.addEventListener("DOMContentLoaded", function() {resi()});
 window.addEventListener("resize", resi);
 </script>
-<!-- build:css css/index.css?v=_VERSION_-->
 <link rel="stylesheet" href="src/css/adjust.css">
 <link rel="stylesheet" href="src/css/attr.css">
 <link rel="stylesheet" href="src/css/box.css">
 <link rel="stylesheet" href="src/css/color.css">
 <link rel="stylesheet" href="src/css/flexboxgrid.css">
 <link rel="stylesheet" href="src/css/style.css">
-<!-- /build -->
 <style>
 .fz0{font-size: 0;}
 .fz16{font-size: .16rem;}
@@ -50,8 +48,18 @@ window.addEventListener("resize", resi);
 .bdrs10{border-radius: .1rem;}
 .lh64{line-height: .64rem;}
 .lh40{line-height: .4rem;}
+.lh100{line-height: 1rem;}
 .w250{width: 2.5rem;}
+.h100{height: 1rem;}
+.h150{height: 1.5rem;}
+.h300{height: 3rem;}
+.h500{height: 5rem;}	
 .pl10{padding-left: .1rem;}
+.pr10{padding-right: .1rem;}
+.pl15{padding-left: .15rem;}
+.pr15{padding-right: .15rem;}
+.p20{padding: .2rem;}
+.active{ background-color: #1862ab;}
 @media only screen and (min-width: 751px) {
 	.fz16-sm{font-size: .16rem;}
 	.fz20-sm{font-size: .2rem;}
@@ -74,8 +82,20 @@ window.addEventListener("resize", resi);
 		</div>
 	</div>
 </div>
+<div class="subMenu w100p bgc-blue-6">
+	<div class="container fz30 fz20-sm ta-c">
+		<div class="row">
+			<div class="grow-xs-1"><a href="#s1" class="d-b p20 bgc-blue-7 mt20 mb20 c-white-0 active">attr</a></div>
+			<div class="grow-xs-1"><a href="#s2" class="d-b p20 bgc-blue-7 mt20 mb20 c-white-0">box</a></div>
+			<div class="grow-xs-1"><a href="#s3" class="d-b p20 bgc-blue-7 mt20 mb20 c-white-0">color</a></div>
+			<div class="grow-xs-2"><a href="#s4" class="d-b p20 bgc-blue-7 mt20 mb20 c-white-0">flexboxgrid</a></div>
+			<div class="grow-xs-1"><a href="https://github.com/zhenbinjing/i-Cut" class="d-b p20 bgc-blue-7 mt20 mb20 c-white-0">Github</a></div>
+		</div>
+	</div>
+</div>
 
-<div class="mt30 bgc-gray-1">
+
+<div class="bgc-gray-1 s1">
 <div class="container">	
 	<div class="row">	
 		<div class="col-xs-12 fz50 mt30">attr.css</div>
@@ -567,7 +587,7 @@ window.addEventListener("resize", resi);
 		
 		<div class="col-xs-12">
 		<div class="row fz20 fz16-sm">		
-		<div class="col-xs-12 fz30 fz20-sm mb20 c-blue-7">border(top、right、bottom、left)</div>	
+		<div class="col-xs-12 fz30 fz20-sm mb20 c-blue-7">border(top-right-bottom-left)</div>	
 			<div class="col-sm-6 mb20">
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bd-n</span> {border: none; }</code></pre>
 			</div>			
@@ -583,14 +603,20 @@ window.addEventListener("resize", resi);
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdl-n</span> {border-left: none; }</code></pre>
 			</div>						
 			</div>			
-		</div>
-		
-		<div class="col-xs-12 fz50 mt30">box.css</div>
+		</div>		
+</div>
+</div>
+</div>
+
+<div class="bgc-gray-1 s2">
+<div class="container">	
+	<div class="row">	
+	<div class="col-xs-12 fz50 mt30">box.css</div>
 		<div class="col-xs-12 fz20 fz16-sm lh40 mb20 bdb_1-solid bdc-gray-4">基于Emmet命名的css属性连接数字，方便省心。Emmet默认的单位是px，其它单位为 p → %、e → em、x → ex</div>
 		
 		<div class="col-xs-12">
 		<div class="row fz20 fz16-sm">		
-		<div class="col-xs-12 fz30 fz20-sm mb20 c-blue-7">font-size、line-height、text-indent、border-spacing(0-100)</div>	
+		<div class="col-xs-12 fz30 fz20-sm mb20 c-blue-7">font-size-line-height-text-indent-border-spacing(0-100)</div>	
 			<div class="col-sm-6 mb20">
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fz1</span> {font-size: 0px; }</code></pre>
 			</div>			
@@ -608,7 +634,7 @@ window.addEventListener("resize", resi);
 		
 		<div class="col-xs-12">
 		<div class="row fz20 fz16-sm">		
-		<div class="col-xs-12 fz30 fz20-sm mb20 c-blue-7">padding、padding-top、padding-right、padding-bottom、padding-left(0-100)</div>	
+		<div class="col-xs-12 fz30 fz20-sm mb20 c-blue-7">padding (top-right-bottom-left)(0-100)</div>	
 			<div class="col-sm-6 mb20">
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.p0</span> {padding: 0px; }</code></pre>
 			</div>			
@@ -630,7 +656,7 @@ window.addEventListener("resize", resi);
 		
 		<div class="col-xs-12">
 		<div class="row fz20 fz16-sm">		
-		<div class="col-xs-12 fz30 fz20-sm mb20 c-blue-7">margin、margin-top、margin-right、margin-bottom、margin-left(0-100)</div>	
+		<div class="col-xs-12 fz30 fz20-sm mb20 c-blue-7">margin (top-right-bottom-left)(0-100)</div>	
 			<div class="col-sm-6 mb20">
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.m0</span> {margin: 0px; }</code></pre>
 			</div>			
@@ -696,6 +722,9 @@ window.addEventListener("resize", resi);
 			</div>	
 			<div class="col-sm-6 mb20">
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdb_4-double</span> {border-bottom: 4px double; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdl_5-double</span> {border-bottom: 5px double; }</code></pre>
 			</div>
 			</div>			
 		</div>
@@ -765,21 +794,18 @@ window.addEventListener("resize", resi);
 			</div>
 			</div>			
 		</div>
-		
-			
-</div>
-</div>
-</div>
-
-
+	</div>
+	</div>
+	</div>
+	
+<div class="bgc-white-0 s3">
 <div class="container">	
 	<div class="row">	
 		<div class="col-xs-12 fz50 mt30">color.css</div>
 		<div class="col-xs-12 fz20 fz16-sm lh40 bdb_1-solid bdc-gray-4">基于open-color.css颜色值，添加字体、背景、轮廓、边框颜色属性</div>
 		<div class="col-xs-12 ta-c">
 			<img src="color.svg" alt="" class="w100p">
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz20 fz16-sm">		
 		<div class="col-xs-12 fz30 fz20-sm mb20 c-blue-7">字体颜色</div>	
@@ -944,7 +970,7 @@ window.addEventListener("resize", resi);
 			</div>																																
 			</div>
 		</div>
-				<div class="col-xs-12">
+		<div class="col-xs-12">
 		<div class="row fz20 fz16-sm">		
 		<div class="col-xs-12 fz30 fz20-sm mb20 c-blue-7">边框(左)颜色</div>	
 			<div class="col-sm-6 mb20">
@@ -969,6 +995,268 @@ window.addEventListener("resize", resi);
 		</div>
 </div>
 </div>
+</div>
 
+<div class="bgc-gray-1 s4">
+<div class="container">	
+	<div class="row">	
+		<div class="col-xs-12 fz50 mt30">flexboxgrid.css</div>
+		<div class="col-xs-12 fz20 fz16-sm lh40 bdb_1-solid bdc-gray-4">flexbox与gird结合而成的css框架，命名与Bootstrap一致，让你爱不惜手！</div>
+		<div class="col-xs-12 fz30 mt30">响应式 <div class="d-ib fz20 fz16-sm lh40">.col-lg-3.col-md-4.col-sm-6</div></div>	
+		<div class="col-xs-12 mt30">
+			<div class="row">
+			<div class="col-lg-3 col-md-4 col-sm-6 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-lg-3 col-md-4 col-sm-6 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-lg-3 col-md-4 col-sm-6 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-lg-3 col-md-12 col-sm-6 mb20"><div class="p20 bgc-blue-7"></div></div>
+			</div>
+		 </div>
+		<div class="col-xs-12 fz30 mt30">等比例 <div class="d-ib fz20 fz16-sm lh40">.grow-(xs-sm-md-lg)-(0-12)</div></div>
+	    <div class="col-xs-12 mt30">
+			<div class="row">
+			<div class="grow-xs-1"><div class="p20 bgc-blue-7"></div></div>
+	    	<div class="grow-xs-1"><div class="p20 bgc-blue-7"></div></div>
+	    	<div class="grow-xs-1"><div class="p20 bgc-blue-7"></div></div>
+	    	<div class="grow-xs-1"><div class="p20 bgc-blue-7"></div></div>
+	    	<div class="grow-xs-1"><div class="p20 bgc-blue-7"></div></div>
+			</div>
+	    </div>
+		<div class="col-xs-12 fz30 mt30">栅格 <div class="d-ib fz20 fz16-sm lh40">.col-(xs-sm-md-lg)-(1-12)</div></div>
+		<div class="col-xs-12 mt30">
+			<div class="row">
+			<div class="col-xs-1 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-11 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-2 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-10 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-3 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-9 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-4 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-8 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-5 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-7 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-6 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-6 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-7 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-5 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-8 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-4 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-9 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-3 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-10 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-2 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-11 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-1 mb20"><div class="p20 bgc-blue-7"></div></div>
+			</div>
+		 </div>
+		<div class="col-xs-12 fz30 mt30">偏移 <div class="d-ib fz20 fz16-sm lh40">.offset-(xs-sm-md-lg)-(1-11)</div></div>
+		<div class="col-xs-12 mt30">
+			<div class="row">
+			<div class="col-xs-11 offset-xs-1 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-10 offset-xs-2 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-9 offset-xs-3 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-8 offset-xs-4 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-7 offset-xs-5 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-6 offset-xs-6 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-5 offset-xs-7 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-4 offset-xs-8 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-3 offset-xs-9 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-2 offset-xs-10 mb20"><div class="p20 bgc-blue-7"></div></div>
+			<div class="col-xs-1 offset-xs-11 mb20"><div class="p20 bgc-blue-7"></div></div>
+			</div>
+		 </div>
+		<div class="col-xs-12 fz30 mt30">嵌套 <div class="d-ib fz20 fz16-sm lh40">.(container-fluid、container) &gt; .row	&gt; .col-**-* &gt; .row &gt; .col-**-**</div></div>
+		<div class="col-xs-12 mt30">			
+			<div class="row mb20">
+					<div class="col-sm-12 mb20 bgc-blue-6">				
+					<div class="container-fluid">
+						<div class="row">
+						<div class="col-xs-12 mt20 mb20 bgc-blue-7">
+						<div class="container-fluid">
+							<div class="row mt20 mb20">
+								<div class="col-xs-12 bgc-blue-8 ">
+								<div class="row">
+									<div class="col-xs-6 mt20 mb20">
+									<div class="p20 bgc-blue-9"></div>
+									</div>
+									<div class="col-xs-6 mt20 mb20">
+									<div class="p20 bgc-blue-9"></div>
+									</div>
+								</div>
+								</div>								
+							</div>
+						</div>
+						</div>
+					    </div>
+					</div>
+					</div>
+		 	</div>
+	    </div>	
+	   
+	    <div class="col-xs-12 fz30 mt30">主轴方向(flex-direction) <div class="d-ib fz20 fz16-sm lh40">.fxd-(xs-sm-md-lg)-(row-rr-cn-cr)</div></div>
+        <div class="col-xs-12 mt30">	
+          <div class="row fxd-lg-row fxw-lg-nowrap fxd-md-rr fxd-sm-cn fxd-xs-cr fz30 ta-c c-white-0">
+           	<div class="col-lg-3 col-md-6 col-sm-12 mb20"><div class="bgc-blue-7">1</div></div>
+			<div class="col-lg-3 col-md-6 col-sm-12 mb20"><div class="bgc-blue-7">2</div></div>
+			<div class="col-lg-3 col-md-6 col-sm-12 mb20"><div class="bgc-blue-7">3</div></div>
+			<div class="col-lg-3 col-md-6 col-sm-12 mb20"><div class="bgc-blue-7">4</div></div>
+          </div>
+		</div>
+       
+        <div class="col-xs-12 fz30 mt30">轴线(flex-wrap) <div class="d-ib fz20 fz16-sm lh40">.fxw-(xs-sm-md-lg)-(nowrap-wrap-wr)</div></div>
+        <div class="col-xs-12 mt30">	
+          <div class="row fxd-lg-row fxw-lg-nowrap fxw-md-wrap fxw-sm-wr fxw-xs-wrap fz30 ta-c c-white-0">
+          	<div class="col-lg-3 col-md-6 col-sm-12 mb20"><div class="bgc-blue-7">1</div></div>
+			<div class="col-lg-3 col-md-6 col-sm-12 mb20"><div class="bgc-blue-7">2</div></div>
+			<div class="col-lg-3 col-md-6 col-sm-12 mb20"><div class="bgc-blue-7">3</div></div>
+			<div class="col-lg-3 col-md-6 col-sm-12 mb20"><div class="bgc-blue-7">4</div></div>
+          </div>
+		</div>
+        
+        <div class="col-xs-12 fz30 mt30">主轴对齐(justify-content) <div class="d-ib fz20 fz16-sm lh40">.jc-(xs-sm-md-lg)-(start-center-end-around-between)</div></div>
+        <div class="col-xs-12 mt30">	
+          <div class="row fxd-lg-row fxw-lg-nowrap jc-xs-start fz30 ta-c c-white-0 mb20 bgc-blue-7">          
+          	<div class="col-xs-3 mt20 mb20"><div class="bgc-blue-9">start</div></div>
+          	<div class="col-xs-3 mt20 mb20"><div class="bgc-blue-9">start</div></div>	
+          </div>
+           <div class="row fxd-lg-row fxw-lg-nowrap jc-xs-center fz30 ta-c c-white-0 mb20 bgc-blue-7">          
+          	<div class="col-xs-3 mt20 mb20"><div class="bgc-blue-9">center</div></div>
+          	<div class="col-xs-3 mt20 mb20"><div class="bgc-blue-9">center</div></div>	
+          </div>
+            <div class="row fxd-lg-row fxw-lg-nowrap jc-xs-end fz30 ta-c c-white-0 mb20 bgc-blue-7">          
+          	<div class="col-xs-3 mt20 mb20"><div class="bgc-blue-9">end</div></div>
+          	<div class="col-xs-3 mt20 mb20"><div class="bgc-blue-9">end</div></div>	
+          </div>
+          <div class="row fxd-lg-row fxw-lg-nowrap jc-xs-around fz30 ta-c c-white-0 mb20 bgc-blue-7">          
+          	<div class="col-xs-3 mt20 mb20"><div class="bgc-blue-9">around</div></div>
+          	<div class="col-xs-3 mt20 mb20"><div class="bgc-blue-9">around</div></div>	
+          </div>
+          <div class="row fxd-lg-row fxw-lg-nowrap jc-xs-between fz30 ta-c c-white-0 mb20 bgc-blue-7">          
+          	<div class="col-xs-3 mt20 mb20"><div class="bgc-blue-9">between</div></div>
+          	<div class="col-xs-3 mt20 mb20"><div class="bgc-blue-9">between</div></div>	
+          </div>
+		</div>
+        
+	    <div class="col-xs-12 fz30 mt30">交叉轴对齐(align-items) <div class="d-ib fz20 fz16-sm lh40">.ai-(xs-sm-md-lg)-(top-middle-bottom-stretch-baseline)</div></div>  
+	    <div class="col-xs-12 mt30">	      
+	    <div class="row ai-xs-top h150 fz30 ta-c mb20 c-white-0 bgc-blue-7">          
+          	<div class="col-xs-6 bgc-blue-3">top</div>
+          	<div class="col-xs-6 bgc-blue-4">top</div>	          
+          	<div class="col-xs-6 bgc-blue-5">top</div>    	
+          	<div class="col-xs-6 bgc-blue-6">top</div>  
+        </div>
+         <div class="row ai-xs-middle h150 fz30 ta-c mb20 c-white-0 bgc-blue-7">          
+          	<div class="col-xs-6 bgc-blue-3">middle</div>
+          	<div class="col-xs-6 bgc-blue-4">middle</div>	          
+          	<div class="col-xs-6 bgc-blue-5">middle</div>    	
+          	<div class="col-xs-6 bgc-blue-6">middle</div>   
+        </div>
+        <div class="row ai-xs-bottom h150 fz30 ta-c mb20 c-white-0 bgc-blue-7">          
+          	<div class="col-xs-6 bgc-blue-3">bottom</div>
+          	<div class="col-xs-6 bgc-blue-4">bottom</div>	          
+          	<div class="col-xs-6 bgc-blue-5">bottom</div>    	
+          	<div class="col-xs-6 bgc-blue-6">bottom</div>   
+        </div>
+        <div class="row ai-xs-stretch h100 fz30 ta-c mb20 c-white-0 bgc-blue-7">               
+          	<div class="col-xs-6 lh100 bgc-blue-5">stretch</div>    	
+          	<div class="col-xs-6 lh100 bgc-blue-6">stretch</div>   
+        </div>
+        <div class="row ai-xs-baseline h150 fz30 ta-c mb20 c-white-0 bgc-blue-7">          
+          	<div class="col-xs-6 bgc-blue-3">baseline</div>
+          	<div class="col-xs-6 bgc-blue-4">baseline</div>	          
+          	<div class="col-xs-6 bgc-blue-5">baseline</div>    	
+          	<div class="col-xs-6 bgc-blue-6">baseline</div>   	
+        </div>
+		</div>
+		 <div class="col-xs-12 fz30 mt30">多根轴线对齐(align-content) <div class="d-ib fz20 fz16-sm lh40">.ac-(xs-sm-md-lg)-(top-middle-bottom-stretch-around-between)</div></div>  
+	    <div class="col-xs-12 mt30">  
+	    <div class="row ac-xs-top h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+         	<div class="col-xs-6 h100 lh100 bgc-blue-4">top</div>	          
+          	<div class="col-xs-6 h100 lh100 bgc-blue-5">top</div>    	
+          	<div class="col-xs-6 h100 lh100 bgc-blue-6">top</div>              
+          	<div class="col-xs-6 h100 lh100 bgc-blue-7">top</div>          	
+        </div>
+        <div class="row ac-xs-middle h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+         	<div class="col-xs-6 h100 lh100 bgc-blue-4">middle</div>	          
+          	<div class="col-xs-6 h100 lh100 bgc-blue-5">middle</div>    	
+          	<div class="col-xs-6 h100 lh100 bgc-blue-6">middle</div>              
+          	<div class="col-xs-6 h100 lh100 bgc-blue-7">middle</div>           	
+        </div>
+        <div class="row ac-xs-bottom h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+         	<div class="col-xs-6 h100 lh100 bgc-blue-4">bottom</div>	          
+          	<div class="col-xs-6 h100 lh100 bgc-blue-5">bottom</div>    	
+          	<div class="col-xs-6 h100 lh100 bgc-blue-6">bottom</div>              
+          	<div class="col-xs-6 h100 lh100 bgc-blue-7">bottom</div>          	
+        </div>
+        <div class="row ac-xs-stretch h500 fz30 ta-c mb20 c-white-0 bgc-blue-8"> 
+         	<div class="col-xs-6 h100 lh100 bgc-blue-2">stretch</div>              
+          	<div class="col-xs-6 h100 lh100 bgc-blue-3">stretch</div>  	
+          	<div class="col-xs-6 h100 lh100 bgc-blue-4">stretch</div>              
+          	<div class="col-xs-6 h100 lh100 bgc-blue-5">stretch</div>
+          	<div class="col-xs-6 h100 lh100 bgc-blue-6">stretch</div>              
+          	<div class="col-xs-6 h100 lh100 bgc-blue-7">stretch</div>          	
+        </div>
+        <div class="row ac-xs-around h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+         	<div class="col-xs-6 h100 lh100 bgc-blue-4">around</div>	          
+          	<div class="col-xs-6 h100 lh100 bgc-blue-5">around</div>    	
+          	<div class="col-xs-6 h100 lh100 bgc-blue-6">around</div>              
+          	<div class="col-xs-6 h100 lh100 bgc-blue-7">around</div>    
+        </div>
+        <div class="row ac-xs-between h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+         	<div class="col-xs-6 h100 lh100 bgc-blue-4">between</div>	          
+          	<div class="col-xs-6 h100 lh100 bgc-blue-5">between</div>    	
+          	<div class="col-xs-6 h100 lh100 bgc-blue-6">between</div>              
+          	<div class="col-xs-6 h100 lh100 bgc-blue-7">between</div>    
+        </div>
+		</div>
+		<div class="col-xs-12 fz30 mt30">单独个别轴线对齐(align-self) <div class="d-ib fz20 fz16-sm lh40">.as-(xs-sm-md-lg)-(top-middle-bottom-baseline-auto)</div></div>  
+	    <div class="col-xs-12 mt30">  
+	    <div class="row h100 fz30 ta-c mb20 c-white-0 bgc-blue-7">
+         	<div class="col-xs-4 bgc-blue-8">0</div>	          
+          	<div class="col-xs-4 bgc-blue-9 as-xs-top">1</div>    	
+          	<div class="col-xs-4 bgc-blue-8">2</div>             
+        </div>
+        <div class="row h100 fz30 ta-c mb20 c-white-0 bgc-blue-7">
+         	<div class="col-xs-4 bgc-blue-8">0</div>	          
+          	<div class="col-xs-4 bgc-blue-9 as-xs-middle">1</div>    	
+          	<div class="col-xs-4 bgc-blue-8">2</div>             
+        </div>
+        <div class="row h100 fz30 ta-c mb20 c-white-0 bgc-blue-7">
+         	<div class="col-xs-4 bgc-blue-8">0</div>	          
+          	<div class="col-xs-4 bgc-blue-9 as-xs-bottom">1</div>    	
+          	<div class="col-xs-4 bgc-blue-8">2</div>             
+        </div>
+        <div class="row h100 fz30 ta-c mb20 c-white-0 bgc-blue-7">
+         	<div class="col-xs-4 bgc-blue-8">0</div>	          
+          	<div class="col-xs-4 bgc-blue-9 as-xs-baseline">1</div>    	
+          	<div class="col-xs-4 bgc-blue-8">2</div>             
+        </div>
+        <div class="row h100 fz30 ta-c mb20 c-white-0 bgc-blue-7">
+         	<div class="col-xs-4 bgc-blue-8">0</div>	          
+          	<div class="col-xs-4 bgc-blue-9 as-xs-auto">1</div>    	
+          	<div class="col-xs-4 bgc-blue-8">2</div>             
+        </div>
+		</div>
+		<div class="col-xs-12 fz30 mt30">排列顺序(order) <div class="d-ib fz20 fz16-sm lh40">.order-(xs-sm-md-lg)-(first-same-last)</div></div>  
+		<div class="col-xs-12 mt30"> 
+		<div class="row ta-c fz30 c-white-0">
+		<div class="col-lg-4 col-md-6"><div class="bgc-blue-4">0</div></div>
+		<div class="col-lg-4 col-md-12 order-lg-same order-md-first order-xs-last"><div class="bgc-blue-7">1</div></div>
+		<div class="col-lg-4 col-md-6 "><div class="bgc-blue-9">2</div></div>
+		</div>
+		</div>
+</div>
+</div>
+</div>
+<script src="http://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>	
+<script>
+!function(){$.fn.smint=function(a){var c,d,e,f,g,h,i,j,b=$.extend({scrollSpeed:500,mySelector:"div"},a);return $(this).addClass("smint"),c=new Array,d=0,e=$(".smint").height(),f=$(".smint"),g=$(".smint a"),h=f.height(),b.scrollSpeed&&(i=b.scrollSpeed),b.mySelector&&(j=b.mySelector),g.each(function(a){var k,l,b=$(this).attr("href").split("#")[1];$(this).hasClass("extLink")||$(this).attr("id",b),c.push(Array($(j+"."+b).position().top-e,$(j+"."+b).height()+$(j+"."+b).position().top,b)),k=f.offset().top,l=function(d){var g=$(window).scrollTop()+h;g>k+h?(f.css({position:"fixed",top:0,left:0}).addClass("fxd"),$("body").css("padding-top",e)):(f.css("position","relative").removeClass("fxd"),$("body").css("padding-top","0")),c[a][0]<=g&&g<=c[a][1]&&("up"==d?($("#"+b).addClass("active"),$("#"+c[a+1][2]).removeClass("active")):a>0?($("#"+b).addClass("active"),$("#"+c[a-1][2]).removeClass("active")):void 0==d&&$("#"+b).addClass("active"),$.each(c,function(a){b!=c[a][2]&&$("#"+c[a][2]).removeClass("active")}))},l(),$(window).scroll(function(){var a=$(this).scrollTop()+h;a>d?direction="down":d>a&&(direction="up"),d=a,l(direction),$(window).scrollTop()+$(window).height()==$(document).height()?(g.removeClass("active"),$(".smint a:not('.extLink'):last").addClass("active")):g.last().removeClass("active")}),$(this).on("click",function(a){var c,d,b=f.height();return a.preventDefault(),c=$(this).attr("href").split("#")[1],d=$(j+"."+c).offset().top-b,$("html, body").stop().animate({scrollTop:d},i),$(this).hasClass("extLink")?!1:void 0}),$(".intLink").on("click",function(a){var c,d,b=f.height();return a.preventDefault(),c=$(this).attr("href").split("#")[1],d=f.hasClass("fxd")?$(j+"."+c).position().top-b:$(j+"."+c).position().top-2*b,$("html, body").stop().animate({scrollTop:d},i),$(this).hasClass("extLink")?!1:void 0})})},$.fn.smint.defaults={scrollSpeed:500,mySelector:"div"}}(jQuery);
+</script>
+<script>
+$(document).ready( function() {
+    $('.subMenu').smint({
+    	'scrollSpeed' : 1000
+    });
+});
+</script>
 </body>
 </html>
