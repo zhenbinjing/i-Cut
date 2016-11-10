@@ -58,7 +58,11 @@ window.addEventListener("resize", resi);
 .pr10{padding-right: .1rem;}
 .pl15{padding-left: .15rem;}
 .pr15{padding-right: .15rem;}
-.p20{padding: .2rem;}
+.p10{padding: .1rem;}	
+.p20{padding: .2rem;}	
+	
+#nav {position: static;}
+.current a{background: #1c7cd6;}
 @media only screen and (min-width: 751px) {
 	.fz16-sm{font-size: .16rem;}
 	.fz20-sm{font-size: .2rem;}
@@ -77,27 +81,26 @@ window.addEventListener("resize", resi);
 			<div class="d-ib w250 fz30 lh64 bdrs10 bd_1-solid bdc-blue-7"><a href="https://github.com/zhenbinjing/i-Cut" target="_blank" class="c-blue-7">Github</a></div>
 		</div>
 		<div class="col-xs-12 ta-c mt30">
-			<img src="css.gif" alt="">
+			<img src="assets/css.gif" alt="">
 		</div>
 	</div>
 </div>
-<div class="w100p bgc-blue-6">
+<div id="nav" class="w100p bgc-gray-9">
 	<div class="container fz30 fz20-sm ta-c">
-		<div class="row">
-			<div class="grow-xs-1"><a href="#attr" class="d-b p20 bgc-blue-7 mt20 mb20 c-white-0">attr</a></div>
-			<div class="grow-xs-1"><a href="#box" class="d-b p20 bgc-blue-7 mt20 mb20 c-white-0">box</a></div>
-			<div class="grow-xs-1"><a href="#color" class="d-b p20 bgc-blue-7 mt20 mb20 c-white-0">color</a></div>
-			<div class="grow-xs-2"><a href="#flexboxgrid" class="d-b p20 bgc-blue-7 mt20 mb20 c-white-0">flexboxgrid</a></div>
-		</div>
+		<ul class="row">
+			<li class="grow-xs-1"><a href="#attr" class="d-b p10 bgc-gray-7 mt20 mb20 c-white-0">Attr</a></li>
+			<li class="grow-xs-1"><a href="#box" class="d-b p10 bgc-gray-7 mt20 mb20 c-white-0">Box</a></li>
+			<li class="grow-xs-1"><a href="#color" class="d-b p10 bgc-gray-7 mt20 mb20 c-white-0">Color</a></li>
+			<li class="grow-xs-2"><a href="#flexboxgrid" class="d-b p10 bgc-gray-7 mt20 mb20 c-white-0">FlexboxGrid</a></li>
+		</ul>
 	</div>
 </div>
 
-
+<div id="attr"></div>
 <div class="bgc-gray-1">
-<a name="attr"></a>
 <div class="container">	
 	<div class="row">	
-		<div class="col-xs-12 fz50 mt30">attr.css</div>
+		<div class="col-xs-12 fz50 mt30">Attr.CSS</div>
 		<div class="col-xs-12 fz20 fz16-sm lh40 bdb_1-solid bdc-gray-4">基于Emmet命名的css属性简单易懂，同时也方便转换。</div>
 			
 		<div class="col-xs-12">
@@ -606,12 +609,11 @@ window.addEventListener("resize", resi);
 </div>
 </div>
 </div>
-
+<div id="box"></div>
 <div class="bgc-gray-1">
-<a name="box"></a>
 <div class="container">	
 	<div class="row">	
-	<div class="col-xs-12 fz50 mt30">box.css</div>
+	<div class="col-xs-12 fz50 mt30">Box.CSS</div>
 		<div class="col-xs-12 fz20 fz16-sm lh40 mb20 bdb_1-solid bdc-gray-4">基于Emmet命名的css属性连接数字，方便省心。Emmet默认的单位是px，其它单位为 p → %、e → em、x → ex</div>
 		
 		<div class="col-xs-12">
@@ -797,15 +799,14 @@ window.addEventListener("resize", resi);
 	</div>
 	</div>
 	</div>
-	
+<div id="color"></div>	
 <div class="bgc-white-0">
-<a name="color"></a>
 <div class="container">	
 	<div class="row">	
-		<div class="col-xs-12 fz50 mt30">color.css</div>
+		<div class="col-xs-12 fz50 mt30">Color.CSS</div>
 		<div class="col-xs-12 fz20 fz16-sm lh40 bdb_1-solid bdc-gray-4">基于open-color.css颜色值，添加字体、背景、轮廓、边框颜色属性</div>
 		<div class="col-xs-12 ta-c">
-			<img src="color.svg" alt="" class="w100p">
+			<img src="assets/color.svg" alt="" class="w100p">
 		</div>		
 		<div class="col-xs-12">
 		<div class="row fz20 fz16-sm">		
@@ -997,12 +998,12 @@ window.addEventListener("resize", resi);
 </div>
 </div>
 </div>
-
+<div id="flexboxgrid"></div>
 <div class="bgc-gray-1">
-<a name="flexboxgrid"></a>
+
 <div class="container">	
 	<div class="row">	
-		<div class="col-xs-12 fz50 mt30">flexboxgrid.css</div>
+		<div class="col-xs-12 fz50 mt30">FlexboxGrid.CSS</div>
 		<div class="col-xs-12 fz20 fz16-sm lh40 bdb_1-solid bdc-gray-4">flexbox与gird结合而成的css框架，命名与Bootstrap一致，让你爱不惜手！</div>
 		<div class="col-xs-12 fz30 mt30">响应式 <div class="d-ib fz20 fz16-sm lh40">.col-lg-3.col-md-4.col-sm-6</div></div>	
 		<div class="col-xs-12 mt30">
@@ -1254,5 +1255,29 @@ window.addEventListener("resize", resi);
 </div>
 </div>
 </div>
+<script src="assets/jq-2.1.js"></script>
+<script src="assets/jquery.nav.js"></script>
+<script>
+$(document).ready(function() {
+$('#nav').onePageNav();
+});
+window.onload = window.onscroll = function() {
+		var oNav=document.getElementById('nav');
+		var oTop = document.documentElement.scrollTop || document.body.scrollTop;
+		//alert(oTop);
+		if (oTop >= 400) {// 导航离顶部距离
+			if (typeof document.body.style.maxHeight === "undefined") {
+				oNav.style.top = oTop + 'px';
+			} else {
+				oNav.style.position = 'fixed';
+				oNav.style.top = 0;
+				oNav.style.zIndex=10000;
+			}
+		} else {
+			oNav.style.position = 'static';
+			oNav.style.top = 400 + "px";// 导航离顶部距离
+		}				
+};
+</script>
 </body>
 </html>
