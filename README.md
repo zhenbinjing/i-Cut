@@ -28,7 +28,7 @@ style.css 是组件、功能性类、特殊类的公共样式表。
 
 规则1：设计稿的宽度尽量设置为 640，750 或其他标准尺寸，DPI 设置为 72 ，推荐一款铺助插件，[下载地址](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?utm_source=chrome-app-launcher-info-dialog) 方便页面测试。
 
-规则2：html 头部的 js 能实现动态改变根元素的值令字体与盒子模型的值以及 iframe 等比例缩放，从而告别繁琐的媒体查询。
+规则2：html 头部的 js 能实现动态改变根元素的值令字体与盒子模型的值等比例缩放，从而告别繁琐的媒体查询。
 
 规则3：设计稿里标注的值是多少就写多少，已内置 [gulp-px3rem](https://www.npmjs.com/package/gulp-px3rem) ，批量转换 rem 与自动化工作流。Demo：src/adaptive.html
 

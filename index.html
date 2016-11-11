@@ -25,16 +25,17 @@
         metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
         docEl.firstElementChild.appendChild(metaEl);
         var recalc = function () {
+            var designW = 750;
             var width = docEl.clientWidth;
-            if (width / dpr > 750) {
-                width = 750 * dpr;
+            if (width / dpr > designW) {	
+                width = designW * dpr;
             }
-            docEl.style.fontSize = 100 * (width / 750) + 'px';
+            docEl.style.fontSize = 100 * (width / designW) + 'px';
           };
         recalc()
         if (!doc.addEventListener) return;
         win.addEventListener(resizeEvt, recalc, false);
-      })(document, window);
+})(document, window);
 </script>
 <link rel="stylesheet" href="src/css/adjust.css">
 <link rel="stylesheet" href="src/css/attr.css">
