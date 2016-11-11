@@ -30,10 +30,10 @@ style.css 是组件、功能性类、特殊类的公共样式表。
 
 规则2：html 头部的 js 能实现动态改变根元素的值令字体与盒子模型的值等比例缩放，从而告别繁琐的媒体查询。
 
-规则3：设计稿里标注的值是多少就写多少，已内置 [gulp-px3rem](https://www.npmjs.com/package/gulp-px3rem) ，批量转换 rem 与自动化工作流。[Demo](http://i-cut.cc/dist/adaptive.html)
+规则3：设计稿里标注的值是多少就写多少，已内置 [gulp-px3rem](https://www.npmjs.com/package/gulp-px3rem) ，批量转换 rem 与自动化工作流。[自适应：Demo](http://i-cut.cc/dist/adaptive.html)
 
 ##PC端(响应式)开发
 
-栅格宽度和媒体查询尺寸在 src/sass/flexboxgrid.scss 中对应以及修改。[Demo](http://i-cut.cc/dist/flexboxgrid.html)。
+栅格宽度和媒体查询尺寸在 src/sass/flexboxgrid.scss 中对应以及修改。[响应式：Demo](http://i-cut.cc/dist/flexboxgrid.html)
 
 推荐两款插件：[Assistor PS](http://witstudio.net/) 与 [Zeplin](https://zeplin.io/)，最新版的 [PS CC](http://www.adobe.com/products/photoshop.html) 已经集成部分功能。[点击查看 Zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)
