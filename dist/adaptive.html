@@ -15,7 +15,7 @@
         var docEl = doc.documentElement,
           isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
           dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
-          dpr = window.top === window.self? dpr : 1, //被iframe引用时，禁止缩放
+          dpr = window.top === window.self? dpr : 1, 
           dpr = 1,
           scale = 1 / dpr,
           resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
@@ -25,18 +25,19 @@
         metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
         docEl.firstElementChild.appendChild(metaEl);
         var recalc = function () {
+			var designW = 640;		//把你的设计稿宽度填写进去
             var width = docEl.clientWidth;
-            if (width / dpr > 640) {
-                width = 640 * dpr;
+            if (width / dpr > designW) {	
+                width = designW * dpr;
             }
-            docEl.style.fontSize = 100 * (width / 640) + 'px';
+            docEl.style.fontSize = 100 * (width / designW) + 'px';
           };
         recalc()
         if (!doc.addEventListener) return;
         win.addEventListener(resizeEvt, recalc, false);
 })(document, window);
 </script>
-<link rel="stylesheet" href="css/index.css?v=1478836783808"/>
+<link rel="stylesheet" href="css/index.css?v=1478847107987"/>
 </head>
 
 <body>
@@ -52,14 +53,14 @@
 	</div>
 	<div class="bd">
 	<ul>
-	<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img src="data:image.webp;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/a.webp?v=1478836783808" alt="" /></a></li>
-	<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img src="data:image.webp;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/b.webp?v=1478836783808" alt="" /></a></li>  
+	<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img src="data:image.webp;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/a.webp?v=1478847107987" alt="" /></a></li>
+	<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img src="data:image.webp;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/b.webp?v=1478847107987" alt="" /></a></li>  
 	</ul>
 	</div>
 	</div>
 <br/><br/><br/><br/><br/><br/><br/>
-<img src="data:image.webp;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/c.webp?v=1478836783808" class="bdt_3-solid bdtc-orange-7" alt="" />
+<img src="data:image.webp;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/c.webp?v=1478847107987" class="bdt_3-solid bdtc-orange-7" alt="" />
 </div>
-<script src="js/index.js?v=1478836783808"></script>
+<script src="js/index.js?v=1478847107987"></script>
 </body>
 </html>
