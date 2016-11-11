@@ -11,18 +11,30 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="email=no">
 <script type="text/javascript">
-function resi() {
-	var html = document.querySelector("html");
-	var wW = document.body.clientWidth || document.documentElement.clientWidth;
-	var maxW = 640;   //设置手机设计稿宽度和最小宽度 与css/style.css 中的 adaptive 类的宽度对应。
-	var minW = 320;
-	var htmlfs = 100; //与css/style.css 中的 html 字体大小以及 gulpfile.js 中的 px3rem({remUnit: 100}) 的值对应一致。
-	if (wW > maxW) wW = maxW;
-	var ratio  = wW / minW;	
-	html.style.fontSize = (htmlfs/(maxW/minW)) * ratio  + "px";
-}
-window.addEventListener("DOMContentLoaded", function() {resi()});
-window.addEventListener("resize", resi);
+(function (doc, win) {
+        var docEl = doc.documentElement,
+          isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+          dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
+          dpr = window.top === window.self? dpr : 1, //被iframe引用时，禁止缩放
+          dpr = 1,
+          scale = 1 / dpr,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        docEl.dataset.dpr = dpr;
+        var metaEl = doc.createElement('meta');
+        metaEl.name = 'viewport';
+        metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+        docEl.firstElementChild.appendChild(metaEl);
+        var recalc = function () {
+            var width = docEl.clientWidth;
+            if (width / dpr > 640) {
+                width = 640 * dpr;
+            }
+            docEl.style.fontSize = 100 * (width / 640) + 'px';
+          };
+        recalc()
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+})(document, window);
 </script>
 <!-- build:css css/index.css?v=_VERSION_-->
 <link rel="stylesheet" href="css/adjust.css">
