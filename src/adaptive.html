@@ -25,7 +25,7 @@
         metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
         docEl.firstElementChild.appendChild(metaEl);
         var recalc = function () {
-			var designW = 640;		//把你的设计稿宽度填写进去
+            var designW = 640;		//把你的设计稿宽度填写进去
             var width = docEl.clientWidth;
             if (width / dpr > designW) {	
                 width = designW * dpr;
