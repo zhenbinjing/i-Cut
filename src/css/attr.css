@@ -6,12 +6,17 @@
 .d-i { display: inline; }
 .d-b { display: block; }
 .d-ib { display: inline-block; }
+.d-li { display: list-item; }
 .d-t { display: table; }
+.d-itb { display: inline-table; }
 .d-bc { display: table-cell; }
+.d-tbcp{ display: table-caption; }
 .d-tbr { display: table-row; }
 .d-tbrg { display: table-row-group; }
 .d-tbcl { display: table-column; }
 .d-tbclg { display: table-column-group; }
+.d-tbhg{ display: table-header-group; }
+.d-tbfg{ display: table-footer-group; }
 /*浮动*/
 .fl-n { float: none; }
 .fl-l { float: left; }

@@ -15,7 +15,7 @@
         var docEl = doc.documentElement,
           isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
           dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
-          dpr = window.top === window.self? dpr : 1, //被iframe引用时，禁止缩放
+          dpr = window.top === window.self? dpr : 1,
           dpr = 1,
           scale = 1 / dpr,
           resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
@@ -144,10 +144,19 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-ib</span> {display: inline-block;}</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-li</span> {display: list-item;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-t</span> {display: table;}</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-itb</span> {display: inline-table;}</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-bc</span> {display: table-cell;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbcp</span> {display: table-caption;}</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbr</span> {display: table-row;}</code></pre>
@@ -160,6 +169,12 @@
 			</div>
 			<div class="col-sm-6 mb20">
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbclg</span> {display: table-column-group;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbhg</span> {display: table-header-group;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbfg</span> {display: table-footer-group;}</code></pre>
 			</div>																					
 			</div>
 		</div>

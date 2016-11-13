@@ -10,7 +10,7 @@ $dt:dotted; $ds:dashed; $sl:solid; $du:double;
 /*元素可见性*/
 $vv:(v-h:$h, v-v:$v);
 /*元素状态*/
-$dy:(d-n:$n, d-i:inline, d-b:block, d-ib:inline-block, d-t:table, d-bc:table-cell, d-tbr:table-row, d-tbrg:table-row-group, d-tbcl:table-column, d-tbclg:table-column-group);
+$dy:(d-n:$n, d-i:inline, d-b:block, d-ib:inline-block, d-li:list-item, d-t:table, d-itb:inline-table, d-bc:table-cell, d-tbcp:table-caption, d-tbr:table-row, d-tbrg:table-row-group, d-tbcl:table-column, d-tbclg:table-column-group, d-tbhg:table-header-group, d-tbfg:table-footer-group);
 
 //------------------------------------------------------------//
 
