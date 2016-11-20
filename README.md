@@ -6,6 +6,7 @@
 src/
 |__ css/
 | |__ adjust.css		重置表
+| |__ animate.css		动画表
 | |__ attr.css			属性表
 | |__ box.css			盒模表
 | |__ color.css			颜色表
@@ -16,7 +17,7 @@ src/
 ```
 ##CSS文件描述
 
-adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) 的，同时根据自己的需求参考了 [白树](http://www.cnblogs.com/PeunZhang/p/3407453.html) 的资料调整一些 reset css 以及 html 模版。
+adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) 的，参考了 [白树](http://www.cnblogs.com/PeunZhang/p/3407453.html) 的总结定制了一些 css 以及 html 模版。 [animate.css](https://github.com/daneden/animate.css) 是动画库，不解析了。
 
 attr.css、box.css、color.css 是分别消化 [tachyons.css](https://github.com/tachyons-css/tachyons)、[universal.css](https://github.com/marmelab/universal.css)、[open-color.css](https://github.com/yeun/open-color) 而来，其都采用了 [Emmet](http://docs.emmet.io/cheat-sheet/) 中的命名。
 
