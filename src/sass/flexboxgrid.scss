@@ -25,6 +25,11 @@ $nb: 100%; $column: 12;
 
 	@content;
 	
+	.d-#{$grid}-n{display:none;}
+	.d-#{$grid}-i{display: inline;}
+	.d-#{$grid}-b{display:block;}
+	.d-#{$grid}-ib{display: inline-block;}
+
 	@for $i from 1 through $column {.col-#{$grid}-#{$i}{flex-basis: $nb / $column * $i; max-width: $nb / $column * $i}}
 	@for $i from 0 through $column {.grow-#{$grid}-#{$i}{flex-grow: $i;}}
 	@for $i from 0 through $column {.shrink-#{$grid}-#{$i}{flex-shrink: $i;}}
