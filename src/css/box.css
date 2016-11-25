@@ -2148,6 +2148,12 @@
 .bdr_10-double { border-right: 10px double; }
 .bdb_10-double { border-bottom: 10px double; }
 .bdl_10-double { border-left: 10px double; }
+/*边框隐藏*/
+.bd-n { border: none;}
+.bdts-n { border-top-style: none; }
+.bdrs-n { border-right-style: none; }
+.bdbs-n { border-bottom-style: none; }
+.bdls-n { border-left-style: none; }
 /*行高百分百*/
 .lh100p { line-height: 100%; }
 .lh110p { line-height: 110%; }

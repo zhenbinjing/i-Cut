@@ -57,6 +57,14 @@ $border:dotted, dashed, solid, double;
 }
 @each $xx1 in $border{@include border ($xx1){}}
 
+/*边框隐藏*/
+$n:none;
+.bd-n{border:$n;}
+.bdts-n{border-top-style:$n;}
+.bdrs-n{border-right-style:$n;}
+.bdbs-n{border-bottom-style:$n;}
+.bdls-n{border-left-style:$n;}
+
 /*行高百分百*/
 @for $i from 10 through 20 {.lh#{$i*10}p{line-height: $i*10 + %;}}
 
