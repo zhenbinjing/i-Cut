@@ -83,7 +83,7 @@ $bdcl:(bdcl-c:collapse, bdcl-s:separate);
 /*轮廓*/
 $ols:(ols-n:$n, ols-dt:$dt, ols-ds:$ds, ols-sl:$sl, ols-du:$du);
 /*边框*/
-$bdn:(bd-n:$n); $bdtn:(bdt-n:$n); $bdrn:(bdr-n:$n); $bdbn:(bdb-n:$n); $bdln:(bdl-n:$n);
+$bdn:(bd-n:$n); $bdtsn:(bdts-n:$n); $bdrn:(bdrs-n:$n); $bdbn:(bdbs-n:$n); $bdln:(bdls-n:$n);
 
 $css:(
 $vv:visibility,
@@ -116,10 +116,10 @@ $ovy:overflow-y,
 $bdcl:border-collapse,
 $ols:outline-style,
 $bdn:border,
-$bdtn:border-top,
-$bdrn:border-right,
-$bdbn:border-bottom,
-$bdln:border-left	
+$bdtn:border-top-style,
+$bdrn:border-right-style,
+$bdbn:border-bottom-style,
+$bdln:border-left-style	
 );
 
 @mixin csss ($array, $numer){	
