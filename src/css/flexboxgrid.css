@@ -9,11 +9,6 @@
 [class*="col-"], [class*="grow-"] { padding-right: 0.15rem; padding-left: 0.15rem; }
 [class*="col-"] { -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; max-width: 100%; }
 
-.d-xs-n { display: none; }
-.d-xs-i { display: inline; }
-.d-xs-b { display: block; }
-.d-xs-ib { display: inline-block; }
-
 .col-xs-1 { -webkit-flex-basis: 8.33333%; -ms-flex-preferred-size: 8.33333%; flex-basis: 8.33333%; max-width: 8.33333%; }
 .col-xs-2 { -webkit-flex-basis: 16.66667%; -ms-flex-preferred-size: 16.66667%; flex-basis: 16.66667%; max-width: 16.66667%; }
 .col-xs-3 { -webkit-flex-basis: 25%; -ms-flex-preferred-size: 25%; flex-basis: 25%; max-width: 25%; }
@@ -109,11 +104,6 @@
 
 @media only screen and (min-width: 751px) {
 .container { width: 750px; }
-	
-.d-sm-n { display: none; }
-.d-sm-i { display: inline; }
-.d-sm-b { display: block; }
-.d-sm-ib { display: inline-block; }
 	
 .col-sm-1 { -webkit-flex-basis: 8.33333%; -ms-flex-preferred-size: 8.33333%; flex-basis: 8.33333%; max-width: 8.33333%; }
 .col-sm-2 { -webkit-flex-basis: 16.66667%; -ms-flex-preferred-size: 16.66667%; flex-basis: 16.66667%; max-width: 16.66667%; }
@@ -212,11 +202,6 @@
 @media only screen and (min-width: 992px) {
 .container { width: 970px; }
 	
-.d-md-n { display: none; }
-.d-md-i { display: inline; }
-.d-md-b { display: block; }
-.d-md-ib { display: inline-block; }	
-	
 .col-md-1 { -webkit-flex-basis: 8.33333%; -ms-flex-preferred-size: 8.33333%; flex-basis: 8.33333%; max-width: 8.33333%; }
 .col-md-2 { -webkit-flex-basis: 16.66667%; -ms-flex-preferred-size: 16.66667%; flex-basis: 16.66667%; max-width: 16.66667%; }
 .col-md-3 { -webkit-flex-basis: 25%; -ms-flex-preferred-size: 25%; flex-basis: 25%; max-width: 25%; }
@@ -313,11 +298,6 @@
 
 @media only screen and (min-width: 1200px) {
 .container { width: 1170px; }
-	
-.d-lg-n { display: none; }
-.d-lg-i { display: inline; }
-.d-lg-b { display: block; }
-.d-lg-ib { display: inline-block; }	
 	
 .col-lg-1 { -webkit-flex-basis: 8.33333%; -ms-flex-preferred-size: 8.33333%; flex-basis: 8.33333%; max-width: 8.33333%; }
 .col-lg-2 { -webkit-flex-basis: 16.66667%; -ms-flex-preferred-size: 16.66667%; flex-basis: 16.66667%; max-width: 16.66667%; }
