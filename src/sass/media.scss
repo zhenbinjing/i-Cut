@@ -2,7 +2,7 @@ $w1: 751px;
 $w2: 992px;
 $w3: 1200px;
 
-@mixin box-flex ($grid){
+@mixin media ($grid){
 	@content;	
 	.d-#{$grid}-n{display:none;}
 	.d-#{$grid}-i{display: inline;}
@@ -53,9 +53,9 @@ $w3: 1200px;
 	
 }
 
-$box-flex-data: (sm, $w1),(md, $w2),(lg, $w3);
-@each $grid, $w in $box-flex-data {
+$media-data: (sm, $w1),(md, $w2),(lg, $w3);
+@each $grid, $w in $media-data {
 	@media only screen and (min-width: $w){	
-		@include box-flex ($grid){}	
+		@include media ($grid){}	
 	}	
 }
