@@ -65,6 +65,9 @@ $n:none;
 .bdbs-n{border-bottom-style:$n;}
 .bdls-n{border-left-style:$n;}
 
+/*层级*/
+@for $i from 0 through 10 { .z#{$i}{z-index:$i; }}
+
 /*行高百分百*/
 @for $i from 10 through 20 {.lh#{$i*10}p{line-height: $i*10 + %;}}
 
