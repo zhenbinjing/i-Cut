@@ -12,13 +12,13 @@
 <meta name="format-detection" content="email=no">
 <script type="text/javascript">
 (function (doc, win) {
-        var docEl = doc.documentElement,
-			isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
-			dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
-			dpr = window.top === window.self? dpr : 1, 
-			dpr = 1,
-			scale = 1 / dpr,
-			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+	var docEl = doc.documentElement,
+	isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+	dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
+	dpr = window.top === window.self? dpr : 1, 
+	dpr = 1,
+	scale = 1 / dpr,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
         docEl.dataset.dpr = dpr;
         var metaEl = doc.createElement('meta');
         metaEl.name = 'viewport';
@@ -30,7 +30,7 @@
             if (width / dpr > designW) {	
                 width = designW * dpr;
             }
-			docEl.style.cssText = "font-size:" + 100 * (width / designW) + "px;" + "max-width:" + width + "px;" + "margin:auto;";
+		docEl.style.cssText = "font-size:" + 100 * (width / designW) + "px;" + "max-width:" + width + "px;" + "margin:auto;";
           };
         recalc()
         if (!doc.addEventListener) return;
