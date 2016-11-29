@@ -13,54 +13,52 @@
 <script type="text/javascript">
 (function (doc, win) {
         var docEl = doc.documentElement,
-          isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
-          dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
-          dpr = window.top === window.self? dpr : 1, 
-          dpr = 1,
-          scale = 1 / dpr,
-          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+			isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+			dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
+			dpr = window.top === window.self? dpr : 1, 
+			dpr = 1,
+			scale = 1 / dpr,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
         docEl.dataset.dpr = dpr;
         var metaEl = doc.createElement('meta');
         metaEl.name = 'viewport';
         metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
         docEl.firstElementChild.appendChild(metaEl);
         var recalc = function () {
-            var designW = 640;		//把你的设计稿宽度填写进去
+            var designW = 640;		//把你的手机设计稿宽度填写进去
             var width = docEl.clientWidth;
             if (width / dpr > designW) {	
                 width = designW * dpr;
             }
-            docEl.style.fontSize = 100 * (width / designW) + 'px';
+			docEl.style.cssText = "font-size:" + 100 * (width / designW) + "px;" + "max-width:" + width + "px;" + "margin:auto;";
           };
         recalc()
         if (!doc.addEventListener) return;
         win.addEventListener(resizeEvt, recalc, false);
 })(document, window);
 </script>
-<link rel="stylesheet" href="css/index.css?v=1480150488739"/>
+<link rel="stylesheet" href="css/index.css?v=1480410460397"/>
 </head>
 
 <body>
-<div class="adaptive">
-	<div class="clearfix">
-		<div class="fl-l ta-c fz30 pt20 mb20 w50p fzcjjt c-orange-7">自定义字体</div>
-		<div class="fl-l ta-c fz30 pt20 mb20 w50p fzcjjt c-orange-7">自定义图标:<span class="iconfont">&#xe603;</span></div>
-	</div>
-	<!--滑动组件-->
-	<div id="focus" class="focus">
+<div class="clearfix">
+	<div class="fl-l ta-c fz30 pt20 mb20 w50p fzcjjt c-orange-7">自定义字体</div>
+	<div class="fl-l ta-c fz30 pt20 mb20 w50p fzcjjt c-orange-7">自定义图标:<span class="iconfont">&#xe603;</span></div>
+</div>
+<!--滑动组件-->
+<div id="focus" class="focus">
 	<div class="hd">
 	<ul><li class="on"></li></ul>
 	</div>
 	<div class="bd">
 	<ul>
-	<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/a.png?v=1480150488739" alt="" /></a></li>
-	<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/b.png?v=1480150488739" alt="" /></a></li>  
+	<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/a.png?v=1480410460397" alt="" /></a></li>
+	<li><a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/b.png?v=1480410460397" alt="" /></a></li>  
 	</ul>
 	</div>
-	</div>
-<br/><br/><br/><br/><br/><br/><br/>
-<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/c.png?v=1480150488739" class="bdt_3-solid bdtc-orange-7" alt="" />
 </div>
-<script src="js/index.js?v=1480150488739"></script>
+<br/><br/><br/><br/><br/><br/><br/>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" xSrc="img/c.png?v=1480410460397" class="bdt_3-solid bdtc-orange-7" alt="" />
+<script src="js/index.js?v=1480410460397"></script>
 </body>
 </html>
