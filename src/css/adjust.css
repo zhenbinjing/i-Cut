@@ -2,7 +2,7 @@
 
 /*reset*/
 body, iframe, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, th, td{margin: 0;padding: 0;}
-body{font-family:Helvetica; font-family:'微软雅黑'; -webkit-overflow-scrolling: touch;}
+body{font-family: Microsoft Yahei,SimSun,Helvetica; -webkit-overflow-scrolling: touch;}
 a,button,input,optgroup,select,textarea{-webkit-tap-highlight-color: rgba(0,0,0,0);}
 address, cite, dfn, em, var{font-style: normal;}
 a,img{-webkit-touch-callout: none;}
