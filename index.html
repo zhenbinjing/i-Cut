@@ -57,11 +57,13 @@
 .mr100{margin-right: 1rem;}
 .mt30{margin-top: .3rem;}
 .mb30{margin-bottom: .3rem;}
+.mt10{margin-top: .1rem;}
 .mt20{margin-top: .2rem;}
 .mb20{margin-bottom: .2rem;}
 .bdrs10{border-radius: .1rem;}
 .lh64{line-height: .64rem;}
 .lh40{line-height: .4rem;}
+.lh30{line-height: .3rem;}
 .lh100{line-height: 1rem;}
 .w250{width: 2.5rem;}
 .h100{height: 1rem;}
@@ -74,6 +76,8 @@
 .pr15{padding-right: .15rem;}
 .p10{padding: .1rem;}	
 .p20{padding: .2rem;}	
+.pb20{padding-bottom: .2rem;}
+.pb10{padding-bottom: .1rem;}
 	
 #nav {position: static;}
 .current a{background: #1c7cd6;}
@@ -81,6 +85,107 @@
 	.fz-sm-16{font-size: .16rem;}
 	.fz-sm-20{font-size: .2rem;}
 }
+	
+/*动画*/
+.shaking{
+	animation:shaking 3s ease-in-out 0s infinite;
+	transform-origin:50% 50%;
+	width: 2rem;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	transition-property:color,background-color;
+	transition-duration:.5s;
+	transition-timing-function:ease-in;
+	}
+.shaking:hover{ color: #fff; background-color: #1c7cd6;}
+@keyframes shaking{
+	0%{transform:rotate(0)}5%{transform:rotate(10deg)}
+	10%{transform:rotate(-9deg)}
+	15%{transform:rotate(8deg)}
+	20%{transform:rotate(-7deg)}
+	25%{transform:rotate(6deg)}
+	30%{transform:rotate(-5deg)}
+	35%{transform:rotate(4deg)}
+	40%{transform:rotate(-3deg)}
+	45%{transform:rotate(2deg)}
+	50%{transform:rotate(0)}
+	100%{transform:rotate(0)}
+}
+
+.per{		
+	perspective: 800px;		
+	perspective-origin: top center;
+	height: 3rem; 
+	text-align: center;
+}
+.rq{		
+	transform-style: preserve-3d;
+	margin-top: 1rem;
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	position: relative;
+	animation: anxz 5s infinite linear;
+}
+.rq div{	
+	backface-visibility:visible;
+	width: 1rem; 
+	height: 1rem; 
+	position: absolute;			
+}
+.rqd1{transform: rotateY(0deg) translateZ(1.95839rem)}
+.rqd2{transform: rotateY(40deg) translateZ(1.95839rem)}
+.rqd3{transform: rotateY(80deg) translateZ(1.95839rem)}
+.rqd4{transform: rotateY(120deg) translateZ(1.95839rem)}
+.rqd5{transform: rotateY(160deg) translateZ(1.95839rem)}
+.rqd6{transform: rotateY(200deg) translateZ(1.95839rem)}
+.rqd7{transform: rotateY(240deg) translateZ(1.95839rem)}
+.rqd8{transform: rotateY(280deg) translateZ(1.95839rem)}
+.rqd9{transform: rotateY(320deg) translateZ(1.95839rem)}
+
+.per2{
+	perspective: 500px;
+	perspective-origin: 50% -5%;
+	height: 3rem; 
+}
+.he{
+	transform-style: preserve-3d;	
+	transform-origin: center center;
+	position: relative;
+	left: 50%;
+	top:50%;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-left: -0.75rem;
+	margin-top:-0.75rem;		
+	animation: anxz 5s infinite linear;
+}
+.he div{
+	backface-visibility:visible;		
+	background:rgba(28, 124, 214,0.1);
+	width: 1.5rem;
+	height: 1.5rem;
+	position: absolute;
+	text-align: center;
+	line-height: 1.5rem;
+	border: 1px solid #4dadf7;
+}
+	
+.before{transform: translateZ(.75rem);}
+.after{transform: rotateY(180deg) translateZ(.75rem);}
+.right{transform: rotateY(90deg) translateZ(.75rem);}
+.left{transform: rotateY(-90deg) translateZ(.75rem);}
+.top{transform: rotateX(90deg) translateZ(.75rem);}
+.bottom{ transform: rotate3d(1,0,0,-90deg) translate3d(0px, 0px, .75rem) scale3d(1,1,1);}
+	
+@keyframes anxz {
+	0% {transform: rotateY(0);}
+	100% {transform: rotateY(360deg); }
+}
+
 </style>
 </head>
 
@@ -100,13 +205,14 @@
 	</div>
 </div>
 <div id="nav" class="w100p bgc-gray-9">
-	<div class="container fz30 fz-sm-20 ta-c">
-		<ul class="row">
-			<li class="grow-xs-1"><a href="#attr" class="d-b p10 bgc-gray-7 mt20 mb20 c-white-0">Attr</a></li>
-			<li class="grow-xs-1"><a href="#box" class="d-b p10 bgc-gray-7 mt20 mb20 c-white-0">Box</a></li>
-			<li class="grow-xs-1"><a href="#color" class="d-b p10 bgc-gray-7 mt20 mb20 c-white-0">Color</a></li>
-			<li class="grow-xs-1"><a href="#flexboxgrid" class="d-b p10 bgc-gray-7 mt20 mb20 c-white-0">FlexboxGrid</a></li>
-			<li class="grow-xs-1"><a href="#media" class="d-b p10 bgc-gray-7 mt20 mb20 c-white-0">Media</a></li>
+	<div class="container fz20 ta-c">
+		<ul class="row pb20">
+			<li class="col-lg-2 col-xs-4"><a href="#attr" class="d-b p10 bgc-gray-7 mt20 c-white-0">Attr</a></li>
+			<li class="col-lg-2 col-xs-4"><a href="#box" class="d-b p10 bgc-gray-7 mt20 c-white-0">Box</a></li>
+			<li class="col-lg-2 col-xs-4"><a href="#color" class="d-b p10 bgc-gray-7 mt20 c-white-0">Color</a></li>			
+			<li class="col-lg-2 col-xs-4"><a href="#flexboxgrid" class="d-b p10 bgc-gray-7 mt20 c-white-0">FlexboxGrid</a></li>
+			<li class="col-lg-2 col-xs-4"><a href="#media" class="d-b p10 bgc-gray-7 mt20 c-white-0">Media</a></li>
+			<li class="col-lg-2 col-xs-4"><a href="#dh" class="d-b p10 bgc-gray-7 mt20 c-white-0">动画</a></li>
 		</ul>
 	</div>
 </div>
@@ -1257,6 +1363,154 @@
 		</div>
 	</div>
 </div>
+</div>
+<div id="dh"></div>	
+<div class="bgc-gray-1">
+	<div class="container">	
+		<div class="row">	
+			<div class="col-xs-12 fz40 mt30">CSS动画</div>
+			<div class="col-xs-12 fz24 pb10 fz-sm-16 bdb_1-solid bdc-gray-4">
+				<p class="mt20">
+					对于CSS动画，Github上已经有很多优秀的项目了。例如: <a href="https://github.com/daneden/animate.css" target="_blank" class="c-blue-7">Animate.css</a>、<a href="https://github.com/IanLunn/Hover" target="_blank" class="c-blue-7">Hover.css</a>...
+				</p>
+				<p class="mt20">
+					如果想学习3D动画，可以去看看张鑫旭大神这篇文章：<a href="http://www.zhangxinxu.com/wordpress/2012/09/css3-3d-transform-perspective-animate-transition/" target="_blank" class="c-blue-7"> 好吧，CSS3 3D transform变换，不过如此！ </a>，前方高能，注意安全。
+				</p>	
+				<p class="mt20">
+					分享一些CSS工具：<a href="http://css.doyoe.com/" target="_blank" class="c-blue-7">CSS 手册</a>、<a href="http://bennettfeely.com/clippy/" target="_blank" class="c-blue-7">Clip-path</a>、<a href="http://www.cssfilters.co/" target="_blank" class="c-blue-7">CSS Filter</a>、<a href="http://thewebrocks.com/demos/3D-css-tester/" target="_blank" class="c-blue-7">CSS 3D Tester</a>、<a href="http://cubic-bezier.com/" target="_blank" class="c-blue-7">Cubic-bezier</a>、<a href="http://www.cssreflex.com/css-generators/" target="_blank" class="c-blue-7">CSS Generators</a>、<a href="http://www.cssmatic.com/" target="_blank" class="c-blue-7">CSS matic</a>
+				</p>
+			</div>
+			<div class="col-xs-12 fz30 mt30"><strong>动画秘诀</strong>  <span class="fz16">本人做的笔记，不明白自己看手册吧。</span></div>
+			<div class="col-xs-12 fz24 mt10 pb10 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">
+			一个视点（perspective）、两种模式（2D，3D）、三条轴线（X,Y,Z）、四种变化（旋转、移动 、缩放、扭曲）
+			</div>
+			<div class="col-xs-12 fz30 mt10"><strong>perspective</strong></div>	
+			<div class="col-xs-12 fz24 mt10 pb10 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">
+			perspective（视点) 眼睛到显示器的距离，数值越大，离的越远，看得越小，反之。创建3D动画必须声明的属性！定义有两种方式，一种是基于舞台 perspective:800px; 、一种是基于自身 transform：perspective(800px;)
+			</div>
+			<div class="col-xs-12 fz30 mt10"><strong>perspective-origin</strong></div>	
+			<div class="col-xs-12 fz24 mt10 pb10 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">
+			perspective-origin 此属性必须跟随上面的 perspective 一起使用！该属性作用是设置视点的观看坐标。perspective-origin(x,y)，x[left,center,right]、y[top,center,bottom]、也可以设置为百分比，可以负值。
+			</div>		
+			<div class="col-xs-12 fz30 mt10"><strong>transform-style</strong></div>
+			<div class="col-xs-12 fz24 mt10 pb10 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">
+			transform-style 设置子元素位于此元素所在平面或三维空间内。transform-style：flat | preserve-3d
+			</div>
+			<div class="col-xs-12 fz30 mt10"><strong>transform-origin</strong></div>
+			<div class="col-xs-12 fz24 mt10 pb10 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">
+			transform-origin 设置该元素按某个原点进行转换。transform-origin(x,y)，x[left,center,right]、y[top,center,bottom]、也可以设置为百分比，可以负值。
+			</div>
+			<div class="col-xs-12 fz30 mt10"><strong>backface-visibility</strong></div>
+			<div class="col-xs-12 fz24 mt10 pb10 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">
+			backface-visibility 设置一个元素背面面向用户时是否可见。backface-visibility：visible | hidden
+			</div>
+			<div class="col-xs-12 fz30 mt10"><strong>transform</strong></div>
+			<div class="col-xs-12">
+			<div class="row mt10 pb10" >
+				<div class="col-xs-12">
+				<p class="fz24 fz-sm-20 lh40"><strong>2D</strong></p>	
+				<div class="col-xs-12 fz24 fz-sm-16">
+					<div class="row">
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh40 bdrs10 bgc-gray-3"><span class="c-blue-7">旋转：</span><code>transform:rotate() deg</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh40 bdrs10 bgc-gray-3"><span class="c-blue-7">移动：</span><code>transform:translate[X,Y](x,y) px</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh40 bdrs10 bgc-gray-3"><span class="c-blue-7">缩放：</span><code>transform:scale[X,Y](x,y) number</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh40 bdrs10 bgc-gray-3"><span class="c-blue-7">扭曲：</span><code>transform:skew[X,Y](x,y) deg</code></pre>
+						</div>
+					</div>
+				</div>			
+				</div>	
+				<div class="col-xs-12">
+				<p class="fz24 fz-sm-20 lh40"><strong>3D</strong></p>
+				<div class="col-xs-12 fz24 fz-sm-16">
+					<div class="row">
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh40 bdrs10 bgc-gray-3"><span class="c-blue-7">旋转：</span><code>transform:rotate3d(x,y,z,deg)</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh40 bdrs10 bgc-gray-3"><span class="c-blue-7">旋转：</span><code>transform:rotate[X,Y,Z]() deg</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh40 bdrs10 bgc-gray-3"><span class="c-blue-7">移动：</span><code>transform:translate3d(x,y,z) px</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh40 bdrs10 bgc-gray-3"><span class="c-blue-7">移动：</span><code>transform:translateZ() px</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh40 bdrs10 bgc-gray-3"><span class="c-blue-7">缩放：</span><code>transform:scale3d[X,Y](x,y)、scaleZ() number</code></pre>
+						</div>					
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>		
+			<div class="col-xs-12 fz30 mt10"><strong>transition</strong></div>
+			<div class="col-xs-12 fz24 mt10 pb10 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">
+			<div class="row">
+				<div class="col-lg-6 col-xs-12">transition-property 过度的CSS属性 </div>
+				<div class="col-lg-6 col-xs-12">transition-duration 过度动画的执行时间 </div>
+				<div class="col-lg-6 col-xs-12">transition-timing-function 过度动画的播放类型</div>
+				<div class="col-lg-6 col-xs-12">transition-delay 过度动画延迟时间</div>
+			</div>	
+			</div>	
+			<div class="col-xs-12 fz30 mt10"><strong>animation</strong></div>
+			<div class="col-xs-12 fz24 mt10 pb10 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">		
+				<div class="row">
+					<div class="col-xs-12">@keyframes{ 0%{属性：属性值} ... 100%{属性：属性值} } 创建动画过程</div>
+					<div class="col-lg-6 col-xs-12">animation-name 动画名字</div>
+					<div class="col-lg-6 col-xs-12">animation-duration 动画执行时间</div>
+					<div class="col-lg-6 col-xs-12">animation-timing-function 动画的播放类型</div>
+					<div class="col-lg-6 col-xs-12">animation-delay 动画延迟执行时间</div>
+					<div class="col-lg-6 col-xs-12">animation-iteration-count 动画循环次数</div>
+					<div class="col-lg-6 col-xs-12">animation-direction 动画的播放方向</div>
+					<div class="col-lg-6 col-xs-12">animation-play-state 动画运动与暂停</div>
+					<div class="col-lg-6 col-xs-12">animation-fill-mode 动画播放前后的状态</div>			
+				</div>	   
+			</div>
+			<div class="col-xs-12 fz30 mt10"><strong>animation Demo</strong></div>
+			<div class="col-xs-12">
+			<div class="row">
+				<div class="col-lg-4 col-xs-12 ta-c">
+						<div class="d-ib bgc-blue-4 shaking fz16">zzz</div>
+					</div>	
+					<div class="col-lg-4 col-xs-12">
+						<div class="per">
+							<div class="rq">
+							<div class="bgc-blue-4 rqd1"></div>
+							<div class="bgc-blue-4 rqd2"></div>
+							<div class="bgc-blue-4 rqd3"></div>
+							<div class="bgc-blue-4 rqd4"></div>
+							<div class="bgc-blue-4 rqd5"></div>
+							<div class="bgc-blue-4 rqd6"></div>
+							<div class="bgc-blue-4 rqd7"></div>
+							<div class="bgc-blue-4 rqd8"></div>
+							<div class="bgc-blue-4 rqd9"></div>
+							</div>
+						</div>
+				    </div>
+					<div class="col-lg-4 col-xs-12">
+							<div class="per2">
+								<div class="he">	
+									<div class="before fz16">前</div>
+									<div class="after fz16">后</div>
+									<div class="left fz16">左</div>
+									<div class="right fz16">右</div>		
+									<div class="top fz16">上</div>
+									<div class="bottom fz16">下</div>
+								</div>
+							</div>
+					</div>
+					
+				</div>					
+			</div>
+		</div>
+	</div>
 </div>
 <script src="assets/jq-2.1.js"></script>
 <script src="assets/jquery.nav.js"></script>
