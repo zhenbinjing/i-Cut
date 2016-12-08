@@ -10,221 +10,16 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="email=no">
-<script type="text/javascript">
-(function (doc, win) {
-        var docEl = doc.documentElement,
-          isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
-          dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
-          dpr = window.top === window.self? dpr : 1,
-          dpr = 1,
-          scale = 1 / dpr,
-          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
-        docEl.dataset.dpr = dpr;
-        var metaEl = doc.createElement('meta');
-        metaEl.name = 'viewport';
-        metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
-        docEl.firstElementChild.appendChild(metaEl);
-        var recalc = function () {
-            var designW = 750;
-            var width = docEl.clientWidth;
-            if (width / dpr > designW) {	
-                width = designW * dpr;
-            }
-            docEl.style.fontSize = 100 * (width / designW) + 'px';
-          };
-        recalc()
-        if (!doc.addEventListener) return;
-        win.addEventListener(resizeEvt, recalc, false);
-})(document, window);
-</script>
 <link rel="stylesheet" href="src/css/adjust.css">
 <link rel="stylesheet" href="src/css/attr.css">
 <link rel="stylesheet" href="src/css/box.css">
 <link rel="stylesheet" href="src/css/color.css">
 <link rel="stylesheet" href="src/css/flexboxgrid.css">
 <link rel="stylesheet" href="src/css/style.css">
-<style>
-.fz0{font-size: 0;}
-.fz16{font-size: .16rem;}
-.fz20{font-size: .2rem;}
-.fz24{font-size: .24rem;}
-.fz30{font-size: .3rem;}
-.fz40{font-size: .4rem;}
-.fz50{font-size: .5rem;}
-.fz100{font-size:1rem;}
-.mt100{margin-top: 1rem;}
-.mb100{margin-bottom: 1rem;}
-.mr100{margin-right: 1rem;}
-.mt30{margin-top: .3rem;}
-.mb30{margin-bottom: .3rem;}
-.mb40{margin-bottom: .4rem;}
-.mt10{margin-top: .1rem;}
-.mt20{margin-top: .2rem;}
-.mb20{margin-bottom: .2rem;}
-.bdrs10{border-radius: .1rem;}
-.lh64{line-height: .64rem;}
-.lh40{line-height: .4rem;}
-.lh30{line-height: .3rem;}
-.lh100{line-height: 1rem;}
-.w250{width: 2.5rem;}
-.h100{height: 1rem;}
-.h150{height: 1.5rem;}
-.h300{height: 3rem;}
-.h500{height: 5rem;}	
-.pl10{padding-left: .1rem;}
-.pr10{padding-right: .1rem;}
-.pl15{padding-left: .15rem;}
-.pr15{padding-right: .15rem;}
-.p10{padding: .1rem;}	
-.p20{padding: .2rem;}	
-.pb20{padding-bottom: .2rem;}
-.pb10{padding-bottom: .1rem;}
-	
-#nav {position: static;}
-.current a{background: #1c7cd6;}
-@media only screen and (min-width: 751px) {
-	.fz-sm-16{font-size: .16rem;}
-	.fz-sm-20{font-size: .2rem;}
-}
-	
-/*动画*/
-.shaking{
-	-webkit-animation:shaking 3s ease-in-out 0s infinite;
-	        animation:shaking 3s ease-in-out 0s infinite;
-	-webkit-transform-origin:50% 50%;
-	        transform-origin:50% 50%;
-	width: 2rem;
-	height: 2rem;
-	line-height: 2rem;
-	text-align: center;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
-	-webkit-transition-property:color,background-color;
-	transition-property:color,background-color;
-	-webkit-transition-duration:.5s;
-	        transition-duration:.5s;
-	-webkit-transition-timing-function:ease-in;
-	        transition-timing-function:ease-in;
-	}
-.shaking:hover{ color: #fff; background-color: #1c7cd6;}
-@-webkit-keyframes shaking{
-	0%{-webkit-transform:rotate(0);transform:rotate(0)}5%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}
-	10%{-webkit-transform:rotate(-9deg);transform:rotate(-9deg)}
-	15%{-webkit-transform:rotate(8deg);transform:rotate(8deg)}
-	20%{-webkit-transform:rotate(-7deg);transform:rotate(-7deg)}
-	25%{-webkit-transform:rotate(6deg);transform:rotate(6deg)}
-	30%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}
-	35%{-webkit-transform:rotate(4deg);transform:rotate(4deg)}
-	40%{-webkit-transform:rotate(-3deg);transform:rotate(-3deg)}
-	45%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}
-	50%{-webkit-transform:rotate(0);transform:rotate(0)}
-	100%{-webkit-transform:rotate(0);transform:rotate(0)}
-}
-@keyframes shaking{
-	0%{-webkit-transform:rotate(0);transform:rotate(0)}5%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}
-	10%{-webkit-transform:rotate(-9deg);transform:rotate(-9deg)}
-	15%{-webkit-transform:rotate(8deg);transform:rotate(8deg)}
-	20%{-webkit-transform:rotate(-7deg);transform:rotate(-7deg)}
-	25%{-webkit-transform:rotate(6deg);transform:rotate(6deg)}
-	30%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}
-	35%{-webkit-transform:rotate(4deg);transform:rotate(4deg)}
-	40%{-webkit-transform:rotate(-3deg);transform:rotate(-3deg)}
-	45%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}
-	50%{-webkit-transform:rotate(0);transform:rotate(0)}
-	100%{-webkit-transform:rotate(0);transform:rotate(0)}
-}
-
-.per{		
-	-webkit-perspective: 800px;		
-	        perspective: 800px;		
-	-webkit-perspective-origin: top center;		
-	        perspective-origin: top center;
-	height: 3rem; 
-	text-align: center;
-}
-.rq{		
-	-webkit-transform-style: preserve-3d;		
-	        transform-style: preserve-3d;
-	margin-top: 1rem;
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	position: relative;
-	-webkit-animation: anxz 5s infinite linear;
-	        animation: anxz 5s infinite linear;
-}
-.rq div{	
-	-webkit-backface-visibility:visible;	
-	        backface-visibility:visible;
-	width: 1rem; 
-	height: 1rem; 
-	position: absolute;			
-}
-.rqd1{-webkit-transform: rotateY(0deg) translateZ(1.95839rem);transform: rotateY(0deg) translateZ(1.95839rem)}
-.rqd2{-webkit-transform: rotateY(40deg) translateZ(1.95839rem);transform: rotateY(40deg) translateZ(1.95839rem)}
-.rqd3{-webkit-transform: rotateY(80deg) translateZ(1.95839rem);transform: rotateY(80deg) translateZ(1.95839rem)}
-.rqd4{-webkit-transform: rotateY(120deg) translateZ(1.95839rem);transform: rotateY(120deg) translateZ(1.95839rem)}
-.rqd5{-webkit-transform: rotateY(160deg) translateZ(1.95839rem);transform: rotateY(160deg) translateZ(1.95839rem)}
-.rqd6{-webkit-transform: rotateY(200deg) translateZ(1.95839rem);transform: rotateY(200deg) translateZ(1.95839rem)}
-.rqd7{-webkit-transform: rotateY(240deg) translateZ(1.95839rem);transform: rotateY(240deg) translateZ(1.95839rem)}
-.rqd8{-webkit-transform: rotateY(280deg) translateZ(1.95839rem);transform: rotateY(280deg) translateZ(1.95839rem)}
-.rqd9{-webkit-transform: rotateY(320deg) translateZ(1.95839rem);transform: rotateY(320deg) translateZ(1.95839rem)}
-
-.per2{
-	-webkit-perspective: 500px;
-	        perspective: 500px;
-	-webkit-perspective-origin: 50% -5%;
-	        perspective-origin: 50% -5%;
-	height: 3rem; 
-}
-.he{
-	-webkit-transform-style: preserve-3d;
-	        transform-style: preserve-3d;	
-	-webkit-transform-origin: center center;	
-	        transform-origin: center center;
-	position: relative;
-	left: 50%;
-	top:50%;
-	width: 1.5rem;
-	height: 1.5rem;
-	margin-left: -0.75rem;
-	margin-top:-0.75rem;		
-	-webkit-animation: anxz 5s infinite linear;		
-	        animation: anxz 5s infinite linear;
-}
-.he div{
-	-webkit-backface-visibility:visible;
-	        backface-visibility:visible;		
-	background:rgba(28, 124, 214,0.1);
-	width: 1.5rem;
-	height: 1.5rem;
-	position: absolute;
-	text-align: center;
-	line-height: 1.5rem;
-	border: 1px solid #4dadf7;
-}
-	
-.before{-webkit-transform: translateZ(.75rem);transform: translateZ(.75rem);}
-.after{-webkit-transform: rotateY(180deg) translateZ(.75rem);transform: rotateY(180deg) translateZ(.75rem);}
-.right{-webkit-transform: rotateY(90deg) translateZ(.75rem);transform: rotateY(90deg) translateZ(.75rem);}
-.left{-webkit-transform: rotateY(-90deg) translateZ(.75rem);transform: rotateY(-90deg) translateZ(.75rem);}
-.top{-webkit-transform: rotateX(90deg) translateZ(.75rem);transform: rotateX(90deg) translateZ(.75rem);}
-.bottom{ -webkit-transform: rotate3d(1,0,0,-90deg) translate3d(0px, 0px, .75rem) scale3d(1,1,1); transform: rotate3d(1,0,0,-90deg) translate3d(0px, 0px, .75rem) scale3d(1,1,1);}
-	
-@-webkit-keyframes anxz {
-	0% {-webkit-transform: rotateY(0);transform: rotateY(0);}
-	100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg); }
-}
-	
-@keyframes anxz {
-	0% {-webkit-transform: rotateY(0);transform: rotateY(0);}
-	100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg); }
-}
-</style>
+<link rel="stylesheet" href="assets/index.css">
 </head>
 
 <body>
-
 <div class="container">	
 	<div class="row ta-c">
 		<div class="col-xs-12 fz100 mt100">i-Cut</div>
@@ -250,14 +45,12 @@
 		</ul>
 	</div>
 </div>
-
 <div id="attr"></div>
 <div class="bgc-gray-1">
 <div class="container">	
 	<div class="row">	
 		<div class="col-xs-12 fz50 mt30">Attr.css</div>
-		<div class="col-xs-12 fz24 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">基于Emmet命名的css属性简单易懂，同时也方便转换。</div>
-			
+		<div class="col-xs-12 fz24 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">基于Emmet命名的css属性简单易懂，同时也方便转换。</div>			
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mt20 mb20 c-blue-7">visibility</div>
@@ -268,8 +61,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.v-v</span> {visibility: visible;}</code></pre>
 			</div>
 		</div>			
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">display</div>	
@@ -319,8 +111,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.d-tbfg</span> {display: table-footer-group;}</code></pre>
 			</div>																					
 			</div>
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">float</div>	
@@ -334,8 +125,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fl-r</span> {float: right;}</code></pre>
 			</div>																						
 			</div>
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">clear</div>	
@@ -352,8 +142,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cl-b</span> {clear: both;}</code></pre>
 			</div>																									
 			</div>
-		</div>	
-			
+		</div>				
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">position</div>	
@@ -370,8 +159,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.pos-a</span> {position: absolute;}</code></pre>
 			</div>																									
 			</div>
-		</div>	
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">font-weight</div>	
@@ -388,8 +176,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fw-br</span> {font-weight: bolder;}</code></pre>
 			</div>																									
 			</div>
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">font-style</div>	
@@ -400,8 +187,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.fs-n</span> {font-style: normal;}</code></pre>
 			</div>																											
 			</div>
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">vertical-align</div>
@@ -428,7 +214,6 @@
 			</div>																														
 			</div>
 		</div>			
-			
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">text-transform</div>	
@@ -445,8 +230,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tt-l</span> {text-transform: lowercase;}</code></pre>
 			</div>																												
 			</div>
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">text-align</div>	
@@ -463,8 +247,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ta-j</span> {text-align: justify;}</code></pre>
 			</div>																												
 			</div>
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">text-align-last</div>	
@@ -481,8 +264,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tal-j</span> {text-align-last: justify;}</code></pre>
 			</div>																												
 			</div>
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">background-repeat</div>	
@@ -502,8 +284,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgr-s</span> {background-repeat: space;}</code></pre>
 			</div>																															
 			</div>
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">background-attachment</div>	
@@ -511,8 +292,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bga-f</span> {background-attachment: fixed; }</code></pre>
 			</div>	
 		</div>
-		</div>	
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">background-size</div>	
@@ -524,7 +304,6 @@
 			</div>																														
 			</div>
 		</div>
-
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">background-clip</div>	
@@ -538,8 +317,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-cb</span> {background-clip: content-box; }</code></pre>
 			</div>																																	
 			</div>
-		</div>	
-		
+		</div>			
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">background-origin</div>	
@@ -553,8 +331,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgo-cb</span> {background-origin: content-box; }</code></pre>
 			</div>																																	
 			</div>
-		</div>				
-		
+		</div>
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">table-layout</div>	
@@ -565,8 +342,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.tbl-f</span> {table-layout: fixed; }</code></pre>
 			</div>																														
 			</div>			
-		</div>
-							
+		</div>							
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">caption-side</div>	
@@ -578,7 +354,6 @@
 			</div>																														
 			</div>			
 		</div>
-
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">empty-cells</div>	
@@ -589,8 +364,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ec-h</span> {empty-cells: hide; }</code></pre>
 			</div>																														
 			</div>			
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">list-style-type</div>	
@@ -617,7 +391,6 @@
 			</div>																																													
 			</div>			
 		</div>
-
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">cursor</div>	
@@ -640,8 +413,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.cur-d</span> {cursor: default; }</code></pre>
 			</div>																																										
 			</div>			
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">resize</div>	
@@ -658,8 +430,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.rsz-v</span> {resize: vertical; }</code></pre>
 			</div>																																									
 			</div>			
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">box-sizing</div>	
@@ -670,8 +441,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bxz-bb</span> {box-sizing: border-box; }</code></pre>
 			</div>																																										
 			</div>			
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">overflow</div>	
@@ -688,7 +458,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ov-s</span> {overflow: scroll; }</code></pre>
 			</div>																																														
 			</div>			
-		</div>																																																
+		</div>																																															
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">overflow-x</div>	
@@ -706,7 +476,6 @@
 			</div>																																														
 			</div>			
 		</div>		
-		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">overflow-y</div>	
@@ -723,8 +492,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ovy-s</span> {overflow-y: scroll; }</code></pre>
 			</div>																																														
 			</div>			
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">border-collapse</div>	
@@ -735,8 +503,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdcl-s</span> {border-collapse: separate; }</code></pre>
 			</div>																																														
 			</div>			
-		</div>
-		
+		</div>		
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">outline-style</div>	
@@ -755,9 +522,7 @@
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.ols-db</span> {outline-style: double; }</code></pre>
 			</div>						
 			</div>			
-		</div>
-		
-				
+		</div>				
 </div>
 </div>
 </div>
@@ -1542,8 +1307,7 @@
 									<div class="bottom fz16">下</div>
 								</div>
 							</div>
-					</div>
-					
+					</div>					
 				</div>					
 			</div>
 		</div>
@@ -1551,27 +1315,6 @@
 </div>
 <script src="assets/jq-2.1.js"></script>
 <script src="assets/jquery.nav.js"></script>
-<script>
-$(document).ready(function() {
-$('#nav').onePageNav();
-});
-window.onload = window.onscroll = function() {
-		var oNav=document.getElementById('nav');
-		var oTop = document.documentElement.scrollTop || document.body.scrollTop;
-		//alert(oTop);
-		if (oTop >= 400) {// 导航离顶部距离
-			if (typeof document.body.style.maxHeight === "undefined") {
-				oNav.style.top = oTop + 'px';
-			} else {
-				oNav.style.position = 'fixed';
-				oNav.style.top = 0;
-				oNav.style.zIndex=10000;
-			}
-		} else {
-			oNav.style.position = 'static';
-			oNav.style.top = 400 + "px";// 导航离顶部距离
-		}				
-};
-</script>
+<script src="assets/index.js"></script>
 </body>
 </html>
