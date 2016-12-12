@@ -15,6 +15,7 @@
 .mt10{margin-top: .1rem;}
 .mt20{margin-top: .2rem;}
 .mb20{margin-bottom: .2rem;}
+.mb30{margin-bottom: .3rem;}
 .bdrs10{border-radius: .1rem;}
 .lh64{line-height: .64rem;}
 .lh40{line-height: .4rem;}
@@ -34,12 +35,18 @@
 .p20{padding: .2rem;}	
 .pb20{padding-bottom: .2rem;}
 .pb10{padding-bottom: .1rem;}
-	
-#nav {position: static;}
+
+#nav .container {  padding-right: 0.1rem; padding-left: 0.1rem; }
+#nav .row { margin-left: -0.1rem; margin-right: -0.1rem; }
+#nav [class*="grow-"] { padding-right: 0.1rem; padding-left: 0.1rem; }
+
+#emimg,#attr,#box,#color,#flexboxgrid,#media,#dh{height: .6rem;}
+#nav {position: static; width: 100%;}
 .current a{background: #1c7cd6;}
 @media only screen and (min-width: 751px) {
 	.fz-sm-16{font-size: .16rem;}
 	.fz-sm-20{font-size: .2rem;}
+	#emimg,#attr,#box,#color,#flexboxgrid,#media,#dh{height: .5rem;}
 }
 	
 /*摇晃*/
