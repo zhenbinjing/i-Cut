@@ -1,4 +1,4 @@
-.fz0{font-size: 0;}
+﻿.fz0{font-size: 0;}
 .fz16{font-size: .16rem;}
 .fz20{font-size: .2rem;}
 .fz24{font-size: .24rem;}
@@ -36,9 +36,9 @@
 .pb20{padding-bottom: .2rem;}
 .pb10{padding-bottom: .1rem;}
 
-#nav .container {  padding-right: 0.1rem; padding-left: 0.1rem; }
-#nav .row { margin-left: -0.1rem; margin-right: -0.1rem; }
-#nav [class*="grow-"] { padding-right: 0.1rem; padding-left: 0.1rem; }
+#nav .container {  padding-right: 0.08rem; padding-left: 0.08rem; }
+#nav .row { margin-left: -0.08rem; margin-right: -0.08rem; }
+#nav [class*="grow-"] { padding-right: 0.08rem; padding-left: 0.08rem; }
 
 #emimg,#attr,#box,#color,#flexboxgrid,#media,#dh{height: .6rem;}
 #nav {position: static; width: 100%;}
