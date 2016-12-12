@@ -20,6 +20,7 @@
 .lh40{line-height: .4rem;}
 .lh30{line-height: .3rem;}
 .lh100{line-height: 1rem;}
+.lh220{line-height: 2.2rem;}
 .w250{width: 2.5rem;}
 .h100{height: 1rem;}
 .h150{height: 1.5rem;}
@@ -41,7 +42,7 @@
 	.fz-sm-20{font-size: .2rem;}
 }
 	
-/*动画*/
+/*摇晃*/
 .shaking{
 	-webkit-animation:shaking 3s ease-in-out 0s infinite;
 	        animation:shaking 3s ease-in-out 0s infinite;
@@ -88,6 +89,33 @@
 	100%{-webkit-transform:rotate(0);transform:rotate(0)}
 }
 
+/*路径*/
+.path { 
+	width: 2.2rem;
+	height: 2.2rem;
+	border-radius:50%;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	position: relative;
+	animation: path 3s infinite linear;
+	-webkit-animation: path 3s infinite linear;
+}
+.pathk{width: .3rem; font-size: 0; position: absolute;transform-origin:50% 50%; -webkit-transform-origin:50% 50%;  -webkit-animation:inherit; animation:inherit; -webkit-animation-direction:reverse; animation-direction:reverse;}
+.pathkc1{left: 50%; top: 0; margin-left: -.15rem; }
+.pathkc2{left: 0; bottom: 0; margin-left: .15rem; margin-bottom: .45rem; }
+.pathkc3{right: 0; bottom: 0; margin-right: .15rem; margin-bottom: .45rem; }
+.pathkimg{width:inherit; border-radius:50%; }
+ @keyframes path {
+0% {transform: rotate(0);}
+	100% {transform: rotate(360deg); }
+}
+ @-webkit-keyframes path {
+0% {-webkit-transform: rotate(0); transform: rotate(0);}
+	100% {-webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+/*圆圈*/
 .per{		
 	-webkit-perspective: 800px;		
 	        perspective: 800px;		
@@ -124,6 +152,8 @@
 .rqd8{-webkit-transform: rotateY(280deg) translateZ(1.95839rem);transform: rotateY(280deg) translateZ(1.95839rem)}
 .rqd9{-webkit-transform: rotateY(320deg) translateZ(1.95839rem);transform: rotateY(320deg) translateZ(1.95839rem)}
 
+
+/*盒子*/
 .per2{
 	-webkit-perspective: 500px;
 	        perspective: 500px;
@@ -174,4 +204,32 @@
 	0% {-webkit-transform: rotateY(0);transform: rotateY(0);}
 	100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg); }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
