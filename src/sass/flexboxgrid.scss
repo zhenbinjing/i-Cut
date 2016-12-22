@@ -21,9 +21,7 @@ $nb: 100%; $column: 12;
 [class*="col-"]{flex-basis: $nb; max-width: $nb;}
 
 @mixin flexboxgrid ($grid){
-
-	@content;	
-
+	@content;
 	@for $i from 1 through $column {.col-#{$grid}-#{$i}{flex-basis: $nb / $column * $i; max-width: $nb / $column * $i}}
 	@for $i from 0 through $column {.grow-#{$grid}-#{$i}{flex-grow: $i;}}
 	@for $i from 0 through $column {.shrink-#{$grid}-#{$i}{flex-shrink: $i;}}	
