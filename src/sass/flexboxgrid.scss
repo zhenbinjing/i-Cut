@@ -8,13 +8,13 @@ $nb: 100%; $column: 12;
 
 @mixin bs {box-sizing: border-box;}
 @mixin pdsg {padding-right: $sg; padding-left: $sg;}
-@mixin mlra{margin-left: auto; margin-right: auto;}
-@mixin mgsg{margin-left: -$sg; margin-right: -$sg;}
+@mixin mlra {margin-left: auto; margin-right: auto;}
+@mixin mgsg {margin-left: -$sg; margin-right: -$sg;}
 
-*{@include bs;}
-*:before,*:after{@include bs;}
-.container{/*! width: 100%!important; max-width:1200px; 去掉注释开启适屏模式*/}
-.container,.container-fluid{ @include mlra; @include pdsg;}
+* {@include bs;}
+*:before,*:after {@include bs;}
+.container {/*! width: 100%!important; max-width:1200px; 去掉注释开启适屏模式*/}
+.container,.container-fluid {@include mlra; @include pdsg;}
 
 .row{display: flex; flex-flow:row wrap; @include mgsg;}
 [class*="col-"],[class*="grow-"]{@include pdsg;}
