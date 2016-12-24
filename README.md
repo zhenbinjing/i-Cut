@@ -6,11 +6,9 @@
 src/
 |__ css/
 | |__ adjust.css		
-| |__ attr.css			
-| |__ box.css			
-| |__ color.css			
+| |__ emmet.css							
 | |__ flexboxgrid.css
-| |__ media.css		
+| |__ opencolor.css		
 | |__ style.css			
 |__ adaptive.html
 |__ flexboxgrid.html
@@ -19,11 +17,11 @@ src/
 
 adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) 的，参考了 [白树](http://www.cnblogs.com/PeunZhang/p/3407453.html) 的总结定制了一些 css 以及 html 模版。 
 
-attr.css、box.css、color.css 是分别消化 [tachyons.css](https://github.com/tachyons-css/tachyons)、[universal.css](https://github.com/marmelab/universal.css)、[open-color.css](https://github.com/yeun/open-color) 而来，其都采用 [Emmet](http://docs.emmet.io/cheat-sheet/) 中的规则命名。
+emmet.css、color.css 是分别消化 [tachyons.css](https://github.com/tachyons-css/tachyons)、[universal.css](https://github.com/marmelab/universal.css)、[open-color.css](https://github.com/yeun/open-color) 而来，其都采用 [Emmet](http://docs.emmet.io/cheat-sheet/) 中的规则命名。
 
 flexboxgrid.css 是参考 kristoferjoseph 的 [flexboxgrid.css](https://github.com/kristoferjoseph/flexboxgrid) 修改而成，命名与 [Bootstrap](https://github.com/twbs/bootstrap) 框架中的命名一致！是本框架的核心。
 
-media.css 是响应式属性数值表。 style.css 是组件、功能性类、特殊类的公共样式表。
+style.css 是组件、功能性类、特殊类的公共样式表。
 
 ##移动端(自适应)开发
 

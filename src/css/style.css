@@ -1,15 +1,15 @@
-﻿/*-----------------------------居中----------------------------*/
+﻿/*-----------------------------居中，清除浮动，文字截断(单行，多行)，顶层----------------------------*/
 
 .trbl { top: 0; right: 0; bottom: 0; left: 0 }
 .mlra { margin-left: auto; margin-right: auto; }
-
-/*----------------清除浮动，文字截断(单行，多行)--------------*/
 
 .clearfix:after { visibility: hidden; display: block; clear: both; content:" "; font-size: 0; height: 0; }
 .clearfix { *zoom: 1; }
 
 .cut { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cutmore { -webkit-line-clamp: 7; overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-box-orient: vertical; }
+
+.z2147483647{z-index:2147483647;}
 
 /*----------------------------移动组件----------------------------*/
 

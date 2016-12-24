@@ -71,3 +71,61 @@ $flexboxgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
 		@include flexboxgrid ($grid){}	
 	}	
 }
+
+@mixin media ($grid){
+	@content;	
+	.d-#{$grid}-n{display:none;}
+	.d-#{$grid}-i{display: inline;}
+	.d-#{$grid}-b{display:block;}
+	.d-#{$grid}-ib{display: inline-block;}
+	.d-#{$grid}-t{display:table;}
+	.d-#{$grid}-bc{display:table-cell;}
+	
+	.fl-#{$grid}-n{float: none;}
+	.fl-#{$grid}-l{float: left;}
+	.fl-#{$grid}-r{float: right;}
+
+	.pos-#{$grid}-s{position: static;}
+	.pos-#{$grid}-f{position: fixed;}
+	.pos-#{$grid}-r{position: relative;}
+	.pos-#{$grid}-a{position: absolute;}
+
+	.ta-#{$grid}-c{text-align: center;}
+	.ta-#{$grid}-l{text-align: left;}
+	.ta-#{$grid}-r{text-align: right;}
+	.ta-#{$grid}-j{text-align: justify;}
+
+	.bd-#{$grid}-n{border: none;}
+	.bdts-#{$grid}-n{border-top-style: none;}
+	.bdrs-#{$grid}-n{border-right-style: none;}
+	.bdbs-#{$grid}-n{border-bottom-style: none;}
+	.bdls-#{$grid}-n{border-left-style: none;}
+
+	@for $i from 0 through 100 {.fz-#{$grid}-#{$i}{font-size:$i + px;}}
+	@for $i from 0 through 100 {.lh-#{$grid}-#{$i}{line-height:$i + px;}}
+	@for $i from 0 through 100 {.ti-#{$grid}-#{$i}{text-indent:$i + px;}}
+	
+	@for $i from 0 through 100 {
+	.p-#{$grid}-#{$i}{padding:$i + px;}
+	.pt-#{$grid}-#{$i}{padding-top:$i + px;}
+	.pr-#{$grid}-#{$i}{padding-right:$i + px;}
+	.pb-#{$grid}-#{$i}{padding-bottom:$i + px;}
+	.pl-#{$grid}-#{$i}{padding-left:$i + px;}
+	}
+
+	@for $i from 0 through 100 {
+	.m-#{$grid}-#{$i}{margin:$i + px;}
+	.mt-#{$grid}-#{$i}{margin-top:$i + px;}
+	.mr-#{$grid}-#{$i}{margin-right:$i + px;}
+	.mb-#{$grid}-#{$i}{margin-bottom:$i + px;}
+	.ml-#{$grid}-#{$i}{margin-left:$i + px;}
+	}
+	
+}
+
+$media-data: (sm, $w1),(md, $w2),(lg, $w3);
+@each $grid, $w in $media-data {
+	@media only screen and (min-width: $w){	
+		@include media ($grid){}	
+	}	
+}

@@ -11,10 +11,9 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="email=no">
 <link rel="stylesheet" href="src/css/adjust.css">
-<link rel="stylesheet" href="src/css/attr.css">
-<link rel="stylesheet" href="src/css/box.css">
-<link rel="stylesheet" href="src/css/color.css">
+<link rel="stylesheet" href="src/css/emmet.css">
 <link rel="stylesheet" href="src/css/flexboxgrid.css">
+<link rel="stylesheet" href="src/css/opencolor.css">
 <link rel="stylesheet" href="src/css/style.css">
 <link rel="stylesheet" href="assets/index.css">
 <script>
@@ -67,22 +66,20 @@
 <div id="nav" class="bgc-gray-9 mb30">
 	<div class="container fz20 ta-c">
 		<ul class="row pb20">
-			<li class="grow-xs-1"><a href="#attr" class="d-b p10 bgc-gray-7 mt20 c-white-0">Attr</a></li>
-			<li class="grow-xs-1"><a href="#box" class="d-b p10 bgc-gray-7 mt20 c-white-0">Box</a></li>
-			<li class="grow-xs-1"><a href="#color" class="d-b p10 bgc-gray-7 mt20 c-white-0">Color</a></li>			
+			<li class="grow-xs-1"><a href="#emmet" class="d-b p10 bgc-gray-7 mt20 c-white-0">Emmet</a></li>				
 			<li class="grow-xs-1"><a href="#flexboxgrid" class="d-b p10 bgc-gray-7 mt20 c-white-0">FlexboxGrid</a></li>
-			<li class="grow-xs-1"><a href="#media" class="d-b p10 bgc-gray-7 mt20 c-white-0">Media</a></li>
+			<li class="grow-xs-1"><a href="#color" class="d-b p10 bgc-gray-7 mt20 c-white-0">Opencolor</a></li>		
 			<li class="grow-xs-1"><a href="#dh" class="d-b p10 bgc-gray-7 mt20 c-white-0">动画</a></li>
 		</ul>
 	</div>
 </div>
 
 <div class="bgc-gray-1">
-<div id="attr"></div>
+<div id="emmet"></div>
 <div class="container">	
 	<div class="row">	
-		<div class="col-xs-12 fz50 mt30">Attr.css</div>
-		<div class="col-xs-12 fz24 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">基于Emmet命名的css属性简单易懂，同时也方便转换。</div>			
+		<div class="col-xs-12 fz50 mt30">Emmet.css</div>
+		<div class="col-xs-12 fz24 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">【属性部分】基于Emmet命名的css属性简单易懂，同时也方便转换。</div>			
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mt20 mb20 c-blue-7">visibility</div>
@@ -556,16 +553,8 @@
 			</div>			
 		</div>				
 </div>
-</div>
-</div>
-
-<div class="bgc-gray-1">
-<div id="box"></div>
-<div class="container">	
 	<div class="row">	
-	<div class="col-xs-12 fz50 mt30">Box.css</div>
-		<div class="col-xs-12 fz24 fz-sm-16 lh40 mb20 bdb_1-solid bdc-gray-4">基于Emmet命名的css属性连接数字，方便省心。Emmet默认的单位是px，其它单位为 p → %、e → em、x → ex</div>
-		
+		<div class="col-xs-12 fz24 fz-sm-16 lh40 mb20 bdb_1-solid bdc-gray-4">【模盒部分】基于Emmet命名的css属性连接数字，方便省心。Emmet默认的单位是px，其它单位为 p → %、e → em、x → ex</div>
 		<div class="col-xs-12">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">(font-size、line-height、text-indent、border-spacing)-(0-100)</div>	
@@ -706,17 +695,17 @@
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">z-index(0-10)</div>	
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.z0</span> {z-index: 0; }</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.z1</span> {z-index: 1; }</code></pre>
 			</div>			
 			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.z5</span> {z-index: 5; }</code></pre>
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.z4</span> {z-index: 4; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.z7</span> {z-index: 7; }</code></pre>
 			</div>
 			<div class="col-sm-6 mb20">
 			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.z10</span> {z-index: 10; }</code></pre>
 			</div>
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.z2147483647</span> {z-index: 2147483647; }</code></pre>
-			</div>	
 			</div>			
 		</div>
 		
@@ -786,115 +775,10 @@
 			</div>			
 		</div>
 	</div>
-	</div>
-	</div>
+</div>
+</div>
 	
-<div class="bgc-white-0">
-<div id="color"></div>
-<div class="container">	
-	<div class="row">	
-		<div class="col-xs-12 fz50 mt30">Color.css</div>
-		<div class="col-xs-12 fz24 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">基于open-color.css颜色值，添加字体、背景、轮廓、边框颜色属性</div>
-		<div class="col-xs-12 ta-c">
-			<img src="assets/color.svg" alt="" class="w100p">
-		</div>		
-		<div class="col-xs-12">
-		<div class="row fz24 fz-sm-16">		
-		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">字体颜色</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-white-0 </span> {color: #fff; }</code></pre>
-			</div>			
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-black-0</span> {color: #000; }</code></pre>
-			</div>
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-gray-0</span> {color: #f8f9fa;}</code></pre>
-			</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-gray-9</span> {color: #212529;}</code></pre>
-			</div>
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-orange-0</span> {color: #fff4e6;}</code></pre>
-			</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-orange-9</span> {color: #d9480f;}</code></pre>
-			</div>																																
-			</div>
-		</div>
-		<div class="col-xs-12">
-		<div class="row fz24 fz-sm-16">		
-		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">背景颜色</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-white-0 </span> {background-color: #fff; }</code></pre>
-			</div>			
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-black-0</span> {background-color: #000; }</code></pre>
-			</div>
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-gray-0</span> {background-color: #f8f9fa;}</code></pre>
-			</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-gray-9</span> {background-color: #212529;}</code></pre>
-			</div>
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-orange-0</span> {background-color: #fff4e6;}</code></pre>
-			</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-orange-9</span> {background-color: #d9480f;}</code></pre>
-			</div>																																
-			</div>
-		</div>
-		
-		<div class="col-xs-12">
-		<div class="row fz24 fz-sm-16">		
-		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">轮廓颜色</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-white-0 </span> {outline-color: #fff; }</code></pre>
-			</div>			
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-black-0</span> {outline-color: #000; }</code></pre>
-			</div>
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-gray-0</span> {outline-color: #f8f9fa;}</code></pre>
-			</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-gray-9</span> {outline-color: #212529;}</code></pre>
-			</div>
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-orange-0</span> {outline-color: #fff4e6;}</code></pre>
-			</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-orange-9</span> {outline-color: #d9480f;}</code></pre>
-			</div>																																
-			</div>
-		</div>
-		
-		<div class="col-xs-12">
-		<div class="row fz24 fz-sm-16">		
-		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">边框颜色</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-white-0 </span> {border-color: #fff; }</code></pre>
-			</div>			
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-black-0</span> {border-color: #000; }</code></pre>
-			</div>
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-gray-0</span> {border-color: #f8f9fa;}</code></pre>
-			</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-gray-9</span> {border-color: #212529;}</code></pre>
-			</div>
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-orange-0</span> {border-color: #fff4e6;}</code></pre>
-			</div>	
-			<div class="col-sm-6 mb20">
-			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-orange-9</span> {border-color: #d9480f;}</code></pre>
-			</div>																																
-			</div>
-		</div>	
-</div>
-</div>
-</div>
+
 
 <div class="bgc-gray-1">
 <div id="flexboxgrid"></div>
@@ -1150,15 +1034,8 @@
 		</div>
 		</div>
 </div>
-</div>
-</div>
-
-<div class="bgc-gray-1">
-<div id="media"></div>
-<div class="container">
 	<div class="row">
-		<div class="col-xs-12 fz50 mt30">Media.css</div>
-		<div class="col-xs-12 fz24 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">与flexboxgrid.css配合使用，基于上面的Attr.css和Box.css两个文件，抽取部分属性，为其添加栅格标示，方便响应式的网站调用,可以添加自己需要的属性。(这里没有xs标示是因为Attr.css和Box.css本身充当移动端或者固定布局标示)</div>
+		<div class="col-xs-12 fz24 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">【栅格调整】基于上面的Emmet.css文件，抽取部分属性，为其添加栅格标示，方便响应式的网站调用,可以添加自己需要的属性。(这里没有xs标示是因为Emmet.css本身充当移动端或者固定布局标示)</div>
 		<div class="col-xs-12 mt30">
 		<div class="row fz24 fz-sm-16">		
 		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">(display、float、position、text-align)-(sm-md-lg)-(属性值)</div>	
@@ -1199,6 +1076,114 @@
 	</div>
 </div>
 </div>
+
+<div class="bgc-white-0">
+<div id="color"></div>
+<div class="container">	
+	<div class="row">	
+		<div class="col-xs-12 fz50 mt30">Color.css</div>
+		<div class="col-xs-12 fz24 fz-sm-16 lh40 bdb_1-solid bdc-gray-4">基于open-color.css颜色值，添加字体、背景、轮廓、边框颜色属性</div>
+		<div class="col-xs-12 ta-c">
+			<img src="assets/color.svg" alt="" class="w100p">
+		</div>		
+		<div class="col-xs-12">
+		<div class="row fz24 fz-sm-16">		
+		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">字体颜色</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-white-0 </span> {color: #fff; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-black-0</span> {color: #000; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-gray-0</span> {color: #f8f9fa;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-gray-9</span> {color: #212529;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-orange-0</span> {color: #fff4e6;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.c-orange-9</span> {color: #d9480f;}</code></pre>
+			</div>																																
+			</div>
+		</div>
+		<div class="col-xs-12">
+		<div class="row fz24 fz-sm-16">		
+		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">背景颜色</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-white-0 </span> {background-color: #fff; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-black-0</span> {background-color: #000; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-gray-0</span> {background-color: #f8f9fa;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-gray-9</span> {background-color: #212529;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-orange-0</span> {background-color: #fff4e6;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bgc-orange-9</span> {background-color: #d9480f;}</code></pre>
+			</div>																																
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz24 fz-sm-16">		
+		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">轮廓颜色</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-white-0 </span> {outline-color: #fff; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-black-0</span> {outline-color: #000; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-gray-0</span> {outline-color: #f8f9fa;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-gray-9</span> {outline-color: #212529;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-orange-0</span> {outline-color: #fff4e6;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.olc-orange-9</span> {outline-color: #d9480f;}</code></pre>
+			</div>																																
+			</div>
+		</div>
+		
+		<div class="col-xs-12">
+		<div class="row fz24 fz-sm-16">		
+		<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">边框颜色</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-white-0 </span> {border-color: #fff; }</code></pre>
+			</div>			
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-black-0</span> {border-color: #000; }</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-gray-0</span> {border-color: #f8f9fa;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-gray-9</span> {border-color: #212529;}</code></pre>
+			</div>
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-orange-0</span> {border-color: #fff4e6;}</code></pre>
+			</div>	
+			<div class="col-sm-6 mb20">
+			<pre class="pl10 lh40 bdrs10 bgc-gray-3"><code><span class="c-blue-7">.bdc-orange-9</span> {border-color: #d9480f;}</code></pre>
+			</div>																																
+			</div>
+		</div>	
+</div>
+</div>
+</div>
+
 
 <div class="bgc-white-0">
 <div id="dh"></div>	
