@@ -57,10 +57,15 @@ $nb: 100%; $column: 12;
 	.as-#{$grid}-#{$val}{align-self: $direction;}	
 	}	
 
-	$order: (first, -1),(same, 0),(last, 1);
+	$order: (first, -1),(last, 999);
 	@each $val, $direction in $order {		
 	.order-#{$grid}-#{$val}{order: $direction;}	
 	}
+
+	@for $i from 0 through $column{
+	.order-#{$grid}-#{$i}{order: $i;}
+	}
+
 }
 
 @include flexboxgrid (xs){}
