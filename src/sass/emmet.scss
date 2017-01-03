@@ -133,8 +133,6 @@ $ols:outline-style
 @for $i from 0 through 100 {
 //字体大小//
 .fz#{$i}{font-size:$i + px;}
-//行高//
-.lh#{$i}{line-height:$i + px;}
 //段落缩进//
 .ti#{$i}{text-indent:$i + px;}
 //单元格与边框之间的距离//	
@@ -188,7 +186,7 @@ $border:dotted, dashed, solid, double;
 }
 
 //-----------------------------行高百分比-------------------------------//
-@for $i from 10 through 20 {.lh#{$i*10}p{line-height: $i*10 + %;}}
+@for $i from 10 through 100 {.lh#{$i*10}p{line-height: $i*10 + %;}}
 
 //-----------------------------宽度百分比-------------------------------//
 .w0p{width:$nb0;}.w25p{width:$nb25;}.w50p{width:$nb50;}.w75p{width:$nb75;}.w100p{width:$nb100;}

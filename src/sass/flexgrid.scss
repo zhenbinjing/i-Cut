@@ -138,7 +138,7 @@ $flexboxgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
 	.bdls-#{$grid}-n{border-left-style: none;}
 
 	@for $i from 0 through 100 {.fz-#{$grid}-#{$i}{font-size:$i + px;}}
-	@for $i from 0 through 100 {.lh-#{$grid}-#{$i}{line-height:$i + px;}}
+	@for $i from 10 through 100 {.lh-#{$grid}-#{$i*10}p{line-height: $i*10 + %;}}
 	@for $i from 0 through 100 {.ti-#{$grid}-#{$i}{text-indent:$i + px;}}
 	
 	@for $i from 0 through 100 {
