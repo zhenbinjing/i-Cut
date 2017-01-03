@@ -47,13 +47,14 @@
 #nav .row { margin-left: -0.08rem; margin-right: -0.08rem; }
 #nav [class*="grow-"] { padding-right: 0.08rem; padding-left: 0.08rem; }
 
-#emimg,#emmet,#flexboxgrid,#color,#animate{height: .6rem;}
+#emimg,#emmet,#flexgrid,#color,#animate{height: .6rem;}
 #nav {position: static; width: 100%;}
 .current a{background: #1c7cd6;}
 @media only screen and (min-width: 751px) {
 	.fz-sm-16{font-size: .16rem;}
 	.fz-sm-20{font-size: .2rem;}
-	#emimg,#emmet,#flexboxgrid,#color,#animate{height: .5rem;}
+	.fz-sm-30{font-size: .3rem;}
+	#emimg,#emmet,#flexgrid,#color,#animate{height: .5rem;}
 }
 	
 /*摇晃*/
