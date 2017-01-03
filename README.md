@@ -33,6 +33,6 @@ style.css 是组件、功能性类、特殊类的公共样式表。
 
 ##PC端(响应式)开发
 
-栅格宽度和媒体查询尺寸在 src/sass/flexboxgrid.scss 中对应以及修改。[响应式：Demo](http://i-cut.cc/dist/flexboxgrid.html)
+栅格宽度和媒体查询尺寸在 src/sass/flexgrid.scss 中对应以及修改。[响应式：Demo](http://i-cut.cc/dist/flexboxgrid.html)
 
 推荐两款插件：[Assistor PS](http://witstudio.net/) 与 [Zeplin](https://zeplin.io/)，最新版的 [PS CC](http://www.adobe.com/products/photoshop.html) 已经集成部分功能。[点击查看 Zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)
