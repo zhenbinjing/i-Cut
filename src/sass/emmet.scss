@@ -5,7 +5,7 @@ $b:bottom; $c:center; $l:left; $r:right; $t:top;
 //边框样式//
 $dt:dotted; $ds:dashed; $sl:solid; $du:double;
 //常用数值//
-$nb0:0; $nb25:25%; $nb50:50%; $nb75:75%; $nb100:100%;
+$nb0:0; $nb50:50%; $nb100:100%;
 
 //======================================attr=======================================//
 
@@ -189,7 +189,7 @@ $border:dotted, dashed, solid, double;
 @for $i from 10 through 100 {.lh#{$i*10}p{line-height: $i*10 + %;}}
 
 //-----------------------------宽度百分比-------------------------------//
-.w0p{width:$nb0;}.w25p{width:$nb25;}.w50p{width:$nb50;}.w75p{width:$nb75;}.w100p{width:$nb100;}
+@for $i from 0 through 100 {.w#{$i}p{width: $i + %;}}
 
 //-----------------------------背景百分比定位-------------------------------//
 .bgp_50p0  { background-position: $nb50 $nb0; }//top center//
