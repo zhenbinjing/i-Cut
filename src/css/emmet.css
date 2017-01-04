@@ -16,6 +16,17 @@
 .d-ib {
   display: inline-block; }
 
+.d-f {
+ display: -webkit-flex;
+ display: -moz-flex;
+ display: -ms-flex;
+ display: -o-flex;
+ display: flex; }
+
+.d-g{
+ display: -ms-grid;
+ display: grid; }
+
 .d-li {
   display: list-item; }
 
