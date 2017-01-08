@@ -1,4 +1,4 @@
-﻿/*! flexbox-grid 栅格 1rem=100px*/
+﻿/*! flex-grid 栅格 1rem=100px*/
 
 $sg: 0.15rem;
 $w1: 751px; $ww1: 750px;
@@ -21,14 +21,13 @@ $grids: 100; $gap: 100;
 [class*="col-"],[class*="grow-"]{@include pdsg;}
 [class*="col-"]{flex-basis: $nb; max-width: $nb;}
 
-@mixin flexboxgrid ($grid){
+@mixin flexgrid ($grid){
 	@content;
 	
 	//flex
-	@for $i from 1 through $column {.col-#{$grid}-#{$i}{flex-basis: $nb / $column * $i; max-width: $nb / $column * $i}}
-	@for $i from 0 through $column {.grow-#{$grid}-#{$i}{flex-grow: $i;}}
-	@for $i from 0 through $column {.shrink-#{$grid}-#{$i}{flex-shrink: $i;}}	
-	@for $i from 0 through ($column - 1) {.offset-#{$grid}-#{$i}{margin-left: $nb / $column * $i;}}
+	@for $i from 1 through $column { .col-#{$grid}-#{$i}{flex-basis: $nb / $column * $i; max-width: $nb / $column * $i} }
+	@for $i from 0 through $column { .grow-#{$grid}-#{$i}{flex-grow: $i;} .shrink-#{$grid}-#{$i}{flex-shrink: $i;} }
+	@for $i from 0 through ($column - 1) { .offset-#{$grid}-#{$i}{margin-left: $nb / $column * $i;} }
 		
 	$fxd: (row, row),(rr, row-reverse),(cn, column),(cr,column-reverse );
 	@each $val, $direction in $fxd {		
@@ -69,19 +68,30 @@ $grids: 100; $gap: 100;
 	.order-#{$grid}-#{$i}{order: $i;}
 	}
 
-    //Grid
-	//设置单元格的行列
+	//Grid
+	
 	@for $i from 1 through $grids {
+		
+	//设置重复性单元格的行列
 		.gtr-#{$grid}-#{$i}{ grid-template-rows: repeat($i, 1fr); }
-		.gtc-#{$grid}-#{$i}{ grid-template-columns: repeat($i, 1fr); }	
+		.gtc-#{$grid}-#{$i}{ grid-template-columns: repeat($i, 1fr); }		
+
+	//单元格的顺序与合并个数	
+		.grs-#{$grid}-#{$i}{ grid-row-start: $i ;}
+		.gre-#{$grid}-#{$i}{ grid-row-end: $i ;}
+		.gcs-#{$grid}-#{$i}{ grid-column-start: $i ;}	
+		.gce-#{$grid}-#{$i}{ grid-column-end: $i ;}
+
+		.grsm-#{$grid}-#{$i}{ grid-row-start: span $i ;}	
+		.grem-#{$grid}-#{$i}{ grid-row-end: span $i ;}	
+		.gcsm-#{$grid}-#{$i}{ grid-column-start: span $i ;}
+		.gcem-#{$grid}-#{$i}{ grid-column-end: span $i ;}		
 	}
 
-	//合并单元格的顺序与个数
-	@for $i from 1 through $grids {
-		.grs-#{$grid}-#{$i}{ grid-row-start: $i ;}
-		.gre-#{$grid}-#{$i}{ grid-row-end: span $i ;}	
-		.gcs-#{$grid}-#{$i}{ grid-column-start: $i ;}
-		.gce-#{$grid}-#{$i}{ grid-column-end: span $i ;}		
+	//设置单元格宽度与高度
+	@for $i from 2 through 60 {
+		.gar-#{$grid}-#{$i*10}{ grid-auto-rows: $i*10 + px ;}
+		.gtca-#{$grid}-#{$i*10}{ grid-template-columns: repeat(auto-fill, minmax($i*10 + px,1fr)) ;}		
 	}
 
 	//单元格的行列间距
@@ -99,12 +109,12 @@ $grids: 100; $gap: 100;
 
 }
 
-@include flexboxgrid (xs){}
-$flexboxgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
-@each $grid, $w, $ww in $flexboxgrid-data {
+@include flexgrid (xs){}
+$flexgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
+@each $grid, $w, $ww in $flexgrid-data {
 	@media only screen and (min-width: $w){		
 		.container{width: $ww;}		
-		@include flexboxgrid ($grid){}	
+		@include flexgrid ($grid){}	
 	}	
 }
 
