@@ -1,24 +1,26 @@
 ﻿/*! flex-grid 栅格 1rem=100px*/
 
-$sg: 15;
+$sg: .15rem;
 $w1: 751; $ww1: 750;
 $w2: 992; $ww2: 970;
 $w3: 1200; $ww3: 1170;
 $nb: 100; $column: 12;
 
 @mixin bs {box-sizing: border-box;}
-@mixin pdsg {padding-right: $sg + px; padding-left: $sg + px;}
+@mixin pdsg {padding-right: $sg; padding-left: $sg;}
 @mixin mlra {margin-left: auto; margin-right: auto;}
-@mixin mgsg {margin-left: -$sg + px; margin-right: -$sg + px;}
+@mixin mgsg {margin-left: -$sg; margin-right: -$sg;}
 
 * {@include bs;}
 *:before,*:after {@include bs;}
 .container {/*! width: 100%!important; max-width:1200px; 去掉注释开启适屏模式*/}
-.container,.container-fluid {@include mlra; @include pdsg; display: grid;}
+.container,.container-fluid {@include mlra; @include pdsg; }
 
 .row{display: flex; flex-flow:row wrap; @include mgsg;}
 [class*="col-"],[class*="grow-"]{@include pdsg;}
 [class*="col-"]{flex-basis: $nb + %; max-width: $nb + %;}
+
+.grid,.grid-fluid{display: grid; width: $nb + %; @include mlra;}
 
 @mixin flexgrid ($grid){
 	@content;
@@ -112,7 +114,7 @@ $nb: 100; $column: 12;
 $flexgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
 @each $grid, $w, $ww in $flexgrid-data {
 	@media only screen and (min-width: $w + px){		
-		.container{width: $ww + px;}		
+		.container，.grid{width: $ww + px;}
 		@include flexgrid ($grid){}	
 	}	
 }

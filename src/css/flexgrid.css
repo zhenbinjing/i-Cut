@@ -15,10 +15,8 @@
 .container, .container-fluid {
   margin-left: auto;
   margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  display: -ms-grid;
-  display: grid; }
+  padding-right: .15rem;
+  padding-left: .15rem; }
 
 .row {
   display: -webkit-box;
@@ -29,12 +27,18 @@
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin-left: -15px;
-  margin-right: -15px; }
+  margin-left: -.15rem;
+  margin-right: -.15rem; }
+
+.grid,.grid-fluid {
+	display: grid;
+	width: 100%; 
+	margin-left: auto;
+	margin-right: auto; }
 
 [class*="col-"], [class*="grow-"] {
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: .15rem;
+  padding-left: .15rem; }
 
 [class*="col-"] {
   -webkit-flex-basis: 100%;
@@ -2809,7 +2813,7 @@
   grid-auto-flow: column dense; }
 
 @media only screen and (min-width: 751px) {
-  .container {
+  .container,.grid {
     width: 750px; }
   .col-sm-1 {
     -webkit-flex-basis: 8.33333%;
@@ -4819,7 +4823,7 @@
     grid-auto-flow: column dense; } }
 
 @media only screen and (min-width: 992px) {
-  .container {
+  .container,.grid {
     width: 970px; }
   .col-md-1 {
     -webkit-flex-basis: 8.33333%;
@@ -6829,7 +6833,7 @@
     grid-auto-flow: column dense; } }
 
 @media only screen and (min-width: 1200px) {
-  .container {
+  .container,.grid {
     width: 1170px; }
   .col-lg-1 {
     -webkit-flex-basis: 8.33333%;
