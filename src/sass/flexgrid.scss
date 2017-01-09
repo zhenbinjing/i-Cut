@@ -1,16 +1,15 @@
 ﻿/*! flex-grid 栅格 1rem=100px*/
 
-$sg: 0.15rem;
-$w1: 751px; $ww1: 750px;
-$w2: 992px; $ww2: 970px;
-$w3: 1200px; $ww3: 1170px;
-$nb: 100%; $column: 12;
-$grids: 100; $gap: 100;
+$sg: 15;
+$w1: 751; $ww1: 750;
+$w2: 992; $ww2: 970;
+$w3: 1200; $ww3: 1170;
+$nb: 100; $column: 12;
 
 @mixin bs {box-sizing: border-box;}
-@mixin pdsg {padding-right: $sg; padding-left: $sg;}
+@mixin pdsg {padding-right: $sg + px; padding-left: $sg + px;}
 @mixin mlra {margin-left: auto; margin-right: auto;}
-@mixin mgsg {margin-left: -$sg; margin-right: -$sg;}
+@mixin mgsg {margin-left: -$sg + px; margin-right: -$sg + px;}
 
 * {@include bs;}
 *:before,*:after {@include bs;}
@@ -19,15 +18,15 @@ $grids: 100; $gap: 100;
 
 .row{display: flex; flex-flow:row wrap; @include mgsg;}
 [class*="col-"],[class*="grow-"]{@include pdsg;}
-[class*="col-"]{flex-basis: $nb; max-width: $nb;}
+[class*="col-"]{flex-basis: $nb + %; max-width: $nb + %;}
 
 @mixin flexgrid ($grid){
 	@content;
 	
 	//flex
-	@for $i from 1 through $column { .col-#{$grid}-#{$i}{flex-basis: $nb / $column * $i; max-width: $nb / $column * $i} }
-	@for $i from 0 through $column { .grow-#{$grid}-#{$i}{flex-grow: $i;} .shrink-#{$grid}-#{$i}{flex-shrink: $i;} }
-	@for $i from 0 through ($column - 1) { .offset-#{$grid}-#{$i}{margin-left: $nb / $column * $i;} }
+	@for $i from 1 through $column {.col-#{$grid}-#{$i}{flex-basis: $nb / $column * $i + %; max-width: $nb / $column * $i + %;}}
+	@for $i from 0 through $column {.grow-#{$grid}-#{$i}{flex-grow: $i;} .shrink-#{$grid}-#{$i}{flex-shrink: $i;}}
+	@for $i from 0 through ($column - 1) {.offset-#{$grid}-#{$i}{margin-left: $nb / $column * $i + %;}}
 		
 	$fxd: (row, row),(rr, row-reverse),(cn, column),(cr,column-reverse );
 	@each $val, $direction in $fxd {		
@@ -70,41 +69,41 @@ $grids: 100; $gap: 100;
 
 	//Grid
 	
-	@for $i from 1 through $grids {
+	@for $i from 1 through $column {
 		
 	//设置重复性单元格的行列
-		.gtr-#{$grid}-#{$i}{ grid-template-rows: repeat($i, 1fr); }
-		.gtc-#{$grid}-#{$i}{ grid-template-columns: repeat($i, 1fr); }		
+		.gtr-#{$grid}-#{$i}{grid-template-rows: repeat($i, 1fr);}
+		.gtc-#{$grid}-#{$i}{grid-template-columns: repeat($i, 1fr);}		
 
 	//单元格的顺序与合并个数	
-		.grs-#{$grid}-#{$i}{ grid-row-start: $i ;}
-		.gre-#{$grid}-#{$i}{ grid-row-end: $i ;}
-		.gcs-#{$grid}-#{$i}{ grid-column-start: $i ;}	
-		.gce-#{$grid}-#{$i}{ grid-column-end: $i ;}
+		.grs-#{$grid}-#{$i}{grid-row-start: $i;}
+		.gre-#{$grid}-#{$i}{grid-row-end: $i;}
+		.gcs-#{$grid}-#{$i}{grid-column-start: $i;}	
+		.gce-#{$grid}-#{$i}{grid-column-end: $i;}
 
-		.grsm-#{$grid}-#{$i}{ grid-row-start: span $i ;}	
-		.grem-#{$grid}-#{$i}{ grid-row-end: span $i ;}	
-		.gcsm-#{$grid}-#{$i}{ grid-column-start: span $i ;}
-		.gcem-#{$grid}-#{$i}{ grid-column-end: span $i ;}		
+		.grsm-#{$grid}-#{$i}{grid-row-start: span $i;}	
+		.grem-#{$grid}-#{$i}{grid-row-end: span $i;}	
+		.gcsm-#{$grid}-#{$i}{grid-column-start: span $i;}
+		.gcem-#{$grid}-#{$i}{grid-column-end: span $i;}		
 	}
 
 	//设置单元格宽度与高度
-	@for $i from 2 through 60 {
-		.gar-#{$grid}-#{$i*10}{ grid-auto-rows: $i*10 + px ;}
-		.gtca-#{$grid}-#{$i*10}{ grid-template-columns: repeat(auto-fill, minmax($i*10 + px,1fr)) ;}		
+	@for $i from 2 through 120 {
+		.gar-#{$grid}-#{$i*10}{grid-auto-rows: $i*10 + px;}
+		.gtca-#{$grid}-#{$i*10}{grid-template-columns: repeat(auto-fill, minmax($i*10 + px,1fr));}		
 	}
 
 	//单元格的行列间距
-	@for $i from 0 through $gap {
-		.grg-#{$grid}-#{$i}{ grid-row-gap: $i + px;}
-		.gcg-#{$grid}-#{$i}{ grid-column-gap: $i + px;}
+	@for $i from 0 through $nb {
+		.grg-#{$grid}-#{$i}{grid-row-gap: $i + px;}
+		.gcg-#{$grid}-#{$i}{grid-column-gap: $i + px;}
 		.gg-#{$grid}-#{$i}{ grid-gap: $i + px;}
 	}
 
 	//单元格的轴线
 	$gaf: (row:row, column:column, dense:dense, row-dense:row dense, column-dense: column dense);
 		@each $val, $direction in $gaf {		
-		.gaf-#{$grid}-#{$val}{ grid-auto-flow: $direction;}	
+		.gaf-#{$grid}-#{$val}{grid-auto-flow: $direction;}	
 	}
 
 }
@@ -112,8 +111,8 @@ $grids: 100; $gap: 100;
 @include flexgrid (xs){}
 $flexgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
 @each $grid, $w, $ww in $flexgrid-data {
-	@media only screen and (min-width: $w){		
-		.container{width: $ww;}		
+	@media only screen and (min-width: $w + px){		
+		.container{width: $ww + px;}		
 		@include flexgrid ($grid){}	
 	}	
 }
@@ -171,7 +170,7 @@ $flexgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
 
 $media-data: (sm, $w1),(md, $w2),(lg, $w3);
 @each $grid, $w in $media-data {
-	@media only screen and (min-width: $w){	
+	@media only screen and (min-width: $w + px){	
 		@include media ($grid){}	
 	}	
 }
