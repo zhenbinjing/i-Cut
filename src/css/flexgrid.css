@@ -2806,10 +2806,10 @@
 .gaf-xs-dense {
   grid-auto-flow: dense; }
 
-.gaf-xs-row-dense {
+.gaf-xs-rd {
   grid-auto-flow: row dense; }
 
-.gaf-xs-column-dense {
+.gaf-xs-cd {
   grid-auto-flow: column dense; }
 
 @media only screen and (min-width: 751px) {
@@ -4817,9 +4817,9 @@
     grid-auto-flow: column; }
   .gaf-sm-dense {
     grid-auto-flow: dense; }
-  .gaf-sm-row-dense {
+  .gaf-sm-rd {
     grid-auto-flow: row dense; }
-  .gaf-sm-column-dense {
+  .gaf-sm-cd {
     grid-auto-flow: column dense; } }
 
 @media only screen and (min-width: 992px) {
@@ -6827,9 +6827,9 @@
     grid-auto-flow: column; }
   .gaf-md-dense {
     grid-auto-flow: dense; }
-  .gaf-md-row-dense {
+  .gaf-md-rd {
     grid-auto-flow: row dense; }
-  .gaf-md-column-dense {
+  .gaf-md-cd {
     grid-auto-flow: column dense; } }
 
 @media only screen and (min-width: 1200px) {
@@ -8837,9 +8837,9 @@
     grid-auto-flow: column; }
   .gaf-lg-dense {
     grid-auto-flow: dense; }
-  .gaf-lg-row-dense {
+  .gaf-lg-rd {
     grid-auto-flow: row dense; }
-  .gaf-lg-column-dense {
+  .gaf-lg-cd {
     grid-auto-flow: column dense; } }
 
 @media only screen and (min-width: 751px) {
