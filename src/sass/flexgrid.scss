@@ -91,15 +91,15 @@ $nb: 100; $column: 12;
 
 	//设置单元格宽度与高度
 	@for $i from 2 through 120 {
-		.gar-#{$grid}-#{$i*10}{grid-auto-rows: $i*10 + px;}
-		.gtca-#{$grid}-#{$i*10}{grid-template-columns: repeat(auto-fill, minmax($i*10 + px,1fr));}		
+		.gar-#{$grid}-#{$i*10}{grid-auto-rows: $i/10 + rem;}
+		.gtcf-#{$grid}-#{$i*10}{grid-template-columns: repeat(auto-fill, $i/10 + rem);}	
 	}
 
 	//单元格的行列间距
-	@for $i from 0 through $nb {
-		.grg-#{$grid}-#{$i}{grid-row-gap: $i + px;}
-		.gcg-#{$grid}-#{$i}{grid-column-gap: $i + px;}
-		.gg-#{$grid}-#{$i}{ grid-gap: $i + px;}
+	@for $i from 1 through 50 {
+		.grg-#{$grid}-#{$i}{ grid-row-gap: $i/$nb + rem;}
+		.gcg-#{$grid}-#{$i}{ grid-column-gap: $i/$nb + rem;}
+		.gg-#{$grid}-#{$i}{ grid-gap: $i/$nb + rem;}
 	}
 
 	//单元格的轴线
@@ -114,7 +114,7 @@ $nb: 100; $column: 12;
 $flexgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
 @each $grid, $w, $ww in $flexgrid-data {
 	@media only screen and (min-width: $w + px){		
-		.container，.grid{width: $ww + px;}
+		.container,.grid{width: $ww + px;}
 		@include flexgrid ($grid){}	
 	}	
 }
@@ -142,30 +142,25 @@ $flexgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
 	.ta-#{$grid}-r{text-align: right;}
 	.ta-#{$grid}-j{text-align: justify;}
 
-	.bd-#{$grid}-n{border: none;}
-	.bdts-#{$grid}-n{border-top-style: none;}
-	.bdrs-#{$grid}-n{border-right-style: none;}
-	.bdbs-#{$grid}-n{border-bottom-style: none;}
-	.bdls-#{$grid}-n{border-left-style: none;}
 
-	@for $i from 0 through 100 {.fz-#{$grid}-#{$i}{font-size:$i + px;}}
+	@for $i from 0 through 100 {.fz-#{$grid}-#{$i}{font-size:$i/$nb + rem;}}
 	@for $i from 10 through 100 {.lh-#{$grid}-#{$i*10}p{line-height: $i*10 + %;}}
-	@for $i from 0 through 100 {.ti-#{$grid}-#{$i}{text-indent:$i + px;}}
+	@for $i from 0 through 100 {.ti-#{$grid}-#{$i}{text-indent:$i/$nb + rem;}}
 	
 	@for $i from 0 through 100 {
-	.p-#{$grid}-#{$i}{padding:$i + px;}
-	.pt-#{$grid}-#{$i}{padding-top:$i + px;}
-	.pr-#{$grid}-#{$i}{padding-right:$i + px;}
-	.pb-#{$grid}-#{$i}{padding-bottom:$i + px;}
-	.pl-#{$grid}-#{$i}{padding-left:$i + px;}
+	.p-#{$grid}-#{$i}{padding:$i/$nb + rem;}
+	.pt-#{$grid}-#{$i}{padding-top:$i/$nb + rem;}
+	.pr-#{$grid}-#{$i}{padding-right:$i/$nb + rem;}
+	.pb-#{$grid}-#{$i}{padding-bottom:$i/$nb + rem;}
+	.pl-#{$grid}-#{$i}{padding-left:$i/$nb + rem;}
 	}
 
 	@for $i from 0 through 100 {
-	.m-#{$grid}-#{$i}{margin:$i + px;}
-	.mt-#{$grid}-#{$i}{margin-top:$i + px;}
-	.mr-#{$grid}-#{$i}{margin-right:$i + px;}
-	.mb-#{$grid}-#{$i}{margin-bottom:$i + px;}
-	.ml-#{$grid}-#{$i}{margin-left:$i + px;}
+	.m-#{$grid}-#{$i}{margin:$i/$nb + rem;}
+	.mt-#{$grid}-#{$i}{margin-top:$i/$nb + rem;}
+	.mr-#{$grid}-#{$i}{margin-right:$i/$nb + rem;}
+	.mb-#{$grid}-#{$i}{margin-bottom:$i/$nb + rem;}
+	.ml-#{$grid}-#{$i}{margin-left:$i/$nb + rem;}
 	}
 	
 }
