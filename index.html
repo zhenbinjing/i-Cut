@@ -1259,103 +1259,7 @@
 					分享一些CSS手册与工具：<a href="http://css.doyoe.com/" target="_blank" class="c-blue-7">CSS 手册</a>、<a href="http://cssreference.io/"  target="_blank" class="c-blue-7">CSS reference</a>、<a href="http://bennettfeely.com/clippy/" target="_blank" class="c-blue-7">Clip-path</a>、<a href="http://www.cssfilters.co/" target="_blank" class="c-blue-7">CSS Filter</a>、<a href="http://thewebrocks.com/demos/3D-css-tester/" target="_blank" class="c-blue-7">CSS 3D Tester</a>、<a href="http://cubic-bezier.com/" target="_blank" class="c-blue-7">Cubic-bezier</a>、<a href="http://www.cssreflex.com/css-generators/" target="_blank" class="c-blue-7">CSS Generators</a>、<a href="http://www.cssmatic.com/" target="_blank" class="c-blue-7">CSS matic</a>
 				</p>
 			</div>
-			<div class="col-xs-12 fz30 mt30"><strong>动画秘诀</strong>  <span class="fz20 fz-sm-16">本人做的笔记，不明白自己看手册吧。</span></div>
-			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
-			一个视点（perspective）、两种模式（2D，3D）、三条轴线（X,Y,Z）、四种变化（旋转、移动 、缩放、扭曲）
-			</div>
-			<div class="col-xs-12 fz30 mt10"><strong>perspective</strong></div>	
-			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
-			perspective（视点) 眼睛到显示器的距离，数值越大，离的越远，看得越小，反之。创建3D动画必须声明的属性！定义有两种方式，一种是基于舞台 perspective:800px; 、一种是基于自身 transform：perspective(800px;)
-			</div>
-			<div class="col-xs-12 fz30 mt10"><strong>perspective-origin</strong></div>	
-			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
-			perspective-origin 此属性必须跟随上面的 perspective 一起使用！该属性作用是设置视点的观看坐标。perspective-origin(x,y)，x[left,center,right]、y[top,center,bottom]、也可以设置为百分比，可以负值。
-			</div>		
-			<div class="col-xs-12 fz30 mt10"><strong>transform-style</strong></div>
-			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
-			transform-style 设置子元素位于此元素所在平面或三维空间内。transform-style：flat | preserve-3d
-			</div>
-			<div class="col-xs-12 fz30 mt10"><strong>transform-origin</strong></div>
-			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
-			transform-origin 设置该元素按某个原点进行转换。transform-origin(x,y)，x[left,center,right]、y[top,center,bottom]、也可以设置为百分比，可以负值。
-			</div>
-			<div class="col-xs-12 fz30 mt10"><strong>backface-visibility</strong></div>
-			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
-			backface-visibility 设置一个元素背面面向用户时是否可见。backface-visibility：visible | hidden
-			</div>
-			<div class="col-xs-12 fz30 mt10"><strong>transform</strong></div>
-			<div class="col-xs-12">
-			<div class="row mt10 pb10" >
-				<div class="col-xs-12">
-				<p class="fz24 fz-sm-20 lh250p"><strong>2D</strong></p>	
-				<div class="col-xs-12 fz24 fz-sm-16">
-					<div class="row">
-						<div class="col-sm-6 mb20">
-						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">旋转：</span><code>transform:rotate() deg</code></pre>
-						</div>
-						<div class="col-sm-6 mb20">
-						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">移动：</span><code>transform:translate[X,Y](x,y) px</code></pre>
-						</div>
-						<div class="col-sm-6 mb20">
-						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">缩放：</span><code>transform:scale[X,Y](x,y) number</code></pre>
-						</div>
-						<div class="col-sm-6 mb20">
-						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">扭曲：</span><code>transform:skew[X,Y](x,y) deg</code></pre>
-						</div>
-					</div>
-				</div>			
-				</div>	
-				<div class="col-xs-12">
-				<p class="fz24 fz-sm-20 lh250p"><strong>3D</strong></p>
-				<div class="col-xs-12 fz24 fz-sm-16">
-					<div class="row">
-						<div class="col-sm-6 mb20">
-						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">旋转：</span><code>transform:rotate3d(x,y,z,deg)</code></pre>
-						</div>
-						<div class="col-sm-6 mb20">
-						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">旋转：</span><code>transform:rotate[X,Y,Z]() deg</code></pre>
-						</div>
-						<div class="col-sm-6 mb20">
-						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">移动：</span><code>transform:translate3d(x,y,z) px</code></pre>
-						</div>
-						<div class="col-sm-6 mb20">
-						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">移动：</span><code>transform:translateZ() px</code></pre>
-						</div>
-						<div class="col-sm-6 mb20">
-						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">缩放：</span><code>transform:scale3d[X,Y](x,y) number</code></pre>
-						</div>
-						<div class="col-sm-6 mb20">
-						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">缩放：</span><code>transform:scaleZ() number</code></pre>
-						</div>					
-					</div>
-				</div>
-				</div>
-			</div>
-			</div>		
-			<div class="col-xs-12 fz30 mt10"><strong>transition</strong></div>
-			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
-			<div class="row">
-				<div class="col-lg-6 col-xs-12">transition-property 过度的CSS属性 </div>
-				<div class="col-lg-6 col-xs-12">transition-duration 过度动画的执行时间 </div>
-				<div class="col-lg-6 col-xs-12">transition-timing-function 过度动画的播放类型</div>
-				<div class="col-lg-6 col-xs-12">transition-delay 过度动画延迟时间</div>
-			</div>	
-			</div>	
-			<div class="col-xs-12 fz30 mt10"><strong>animation</strong></div>
-			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">		
-				<div class="row">
-					<div class="col-xs-12">@keyframes{ 0%{属性：属性值} ... 100%{属性：属性值} } 创建动画过程</div>
-					<div class="col-lg-6 col-xs-12">animation-name 动画名字</div>
-					<div class="col-lg-6 col-xs-12">animation-duration 动画执行时间</div>
-					<div class="col-lg-6 col-xs-12">animation-timing-function 动画的播放类型</div>
-					<div class="col-lg-6 col-xs-12">animation-delay 动画延迟执行时间</div>
-					<div class="col-lg-6 col-xs-12">animation-iteration-count 动画循环次数</div>
-					<div class="col-lg-6 col-xs-12">animation-direction 动画的播放方向</div>
-					<div class="col-lg-6 col-xs-12">animation-play-state 动画运动与暂停</div>
-					<div class="col-lg-6 col-xs-12">animation-fill-mode 动画播放前后的状态</div>			
-				</div>	   
-			</div>
-			<div class="col-xs-12 fz30 mt10"><strong>animation Demo</strong></div>
+			<div class="col-xs-12 fz30 mt30"><strong>animation Demo</strong></div>
 			<div class="col-xs-12">
 			<div class="row">
 					<div class="col-lg-6 col-xs-12 ta-c mb40">
@@ -1399,6 +1303,105 @@
 					</div>					
 				</div>					
 			</div>
+			<div class="col-xs-12 fz30 mt30"><strong>动画秘诀</strong></div>
+			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
+			一个视点（perspective）、两种模式（2D，3D）、三条轴线（X,Y,Z）、四种变化（旋转、移动 、缩放、扭曲）
+			</div>
+			<div class="col-xs-12 fz30 mt10"><strong>perspective</strong></div>	
+			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
+			perspective（视点) 眼睛到显示器的距离，数值越大，离的越远，看得越小，反之。创建3D动画必须声明的属性！定义有两种方式，一种是基于舞台 perspective:800px; 、一种是基于自身 transform：perspective(800px;)
+			</div>
+			<div class="col-xs-12 fz30 mt10"><strong>perspective-origin</strong></div>	
+			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
+			perspective-origin 此属性必须跟随上面的 perspective 一起使用！该属性作用是设置视点的观看坐标。perspective-origin(x,y)，x[left,center,right]、y[top,center,bottom]、也可以设置为百分比，可以负值。
+			</div>		
+			<div class="col-xs-12 fz30 mt10"><strong>transform-style</strong></div>
+			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
+			transform-style 设置子元素位于此元素所在平面或三维空间内。transform-style：flat | preserve-3d
+			</div>
+			<div class="col-xs-12 fz30 mt10"><strong>transform-origin</strong></div>
+			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
+			transform-origin 设置该元素按某个原点进行转换。transform-origin(x,y)，x[left,center,right]、y[top,center,bottom]、也可以设置为百分比，可以负值。
+			</div>
+			<div class="col-xs-12 fz30 mt10"><strong>backface-visibility</strong></div>
+			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
+			backface-visibility 设置一个元素背面面向用户时是否可见。backface-visibility：visible | hidden
+			</div>				
+			<div class="col-xs-12 bdb_1-solid bdc-gray-4">
+			<div class="row mt10 pb10" >
+				<div class="col-xs-12 ">
+				<p class="fz30 lh250p"><strong>transform 2D</strong></p>	
+				<div class="row">
+					<div class="col-xs-12 fz24 fz-sm-16">
+					<div class="row">
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">旋转：</span><code>transform:rotate() deg</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">移动：</span><code>transform:translate[X,Y](x,y) px</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">缩放：</span><code>transform:scale[X,Y](x,y) number</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">扭曲：</span><code>transform:skew[X,Y](x,y) deg</code></pre>
+						</div>
+					</div>
+				</div>
+				</div>			
+				</div>	
+				<div class="col-xs-12 ">
+				<p class="fz30 lh250p"><strong>transform 3D</strong></p>
+				<div class="row">
+					<div class="col-xs-12 fz24 fz-sm-16 ">
+					<div class="row">
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">旋转：</span><code>transform:rotate3d(x,y,z,deg)</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">旋转：</span><code>transform:rotate[X,Y,Z]() deg</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">移动：</span><code>transform:translate3d(x,y,z) px</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">移动：</span><code>transform:translateZ() px</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">缩放：</span><code>transform:scale3d[X,Y](x,y) number</code></pre>
+						</div>
+						<div class="col-sm-6 mb20">
+						<pre class="pl10 lh250p bdrs10 bgc-gray-3"><span class="c-blue-7">缩放：</span><code>transform:scaleZ() number</code></pre>
+						</div>					
+					</div>
+				</div>
+				</div>
+				</div>
+			</div>
+			</div>		
+			<div class="col-xs-12 fz30 lh250p"><strong>transition</strong></div>
+			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">
+			<div class="row">
+				<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">transition-property 过度的CSS属性</pre></div>
+				<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">transition-duration 过度动画的执行时间</pre></div>
+				<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">transition-timing-function 过度动画的播放类型</pre></div>
+				<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">transition-delay 过度动画延迟时间</pre></div>
+			</div>	
+			</div>	
+			<div class="col-xs-12 fz30 lh250p"><strong>animation</strong></div>
+			<div class="col-xs-12 fz24 lh160p mt10 pb10 fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">		
+				<div class="row">					
+					<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">animation-name 动画名字</pre></div>
+					<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">animation-duration 动画执行时间</pre></div>
+					<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">animation-timing-function 动画的播放类型</pre></div>
+					<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">animation-delay 动画延迟执行时间</pre></div>
+					<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">animation-iteration-count 动画循环次数</pre></div>
+					<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">animation-direction 动画的播放方向</pre></div>
+					<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">animation-play-state 动画运动与暂停</pre></div>
+					<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">animation-fill-mode 动画播放前后的状态</pre></div>
+					<div class="col-lg-6 col-xs-12 mb20"><pre class="pl10 lh250p bdrs10 bgc-gray-3">@keyframes {0%{} ... 100%{}}创建动画过程</pre></div>			
+				</div>	   
+			</div>		
 		</div>
 	</div>
 </div>

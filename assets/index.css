@@ -99,9 +99,7 @@
 .ljrq{	
 	width: 1rem;
 	height: 1rem;
-	position: relative;	
 	margin: 1rem auto;
-	transform-origin: center center;
 	-webkit-animation: ljanxz 5s infinite linear;
 	        animation: ljanxz 5s infinite linear;
 }
@@ -177,8 +175,6 @@
 .he{
 	-webkit-transform-style: preserve-3d;
 	        transform-style: preserve-3d;	
-	-webkit-transform-origin: center center;	
-	        transform-origin: center center;
 	position: relative;
 	left: 50%;
 	top:50%;
