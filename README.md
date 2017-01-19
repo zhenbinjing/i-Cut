@@ -17,9 +17,7 @@ adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) �
 
 emmet.css、opencolor.css 是分别消化 [tachyons.css](https://github.com/tachyons-css/tachyons)、[universal.css](https://github.com/marmelab/universal.css)、[open-color.css](https://github.com/yeun/open-color) 而来，其都采用 [Emmet](http://docs.emmet.io/cheat-sheet/) 中的规则命名。
 
-flexgrid.css 是参考 [flexboxgrid.css](https://github.com/kristoferjoseph/flexboxgrid) 修改而成，在这基础上添加了Grid布局，打通一维二维布局，是本框架的核心之处。
-
-style.css 是组件、功能性类、特殊类的公共样式表。
+flexgrid.css 是flex与grid结合而成的框架，是本框架的核心之处。style.css 是组件类、特殊类等的公共样式表。
 
 ##开发事项
 
