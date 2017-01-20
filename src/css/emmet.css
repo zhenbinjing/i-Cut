@@ -7104,20 +7104,20 @@
 .bgp_100p0 {
   background-position: 100% 0; }
 
-.bgp_0p-50p {
-  background-position: 0 -50%; }
+.bgp_0p50p {
+  background-position: 0 50%; }
 
-.bgp_0p-100p {
-  background-position: 0 -100%; }
+.bgp_0p100p {
+  background-position: 0 100%; }
 
-.bgp_50p-50p {
-  background-position: 50% -50%; }
+.bgp_50p50p {
+  background-position: 50% 50%; }
 
-.bgp_50p-100p {
-  background-position: 50% -100%; }
+.bgp_50p100p {
+  background-position: 50% 100%; }
 
-.bgp_100p-50p {
-  background-position: 100% -50%; }
+.bgp_100p50p {
+  background-position: 100% 50%; }
 
-.bgp_100p-100p {
-  background-position: 100% -100%; }
+.bgp_100p100p {
+  background-position: 100% 100%; }

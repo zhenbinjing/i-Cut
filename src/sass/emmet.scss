@@ -194,9 +194,9 @@ $border:dotted, dashed, solid, double;
 //-----------------------------背景百分比定位-------------------------------//
 .bgp_50p0  { background-position: $nb50 $nb0; }//top center//
 .bgp_100p0 { background-position: $nb100 $nb0; }//right top//
-.bgp_0p-50p { background-position: $nb0 #{-$nb50;} }//left center//
-.bgp_0p-100p { background-position: $nb0 #{-$nb100;} }//left bottom//
-.bgp_50p-50p { background-position: $nb50 #{-$nb50;} }//center center//
-.bgp_50p-100p { background-position: $nb50 #{-$nb100;} }//bottom center//
-.bgp_100p-50p { background-position: $nb100 #{-$nb50;} }//right center//
-.bgp_100p-100p { background-position: $nb100 #{-$nb100;} }//right bottom//
+.bgp_0p50p { background-position: $nb0 $nb50; }//left center//
+.bgp_0p100p { background-position: $nb0 $nb100; }//left bottom//
+.bgp_50p50p { background-position: $nb50 $nb50; }//center center//
+.bgp_50p100p { background-position: $nb50 $nb100; }//bottom center//
+.bgp_100p50p { background-position: $nb100 $nb50; }//right center//
+.bgp_100p100p { background-position: $nb100 $nb100} }//right bottom//
