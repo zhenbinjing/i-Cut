@@ -11,15 +11,15 @@ src/
  |_ opencolor.css     
  |_ style.css		
 ```
-##CSS文件描述
+##CSS文件
 
 adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) 的，参考了 [白树](http://www.cnblogs.com/PeunZhang/p/3407453.html) 的总结定制了一些 css 以及 html 模版。 
 
 emmet.css、opencolor.css 是分别消化 [tachyons.css](https://github.com/tachyons-css/tachyons)、[universal.css](https://github.com/marmelab/universal.css)、[open-color.css](https://github.com/yeun/open-color) 而来，其都采用 [Emmet](http://docs.emmet.io/cheat-sheet/) 中的规则命名。
 
-flexgrid.css 是flex与grid结合而成的框架，是本框架的核心之处。style.css 是组件类、特殊类等的公共样式表。
+flexgrid.css 是flex与grid两种布局结合而成的核心框架。style.css 是组件类、特殊类等的公共样式表。
 
-##开发事项
+##开发工具
 
 html 头部的 js 能实现动态比例缩放，从而告别繁琐的媒体查询。预览插件：[下载地址](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?utm_source=chrome-app-launcher-info-dialog) 方便页面测试。
 
