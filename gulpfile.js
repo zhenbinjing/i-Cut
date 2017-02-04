@@ -19,7 +19,7 @@ var del = require('del');						//- 管理文件
 var y_Sz="src";								//- 生产环境路径
 var y_Dz="dist";							//- 上线环境路径
 
-gulp.task('cssall',function(){						//- 创建一个名为 concat 的 task
+gulp.task('allcss',function(){						//- 创建一个名为 concat 的 task
 	var date=new Date().getTime();					//- 创建版本时间	
 	gulp.src(['./'+y_Sz+'/css/**/*.css'])				//- 需要处理的css文件，放到一个字符串数组里	
 	.pipe(replace(/_VERSION_/gi,date))				//- 文件指纹							
@@ -43,7 +43,7 @@ gulp.task('cssall',function(){						//- 创建一个名为 concat 的 task
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				//- 输出文件本地
 });
 
-gulp.task('imagemin',function(){
+gulp.task('tinypng',function(){
 	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
 	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o'))		//- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩		
 	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
@@ -141,4 +141,4 @@ gulp.task('bs',function(){
 });
 
 //执行插件函数
-gulp.task('default',['cssall','imagemin','jsmin','jshint','processhtml','copy']);
+gulp.task('default',['allcss','tinypng','jsmin','jshint','processhtml','copy']);
