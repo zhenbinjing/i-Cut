@@ -33,14 +33,13 @@
     "gulp-concat": "^2.6.0",
     "gulp-font-spider": "^0.3.6",
     "gulp-htmlmin": "^2.0.0",
-    "gulp-jshint": "^2.0.1",
     "gulp-processhtml": "^1.1.0",
     "gulp-px3rem": "^0.3.0",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.3.2",
     "gulp-tinypng": "^1.0.2",    
-    "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6",
-    "gulp-webp": "^2.3.0"
+    "gulp-webp": "^2.3.0",
+    "webpack": "^2.2.1"
   }
 }
