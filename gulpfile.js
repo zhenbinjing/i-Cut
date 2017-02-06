@@ -35,7 +35,7 @@ gulp.task('allcss',function(){						//- 创建一个名为 concat 的 task
 	}))
 	.pipe(css64({
             extensions: ['gif','png','jpg','webp'],
-            maxImageSize: 8*1024, // bytes 
+            maxImageSize: 10*1024, // bytes 
             debug: true
         }))
 	.pipe(uncss({
@@ -56,7 +56,7 @@ gulp.task('imgmin',function(){
 
 gulp.task('img64', function() {
 	gulp.src('./src/*.html')
-        .pipe(img64({limit: '8kb'}))
+        .pipe(img64({limit: '10kb'}))
         .on("error", function(error) {
             console.error(error.toString());
             this.emit("end");
