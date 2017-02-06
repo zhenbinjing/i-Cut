@@ -6,6 +6,8 @@ var autoprefixer = require('gulp-autoprefixer');			//- 补充浏览器前缀
 var cleanCSS = require('gulp-clean-css');				//- 压缩CSS为一行
 var px3rem = require('gulp-px3rem');					//- px转rem
 var uncss = require('gulp-uncss');					//- 删除没用到的css
+var img64 = require('gulp-imgbase64');					//- img转base64
+var css64 = require('gulp-base64');					//- css文件转base64
 var sass = require('gulp-sass');					//- scss文件编译
 var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var replace = require('gulp-replace');					//- 文本替换
@@ -31,6 +33,11 @@ gulp.task('allcss',function(){						//- 创建一个名为 concat 的 task
 	cascade: true,							//- 是否美化属性值 默认：true 像这样：-webkit-transform: rotate(45deg); transform: rotate(45deg);
 	remove:true							//- 是否去掉不必要的前缀 默认：true 
 	}))
+	.pipe(css64({
+            extensions: ['gif','png','jpg','webp'],
+            maxImageSize: 8*1024, // bytes 
+            debug: true
+        }))
 	.pipe(uncss({
 	html: ['./'+y_Sz+'/**/*.html'],					//- 检查的页面
 	ignore: ['abc','.abc','#abc']					//- 忽略的标签 class or id or 分号隔开
@@ -41,10 +48,20 @@ gulp.task('allcss',function(){						//- 创建一个名为 concat 的 task
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				//- 输出文件本地
 });
 
-gulp.task('tinypng',function(){
+gulp.task('imgmin',function(){
 	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
 	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o'))		//- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩		
 	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
+});
+
+gulp.task('img64', function() {
+	gulp.src('./src/*.html')
+        .pipe(img64({limit: '8kb'}))
+        .on("error", function(error) {
+            console.error(error.toString());
+            this.emit("end");
+        })
+        .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('processhtml',function(){					//- 修改html的dom
@@ -126,4 +143,4 @@ gulp.task('bs',function(){
 });
 
 //执行插件函数
-gulp.task('default',['allcss','tinypng','processhtml','copy']);
+gulp.task('default',['allcss','imgmin','img64','processhtml','copy']);
