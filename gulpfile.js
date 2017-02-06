@@ -55,7 +55,7 @@ gulp.task('imgmin',function(){
 });
 
 gulp.task('img64', function() {
-	gulp.src('./src/*.html')
+	gulp.src('./'+y_Sz+'/*.html')
         .pipe(img64({limit: '10kb'}))
         .on("error", function(error) {
             console.error(error.toString());
