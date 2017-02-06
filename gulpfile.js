@@ -34,10 +34,10 @@ gulp.task('allcss',function(){						//- 创建一个名为 concat 的 task
 	remove:true							//- 是否去掉不必要的前缀 默认：true 
 	}))
 	.pipe(css64({
-     extensions: ['gif','png','jpg','webp'],
-     maxImageSize: 10*1024, // bytes 
-     debug: true
-     }))
+	extensions: ['gif','png','jpg','webp'],
+	maxImageSize: 10*1024, // bytes 
+	debug: true
+	}))
 	.pipe(uncss({
 	html: ['./'+y_Sz+'/**/*.html'],					//- 检查的页面
 	ignore: ['abc','.abc','#abc']					//- 忽略的标签 class or id or 分号隔开
@@ -57,19 +57,9 @@ gulp.task('vhtml',function(){					//- 修改html的dom
 });
 
 gulp.task('imgmin',function(){
-	return gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
+	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
 	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o'))		//- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩		
 	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
-});
-
-gulp.task('img64',['imgmin'],function() {
-	gulp.src('./'+y_Dz+'/**/*.html')
-    .pipe(img64({limit: '10kb'}))
-    .on("error", function(error) {
-            console.error(error.toString());
-            this.emit("end");
-    })
-    .pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
 gulp.task('fontSpider',function(){
@@ -122,7 +112,28 @@ gulp.task('webp_html',function(){
 	.pipe(processhtml())
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
- 
+
+gulp.task('css64',function(){						
+	return gulp.src(['./'+y_Dz+'/css/**/*.css'])										
+	.pipe(css64({
+	extensions: ['gif','png','jpg','webp'],
+	maxImageSize: 10*1024, // bytes 
+	debug: true
+	}))
+	.pipe(concat('index.css'))					
+	.pipe(gulp.dest('./'+y_Dz+'/css'));				
+});
+
+gulp.task('base64',['css64'],function() {
+	gulp.src('./'+y_Dz+'/**/*.html')
+   	.pipe(img64({limit: '10kb'}))
+   	.on("error", function(error) {
+         console.error(error.toString());
+         this.emit("end");
+  	 })
+   	 .pipe(gulp.dest('./'+y_Dz+'/'));
+});
+
 gulp.task('htmlmin',function(){										
 	var options = {
 	removeComments: true,						//- 清除HTML注释
@@ -143,4 +154,4 @@ gulp.task('bs',function(){
 });
 
 //执行插件函数
-gulp.task('default',['allcss','vhtml','img64','copy']);
+gulp.task('default',['allcss','imgmin','vhtml','copy']);
