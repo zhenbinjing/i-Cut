@@ -6,5 +6,6 @@ TouchSlide({
 	  mainCell:".bd ul", 
 	  effect:"left", 
 	  autoPlay:true,//自动播放
-	  autoPage:true //自动分页
+	  autoPage:true,//自动分页
+	  switchLoad:"_src"
 });
