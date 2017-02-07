@@ -117,7 +117,7 @@ gulp.task('css64',function(){
 	return gulp.src(['./'+y_Dz+'/css/**/*.css'])										
 	.pipe(css64({
 	extensions: ['gif','png','jpg','webp'],
-	maxImageSize: 10*1024, // bytes 
+	maxImageSize: 8*1024, // bytes 
 	debug: true
 	}))
 	.pipe(concat('index.css'))					
@@ -126,7 +126,7 @@ gulp.task('css64',function(){
 
 gulp.task('base64',['css64'],function() {
 	gulp.src('./'+y_Dz+'/**/*.html')
-   	.pipe(img64({limit: '10kb'}))
+   	.pipe(img64({limit: '8kb'}))
    	.on("error", function(error) {
          console.error(error.toString());
          this.emit("end");
