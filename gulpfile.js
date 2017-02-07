@@ -16,10 +16,10 @@ var htmlmin = require('gulp-htmlmin');					//- html压缩
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 管理文件
 
-var y_Sz="src";								//- 生产环境路径
+var y_Sz="src";								//- 源码环境路径
 var y_Dz="dist";							//- 上线环境路径
 
-gulp.task('allcss',function(){						//- 创建一个名为 concat 的 task
+gulp.task('allcss',function(){						
 	var date=new Date().getTime();					//- 创建版本时间	
 	gulp.src(['./'+y_Sz+'/css/**/*.css'])				//- 需要处理的css文件，放到一个字符串数组里	
 	.pipe(replace(/_VERSION_/gi,date))				//- 文件指纹							
@@ -48,7 +48,7 @@ gulp.task('allcss',function(){						//- 创建一个名为 concat 的 task
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				//- 输出文件本地
 });
 
-gulp.task('vhtml',function(){					//- 修改html的dom
+gulp.task('vhtml',function(){						//- 修改html的dom
 	var date = new Date().getTime();
 	gulp.src('./'+y_Sz+'/**/*.html')
 	.pipe(replace(/_VERSION_/gi, date))
@@ -76,7 +76,7 @@ gulp.task('copy',['fontSpider'],function(){				//- 先把fs命令执行完后，
 	.pipe(gulp.dest('./'+y_Dz+'/icon'));
 });
 
-/*-------------sass,webp,htmlmin,bs这些命令需要时手动添加执行-----------------*/
+/*-------------(sass,webp,,base64,htmlmin,bs)需要时手动添加执行-----------------*/
 
 gulp.task('sass', function () {
 	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
@@ -149,7 +149,7 @@ gulp.task('htmlmin',function(){
 gulp.task('bs',function(){
 	browserSync({
 	files: "**",							//- 监控所有文件
-	server: {baseDir: './'+y_Sz+'/'}				//- 目标文件夹路径
+	server: {baseDir: './'+y_Dz+'/'}				//- 目标文件夹路径
 	});
 });
 
