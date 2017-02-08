@@ -33,11 +33,6 @@ gulp.task('allcss',function(){
 	cascade: true,							//- 是否美化属性值 默认：true 像这样：-webkit-transform: rotate(45deg); transform: rotate(45deg);
 	remove:true							//- 是否去掉不必要的前缀 默认：true 
 	}))
-	.pipe(css64({
-	extensions: ['gif','png','jpg','webp'],
-	maxImageSize: 10*1024, // bytes 
-	debug: true
-	}))
 	.pipe(uncss({
 	html: ['./'+y_Sz+'/**/*.html'],					//- 检查的页面
 	ignore: ['abc','.abc','#abc']					//- 忽略的标签 class or id or 分号隔开
@@ -86,19 +81,13 @@ gulp.task('sass', function () {
  
 gulp.task('sass:watch', function () {
 	gulp.watch('./'+y_Sz+'/sass/**/*.scss', ['sass']);
-});
+});	 
 
-gulp.task('webp',['webp_img'],function(){
+gulp.task('webp',['webp_css'],function(){
 	del(['./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}', '!./'+y_Dz+'/img/**/*.{webp}']).then(paths => {
 	console.log('Deleted files and folders:\n', paths.join('\n'));
 	});	 
 });	 
-
-gulp.task('webp_img',['webp_css'],function(){
-	return gulp.src('./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}')	
-	.pipe(webp())
-	.pipe(gulp.dest('./'+y_Dz+'/img/'))
-});
 
 gulp.task('webp_css',['webp_html'],function(){
 	return gulp.src(['./'+y_Dz+'/css/**/*.css'])	
@@ -106,11 +95,17 @@ gulp.task('webp_css',['webp_html'],function(){
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				
 });
 
-gulp.task('webp_html',function(){					
+gulp.task('webp_html',['webp_img'],function(){					
 	return gulp.src('./'+y_Dz+'/**/*.html')
 	.pipe(replace(/.(jpg|png|gif)/gi,'.webp'))
 	.pipe(processhtml())
 	.pipe(gulp.dest('./'+y_Dz+'/'));
+});
+
+gulp.task('webp_img',function(){
+	return gulp.src('./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}')	
+	.pipe(webp())
+	.pipe(gulp.dest('./'+y_Dz+'/img/'))
 });
 
 gulp.task('css64',function(){						
