@@ -33,6 +33,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-font-spider": "^0.3.6",
     "gulp-htmlmin": "^2.0.0",
+    "gulp-base64": "^0.1.3",
     "gulp-imgbase64": "^0.0.5",
     "gulp-processhtml": "^1.1.0",
     "gulp-px3rem": "^0.3.0",
