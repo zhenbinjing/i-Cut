@@ -119,7 +119,7 @@ gulp.task('css64',function(){
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				
 });
 
-gulp.task('base64',['css64'],function() {
+gulp.task('base64',['css64'],function() {				//- 插件不支持wepb转换，需要手动修改index.js，把jpeg修改为webp
 	gulp.src('./'+y_Dz+'/**/*.html')
    	.pipe(img64({limit: '8kb'}))
    	.on("error", function(error) {
