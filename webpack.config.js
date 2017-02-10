@@ -3,7 +3,8 @@ var webpack = require("webpack");
 module.exports = {
     entry:[ //接入
 	"./src/js/scrollLoad.js",
-	"./src/js/ts.js" 
+	"./src/js/ts.js", 
+	"./src/js/es6.js",
 	],
     output:{//产出
         path:path.join(__dirname, "./dist/js"),

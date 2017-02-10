@@ -1,18 +1,22 @@
 ﻿var gulp = require('gulp');
 var concat = require('gulp-concat');					//- 多个文件合并为一个
-var tinypng = require('gulp-tinypng');					//- png图片压缩
-var webp = require('gulp-webp');					//- 转webp图片
+var replace = require('gulp-replace');					//- 文本替换
 var autoprefixer = require('gulp-autoprefixer');			//- 补充浏览器前缀
 var cleanCSS = require('gulp-clean-css');				//- 压缩CSS为一行
 var px3rem = require('gulp-px3rem');					//- px转rem
 var uncss = require('gulp-uncss');					//- 删除没用到的css
-var img64 = require('gulp-imgbase64');					//- img转base64
-var css64 = require('gulp-base64');					//- css文件转base64
 var sass = require('gulp-sass');					//- scss文件编译
+var css64 = require('gulp-base64');					//- css文件转base64
+var img64 = require('gulp-imgbase64');					//- img转base64
+var tinypng = require('gulp-tinypng');					//- png图片压缩
+var webp = require('gulp-webp');					//- 转webp图片
 var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
-var replace = require('gulp-replace');					//- 文本替换
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
+var jshint = require('gulp-jshint'); 					// 校验js的工具
+var uglify = require('gulp-uglify'); 					// 压缩js
+var plumber = require('gulp-plumber'); 					// 例外处理
+var babel = require('gulp-babel'); 					// es6编译环境
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 管理文件
 
@@ -71,6 +75,28 @@ gulp.task('copy',['fontSpider'],function(){				//- 先把fs命令执行完后，
 	.pipe(gulp.dest('./'+y_Dz+'/icon'));
 });
 
+gulp.task('es6', function() {
+    return gulp.src('./'+y_Sz+'/es6/**/*.js')
+        .pipe(plumber())
+        .pipe(babel({presets: ['es2015']}))
+        .pipe(gulp.dest('./'+y_Sz+'/js'));
+});
+
+gulp.task('es6Watch', ['es6'], function() {
+    gulp.watch(['./'+y_Sz+'/es6/**/*.js'], ['es6']);
+});
+
+gulp.task('es6-build', function() {
+    gulp.src('./'+y_Sz+'/es6/**/*.js')
+        .pipe(plumber())
+        .pipe(babel({presets: ['es2015']}))
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+        .pipe(uglify())
+        .pipe(concat('build.js'))
+        .pipe(gulp.dest('./'+y_Sz+'/js'));
+});
+
 /*-------------(sass,webp,,base64,htmlmin,bs)需要时手动添加执行-----------------*/
 
 gulp.task('sass', function () {
@@ -79,7 +105,7 @@ gulp.task('sass', function () {
 	.pipe(gulp.dest('./'+y_Sz+'/sass/css/'));
 });
  
-gulp.task('sass:watch', function () {
+gulp.task('sassWatch', function () {
 	gulp.watch('./'+y_Sz+'/sass/**/*.scss', ['sass']);
 });	 
 
@@ -149,4 +175,4 @@ gulp.task('bs',function(){
 });
 
 //执行插件函数
-gulp.task('default',['allcss','imgmin','vhtml','copy']);
+gulp.task('default',['allcss','imgmin','vhtml','copy','es6']);
