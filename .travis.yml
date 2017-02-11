@@ -1,16 +1,6 @@
+sudo: false
 language: node_js
 node_js:
-  - "0.10"
-  - "0.12"
-  - "4.5.0"
-  - "5"
-  - "6"
-  - "7"
-install:
-  - npm install  
-script: gulp
-after_success: webpack
-branches:
-  only:
-    - master
-sudo: false
+  - "7.5.0"
+install: npm install
+script: npm test
