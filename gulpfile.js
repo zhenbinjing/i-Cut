@@ -32,8 +32,8 @@ gulp.task('allcss',function(){
 	'last 2 version',						//- 主流浏览器的最新两个版本
 	'ios 7',							//- IOS7版本
 	'android 2.3',							//- android 2.3版本
-	'Firefox >= 20',						//- 火狐浏览器的版本大于或等于20
-	'last 2 Explorer versions'],					//- IE的最新两个版本
+	'Firefox >= 20'						//- 火狐浏览器的版本大于或等于20
+	],					//- IE的最新两个版本 'last 2 Explorer versions'
 	cascade: true,							//- 是否美化属性值 默认：true 像这样：-webkit-transform: rotate(45deg); transform: rotate(45deg);
 	remove:true							//- 是否去掉不必要的前缀 默认：true 
 	}))
