@@ -27,16 +27,6 @@ gulp.task('allcss',function(){
 	var date=new Date().getTime();					//- 创建版本时间	
 	gulp.src(['./'+y_Sz+'/css/**/*.css'])				//- 需要处理的css文件，放到一个字符串数组里	
 	.pipe(replace(/_VERSION_/gi,date))				//- 文件指纹							
-	.pipe(autoprefixer({
-	browsers: [
-	'last 2 version',						//- 主流浏览器的最新两个版本
-	'ios 7',							//- IOS7版本
-	'android 2.3',							//- android 2.3版本
-	'Firefox >= 20'						//- 火狐浏览器的版本大于或等于20
-	],					//- IE的最新两个版本 'last 2 Explorer versions'
-	cascade: true,							//- 是否美化属性值 默认：true 像这样：-webkit-transform: rotate(45deg); transform: rotate(45deg);
-	remove:true							//- 是否去掉不必要的前缀 默认：true 
-	}))
 	.pipe(uncss({
 	html: ['./'+y_Sz+'/**/*.html'],					//- 检查的页面
 	ignore: ['abc','.abc','#abc']					//- 忽略的标签 class or id or 分号隔开
@@ -61,20 +51,6 @@ gulp.task('imgmin',function(){
 	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
 });
 
-gulp.task('fontSpider',function(){
-	return gulp.src(['./'+y_Sz+'/**/*.html'])			//- 删除多余的字体和图标，添加return返回最终的数据流
-	.pipe(fontSpider());
-});		
-
-gulp.task('copy',['fontSpider'],function(){				//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
-	gulp.src(['./'+y_Sz+'/font/**'],{				//- 被复制的文件夹下的所有文件
-	base: './'+y_Sz+'/font'})					//- 被复制的目标路径 	
-	.pipe(gulp.dest('./'+y_Dz+'/font'))				//- 输出路径	
-	gulp.src(['./'+y_Sz+'/icon/**'],{				
-	base: './'+y_Sz+'/icon'})					
-	.pipe(gulp.dest('./'+y_Dz+'/icon'));
-});
-
 gulp.task('es6', function() {
     return gulp.src('./'+y_Sz+'/es6/**/*.js')
         .pipe(plumber())
@@ -97,7 +73,7 @@ gulp.task('es6-build', function() {
         .pipe(gulp.dest('./'+y_Sz+'/js'));
 });
 
-/*-------------(sass,webp,,base64,htmlmin,bs)需要时手动添加执行-----------------*/
+/*-------------(sass,webp,zt,cssper,base64,htmlmin,bs)需要时手动添加执行-----------------*/
 
 gulp.task('sass', function () {
 	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
@@ -108,6 +84,20 @@ gulp.task('sass', function () {
 gulp.task('sassWatch', function () {
 	gulp.watch('./'+y_Sz+'/sass/**/*.scss', ['sass']);
 });	 
+
+gulp.task('fontSpider',function(){
+	return gulp.src(['./'+y_Sz+'/**/*.html'])			//- 删除多余的字体和图标，添加return返回最终的数据流
+	.pipe(fontSpider());
+});		
+
+gulp.task('zt',['fontSpider'],function(){				//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
+	gulp.src(['./'+y_Sz+'/font/**'],{				//- 被复制的文件夹下的所有文件
+	base: './'+y_Sz+'/font'})					//- 被复制的目标路径 	
+	.pipe(gulp.dest('./'+y_Dz+'/font'))				//- 输出路径	
+	gulp.src(['./'+y_Sz+'/icon/**'],{				
+	base: './'+y_Sz+'/icon'})					
+	.pipe(gulp.dest('./'+y_Dz+'/icon'));
+});
 
 gulp.task('webp',['webp_css'],function(){
 	del(['./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}', '!./'+y_Dz+'/img/**/*.{webp}']).then(paths => {
@@ -132,6 +122,22 @@ gulp.task('webp_img',function(){
 	return gulp.src('./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}')	
 	.pipe(webp())
 	.pipe(gulp.dest('./'+y_Dz+'/img/'))
+});
+
+gulp.task('cssper',function(){						
+	gulp.src(['./'+y_Dz+'/css/**/*.css'])							
+	.pipe(autoprefixer({
+	browsers: [
+	'last 2 version',						//- 主流浏览器的最新两个版本
+	'ios 7',							//- IOS7版本
+	'android 2.3',							//- android 2.3版本
+	'Firefox >= 20',						//- 火狐浏览器的版本大于或等于20
+	'last 2 Explorer versions'],					//- IE的最新两个版本 'last 2 Explorer versions'
+	cascade: true,							//- 是否美化属性值 默认：true 像这样：-webkit-transform: rotate(45deg); transform: rotate(45deg);
+	remove:true							//- 是否去掉不必要的前缀 默认：true 
+	}))
+	.pipe(concat('index.css'))					//- 合并后的文件名
+	.pipe(gulp.dest('./'+y_Dz+'/css'));				//- 输出文件本地
 });
 
 gulp.task('css64',function(){						
@@ -175,4 +181,4 @@ gulp.task('bs',function(){
 });
 
 //执行插件函数
-gulp.task('default',['allcss','imgmin','vhtml','copy','es6']);
+gulp.task('default',['allcss','imgmin','vhtml','es6']);
