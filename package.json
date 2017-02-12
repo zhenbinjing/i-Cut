@@ -41,13 +41,12 @@
 	"gulp-webp": "^2.3.0",  
 	"gulp-processhtml": "^1.1.0",
 	"gulp-htmlmin": "^3.0.0", 	  
-	"gulp-font-spider": "^0.3.6", 
+	"font-spider": "^1.3.3", 
 	"gulp-jshint": "^2.0.1",
 	"gulp-uglify": "^2.0.0",
 	"gulp-plumber": "^1.1.0",  
 	"gulp-babel": "^6.1.2",
-	"jshint": "^2.9.4",
- 
+	"jshint": "^2.9.4", 
 	"babel-preset-es2015": "^6.22.0",  
 	"webpack": "^2.2.1"
   }
