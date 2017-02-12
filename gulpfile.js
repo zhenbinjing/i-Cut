@@ -10,6 +10,7 @@ var css64 = require('gulp-base64');					//- css文件转base64
 var img64 = require('gulp-imgbase64');					//- img转base64
 var tinypng = require('gulp-tinypng');					//- png图片压缩
 var webp = require('gulp-webp');					//- 转webp图片
+var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
 var jshint = require('gulp-jshint'); 					// 校验js的工具
@@ -99,9 +100,13 @@ gulp.task('htmlmin',function(){
 	.pipe(htmlmin(options))
 	.pipe(gulp.dest('./'+y_Dz+'/'));				//- 输出路径	
 });
-	
 
-gulp.task('copy',function(){				//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
+gulp.task('fontSpider',function(){
+	return gulp.src(['./'+y_Sz+'/**/*.html'])			//- 删除多余的字体和图标，添加return返回最终的数据流
+	.pipe(fontSpider());
+});		
+
+gulp.task('fontmin',['fontSpider'],function(){				//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
 	gulp.src(['./'+y_Sz+'/font/**'],{				//- 被复制的文件夹下的所有文件
 	base: './'+y_Sz+'/font'})					//- 被复制的目标路径 	
 	.pipe(gulp.dest('./'+y_Dz+'/font'))				//- 输出路径	
@@ -183,7 +188,7 @@ gulp.task('bsWatch',function(){
 gulp.task('default',['sass','cssDeal','imgDeal','htmlDeal','es6Deal']);
 
 //push
-gulp.task('push',['htmlmin','copy','cssper','webp','base64']);
+gulp.task('push',['htmlmin','fontmin','cssper','webp','base64']);
 
 //Sync
 gulp.task('sync',['sassWatch','es6Watch','bsWatch']);
