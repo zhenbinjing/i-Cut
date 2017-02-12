@@ -26,7 +26,7 @@ var y_Dz="dist";							//- 上线环境路径
 gulp.task('sass', function () {
 	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));
+	.pipe(gulp.dest('./'+y_Sz+'/css/'));
 });
  
 gulp.task('sassWatch', function () {
