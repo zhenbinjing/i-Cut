@@ -17,15 +17,10 @@
   display: inline-block; }
 
 .d-f {
- display: -webkit-flex;
- display: -moz-flex;
- display: -ms-flex;
- display: -o-flex;
- display: flex; }
+  display: flex; }
 
-.d-g{
- display: -ms-grid;
- display: grid; }
+.d-g {
+  display: grid; }
 
 .d-li {
   display: list-item; }

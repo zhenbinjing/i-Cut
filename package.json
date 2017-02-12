@@ -40,7 +40,7 @@
 	"gulp-tinypng": "^1.0.2", 
 	"gulp-webp": "^2.3.0",  
 	"gulp-processhtml": "^1.1.0",
-	"gulp-htmlmin": "^2.0.0", 	  
+	"gulp-htmlmin": "^3.0.0", 	  
 	"gulp-font-spider": "^0.3.6", 
 	"gulp-jshint": "^2.0.1",
 	"gulp-uglify": "^2.0.0",

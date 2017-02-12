@@ -1,5 +1,5 @@
   var scrollLoad = (function (options) {
-        var defaults = (arguments.length == 0) ? { src: 'xSrc', time: 300} : { src: options.src || 'xSrc', time: options.time ||300};
+        var defaults = (arguments.length == 0) ? { src: 'xsrc', time: 300} : { src: options.src || 'xsrc', time: options.time ||300};
         var camelize = function (s) {
             return s.replace(/-(\w)/g, function (strMatch, p1) {
                 return p1.toUpperCase();
