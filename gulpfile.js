@@ -33,7 +33,7 @@ gulp.task('sassWatch', function () {
 	gulp.watch('./'+y_Sz+'/sass/**/*.scss', ['sass']);
 });	 
 
-gulp.task('cssDeal',function(){						
+gulp.task('cssDeal',['sass'],function(){						
 	var date=new Date().getTime();					//- 创建版本时间	
 	gulp.src(['./'+y_Sz+'/css/**/*.css'])				//- 需要处理的css文件，放到一个字符串数组里	
 	.pipe(replace(/_VERSION_/gi,date))				//- 文件指纹							
@@ -87,7 +87,7 @@ gulp.task('es6-build', function() {
         .pipe(gulp.dest('./'+y_Sz+'/js'));
 });
 
-/*-------------(htmlmin,fontmin,cssper,webp,base64,bsWatch)需要时手动添加执行或修改-----------------*/
+/*-------------(htmlmin,font,cssper,webp,base64,bsWatch)需要时手动添加执行或修改-----------------*/
 
 gulp.task('htmlmin',function(){										
 	var options = {
@@ -106,7 +106,7 @@ gulp.task('fontSpider',function(){
 	.pipe(fontSpider());
 });		
 
-gulp.task('fontmin',['fontSpider'],function(){				//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
+gulp.task('font',['fontSpider'],function(){				//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
 	gulp.src(['./'+y_Sz+'/font/**'],{				//- 被复制的文件夹下的所有文件
 	base: './'+y_Sz+'/font'})					//- 被复制的目标路径 	
 	.pipe(gulp.dest('./'+y_Dz+'/font'))				//- 输出路径	
@@ -153,7 +153,7 @@ gulp.task('css64',['webp'],function(){
 });
 
 gulp.task('webp',['webp_css'],function(){
-	return del(['./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}', '!./'+y_Dz+'/img/**/*.{webp}']).then(paths => {
+	return del(['./'+y_Dz+'/img/**/*.{png,jpg}', '!./'+y_Dz+'/img/**/*.{webp}']).then(paths => {
 	console.log('Deleted files and folders:\n', paths.join('\n'));
 	});	 
 });	 
@@ -172,7 +172,7 @@ gulp.task('webp_html',['webp_img'],function(){
 });
 
 gulp.task('webp_img',function(){
-	return gulp.src('./'+y_Dz+'/img/**/*.{png,jpg,gif,ico}')	
+	return gulp.src('./'+y_Dz+'/img/**/*.{png,jpg}')	
 	.pipe(webp())
 	.pipe(gulp.dest('./'+y_Dz+'/img/'))
 });
@@ -185,10 +185,10 @@ gulp.task('bsWatch',function(){
 });
 
 //Deal
-gulp.task('default',['sass','cssDeal','imgDeal','htmlDeal','es6Deal']);
+gulp.task('default',['cssDeal','imgDeal','htmlDeal','es6Deal']);
 
 //push
-gulp.task('push',['htmlmin','fontmin','cssper','webp','base64']);
+gulp.task('push',['htmlmin','font','cssper','webp','base64']);
 
 //Sync
 gulp.task('sync',['sassWatch','es6Watch','bsWatch']);
