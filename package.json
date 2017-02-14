@@ -4,7 +4,7 @@
   "description": "Adaptive, responsive, pixel level, cut the CSS",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp",
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
