@@ -7,3 +7,4 @@ script:
  - gulp
  - gulp push
  - webpack
+ after_script: "npm install coveralls@2.11.16 && cat ./coverage/lcov.info | coveralls"
