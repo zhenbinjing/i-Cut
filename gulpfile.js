@@ -19,6 +19,7 @@ var plumber = require('gulp-plumber'); 					// 例外处理
 var babel = require('gulp-babel'); 					// es6编译环境
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 管理文件
+var path = require("path");
 
 var y_Sz="src";								//- 源码环境路径
 var y_Dz="dist";							//- 上线环境路径
@@ -102,7 +103,7 @@ gulp.task('htmlmin',function(){
 });
 
 gulp.task('fontSpider',function(){
-	return gulp.src(['./'+y_Sz+'/**/*.html'])			//- 删除多余的字体和图标，添加return返回最终的数据流
+	return gulp.src(path.resolve(process.cwd(), y_Sz) + '/*.html')			//- 删除多余的字体和图标，添加return返回最终的数据流
 	.pipe(fontSpider());
 });		
 

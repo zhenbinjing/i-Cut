@@ -3,4 +3,7 @@ language: node_js
 node_js:
   - "7.5.0"
 install: npm install
-script: webpack
+script: 
+ - gulp
+ - gulp push
+ - webpack
