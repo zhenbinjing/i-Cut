@@ -135,11 +135,7 @@ gulp.task('cssper',function(){
 gulp.task('base64',['css64'],function() {				//- 插件不支持wepb转换，需要手动修改node_modules/gulp-imgbase64/index.js，把jpeg替换为webp,把大写CONERT-HTML-IMG-BASE64改成小写conert-html-img-base64，为了兼容htmlmin
 	gulp.src('./'+y_Dz+'/**/*.html')
    	.pipe(img64({limit: '8kb'}))
-   	.on("error", function(error) {
-         console.error(error.toString());
-         this.emit("end");
-  	 })
-   	 .pipe(gulp.dest('./'+y_Dz+'/'));
+   	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
 gulp.task('css64',['webp'],function(){						
@@ -154,9 +150,7 @@ gulp.task('css64',['webp'],function(){
 });
 
 gulp.task('webp',['webp_css'],function(){
-	return del(['./'+y_Dz+'/img/**/*.{png,jpg}', '!./'+y_Dz+'/img/**/*.{webp}']).then(paths => {
-	console.log('Deleted files and folders:\n', paths.join('\n'));
-	});	 
+	return del(['./'+y_Dz+'/img/**/*.{png,jpg}', '!./'+y_Dz+'/img/**/*.{webp}']) 	
 });	 
 
 gulp.task('webp_css',['webp_html'],function(){
