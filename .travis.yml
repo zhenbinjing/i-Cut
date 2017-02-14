@@ -7,6 +7,3 @@ script:
  - gulp
  - gulp push
  - webpack
- - npm run cover
-after_success:
-- npm run coveralls
