@@ -142,8 +142,7 @@ gulp.task('css64',['webp'],function(){
 	return gulp.src(['./'+y_Dz+'/css/**/*.css'])										
 	.pipe(css64({
 	extensions: ['gif','png','jpg','webp'],
-	maxImageSize: 8*1024, // bytes 
-	debug: true
+	maxImageSize: 8*1024 // bytes 
 	}))
 	.pipe(concat('index.css'))					
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				
