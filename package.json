@@ -4,8 +4,7 @@
   "description": "Adaptive, responsive, pixel level, cut the CSS",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp",
-	"coveralls": "cat ./coverage/lcov/lcov.info | ./node_modules/.bin/coveralls"
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
@@ -49,10 +48,6 @@
 	"gulp-babel": "^6.1.2",
 	"jshint": "^2.9.4", 
 	"babel-preset-es2015": "^6.22.0",  
-	"webpack": "^2.2.1",
-	"istanbul": "^0.4.5",
-	"coveralls": "^2.11.16",
-	"mocha": "^3.2.0",
-    "mocha-lcov-reporter": "^1.2.0"
+	"webpack": "^2.2.1"
   }
 }
