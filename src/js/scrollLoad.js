@@ -45,4 +45,5 @@
         };
         return _init();
     });
-    scrollLoad();
+
+module.exports=scrollLoad;

@@ -1,4 +1,6 @@
 ﻿var TouchSlide = require('./TouchSlide.js');
+var scrollLoad = require('./scrollLoad.js');
+require('./es6.js');
 
 TouchSlide({ 
 	  slideCell:"#focus",
@@ -9,3 +11,5 @@ TouchSlide({
 	  autoPage:true,//自动分页
 	  switchLoad:"_src"
 });
+
+scrollLoad();
