@@ -2,8 +2,14 @@ sudo: false
 language: node_js
 node_js:
   - "7.5.0"
-install: npm install
+before_install: npm install
+cache:
+  directories:
+    - node_modules
 script: 
- - gulp
- - gulp push
- - webpack
+ - npm test
+ - npm run gulp
+ - npm run gulp push
+ - npm run webpack
+after_script:
+ - npm run coverage
