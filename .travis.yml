@@ -9,7 +9,7 @@ cache:
 script: 
  - npm test
  - npm run gulp
- - npm run gulp push
+ - npm run build
  - npm run webpack
 after_script:
  - npm run coverage

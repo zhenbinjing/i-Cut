@@ -156,7 +156,7 @@ gulp.task('bsWatch',function(){
 gulp.task('default',['cssDeal','imgDeal','htmlDeal']);
 
 //push
-gulp.task('push',['htmlmin','font','cssper','webp','base64']);
+gulp.task('build',['htmlmin','font','cssper','webp','base64']);
 
 //Sync
-gulp.task('sync',['sassWatch','es6Watch','bsWatch']);
+gulp.task('sync',['sassWatch','bsWatch']);
