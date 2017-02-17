@@ -13,10 +13,6 @@ var webp = require('gulp-webp');					//- 转webp图片
 var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
-var jshint = require('gulp-jshint'); 					// 校验js的工具
-var uglify = require('gulp-uglify'); 					// 压缩js
-var plumber = require('gulp-plumber'); 					// 例外处理
-var babel = require('gulp-babel'); 					// es6编译环境
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 管理文件
 var path = require("path");
@@ -64,28 +60,6 @@ gulp.task('imgDeal',function(){
 	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
 	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o'))		//- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩		
 	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
-});
-
-gulp.task('es6Deal', function() {
-	return gulp.src('./'+y_Sz+'/es6/**/*.js')
-	.pipe(plumber())
-        .pipe(babel({presets: ['es2015']}))
-        .pipe(gulp.dest('./'+y_Sz+'/js'));
-});
-
-gulp.task('es6Watch', ['es6Deal'], function() {
-	gulp.watch(['./'+y_Sz+'/es6/**/*.js'], ['es6Deal']);
-});
-
-gulp.task('es6-build', function() {
-	gulp.src('./'+y_Sz+'/es6/**/*.js')
-        .pipe(plumber())
-        .pipe(babel({presets: ['es2015']}))
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(uglify())
-        .pipe(concat('build.js'))
-        .pipe(gulp.dest('./'+y_Sz+'/js'));
 });
 
 /*-------------(htmlmin,font,cssper,webp,base64,bsWatch)需要时手动添加执行或修改-----------------*/
@@ -179,7 +153,7 @@ gulp.task('bsWatch',function(){
 });
 
 //Deal
-gulp.task('default',['cssDeal','imgDeal','htmlDeal','es6Deal']);
+gulp.task('default',['cssDeal','imgDeal','htmlDeal']);
 
 //push
 gulp.task('push',['htmlmin','font','cssper','webp','base64']);
