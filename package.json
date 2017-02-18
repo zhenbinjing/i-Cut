@@ -5,9 +5,9 @@
   "main": "gulpfile.js",
   "scripts": {
 	"gulp": "gulp",
-	"build": "gulp build",
-	"webpack": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js",
-	"webpackdev": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.dev.js",
+	"gulpmin": "gulp min",
+	"jsdev": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.dev.js",
+	"jsmin": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js",
 	"test": "node ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --colors ./webpack.config.dev.js",
 	"coverage": "cat ./coverage/lcov.info | coveralls"
   },

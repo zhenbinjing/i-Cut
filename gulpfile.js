@@ -151,5 +151,5 @@ gulp.task('bs',function(){
 //default
 gulp.task('default',['cssDeal','imgDeal','htmlDeal']);
 
-//build
-gulp.task('build',['htmlmin','font','cssper','webp','base64']);
+//min
+gulp.task('min',['htmlmin','font','cssper','webp','base64']);
