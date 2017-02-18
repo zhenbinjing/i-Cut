@@ -1,6 +1,6 @@
 {
   "name": "i-Cut",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Adaptive, responsive, pixel level, cut the CSS",
   "main": "gulpfile.js",
   "scripts": {
