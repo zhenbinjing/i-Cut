@@ -10,6 +10,7 @@ script:
  - npm test
  - npm run gulp
  - npm run build
+ - npm run webpackdev
  - npm run webpack
 after_script:
  - npm run coverage

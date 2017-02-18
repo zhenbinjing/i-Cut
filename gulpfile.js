@@ -24,10 +24,6 @@ gulp.task('sass', function () {
 	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(gulp.dest('./'+y_Sz+'/css/'));
-});
- 
-gulp.task('sassWatch', function () {
-	gulp.watch('./'+y_Sz+'/sass/**/*.scss', ['sass']);
 });	 
 
 gulp.task('cssDeal',['sass'],function(){						
@@ -145,18 +141,15 @@ gulp.task('webp_img',function(){
 	.pipe(gulp.dest('./'+y_Dz+'/img/'))
 });
 
-gulp.task('bsWatch',function(){
+gulp.task('bs',function(){
 	browserSync({
 	files: "**",							//- 监控所有文件
 	server: {baseDir: './'+y_Dz+'/'}				//- 目标文件夹路径
 	});
 });
 
-//Deal
+//default
 gulp.task('default',['cssDeal','imgDeal','htmlDeal']);
 
-//push
+//build
 gulp.task('build',['htmlmin','font','cssper','webp','base64']);
-
-//Sync
-gulp.task('sync',['sassWatch','bsWatch']);

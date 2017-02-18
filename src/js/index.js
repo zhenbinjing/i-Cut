@@ -1,5 +1,5 @@
-﻿var TouchSlide = require('./TouchSlide.js');
-var scrollLoad = require('./scrollLoad.js');
+﻿var TouchSlide = require('./plugins/TouchSlide.js');
+var scrollLoad = require('./plugins/scrollLoad.js');
 
 TouchSlide({ 
 	  slideCell:"#focus",
