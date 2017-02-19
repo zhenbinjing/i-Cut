@@ -30,7 +30,7 @@ module.exports = {
         publicPath: "dist/js/", //上线路径  https：//...
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
-		},   
+	},   
 	resolve: {
 		extensions: ['.js'],
 		modules: [

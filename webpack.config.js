@@ -1,8 +1,6 @@
 ﻿'use strict';
 let path = require('path');
 let fs = require('fs');
-let webpack = require('webpack');
-var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 let srcDir = path.resolve(process.cwd(), 'dist');
 
 //获取多页面的每个入口文件，用于配置中的entry
@@ -26,25 +24,16 @@ module.exports = {
 	output: {
         path: path.join(__dirname, "dist/js/"),
         filename: "[name].js"
-		},   
+	},   
 	resolve: {},
 	module: {
-        rules: [
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                query: {
-                    babelrc: false,
-                    presets: [["es2015", { "modules": false, "loose": true }]]
-                }
-            }
-        ]
-    },
-	 plugins: [
-        new uglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        })
-    ]
+		rules: [{
+			test: /\.js$/,
+			loader: 'babel-loader',
+			query: {
+				babelrc: false,
+				presets: [["es2015", { "modules": false, "loose": true }]]
+			}
+		}]	
+	}
 };
