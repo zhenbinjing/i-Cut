@@ -2,6 +2,7 @@
 let path = require('path');
 let fs = require('fs');
 let srcDir = path.resolve(process.cwd(), 'dist');
+let nodeModulesPath = path.resolve(process.cwd(), 'node_modules');
 
 //获取多页面的每个入口文件，用于配置中的entry
 function getEntry() {
@@ -33,7 +34,8 @@ module.exports = {
 			query: {
 				babelrc: false,
 				presets: [["es2015", { "modules": false, "loose": true }]]
-			}
+			},
+			exclude: [nodeModulesPath]		//减少构建搜索或编译路径
 		}]	
 	}
 };

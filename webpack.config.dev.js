@@ -2,8 +2,9 @@
 //let CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 let path = require('path');
 let fs = require('fs');
-let srcDir = path.resolve(process.cwd(), 'src');
 let BabiliPlugin = require("babili-webpack-plugin");
+let srcDir = path.resolve(process.cwd(), 'src');
+let nodeModulesPath = path.resolve(process.cwd(), 'node_modules');
 
 //获取多页面的每个入口文件，用于配置中的entry
 function getEntry() {
@@ -32,14 +33,19 @@ module.exports = {
         chunkFilename: "[chunkhash].js"
 	},   
 	resolve: {
-		extensions: ['.js'],
+		extensions: ['.js'],		//匹配文件格式
 		modules: [
 		srcDir,'node_modules'
 		],
-	alias: {
+		alias: {
 		//配置别名，在项目中可缩减引用路径
 		//jquery: srcDir + "/js/lib/jquery.min.js",
 		}          
+	},
+	module: {
+		rules: [{			
+			exclude: [nodeModulesPath]		//减少构建搜索或编译路径
+		}]	
 	},
 	plugins: [
 		//将公共代码抽离出来合并为一个文件
