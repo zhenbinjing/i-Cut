@@ -9,7 +9,7 @@
 	"jsts": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.ts.js",
 	"jsbabel": "node ./node_modules/webpack/bin/webpack.js -p --config ./webpack.config.babel.js",
 	"jsmin": "node ./node_modules/webpack/bin/webpack.js -p --config ./webpack.config.js",
-	"test": "node ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --colors ./webpack.config.dev.js",
+	"test": "node ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --colors ./webpack.config.js",
 	"coverage": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
