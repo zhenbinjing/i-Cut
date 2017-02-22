@@ -24,7 +24,7 @@ module.exports = {
 	devtool: "false", 
 	entry: getEntry(),	
 	output: {
-        path: path.join(__dirname, "dist/js"),
+        path: path.join(__dirname, "src/js/es6/build"),
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
 	},   
