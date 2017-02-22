@@ -10,7 +10,8 @@ script:
  - npm test
  - npm run gulp
  - npm run gulpmin
- - npm run jsdev
+ - npm run jsts
+ - npm run jsbabel
  - npm run jsmin
 after_script:
  - npm run coverage
