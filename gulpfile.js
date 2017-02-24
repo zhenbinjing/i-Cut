@@ -58,7 +58,7 @@ gulp.task('imgDeal',function(){
 	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
 });
 
-/*-------------(htmlmin,font,cssper,webp,base64,bsWatch)需要时手动添加执行或修改-----------------*/
+/*-------------(htmlmin,font,cssper,webp,base64,bs)需要时手动添加执行或修改-----------------*/
 
 gulp.task('htmlmin',function(){										
 	var options = {
@@ -73,7 +73,7 @@ gulp.task('htmlmin',function(){
 });
 
 gulp.task('fontSpider',function(){
-	return gulp.src(path.resolve(process.cwd(), y_Sz) + '/*.html')			//- 删除多余的字体和图标，添加return返回最终的数据流
+	return gulp.src(path.resolve(process.cwd(), y_Sz) + '/*.html')	//- 删除多余的字体和图标，添加return返回最终的数据流
 	.pipe(fontSpider());
 });		
 
@@ -111,7 +111,7 @@ gulp.task('base64',['css64'],function() {				//- 插件不支持wepb转换，需
 gulp.task('css64',['webp'],function(){						
 	return gulp.src(['./'+y_Dz+'/css/**/*.css'])										
 	.pipe(css64({
-	extensions: ['gif','png','jpg','webp'],
+	extensions: ['jpg','png','gif','webp'],
 	maxImageSize: 8*1024 // bytes 
 	}))
 	.pipe(concat('index.css'))					
@@ -119,7 +119,7 @@ gulp.task('css64',['webp'],function(){
 });
 
 gulp.task('webp',['webp_css'],function(){
-	return del(['./'+y_Dz+'/img/**/*.{png,jpg}', '!./'+y_Dz+'/img/**/*.{webp}']) 	
+	return del(['./'+y_Dz+'/img/**/*.{jpg,png,gif}', '!./'+y_Dz+'/img/**/*.{webp}']) 	
 });	 
 
 gulp.task('webp_css',['webp_html'],function(){
@@ -136,7 +136,7 @@ gulp.task('webp_html',['webp_img'],function(){
 });
 
 gulp.task('webp_img',function(){
-	return gulp.src('./'+y_Dz+'/img/**/*.{png,jpg}')	
+	return gulp.src('./'+y_Dz+'/img/**/*.{jpg,png,gif}')	
 	.pipe(webp())
 	.pipe(gulp.dest('./'+y_Dz+'/img/'))
 });
