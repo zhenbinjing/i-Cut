@@ -10,6 +10,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="email=no">
+<link rel="stylesheet" href="src/css/adjust.css">
+<link rel="stylesheet" href="src/css/emmet.css">
+<link rel="stylesheet" href="src/css/flexgrid.css">
+<link rel="stylesheet" href="src/css/opencolor.css">
 <link rel="stylesheet" href="assets/index.css">
 <script>
 (function (doc, win) {
@@ -38,9 +42,6 @@
         win.addEventListener(resizeEvt, recalc, false);
 })(document, window);
 </script>
-<script src="assets/jq-2.1.js"></script>
-<script src="assets/jquery.nav.js"></script>
-<script src="assets/index.js"></script>
 </head>
 
 <body>
@@ -70,7 +71,7 @@
 		<div class="container">
 				<div class="row">
 						<div class="col-xs-12 fz50 mt30">Emmet.css</div>
-						<div class="col-xs-12 fz24 fz-sm-16 lh250p bdb_1-solid bdc-gray-4">基于Emmet命名的css属性简单易懂，同时也方便转换。</div>
+						<div class="col-xs-12 fz24 fz-sm-16 lh250p bdb_1-solid bdc-gray-4">基于Emmet命名的css原子类库。</div>
 						<div class="col-xs-12 mt30">
 								<div class="row fz24 fz-sm-16">
 										<div class="col-xs-12 fz30 fz-sm-20 mb20 c-blue-7">visibility</div>
@@ -1563,5 +1564,32 @@
 				</div>
 		</div>
 </div>
+<script src="assets/jq-2.1.js"></script>
+<script src="assets/jquery.nav.js"></script>
+<script>
+//onePageNav
+$(document).ready(function() {
+$('#nav').onePageNav();
+});
+
+//nav
+window.onload = window.onscroll = function() {
+		var oNav=document.getElementById('nav');
+		var oTop = document.documentElement.scrollTop || document.body.scrollTop;
+		//alert(oTop);
+		if (oTop >= 400) {// 导航离顶部距离
+			if (typeof document.body.style.maxHeight === "undefined") {
+				oNav.style.top = oTop + 'px';
+			} else {
+				oNav.style.position = 'fixed';
+				oNav.style.top = 0;
+				oNav.style.zIndex=10000;
+			}
+		} else {
+			oNav.style.position = 'static';
+			oNav.style.top = 400 + "px";// 导航离顶部距离
+		}				
+};
+</script>
 </body>
 </html>
