@@ -9,6 +9,7 @@ var sass = require('gulp-sass');					//- scss文件编译
 var css64 = require('gulp-base64');					//- css文件转base64
 var img64 = require('gulp-imgbase64');					//- img转base64
 var tinypng = require('gulp-tinypng');					//- png图片压缩
+var svgmin = require('gulp-svgmin');					//- svg图片压缩
 var webp = require('gulp-webp');					//- 转webp图片
 var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var processhtml = require('gulp-processhtml');				//- html更改模板
@@ -55,6 +56,12 @@ gulp.task('htmlDeal',function(){					//- 修改html的dom
 gulp.task('imgDeal',function(){
 	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
 	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o'))		//- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩		
+	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
+});
+
+gulp.task('svgDeal',function(){
+	gulp.src('./'+y_Sz+'/img/**/*.svg')				//- 压缩svg
+	.pipe(svgmin())
 	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
 });
 
@@ -149,7 +156,7 @@ gulp.task('bs',function(){
 });
 
 //default
-gulp.task('default',['cssDeal','imgDeal','htmlDeal']);
+gulp.task('default',['cssDeal','imgDeal','htmlDeal','svgDeal']);
 
 //min
 gulp.task('min',['htmlmin','font','cssper','webp','base64']);
