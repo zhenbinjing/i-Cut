@@ -17,12 +17,12 @@ adjust.css 是基于 [normalize.css](https://github.com/necolas/normalize.css) �
 
 emmet.css、opencolor.css 是分别消化 [tachyons.css](https://github.com/tachyons-css/tachyons)、[open-color.css](https://github.com/yeun/open-color) 而来，其都采用 [Emmet](http://docs.emmet.io/cheat-sheet/) 中的规则命名。
 
-flexgrid.css 是flex与grid两种布局结合而成的核心框架。style.css 是组件类、特殊类等其他公共样式表。
+flexgrid.css 是flex与grid两种布局结合而成，是本框架的核心。style.css 是组件类、特殊类等其他公共样式表。
 
 ##开发工具
 
-html 头部的 js 能实现动态比例缩放，从而告别繁琐的媒体查询。预览插件：[下载地址](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?utm_source=chrome-app-launcher-info-dialog) 方便页面测试。
+切图插件：[Assistor PS](http://witstudio.net/) 与 [Zeplin](https://zeplin.io/) 预览插件：[下载地址](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?utm_source=chrome-app-launcher-info-dialog) 方便页面测试。[Zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)
 
-设计稿里标注的值是多少就写多少，已内置 [gulp-px3rem](https://www.npmjs.com/package/gulp-px3rem) ，批量转换 rem 与自动化工作流。
+##移动端适屏方案
 
-切图插件：[Assistor PS](http://witstudio.net/) 与 [Zeplin](https://zeplin.io/)，最新版的 [PS CC](http://www.adobe.com/products/photoshop.html) 已经集成部分功能。[点击查看 Zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)
+设计稿里的标注值是多少就写多少，已配置 px 批量转换 rem 和其它自动化流程。html 头部中的 js 能实现动态比例缩放，高清还原，从而告别繁琐的媒体查询。
