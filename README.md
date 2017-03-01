@@ -6,15 +6,15 @@
 
 flexgrid.css 是flex与grid两种布局结合而成，是本框架的核心。
 
-##开发工具
+###开发工具
 
-切图插件：[Assistor PS](http://witstudio.net/)、[Zeplin](https://zeplin.io/)、[Zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)。还原对比插件：[PerfectPixel by WellDoneCode](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?utm_source=chrome-app-launcher-info-dialog)
+切图插件：[Assistor PS](http://witstudio.net/)、[Zeplin](https://zeplin.io/)、[Zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)。还原对比插件：[PerfectPixel by WellDoneCode](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?utm_source=chrome-app-launcher-info-dialog)。
 
-##移动端适屏方案
+###移动端适屏方案
 
 设计稿里的标注值是多少就写多少，gulp 已配置 px 批量转换 rem 和其它自动化流程。
 
-下面是核心代码能实现动态比例缩放，高清还原，从而告别繁琐的媒体查询，放置 head 头部。
+下面代码能实现动态比例缩放，高清还原，从而告别繁琐的媒体查询，放置 head 头部。
 
 ```javascript
 (function (doc, win) {
