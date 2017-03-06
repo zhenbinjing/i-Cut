@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/zhenbinjing/i-Cut.svg?branch=master)](https://travis-ci.org/zhenbinjing/i-Cut)   [![Coverage Status](https://coveralls.io/repos/github/zhenbinjing/i-Cut/badge.svg?branch=master)](https://coveralls.io/github/zhenbinjing/i-Cut?branch=master)   [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
-i-Cut也是一个切图工程化流程，内含gulp和webpack的打包流程以及我们常用的布局等。
+i-Cut是一个快速成形，全终端适配的CSS框架，也是切图工程化流程，内含gulp和webpack的打包流程以及常用的布局等。
 
-flexgrid.css 是flex与grid两种布局结合而成，是本框架的核心。
+flexgrid.css是i-Cut中最重要的布局文件，采用flex与grid两种布局结合而成，是本框架的核心。
 
 ###开发工具
 
