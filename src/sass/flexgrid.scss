@@ -89,12 +89,6 @@ $nb: 100; $column: 12;
 		.gcem-#{$grid}-#{$i}{grid-column-end: span $i;}		
 	}
 
-	//设置单元格宽度与高度
-	@for $i from 2 through 120 {
-		.gar-#{$grid}-#{$i*10}{grid-auto-rows: $i/10 + rem;}
-		.gtcf-#{$grid}-#{$i*10}{grid-template-columns: repeat(auto-fill, $i/10 + rem);}	
-	}
-
 	//单元格的行列间距
 	@for $i from 1 through 50 {
 		.grg-#{$grid}-#{$i}{ grid-row-gap: $i/$nb + rem;}
