@@ -1,6 +1,7 @@
 ﻿# i-Cut
 
 [![Build Status](https://travis-ci.org/zhenbinjing/i-Cut.svg?branch=master)](https://travis-ci.org/zhenbinjing/i-Cut)   [![Coverage Status](https://coveralls.io/repos/github/zhenbinjing/i-Cut/badge.svg?branch=master)](https://coveralls.io/github/zhenbinjing/i-Cut?branch=master)   [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+
 i-Cut 是一个快速成形，全终端适配的CSS框架，配备工程化流程，内含 [gulp](https://github.com/gulpjs/gulp) 和 [webpack](https://github.com/webpack/webpack) 打包任务以及其它常用工具。
 
 flexgrid.css 是 i-Cut 中最重要的布局文件，采用 [Flexbox](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex) 与 [Grid-Layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid) 两种布局结合而成，是本框架的核心。
