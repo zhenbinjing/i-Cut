@@ -284,6 +284,15 @@
 .as-xs-auto {
   align-self: auto; }
 
+.js-xs-start {
+  justify-self: start; }
+
+.js-xs-center {
+  justify-self: center; }
+
+.js-xs-end {
+  justify-self: end; }
+
 .order-xs-first {
   order: -1; }
 
@@ -1327,6 +1336,12 @@
     align-self: baseline; }
   .as-sm-auto {
     align-self: auto; }
+  .js-sm-start {
+    justify-self: start; }
+  .js-sm-center {
+    justify-self: center; }
+  .js-sm-end {
+    justify-self: end; }
   .order-sm-first {
     order: -1; }
   .order-sm-last {
@@ -2081,6 +2096,12 @@
     align-self: baseline; }
   .as-md-auto {
     align-self: auto; }
+  .js-md-start {
+    justify-self: start; }
+  .js-md-center {
+    justify-self: center; }
+  .js-md-end {
+    justify-self: end; }
   .order-md-first {
     order: -1; }
   .order-md-last {
@@ -2835,6 +2856,12 @@
     align-self: baseline; }
   .as-lg-auto {
     align-self: auto; }
+  .js-lg-start {
+    justify-self: start; }
+  .js-lg-center {
+    justify-self: center; }
+  .js-lg-end {
+    justify-self: end; }
   .order-lg-first {
     order: -1; }
   .order-lg-last {

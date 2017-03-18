@@ -435,7 +435,7 @@
 										<div class="col-xs-6 h100 lh330p bgc-blue-7">between</div>
 								</div>
 						</div>
-						<div class="col-xs-12 fz30 mt30">单独个别轴线对齐(align-self)
+						<div class="col-xs-12 fz30 mt30">单独个别元素垂直对齐(align-self)
 								<div class="d-ib fz24 lh160p fz-sm-16 lh-sm-250p">.as-(xs、sm、md、lg)-(top、middle、bottom、stretch、baseline、auto)</div>
 						</div>
 						<div class="col-xs-12 mt30">
@@ -469,7 +469,7 @@
 										<div class="col-xs-4 bgc-blue-9 as-xs-auto">1</div>
 										<div class="col-xs-4 bgc-blue-8">2</div>
 								</div>
-						</div>
+						</div>						
 						<div class="col-xs-12 fz30 mt30">排列顺序(order)
 								<div class="d-ib fz24 fz-sm-16 lh250p">.order-(xs、sm、md、lg)-(first、last、[0-12])</div>
 						</div>
@@ -561,8 +561,7 @@
 					<div class="bgc-blue-4"></div>					
 					</div>
 				</div>
-		</div>
-		
+		</div>		
 		<div class="grid">
 				<div class="fz30 mt30 pl15 pr15">表格排序与合并
 						<div class="fz24 lh200p fz-sm-16 ">排序 (.grs-[lg、md、sm、xs]-[1-12])、(.gre-[lg、md、sm、xs]-[1-12])、(.gcs-[lg、md、sm、xs]-[1-12])、(.gce-[lg、md、sm、xs]-[1-12]) <br> 合并 (.grsm-[lg、md、sm、xs]-[1-12])、(.grem-[lg、md、sm、xs]-[1-12])、(.gcsm-[lg、md、sm、xs]-[1-12])、(.gcem-[lg、md、sm、xs]-[1-12])</div>
@@ -576,6 +575,31 @@
 				<div class="bgc-orange-6 grs-sm-1 gcs-sm-3 grem-sm-3 grs-xs-3 gcs-xs-1 gcem-xs-2"></div>
 		</div>
 		<div class="grid">
+				<div class="fz30 mt30 pl15 pr15">内元素水平对齐(justify-self) 配合 align-self 使用
+						<div class="fz24 lh200p fz-sm-16">.js-(xs、sm、md、lg)-(start、center、end)</div>
+				</div>
+		</div>
+		<div class="grid h300 mt30 pl15 pr15">				
+				<div class="bgc-blue-7">
+					<div class="grid-fluid h300 gtc-xs-2 gtr-xs-2 gg-xs-10">
+					<div class="bgc-yellow-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-end">1</div>				
+					<div class="bgc-red-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-start">2</div>
+					<div class="bgc-green-7 fz30 ta-c c-white-0 p20 as-xs-top js-xs-end">3</div>
+					<div class="bgc-orange-7 fz30 ta-c c-white-0 p20 as-xs-top js-xs-start">4</div>			
+					</div>
+				</div>
+		</div>
+		<div class="grid h300 mt30 pl15 pr15">				
+				<div class="bgc-blue-7">
+					<div class="grid-fluid h300 gtc-xs-2 gtr-xs-2 gg-xs-10">
+					<div class="bgc-yellow-7 fz30 ta-c c-white-0 p20 as-xs-middle js-xs-center">1</div>				
+					<div class="bgc-red-7 fz30 ta-c c-white-0 p20 as-xs-middle js-xs-center">2</div>
+					<div class="bgc-green-7 fz30 ta-c c-white-0 p20 as-xs-middle js-xs-center">3</div>
+					<div class="bgc-orange-7 fz30 ta-c c-white-0 p20 as-xs-middle js-xs-center">4</div>			
+					</div>
+				</div>
+		</div>
+		<div class="grid">
 				<div class="fz30 mt30 pl15 pr15">单元格轴线
 						<div class="fz24 lh200p fz-sm-16">.gaf-[lg、md、sm、xs]-[row、column、dense、rd、cd]</div>
 				</div>
@@ -587,7 +611,8 @@
 				<div class="bgc-yellow-7 grs-lg-3 gcs-xs-2"></div>
 				<div class="bgc-orange-7 "></div>
 				<div class="bgc-violet-7 "></div>
-		</div>	
+		</div>
+	
 </div>
 <script src="assets/jq-2.1.js"></script> 
 <script src="assets/jquery.nav.js"></script> 

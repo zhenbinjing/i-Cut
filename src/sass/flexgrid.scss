@@ -58,7 +58,12 @@ $nb: 100; $column: 12;
 	$as: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(baseline, baseline),(auto, auto);
 	@each $val, $direction in $as {		
 	.as-#{$grid}-#{$val}{align-self: $direction;}	
-	}	
+	}
+
+	$js: (start, start),(center, center),(end, end);
+	@each $val, $direction in $js {		
+	.js-#{$grid}-#{$val}{justify-self: $direction;}	
+	}
 
 	$order: (first, -1),(last, 999);
 	@each $val, $direction in $order {		
