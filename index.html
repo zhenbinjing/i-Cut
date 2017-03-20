@@ -70,7 +70,7 @@
 						<div class="col-xs-12 fz50 mt30">Flexbox</div>
 						<div class="col-xs-12 fz24 lh160p fz-sm-16 lh-sm-250p bdb_1-solid bdc-gray-4">flex布局的命名与Bootstrap栅格命名一致！</div>
 						<div class="col-xs-12 fz30 mt30">响应式
-								<div class="d-ib fz24 fz-sm-16 lh250p">.col-lg-3 .col-md-4 .col-sm-6 .col-xs-12</div>
+								<div class="d-ib fz24 fz-sm-16 lh250p">.col-(xs、sm、md、lg)-(0-12)</div>
 						</div>
 						<div class="col-xs-12 mt30">
 								<div class="row">
@@ -498,8 +498,8 @@
 				<div class="fz24 lh200p fz-sm-16 bdb_1-solid bdc-gray-4 pl15 pr15">升级到最新的 Chrome 与 Firefox 的版本便看到效果。<br> 本框架只适合用于重复性表格，对于个性化较强的布局，建议自行用 grid-template-areas 和 grid-area 来布局。</div>
 		</div>
 		<div class="grid">
-				<div class="fz30 mt30 pl15 pr15">12行12列与间隔
-						<div class="fz24 lh200p fz-sm-16 ">列 (.gtc-[lg、md、sm、xs]-[1-12])、行 (.gtr-[lg、md、sm、xs]-[1-12])<br>间隔 （.gg-[lg、md、sm、xs]-[0-50]、.grg-[lg、md、sm、xs]-[0-50]、.gcg-[lg、md、sm、xs]-[0-50]）</div>
+				<div class="fz30 mt30 pl15 pr15">12行12列与间隔						
+						<div class="fz24 lh200p fz-sm-16 ">（.grid .grid-fluid） 与 （.container .container-fluid）宽度一致，grid 布局用间隔（grid-gap）代替 row 。<br>列 (.gtc-[lg、md、sm、xs]-[1-12])、行 (.gtr-[lg、md、sm、xs]-[1-12])<br>间隔 （.gg-[lg、md、sm、xs]-[0-50]、.grg-[lg、md、sm、xs]-[0-50]、.gcg-[lg、md、sm、xs]-[0-50]）</div>
 				</div>
 		</div>
 		<div class="grid gtc-lg-6 gtr-lg-2 gtc-md-4 gtr-md-3 gtc-sm-3 gtr-sm-4 gtc-xs-2 gtr-xs-6 gg-xs-10 mt30 pl15 pr15">
