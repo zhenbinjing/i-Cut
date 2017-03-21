@@ -84,13 +84,9 @@ $nb: 100; $column: 12;
 
 	//单元格的顺序与合并个数	
 		.grs-#{$grid}-#{$i}{grid-row-start: $i;}
-		.gre-#{$grid}-#{$i}{grid-row-end: $i;}
 		.gcs-#{$grid}-#{$i}{grid-column-start: $i;}	
-		.gce-#{$grid}-#{$i}{grid-column-end: $i;}
-
-		.grsm-#{$grid}-#{$i}{grid-row-start: span $i;}	
-		.grem-#{$grid}-#{$i}{grid-row-end: span $i;}	
-		.gcsm-#{$grid}-#{$i}{grid-column-start: span $i;}
+	
+		.grem-#{$grid}-#{$i}{grid-row-end: span $i;}
 		.gcem-#{$grid}-#{$i}{grid-column-end: span $i;}		
 	}
 
