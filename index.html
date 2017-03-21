@@ -308,45 +308,7 @@
 &lt;/div&gt;						
 							</code>
 						</pre>
-						</div>
-						<div class="col-xs-12 fz30 mt30">嵌套
-								<div class="d-ib fz24 fz-sm-16 lh250p">.(container-fluid、container) &gt; .row	&gt; .col-**-* &gt; .row &gt; .col-**-**</div>
-						</div>
-						<div class="col-xs-12 mt30">
-								<div class="row mb20">
-										<div class="col-xs-12 mb20 bgc-blue-6">
-												<div class="row">
-														<div class="col-xs-12 mt20 mb20 bgc-blue-7">
-																<div class="row mt20 mb20">
-																		<div class="col-xs-12 bgc-blue-8 ">
-																				<div class="row">
-																						<div class="col-xs-12 mt20 mb20">
-																								<div class="p20 bgc-blue-9"></div>
-																						</div>																				
-																				</div>
-																		</div>
-																</div>
-														</div>
-												</div>
-										</div>
-								</div>
-						</div>
-						<div class="col-xs-12">
-								<pre class="d-f fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
-							<code class="ac-xs-middle c-blue-7">
-&lt;div class="container"&gt;							
-	&lt;div class="row"&gt;
-		&lt;div class="col-xs-12"&gt;						
-			&lt;div class="row"&gt;
-				&lt;div class="col-xs-12"&gt;					
-				&lt;/div&gt;
-			&lt;/div&gt;			
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;						
-							</code>
-						</pre>
-						</div>
+						</div>						
 						<div class="col-xs-12 fz30 mt30">主轴方向(flex-direction)
 								<div class="d-ib fz24 fz-sm-16 lh250p">.fxd-(xs、sm、md、lg)-(row、rr、cn、cr)</div>
 						</div>
@@ -379,7 +341,7 @@
 &lt;/div&gt;						
 							</code>
 						</pre>
-						</div>						
+						</div>
 						<div class="col-xs-12 fz30 mt30">轴线(flex-wrap)
 								<div class="d-ib fz24 fz-sm-16 lh250p">.fxw-(xs、sm、md、lg)-(nowrap、wrap、wr)</div>
 						</div>
@@ -412,52 +374,119 @@
 &lt;/div&gt;						
 							</code>
 						</pre>
-						</div>						
+						</div>
+						<div class="col-xs-12 fz30 mt30">排列顺序(order)
+								<div class="d-ib fz24 fz-sm-16 lh250p">.order-(xs、sm、md、lg)-(first、last、[0-12])</div>
+						</div>
+						<div class="col-xs-12 mt30">
+								<div class="row ta-c fz30 c-white-0">
+										<div class="col-lg-4 col-md-6 mb20">
+												<div class="bgc-blue-7">0</div>
+										</div>
+										<div class="col-lg-4 col-md-12 mb20 order-lg-0 order-md-first order-xs-last">
+												<div class="bgc-blue-7">1</div>
+										</div>
+										<div class="col-lg-4 col-md-6 mb20">
+												<div class="bgc-blue-7">2</div>
+										</div>
+								</div>								
+						</div>
+						<div class="col-xs-12 mt30">
+										<pre class="d-f fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+											<code class="ac-xs-middle c-blue-7">
+&lt;div class="container"&gt;							
+	&lt;div class="row"&gt;
+		&lt;div class="col-lg-4"&gt;0&lt;/div&gt;
+		&lt;div class="col-lg-4 col-md-12 mb20 order-lg-0 order-md-first order-xs-last"&gt;1&lt;/div&gt;
+		&lt;div class="col-lg-4"&gt;2&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;						
+											</code>
+										</pre>
+								</div>
+						<div class="col-xs-12 fz30 mt30">嵌套
+								<div class="d-ib fz24 fz-sm-16 lh250p">.(container-fluid、container) &gt; .row	&gt; .col-**-* &gt; .row &gt; .col-**-**</div>
+						</div>
+						<div class="col-xs-12 mt30 ">
+								<div class="row">		
+										<div class="col-xs-12 pt20 pb20 bgc-blue-6">
+												<div class="row">
+														<div class="col-xs-12 pt20 pb20 bgc-blue-7">
+																<div class="row">
+																		<div class="col-xs-12 pt20 pb20 bgc-blue-8 ">
+																				<div class="row">
+																						<div class="col-xs-12 pt20 pb20 bgc-blue-9"> </div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+		
+										</div>
+								</div>
+								<div class="row mt30">
+								<pre class="d-f w100p fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+							<code class="ac-xs-middle c-blue-7">
+&lt;div class="container"&gt;							
+	&lt;div class="row"&gt;
+		&lt;div class="col-xs-12"&gt;						
+			&lt;div class="row"&gt;
+				&lt;div class="col-xs-12"&gt;					
+				&lt;/div&gt;
+			&lt;/div&gt;			
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;						
+							</code>
+						</pre>
+						</div>
+						</div>
+						
 						<div class="col-xs-12 fz30 mt30">主轴对齐(justify-content)
 								<div class="d-ib fz24 fz-sm-16 lh250p">.jc-(xs、sm、md、lg)-(start、center、end、around、between)</div>
 						</div>
-						<div class="col-xs-12 mt30">
-								<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-start fz30 ta-c c-white-0 mb20 bgc-blue-7">
-										<div class="col-xs-3 mt20 mb20">
-												<div class="bgc-blue-9">start</div>
+						<div class="col-xs-12 mt30">							
+										<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-start fz30 ta-c c-white-0 mb20 bgc-blue-7">
+												<div class="col-xs-3 mt20 mb20">
+														<div class="bgc-blue-9">start</div>
+												</div>
+												<div class="col-xs-3 mt20 mb20">
+														<div class="bgc-blue-9">start</div>
+												</div>
 										</div>
-										<div class="col-xs-3 mt20 mb20">
-												<div class="bgc-blue-9">start</div>
-										</div>						
-								</div>								
-								<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-center fz30 ta-c c-white-0 mb20 bgc-blue-7">
-										<div class="col-xs-3 mt20 mb20">
-												<div class="bgc-blue-9">center</div>
+										<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-center fz30 ta-c c-white-0 mb20 bgc-blue-7">
+												<div class="col-xs-3 mt20 mb20">
+														<div class="bgc-blue-9">center</div>
+												</div>
+												<div class="col-xs-3 mt20 mb20">
+														<div class="bgc-blue-9">center</div>
+												</div>
 										</div>
-										<div class="col-xs-3 mt20 mb20">
-												<div class="bgc-blue-9">center</div>
+										<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-end fz30 ta-c c-white-0 mb20 bgc-blue-7">
+												<div class="col-xs-3 mt20 mb20">
+														<div class="bgc-blue-9">end</div>
+												</div>
+												<div class="col-xs-3 mt20 mb20">
+														<div class="bgc-blue-9">end</div>
+												</div>
 										</div>
-								</div>								
-								<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-end fz30 ta-c c-white-0 mb20 bgc-blue-7">
-										<div class="col-xs-3 mt20 mb20">
-												<div class="bgc-blue-9">end</div>
+										<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-around fz30 ta-c c-white-0 mb20 bgc-blue-7">
+												<div class="col-xs-3 mt20 mb20">
+														<div class="bgc-blue-9">around</div>
+												</div>
+												<div class="col-xs-3 mt20 mb20">
+														<div class="bgc-blue-9">around</div>
+												</div>
 										</div>
-										<div class="col-xs-3 mt20 mb20">
-												<div class="bgc-blue-9">end</div>
-										</div>
-								</div>								
-								<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-around fz30 ta-c c-white-0 mb20 bgc-blue-7">
-										<div class="col-xs-3 mt20 mb20">
-												<div class="bgc-blue-9">around</div>
-										</div>
-										<div class="col-xs-3 mt20 mb20">
-												<div class="bgc-blue-9">around</div>
-										</div>
-								</div>								
-								<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-between fz30 ta-c c-white-0 mb20 bgc-blue-7">
-										<div class="col-xs-3 mt20 mb20">
-												<div class="bgc-blue-9">between</div>
-										</div>
-										<div class="col-xs-3 mt20 mb20">
-												<div class="bgc-blue-9">between</div>
-										</div>
-								</div>
-								<div class="row mb20">
+										<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-between fz30 ta-c c-white-0 mb20 bgc-blue-7">
+												<div class="col-xs-3 mt20 mb20">
+														<div class="bgc-blue-9">between</div>
+												</div>
+												<div class="col-xs-3 mt20 mb20">
+														<div class="bgc-blue-9">between</div>
+												</div>
+										</div>							
+								<div class="row mt30">
 										<pre class="d-f w100p fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 											<code class="ac-xs-middle c-blue-7">
 &lt;div class="container"&gt;							
@@ -502,7 +531,7 @@
 										<div class="col-xs-3 h80 lh260p bgc-blue-5">baseline</div>
 										<div class="col-xs-3 h100 lh330p bgc-blue-6">baseline</div>
 								</div>
-								<div class="row mb20">
+								<div class="row mt30">
 										<pre class="d-f w100p fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 											<code class="ac-xs-middle c-blue-7">
 &lt;div class="container"&gt;							
@@ -559,7 +588,7 @@
 										<div class="col-xs-6 h100 lh330p bgc-blue-6">between</div>
 										<div class="col-xs-6 h100 lh330p bgc-blue-7">between</div>
 								</div>
-								<div class="row mb20">
+								<div class="row mt30">
 										<pre class="d-f w100p fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 											<code class="ac-xs-middle c-blue-7">
 &lt;div class="container"&gt;							
@@ -608,7 +637,7 @@
 										<div class="col-xs-4 bgc-blue-9 as-xs-auto">1</div>
 										<div class="col-xs-4 bgc-blue-8">2</div>
 								</div>
-								<div class="row mb20">
+								<div class="row mt30">
 										<pre class="d-f w100p fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 											<code class="ac-xs-middle c-blue-7">
 &lt;div class="container"&gt;							
@@ -620,37 +649,8 @@
 &lt;/div&gt;						
 											</code>
 										</pre>
-								</div>								
-						</div>
-						<div class="col-xs-12 fz30 mt30">排列顺序(order)
-								<div class="d-ib fz24 fz-sm-16 lh250p">.order-(xs、sm、md、lg)-(first、last、[0-12])</div>
-						</div>
-						<div class="col-xs-12 mt30">
-								<div class="row ta-c fz30 c-white-0">
-										<div class="col-lg-4 col-md-6 mb20">
-												<div class="bgc-blue-4">0</div>
-										</div>
-										<div class="col-lg-4 col-md-12 mb20 order-lg-0 order-md-first order-xs-last">
-												<div class="bgc-blue-7">1</div>
-										</div>
-										<div class="col-lg-4 col-md-6 mb20">
-												<div class="bgc-blue-9">2</div>
-										</div>
 								</div>
-								<div class="row mb20">
-										<pre class="d-f w100p fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
-											<code class="ac-xs-middle c-blue-7">
-&lt;div class="container"&gt;							
-	&lt;div class="row"&gt;
-		&lt;div class="col-lg-4"&gt;0&lt;/div&gt;
-		&lt;div class="col-lg-4 col-md-12 mb20 order-lg-0 order-md-first order-xs-last"&gt;1&lt;/div&gt;
-		&lt;div class="col-lg-4"&gt;2&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;						
-											</code>
-										</pre>
-								</div>
-						</div>
+						</div>						
 				</div>
 		</div>
 </div>
