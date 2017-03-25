@@ -39,20 +39,17 @@ $nb: 100; $column: 12;
 	@each $val, $direction in $fxw {		
 	.fxw-#{$grid}-#{$val}{flex-wrap: $direction;}	
 	}
-		
-	$jc: (start, flex-start),(center, center),(end, flex-end),(around, space-around),(between, space-between);
-	@each $val, $direction in $jc {		
-	.jc-#{$grid}-#{$val}{justify-content: $direction;}	
-	}
-		
-	$ai: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(baseline, baseline);
-	@each $val, $direction in $ai {		
-	.ai-#{$grid}-#{$val}{align-items: $direction;}	
-	}	
-		
+	
+	//alignment
+
 	$ac: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(around, space-around),(between, space-between);
 	@each $val, $direction in $ac {		
 	.ac-#{$grid}-#{$val}{align-content: $direction;}	
+	}
+
+	$ai: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(baseline, baseline);
+	@each $val, $direction in $ai {		
+	.ai-#{$grid}-#{$val}{align-items: $direction;}	
 	}
 
 	$as: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(baseline, baseline),(auto, auto);
@@ -60,7 +57,17 @@ $nb: 100; $column: 12;
 	.as-#{$grid}-#{$val}{align-self: $direction;}	
 	}
 
-	$js: (start, start),(center, center),(end, end);
+	$jc: (start, flex-start),(center, center),(end, flex-end),(around, space-around),(between, space-between);
+	@each $val, $direction in $jc {		
+	.jc-#{$grid}-#{$val}{justify-content: $direction;}	
+	}	
+
+	$ji: (start, start),(center, center),(end, end),(stretch,stretch);
+	@each $val, $direction in $ji {		
+	.ji-#{$grid}-#{$val}{justify-items: $direction;}	
+	}
+
+	$js: (start, start),(center, center),(end, end),(stretch,stretch);
 	@each $val, $direction in $js {		
 	.js-#{$grid}-#{$val}{justify-self: $direction;}	
 	}
@@ -97,7 +104,7 @@ $nb: 100; $column: 12;
 		.gg-#{$grid}-#{$i}{ grid-gap: $i/$nb + rem;}
 	}
 
-	//单元格的轴线
+	//网格自动流
 	$gaf: (row:row, column:column, dense:dense, rd:row dense, cd: column dense);
 		@each $val, $direction in $gaf {		
 		.gaf-#{$grid}-#{$val}{grid-auto-flow: $direction;}	

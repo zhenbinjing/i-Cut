@@ -682,8 +682,7 @@
 				<div class="p20 bgc-blue-7"></div>
 				<div class="p20 bgc-blue-7"></div>
 		</div>
-
-				<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 					<code class="ac-xs-middle c-blue-7">
 &lt;div class="grid gtc-lg-6 gtc-md-4 gtc-sm-3 gtc-xs-2 gg-xs-10"&gt;
 		&lt;div class="p20 bgc-blue-7"&gt;&lt;/div&gt;
@@ -702,7 +701,6 @@
 						
 </code>
 </pre>
-
 		<div class="grid">
 				<div class="fz30 mt30 pl15 pr15">嵌套</div>
 		</div>
@@ -749,8 +747,7 @@
 						</div>
 				</div>
 		</div>
-
-				<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 											<code class="ac-xs-middle c-blue-7">
 &lt;div class="grid gtc-xs-3 gg-xs-10"&gt;
 			&lt;div class="grid-fluid h300 gtc-xs-2 gg-xs-10"&gt;
@@ -774,13 +771,12 @@
 &lt;/div&gt;
 </code>
 </pre>
-
 		<div class="grid">
 				<div class="fz30 mt30 pl15 pr15">对齐</div>
 		</div>
 		<div class="grid h150 gtc-xs-5 gg-xs-10 mt30">
 				<div class="bgc-blue-7 grid-fluid jc-xs-start ac-xs-top">
-						<div class="grid-fluid gtc-xs-2 gg-xs-10">
+						<div class="grid-fluid gtc-xs-2 gg-xs-10 ">
 								<div class="bgc-blue-4 p20"></div>
 								<div class="bgc-blue-4 p20"></div>
 								<div class="bgc-blue-4 p20"></div>
@@ -820,8 +816,7 @@
 						</div>
 				</div>
 		</div>
-
-				<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 											<code class="ac-xs-middle c-blue-7">
 &lt;div class="grid h150 gtc-xs-2 gg-xs-10"&gt;											
 	&lt;div class="grid-fluid jc-xs-center ac-xs-middle"&gt;
@@ -843,39 +838,49 @@
 &lt;/div&gt;
 </code>
 </pre>
-
 		<div class="grid">
-				<div class="fz30 mt30 pl15 pr15">表格排序与合并
-						<div class="fz24 lh200p fz-sm-16 ">行排序 (.grs-[lg、md、sm、xs]-[1-12])、列排序 (.gcs-[lg、md、sm、xs]-[1-12]) <br>
-								行合并 (.grem-[lg、md、sm、xs]-[1-12])、列合并 (.gcem-[lg、md、sm、xs]-[1-12])</div>
+				<div class="fz30 mt30 pl15 pr15">网格内元素对齐(justify-items) 配合 align-items 使用
+						<div class="fz24 lh200p fz-sm-16">.ji-(xs、sm、md、lg)-(start、center、end、stretch)</div>
 				</div>
 		</div>
-		<div class="grid h500 gtc-sm-3 gtr-sm-3 gtc-xs-2 gtr-xs-3 gg-xs-10 mt30">
-				<div class="bgc-blue-6   grs-sm-1 gcs-sm-1 grs-xs-2 gcs-xs-2"></div>
-				<div class="bgc-red-6    grs-sm-2 gcs-sm-1 grs-xs-1 gcs-xs-2"></div>
-				<div class="bgc-green-6  grs-sm-1 gcs-sm-2 grem-sm-2 grs-xs-1 gcs-xs-1"></div>
-				<div class="bgc-yellow-6 grs-sm-3 gcs-sm-1 gcem-sm-2 grs-xs-2 gcs-xs-1"></div>
-				<div class="bgc-orange-6 grs-sm-1 gcs-sm-3 grem-sm-3 grs-xs-3 gcs-xs-1 gcem-xs-2"></div>
+		<div class="grid h300 gtc-xs-4 gg-xs-10 mt30">
+				<div class="grid-fluid bgc-blue-7 ji-xs-start ai-xs-top">
+						<div class="bgc-yellow-7 fz24 ta-c p20 c-white-0">1</div>
+				</div>
+				<div class="grid-fluid bgc-blue-7 ji-xs-center ai-xs-middle">
+						<div class="bgc-red-7 fz24 ta-c p20 c-white-0">2</div>
+				</div>
+				<div class="grid-fluid bgc-blue-7 ji-xs-end ai-xs-bottom">
+						<div class="bgc-green-7 fz24 ta-c p20 c-white-0">3</div>
+				</div>
+				<div class="grid-fluid bgc-blue-7 ji-xs-stretch ai-xs-middle">
+						<div class="bgc-orange-7 fz24 ta-c p20 c-white-0">4</div>
+				</div>
 		</div>
-
-				<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
-											<code class="ac-xs-middle c-blue-7">
-&lt;div class="grid h500 gtc-sm-3 gtr-sm-3 gtc-xs-2 gtr-xs-3 gg-xs-10"&gt;
-	&lt;div class="bgc-blue-6   grs-sm-1 gcs-sm-1 grs-xs-2 gcs-xs-2"&gt;&lt;/div&gt;
-	&lt;div class="bgc-red-6    grs-sm-2 gcs-sm-1 grs-xs-1 gcs-xs-2"&gt;&lt;/div&gt;
-	&lt;div class="bgc-green-6  grs-sm-1 gcs-sm-2 grem-sm-2 grs-xs-1 gcs-xs-1"&gt;&lt;/div&gt;
-	&lt;div class="bgc-yellow-6 grs-sm-3 gcs-sm-1 gcem-sm-2 grs-xs-2 gcs-xs-1"&gt;&lt;/div&gt;
-	&lt;div class="bgc-orange-6 grs-sm-1 gcs-sm-3 grem-sm-3 grs-xs-3 gcs-xs-1 gcem-xs-2"&gt;&lt;/div&gt;
+		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+<code class="ac-xs-middle c-blue-7">
+&lt;div class="grid h300 gtc-xs-4 gg-xs-10 mt30"&gt;
+	&lt;div class="grid-fluid bgc-blue-7 ji-xs-start ai-xs-top"&gt;
+		&lt;div class="bgc-yellow-7 fz24 ta-c p20 c-white-0"&gt;1&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="grid-fluid bgc-blue-7 ji-xs-center ai-xs-middle"&gt;
+		&lt;div class="bgc-red-7 fz24 ta-c p20 c-white-0"&gt;2&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="grid-fluid bgc-blue-7 ji-xs-end ai-xs-bottom"&gt;
+		&lt;div class="bgc-green-7 fz24 ta-c p20 c-white-0"&gt;3&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="grid-fluid bgc-blue-7 ji-xs-stretch ai-xs-middle"&gt;
+		&lt;div class="bgc-orange-7 fz24 ta-c p20 c-white-0"&gt;4&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 </code>
 </pre>
-
 		<div class="grid">
-				<div class="fz30 mt30 pl15 pr15">内元素水平对齐(justify-self) 配合 align-self 使用
-						<div class="fz24 lh200p fz-sm-16">.js-(xs、sm、md、lg)-(start、center、end)</div>
+				<div class="fz30 mt30 pl15 pr15">网格个别元素对齐(justify-self) 配合 align-self 使用
+						<div class="fz24 lh200p fz-sm-16">.js-(xs、sm、md、lg)-(start、center、end、stretch)</div>
 				</div>
 		</div>
-		<div class="grid gtc-xs-3 gg-xs-10 mt30">
+		<div class="grid gtc-xs-4 gg-xs-10 mt30">
 				<div class="bgc-blue-7">
 						<div class="grid-fluid h300 gtc-xs-2 gg-xs-10">
 								<div class="bgc-yellow-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-end">1</div>
@@ -900,11 +905,18 @@
 								<div class="bgc-orange-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-end">4</div>
 						</div>
 				</div>
+				<div class="bgc-blue-7">
+						<div class="grid-fluid h300 gtc-xs-2 gg-xs-10">
+								<div class="bgc-yellow-7 fz30 ta-c c-white-0 p20 as-xs-top js-xs-stretch">1</div>
+								<div class="bgc-red-7 fz30 ta-c c-white-0 p20 as-xs-top js-xs-stretch">2</div>
+								<div class="bgc-green-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-stretch">3</div>
+								<div class="bgc-orange-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-stretch">4</div>
+						</div>
+				</div>
 		</div>
-
-<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 <code class="ac-xs-middle c-blue-7">
-&lt;div class="grid gtc-xs-3 gg-xs-10"&gt;
+&lt;div class="grid gtc-xs-4 gg-xs-10"&gt;
 	&lt;div class="grid-fluid h300 gtc-xs-2 gg-xs-10"&gt;
 		&lt;div class="bgc-yellow-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-end"&gt;1&lt;/div&gt;
 		&lt;div class="bgc-red-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-start"&gt;2&lt;/div&gt;
@@ -923,11 +935,39 @@
 		&lt;div class="bgc-green-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-start"&gt;3&lt;/div&gt;
 		&lt;div class="bgc-orange-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-end"&gt;4&lt;/div&gt;
 	&lt;/div&gt;
+	&lt;div class="grid-fluid h300 gtc-xs-2 gg-xs-10"&gt;
+		&lt;div class="bgc-yellow-7 fz30 ta-c c-white-0 p20 as-xs-top js-xs-stretch"&gt;1&lt;/div&gt;
+		&lt;div class="bgc-red-7 fz30 ta-c c-white-0 p20 as-xs-top js-xs-stretch"&gt;2&lt;/div&gt;
+		&lt;div class="bgc-green-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-stretch"&gt;3&lt;/div&gt;
+		&lt;div class="bgc-orange-7 fz30 ta-c c-white-0 p20 as-xs-bottom js-xs-stretch"&gt;4&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 </code>
 </pre>
-
-		
+		<div class="grid">
+				<div class="fz30 mt30 pl15 pr15">表格排序与合并
+						<div class="fz24 lh200p fz-sm-16 ">行排序 (.grs-[lg、md、sm、xs]-[1-12])、列排序 (.gcs-[lg、md、sm、xs]-[1-12]) <br>
+								行合并 (.grem-[lg、md、sm、xs]-[1-12])、列合并 (.gcem-[lg、md、sm、xs]-[1-12])</div>
+				</div>
+		</div>
+		<div class="grid h500 gtc-sm-3 gtr-sm-3 gtc-xs-2 gtr-xs-3 gg-xs-10 mt30">
+				<div class="bgc-blue-6   grs-sm-1 gcs-sm-1 grs-xs-2 gcs-xs-2"></div>
+				<div class="bgc-red-6    grs-sm-2 gcs-sm-1 grs-xs-1 gcs-xs-2"></div>
+				<div class="bgc-green-6  grs-sm-1 gcs-sm-2 grem-sm-2 grs-xs-1 gcs-xs-1"></div>
+				<div class="bgc-yellow-6 grs-sm-3 gcs-sm-1 gcem-sm-2 grs-xs-2 gcs-xs-1"></div>
+				<div class="bgc-orange-6 grs-sm-1 gcs-sm-3 grem-sm-3 grs-xs-3 gcs-xs-1 gcem-xs-2"></div>
+		</div>
+		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+											<code class="ac-xs-middle c-blue-7">
+&lt;div class="grid h500 gtc-sm-3 gtr-sm-3 gtc-xs-2 gtr-xs-3 gg-xs-10"&gt;
+	&lt;div class="bgc-blue-6   grs-sm-1 gcs-sm-1 grs-xs-2 gcs-xs-2"&gt;&lt;/div&gt;
+	&lt;div class="bgc-red-6    grs-sm-2 gcs-sm-1 grs-xs-1 gcs-xs-2"&gt;&lt;/div&gt;
+	&lt;div class="bgc-green-6  grs-sm-1 gcs-sm-2 grem-sm-2 grs-xs-1 gcs-xs-1"&gt;&lt;/div&gt;
+	&lt;div class="bgc-yellow-6 grs-sm-3 gcs-sm-1 gcem-sm-2 grs-xs-2 gcs-xs-1"&gt;&lt;/div&gt;
+	&lt;div class="bgc-orange-6 grs-sm-1 gcs-sm-3 grem-sm-3 grs-xs-3 gcs-xs-1 gcem-xs-2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
 		<div class="grid">
 				<div class="fz30 mt30 pl15 pr15">网格自动流
 						<div class="fz24 lh200p fz-sm-16">.gaf-[lg、md、sm、xs]-[row、column、dense、rd、cd]</div>
@@ -941,8 +981,7 @@
 				<div class="bgc-orange-7 grs-lg-4 grs-xs-2"></div>
 				<div class="bgc-violet-7 "></div>
 		</div>
-
-<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 <code class="ac-xs-middle c-blue-7">
 &lt;div class="grid h300 gtc-xs-2 gtr-xs-4 gg-xs-10 gaf-lg-row gaf-xs-column"&gt;
 	&lt;div class="bgc-blue-7   "&gt;&lt;/div&gt;
