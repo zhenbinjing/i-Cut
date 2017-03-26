@@ -660,7 +660,7 @@
 		</div>
 		<div class="grid">
 				<div class="fz24 lh200p fz-sm-16 bdb_1-solid bdc-gray-4 pl15 pr15">升级到最新的 Chrome 与 Firefox 的版本便看到效果。<br>
-						本框架只适合用于重复性网格，对于个性化较强的布局，建议自行用 grid-template-areas 和 grid-area 来布局。</div>
+						本框架只适合用于重复性网格，对于个性化较强的布局，建议自行使用 grid-template-areas 和 grid-area 来布局。</div>
 		</div>
 		<div class="grid">
 				<div class="fz30 mt30 pl15 pr15">12行12列与间隔
@@ -947,31 +947,7 @@
 &lt;/div&gt;
 </code>
 </pre>
-		<div class="grid">
-				<div class="fz30 mt30 pl15 pr15">网格排序与合并
-						<div class="fz24 lh200p fz-sm-16 ">行排序 (.grs-[lg、md、sm、xs]-[1-12])、列排序 (.gcs-[lg、md、sm、xs]-[1-12]) <br>
-								行合并 (.grem-[lg、md、sm、xs]-[1-12])、列合并 (.gcem-[lg、md、sm、xs]-[1-12])</div>
-				</div>
-		</div>
-		<div class="grid h500 gtc-sm-3 gtr-sm-3 gtc-xs-2 gtr-xs-3 gg-xs-10 mt30">
-				<div class="bgc-blue-6   grs-sm-1 gcs-sm-1 grs-xs-2 gcs-xs-2"></div>
-				<div class="bgc-red-6    grs-sm-2 gcs-sm-1 grs-xs-1 gcs-xs-2"></div>
-				<div class="bgc-green-6  grs-sm-1 gcs-sm-2 grem-sm-2 grs-xs-1 gcs-xs-1"></div>
-				<div class="bgc-yellow-6 grs-sm-3 gcs-sm-1 gcem-sm-2 grs-xs-2 gcs-xs-1"></div>
-				<div class="bgc-orange-6 grs-sm-1 gcs-sm-3 grem-sm-3 grs-xs-3 gcs-xs-1 gcem-xs-2"></div>
-		</div>
-		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
-											<code class="ac-xs-middle c-blue-7">
-&lt;div class="grid h500 gtc-sm-3 gtr-sm-3 gtc-xs-2 gtr-xs-3 gg-xs-10"&gt;
-	&lt;div class="bgc-blue-6   grs-sm-1 gcs-sm-1 grs-xs-2 gcs-xs-2"&gt;&lt;/div&gt;
-	&lt;div class="bgc-red-6    grs-sm-2 gcs-sm-1 grs-xs-1 gcs-xs-2"&gt;&lt;/div&gt;
-	&lt;div class="bgc-green-6  grs-sm-1 gcs-sm-2 grem-sm-2 grs-xs-1 gcs-xs-1"&gt;&lt;/div&gt;
-	&lt;div class="bgc-yellow-6 grs-sm-3 gcs-sm-1 gcem-sm-2 grs-xs-2 gcs-xs-1"&gt;&lt;/div&gt;
-	&lt;div class="bgc-orange-6 grs-sm-1 gcs-sm-3 grem-sm-3 grs-xs-3 gcs-xs-1 gcem-xs-2"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code>
-</pre>
-		<div class="grid">
+	<div class="grid">
 				<div class="fz30 mt30 pl15 pr15">网格自动流
 						<div class="fz24 lh200p fz-sm-16">.gaf-[lg、md、sm、xs]-[row、column、dense、rd、cd]</div>
 				</div>
@@ -996,6 +972,31 @@
 &lt;/div&gt;
 </code>
 </pre>
+		<div class="grid">
+				<div class="fz30 mt30 pl15 pr15">网格排序与合并
+						<div class="fz24 lh200p fz-sm-16 ">行排序 (.grs-[lg、md、sm、xs]-[1-12])、列排序 (.gcs-[lg、md、sm、xs]-[1-12]) <br>
+								行合并 (.grem-[lg、md、sm、xs]-[1-12])、列合并 (.gcem-[lg、md、sm、xs]-[1-12])</div>
+				</div>
+		</div>
+		<div class="grid h500 gtc-sm-3 gtr-sm-3 gtc-xs-2 gtr-xs-3 gg-xs-10 mt30">
+				<div class="bgc-blue-6   grs-sm-1 gcs-sm-1 grs-xs-2 gcs-xs-2"></div>
+				<div class="bgc-red-6    grs-sm-2 gcs-sm-1 grs-xs-1 gcs-xs-2"></div>
+				<div class="bgc-green-6  grs-sm-1 gcs-sm-2 grem-sm-2 grs-xs-1 gcs-xs-1"></div>
+				<div class="bgc-yellow-6 grs-sm-3 gcs-sm-1 gcem-sm-2 grs-xs-2 gcs-xs-1"></div>
+				<div class="bgc-orange-6 grs-sm-1 gcs-sm-3 grem-sm-3 grs-xs-3 gcs-xs-1 gcem-xs-2"></div>
+		</div>
+		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+											<code class="ac-xs-middle c-blue-7">
+&lt;div class="grid h500 gtc-sm-3 gtr-sm-3 gtc-xs-2 gtr-xs-3 gg-xs-10"&gt;
+	&lt;div class="bgc-blue-6   grs-sm-1 gcs-sm-1 grs-xs-2 gcs-xs-2"&gt;&lt;/div&gt;
+	&lt;div class="bgc-red-6    grs-sm-2 gcs-sm-1 grs-xs-1 gcs-xs-2"&gt;&lt;/div&gt;
+	&lt;div class="bgc-green-6  grs-sm-1 gcs-sm-2 grem-sm-2 grs-xs-1 gcs-xs-1"&gt;&lt;/div&gt;
+	&lt;div class="bgc-yellow-6 grs-sm-3 gcs-sm-1 gcem-sm-2 grs-xs-2 gcs-xs-1"&gt;&lt;/div&gt;
+	&lt;div class="bgc-orange-6 grs-sm-1 gcs-sm-3 grem-sm-3 grs-xs-3 gcs-xs-1 gcem-xs-2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+		
 </div>
 <script src="assets/jq-2.1.js"></script> 
 <script src="assets/jquery.nav.js"></script> 
