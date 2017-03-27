@@ -117,7 +117,7 @@ $bdcl:border-collapse,
 $ols:outline-style
 );
 
-@mixin csss ($array, $numer){	
+@mixin csss ($array, $numer){
 	@content;		
 	@each $class, $var in $array {				
 		.#{$class}{#{$numer}: $var;}
@@ -200,3 +200,65 @@ $border:dotted, dashed, solid, double;
 .bgp_50p100p { background-position: $nb50 $nb100; }//bottom center//
 .bgp_100p50p { background-position: $nb100 $nb50; }//right center//
 .bgp_100p100p { background-position: $nb100 $nb100; }//right bottom//
+
+//-----------------------------响应式值-------------------------------//
+
+$w1: 751;
+$w2: 992;
+$w3: 1200;
+$nbs: 100;
+
+@mixin media ($grid){
+	@content;	
+	.d-#{$grid}-n{display:none;}
+	.d-#{$grid}-i{display: inline;}
+	.d-#{$grid}-b{display:block;}
+	.d-#{$grid}-ib{display: inline-block;}
+	.d-#{$grid}-t{display:table;}
+	.d-#{$grid}-bc{display:table-cell;}
+	.d-#{$grid}-f{display:flex;}
+	.d-#{$grid}-g{display:grid;}
+	
+	.fl-#{$grid}-n{float: none;}
+	.fl-#{$grid}-l{float: left;}
+	.fl-#{$grid}-r{float: right;}
+
+	.pos-#{$grid}-s{position: static;}
+	.pos-#{$grid}-f{position: fixed;}
+	.pos-#{$grid}-r{position: relative;}
+	.pos-#{$grid}-a{position: absolute;}
+
+	.ta-#{$grid}-c{text-align: center;}
+	.ta-#{$grid}-l{text-align: left;}
+	.ta-#{$grid}-r{text-align: right;}
+	.ta-#{$grid}-j{text-align: justify;}
+
+
+	@for $i from 0 through 100 {.fz-#{$grid}-#{$i}{font-size:$i/$nbs + rem;}}
+	@for $i from 10 through 100 {.lh-#{$grid}-#{$i*10}p{line-height: $i*10 + %;}}
+	@for $i from 0 through 100 {.ti-#{$grid}-#{$i}{text-indent:$i/$nbs + rem;}}
+	
+	@for $i from 0 through 100 {
+	.p-#{$grid}-#{$i}{padding:$i/$nbs + rem;}
+	.pt-#{$grid}-#{$i}{padding-top:$i/$nbs + rem;}
+	.pr-#{$grid}-#{$i}{padding-right:$i/$nbs + rem;}
+	.pb-#{$grid}-#{$i}{padding-bottom:$i/$nbs + rem;}
+	.pl-#{$grid}-#{$i}{padding-left:$i/$nbs + rem;}
+	}
+
+	@for $i from 0 through 100 {
+	.m-#{$grid}-#{$i}{margin:$i/$nbs + rem;}
+	.mt-#{$grid}-#{$i}{margin-top:$i/$nbs + rem;}
+	.mr-#{$grid}-#{$i}{margin-right:$i/$nbs + rem;}
+	.mb-#{$grid}-#{$i}{margin-bottom:$i/$nbs + rem;}
+	.ml-#{$grid}-#{$i}{margin-left:$i/$nbs + rem;}
+	}
+	
+}
+
+$media-data: (sm, $w1),(md, $w2),(lg, $w3);
+@each $grid, $w in $media-data {
+	@media only screen and (min-width: $w + px){	
+		@include media ($grid){}	
+	}	
+}
