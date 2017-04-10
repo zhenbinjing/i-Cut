@@ -439,11 +439,11 @@
 						</pre>
 								</div>
 						</div>
-						<div class="col-xs-12 fz30 mt30">主轴对齐(justify-content)
-								<div class="d-ib fz24 fz-sm-16 lh250p">.jc-(xs、sm、md、lg)-(start、center、end、around、between)</div>
+						<div class="col-xs-12 fz30 mt30">多列轴线对齐(justify-content)
+								<div class="d-ib fz24 fz-sm-16 lh250p">.jc-(xs、sm、md、lg)-(start、center、end、around、between、evenly)</div>
 						</div>
 						<div class="col-xs-12 mt30">
-								<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-start fz30 ta-c c-white-0 mb20 bgc-blue-7">
+								<div class="row jc-xs-start fz30 ta-c c-white-0 mb20 bgc-blue-7">
 										<div class="col-xs-3 mt20 mb20">
 												<div class="bgc-blue-9">start</div>
 										</div>
@@ -451,7 +451,7 @@
 												<div class="bgc-blue-9">start</div>
 										</div>
 								</div>
-								<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-center fz30 ta-c c-white-0 mb20 bgc-blue-7">
+								<div class="row jc-xs-center fz30 ta-c c-white-0 mb20 bgc-blue-7">
 										<div class="col-xs-3 mt20 mb20">
 												<div class="bgc-blue-9">center</div>
 										</div>
@@ -459,7 +459,7 @@
 												<div class="bgc-blue-9">center</div>
 										</div>
 								</div>
-								<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-end fz30 ta-c c-white-0 mb20 bgc-blue-7">
+								<div class="row jc-xs-end fz30 ta-c c-white-0 mb20 bgc-blue-7">
 										<div class="col-xs-3 mt20 mb20">
 												<div class="bgc-blue-9">end</div>
 										</div>
@@ -467,7 +467,7 @@
 												<div class="bgc-blue-9">end</div>
 										</div>
 								</div>
-								<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-around fz30 ta-c c-white-0 mb20 bgc-blue-7">
+								<div class="row jc-xs-around fz30 ta-c c-white-0 mb20 bgc-blue-7">
 										<div class="col-xs-3 mt20 mb20">
 												<div class="bgc-blue-9">around</div>
 										</div>
@@ -475,19 +475,19 @@
 												<div class="bgc-blue-9">around</div>
 										</div>
 								</div>
-								<div class="row fxd-xs-row fxw-xs-nowrap jc-xs-between fz30 ta-c c-white-0 mb20 bgc-blue-7">
+								<div class="row jc-xs-between fz30 ta-c c-white-0 mb20 bgc-blue-7">
 										<div class="col-xs-3 mt20 mb20">
 												<div class="bgc-blue-9">between</div>
 										</div>
 										<div class="col-xs-3 mt20 mb20">
 												<div class="bgc-blue-9">between</div>
 										</div>
-								</div>
+								</div>								
 								<div class="row mt30">
 										<pre class="d-f w100p fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 											<code class="ac-xs-middle c-blue-7">
 &lt;div class="container"&gt;							
-	&lt;div class="row fxd-xs-row fxw-xs-nowrap jc-xs-between"&gt;
+	&lt;div class="row jc-xs-between"&gt;
 		&lt;div class="col-xs-3"&gt;between&lt;/div&gt;
 		&lt;div class="col-xs-3"&gt;between&lt;/div&gt;
 	&lt;/div&gt;
@@ -496,48 +496,46 @@
 										</pre>
 								</div>
 						</div>
-						<div class="col-xs-12 fz30 mt30">多根轴线对齐(align-content)
-								<div class="d-ib fz24 lh160p fz-sm-16 lh-sm250p">.ac-(xs、sm、md、lg)-(top、middle、bottom、stretch、around、between)</div>
+						<div class="col-xs-12 fz30 mt30">多行轴线对齐(align-content)
+								<div class="d-ib fz24 lh160p fz-sm-16 lh-sm250p">.ac-(xs、sm、md、lg)-(top、middle、bottom、stretch、around、between、evenly)</div>
 						</div>
 						<div class="col-xs-12 mt30">
-								<div class="row ac-xs-top h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
-										<div class="col-xs-6 h100 lh330p bgc-blue-4">top</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-5">top</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-6">top</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-7">top</div>
+								<div class="row ac-xs-top h300 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+										<div class="col-xs-12 p10 bgc-blue-4">top</div>
+										<div class="col-xs-12 p10 bgc-blue-5">top</div>
+										<div class="col-xs-12 p10 bgc-blue-6">top</div>
+										<div class="col-xs-12 p10 bgc-blue-7">top</div>
 								</div>
-								<div class="row ac-xs-middle h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
-										<div class="col-xs-6 h100 lh330p bgc-blue-4">middle</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-5">middle</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-6">middle</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-7">middle</div>
+								<div class="row ac-xs-middle h300 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+										<div class="col-xs-12 p10 bgc-blue-4">middle</div>
+										<div class="col-xs-12 p10 bgc-blue-5">middle</div>
+										<div class="col-xs-12 p10 bgc-blue-6">middle</div>
+										<div class="col-xs-12 p10 bgc-blue-7">middle</div>
 								</div>
-								<div class="row ac-xs-bottom h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
-										<div class="col-xs-6 h100 lh330p bgc-blue-4">bottom</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-5">bottom</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-6">bottom</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-7">bottom</div>
+								<div class="row ac-xs-bottom h300 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+										<div class="col-xs-12 p10 bgc-blue-4">bottom</div>
+										<div class="col-xs-12 p10 bgc-blue-5">bottom</div>
+										<div class="col-xs-12 p10 bgc-blue-6">bottom</div>
+										<div class="col-xs-12 p10 bgc-blue-7">bottom</div>
 								</div>
-								<div class="row ac-xs-stretch h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
-										<div class="col-xs-6 h100 lh330p bgc-blue-2">stretch</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-3">stretch</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-4">stretch</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-5">stretch</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-6">stretch</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-7">stretch</div>
+								<div class="row ac-xs-stretch h300 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+										<div class="col-xs-12 p10 bgc-blue-4">stretch</div>
+										<div class="col-xs-12 p10 bgc-blue-5">stretch</div>
+										<div class="col-xs-12 p10 bgc-blue-6">stretch</div>
+										<div class="col-xs-12 p10 bgc-blue-7">stretch</div>
 								</div>
-								<div class="row ac-xs-around h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
-										<div class="col-xs-6 h100 lh330p bgc-blue-4">around</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-5">around</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-6">around</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-7">around</div>
+								<div class="row ac-xs-around h300 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+										<div class="col-xs-12 p10 bgc-blue-4">around</div>
+										<div class="col-xs-12 p10 bgc-blue-5">around</div>
+										<div class="col-xs-12 p10 bgc-blue-6">around</div>
+										<div class="col-xs-12 p10 bgc-blue-7">around</div>
 								</div>
-								<div class="row ac-xs-between h500 fz30 ta-c mb20 c-white-0 bgc-blue-8">
-										<div class="col-xs-6 h100 lh330p bgc-blue-4">between</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-5">between</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-6">between</div>
-										<div class="col-xs-6 h100 lh330p bgc-blue-7">between</div>
-								</div>
+								<div class="row ac-xs-between h300 fz30 ta-c mb20 c-white-0 bgc-blue-8">
+										<div class="col-xs-12 p10 bgc-blue-4">between</div>
+										<div class="col-xs-12 p10 bgc-blue-5">between</div>
+										<div class="col-xs-12 p10 bgc-blue-6">between</div>
+										<div class="col-xs-12 p10 bgc-blue-7">between</div>
+								</div>								
 								<div class="row mt30">
 										<pre class="d-f w100p fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 											<code class="ac-xs-middle c-blue-7">
@@ -576,8 +574,10 @@
 										<div class="col-xs-6 p10 bgc-blue-6">bottom</div>
 								</div>
 								<div class="row ai-xs-stretch h150 fz30 ta-c mb20 c-white-0 bgc-blue-7">
-										<div class="col-xs-6 lh500p bgc-blue-5">stretch</div>
-										<div class="col-xs-6 lh500p bgc-blue-6">stretch</div>
+										<div class="col-xs-6 p10 bgc-blue-3">stretch</div>
+										<div class="col-xs-6 p10 bgc-blue-4">stretch</div>
+										<div class="col-xs-6 p10 bgc-blue-5">stretch</div>
+										<div class="col-xs-6 p10 bgc-blue-6">stretch</div>
 								</div>
 								<div class="row ai-xs-baseline h100 fz30 ta-c mb20 c-white-0 bgc-blue-7">
 										<div class="col-xs-3 h60 lh200p bgc-blue-3">baseline</div>
@@ -601,7 +601,7 @@
 								</div>
 						</div>
 						
-						<div class="col-xs-12 fz30 mt30">单独个别元素垂直对齐(align-self)
+						<div class="col-xs-12 fz30 mt30">单独元素垂直对齐(align-self)
 								<div class="d-ib fz24 lh160p fz-sm-16 lh-sm-250p">.as-(xs、sm、md、lg)-(top、middle、bottom、stretch、baseline、auto)</div>
 						</div>
 						<div class="col-xs-12 mt30">
@@ -658,7 +658,7 @@
 		</div>
 		<div class="grid">
 				<div class="fz24 lh200p fz-sm-16 bdb_1-solid bdc-gray-4 pl15 pr15">升级到最新的 Chrome 与 Firefox 的版本便看到效果。<br>
-						本框架只适合用于重复性网格，对于个性化较强的布局，建议自行使用 grid-template-areas 和 grid-area 来布局。</div>
+						网格系统只适合用于重复性布局，对于个性化较强的布局，建议自行使用 grid-template-areas 和 grid-area 来布局。</div>
 		</div>
 		<div class="grid">
 				<div class="fz30 mt30 pl15 pr15">网格
@@ -984,7 +984,7 @@
 								<div class="bgc-blue-4 p20"></div>
 								<div class="bgc-blue-4 p20"></div>
 						</div>
-				</div>
+				</div>				
 		</div>
 		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 											<code class="ac-xs-middle c-blue-7">
@@ -1005,6 +1005,28 @@
 			&lt;div class="bgc-blue-4 p20"&gt;&lt;/div&gt;
 		&lt;/div&gt;	
 	&lt;/div&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+		<div class="grid">
+				<div class="fz16 mt30 pl15 pr15">justify-content 与 align-content 的 space-evenly 属性使用时需要定义父元素与内元素的高宽，才能均匀的平分间距。</div>
+		</div>
+		<div class="bgc-blue-7 grid h300 mt30 jc-xs-evenly ac-xs-evenly" style="grid-template-columns: repeat(3, 20%);  grid-template-rows: repeat(2, 20%);">
+				<div class="bgc-blue-4"></div>
+				<div class="bgc-blue-4"></div>
+				<div class="bgc-blue-4"></div>
+				<div class="bgc-blue-4"></div>
+				<div class="bgc-blue-4"></div>
+				<div class="bgc-blue-4"></div>
+		</div>
+<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+<code class="ac-xs-middle c-blue-7">
+&lt;div class="grid h150 jc-xs-evenly ac-xs-evenly" style="grid-template-columns: repeat(3, 25%); grid-template-rows: repeat(2, 30%);"&gt;
+			&lt;div class="bgc-blue-4"&gt;&lt;/div&gt;
+			&lt;div class="bgc-blue-4"&gt;&lt;/div&gt;
+			&lt;div class="bgc-blue-4"&gt;&lt;/div&gt;
+			...
 &lt;/div&gt;
 
 </code>
