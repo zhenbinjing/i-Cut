@@ -98,7 +98,7 @@ $nb: 100; $column: 12;
 	}
 
 	//单元格的行列间距
-	@for $i from 1 through 50 {
+	@for $i from 1 through $nb {
 		.grg-#{$grid}-#{$i}{ grid-row-gap: $i/$nb + rem;}
 		.gcg-#{$grid}-#{$i}{ grid-column-gap: $i/$nb + rem;}
 		.gg-#{$grid}-#{$i}{ grid-gap: $i/$nb + rem;}
