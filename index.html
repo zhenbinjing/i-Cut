@@ -692,7 +692,7 @@
 		&lt;div class="p20 bgc-teal-7"&gt;&lt;/div&gt;
 		&lt;div class="p20 bgc-green-7"&gt;&lt;/div&gt;
 		&lt;div class="p20 bgc-lime-7"&gt;&lt;/div&gt;
-		&lt;div class="p20 bgc-yellow-7"&gt;&lt;/div&gt;		
+		&lt;div class="p20 bgc-yellow-7"&gt;&lt;/div&gt;
 		&lt;div class="p20 bgc-orange-7"&gt;&lt;/div&gt;
 &lt;/div&gt;
 						
@@ -978,14 +978,7 @@
 			&lt;div class="bgc-blue-4 p20"&gt;&lt;/div&gt;
 		&lt;/div&gt;	
 	&lt;/div&gt;
-	&lt;div class="grid-fluid jc-xs-end ac-xs-top"&gt;
-		&lt;div class="grid-fluid gtc-xs-2 gg-xs-10"&gt;
-			&lt;div class="bgc-blue-4 p20"&gt;&lt;/div&gt;
-			&lt;div class="bgc-blue-4 p20"&gt;&lt;/div&gt;
-			&lt;div class="bgc-blue-4 p20"&gt;&lt;/div&gt;
-			&lt;div class="bgc-blue-4 p20"&gt;&lt;/div&gt;
-		&lt;/div&gt;	
-	&lt;/div&gt;
+	...
 &lt;/div&gt;
 
 </code>
@@ -1003,7 +996,7 @@
 		</div>
 <pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 <code class="ac-xs-middle c-blue-7">
-&lt;div class="grid h300 jc-xs-evenly ac-xs-evenly" style="grid-template-columns: repeat(3, 20%); grid-template-rows: repeat(2, 30%);"&gt;
+&lt;div class="grid h300 mt30 jc-xs-evenly ac-xs-evenly" style="grid-template-columns: repeat(3, 20%); grid-template-rows: repeat(2, 30%);"&gt;
 			&lt;div class="bgc-blue-4"&gt;&lt;/div&gt;
 			&lt;div class="bgc-blue-4"&gt;&lt;/div&gt;
 			&lt;div class="bgc-blue-4"&gt;&lt;/div&gt;
@@ -1013,101 +1006,77 @@
 </code>
 </pre>
 		<div class="grid">
-				<div class="fz30 mt30 pl15 pr15">网格内元素对齐 justify-items 配合 align-items 使用
+				<div class="fz30 mt30 pl15 pr15">网格多元素对齐 justify-items 配合 align-items 使用
 						<div class="fz24 lh200p fz-sm-16">.ji-(xs、sm、md、lg)-(start、center、end、stretch)</div>
 				</div>
 		</div>
-		<div class="grid h300 gtc-xs-4 gg-xs-10 mt30 fz24 ta-c c-white-0">
-				<div class="grid-fluid bgc-blue-7 ji-xs-start ai-xs-top">
-						<div class="bgc-blue-4 p20">1</div>
-				</div>
-				<div class="grid-fluid bgc-blue-7 ji-xs-center ai-xs-middle">
-						<div class="bgc-blue-4 p20">2</div>
-				</div>
-				<div class="grid-fluid bgc-blue-7 ji-xs-end ai-xs-bottom">
-						<div class="bgc-blue-4 p20">3</div>
-				</div>
-				<div class="grid-fluid bgc-blue-7 ji-xs-stretch ai-xs-middle">
-						<div class="bgc-blue-4 p20">4</div>
-				</div>
+		<div class="grid h300 gtc-xs-4 gg-xs-10 mt30 fz30 ta-c c-white-0">				
+						<div class="grid-fluid gtc-xs-2 gg-xs-10 ji-xs-start ai-xs-top bgc-blue-7">
+								<div class="bgc-blue-4 p20">1</div>
+								<div class="bgc-blue-4 p20">2</div>
+								<div class="bgc-blue-4 p20">3</div>
+								<div class="bgc-blue-4 p20">4</div>
+						</div>			
+						<div class="grid-fluid gtc-xs-2 gg-xs-10 ji-xs-center ai-xs-middle bgc-blue-7">
+								<div class="bgc-blue-4 p20">1</div>
+								<div class="bgc-blue-4 p20">2</div>
+								<div class="bgc-blue-4 p20">3</div>
+								<div class="bgc-blue-4 p20">4</div>
+						</div>		
+						<div class="grid-fluid gtc-xs-2 gg-xs-10 ji-xs-end ai-xs-bottom bgc-blue-7">
+								<div class="bgc-blue-4 p20">1</div>
+								<div class="bgc-blue-4 p20">2</div>
+								<div class="bgc-blue-4 p20">3</div>
+								<div class="bgc-blue-4 p20">4</div>
+						</div>			
+						<div class="grid-fluid gtc-xs-2 gg-xs-10 ji-xs-stretch ai-xs-middle bgc-blue-7">
+								<div class="bgc-blue-4 p20">1</div>
+								<div class="bgc-blue-4 p20">2</div>
+								<div class="bgc-blue-4 p20">3</div>
+								<div class="bgc-blue-4 p20">4</div>
+						</div>		
 		</div>
 		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 <code class="ac-xs-middle c-blue-7">
-&lt;div class="grid h300 gtc-xs-4 gg-xs-10 mt30 fz24 ta-c c-white-0"&gt;
-	&lt;div class="grid-fluid bgc-blue-7 ji-xs-start ai-xs-top"&gt;
+&lt;div class="grid h300 gtc-xs-4 gg-xs-10"&gt;
+	&lt;div class="grid-fluid gtc-xs-2 gg-xs-10 ji-xs-start ai-xs-top bgc-blue-7"&gt;
 		&lt;div class="bgc-blue-4 p20"&gt;1&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="grid-fluid bgc-blue-7 ji-xs-center ai-xs-middle"&gt;
 		&lt;div class="bgc-blue-4 p20"&gt;2&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="grid-fluid bgc-blue-7 ji-xs-end ai-xs-bottom"&gt;
 		&lt;div class="bgc-blue-4 p20"&gt;3&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="grid-fluid bgc-blue-7 ji-xs-stretch ai-xs-middle"&gt;
 		&lt;div class="bgc-blue-4 p20"&gt;4&lt;/div&gt;
 	&lt;/div&gt;
+	...
 &lt;/div&gt;
 
 </code>
-</pre>
+</pre>	
+
 		<div class="grid">
-				<div class="fz30 mt30 pl15 pr15">网格个别元素对齐 justify-self 配合 align-self 使用
+				<div class="fz30 mt30 pl15 pr15">网格单元素对齐 justify-self 配合 align-self 使用
 						<div class="fz24 lh200p fz-sm-16">.js-(xs、sm、md、lg)-(start、center、end、stretch)</div>
 				</div>
 		</div>
-		<div class="grid h300 gtc-xs-4 gg-xs-10 mt30 fz30 ta-c c-white-0">				
-						<div class="grid-fluid gtc-xs-2 gg-xs-10 bgc-blue-7">
-								<div class="bgc-blue-4 p20 as-xs-bottom js-xs-end">1</div>
-								<div class="bgc-blue-4 p20 as-xs-bottom js-xs-start">2</div>
-								<div class="bgc-blue-4 p20 as-xs-top js-xs-end">3</div>
-								<div class="bgc-blue-4 p20 as-xs-top js-xs-start">4</div>
-						</div>			
-						<div class="grid-fluid gtc-xs-2 gg-xs-10 bgc-blue-7">
-								<div class="bgc-blue-4 p20 as-xs-middle js-xs-center">1</div>
-								<div class="bgc-blue-4 p20 as-xs-middle js-xs-center">2</div>
-								<div class="bgc-blue-4 p20 as-xs-middle js-xs-center">3</div>
-								<div class="bgc-blue-4 p20 as-xs-middle js-xs-center">4</div>
-						</div>		
-						<div class="grid-fluid gtc-xs-2 gg-xs-10 bgc-blue-7">
-								<div class="bgc-blue-4 p20 as-xs-top js-xs-start">1</div>
-								<div class="bgc-blue-4 p20 as-xs-top js-xs-end">2</div>
-								<div class="bgc-blue-4 p20 as-xs-bottom js-xs-start">3</div>
-								<div class="bgc-blue-4 p20 as-xs-bottom js-xs-end">4</div>
-						</div>			
-						<div class="grid-fluid gtc-xs-2 gg-xs-10 bgc-blue-7">
-								<div class="bgc-blue-4 p20 as-xs-top js-xs-stretch">1</div>
-								<div class="bgc-blue-4 p20 as-xs-top js-xs-stretch">2</div>
-								<div class="bgc-blue-4 p20 as-xs-bottom js-xs-stretch">3</div>
-								<div class="bgc-blue-4 p20 as-xs-bottom js-xs-stretch">4</div>
-						</div>		
-		</div>
-		<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
+		<div class="grid h300 gtc-xs-4 gg-xs-10 mt30 fz24 ta-c c-white-0">
+				<div class="grid-fluid bgc-blue-7">
+						<div class="bgc-blue-4 p20 js-xs-start as-xs-top">1</div>
+				</div>
+				<div class="grid-fluid bgc-blue-7">
+						<div class="bgc-blue-4 p20 js-xs-center as-xs-middle">2</div>
+				</div>
+				<div class="grid-fluid bgc-blue-7">
+						<div class="bgc-blue-4 p20 js-xs-end as-xs-bottom">3</div>
+				</div>
+				<div class="grid-fluid bgc-blue-7">
+						<div class="bgc-blue-4 p20 js-xs-stretch as-xs-middle">4</div>
+				</div>
+		</div>		
+<pre class="grid mt30 fz16 lh150p p10 bgc-white-0 bdl_5-solid bdc-gray-2 ovx-a">
 <code class="ac-xs-middle c-blue-7">
-&lt;div class="grid h300 gtc-xs-4 gg-xs-10 mt30 fz30 ta-c c-white-0"&gt;
-	&lt;div class="grid-fluid gtc-xs-2 gg-xs-10"&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-bottom js-xs-end"&gt;1&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-bottom js-xs-start"&gt;2&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-top js-xs-end"&gt;3&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-top js-xs-start"&gt;4&lt;/div&gt;
+&lt;div class="grid h300 gtc-xs-4 gg-xs-10 mt30 fz24 ta-c c-white-0"&gt;
+	&lt;div class="grid-fluid bgc-blue-7"&gt;
+		&lt;div class="bgc-blue-4 p20 js-xs-start as-xs-top"&gt;1&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;div class="grid-fluid gtc-xs-2 gg-xs-10"&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-middle js-xs-center"&gt;1&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-middle js-xs-center"&gt;2&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-middle js-xs-center"&gt;3&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-middle js-xs-center"&gt;4&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="grid-fluid gtc-xs-2 gg-xs-10"&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-top js-xs-start"&gt;1&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-top js-xs-end"&gt;2&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-bottom js-xs-start"&gt;3&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-bottom js-xs-end"&gt;4&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="grid-fluid gtc-xs-2 gg-xs-10"&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-top js-xs-stretch"&gt;1&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-top js-xs-stretch"&gt;2&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-bottom js-xs-stretch"&gt;3&lt;/div&gt;
-		&lt;div class="bgc-blue-4 p20 as-xs-bottom js-xs-stretch"&gt;4&lt;/div&gt;
-	&lt;/div&gt;
+	...
 &lt;/div&gt;
 
 </code>
