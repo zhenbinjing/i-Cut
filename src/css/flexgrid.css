@@ -269,9 +269,6 @@
 .as-xs-baseline {
   align-self: baseline; }
 
-.as-xs-auto {
-  align-self: auto; }
-
 .jc-xs-start {
   justify-content: flex-start; }
 
@@ -1644,8 +1641,6 @@
     align-self: stretch; }
   .as-sm-baseline {
     align-self: baseline; }
-  .as-sm-auto {
-    align-self: auto; }
   .jc-sm-start {
     justify-content: flex-start; }
   .jc-sm-center {
@@ -2616,8 +2611,6 @@
     align-self: stretch; }
   .as-md-baseline {
     align-self: baseline; }
-  .as-md-auto {
-    align-self: auto; }
   .jc-md-start {
     justify-content: flex-start; }
   .jc-md-center {
@@ -3588,8 +3581,6 @@
     align-self: stretch; }
   .as-lg-baseline {
     align-self: baseline; }
-  .as-lg-auto {
-    align-self: auto; }
   .jc-lg-start {
     justify-content: flex-start; }
   .jc-lg-center {

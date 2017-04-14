@@ -52,7 +52,7 @@ $nb: 100; $column: 12;
 	.ai-#{$grid}-#{$val}{align-items: $direction;}	
 	}
 
-	$as: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(baseline, baseline),(auto, auto);
+	$as: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(baseline, baseline);
 	@each $val, $direction in $as {		
 	.as-#{$grid}-#{$val}{align-self: $direction;}	
 	}
