@@ -22,6 +22,7 @@
 .h80{height: .8rem;}
 .h100{height: 1rem;}
 .h150{height: 1.5rem;}
+.h200{height: 2rem;}
 .h300{height: 3rem;}
 .h500{height: 5rem;}
 .w250{width: 2.5rem;}
@@ -31,6 +32,7 @@
 .pr15{padding-right: .15rem;}
 .p10{padding: .1rem;}	
 .p20{padding: .2rem;}	
+.p30{padding: .3rem;}	
 .pt20{padding-top: .2rem;}
 .pb20{padding-bottom: .2rem;}
 .pb10{padding-bottom: .1rem;}
