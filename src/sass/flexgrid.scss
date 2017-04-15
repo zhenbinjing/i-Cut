@@ -42,7 +42,7 @@ $nb: 100; $column: 12;
 	
 	//alignment
 
-	$ac: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(around, space-around),(between, space-between),(evenly, space-evenly);
+	$ac: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(between, space-between),(around, space-around),(evenly, space-evenly);
 	@each $val, $direction in $ac {		
 	.ac-#{$grid}-#{$val}{align-content: $direction;}	
 	}
@@ -57,7 +57,7 @@ $nb: 100; $column: 12;
 	.as-#{$grid}-#{$val}{align-self: $direction;}	
 	}
 
-	$jc: (start, flex-start),(center, center),(end, flex-end),(around, space-around),(between, space-between),(evenly, space-evenly);
+	$jc: (start, flex-start),(center, center),(end, flex-end),(between, space-between),(around, space-around),(evenly, space-evenly);
 	@each $val, $direction in $jc {		
 	.jc-#{$grid}-#{$val}{justify-content: $direction;}	
 	}	
