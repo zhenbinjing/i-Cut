@@ -52,11 +52,7 @@
 
 /*grid*/
 
-.grid-header { grid-area: header; }
-.grid-footer { grid-area: footer; }
-.grid-main { grid-area: main; }
-.grid-left { grid-area: navigation; }
-.grid-right { grid-area: ads; }
+html,.grid-template{height: 100%;}
 
 .grid-template {
 	display: grid;
@@ -68,8 +64,13 @@
 	grid-template-rows: 100px 
 						1fr 
 						50px;
-	min-height: 100vh;
 }
+
+.grid-header { grid-area: header; }
+.grid-footer { grid-area: footer; }
+.grid-main { grid-area: main; }
+.grid-left { grid-area: navigation; }
+.grid-right { grid-area: ads; }
 
 @media screen and (max-width: 750px) {
 .grid-template {
