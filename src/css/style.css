@@ -49,3 +49,43 @@
   -moz-osx-font-smoothing: grayscale;
  }
 .aaa{background: url(../img/d.png);}
+
+/*grid*/
+
+.grid-header { grid-area: header; }
+.grid-footer { grid-area: footer; }
+.grid-main { grid-area: main; }
+.grid-left { grid-area: navigation; }
+.grid-right { grid-area: ads; }
+
+
+.grid-template {
+	display: grid;
+	grid-template-areas: " header header header "
+						 " navigation main ads "
+						 " footer footer footer ";
+
+	grid-template-columns: 150px 1fr 150px;
+	grid-template-rows: 100px 
+						1fr 
+						50px;
+	min-height: 100vh;
+}
+
+
+
+@media screen and (max-width: 750px) {
+.grid-template {
+	grid-template-areas: " header "
+						 " navigation "
+						 " main "
+						 " ads "
+						 " footer ";
+	grid-template-columns: 100%;
+	grid-template-rows: 100px 
+						50px 
+						1fr
+						50px 
+						30px;
+}
+}

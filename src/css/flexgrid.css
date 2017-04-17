@@ -230,11 +230,11 @@
 .ac-xs-stretch {
   align-content: stretch; }
 
-.ac-xs-around {
-  align-content: space-around; }
-
 .ac-xs-between {
   align-content: space-between; }
+
+.ac-xs-around {
+  align-content: space-around; }
 
 .ac-xs-evenly {
   align-content: space-evenly; }
@@ -278,11 +278,11 @@
 .jc-xs-end {
   justify-content: flex-end; }
 
-.jc-xs-around {
-  justify-content: space-around; }
-
 .jc-xs-between {
   justify-content: space-between; }
+
+.jc-xs-around {
+  justify-content: space-around; }
 
 .jc-xs-evenly {
   justify-content: space-evenly; }
@@ -1615,10 +1615,10 @@
     align-content: flex-end; }
   .ac-sm-stretch {
     align-content: stretch; }
-  .ac-sm-around {
-    align-content: space-around; }
   .ac-sm-between {
     align-content: space-between; }
+  .ac-sm-around {
+    align-content: space-around; }
   .ac-sm-evenly {
     align-content: space-evenly; }
   .ai-sm-top {
@@ -1647,10 +1647,10 @@
     justify-content: center; }
   .jc-sm-end {
     justify-content: flex-end; }
-  .jc-sm-around {
-    justify-content: space-around; }
   .jc-sm-between {
     justify-content: space-between; }
+  .jc-sm-around {
+    justify-content: space-around; }
   .jc-sm-evenly {
     justify-content: space-evenly; }
   .ji-sm-start {
@@ -2585,10 +2585,10 @@
     align-content: flex-end; }
   .ac-md-stretch {
     align-content: stretch; }
-  .ac-md-around {
-    align-content: space-around; }
   .ac-md-between {
     align-content: space-between; }
+  .ac-md-around {
+    align-content: space-around; }
   .ac-md-evenly {
     align-content: space-evenly; }
   .ai-md-top {
@@ -2617,10 +2617,10 @@
     justify-content: center; }
   .jc-md-end {
     justify-content: flex-end; }
-  .jc-md-around {
-    justify-content: space-around; }
   .jc-md-between {
     justify-content: space-between; }
+  .jc-md-around {
+    justify-content: space-around; }
   .jc-md-evenly {
     justify-content: space-evenly; }
   .ji-md-start {
@@ -3555,10 +3555,10 @@
     align-content: flex-end; }
   .ac-lg-stretch {
     align-content: stretch; }
-  .ac-lg-around {
-    align-content: space-around; }
   .ac-lg-between {
     align-content: space-between; }
+  .ac-lg-around {
+    align-content: space-around; }
   .ac-lg-evenly {
     align-content: space-evenly; }
   .ai-lg-top {
@@ -3587,10 +3587,10 @@
     justify-content: center; }
   .jc-lg-end {
     justify-content: flex-end; }
-  .jc-lg-around {
-    justify-content: space-around; }
   .jc-lg-between {
     justify-content: space-between; }
+  .jc-lg-around {
+    justify-content: space-around; }
   .jc-lg-evenly {
     justify-content: space-evenly; }
   .ji-lg-start {
