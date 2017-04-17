@@ -51,19 +51,18 @@
 .aaa{background: url(../img/d.png);}
 
 /*grid*/
-
 html,.grid-template{height: 100%;}
 
 .grid-template {
 	display: grid;
 	grid-template-areas: " header header header "
-						 " navigation main ads "
-						 " footer footer footer ";
+			     " navigation main ads "
+			     " footer footer footer ";
 
 	grid-template-columns: 150px 1fr 150px;
 	grid-template-rows: 100px 
-						1fr 
-						50px;
+			    1fr 
+			    50px;
 }
 
 .grid-header { grid-area: header; }
@@ -75,15 +74,15 @@ html,.grid-template{height: 100%;}
 @media screen and (max-width: 750px) {
 .grid-template {
 	grid-template-areas: " header "
-						 " navigation "
-						 " main "
-						 " ads "
-						 " footer ";
+			     " navigation "
+			     " main "
+			     " ads "
+			     " footer ";
 	grid-template-columns: 100%;
 	grid-template-rows: 100px 
-						50px 
-						1fr
-						50px 
-						30px;
+			    50px 
+			    1fr
+			    50px 
+			    30px;
 }
 }
