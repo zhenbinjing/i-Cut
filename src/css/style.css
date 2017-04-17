@@ -58,7 +58,6 @@
 .grid-left { grid-area: navigation; }
 .grid-right { grid-area: ads; }
 
-
 .grid-template {
 	display: grid;
 	grid-template-areas: " header header header "
@@ -71,8 +70,6 @@
 						50px;
 	min-height: 100vh;
 }
-
-
 
 @media screen and (max-width: 750px) {
 .grid-template {
