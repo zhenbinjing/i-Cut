@@ -1,11 +1,17 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>CSS Grid</title>  
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <script type="text/javascript">
-	(function (doc, win) {
+<meta charset="utf-8">
+<title>CSS Grid</title>  
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<script type="text/javascript">
+(function (doc, win) {
         var docEl = doc.documentElement,
 	isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
 	dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
@@ -29,15 +35,15 @@
         recalc()
         if (!doc.addEventListener) return;
         win.addEventListener(resizeEvt, recalc, false);
-	})(document, window);
-  </script>
-  <!-- build:css css/index.css?v=_VERSION_-->
-  <link rel="stylesheet" href="css/adjust.css">
-  <link rel="stylesheet" href="css/emmet.css">
-  <link rel="stylesheet" href="css/flexgrid.css">
-  <link rel="stylesheet" href="css/opencolor.css">
-  <link rel="stylesheet" href="css/style.css">
-  <!-- /build --> 
+})(document, window);
+</script>
+<!-- build:css css/index.css?v=_VERSION_-->
+<link rel="stylesheet" href="css/adjust.css">
+<link rel="stylesheet" href="css/emmet.css">
+<link rel="stylesheet" href="css/flexgrid.css">
+<link rel="stylesheet" href="css/opencolor.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- /build --> 
 </head>
 <body class="grid-template">
   <header class="grid-header d-f ai-xs-middle jc-xs-center fz20 bgc-yellow-7">导航</header>
