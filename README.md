@@ -19,4 +19,4 @@ flexgrid.css 是 i-Cut 中最重要的布局文件，采用 [Flexbox](https://de
 
 Zeplin里的提示或者设计稿里的标注值是多少就写多少，gulp 已配置 px 批量转换 rem 和其它自动化流程。
 
-页面的 head 头部代码配合 rem 能实现动态比例缩放，高清还原，从而告别繁琐的媒体查询。
+页面的 head 头部代码配合 rem 能实现动态比例缩放，高清还原，从而告别繁琐的media。
