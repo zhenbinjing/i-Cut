@@ -7,7 +7,7 @@ var px3rem = require('gulp-px3rem');					//- px转rem
 var uncss = require('gulp-uncss');					//- 删除没用到的css
 var sass = require('gulp-sass');					//- scss文件编译
 var css64 = require('gulp-base64');					//- css文件转base64
-var img64 = require('gulp-imgbase64');					//- img转base64
+var img64 = require('gulp-allimgbase64');				//- img转base64
 var tinypng = require('gulp-tinypng');					//- png图片压缩
 var svgmin = require('gulp-svgmin');					//- svg图片压缩
 var webp = require('gulp-webp');					//- 转webp图片
@@ -109,7 +109,7 @@ gulp.task('cssper',function(){
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				//- 输出文件本地
 });
 
-gulp.task('base64',['css64'],function() {				//- 插件不支持wepb转换，需要手动修改node_modules/gulp-imgbase64/index.js，把jpeg替换为webp,把大写CONERT-HTML-IMG-BASE64改成小写conert-html-img-base64，为了兼容htmlmin
+gulp.task('base64',['css64'],function() {				//- img转base64	
 	gulp.src('./'+y_Dz+'/**/*.html')
    	.pipe(img64({limit: '8kb'}))
    	.pipe(gulp.dest('./'+y_Dz+'/'));
