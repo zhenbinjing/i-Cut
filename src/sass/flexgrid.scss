@@ -86,22 +86,22 @@ $nb: 100; $column: 12;
 	@for $i from 1 through $column {
 		
 	//设置重复性单元格的行列
-		.gtr-#{$grid}-#{$i}{grid-template-rows: repeat($i, 1fr);}
-		.gtc-#{$grid}-#{$i}{grid-template-columns: repeat($i, 1fr);}		
+		.rows-#{$grid}-#{$i}{grid-template-rows: repeat($i, 1fr);}
+		.cols-#{$grid}-#{$i}{grid-template-columns: repeat($i, 1fr);}		
 
 	//单元格的顺序与合并个数	
-		.grs-#{$grid}-#{$i}{grid-row-start: $i;}
-		.gcs-#{$grid}-#{$i}{grid-column-start: $i;}	
+		.axisy-#{$grid}-#{$i}{grid-row-start: $i;}
+		.axisx-#{$grid}-#{$i}{grid-column-start: $i;}	
 	
-		.grem-#{$grid}-#{$i}{grid-row-end: span $i;}
-		.gcem-#{$grid}-#{$i}{grid-column-end: span $i;}		
+		.mrow-#{$grid}-#{$i}{grid-row-end: span $i;}
+		.mcol-#{$grid}-#{$i}{grid-column-end: span $i;}		
 	}
 
 	//单元格的行列间距
 	@for $i from 1 through $nb {
-		.grg-#{$grid}-#{$i}{ grid-row-gap: $i/$nb + rem;}
-		.gcg-#{$grid}-#{$i}{ grid-column-gap: $i/$nb + rem;}
-		.gg-#{$grid}-#{$i}{ grid-gap: $i/$nb + rem;}
+		.gapy-#{$grid}-#{$i}{ grid-row-gap: $i/$nb + rem;}
+		.gapx-#{$grid}-#{$i}{ grid-column-gap: $i/$nb + rem;}
+		.gap-#{$grid}-#{$i}{ grid-gap: $i/$nb + rem;}
 	}
 
 	//网格自动流
