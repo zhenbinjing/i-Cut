@@ -7,7 +7,7 @@
 [![npm](https://img.shields.io/npm/v/i-cut.svg)](https://www.npmjs.com/package/i-cut)
 [![MIT Licence](https://img.shields.io/npm/l/i-cut.svg)](https://opensource.org/licenses/mit-license.php)
 
-i-Cut 是一个快速成形，全终端适配的CSS框架，配备工程化流程，内含 [gulp](https://github.com/gulpjs/gulp) 和 [webpack](https://github.com/webpack/webpack) 打包任务以及其它常用工具。
+i-Cut 是一个快速成形，全终端适配的CSS框架，配备工程化流程，内含 [Gulp](https://github.com/gulpjs/gulp) 和 [Webpack](https://github.com/webpack/webpack) 打包任务以及其它常用工具。
 
 flexgrid.css 是 i-Cut 中最重要的布局文件，采用 [Flexbox](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex) 与 [Grid-Layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid) 两种布局结合而成，是本框架的核心。
 
@@ -17,6 +17,6 @@ flexgrid.css 是 i-Cut 中最重要的布局文件，采用 [Flexbox](https://de
 
 ## 移动端适配方案
 
-Zeplin里的提示或者设计稿里的标注值是多少就写多少，gulp 已配置 px 批量转换 rem 和其它自动化流程。
+zeplin 里的提示或者设计稿里的标注值是多少就写多少，gulp 已配置 px 批量转换 rem 和其它自动化流程。
 
-页面的 head 头部代码配合 rem 能实现动态比例缩放，高清还原，从而告别繁琐的media。
+页面的 head 头部代码配合 rem 能实现动态比例缩放，高清还原，从而告别繁琐的 media。
