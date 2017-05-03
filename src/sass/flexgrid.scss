@@ -107,7 +107,7 @@ $nb: 100; $column: 12;
 	//网格自动流
 	$gaf: (row:row, column:column);
 		@each $val, $direction in $gaf {		
-		.gaf-#{$grid}-#{$val}{grid-auto-flow: $direction;}	
+		.flow-#{$grid}-#{$val}{grid-auto-flow: $direction;}	
 	}
 
 }

@@ -1472,10 +1472,10 @@
 .gap-xs-100 {
   grid-gap: 1rem; }
 
-.gaf-xs-row {
+.flow-xs-row {
   grid-auto-flow: row; }
 
-.gaf-xs-column {
+.flow-xs-column {
   grid-auto-flow: column; }
 
 @media only screen and (min-width: 751px) {
@@ -2443,9 +2443,9 @@
     grid-column-gap: 1rem; }
   .gap-sm-100 {
     grid-gap: 1rem; }
-  .gaf-sm-row {
+  .flow-sm-row {
     grid-auto-flow: row; }
-  .gaf-sm-column {
+  .flow-sm-column {
     grid-auto-flow: column; } }
 
 @media only screen and (min-width: 992px) {
@@ -3413,9 +3413,9 @@
     grid-column-gap: 1rem; }
   .gap-md-100 {
     grid-gap: 1rem; }
-  .gaf-md-row {
+  .flow-md-row {
     grid-auto-flow: row; }
-  .gaf-md-column {
+  .flow-md-column {
     grid-auto-flow: column; } }
 
 @media only screen and (min-width: 1200px) {
@@ -4383,7 +4383,7 @@
     grid-column-gap: 1rem; }
   .gap-lg-100 {
     grid-gap: 1rem; }
-  .gaf-lg-row {
+  .flow-lg-row {
     grid-auto-flow: row; }
-  .gaf-lg-column {
+  .flow-lg-column {
     grid-auto-flow: column; } }
