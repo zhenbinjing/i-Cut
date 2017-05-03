@@ -90,8 +90,8 @@ $nb: 100; $column: 12;
 		.cols-#{$grid}-#{$i}{grid-template-columns: repeat($i, 1fr);}		
 
 	//单元格的顺序与合并个数	
-		.axisy-#{$grid}-#{$i}{grid-row-start: $i;}
-		.axisx-#{$grid}-#{$i}{grid-column-start: $i;}	
+		.yax-#{$grid}-#{$i}{grid-row-start: $i;}
+		.xax-#{$grid}-#{$i}{grid-column-start: $i;}	
 	
 		.mrow-#{$grid}-#{$i}{grid-row-end: span $i;}
 		.mcol-#{$grid}-#{$i}{grid-column-end: span $i;}		
@@ -99,8 +99,8 @@ $nb: 100; $column: 12;
 
 	//单元格的行列间距
 	@for $i from 1 through $nb {
-		.gapy-#{$grid}-#{$i}{ grid-row-gap: $i/$nb + rem;}
-		.gapx-#{$grid}-#{$i}{ grid-column-gap: $i/$nb + rem;}
+		.gapr-#{$grid}-#{$i}{ grid-row-gap: $i/$nb + rem;}
+		.gapc-#{$grid}-#{$i}{ grid-column-gap: $i/$nb + rem;}
 		.gap-#{$grid}-#{$i}{ grid-gap: $i/$nb + rem;}
 	}
 

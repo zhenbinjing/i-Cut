@@ -362,10 +362,10 @@
 .cols-xs-1 {
   grid-template-columns: repeat(1, 1fr); }
 
-.axisy-xs-1 {
+.yax-xs-1 {
   grid-row-start: 1; }
 
-.axisx-xs-1 {
+.xax-xs-1 {
   grid-column-start: 1; }
 
 .mrow-xs-1 {
@@ -380,10 +380,10 @@
 .cols-xs-2 {
   grid-template-columns: repeat(2, 1fr); }
 
-.axisy-xs-2 {
+.yax-xs-2 {
   grid-row-start: 2; }
 
-.axisx-xs-2 {
+.xax-xs-2 {
   grid-column-start: 2; }
 
 .mrow-xs-2 {
@@ -398,10 +398,10 @@
 .cols-xs-3 {
   grid-template-columns: repeat(3, 1fr); }
 
-.axisy-xs-3 {
+.yax-xs-3 {
   grid-row-start: 3; }
 
-.axisx-xs-3 {
+.xax-xs-3 {
   grid-column-start: 3; }
 
 .mrow-xs-3 {
@@ -416,10 +416,10 @@
 .cols-xs-4 {
   grid-template-columns: repeat(4, 1fr); }
 
-.axisy-xs-4 {
+.yax-xs-4 {
   grid-row-start: 4; }
 
-.axisx-xs-4 {
+.xax-xs-4 {
   grid-column-start: 4; }
 
 .mrow-xs-4 {
@@ -434,10 +434,10 @@
 .cols-xs-5 {
   grid-template-columns: repeat(5, 1fr); }
 
-.axisy-xs-5 {
+.yax-xs-5 {
   grid-row-start: 5; }
 
-.axisx-xs-5 {
+.xax-xs-5 {
   grid-column-start: 5; }
 
 .mrow-xs-5 {
@@ -452,10 +452,10 @@
 .cols-xs-6 {
   grid-template-columns: repeat(6, 1fr); }
 
-.axisy-xs-6 {
+.yax-xs-6 {
   grid-row-start: 6; }
 
-.axisx-xs-6 {
+.xax-xs-6 {
   grid-column-start: 6; }
 
 .mrow-xs-6 {
@@ -470,10 +470,10 @@
 .cols-xs-7 {
   grid-template-columns: repeat(7, 1fr); }
 
-.axisy-xs-7 {
+.yax-xs-7 {
   grid-row-start: 7; }
 
-.axisx-xs-7 {
+.xax-xs-7 {
   grid-column-start: 7; }
 
 .mrow-xs-7 {
@@ -488,10 +488,10 @@
 .cols-xs-8 {
   grid-template-columns: repeat(8, 1fr); }
 
-.axisy-xs-8 {
+.yax-xs-8 {
   grid-row-start: 8; }
 
-.axisx-xs-8 {
+.xax-xs-8 {
   grid-column-start: 8; }
 
 .mrow-xs-8 {
@@ -506,10 +506,10 @@
 .cols-xs-9 {
   grid-template-columns: repeat(9, 1fr); }
 
-.axisy-xs-9 {
+.yax-xs-9 {
   grid-row-start: 9; }
 
-.axisx-xs-9 {
+.xax-xs-9 {
   grid-column-start: 9; }
 
 .mrow-xs-9 {
@@ -524,10 +524,10 @@
 .cols-xs-10 {
   grid-template-columns: repeat(10, 1fr); }
 
-.axisy-xs-10 {
+.yax-xs-10 {
   grid-row-start: 10; }
 
-.axisx-xs-10 {
+.xax-xs-10 {
   grid-column-start: 10; }
 
 .mrow-xs-10 {
@@ -542,10 +542,10 @@
 .cols-xs-11 {
   grid-template-columns: repeat(11, 1fr); }
 
-.axisy-xs-11 {
+.yax-xs-11 {
   grid-row-start: 11; }
 
-.axisx-xs-11 {
+.xax-xs-11 {
   grid-column-start: 11; }
 
 .mrow-xs-11 {
@@ -560,10 +560,10 @@
 .cols-xs-12 {
   grid-template-columns: repeat(12, 1fr); }
 
-.axisy-xs-12 {
+.yax-xs-12 {
   grid-row-start: 12; }
 
-.axisx-xs-12 {
+.xax-xs-12 {
   grid-column-start: 12; }
 
 .mrow-xs-12 {
@@ -572,901 +572,901 @@
 .mcol-xs-12 {
   grid-column-end: span 12; }
 
-.gapy-xs-1 {
+.gapr-xs-1 {
   grid-row-gap: 0.01rem; }
 
-.gapx-xs-1 {
+.gapc-xs-1 {
   grid-column-gap: 0.01rem; }
 
 .gap-xs-1 {
   grid-gap: 0.01rem; }
 
-.gapy-xs-2 {
+.gapr-xs-2 {
   grid-row-gap: 0.02rem; }
 
-.gapx-xs-2 {
+.gapc-xs-2 {
   grid-column-gap: 0.02rem; }
 
 .gap-xs-2 {
   grid-gap: 0.02rem; }
 
-.gapy-xs-3 {
+.gapr-xs-3 {
   grid-row-gap: 0.03rem; }
 
-.gapx-xs-3 {
+.gapc-xs-3 {
   grid-column-gap: 0.03rem; }
 
 .gap-xs-3 {
   grid-gap: 0.03rem; }
 
-.gapy-xs-4 {
+.gapr-xs-4 {
   grid-row-gap: 0.04rem; }
 
-.gapx-xs-4 {
+.gapc-xs-4 {
   grid-column-gap: 0.04rem; }
 
 .gap-xs-4 {
   grid-gap: 0.04rem; }
 
-.gapy-xs-5 {
+.gapr-xs-5 {
   grid-row-gap: 0.05rem; }
 
-.gapx-xs-5 {
+.gapc-xs-5 {
   grid-column-gap: 0.05rem; }
 
 .gap-xs-5 {
   grid-gap: 0.05rem; }
 
-.gapy-xs-6 {
+.gapr-xs-6 {
   grid-row-gap: 0.06rem; }
 
-.gapx-xs-6 {
+.gapc-xs-6 {
   grid-column-gap: 0.06rem; }
 
 .gap-xs-6 {
   grid-gap: 0.06rem; }
 
-.gapy-xs-7 {
+.gapr-xs-7 {
   grid-row-gap: 0.07rem; }
 
-.gapx-xs-7 {
+.gapc-xs-7 {
   grid-column-gap: 0.07rem; }
 
 .gap-xs-7 {
   grid-gap: 0.07rem; }
 
-.gapy-xs-8 {
+.gapr-xs-8 {
   grid-row-gap: 0.08rem; }
 
-.gapx-xs-8 {
+.gapc-xs-8 {
   grid-column-gap: 0.08rem; }
 
 .gap-xs-8 {
   grid-gap: 0.08rem; }
 
-.gapy-xs-9 {
+.gapr-xs-9 {
   grid-row-gap: 0.09rem; }
 
-.gapx-xs-9 {
+.gapc-xs-9 {
   grid-column-gap: 0.09rem; }
 
 .gap-xs-9 {
   grid-gap: 0.09rem; }
 
-.gapy-xs-10 {
+.gapr-xs-10 {
   grid-row-gap: 0.1rem; }
 
-.gapx-xs-10 {
+.gapc-xs-10 {
   grid-column-gap: 0.1rem; }
 
 .gap-xs-10 {
   grid-gap: 0.1rem; }
 
-.gapy-xs-11 {
+.gapr-xs-11 {
   grid-row-gap: 0.11rem; }
 
-.gapx-xs-11 {
+.gapc-xs-11 {
   grid-column-gap: 0.11rem; }
 
 .gap-xs-11 {
   grid-gap: 0.11rem; }
 
-.gapy-xs-12 {
+.gapr-xs-12 {
   grid-row-gap: 0.12rem; }
 
-.gapx-xs-12 {
+.gapc-xs-12 {
   grid-column-gap: 0.12rem; }
 
 .gap-xs-12 {
   grid-gap: 0.12rem; }
 
-.gapy-xs-13 {
+.gapr-xs-13 {
   grid-row-gap: 0.13rem; }
 
-.gapx-xs-13 {
+.gapc-xs-13 {
   grid-column-gap: 0.13rem; }
 
 .gap-xs-13 {
   grid-gap: 0.13rem; }
 
-.gapy-xs-14 {
+.gapr-xs-14 {
   grid-row-gap: 0.14rem; }
 
-.gapx-xs-14 {
+.gapc-xs-14 {
   grid-column-gap: 0.14rem; }
 
 .gap-xs-14 {
   grid-gap: 0.14rem; }
 
-.gapy-xs-15 {
+.gapr-xs-15 {
   grid-row-gap: 0.15rem; }
 
-.gapx-xs-15 {
+.gapc-xs-15 {
   grid-column-gap: 0.15rem; }
 
 .gap-xs-15 {
   grid-gap: 0.15rem; }
 
-.gapy-xs-16 {
+.gapr-xs-16 {
   grid-row-gap: 0.16rem; }
 
-.gapx-xs-16 {
+.gapc-xs-16 {
   grid-column-gap: 0.16rem; }
 
 .gap-xs-16 {
   grid-gap: 0.16rem; }
 
-.gapy-xs-17 {
+.gapr-xs-17 {
   grid-row-gap: 0.17rem; }
 
-.gapx-xs-17 {
+.gapc-xs-17 {
   grid-column-gap: 0.17rem; }
 
 .gap-xs-17 {
   grid-gap: 0.17rem; }
 
-.gapy-xs-18 {
+.gapr-xs-18 {
   grid-row-gap: 0.18rem; }
 
-.gapx-xs-18 {
+.gapc-xs-18 {
   grid-column-gap: 0.18rem; }
 
 .gap-xs-18 {
   grid-gap: 0.18rem; }
 
-.gapy-xs-19 {
+.gapr-xs-19 {
   grid-row-gap: 0.19rem; }
 
-.gapx-xs-19 {
+.gapc-xs-19 {
   grid-column-gap: 0.19rem; }
 
 .gap-xs-19 {
   grid-gap: 0.19rem; }
 
-.gapy-xs-20 {
+.gapr-xs-20 {
   grid-row-gap: 0.2rem; }
 
-.gapx-xs-20 {
+.gapc-xs-20 {
   grid-column-gap: 0.2rem; }
 
 .gap-xs-20 {
   grid-gap: 0.2rem; }
 
-.gapy-xs-21 {
+.gapr-xs-21 {
   grid-row-gap: 0.21rem; }
 
-.gapx-xs-21 {
+.gapc-xs-21 {
   grid-column-gap: 0.21rem; }
 
 .gap-xs-21 {
   grid-gap: 0.21rem; }
 
-.gapy-xs-22 {
+.gapr-xs-22 {
   grid-row-gap: 0.22rem; }
 
-.gapx-xs-22 {
+.gapc-xs-22 {
   grid-column-gap: 0.22rem; }
 
 .gap-xs-22 {
   grid-gap: 0.22rem; }
 
-.gapy-xs-23 {
+.gapr-xs-23 {
   grid-row-gap: 0.23rem; }
 
-.gapx-xs-23 {
+.gapc-xs-23 {
   grid-column-gap: 0.23rem; }
 
 .gap-xs-23 {
   grid-gap: 0.23rem; }
 
-.gapy-xs-24 {
+.gapr-xs-24 {
   grid-row-gap: 0.24rem; }
 
-.gapx-xs-24 {
+.gapc-xs-24 {
   grid-column-gap: 0.24rem; }
 
 .gap-xs-24 {
   grid-gap: 0.24rem; }
 
-.gapy-xs-25 {
+.gapr-xs-25 {
   grid-row-gap: 0.25rem; }
 
-.gapx-xs-25 {
+.gapc-xs-25 {
   grid-column-gap: 0.25rem; }
 
 .gap-xs-25 {
   grid-gap: 0.25rem; }
 
-.gapy-xs-26 {
+.gapr-xs-26 {
   grid-row-gap: 0.26rem; }
 
-.gapx-xs-26 {
+.gapc-xs-26 {
   grid-column-gap: 0.26rem; }
 
 .gap-xs-26 {
   grid-gap: 0.26rem; }
 
-.gapy-xs-27 {
+.gapr-xs-27 {
   grid-row-gap: 0.27rem; }
 
-.gapx-xs-27 {
+.gapc-xs-27 {
   grid-column-gap: 0.27rem; }
 
 .gap-xs-27 {
   grid-gap: 0.27rem; }
 
-.gapy-xs-28 {
+.gapr-xs-28 {
   grid-row-gap: 0.28rem; }
 
-.gapx-xs-28 {
+.gapc-xs-28 {
   grid-column-gap: 0.28rem; }
 
 .gap-xs-28 {
   grid-gap: 0.28rem; }
 
-.gapy-xs-29 {
+.gapr-xs-29 {
   grid-row-gap: 0.29rem; }
 
-.gapx-xs-29 {
+.gapc-xs-29 {
   grid-column-gap: 0.29rem; }
 
 .gap-xs-29 {
   grid-gap: 0.29rem; }
 
-.gapy-xs-30 {
+.gapr-xs-30 {
   grid-row-gap: 0.3rem; }
 
-.gapx-xs-30 {
+.gapc-xs-30 {
   grid-column-gap: 0.3rem; }
 
 .gap-xs-30 {
   grid-gap: 0.3rem; }
 
-.gapy-xs-31 {
+.gapr-xs-31 {
   grid-row-gap: 0.31rem; }
 
-.gapx-xs-31 {
+.gapc-xs-31 {
   grid-column-gap: 0.31rem; }
 
 .gap-xs-31 {
   grid-gap: 0.31rem; }
 
-.gapy-xs-32 {
+.gapr-xs-32 {
   grid-row-gap: 0.32rem; }
 
-.gapx-xs-32 {
+.gapc-xs-32 {
   grid-column-gap: 0.32rem; }
 
 .gap-xs-32 {
   grid-gap: 0.32rem; }
 
-.gapy-xs-33 {
+.gapr-xs-33 {
   grid-row-gap: 0.33rem; }
 
-.gapx-xs-33 {
+.gapc-xs-33 {
   grid-column-gap: 0.33rem; }
 
 .gap-xs-33 {
   grid-gap: 0.33rem; }
 
-.gapy-xs-34 {
+.gapr-xs-34 {
   grid-row-gap: 0.34rem; }
 
-.gapx-xs-34 {
+.gapc-xs-34 {
   grid-column-gap: 0.34rem; }
 
 .gap-xs-34 {
   grid-gap: 0.34rem; }
 
-.gapy-xs-35 {
+.gapr-xs-35 {
   grid-row-gap: 0.35rem; }
 
-.gapx-xs-35 {
+.gapc-xs-35 {
   grid-column-gap: 0.35rem; }
 
 .gap-xs-35 {
   grid-gap: 0.35rem; }
 
-.gapy-xs-36 {
+.gapr-xs-36 {
   grid-row-gap: 0.36rem; }
 
-.gapx-xs-36 {
+.gapc-xs-36 {
   grid-column-gap: 0.36rem; }
 
 .gap-xs-36 {
   grid-gap: 0.36rem; }
 
-.gapy-xs-37 {
+.gapr-xs-37 {
   grid-row-gap: 0.37rem; }
 
-.gapx-xs-37 {
+.gapc-xs-37 {
   grid-column-gap: 0.37rem; }
 
 .gap-xs-37 {
   grid-gap: 0.37rem; }
 
-.gapy-xs-38 {
+.gapr-xs-38 {
   grid-row-gap: 0.38rem; }
 
-.gapx-xs-38 {
+.gapc-xs-38 {
   grid-column-gap: 0.38rem; }
 
 .gap-xs-38 {
   grid-gap: 0.38rem; }
 
-.gapy-xs-39 {
+.gapr-xs-39 {
   grid-row-gap: 0.39rem; }
 
-.gapx-xs-39 {
+.gapc-xs-39 {
   grid-column-gap: 0.39rem; }
 
 .gap-xs-39 {
   grid-gap: 0.39rem; }
 
-.gapy-xs-40 {
+.gapr-xs-40 {
   grid-row-gap: 0.4rem; }
 
-.gapx-xs-40 {
+.gapc-xs-40 {
   grid-column-gap: 0.4rem; }
 
 .gap-xs-40 {
   grid-gap: 0.4rem; }
 
-.gapy-xs-41 {
+.gapr-xs-41 {
   grid-row-gap: 0.41rem; }
 
-.gapx-xs-41 {
+.gapc-xs-41 {
   grid-column-gap: 0.41rem; }
 
 .gap-xs-41 {
   grid-gap: 0.41rem; }
 
-.gapy-xs-42 {
+.gapr-xs-42 {
   grid-row-gap: 0.42rem; }
 
-.gapx-xs-42 {
+.gapc-xs-42 {
   grid-column-gap: 0.42rem; }
 
 .gap-xs-42 {
   grid-gap: 0.42rem; }
 
-.gapy-xs-43 {
+.gapr-xs-43 {
   grid-row-gap: 0.43rem; }
 
-.gapx-xs-43 {
+.gapc-xs-43 {
   grid-column-gap: 0.43rem; }
 
 .gap-xs-43 {
   grid-gap: 0.43rem; }
 
-.gapy-xs-44 {
+.gapr-xs-44 {
   grid-row-gap: 0.44rem; }
 
-.gapx-xs-44 {
+.gapc-xs-44 {
   grid-column-gap: 0.44rem; }
 
 .gap-xs-44 {
   grid-gap: 0.44rem; }
 
-.gapy-xs-45 {
+.gapr-xs-45 {
   grid-row-gap: 0.45rem; }
 
-.gapx-xs-45 {
+.gapc-xs-45 {
   grid-column-gap: 0.45rem; }
 
 .gap-xs-45 {
   grid-gap: 0.45rem; }
 
-.gapy-xs-46 {
+.gapr-xs-46 {
   grid-row-gap: 0.46rem; }
 
-.gapx-xs-46 {
+.gapc-xs-46 {
   grid-column-gap: 0.46rem; }
 
 .gap-xs-46 {
   grid-gap: 0.46rem; }
 
-.gapy-xs-47 {
+.gapr-xs-47 {
   grid-row-gap: 0.47rem; }
 
-.gapx-xs-47 {
+.gapc-xs-47 {
   grid-column-gap: 0.47rem; }
 
 .gap-xs-47 {
   grid-gap: 0.47rem; }
 
-.gapy-xs-48 {
+.gapr-xs-48 {
   grid-row-gap: 0.48rem; }
 
-.gapx-xs-48 {
+.gapc-xs-48 {
   grid-column-gap: 0.48rem; }
 
 .gap-xs-48 {
   grid-gap: 0.48rem; }
 
-.gapy-xs-49 {
+.gapr-xs-49 {
   grid-row-gap: 0.49rem; }
 
-.gapx-xs-49 {
+.gapc-xs-49 {
   grid-column-gap: 0.49rem; }
 
 .gap-xs-49 {
   grid-gap: 0.49rem; }
 
-.gapy-xs-50 {
+.gapr-xs-50 {
   grid-row-gap: 0.5rem; }
 
-.gapx-xs-50 {
+.gapc-xs-50 {
   grid-column-gap: 0.5rem; }
 
 .gap-xs-50 {
   grid-gap: 0.5rem; }
 
-.gapy-xs-51 {
+.gapr-xs-51 {
   grid-row-gap: 0.51rem; }
 
-.gapx-xs-51 {
+.gapc-xs-51 {
   grid-column-gap: 0.51rem; }
 
 .gap-xs-51 {
   grid-gap: 0.51rem; }
 
-.gapy-xs-52 {
+.gapr-xs-52 {
   grid-row-gap: 0.52rem; }
 
-.gapx-xs-52 {
+.gapc-xs-52 {
   grid-column-gap: 0.52rem; }
 
 .gap-xs-52 {
   grid-gap: 0.52rem; }
 
-.gapy-xs-53 {
+.gapr-xs-53 {
   grid-row-gap: 0.53rem; }
 
-.gapx-xs-53 {
+.gapc-xs-53 {
   grid-column-gap: 0.53rem; }
 
 .gap-xs-53 {
   grid-gap: 0.53rem; }
 
-.gapy-xs-54 {
+.gapr-xs-54 {
   grid-row-gap: 0.54rem; }
 
-.gapx-xs-54 {
+.gapc-xs-54 {
   grid-column-gap: 0.54rem; }
 
 .gap-xs-54 {
   grid-gap: 0.54rem; }
 
-.gapy-xs-55 {
+.gapr-xs-55 {
   grid-row-gap: 0.55rem; }
 
-.gapx-xs-55 {
+.gapc-xs-55 {
   grid-column-gap: 0.55rem; }
 
 .gap-xs-55 {
   grid-gap: 0.55rem; }
 
-.gapy-xs-56 {
+.gapr-xs-56 {
   grid-row-gap: 0.56rem; }
 
-.gapx-xs-56 {
+.gapc-xs-56 {
   grid-column-gap: 0.56rem; }
 
 .gap-xs-56 {
   grid-gap: 0.56rem; }
 
-.gapy-xs-57 {
+.gapr-xs-57 {
   grid-row-gap: 0.57rem; }
 
-.gapx-xs-57 {
+.gapc-xs-57 {
   grid-column-gap: 0.57rem; }
 
 .gap-xs-57 {
   grid-gap: 0.57rem; }
 
-.gapy-xs-58 {
+.gapr-xs-58 {
   grid-row-gap: 0.58rem; }
 
-.gapx-xs-58 {
+.gapc-xs-58 {
   grid-column-gap: 0.58rem; }
 
 .gap-xs-58 {
   grid-gap: 0.58rem; }
 
-.gapy-xs-59 {
+.gapr-xs-59 {
   grid-row-gap: 0.59rem; }
 
-.gapx-xs-59 {
+.gapc-xs-59 {
   grid-column-gap: 0.59rem; }
 
 .gap-xs-59 {
   grid-gap: 0.59rem; }
 
-.gapy-xs-60 {
+.gapr-xs-60 {
   grid-row-gap: 0.6rem; }
 
-.gapx-xs-60 {
+.gapc-xs-60 {
   grid-column-gap: 0.6rem; }
 
 .gap-xs-60 {
   grid-gap: 0.6rem; }
 
-.gapy-xs-61 {
+.gapr-xs-61 {
   grid-row-gap: 0.61rem; }
 
-.gapx-xs-61 {
+.gapc-xs-61 {
   grid-column-gap: 0.61rem; }
 
 .gap-xs-61 {
   grid-gap: 0.61rem; }
 
-.gapy-xs-62 {
+.gapr-xs-62 {
   grid-row-gap: 0.62rem; }
 
-.gapx-xs-62 {
+.gapc-xs-62 {
   grid-column-gap: 0.62rem; }
 
 .gap-xs-62 {
   grid-gap: 0.62rem; }
 
-.gapy-xs-63 {
+.gapr-xs-63 {
   grid-row-gap: 0.63rem; }
 
-.gapx-xs-63 {
+.gapc-xs-63 {
   grid-column-gap: 0.63rem; }
 
 .gap-xs-63 {
   grid-gap: 0.63rem; }
 
-.gapy-xs-64 {
+.gapr-xs-64 {
   grid-row-gap: 0.64rem; }
 
-.gapx-xs-64 {
+.gapc-xs-64 {
   grid-column-gap: 0.64rem; }
 
 .gap-xs-64 {
   grid-gap: 0.64rem; }
 
-.gapy-xs-65 {
+.gapr-xs-65 {
   grid-row-gap: 0.65rem; }
 
-.gapx-xs-65 {
+.gapc-xs-65 {
   grid-column-gap: 0.65rem; }
 
 .gap-xs-65 {
   grid-gap: 0.65rem; }
 
-.gapy-xs-66 {
+.gapr-xs-66 {
   grid-row-gap: 0.66rem; }
 
-.gapx-xs-66 {
+.gapc-xs-66 {
   grid-column-gap: 0.66rem; }
 
 .gap-xs-66 {
   grid-gap: 0.66rem; }
 
-.gapy-xs-67 {
+.gapr-xs-67 {
   grid-row-gap: 0.67rem; }
 
-.gapx-xs-67 {
+.gapc-xs-67 {
   grid-column-gap: 0.67rem; }
 
 .gap-xs-67 {
   grid-gap: 0.67rem; }
 
-.gapy-xs-68 {
+.gapr-xs-68 {
   grid-row-gap: 0.68rem; }
 
-.gapx-xs-68 {
+.gapc-xs-68 {
   grid-column-gap: 0.68rem; }
 
 .gap-xs-68 {
   grid-gap: 0.68rem; }
 
-.gapy-xs-69 {
+.gapr-xs-69 {
   grid-row-gap: 0.69rem; }
 
-.gapx-xs-69 {
+.gapc-xs-69 {
   grid-column-gap: 0.69rem; }
 
 .gap-xs-69 {
   grid-gap: 0.69rem; }
 
-.gapy-xs-70 {
+.gapr-xs-70 {
   grid-row-gap: 0.7rem; }
 
-.gapx-xs-70 {
+.gapc-xs-70 {
   grid-column-gap: 0.7rem; }
 
 .gap-xs-70 {
   grid-gap: 0.7rem; }
 
-.gapy-xs-71 {
+.gapr-xs-71 {
   grid-row-gap: 0.71rem; }
 
-.gapx-xs-71 {
+.gapc-xs-71 {
   grid-column-gap: 0.71rem; }
 
 .gap-xs-71 {
   grid-gap: 0.71rem; }
 
-.gapy-xs-72 {
+.gapr-xs-72 {
   grid-row-gap: 0.72rem; }
 
-.gapx-xs-72 {
+.gapc-xs-72 {
   grid-column-gap: 0.72rem; }
 
 .gap-xs-72 {
   grid-gap: 0.72rem; }
 
-.gapy-xs-73 {
+.gapr-xs-73 {
   grid-row-gap: 0.73rem; }
 
-.gapx-xs-73 {
+.gapc-xs-73 {
   grid-column-gap: 0.73rem; }
 
 .gap-xs-73 {
   grid-gap: 0.73rem; }
 
-.gapy-xs-74 {
+.gapr-xs-74 {
   grid-row-gap: 0.74rem; }
 
-.gapx-xs-74 {
+.gapc-xs-74 {
   grid-column-gap: 0.74rem; }
 
 .gap-xs-74 {
   grid-gap: 0.74rem; }
 
-.gapy-xs-75 {
+.gapr-xs-75 {
   grid-row-gap: 0.75rem; }
 
-.gapx-xs-75 {
+.gapc-xs-75 {
   grid-column-gap: 0.75rem; }
 
 .gap-xs-75 {
   grid-gap: 0.75rem; }
 
-.gapy-xs-76 {
+.gapr-xs-76 {
   grid-row-gap: 0.76rem; }
 
-.gapx-xs-76 {
+.gapc-xs-76 {
   grid-column-gap: 0.76rem; }
 
 .gap-xs-76 {
   grid-gap: 0.76rem; }
 
-.gapy-xs-77 {
+.gapr-xs-77 {
   grid-row-gap: 0.77rem; }
 
-.gapx-xs-77 {
+.gapc-xs-77 {
   grid-column-gap: 0.77rem; }
 
 .gap-xs-77 {
   grid-gap: 0.77rem; }
 
-.gapy-xs-78 {
+.gapr-xs-78 {
   grid-row-gap: 0.78rem; }
 
-.gapx-xs-78 {
+.gapc-xs-78 {
   grid-column-gap: 0.78rem; }
 
 .gap-xs-78 {
   grid-gap: 0.78rem; }
 
-.gapy-xs-79 {
+.gapr-xs-79 {
   grid-row-gap: 0.79rem; }
 
-.gapx-xs-79 {
+.gapc-xs-79 {
   grid-column-gap: 0.79rem; }
 
 .gap-xs-79 {
   grid-gap: 0.79rem; }
 
-.gapy-xs-80 {
+.gapr-xs-80 {
   grid-row-gap: 0.8rem; }
 
-.gapx-xs-80 {
+.gapc-xs-80 {
   grid-column-gap: 0.8rem; }
 
 .gap-xs-80 {
   grid-gap: 0.8rem; }
 
-.gapy-xs-81 {
+.gapr-xs-81 {
   grid-row-gap: 0.81rem; }
 
-.gapx-xs-81 {
+.gapc-xs-81 {
   grid-column-gap: 0.81rem; }
 
 .gap-xs-81 {
   grid-gap: 0.81rem; }
 
-.gapy-xs-82 {
+.gapr-xs-82 {
   grid-row-gap: 0.82rem; }
 
-.gapx-xs-82 {
+.gapc-xs-82 {
   grid-column-gap: 0.82rem; }
 
 .gap-xs-82 {
   grid-gap: 0.82rem; }
 
-.gapy-xs-83 {
+.gapr-xs-83 {
   grid-row-gap: 0.83rem; }
 
-.gapx-xs-83 {
+.gapc-xs-83 {
   grid-column-gap: 0.83rem; }
 
 .gap-xs-83 {
   grid-gap: 0.83rem; }
 
-.gapy-xs-84 {
+.gapr-xs-84 {
   grid-row-gap: 0.84rem; }
 
-.gapx-xs-84 {
+.gapc-xs-84 {
   grid-column-gap: 0.84rem; }
 
 .gap-xs-84 {
   grid-gap: 0.84rem; }
 
-.gapy-xs-85 {
+.gapr-xs-85 {
   grid-row-gap: 0.85rem; }
 
-.gapx-xs-85 {
+.gapc-xs-85 {
   grid-column-gap: 0.85rem; }
 
 .gap-xs-85 {
   grid-gap: 0.85rem; }
 
-.gapy-xs-86 {
+.gapr-xs-86 {
   grid-row-gap: 0.86rem; }
 
-.gapx-xs-86 {
+.gapc-xs-86 {
   grid-column-gap: 0.86rem; }
 
 .gap-xs-86 {
   grid-gap: 0.86rem; }
 
-.gapy-xs-87 {
+.gapr-xs-87 {
   grid-row-gap: 0.87rem; }
 
-.gapx-xs-87 {
+.gapc-xs-87 {
   grid-column-gap: 0.87rem; }
 
 .gap-xs-87 {
   grid-gap: 0.87rem; }
 
-.gapy-xs-88 {
+.gapr-xs-88 {
   grid-row-gap: 0.88rem; }
 
-.gapx-xs-88 {
+.gapc-xs-88 {
   grid-column-gap: 0.88rem; }
 
 .gap-xs-88 {
   grid-gap: 0.88rem; }
 
-.gapy-xs-89 {
+.gapr-xs-89 {
   grid-row-gap: 0.89rem; }
 
-.gapx-xs-89 {
+.gapc-xs-89 {
   grid-column-gap: 0.89rem; }
 
 .gap-xs-89 {
   grid-gap: 0.89rem; }
 
-.gapy-xs-90 {
+.gapr-xs-90 {
   grid-row-gap: 0.9rem; }
 
-.gapx-xs-90 {
+.gapc-xs-90 {
   grid-column-gap: 0.9rem; }
 
 .gap-xs-90 {
   grid-gap: 0.9rem; }
 
-.gapy-xs-91 {
+.gapr-xs-91 {
   grid-row-gap: 0.91rem; }
 
-.gapx-xs-91 {
+.gapc-xs-91 {
   grid-column-gap: 0.91rem; }
 
 .gap-xs-91 {
   grid-gap: 0.91rem; }
 
-.gapy-xs-92 {
+.gapr-xs-92 {
   grid-row-gap: 0.92rem; }
 
-.gapx-xs-92 {
+.gapc-xs-92 {
   grid-column-gap: 0.92rem; }
 
 .gap-xs-92 {
   grid-gap: 0.92rem; }
 
-.gapy-xs-93 {
+.gapr-xs-93 {
   grid-row-gap: 0.93rem; }
 
-.gapx-xs-93 {
+.gapc-xs-93 {
   grid-column-gap: 0.93rem; }
 
 .gap-xs-93 {
   grid-gap: 0.93rem; }
 
-.gapy-xs-94 {
+.gapr-xs-94 {
   grid-row-gap: 0.94rem; }
 
-.gapx-xs-94 {
+.gapc-xs-94 {
   grid-column-gap: 0.94rem; }
 
 .gap-xs-94 {
   grid-gap: 0.94rem; }
 
-.gapy-xs-95 {
+.gapr-xs-95 {
   grid-row-gap: 0.95rem; }
 
-.gapx-xs-95 {
+.gapc-xs-95 {
   grid-column-gap: 0.95rem; }
 
 .gap-xs-95 {
   grid-gap: 0.95rem; }
 
-.gapy-xs-96 {
+.gapr-xs-96 {
   grid-row-gap: 0.96rem; }
 
-.gapx-xs-96 {
+.gapc-xs-96 {
   grid-column-gap: 0.96rem; }
 
 .gap-xs-96 {
   grid-gap: 0.96rem; }
 
-.gapy-xs-97 {
+.gapr-xs-97 {
   grid-row-gap: 0.97rem; }
 
-.gapx-xs-97 {
+.gapc-xs-97 {
   grid-column-gap: 0.97rem; }
 
 .gap-xs-97 {
   grid-gap: 0.97rem; }
 
-.gapy-xs-98 {
+.gapr-xs-98 {
   grid-row-gap: 0.98rem; }
 
-.gapx-xs-98 {
+.gapc-xs-98 {
   grid-column-gap: 0.98rem; }
 
 .gap-xs-98 {
   grid-gap: 0.98rem; }
 
-.gapy-xs-99 {
+.gapr-xs-99 {
   grid-row-gap: 0.99rem; }
 
-.gapx-xs-99 {
+.gapc-xs-99 {
   grid-column-gap: 0.99rem; }
 
 .gap-xs-99 {
   grid-gap: 0.99rem; }
 
-.gapy-xs-100 {
+.gapr-xs-100 {
   grid-row-gap: 1rem; }
 
-.gapx-xs-100 {
+.gapc-xs-100 {
   grid-column-gap: 1rem; }
 
 .gap-xs-100 {
@@ -1703,9 +1703,9 @@
     grid-template-rows: repeat(1, 1fr); }
   .cols-sm-1 {
     grid-template-columns: repeat(1, 1fr); }
-  .axisy-sm-1 {
+  .yax-sm-1 {
     grid-row-start: 1; }
-  .axisx-sm-1 {
+  .xax-sm-1 {
     grid-column-start: 1; }
   .mrow-sm-1 {
     grid-row-end: span 1; }
@@ -1715,9 +1715,9 @@
     grid-template-rows: repeat(2, 1fr); }
   .cols-sm-2 {
     grid-template-columns: repeat(2, 1fr); }
-  .axisy-sm-2 {
+  .yax-sm-2 {
     grid-row-start: 2; }
-  .axisx-sm-2 {
+  .xax-sm-2 {
     grid-column-start: 2; }
   .mrow-sm-2 {
     grid-row-end: span 2; }
@@ -1727,9 +1727,9 @@
     grid-template-rows: repeat(3, 1fr); }
   .cols-sm-3 {
     grid-template-columns: repeat(3, 1fr); }
-  .axisy-sm-3 {
+  .yax-sm-3 {
     grid-row-start: 3; }
-  .axisx-sm-3 {
+  .xax-sm-3 {
     grid-column-start: 3; }
   .mrow-sm-3 {
     grid-row-end: span 3; }
@@ -1739,9 +1739,9 @@
     grid-template-rows: repeat(4, 1fr); }
   .cols-sm-4 {
     grid-template-columns: repeat(4, 1fr); }
-  .axisy-sm-4 {
+  .yax-sm-4 {
     grid-row-start: 4; }
-  .axisx-sm-4 {
+  .xax-sm-4 {
     grid-column-start: 4; }
   .mrow-sm-4 {
     grid-row-end: span 4; }
@@ -1751,9 +1751,9 @@
     grid-template-rows: repeat(5, 1fr); }
   .cols-sm-5 {
     grid-template-columns: repeat(5, 1fr); }
-  .axisy-sm-5 {
+  .yax-sm-5 {
     grid-row-start: 5; }
-  .axisx-sm-5 {
+  .xax-sm-5 {
     grid-column-start: 5; }
   .mrow-sm-5 {
     grid-row-end: span 5; }
@@ -1763,9 +1763,9 @@
     grid-template-rows: repeat(6, 1fr); }
   .cols-sm-6 {
     grid-template-columns: repeat(6, 1fr); }
-  .axisy-sm-6 {
+  .yax-sm-6 {
     grid-row-start: 6; }
-  .axisx-sm-6 {
+  .xax-sm-6 {
     grid-column-start: 6; }
   .mrow-sm-6 {
     grid-row-end: span 6; }
@@ -1775,9 +1775,9 @@
     grid-template-rows: repeat(7, 1fr); }
   .cols-sm-7 {
     grid-template-columns: repeat(7, 1fr); }
-  .axisy-sm-7 {
+  .yax-sm-7 {
     grid-row-start: 7; }
-  .axisx-sm-7 {
+  .xax-sm-7 {
     grid-column-start: 7; }
   .mrow-sm-7 {
     grid-row-end: span 7; }
@@ -1787,9 +1787,9 @@
     grid-template-rows: repeat(8, 1fr); }
   .cols-sm-8 {
     grid-template-columns: repeat(8, 1fr); }
-  .axisy-sm-8 {
+  .yax-sm-8 {
     grid-row-start: 8; }
-  .axisx-sm-8 {
+  .xax-sm-8 {
     grid-column-start: 8; }
   .mrow-sm-8 {
     grid-row-end: span 8; }
@@ -1799,9 +1799,9 @@
     grid-template-rows: repeat(9, 1fr); }
   .cols-sm-9 {
     grid-template-columns: repeat(9, 1fr); }
-  .axisy-sm-9 {
+  .yax-sm-9 {
     grid-row-start: 9; }
-  .axisx-sm-9 {
+  .xax-sm-9 {
     grid-column-start: 9; }
   .mrow-sm-9 {
     grid-row-end: span 9; }
@@ -1811,9 +1811,9 @@
     grid-template-rows: repeat(10, 1fr); }
   .cols-sm-10 {
     grid-template-columns: repeat(10, 1fr); }
-  .axisy-sm-10 {
+  .yax-sm-10 {
     grid-row-start: 10; }
-  .axisx-sm-10 {
+  .xax-sm-10 {
     grid-column-start: 10; }
   .mrow-sm-10 {
     grid-row-end: span 10; }
@@ -1823,9 +1823,9 @@
     grid-template-rows: repeat(11, 1fr); }
   .cols-sm-11 {
     grid-template-columns: repeat(11, 1fr); }
-  .axisy-sm-11 {
+  .yax-sm-11 {
     grid-row-start: 11; }
-  .axisx-sm-11 {
+  .xax-sm-11 {
     grid-column-start: 11; }
   .mrow-sm-11 {
     grid-row-end: span 11; }
@@ -1835,611 +1835,611 @@
     grid-template-rows: repeat(12, 1fr); }
   .cols-sm-12 {
     grid-template-columns: repeat(12, 1fr); }
-  .axisy-sm-12 {
+  .yax-sm-12 {
     grid-row-start: 12; }
-  .axisx-sm-12 {
+  .xax-sm-12 {
     grid-column-start: 12; }
   .mrow-sm-12 {
     grid-row-end: span 12; }
   .mcol-sm-12 {
     grid-column-end: span 12; }
-  .gapy-sm-1 {
+  .gapr-sm-1 {
     grid-row-gap: 0.01rem; }
-  .gapx-sm-1 {
+  .gapc-sm-1 {
     grid-column-gap: 0.01rem; }
   .gap-sm-1 {
     grid-gap: 0.01rem; }
-  .gapy-sm-2 {
+  .gapr-sm-2 {
     grid-row-gap: 0.02rem; }
-  .gapx-sm-2 {
+  .gapc-sm-2 {
     grid-column-gap: 0.02rem; }
   .gap-sm-2 {
     grid-gap: 0.02rem; }
-  .gapy-sm-3 {
+  .gapr-sm-3 {
     grid-row-gap: 0.03rem; }
-  .gapx-sm-3 {
+  .gapc-sm-3 {
     grid-column-gap: 0.03rem; }
   .gap-sm-3 {
     grid-gap: 0.03rem; }
-  .gapy-sm-4 {
+  .gapr-sm-4 {
     grid-row-gap: 0.04rem; }
-  .gapx-sm-4 {
+  .gapc-sm-4 {
     grid-column-gap: 0.04rem; }
   .gap-sm-4 {
     grid-gap: 0.04rem; }
-  .gapy-sm-5 {
+  .gapr-sm-5 {
     grid-row-gap: 0.05rem; }
-  .gapx-sm-5 {
+  .gapc-sm-5 {
     grid-column-gap: 0.05rem; }
   .gap-sm-5 {
     grid-gap: 0.05rem; }
-  .gapy-sm-6 {
+  .gapr-sm-6 {
     grid-row-gap: 0.06rem; }
-  .gapx-sm-6 {
+  .gapc-sm-6 {
     grid-column-gap: 0.06rem; }
   .gap-sm-6 {
     grid-gap: 0.06rem; }
-  .gapy-sm-7 {
+  .gapr-sm-7 {
     grid-row-gap: 0.07rem; }
-  .gapx-sm-7 {
+  .gapc-sm-7 {
     grid-column-gap: 0.07rem; }
   .gap-sm-7 {
     grid-gap: 0.07rem; }
-  .gapy-sm-8 {
+  .gapr-sm-8 {
     grid-row-gap: 0.08rem; }
-  .gapx-sm-8 {
+  .gapc-sm-8 {
     grid-column-gap: 0.08rem; }
   .gap-sm-8 {
     grid-gap: 0.08rem; }
-  .gapy-sm-9 {
+  .gapr-sm-9 {
     grid-row-gap: 0.09rem; }
-  .gapx-sm-9 {
+  .gapc-sm-9 {
     grid-column-gap: 0.09rem; }
   .gap-sm-9 {
     grid-gap: 0.09rem; }
-  .gapy-sm-10 {
+  .gapr-sm-10 {
     grid-row-gap: 0.1rem; }
-  .gapx-sm-10 {
+  .gapc-sm-10 {
     grid-column-gap: 0.1rem; }
   .gap-sm-10 {
     grid-gap: 0.1rem; }
-  .gapy-sm-11 {
+  .gapr-sm-11 {
     grid-row-gap: 0.11rem; }
-  .gapx-sm-11 {
+  .gapc-sm-11 {
     grid-column-gap: 0.11rem; }
   .gap-sm-11 {
     grid-gap: 0.11rem; }
-  .gapy-sm-12 {
+  .gapr-sm-12 {
     grid-row-gap: 0.12rem; }
-  .gapx-sm-12 {
+  .gapc-sm-12 {
     grid-column-gap: 0.12rem; }
   .gap-sm-12 {
     grid-gap: 0.12rem; }
-  .gapy-sm-13 {
+  .gapr-sm-13 {
     grid-row-gap: 0.13rem; }
-  .gapx-sm-13 {
+  .gapc-sm-13 {
     grid-column-gap: 0.13rem; }
   .gap-sm-13 {
     grid-gap: 0.13rem; }
-  .gapy-sm-14 {
+  .gapr-sm-14 {
     grid-row-gap: 0.14rem; }
-  .gapx-sm-14 {
+  .gapc-sm-14 {
     grid-column-gap: 0.14rem; }
   .gap-sm-14 {
     grid-gap: 0.14rem; }
-  .gapy-sm-15 {
+  .gapr-sm-15 {
     grid-row-gap: 0.15rem; }
-  .gapx-sm-15 {
+  .gapc-sm-15 {
     grid-column-gap: 0.15rem; }
   .gap-sm-15 {
     grid-gap: 0.15rem; }
-  .gapy-sm-16 {
+  .gapr-sm-16 {
     grid-row-gap: 0.16rem; }
-  .gapx-sm-16 {
+  .gapc-sm-16 {
     grid-column-gap: 0.16rem; }
   .gap-sm-16 {
     grid-gap: 0.16rem; }
-  .gapy-sm-17 {
+  .gapr-sm-17 {
     grid-row-gap: 0.17rem; }
-  .gapx-sm-17 {
+  .gapc-sm-17 {
     grid-column-gap: 0.17rem; }
   .gap-sm-17 {
     grid-gap: 0.17rem; }
-  .gapy-sm-18 {
+  .gapr-sm-18 {
     grid-row-gap: 0.18rem; }
-  .gapx-sm-18 {
+  .gapc-sm-18 {
     grid-column-gap: 0.18rem; }
   .gap-sm-18 {
     grid-gap: 0.18rem; }
-  .gapy-sm-19 {
+  .gapr-sm-19 {
     grid-row-gap: 0.19rem; }
-  .gapx-sm-19 {
+  .gapc-sm-19 {
     grid-column-gap: 0.19rem; }
   .gap-sm-19 {
     grid-gap: 0.19rem; }
-  .gapy-sm-20 {
+  .gapr-sm-20 {
     grid-row-gap: 0.2rem; }
-  .gapx-sm-20 {
+  .gapc-sm-20 {
     grid-column-gap: 0.2rem; }
   .gap-sm-20 {
     grid-gap: 0.2rem; }
-  .gapy-sm-21 {
+  .gapr-sm-21 {
     grid-row-gap: 0.21rem; }
-  .gapx-sm-21 {
+  .gapc-sm-21 {
     grid-column-gap: 0.21rem; }
   .gap-sm-21 {
     grid-gap: 0.21rem; }
-  .gapy-sm-22 {
+  .gapr-sm-22 {
     grid-row-gap: 0.22rem; }
-  .gapx-sm-22 {
+  .gapc-sm-22 {
     grid-column-gap: 0.22rem; }
   .gap-sm-22 {
     grid-gap: 0.22rem; }
-  .gapy-sm-23 {
+  .gapr-sm-23 {
     grid-row-gap: 0.23rem; }
-  .gapx-sm-23 {
+  .gapc-sm-23 {
     grid-column-gap: 0.23rem; }
   .gap-sm-23 {
     grid-gap: 0.23rem; }
-  .gapy-sm-24 {
+  .gapr-sm-24 {
     grid-row-gap: 0.24rem; }
-  .gapx-sm-24 {
+  .gapc-sm-24 {
     grid-column-gap: 0.24rem; }
   .gap-sm-24 {
     grid-gap: 0.24rem; }
-  .gapy-sm-25 {
+  .gapr-sm-25 {
     grid-row-gap: 0.25rem; }
-  .gapx-sm-25 {
+  .gapc-sm-25 {
     grid-column-gap: 0.25rem; }
   .gap-sm-25 {
     grid-gap: 0.25rem; }
-  .gapy-sm-26 {
+  .gapr-sm-26 {
     grid-row-gap: 0.26rem; }
-  .gapx-sm-26 {
+  .gapc-sm-26 {
     grid-column-gap: 0.26rem; }
   .gap-sm-26 {
     grid-gap: 0.26rem; }
-  .gapy-sm-27 {
+  .gapr-sm-27 {
     grid-row-gap: 0.27rem; }
-  .gapx-sm-27 {
+  .gapc-sm-27 {
     grid-column-gap: 0.27rem; }
   .gap-sm-27 {
     grid-gap: 0.27rem; }
-  .gapy-sm-28 {
+  .gapr-sm-28 {
     grid-row-gap: 0.28rem; }
-  .gapx-sm-28 {
+  .gapc-sm-28 {
     grid-column-gap: 0.28rem; }
   .gap-sm-28 {
     grid-gap: 0.28rem; }
-  .gapy-sm-29 {
+  .gapr-sm-29 {
     grid-row-gap: 0.29rem; }
-  .gapx-sm-29 {
+  .gapc-sm-29 {
     grid-column-gap: 0.29rem; }
   .gap-sm-29 {
     grid-gap: 0.29rem; }
-  .gapy-sm-30 {
+  .gapr-sm-30 {
     grid-row-gap: 0.3rem; }
-  .gapx-sm-30 {
+  .gapc-sm-30 {
     grid-column-gap: 0.3rem; }
   .gap-sm-30 {
     grid-gap: 0.3rem; }
-  .gapy-sm-31 {
+  .gapr-sm-31 {
     grid-row-gap: 0.31rem; }
-  .gapx-sm-31 {
+  .gapc-sm-31 {
     grid-column-gap: 0.31rem; }
   .gap-sm-31 {
     grid-gap: 0.31rem; }
-  .gapy-sm-32 {
+  .gapr-sm-32 {
     grid-row-gap: 0.32rem; }
-  .gapx-sm-32 {
+  .gapc-sm-32 {
     grid-column-gap: 0.32rem; }
   .gap-sm-32 {
     grid-gap: 0.32rem; }
-  .gapy-sm-33 {
+  .gapr-sm-33 {
     grid-row-gap: 0.33rem; }
-  .gapx-sm-33 {
+  .gapc-sm-33 {
     grid-column-gap: 0.33rem; }
   .gap-sm-33 {
     grid-gap: 0.33rem; }
-  .gapy-sm-34 {
+  .gapr-sm-34 {
     grid-row-gap: 0.34rem; }
-  .gapx-sm-34 {
+  .gapc-sm-34 {
     grid-column-gap: 0.34rem; }
   .gap-sm-34 {
     grid-gap: 0.34rem; }
-  .gapy-sm-35 {
+  .gapr-sm-35 {
     grid-row-gap: 0.35rem; }
-  .gapx-sm-35 {
+  .gapc-sm-35 {
     grid-column-gap: 0.35rem; }
   .gap-sm-35 {
     grid-gap: 0.35rem; }
-  .gapy-sm-36 {
+  .gapr-sm-36 {
     grid-row-gap: 0.36rem; }
-  .gapx-sm-36 {
+  .gapc-sm-36 {
     grid-column-gap: 0.36rem; }
   .gap-sm-36 {
     grid-gap: 0.36rem; }
-  .gapy-sm-37 {
+  .gapr-sm-37 {
     grid-row-gap: 0.37rem; }
-  .gapx-sm-37 {
+  .gapc-sm-37 {
     grid-column-gap: 0.37rem; }
   .gap-sm-37 {
     grid-gap: 0.37rem; }
-  .gapy-sm-38 {
+  .gapr-sm-38 {
     grid-row-gap: 0.38rem; }
-  .gapx-sm-38 {
+  .gapc-sm-38 {
     grid-column-gap: 0.38rem; }
   .gap-sm-38 {
     grid-gap: 0.38rem; }
-  .gapy-sm-39 {
+  .gapr-sm-39 {
     grid-row-gap: 0.39rem; }
-  .gapx-sm-39 {
+  .gapc-sm-39 {
     grid-column-gap: 0.39rem; }
   .gap-sm-39 {
     grid-gap: 0.39rem; }
-  .gapy-sm-40 {
+  .gapr-sm-40 {
     grid-row-gap: 0.4rem; }
-  .gapx-sm-40 {
+  .gapc-sm-40 {
     grid-column-gap: 0.4rem; }
   .gap-sm-40 {
     grid-gap: 0.4rem; }
-  .gapy-sm-41 {
+  .gapr-sm-41 {
     grid-row-gap: 0.41rem; }
-  .gapx-sm-41 {
+  .gapc-sm-41 {
     grid-column-gap: 0.41rem; }
   .gap-sm-41 {
     grid-gap: 0.41rem; }
-  .gapy-sm-42 {
+  .gapr-sm-42 {
     grid-row-gap: 0.42rem; }
-  .gapx-sm-42 {
+  .gapc-sm-42 {
     grid-column-gap: 0.42rem; }
   .gap-sm-42 {
     grid-gap: 0.42rem; }
-  .gapy-sm-43 {
+  .gapr-sm-43 {
     grid-row-gap: 0.43rem; }
-  .gapx-sm-43 {
+  .gapc-sm-43 {
     grid-column-gap: 0.43rem; }
   .gap-sm-43 {
     grid-gap: 0.43rem; }
-  .gapy-sm-44 {
+  .gapr-sm-44 {
     grid-row-gap: 0.44rem; }
-  .gapx-sm-44 {
+  .gapc-sm-44 {
     grid-column-gap: 0.44rem; }
   .gap-sm-44 {
     grid-gap: 0.44rem; }
-  .gapy-sm-45 {
+  .gapr-sm-45 {
     grid-row-gap: 0.45rem; }
-  .gapx-sm-45 {
+  .gapc-sm-45 {
     grid-column-gap: 0.45rem; }
   .gap-sm-45 {
     grid-gap: 0.45rem; }
-  .gapy-sm-46 {
+  .gapr-sm-46 {
     grid-row-gap: 0.46rem; }
-  .gapx-sm-46 {
+  .gapc-sm-46 {
     grid-column-gap: 0.46rem; }
   .gap-sm-46 {
     grid-gap: 0.46rem; }
-  .gapy-sm-47 {
+  .gapr-sm-47 {
     grid-row-gap: 0.47rem; }
-  .gapx-sm-47 {
+  .gapc-sm-47 {
     grid-column-gap: 0.47rem; }
   .gap-sm-47 {
     grid-gap: 0.47rem; }
-  .gapy-sm-48 {
+  .gapr-sm-48 {
     grid-row-gap: 0.48rem; }
-  .gapx-sm-48 {
+  .gapc-sm-48 {
     grid-column-gap: 0.48rem; }
   .gap-sm-48 {
     grid-gap: 0.48rem; }
-  .gapy-sm-49 {
+  .gapr-sm-49 {
     grid-row-gap: 0.49rem; }
-  .gapx-sm-49 {
+  .gapc-sm-49 {
     grid-column-gap: 0.49rem; }
   .gap-sm-49 {
     grid-gap: 0.49rem; }
-  .gapy-sm-50 {
+  .gapr-sm-50 {
     grid-row-gap: 0.5rem; }
-  .gapx-sm-50 {
+  .gapc-sm-50 {
     grid-column-gap: 0.5rem; }
   .gap-sm-50 {
     grid-gap: 0.5rem; }
-  .gapy-sm-51 {
+  .gapr-sm-51 {
     grid-row-gap: 0.51rem; }
-  .gapx-sm-51 {
+  .gapc-sm-51 {
     grid-column-gap: 0.51rem; }
   .gap-sm-51 {
     grid-gap: 0.51rem; }
-  .gapy-sm-52 {
+  .gapr-sm-52 {
     grid-row-gap: 0.52rem; }
-  .gapx-sm-52 {
+  .gapc-sm-52 {
     grid-column-gap: 0.52rem; }
   .gap-sm-52 {
     grid-gap: 0.52rem; }
-  .gapy-sm-53 {
+  .gapr-sm-53 {
     grid-row-gap: 0.53rem; }
-  .gapx-sm-53 {
+  .gapc-sm-53 {
     grid-column-gap: 0.53rem; }
   .gap-sm-53 {
     grid-gap: 0.53rem; }
-  .gapy-sm-54 {
+  .gapr-sm-54 {
     grid-row-gap: 0.54rem; }
-  .gapx-sm-54 {
+  .gapc-sm-54 {
     grid-column-gap: 0.54rem; }
   .gap-sm-54 {
     grid-gap: 0.54rem; }
-  .gapy-sm-55 {
+  .gapr-sm-55 {
     grid-row-gap: 0.55rem; }
-  .gapx-sm-55 {
+  .gapc-sm-55 {
     grid-column-gap: 0.55rem; }
   .gap-sm-55 {
     grid-gap: 0.55rem; }
-  .gapy-sm-56 {
+  .gapr-sm-56 {
     grid-row-gap: 0.56rem; }
-  .gapx-sm-56 {
+  .gapc-sm-56 {
     grid-column-gap: 0.56rem; }
   .gap-sm-56 {
     grid-gap: 0.56rem; }
-  .gapy-sm-57 {
+  .gapr-sm-57 {
     grid-row-gap: 0.57rem; }
-  .gapx-sm-57 {
+  .gapc-sm-57 {
     grid-column-gap: 0.57rem; }
   .gap-sm-57 {
     grid-gap: 0.57rem; }
-  .gapy-sm-58 {
+  .gapr-sm-58 {
     grid-row-gap: 0.58rem; }
-  .gapx-sm-58 {
+  .gapc-sm-58 {
     grid-column-gap: 0.58rem; }
   .gap-sm-58 {
     grid-gap: 0.58rem; }
-  .gapy-sm-59 {
+  .gapr-sm-59 {
     grid-row-gap: 0.59rem; }
-  .gapx-sm-59 {
+  .gapc-sm-59 {
     grid-column-gap: 0.59rem; }
   .gap-sm-59 {
     grid-gap: 0.59rem; }
-  .gapy-sm-60 {
+  .gapr-sm-60 {
     grid-row-gap: 0.6rem; }
-  .gapx-sm-60 {
+  .gapc-sm-60 {
     grid-column-gap: 0.6rem; }
   .gap-sm-60 {
     grid-gap: 0.6rem; }
-  .gapy-sm-61 {
+  .gapr-sm-61 {
     grid-row-gap: 0.61rem; }
-  .gapx-sm-61 {
+  .gapc-sm-61 {
     grid-column-gap: 0.61rem; }
   .gap-sm-61 {
     grid-gap: 0.61rem; }
-  .gapy-sm-62 {
+  .gapr-sm-62 {
     grid-row-gap: 0.62rem; }
-  .gapx-sm-62 {
+  .gapc-sm-62 {
     grid-column-gap: 0.62rem; }
   .gap-sm-62 {
     grid-gap: 0.62rem; }
-  .gapy-sm-63 {
+  .gapr-sm-63 {
     grid-row-gap: 0.63rem; }
-  .gapx-sm-63 {
+  .gapc-sm-63 {
     grid-column-gap: 0.63rem; }
   .gap-sm-63 {
     grid-gap: 0.63rem; }
-  .gapy-sm-64 {
+  .gapr-sm-64 {
     grid-row-gap: 0.64rem; }
-  .gapx-sm-64 {
+  .gapc-sm-64 {
     grid-column-gap: 0.64rem; }
   .gap-sm-64 {
     grid-gap: 0.64rem; }
-  .gapy-sm-65 {
+  .gapr-sm-65 {
     grid-row-gap: 0.65rem; }
-  .gapx-sm-65 {
+  .gapc-sm-65 {
     grid-column-gap: 0.65rem; }
   .gap-sm-65 {
     grid-gap: 0.65rem; }
-  .gapy-sm-66 {
+  .gapr-sm-66 {
     grid-row-gap: 0.66rem; }
-  .gapx-sm-66 {
+  .gapc-sm-66 {
     grid-column-gap: 0.66rem; }
   .gap-sm-66 {
     grid-gap: 0.66rem; }
-  .gapy-sm-67 {
+  .gapr-sm-67 {
     grid-row-gap: 0.67rem; }
-  .gapx-sm-67 {
+  .gapc-sm-67 {
     grid-column-gap: 0.67rem; }
   .gap-sm-67 {
     grid-gap: 0.67rem; }
-  .gapy-sm-68 {
+  .gapr-sm-68 {
     grid-row-gap: 0.68rem; }
-  .gapx-sm-68 {
+  .gapc-sm-68 {
     grid-column-gap: 0.68rem; }
   .gap-sm-68 {
     grid-gap: 0.68rem; }
-  .gapy-sm-69 {
+  .gapr-sm-69 {
     grid-row-gap: 0.69rem; }
-  .gapx-sm-69 {
+  .gapc-sm-69 {
     grid-column-gap: 0.69rem; }
   .gap-sm-69 {
     grid-gap: 0.69rem; }
-  .gapy-sm-70 {
+  .gapr-sm-70 {
     grid-row-gap: 0.7rem; }
-  .gapx-sm-70 {
+  .gapc-sm-70 {
     grid-column-gap: 0.7rem; }
   .gap-sm-70 {
     grid-gap: 0.7rem; }
-  .gapy-sm-71 {
+  .gapr-sm-71 {
     grid-row-gap: 0.71rem; }
-  .gapx-sm-71 {
+  .gapc-sm-71 {
     grid-column-gap: 0.71rem; }
   .gap-sm-71 {
     grid-gap: 0.71rem; }
-  .gapy-sm-72 {
+  .gapr-sm-72 {
     grid-row-gap: 0.72rem; }
-  .gapx-sm-72 {
+  .gapc-sm-72 {
     grid-column-gap: 0.72rem; }
   .gap-sm-72 {
     grid-gap: 0.72rem; }
-  .gapy-sm-73 {
+  .gapr-sm-73 {
     grid-row-gap: 0.73rem; }
-  .gapx-sm-73 {
+  .gapc-sm-73 {
     grid-column-gap: 0.73rem; }
   .gap-sm-73 {
     grid-gap: 0.73rem; }
-  .gapy-sm-74 {
+  .gapr-sm-74 {
     grid-row-gap: 0.74rem; }
-  .gapx-sm-74 {
+  .gapc-sm-74 {
     grid-column-gap: 0.74rem; }
   .gap-sm-74 {
     grid-gap: 0.74rem; }
-  .gapy-sm-75 {
+  .gapr-sm-75 {
     grid-row-gap: 0.75rem; }
-  .gapx-sm-75 {
+  .gapc-sm-75 {
     grid-column-gap: 0.75rem; }
   .gap-sm-75 {
     grid-gap: 0.75rem; }
-  .gapy-sm-76 {
+  .gapr-sm-76 {
     grid-row-gap: 0.76rem; }
-  .gapx-sm-76 {
+  .gapc-sm-76 {
     grid-column-gap: 0.76rem; }
   .gap-sm-76 {
     grid-gap: 0.76rem; }
-  .gapy-sm-77 {
+  .gapr-sm-77 {
     grid-row-gap: 0.77rem; }
-  .gapx-sm-77 {
+  .gapc-sm-77 {
     grid-column-gap: 0.77rem; }
   .gap-sm-77 {
     grid-gap: 0.77rem; }
-  .gapy-sm-78 {
+  .gapr-sm-78 {
     grid-row-gap: 0.78rem; }
-  .gapx-sm-78 {
+  .gapc-sm-78 {
     grid-column-gap: 0.78rem; }
   .gap-sm-78 {
     grid-gap: 0.78rem; }
-  .gapy-sm-79 {
+  .gapr-sm-79 {
     grid-row-gap: 0.79rem; }
-  .gapx-sm-79 {
+  .gapc-sm-79 {
     grid-column-gap: 0.79rem; }
   .gap-sm-79 {
     grid-gap: 0.79rem; }
-  .gapy-sm-80 {
+  .gapr-sm-80 {
     grid-row-gap: 0.8rem; }
-  .gapx-sm-80 {
+  .gapc-sm-80 {
     grid-column-gap: 0.8rem; }
   .gap-sm-80 {
     grid-gap: 0.8rem; }
-  .gapy-sm-81 {
+  .gapr-sm-81 {
     grid-row-gap: 0.81rem; }
-  .gapx-sm-81 {
+  .gapc-sm-81 {
     grid-column-gap: 0.81rem; }
   .gap-sm-81 {
     grid-gap: 0.81rem; }
-  .gapy-sm-82 {
+  .gapr-sm-82 {
     grid-row-gap: 0.82rem; }
-  .gapx-sm-82 {
+  .gapc-sm-82 {
     grid-column-gap: 0.82rem; }
   .gap-sm-82 {
     grid-gap: 0.82rem; }
-  .gapy-sm-83 {
+  .gapr-sm-83 {
     grid-row-gap: 0.83rem; }
-  .gapx-sm-83 {
+  .gapc-sm-83 {
     grid-column-gap: 0.83rem; }
   .gap-sm-83 {
     grid-gap: 0.83rem; }
-  .gapy-sm-84 {
+  .gapr-sm-84 {
     grid-row-gap: 0.84rem; }
-  .gapx-sm-84 {
+  .gapc-sm-84 {
     grid-column-gap: 0.84rem; }
   .gap-sm-84 {
     grid-gap: 0.84rem; }
-  .gapy-sm-85 {
+  .gapr-sm-85 {
     grid-row-gap: 0.85rem; }
-  .gapx-sm-85 {
+  .gapc-sm-85 {
     grid-column-gap: 0.85rem; }
   .gap-sm-85 {
     grid-gap: 0.85rem; }
-  .gapy-sm-86 {
+  .gapr-sm-86 {
     grid-row-gap: 0.86rem; }
-  .gapx-sm-86 {
+  .gapc-sm-86 {
     grid-column-gap: 0.86rem; }
   .gap-sm-86 {
     grid-gap: 0.86rem; }
-  .gapy-sm-87 {
+  .gapr-sm-87 {
     grid-row-gap: 0.87rem; }
-  .gapx-sm-87 {
+  .gapc-sm-87 {
     grid-column-gap: 0.87rem; }
   .gap-sm-87 {
     grid-gap: 0.87rem; }
-  .gapy-sm-88 {
+  .gapr-sm-88 {
     grid-row-gap: 0.88rem; }
-  .gapx-sm-88 {
+  .gapc-sm-88 {
     grid-column-gap: 0.88rem; }
   .gap-sm-88 {
     grid-gap: 0.88rem; }
-  .gapy-sm-89 {
+  .gapr-sm-89 {
     grid-row-gap: 0.89rem; }
-  .gapx-sm-89 {
+  .gapc-sm-89 {
     grid-column-gap: 0.89rem; }
   .gap-sm-89 {
     grid-gap: 0.89rem; }
-  .gapy-sm-90 {
+  .gapr-sm-90 {
     grid-row-gap: 0.9rem; }
-  .gapx-sm-90 {
+  .gapc-sm-90 {
     grid-column-gap: 0.9rem; }
   .gap-sm-90 {
     grid-gap: 0.9rem; }
-  .gapy-sm-91 {
+  .gapr-sm-91 {
     grid-row-gap: 0.91rem; }
-  .gapx-sm-91 {
+  .gapc-sm-91 {
     grid-column-gap: 0.91rem; }
   .gap-sm-91 {
     grid-gap: 0.91rem; }
-  .gapy-sm-92 {
+  .gapr-sm-92 {
     grid-row-gap: 0.92rem; }
-  .gapx-sm-92 {
+  .gapc-sm-92 {
     grid-column-gap: 0.92rem; }
   .gap-sm-92 {
     grid-gap: 0.92rem; }
-  .gapy-sm-93 {
+  .gapr-sm-93 {
     grid-row-gap: 0.93rem; }
-  .gapx-sm-93 {
+  .gapc-sm-93 {
     grid-column-gap: 0.93rem; }
   .gap-sm-93 {
     grid-gap: 0.93rem; }
-  .gapy-sm-94 {
+  .gapr-sm-94 {
     grid-row-gap: 0.94rem; }
-  .gapx-sm-94 {
+  .gapc-sm-94 {
     grid-column-gap: 0.94rem; }
   .gap-sm-94 {
     grid-gap: 0.94rem; }
-  .gapy-sm-95 {
+  .gapr-sm-95 {
     grid-row-gap: 0.95rem; }
-  .gapx-sm-95 {
+  .gapc-sm-95 {
     grid-column-gap: 0.95rem; }
   .gap-sm-95 {
     grid-gap: 0.95rem; }
-  .gapy-sm-96 {
+  .gapr-sm-96 {
     grid-row-gap: 0.96rem; }
-  .gapx-sm-96 {
+  .gapc-sm-96 {
     grid-column-gap: 0.96rem; }
   .gap-sm-96 {
     grid-gap: 0.96rem; }
-  .gapy-sm-97 {
+  .gapr-sm-97 {
     grid-row-gap: 0.97rem; }
-  .gapx-sm-97 {
+  .gapc-sm-97 {
     grid-column-gap: 0.97rem; }
   .gap-sm-97 {
     grid-gap: 0.97rem; }
-  .gapy-sm-98 {
+  .gapr-sm-98 {
     grid-row-gap: 0.98rem; }
-  .gapx-sm-98 {
+  .gapc-sm-98 {
     grid-column-gap: 0.98rem; }
   .gap-sm-98 {
     grid-gap: 0.98rem; }
-  .gapy-sm-99 {
+  .gapr-sm-99 {
     grid-row-gap: 0.99rem; }
-  .gapx-sm-99 {
+  .gapc-sm-99 {
     grid-column-gap: 0.99rem; }
   .gap-sm-99 {
     grid-gap: 0.99rem; }
-  .gapy-sm-100 {
+  .gapr-sm-100 {
     grid-row-gap: 1rem; }
-  .gapx-sm-100 {
+  .gapc-sm-100 {
     grid-column-gap: 1rem; }
   .gap-sm-100 {
     grid-gap: 1rem; }
@@ -2673,9 +2673,9 @@
     grid-template-rows: repeat(1, 1fr); }
   .cols-md-1 {
     grid-template-columns: repeat(1, 1fr); }
-  .axisy-md-1 {
+  .yax-md-1 {
     grid-row-start: 1; }
-  .axisx-md-1 {
+  .xax-md-1 {
     grid-column-start: 1; }
   .mrow-md-1 {
     grid-row-end: span 1; }
@@ -2685,9 +2685,9 @@
     grid-template-rows: repeat(2, 1fr); }
   .cols-md-2 {
     grid-template-columns: repeat(2, 1fr); }
-  .axisy-md-2 {
+  .yax-md-2 {
     grid-row-start: 2; }
-  .axisx-md-2 {
+  .xax-md-2 {
     grid-column-start: 2; }
   .mrow-md-2 {
     grid-row-end: span 2; }
@@ -2697,9 +2697,9 @@
     grid-template-rows: repeat(3, 1fr); }
   .cols-md-3 {
     grid-template-columns: repeat(3, 1fr); }
-  .axisy-md-3 {
+  .yax-md-3 {
     grid-row-start: 3; }
-  .axisx-md-3 {
+  .xax-md-3 {
     grid-column-start: 3; }
   .mrow-md-3 {
     grid-row-end: span 3; }
@@ -2709,9 +2709,9 @@
     grid-template-rows: repeat(4, 1fr); }
   .cols-md-4 {
     grid-template-columns: repeat(4, 1fr); }
-  .axisy-md-4 {
+  .yax-md-4 {
     grid-row-start: 4; }
-  .axisx-md-4 {
+  .xax-md-4 {
     grid-column-start: 4; }
   .mrow-md-4 {
     grid-row-end: span 4; }
@@ -2721,9 +2721,9 @@
     grid-template-rows: repeat(5, 1fr); }
   .cols-md-5 {
     grid-template-columns: repeat(5, 1fr); }
-  .axisy-md-5 {
+  .yax-md-5 {
     grid-row-start: 5; }
-  .axisx-md-5 {
+  .xax-md-5 {
     grid-column-start: 5; }
   .mrow-md-5 {
     grid-row-end: span 5; }
@@ -2733,9 +2733,9 @@
     grid-template-rows: repeat(6, 1fr); }
   .cols-md-6 {
     grid-template-columns: repeat(6, 1fr); }
-  .axisy-md-6 {
+  .yax-md-6 {
     grid-row-start: 6; }
-  .axisx-md-6 {
+  .xax-md-6 {
     grid-column-start: 6; }
   .mrow-md-6 {
     grid-row-end: span 6; }
@@ -2745,9 +2745,9 @@
     grid-template-rows: repeat(7, 1fr); }
   .cols-md-7 {
     grid-template-columns: repeat(7, 1fr); }
-  .axisy-md-7 {
+  .yax-md-7 {
     grid-row-start: 7; }
-  .axisx-md-7 {
+  .xax-md-7 {
     grid-column-start: 7; }
   .mrow-md-7 {
     grid-row-end: span 7; }
@@ -2757,9 +2757,9 @@
     grid-template-rows: repeat(8, 1fr); }
   .cols-md-8 {
     grid-template-columns: repeat(8, 1fr); }
-  .axisy-md-8 {
+  .yax-md-8 {
     grid-row-start: 8; }
-  .axisx-md-8 {
+  .xax-md-8 {
     grid-column-start: 8; }
   .mrow-md-8 {
     grid-row-end: span 8; }
@@ -2769,9 +2769,9 @@
     grid-template-rows: repeat(9, 1fr); }
   .cols-md-9 {
     grid-template-columns: repeat(9, 1fr); }
-  .axisy-md-9 {
+  .yax-md-9 {
     grid-row-start: 9; }
-  .axisx-md-9 {
+  .xax-md-9 {
     grid-column-start: 9; }
   .mrow-md-9 {
     grid-row-end: span 9; }
@@ -2781,9 +2781,9 @@
     grid-template-rows: repeat(10, 1fr); }
   .cols-md-10 {
     grid-template-columns: repeat(10, 1fr); }
-  .axisy-md-10 {
+  .yax-md-10 {
     grid-row-start: 10; }
-  .axisx-md-10 {
+  .xax-md-10 {
     grid-column-start: 10; }
   .mrow-md-10 {
     grid-row-end: span 10; }
@@ -2793,9 +2793,9 @@
     grid-template-rows: repeat(11, 1fr); }
   .cols-md-11 {
     grid-template-columns: repeat(11, 1fr); }
-  .axisy-md-11 {
+  .yax-md-11 {
     grid-row-start: 11; }
-  .axisx-md-11 {
+  .xax-md-11 {
     grid-column-start: 11; }
   .mrow-md-11 {
     grid-row-end: span 11; }
@@ -2805,611 +2805,611 @@
     grid-template-rows: repeat(12, 1fr); }
   .cols-md-12 {
     grid-template-columns: repeat(12, 1fr); }
-  .axisy-md-12 {
+  .yax-md-12 {
     grid-row-start: 12; }
-  .axisx-md-12 {
+  .xax-md-12 {
     grid-column-start: 12; }
   .mrow-md-12 {
     grid-row-end: span 12; }
   .mcol-md-12 {
     grid-column-end: span 12; }
-  .gapy-md-1 {
+  .gapr-md-1 {
     grid-row-gap: 0.01rem; }
-  .gapx-md-1 {
+  .gapc-md-1 {
     grid-column-gap: 0.01rem; }
   .gap-md-1 {
     grid-gap: 0.01rem; }
-  .gapy-md-2 {
+  .gapr-md-2 {
     grid-row-gap: 0.02rem; }
-  .gapx-md-2 {
+  .gapc-md-2 {
     grid-column-gap: 0.02rem; }
   .gap-md-2 {
     grid-gap: 0.02rem; }
-  .gapy-md-3 {
+  .gapr-md-3 {
     grid-row-gap: 0.03rem; }
-  .gapx-md-3 {
+  .gapc-md-3 {
     grid-column-gap: 0.03rem; }
   .gap-md-3 {
     grid-gap: 0.03rem; }
-  .gapy-md-4 {
+  .gapr-md-4 {
     grid-row-gap: 0.04rem; }
-  .gapx-md-4 {
+  .gapc-md-4 {
     grid-column-gap: 0.04rem; }
   .gap-md-4 {
     grid-gap: 0.04rem; }
-  .gapy-md-5 {
+  .gapr-md-5 {
     grid-row-gap: 0.05rem; }
-  .gapx-md-5 {
+  .gapc-md-5 {
     grid-column-gap: 0.05rem; }
   .gap-md-5 {
     grid-gap: 0.05rem; }
-  .gapy-md-6 {
+  .gapr-md-6 {
     grid-row-gap: 0.06rem; }
-  .gapx-md-6 {
+  .gapc-md-6 {
     grid-column-gap: 0.06rem; }
   .gap-md-6 {
     grid-gap: 0.06rem; }
-  .gapy-md-7 {
+  .gapr-md-7 {
     grid-row-gap: 0.07rem; }
-  .gapx-md-7 {
+  .gapc-md-7 {
     grid-column-gap: 0.07rem; }
   .gap-md-7 {
     grid-gap: 0.07rem; }
-  .gapy-md-8 {
+  .gapr-md-8 {
     grid-row-gap: 0.08rem; }
-  .gapx-md-8 {
+  .gapc-md-8 {
     grid-column-gap: 0.08rem; }
   .gap-md-8 {
     grid-gap: 0.08rem; }
-  .gapy-md-9 {
+  .gapr-md-9 {
     grid-row-gap: 0.09rem; }
-  .gapx-md-9 {
+  .gapc-md-9 {
     grid-column-gap: 0.09rem; }
   .gap-md-9 {
     grid-gap: 0.09rem; }
-  .gapy-md-10 {
+  .gapr-md-10 {
     grid-row-gap: 0.1rem; }
-  .gapx-md-10 {
+  .gapc-md-10 {
     grid-column-gap: 0.1rem; }
   .gap-md-10 {
     grid-gap: 0.1rem; }
-  .gapy-md-11 {
+  .gapr-md-11 {
     grid-row-gap: 0.11rem; }
-  .gapx-md-11 {
+  .gapc-md-11 {
     grid-column-gap: 0.11rem; }
   .gap-md-11 {
     grid-gap: 0.11rem; }
-  .gapy-md-12 {
+  .gapr-md-12 {
     grid-row-gap: 0.12rem; }
-  .gapx-md-12 {
+  .gapc-md-12 {
     grid-column-gap: 0.12rem; }
   .gap-md-12 {
     grid-gap: 0.12rem; }
-  .gapy-md-13 {
+  .gapr-md-13 {
     grid-row-gap: 0.13rem; }
-  .gapx-md-13 {
+  .gapc-md-13 {
     grid-column-gap: 0.13rem; }
   .gap-md-13 {
     grid-gap: 0.13rem; }
-  .gapy-md-14 {
+  .gapr-md-14 {
     grid-row-gap: 0.14rem; }
-  .gapx-md-14 {
+  .gapc-md-14 {
     grid-column-gap: 0.14rem; }
   .gap-md-14 {
     grid-gap: 0.14rem; }
-  .gapy-md-15 {
+  .gapr-md-15 {
     grid-row-gap: 0.15rem; }
-  .gapx-md-15 {
+  .gapc-md-15 {
     grid-column-gap: 0.15rem; }
   .gap-md-15 {
     grid-gap: 0.15rem; }
-  .gapy-md-16 {
+  .gapr-md-16 {
     grid-row-gap: 0.16rem; }
-  .gapx-md-16 {
+  .gapc-md-16 {
     grid-column-gap: 0.16rem; }
   .gap-md-16 {
     grid-gap: 0.16rem; }
-  .gapy-md-17 {
+  .gapr-md-17 {
     grid-row-gap: 0.17rem; }
-  .gapx-md-17 {
+  .gapc-md-17 {
     grid-column-gap: 0.17rem; }
   .gap-md-17 {
     grid-gap: 0.17rem; }
-  .gapy-md-18 {
+  .gapr-md-18 {
     grid-row-gap: 0.18rem; }
-  .gapx-md-18 {
+  .gapc-md-18 {
     grid-column-gap: 0.18rem; }
   .gap-md-18 {
     grid-gap: 0.18rem; }
-  .gapy-md-19 {
+  .gapr-md-19 {
     grid-row-gap: 0.19rem; }
-  .gapx-md-19 {
+  .gapc-md-19 {
     grid-column-gap: 0.19rem; }
   .gap-md-19 {
     grid-gap: 0.19rem; }
-  .gapy-md-20 {
+  .gapr-md-20 {
     grid-row-gap: 0.2rem; }
-  .gapx-md-20 {
+  .gapc-md-20 {
     grid-column-gap: 0.2rem; }
   .gap-md-20 {
     grid-gap: 0.2rem; }
-  .gapy-md-21 {
+  .gapr-md-21 {
     grid-row-gap: 0.21rem; }
-  .gapx-md-21 {
+  .gapc-md-21 {
     grid-column-gap: 0.21rem; }
   .gap-md-21 {
     grid-gap: 0.21rem; }
-  .gapy-md-22 {
+  .gapr-md-22 {
     grid-row-gap: 0.22rem; }
-  .gapx-md-22 {
+  .gapc-md-22 {
     grid-column-gap: 0.22rem; }
   .gap-md-22 {
     grid-gap: 0.22rem; }
-  .gapy-md-23 {
+  .gapr-md-23 {
     grid-row-gap: 0.23rem; }
-  .gapx-md-23 {
+  .gapc-md-23 {
     grid-column-gap: 0.23rem; }
   .gap-md-23 {
     grid-gap: 0.23rem; }
-  .gapy-md-24 {
+  .gapr-md-24 {
     grid-row-gap: 0.24rem; }
-  .gapx-md-24 {
+  .gapc-md-24 {
     grid-column-gap: 0.24rem; }
   .gap-md-24 {
     grid-gap: 0.24rem; }
-  .gapy-md-25 {
+  .gapr-md-25 {
     grid-row-gap: 0.25rem; }
-  .gapx-md-25 {
+  .gapc-md-25 {
     grid-column-gap: 0.25rem; }
   .gap-md-25 {
     grid-gap: 0.25rem; }
-  .gapy-md-26 {
+  .gapr-md-26 {
     grid-row-gap: 0.26rem; }
-  .gapx-md-26 {
+  .gapc-md-26 {
     grid-column-gap: 0.26rem; }
   .gap-md-26 {
     grid-gap: 0.26rem; }
-  .gapy-md-27 {
+  .gapr-md-27 {
     grid-row-gap: 0.27rem; }
-  .gapx-md-27 {
+  .gapc-md-27 {
     grid-column-gap: 0.27rem; }
   .gap-md-27 {
     grid-gap: 0.27rem; }
-  .gapy-md-28 {
+  .gapr-md-28 {
     grid-row-gap: 0.28rem; }
-  .gapx-md-28 {
+  .gapc-md-28 {
     grid-column-gap: 0.28rem; }
   .gap-md-28 {
     grid-gap: 0.28rem; }
-  .gapy-md-29 {
+  .gapr-md-29 {
     grid-row-gap: 0.29rem; }
-  .gapx-md-29 {
+  .gapc-md-29 {
     grid-column-gap: 0.29rem; }
   .gap-md-29 {
     grid-gap: 0.29rem; }
-  .gapy-md-30 {
+  .gapr-md-30 {
     grid-row-gap: 0.3rem; }
-  .gapx-md-30 {
+  .gapc-md-30 {
     grid-column-gap: 0.3rem; }
   .gap-md-30 {
     grid-gap: 0.3rem; }
-  .gapy-md-31 {
+  .gapr-md-31 {
     grid-row-gap: 0.31rem; }
-  .gapx-md-31 {
+  .gapc-md-31 {
     grid-column-gap: 0.31rem; }
   .gap-md-31 {
     grid-gap: 0.31rem; }
-  .gapy-md-32 {
+  .gapr-md-32 {
     grid-row-gap: 0.32rem; }
-  .gapx-md-32 {
+  .gapc-md-32 {
     grid-column-gap: 0.32rem; }
   .gap-md-32 {
     grid-gap: 0.32rem; }
-  .gapy-md-33 {
+  .gapr-md-33 {
     grid-row-gap: 0.33rem; }
-  .gapx-md-33 {
+  .gapc-md-33 {
     grid-column-gap: 0.33rem; }
   .gap-md-33 {
     grid-gap: 0.33rem; }
-  .gapy-md-34 {
+  .gapr-md-34 {
     grid-row-gap: 0.34rem; }
-  .gapx-md-34 {
+  .gapc-md-34 {
     grid-column-gap: 0.34rem; }
   .gap-md-34 {
     grid-gap: 0.34rem; }
-  .gapy-md-35 {
+  .gapr-md-35 {
     grid-row-gap: 0.35rem; }
-  .gapx-md-35 {
+  .gapc-md-35 {
     grid-column-gap: 0.35rem; }
   .gap-md-35 {
     grid-gap: 0.35rem; }
-  .gapy-md-36 {
+  .gapr-md-36 {
     grid-row-gap: 0.36rem; }
-  .gapx-md-36 {
+  .gapc-md-36 {
     grid-column-gap: 0.36rem; }
   .gap-md-36 {
     grid-gap: 0.36rem; }
-  .gapy-md-37 {
+  .gapr-md-37 {
     grid-row-gap: 0.37rem; }
-  .gapx-md-37 {
+  .gapc-md-37 {
     grid-column-gap: 0.37rem; }
   .gap-md-37 {
     grid-gap: 0.37rem; }
-  .gapy-md-38 {
+  .gapr-md-38 {
     grid-row-gap: 0.38rem; }
-  .gapx-md-38 {
+  .gapc-md-38 {
     grid-column-gap: 0.38rem; }
   .gap-md-38 {
     grid-gap: 0.38rem; }
-  .gapy-md-39 {
+  .gapr-md-39 {
     grid-row-gap: 0.39rem; }
-  .gapx-md-39 {
+  .gapc-md-39 {
     grid-column-gap: 0.39rem; }
   .gap-md-39 {
     grid-gap: 0.39rem; }
-  .gapy-md-40 {
+  .gapr-md-40 {
     grid-row-gap: 0.4rem; }
-  .gapx-md-40 {
+  .gapc-md-40 {
     grid-column-gap: 0.4rem; }
   .gap-md-40 {
     grid-gap: 0.4rem; }
-  .gapy-md-41 {
+  .gapr-md-41 {
     grid-row-gap: 0.41rem; }
-  .gapx-md-41 {
+  .gapc-md-41 {
     grid-column-gap: 0.41rem; }
   .gap-md-41 {
     grid-gap: 0.41rem; }
-  .gapy-md-42 {
+  .gapr-md-42 {
     grid-row-gap: 0.42rem; }
-  .gapx-md-42 {
+  .gapc-md-42 {
     grid-column-gap: 0.42rem; }
   .gap-md-42 {
     grid-gap: 0.42rem; }
-  .gapy-md-43 {
+  .gapr-md-43 {
     grid-row-gap: 0.43rem; }
-  .gapx-md-43 {
+  .gapc-md-43 {
     grid-column-gap: 0.43rem; }
   .gap-md-43 {
     grid-gap: 0.43rem; }
-  .gapy-md-44 {
+  .gapr-md-44 {
     grid-row-gap: 0.44rem; }
-  .gapx-md-44 {
+  .gapc-md-44 {
     grid-column-gap: 0.44rem; }
   .gap-md-44 {
     grid-gap: 0.44rem; }
-  .gapy-md-45 {
+  .gapr-md-45 {
     grid-row-gap: 0.45rem; }
-  .gapx-md-45 {
+  .gapc-md-45 {
     grid-column-gap: 0.45rem; }
   .gap-md-45 {
     grid-gap: 0.45rem; }
-  .gapy-md-46 {
+  .gapr-md-46 {
     grid-row-gap: 0.46rem; }
-  .gapx-md-46 {
+  .gapc-md-46 {
     grid-column-gap: 0.46rem; }
   .gap-md-46 {
     grid-gap: 0.46rem; }
-  .gapy-md-47 {
+  .gapr-md-47 {
     grid-row-gap: 0.47rem; }
-  .gapx-md-47 {
+  .gapc-md-47 {
     grid-column-gap: 0.47rem; }
   .gap-md-47 {
     grid-gap: 0.47rem; }
-  .gapy-md-48 {
+  .gapr-md-48 {
     grid-row-gap: 0.48rem; }
-  .gapx-md-48 {
+  .gapc-md-48 {
     grid-column-gap: 0.48rem; }
   .gap-md-48 {
     grid-gap: 0.48rem; }
-  .gapy-md-49 {
+  .gapr-md-49 {
     grid-row-gap: 0.49rem; }
-  .gapx-md-49 {
+  .gapc-md-49 {
     grid-column-gap: 0.49rem; }
   .gap-md-49 {
     grid-gap: 0.49rem; }
-  .gapy-md-50 {
+  .gapr-md-50 {
     grid-row-gap: 0.5rem; }
-  .gapx-md-50 {
+  .gapc-md-50 {
     grid-column-gap: 0.5rem; }
   .gap-md-50 {
     grid-gap: 0.5rem; }
-  .gapy-md-51 {
+  .gapr-md-51 {
     grid-row-gap: 0.51rem; }
-  .gapx-md-51 {
+  .gapc-md-51 {
     grid-column-gap: 0.51rem; }
   .gap-md-51 {
     grid-gap: 0.51rem; }
-  .gapy-md-52 {
+  .gapr-md-52 {
     grid-row-gap: 0.52rem; }
-  .gapx-md-52 {
+  .gapc-md-52 {
     grid-column-gap: 0.52rem; }
   .gap-md-52 {
     grid-gap: 0.52rem; }
-  .gapy-md-53 {
+  .gapr-md-53 {
     grid-row-gap: 0.53rem; }
-  .gapx-md-53 {
+  .gapc-md-53 {
     grid-column-gap: 0.53rem; }
   .gap-md-53 {
     grid-gap: 0.53rem; }
-  .gapy-md-54 {
+  .gapr-md-54 {
     grid-row-gap: 0.54rem; }
-  .gapx-md-54 {
+  .gapc-md-54 {
     grid-column-gap: 0.54rem; }
   .gap-md-54 {
     grid-gap: 0.54rem; }
-  .gapy-md-55 {
+  .gapr-md-55 {
     grid-row-gap: 0.55rem; }
-  .gapx-md-55 {
+  .gapc-md-55 {
     grid-column-gap: 0.55rem; }
   .gap-md-55 {
     grid-gap: 0.55rem; }
-  .gapy-md-56 {
+  .gapr-md-56 {
     grid-row-gap: 0.56rem; }
-  .gapx-md-56 {
+  .gapc-md-56 {
     grid-column-gap: 0.56rem; }
   .gap-md-56 {
     grid-gap: 0.56rem; }
-  .gapy-md-57 {
+  .gapr-md-57 {
     grid-row-gap: 0.57rem; }
-  .gapx-md-57 {
+  .gapc-md-57 {
     grid-column-gap: 0.57rem; }
   .gap-md-57 {
     grid-gap: 0.57rem; }
-  .gapy-md-58 {
+  .gapr-md-58 {
     grid-row-gap: 0.58rem; }
-  .gapx-md-58 {
+  .gapc-md-58 {
     grid-column-gap: 0.58rem; }
   .gap-md-58 {
     grid-gap: 0.58rem; }
-  .gapy-md-59 {
+  .gapr-md-59 {
     grid-row-gap: 0.59rem; }
-  .gapx-md-59 {
+  .gapc-md-59 {
     grid-column-gap: 0.59rem; }
   .gap-md-59 {
     grid-gap: 0.59rem; }
-  .gapy-md-60 {
+  .gapr-md-60 {
     grid-row-gap: 0.6rem; }
-  .gapx-md-60 {
+  .gapc-md-60 {
     grid-column-gap: 0.6rem; }
   .gap-md-60 {
     grid-gap: 0.6rem; }
-  .gapy-md-61 {
+  .gapr-md-61 {
     grid-row-gap: 0.61rem; }
-  .gapx-md-61 {
+  .gapc-md-61 {
     grid-column-gap: 0.61rem; }
   .gap-md-61 {
     grid-gap: 0.61rem; }
-  .gapy-md-62 {
+  .gapr-md-62 {
     grid-row-gap: 0.62rem; }
-  .gapx-md-62 {
+  .gapc-md-62 {
     grid-column-gap: 0.62rem; }
   .gap-md-62 {
     grid-gap: 0.62rem; }
-  .gapy-md-63 {
+  .gapr-md-63 {
     grid-row-gap: 0.63rem; }
-  .gapx-md-63 {
+  .gapc-md-63 {
     grid-column-gap: 0.63rem; }
   .gap-md-63 {
     grid-gap: 0.63rem; }
-  .gapy-md-64 {
+  .gapr-md-64 {
     grid-row-gap: 0.64rem; }
-  .gapx-md-64 {
+  .gapc-md-64 {
     grid-column-gap: 0.64rem; }
   .gap-md-64 {
     grid-gap: 0.64rem; }
-  .gapy-md-65 {
+  .gapr-md-65 {
     grid-row-gap: 0.65rem; }
-  .gapx-md-65 {
+  .gapc-md-65 {
     grid-column-gap: 0.65rem; }
   .gap-md-65 {
     grid-gap: 0.65rem; }
-  .gapy-md-66 {
+  .gapr-md-66 {
     grid-row-gap: 0.66rem; }
-  .gapx-md-66 {
+  .gapc-md-66 {
     grid-column-gap: 0.66rem; }
   .gap-md-66 {
     grid-gap: 0.66rem; }
-  .gapy-md-67 {
+  .gapr-md-67 {
     grid-row-gap: 0.67rem; }
-  .gapx-md-67 {
+  .gapc-md-67 {
     grid-column-gap: 0.67rem; }
   .gap-md-67 {
     grid-gap: 0.67rem; }
-  .gapy-md-68 {
+  .gapr-md-68 {
     grid-row-gap: 0.68rem; }
-  .gapx-md-68 {
+  .gapc-md-68 {
     grid-column-gap: 0.68rem; }
   .gap-md-68 {
     grid-gap: 0.68rem; }
-  .gapy-md-69 {
+  .gapr-md-69 {
     grid-row-gap: 0.69rem; }
-  .gapx-md-69 {
+  .gapc-md-69 {
     grid-column-gap: 0.69rem; }
   .gap-md-69 {
     grid-gap: 0.69rem; }
-  .gapy-md-70 {
+  .gapr-md-70 {
     grid-row-gap: 0.7rem; }
-  .gapx-md-70 {
+  .gapc-md-70 {
     grid-column-gap: 0.7rem; }
   .gap-md-70 {
     grid-gap: 0.7rem; }
-  .gapy-md-71 {
+  .gapr-md-71 {
     grid-row-gap: 0.71rem; }
-  .gapx-md-71 {
+  .gapc-md-71 {
     grid-column-gap: 0.71rem; }
   .gap-md-71 {
     grid-gap: 0.71rem; }
-  .gapy-md-72 {
+  .gapr-md-72 {
     grid-row-gap: 0.72rem; }
-  .gapx-md-72 {
+  .gapc-md-72 {
     grid-column-gap: 0.72rem; }
   .gap-md-72 {
     grid-gap: 0.72rem; }
-  .gapy-md-73 {
+  .gapr-md-73 {
     grid-row-gap: 0.73rem; }
-  .gapx-md-73 {
+  .gapc-md-73 {
     grid-column-gap: 0.73rem; }
   .gap-md-73 {
     grid-gap: 0.73rem; }
-  .gapy-md-74 {
+  .gapr-md-74 {
     grid-row-gap: 0.74rem; }
-  .gapx-md-74 {
+  .gapc-md-74 {
     grid-column-gap: 0.74rem; }
   .gap-md-74 {
     grid-gap: 0.74rem; }
-  .gapy-md-75 {
+  .gapr-md-75 {
     grid-row-gap: 0.75rem; }
-  .gapx-md-75 {
+  .gapc-md-75 {
     grid-column-gap: 0.75rem; }
   .gap-md-75 {
     grid-gap: 0.75rem; }
-  .gapy-md-76 {
+  .gapr-md-76 {
     grid-row-gap: 0.76rem; }
-  .gapx-md-76 {
+  .gapc-md-76 {
     grid-column-gap: 0.76rem; }
   .gap-md-76 {
     grid-gap: 0.76rem; }
-  .gapy-md-77 {
+  .gapr-md-77 {
     grid-row-gap: 0.77rem; }
-  .gapx-md-77 {
+  .gapc-md-77 {
     grid-column-gap: 0.77rem; }
   .gap-md-77 {
     grid-gap: 0.77rem; }
-  .gapy-md-78 {
+  .gapr-md-78 {
     grid-row-gap: 0.78rem; }
-  .gapx-md-78 {
+  .gapc-md-78 {
     grid-column-gap: 0.78rem; }
   .gap-md-78 {
     grid-gap: 0.78rem; }
-  .gapy-md-79 {
+  .gapr-md-79 {
     grid-row-gap: 0.79rem; }
-  .gapx-md-79 {
+  .gapc-md-79 {
     grid-column-gap: 0.79rem; }
   .gap-md-79 {
     grid-gap: 0.79rem; }
-  .gapy-md-80 {
+  .gapr-md-80 {
     grid-row-gap: 0.8rem; }
-  .gapx-md-80 {
+  .gapc-md-80 {
     grid-column-gap: 0.8rem; }
   .gap-md-80 {
     grid-gap: 0.8rem; }
-  .gapy-md-81 {
+  .gapr-md-81 {
     grid-row-gap: 0.81rem; }
-  .gapx-md-81 {
+  .gapc-md-81 {
     grid-column-gap: 0.81rem; }
   .gap-md-81 {
     grid-gap: 0.81rem; }
-  .gapy-md-82 {
+  .gapr-md-82 {
     grid-row-gap: 0.82rem; }
-  .gapx-md-82 {
+  .gapc-md-82 {
     grid-column-gap: 0.82rem; }
   .gap-md-82 {
     grid-gap: 0.82rem; }
-  .gapy-md-83 {
+  .gapr-md-83 {
     grid-row-gap: 0.83rem; }
-  .gapx-md-83 {
+  .gapc-md-83 {
     grid-column-gap: 0.83rem; }
   .gap-md-83 {
     grid-gap: 0.83rem; }
-  .gapy-md-84 {
+  .gapr-md-84 {
     grid-row-gap: 0.84rem; }
-  .gapx-md-84 {
+  .gapc-md-84 {
     grid-column-gap: 0.84rem; }
   .gap-md-84 {
     grid-gap: 0.84rem; }
-  .gapy-md-85 {
+  .gapr-md-85 {
     grid-row-gap: 0.85rem; }
-  .gapx-md-85 {
+  .gapc-md-85 {
     grid-column-gap: 0.85rem; }
   .gap-md-85 {
     grid-gap: 0.85rem; }
-  .gapy-md-86 {
+  .gapr-md-86 {
     grid-row-gap: 0.86rem; }
-  .gapx-md-86 {
+  .gapc-md-86 {
     grid-column-gap: 0.86rem; }
   .gap-md-86 {
     grid-gap: 0.86rem; }
-  .gapy-md-87 {
+  .gapr-md-87 {
     grid-row-gap: 0.87rem; }
-  .gapx-md-87 {
+  .gapc-md-87 {
     grid-column-gap: 0.87rem; }
   .gap-md-87 {
     grid-gap: 0.87rem; }
-  .gapy-md-88 {
+  .gapr-md-88 {
     grid-row-gap: 0.88rem; }
-  .gapx-md-88 {
+  .gapc-md-88 {
     grid-column-gap: 0.88rem; }
   .gap-md-88 {
     grid-gap: 0.88rem; }
-  .gapy-md-89 {
+  .gapr-md-89 {
     grid-row-gap: 0.89rem; }
-  .gapx-md-89 {
+  .gapc-md-89 {
     grid-column-gap: 0.89rem; }
   .gap-md-89 {
     grid-gap: 0.89rem; }
-  .gapy-md-90 {
+  .gapr-md-90 {
     grid-row-gap: 0.9rem; }
-  .gapx-md-90 {
+  .gapc-md-90 {
     grid-column-gap: 0.9rem; }
   .gap-md-90 {
     grid-gap: 0.9rem; }
-  .gapy-md-91 {
+  .gapr-md-91 {
     grid-row-gap: 0.91rem; }
-  .gapx-md-91 {
+  .gapc-md-91 {
     grid-column-gap: 0.91rem; }
   .gap-md-91 {
     grid-gap: 0.91rem; }
-  .gapy-md-92 {
+  .gapr-md-92 {
     grid-row-gap: 0.92rem; }
-  .gapx-md-92 {
+  .gapc-md-92 {
     grid-column-gap: 0.92rem; }
   .gap-md-92 {
     grid-gap: 0.92rem; }
-  .gapy-md-93 {
+  .gapr-md-93 {
     grid-row-gap: 0.93rem; }
-  .gapx-md-93 {
+  .gapc-md-93 {
     grid-column-gap: 0.93rem; }
   .gap-md-93 {
     grid-gap: 0.93rem; }
-  .gapy-md-94 {
+  .gapr-md-94 {
     grid-row-gap: 0.94rem; }
-  .gapx-md-94 {
+  .gapc-md-94 {
     grid-column-gap: 0.94rem; }
   .gap-md-94 {
     grid-gap: 0.94rem; }
-  .gapy-md-95 {
+  .gapr-md-95 {
     grid-row-gap: 0.95rem; }
-  .gapx-md-95 {
+  .gapc-md-95 {
     grid-column-gap: 0.95rem; }
   .gap-md-95 {
     grid-gap: 0.95rem; }
-  .gapy-md-96 {
+  .gapr-md-96 {
     grid-row-gap: 0.96rem; }
-  .gapx-md-96 {
+  .gapc-md-96 {
     grid-column-gap: 0.96rem; }
   .gap-md-96 {
     grid-gap: 0.96rem; }
-  .gapy-md-97 {
+  .gapr-md-97 {
     grid-row-gap: 0.97rem; }
-  .gapx-md-97 {
+  .gapc-md-97 {
     grid-column-gap: 0.97rem; }
   .gap-md-97 {
     grid-gap: 0.97rem; }
-  .gapy-md-98 {
+  .gapr-md-98 {
     grid-row-gap: 0.98rem; }
-  .gapx-md-98 {
+  .gapc-md-98 {
     grid-column-gap: 0.98rem; }
   .gap-md-98 {
     grid-gap: 0.98rem; }
-  .gapy-md-99 {
+  .gapr-md-99 {
     grid-row-gap: 0.99rem; }
-  .gapx-md-99 {
+  .gapc-md-99 {
     grid-column-gap: 0.99rem; }
   .gap-md-99 {
     grid-gap: 0.99rem; }
-  .gapy-md-100 {
+  .gapr-md-100 {
     grid-row-gap: 1rem; }
-  .gapx-md-100 {
+  .gapc-md-100 {
     grid-column-gap: 1rem; }
   .gap-md-100 {
     grid-gap: 1rem; }
@@ -3643,9 +3643,9 @@
     grid-template-rows: repeat(1, 1fr); }
   .cols-lg-1 {
     grid-template-columns: repeat(1, 1fr); }
-  .axisy-lg-1 {
+  .yax-lg-1 {
     grid-row-start: 1; }
-  .axisx-lg-1 {
+  .xax-lg-1 {
     grid-column-start: 1; }
   .mrow-lg-1 {
     grid-row-end: span 1; }
@@ -3655,9 +3655,9 @@
     grid-template-rows: repeat(2, 1fr); }
   .cols-lg-2 {
     grid-template-columns: repeat(2, 1fr); }
-  .axisy-lg-2 {
+  .yax-lg-2 {
     grid-row-start: 2; }
-  .axisx-lg-2 {
+  .xax-lg-2 {
     grid-column-start: 2; }
   .mrow-lg-2 {
     grid-row-end: span 2; }
@@ -3667,9 +3667,9 @@
     grid-template-rows: repeat(3, 1fr); }
   .cols-lg-3 {
     grid-template-columns: repeat(3, 1fr); }
-  .axisy-lg-3 {
+  .yax-lg-3 {
     grid-row-start: 3; }
-  .axisx-lg-3 {
+  .xax-lg-3 {
     grid-column-start: 3; }
   .mrow-lg-3 {
     grid-row-end: span 3; }
@@ -3679,9 +3679,9 @@
     grid-template-rows: repeat(4, 1fr); }
   .cols-lg-4 {
     grid-template-columns: repeat(4, 1fr); }
-  .axisy-lg-4 {
+  .yax-lg-4 {
     grid-row-start: 4; }
-  .axisx-lg-4 {
+  .xax-lg-4 {
     grid-column-start: 4; }
   .mrow-lg-4 {
     grid-row-end: span 4; }
@@ -3691,9 +3691,9 @@
     grid-template-rows: repeat(5, 1fr); }
   .cols-lg-5 {
     grid-template-columns: repeat(5, 1fr); }
-  .axisy-lg-5 {
+  .yax-lg-5 {
     grid-row-start: 5; }
-  .axisx-lg-5 {
+  .xax-lg-5 {
     grid-column-start: 5; }
   .mrow-lg-5 {
     grid-row-end: span 5; }
@@ -3703,9 +3703,9 @@
     grid-template-rows: repeat(6, 1fr); }
   .cols-lg-6 {
     grid-template-columns: repeat(6, 1fr); }
-  .axisy-lg-6 {
+  .yax-lg-6 {
     grid-row-start: 6; }
-  .axisx-lg-6 {
+  .xax-lg-6 {
     grid-column-start: 6; }
   .mrow-lg-6 {
     grid-row-end: span 6; }
@@ -3715,9 +3715,9 @@
     grid-template-rows: repeat(7, 1fr); }
   .cols-lg-7 {
     grid-template-columns: repeat(7, 1fr); }
-  .axisy-lg-7 {
+  .yax-lg-7 {
     grid-row-start: 7; }
-  .axisx-lg-7 {
+  .xax-lg-7 {
     grid-column-start: 7; }
   .mrow-lg-7 {
     grid-row-end: span 7; }
@@ -3727,9 +3727,9 @@
     grid-template-rows: repeat(8, 1fr); }
   .cols-lg-8 {
     grid-template-columns: repeat(8, 1fr); }
-  .axisy-lg-8 {
+  .yax-lg-8 {
     grid-row-start: 8; }
-  .axisx-lg-8 {
+  .xax-lg-8 {
     grid-column-start: 8; }
   .mrow-lg-8 {
     grid-row-end: span 8; }
@@ -3739,9 +3739,9 @@
     grid-template-rows: repeat(9, 1fr); }
   .cols-lg-9 {
     grid-template-columns: repeat(9, 1fr); }
-  .axisy-lg-9 {
+  .yax-lg-9 {
     grid-row-start: 9; }
-  .axisx-lg-9 {
+  .xax-lg-9 {
     grid-column-start: 9; }
   .mrow-lg-9 {
     grid-row-end: span 9; }
@@ -3751,9 +3751,9 @@
     grid-template-rows: repeat(10, 1fr); }
   .cols-lg-10 {
     grid-template-columns: repeat(10, 1fr); }
-  .axisy-lg-10 {
+  .yax-lg-10 {
     grid-row-start: 10; }
-  .axisx-lg-10 {
+  .xax-lg-10 {
     grid-column-start: 10; }
   .mrow-lg-10 {
     grid-row-end: span 10; }
@@ -3763,9 +3763,9 @@
     grid-template-rows: repeat(11, 1fr); }
   .cols-lg-11 {
     grid-template-columns: repeat(11, 1fr); }
-  .axisy-lg-11 {
+  .yax-lg-11 {
     grid-row-start: 11; }
-  .axisx-lg-11 {
+  .xax-lg-11 {
     grid-column-start: 11; }
   .mrow-lg-11 {
     grid-row-end: span 11; }
@@ -3775,611 +3775,611 @@
     grid-template-rows: repeat(12, 1fr); }
   .cols-lg-12 {
     grid-template-columns: repeat(12, 1fr); }
-  .axisy-lg-12 {
+  .yax-lg-12 {
     grid-row-start: 12; }
-  .axisx-lg-12 {
+  .xax-lg-12 {
     grid-column-start: 12; }
   .mrow-lg-12 {
     grid-row-end: span 12; }
   .mcol-lg-12 {
     grid-column-end: span 12; }
-  .gapy-lg-1 {
+  .gapr-lg-1 {
     grid-row-gap: 0.01rem; }
-  .gapx-lg-1 {
+  .gapc-lg-1 {
     grid-column-gap: 0.01rem; }
   .gap-lg-1 {
     grid-gap: 0.01rem; }
-  .gapy-lg-2 {
+  .gapr-lg-2 {
     grid-row-gap: 0.02rem; }
-  .gapx-lg-2 {
+  .gapc-lg-2 {
     grid-column-gap: 0.02rem; }
   .gap-lg-2 {
     grid-gap: 0.02rem; }
-  .gapy-lg-3 {
+  .gapr-lg-3 {
     grid-row-gap: 0.03rem; }
-  .gapx-lg-3 {
+  .gapc-lg-3 {
     grid-column-gap: 0.03rem; }
   .gap-lg-3 {
     grid-gap: 0.03rem; }
-  .gapy-lg-4 {
+  .gapr-lg-4 {
     grid-row-gap: 0.04rem; }
-  .gapx-lg-4 {
+  .gapc-lg-4 {
     grid-column-gap: 0.04rem; }
   .gap-lg-4 {
     grid-gap: 0.04rem; }
-  .gapy-lg-5 {
+  .gapr-lg-5 {
     grid-row-gap: 0.05rem; }
-  .gapx-lg-5 {
+  .gapc-lg-5 {
     grid-column-gap: 0.05rem; }
   .gap-lg-5 {
     grid-gap: 0.05rem; }
-  .gapy-lg-6 {
+  .gapr-lg-6 {
     grid-row-gap: 0.06rem; }
-  .gapx-lg-6 {
+  .gapc-lg-6 {
     grid-column-gap: 0.06rem; }
   .gap-lg-6 {
     grid-gap: 0.06rem; }
-  .gapy-lg-7 {
+  .gapr-lg-7 {
     grid-row-gap: 0.07rem; }
-  .gapx-lg-7 {
+  .gapc-lg-7 {
     grid-column-gap: 0.07rem; }
   .gap-lg-7 {
     grid-gap: 0.07rem; }
-  .gapy-lg-8 {
+  .gapr-lg-8 {
     grid-row-gap: 0.08rem; }
-  .gapx-lg-8 {
+  .gapc-lg-8 {
     grid-column-gap: 0.08rem; }
   .gap-lg-8 {
     grid-gap: 0.08rem; }
-  .gapy-lg-9 {
+  .gapr-lg-9 {
     grid-row-gap: 0.09rem; }
-  .gapx-lg-9 {
+  .gapc-lg-9 {
     grid-column-gap: 0.09rem; }
   .gap-lg-9 {
     grid-gap: 0.09rem; }
-  .gapy-lg-10 {
+  .gapr-lg-10 {
     grid-row-gap: 0.1rem; }
-  .gapx-lg-10 {
+  .gapc-lg-10 {
     grid-column-gap: 0.1rem; }
   .gap-lg-10 {
     grid-gap: 0.1rem; }
-  .gapy-lg-11 {
+  .gapr-lg-11 {
     grid-row-gap: 0.11rem; }
-  .gapx-lg-11 {
+  .gapc-lg-11 {
     grid-column-gap: 0.11rem; }
   .gap-lg-11 {
     grid-gap: 0.11rem; }
-  .gapy-lg-12 {
+  .gapr-lg-12 {
     grid-row-gap: 0.12rem; }
-  .gapx-lg-12 {
+  .gapc-lg-12 {
     grid-column-gap: 0.12rem; }
   .gap-lg-12 {
     grid-gap: 0.12rem; }
-  .gapy-lg-13 {
+  .gapr-lg-13 {
     grid-row-gap: 0.13rem; }
-  .gapx-lg-13 {
+  .gapc-lg-13 {
     grid-column-gap: 0.13rem; }
   .gap-lg-13 {
     grid-gap: 0.13rem; }
-  .gapy-lg-14 {
+  .gapr-lg-14 {
     grid-row-gap: 0.14rem; }
-  .gapx-lg-14 {
+  .gapc-lg-14 {
     grid-column-gap: 0.14rem; }
   .gap-lg-14 {
     grid-gap: 0.14rem; }
-  .gapy-lg-15 {
+  .gapr-lg-15 {
     grid-row-gap: 0.15rem; }
-  .gapx-lg-15 {
+  .gapc-lg-15 {
     grid-column-gap: 0.15rem; }
   .gap-lg-15 {
     grid-gap: 0.15rem; }
-  .gapy-lg-16 {
+  .gapr-lg-16 {
     grid-row-gap: 0.16rem; }
-  .gapx-lg-16 {
+  .gapc-lg-16 {
     grid-column-gap: 0.16rem; }
   .gap-lg-16 {
     grid-gap: 0.16rem; }
-  .gapy-lg-17 {
+  .gapr-lg-17 {
     grid-row-gap: 0.17rem; }
-  .gapx-lg-17 {
+  .gapc-lg-17 {
     grid-column-gap: 0.17rem; }
   .gap-lg-17 {
     grid-gap: 0.17rem; }
-  .gapy-lg-18 {
+  .gapr-lg-18 {
     grid-row-gap: 0.18rem; }
-  .gapx-lg-18 {
+  .gapc-lg-18 {
     grid-column-gap: 0.18rem; }
   .gap-lg-18 {
     grid-gap: 0.18rem; }
-  .gapy-lg-19 {
+  .gapr-lg-19 {
     grid-row-gap: 0.19rem; }
-  .gapx-lg-19 {
+  .gapc-lg-19 {
     grid-column-gap: 0.19rem; }
   .gap-lg-19 {
     grid-gap: 0.19rem; }
-  .gapy-lg-20 {
+  .gapr-lg-20 {
     grid-row-gap: 0.2rem; }
-  .gapx-lg-20 {
+  .gapc-lg-20 {
     grid-column-gap: 0.2rem; }
   .gap-lg-20 {
     grid-gap: 0.2rem; }
-  .gapy-lg-21 {
+  .gapr-lg-21 {
     grid-row-gap: 0.21rem; }
-  .gapx-lg-21 {
+  .gapc-lg-21 {
     grid-column-gap: 0.21rem; }
   .gap-lg-21 {
     grid-gap: 0.21rem; }
-  .gapy-lg-22 {
+  .gapr-lg-22 {
     grid-row-gap: 0.22rem; }
-  .gapx-lg-22 {
+  .gapc-lg-22 {
     grid-column-gap: 0.22rem; }
   .gap-lg-22 {
     grid-gap: 0.22rem; }
-  .gapy-lg-23 {
+  .gapr-lg-23 {
     grid-row-gap: 0.23rem; }
-  .gapx-lg-23 {
+  .gapc-lg-23 {
     grid-column-gap: 0.23rem; }
   .gap-lg-23 {
     grid-gap: 0.23rem; }
-  .gapy-lg-24 {
+  .gapr-lg-24 {
     grid-row-gap: 0.24rem; }
-  .gapx-lg-24 {
+  .gapc-lg-24 {
     grid-column-gap: 0.24rem; }
   .gap-lg-24 {
     grid-gap: 0.24rem; }
-  .gapy-lg-25 {
+  .gapr-lg-25 {
     grid-row-gap: 0.25rem; }
-  .gapx-lg-25 {
+  .gapc-lg-25 {
     grid-column-gap: 0.25rem; }
   .gap-lg-25 {
     grid-gap: 0.25rem; }
-  .gapy-lg-26 {
+  .gapr-lg-26 {
     grid-row-gap: 0.26rem; }
-  .gapx-lg-26 {
+  .gapc-lg-26 {
     grid-column-gap: 0.26rem; }
   .gap-lg-26 {
     grid-gap: 0.26rem; }
-  .gapy-lg-27 {
+  .gapr-lg-27 {
     grid-row-gap: 0.27rem; }
-  .gapx-lg-27 {
+  .gapc-lg-27 {
     grid-column-gap: 0.27rem; }
   .gap-lg-27 {
     grid-gap: 0.27rem; }
-  .gapy-lg-28 {
+  .gapr-lg-28 {
     grid-row-gap: 0.28rem; }
-  .gapx-lg-28 {
+  .gapc-lg-28 {
     grid-column-gap: 0.28rem; }
   .gap-lg-28 {
     grid-gap: 0.28rem; }
-  .gapy-lg-29 {
+  .gapr-lg-29 {
     grid-row-gap: 0.29rem; }
-  .gapx-lg-29 {
+  .gapc-lg-29 {
     grid-column-gap: 0.29rem; }
   .gap-lg-29 {
     grid-gap: 0.29rem; }
-  .gapy-lg-30 {
+  .gapr-lg-30 {
     grid-row-gap: 0.3rem; }
-  .gapx-lg-30 {
+  .gapc-lg-30 {
     grid-column-gap: 0.3rem; }
   .gap-lg-30 {
     grid-gap: 0.3rem; }
-  .gapy-lg-31 {
+  .gapr-lg-31 {
     grid-row-gap: 0.31rem; }
-  .gapx-lg-31 {
+  .gapc-lg-31 {
     grid-column-gap: 0.31rem; }
   .gap-lg-31 {
     grid-gap: 0.31rem; }
-  .gapy-lg-32 {
+  .gapr-lg-32 {
     grid-row-gap: 0.32rem; }
-  .gapx-lg-32 {
+  .gapc-lg-32 {
     grid-column-gap: 0.32rem; }
   .gap-lg-32 {
     grid-gap: 0.32rem; }
-  .gapy-lg-33 {
+  .gapr-lg-33 {
     grid-row-gap: 0.33rem; }
-  .gapx-lg-33 {
+  .gapc-lg-33 {
     grid-column-gap: 0.33rem; }
   .gap-lg-33 {
     grid-gap: 0.33rem; }
-  .gapy-lg-34 {
+  .gapr-lg-34 {
     grid-row-gap: 0.34rem; }
-  .gapx-lg-34 {
+  .gapc-lg-34 {
     grid-column-gap: 0.34rem; }
   .gap-lg-34 {
     grid-gap: 0.34rem; }
-  .gapy-lg-35 {
+  .gapr-lg-35 {
     grid-row-gap: 0.35rem; }
-  .gapx-lg-35 {
+  .gapc-lg-35 {
     grid-column-gap: 0.35rem; }
   .gap-lg-35 {
     grid-gap: 0.35rem; }
-  .gapy-lg-36 {
+  .gapr-lg-36 {
     grid-row-gap: 0.36rem; }
-  .gapx-lg-36 {
+  .gapc-lg-36 {
     grid-column-gap: 0.36rem; }
   .gap-lg-36 {
     grid-gap: 0.36rem; }
-  .gapy-lg-37 {
+  .gapr-lg-37 {
     grid-row-gap: 0.37rem; }
-  .gapx-lg-37 {
+  .gapc-lg-37 {
     grid-column-gap: 0.37rem; }
   .gap-lg-37 {
     grid-gap: 0.37rem; }
-  .gapy-lg-38 {
+  .gapr-lg-38 {
     grid-row-gap: 0.38rem; }
-  .gapx-lg-38 {
+  .gapc-lg-38 {
     grid-column-gap: 0.38rem; }
   .gap-lg-38 {
     grid-gap: 0.38rem; }
-  .gapy-lg-39 {
+  .gapr-lg-39 {
     grid-row-gap: 0.39rem; }
-  .gapx-lg-39 {
+  .gapc-lg-39 {
     grid-column-gap: 0.39rem; }
   .gap-lg-39 {
     grid-gap: 0.39rem; }
-  .gapy-lg-40 {
+  .gapr-lg-40 {
     grid-row-gap: 0.4rem; }
-  .gapx-lg-40 {
+  .gapc-lg-40 {
     grid-column-gap: 0.4rem; }
   .gap-lg-40 {
     grid-gap: 0.4rem; }
-  .gapy-lg-41 {
+  .gapr-lg-41 {
     grid-row-gap: 0.41rem; }
-  .gapx-lg-41 {
+  .gapc-lg-41 {
     grid-column-gap: 0.41rem; }
   .gap-lg-41 {
     grid-gap: 0.41rem; }
-  .gapy-lg-42 {
+  .gapr-lg-42 {
     grid-row-gap: 0.42rem; }
-  .gapx-lg-42 {
+  .gapc-lg-42 {
     grid-column-gap: 0.42rem; }
   .gap-lg-42 {
     grid-gap: 0.42rem; }
-  .gapy-lg-43 {
+  .gapr-lg-43 {
     grid-row-gap: 0.43rem; }
-  .gapx-lg-43 {
+  .gapc-lg-43 {
     grid-column-gap: 0.43rem; }
   .gap-lg-43 {
     grid-gap: 0.43rem; }
-  .gapy-lg-44 {
+  .gapr-lg-44 {
     grid-row-gap: 0.44rem; }
-  .gapx-lg-44 {
+  .gapc-lg-44 {
     grid-column-gap: 0.44rem; }
   .gap-lg-44 {
     grid-gap: 0.44rem; }
-  .gapy-lg-45 {
+  .gapr-lg-45 {
     grid-row-gap: 0.45rem; }
-  .gapx-lg-45 {
+  .gapc-lg-45 {
     grid-column-gap: 0.45rem; }
   .gap-lg-45 {
     grid-gap: 0.45rem; }
-  .gapy-lg-46 {
+  .gapr-lg-46 {
     grid-row-gap: 0.46rem; }
-  .gapx-lg-46 {
+  .gapc-lg-46 {
     grid-column-gap: 0.46rem; }
   .gap-lg-46 {
     grid-gap: 0.46rem; }
-  .gapy-lg-47 {
+  .gapr-lg-47 {
     grid-row-gap: 0.47rem; }
-  .gapx-lg-47 {
+  .gapc-lg-47 {
     grid-column-gap: 0.47rem; }
   .gap-lg-47 {
     grid-gap: 0.47rem; }
-  .gapy-lg-48 {
+  .gapr-lg-48 {
     grid-row-gap: 0.48rem; }
-  .gapx-lg-48 {
+  .gapc-lg-48 {
     grid-column-gap: 0.48rem; }
   .gap-lg-48 {
     grid-gap: 0.48rem; }
-  .gapy-lg-49 {
+  .gapr-lg-49 {
     grid-row-gap: 0.49rem; }
-  .gapx-lg-49 {
+  .gapc-lg-49 {
     grid-column-gap: 0.49rem; }
   .gap-lg-49 {
     grid-gap: 0.49rem; }
-  .gapy-lg-50 {
+  .gapr-lg-50 {
     grid-row-gap: 0.5rem; }
-  .gapx-lg-50 {
+  .gapc-lg-50 {
     grid-column-gap: 0.5rem; }
   .gap-lg-50 {
     grid-gap: 0.5rem; }
-  .gapy-lg-51 {
+  .gapr-lg-51 {
     grid-row-gap: 0.51rem; }
-  .gapx-lg-51 {
+  .gapc-lg-51 {
     grid-column-gap: 0.51rem; }
   .gap-lg-51 {
     grid-gap: 0.51rem; }
-  .gapy-lg-52 {
+  .gapr-lg-52 {
     grid-row-gap: 0.52rem; }
-  .gapx-lg-52 {
+  .gapc-lg-52 {
     grid-column-gap: 0.52rem; }
   .gap-lg-52 {
     grid-gap: 0.52rem; }
-  .gapy-lg-53 {
+  .gapr-lg-53 {
     grid-row-gap: 0.53rem; }
-  .gapx-lg-53 {
+  .gapc-lg-53 {
     grid-column-gap: 0.53rem; }
   .gap-lg-53 {
     grid-gap: 0.53rem; }
-  .gapy-lg-54 {
+  .gapr-lg-54 {
     grid-row-gap: 0.54rem; }
-  .gapx-lg-54 {
+  .gapc-lg-54 {
     grid-column-gap: 0.54rem; }
   .gap-lg-54 {
     grid-gap: 0.54rem; }
-  .gapy-lg-55 {
+  .gapr-lg-55 {
     grid-row-gap: 0.55rem; }
-  .gapx-lg-55 {
+  .gapc-lg-55 {
     grid-column-gap: 0.55rem; }
   .gap-lg-55 {
     grid-gap: 0.55rem; }
-  .gapy-lg-56 {
+  .gapr-lg-56 {
     grid-row-gap: 0.56rem; }
-  .gapx-lg-56 {
+  .gapc-lg-56 {
     grid-column-gap: 0.56rem; }
   .gap-lg-56 {
     grid-gap: 0.56rem; }
-  .gapy-lg-57 {
+  .gapr-lg-57 {
     grid-row-gap: 0.57rem; }
-  .gapx-lg-57 {
+  .gapc-lg-57 {
     grid-column-gap: 0.57rem; }
   .gap-lg-57 {
     grid-gap: 0.57rem; }
-  .gapy-lg-58 {
+  .gapr-lg-58 {
     grid-row-gap: 0.58rem; }
-  .gapx-lg-58 {
+  .gapc-lg-58 {
     grid-column-gap: 0.58rem; }
   .gap-lg-58 {
     grid-gap: 0.58rem; }
-  .gapy-lg-59 {
+  .gapr-lg-59 {
     grid-row-gap: 0.59rem; }
-  .gapx-lg-59 {
+  .gapc-lg-59 {
     grid-column-gap: 0.59rem; }
   .gap-lg-59 {
     grid-gap: 0.59rem; }
-  .gapy-lg-60 {
+  .gapr-lg-60 {
     grid-row-gap: 0.6rem; }
-  .gapx-lg-60 {
+  .gapc-lg-60 {
     grid-column-gap: 0.6rem; }
   .gap-lg-60 {
     grid-gap: 0.6rem; }
-  .gapy-lg-61 {
+  .gapr-lg-61 {
     grid-row-gap: 0.61rem; }
-  .gapx-lg-61 {
+  .gapc-lg-61 {
     grid-column-gap: 0.61rem; }
   .gap-lg-61 {
     grid-gap: 0.61rem; }
-  .gapy-lg-62 {
+  .gapr-lg-62 {
     grid-row-gap: 0.62rem; }
-  .gapx-lg-62 {
+  .gapc-lg-62 {
     grid-column-gap: 0.62rem; }
   .gap-lg-62 {
     grid-gap: 0.62rem; }
-  .gapy-lg-63 {
+  .gapr-lg-63 {
     grid-row-gap: 0.63rem; }
-  .gapx-lg-63 {
+  .gapc-lg-63 {
     grid-column-gap: 0.63rem; }
   .gap-lg-63 {
     grid-gap: 0.63rem; }
-  .gapy-lg-64 {
+  .gapr-lg-64 {
     grid-row-gap: 0.64rem; }
-  .gapx-lg-64 {
+  .gapc-lg-64 {
     grid-column-gap: 0.64rem; }
   .gap-lg-64 {
     grid-gap: 0.64rem; }
-  .gapy-lg-65 {
+  .gapr-lg-65 {
     grid-row-gap: 0.65rem; }
-  .gapx-lg-65 {
+  .gapc-lg-65 {
     grid-column-gap: 0.65rem; }
   .gap-lg-65 {
     grid-gap: 0.65rem; }
-  .gapy-lg-66 {
+  .gapr-lg-66 {
     grid-row-gap: 0.66rem; }
-  .gapx-lg-66 {
+  .gapc-lg-66 {
     grid-column-gap: 0.66rem; }
   .gap-lg-66 {
     grid-gap: 0.66rem; }
-  .gapy-lg-67 {
+  .gapr-lg-67 {
     grid-row-gap: 0.67rem; }
-  .gapx-lg-67 {
+  .gapc-lg-67 {
     grid-column-gap: 0.67rem; }
   .gap-lg-67 {
     grid-gap: 0.67rem; }
-  .gapy-lg-68 {
+  .gapr-lg-68 {
     grid-row-gap: 0.68rem; }
-  .gapx-lg-68 {
+  .gapc-lg-68 {
     grid-column-gap: 0.68rem; }
   .gap-lg-68 {
     grid-gap: 0.68rem; }
-  .gapy-lg-69 {
+  .gapr-lg-69 {
     grid-row-gap: 0.69rem; }
-  .gapx-lg-69 {
+  .gapc-lg-69 {
     grid-column-gap: 0.69rem; }
   .gap-lg-69 {
     grid-gap: 0.69rem; }
-  .gapy-lg-70 {
+  .gapr-lg-70 {
     grid-row-gap: 0.7rem; }
-  .gapx-lg-70 {
+  .gapc-lg-70 {
     grid-column-gap: 0.7rem; }
   .gap-lg-70 {
     grid-gap: 0.7rem; }
-  .gapy-lg-71 {
+  .gapr-lg-71 {
     grid-row-gap: 0.71rem; }
-  .gapx-lg-71 {
+  .gapc-lg-71 {
     grid-column-gap: 0.71rem; }
   .gap-lg-71 {
     grid-gap: 0.71rem; }
-  .gapy-lg-72 {
+  .gapr-lg-72 {
     grid-row-gap: 0.72rem; }
-  .gapx-lg-72 {
+  .gapc-lg-72 {
     grid-column-gap: 0.72rem; }
   .gap-lg-72 {
     grid-gap: 0.72rem; }
-  .gapy-lg-73 {
+  .gapr-lg-73 {
     grid-row-gap: 0.73rem; }
-  .gapx-lg-73 {
+  .gapc-lg-73 {
     grid-column-gap: 0.73rem; }
   .gap-lg-73 {
     grid-gap: 0.73rem; }
-  .gapy-lg-74 {
+  .gapr-lg-74 {
     grid-row-gap: 0.74rem; }
-  .gapx-lg-74 {
+  .gapc-lg-74 {
     grid-column-gap: 0.74rem; }
   .gap-lg-74 {
     grid-gap: 0.74rem; }
-  .gapy-lg-75 {
+  .gapr-lg-75 {
     grid-row-gap: 0.75rem; }
-  .gapx-lg-75 {
+  .gapc-lg-75 {
     grid-column-gap: 0.75rem; }
   .gap-lg-75 {
     grid-gap: 0.75rem; }
-  .gapy-lg-76 {
+  .gapr-lg-76 {
     grid-row-gap: 0.76rem; }
-  .gapx-lg-76 {
+  .gapc-lg-76 {
     grid-column-gap: 0.76rem; }
   .gap-lg-76 {
     grid-gap: 0.76rem; }
-  .gapy-lg-77 {
+  .gapr-lg-77 {
     grid-row-gap: 0.77rem; }
-  .gapx-lg-77 {
+  .gapc-lg-77 {
     grid-column-gap: 0.77rem; }
   .gap-lg-77 {
     grid-gap: 0.77rem; }
-  .gapy-lg-78 {
+  .gapr-lg-78 {
     grid-row-gap: 0.78rem; }
-  .gapx-lg-78 {
+  .gapc-lg-78 {
     grid-column-gap: 0.78rem; }
   .gap-lg-78 {
     grid-gap: 0.78rem; }
-  .gapy-lg-79 {
+  .gapr-lg-79 {
     grid-row-gap: 0.79rem; }
-  .gapx-lg-79 {
+  .gapc-lg-79 {
     grid-column-gap: 0.79rem; }
   .gap-lg-79 {
     grid-gap: 0.79rem; }
-  .gapy-lg-80 {
+  .gapr-lg-80 {
     grid-row-gap: 0.8rem; }
-  .gapx-lg-80 {
+  .gapc-lg-80 {
     grid-column-gap: 0.8rem; }
   .gap-lg-80 {
     grid-gap: 0.8rem; }
-  .gapy-lg-81 {
+  .gapr-lg-81 {
     grid-row-gap: 0.81rem; }
-  .gapx-lg-81 {
+  .gapc-lg-81 {
     grid-column-gap: 0.81rem; }
   .gap-lg-81 {
     grid-gap: 0.81rem; }
-  .gapy-lg-82 {
+  .gapr-lg-82 {
     grid-row-gap: 0.82rem; }
-  .gapx-lg-82 {
+  .gapc-lg-82 {
     grid-column-gap: 0.82rem; }
   .gap-lg-82 {
     grid-gap: 0.82rem; }
-  .gapy-lg-83 {
+  .gapr-lg-83 {
     grid-row-gap: 0.83rem; }
-  .gapx-lg-83 {
+  .gapc-lg-83 {
     grid-column-gap: 0.83rem; }
   .gap-lg-83 {
     grid-gap: 0.83rem; }
-  .gapy-lg-84 {
+  .gapr-lg-84 {
     grid-row-gap: 0.84rem; }
-  .gapx-lg-84 {
+  .gapc-lg-84 {
     grid-column-gap: 0.84rem; }
   .gap-lg-84 {
     grid-gap: 0.84rem; }
-  .gapy-lg-85 {
+  .gapr-lg-85 {
     grid-row-gap: 0.85rem; }
-  .gapx-lg-85 {
+  .gapc-lg-85 {
     grid-column-gap: 0.85rem; }
   .gap-lg-85 {
     grid-gap: 0.85rem; }
-  .gapy-lg-86 {
+  .gapr-lg-86 {
     grid-row-gap: 0.86rem; }
-  .gapx-lg-86 {
+  .gapc-lg-86 {
     grid-column-gap: 0.86rem; }
   .gap-lg-86 {
     grid-gap: 0.86rem; }
-  .gapy-lg-87 {
+  .gapr-lg-87 {
     grid-row-gap: 0.87rem; }
-  .gapx-lg-87 {
+  .gapc-lg-87 {
     grid-column-gap: 0.87rem; }
   .gap-lg-87 {
     grid-gap: 0.87rem; }
-  .gapy-lg-88 {
+  .gapr-lg-88 {
     grid-row-gap: 0.88rem; }
-  .gapx-lg-88 {
+  .gapc-lg-88 {
     grid-column-gap: 0.88rem; }
   .gap-lg-88 {
     grid-gap: 0.88rem; }
-  .gapy-lg-89 {
+  .gapr-lg-89 {
     grid-row-gap: 0.89rem; }
-  .gapx-lg-89 {
+  .gapc-lg-89 {
     grid-column-gap: 0.89rem; }
   .gap-lg-89 {
     grid-gap: 0.89rem; }
-  .gapy-lg-90 {
+  .gapr-lg-90 {
     grid-row-gap: 0.9rem; }
-  .gapx-lg-90 {
+  .gapc-lg-90 {
     grid-column-gap: 0.9rem; }
   .gap-lg-90 {
     grid-gap: 0.9rem; }
-  .gapy-lg-91 {
+  .gapr-lg-91 {
     grid-row-gap: 0.91rem; }
-  .gapx-lg-91 {
+  .gapc-lg-91 {
     grid-column-gap: 0.91rem; }
   .gap-lg-91 {
     grid-gap: 0.91rem; }
-  .gapy-lg-92 {
+  .gapr-lg-92 {
     grid-row-gap: 0.92rem; }
-  .gapx-lg-92 {
+  .gapc-lg-92 {
     grid-column-gap: 0.92rem; }
   .gap-lg-92 {
     grid-gap: 0.92rem; }
-  .gapy-lg-93 {
+  .gapr-lg-93 {
     grid-row-gap: 0.93rem; }
-  .gapx-lg-93 {
+  .gapc-lg-93 {
     grid-column-gap: 0.93rem; }
   .gap-lg-93 {
     grid-gap: 0.93rem; }
-  .gapy-lg-94 {
+  .gapr-lg-94 {
     grid-row-gap: 0.94rem; }
-  .gapx-lg-94 {
+  .gapc-lg-94 {
     grid-column-gap: 0.94rem; }
   .gap-lg-94 {
     grid-gap: 0.94rem; }
-  .gapy-lg-95 {
+  .gapr-lg-95 {
     grid-row-gap: 0.95rem; }
-  .gapx-lg-95 {
+  .gapc-lg-95 {
     grid-column-gap: 0.95rem; }
   .gap-lg-95 {
     grid-gap: 0.95rem; }
-  .gapy-lg-96 {
+  .gapr-lg-96 {
     grid-row-gap: 0.96rem; }
-  .gapx-lg-96 {
+  .gapc-lg-96 {
     grid-column-gap: 0.96rem; }
   .gap-lg-96 {
     grid-gap: 0.96rem; }
-  .gapy-lg-97 {
+  .gapr-lg-97 {
     grid-row-gap: 0.97rem; }
-  .gapx-lg-97 {
+  .gapc-lg-97 {
     grid-column-gap: 0.97rem; }
   .gap-lg-97 {
     grid-gap: 0.97rem; }
-  .gapy-lg-98 {
+  .gapr-lg-98 {
     grid-row-gap: 0.98rem; }
-  .gapx-lg-98 {
+  .gapc-lg-98 {
     grid-column-gap: 0.98rem; }
   .gap-lg-98 {
     grid-gap: 0.98rem; }
-  .gapy-lg-99 {
+  .gapr-lg-99 {
     grid-row-gap: 0.99rem; }
-  .gapx-lg-99 {
+  .gapc-lg-99 {
     grid-column-gap: 0.99rem; }
   .gap-lg-99 {
     grid-gap: 0.99rem; }
-  .gapy-lg-100 {
+  .gapr-lg-100 {
     grid-row-gap: 1rem; }
-  .gapx-lg-100 {
+  .gapc-lg-100 {
     grid-column-gap: 1rem; }
   .gap-lg-100 {
     grid-gap: 1rem; }
