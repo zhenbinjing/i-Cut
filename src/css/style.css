@@ -53,6 +53,11 @@
 /*grid*/
 html,.grid-template{height: 100%;}
 
+/*
+repeat(auto-fit or auto-fill or [number],minmax() or [number])
+fit-content([number])
+minmax(min-content or [number],max-content or [number])
+*/
 .grid-template {
 	display: grid;
 	grid-template-areas: " header header header "
