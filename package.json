@@ -10,7 +10,7 @@
     "jsbabel": "node ./node_modules/webpack/bin/webpack.js -p --config ./webpack.config.babel.js",
     "jsmin": "node ./node_modules/webpack/bin/webpack.js -p --config ./webpack.config.js",
     "test": "node ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --colors ./webpack.config.js",
-    "coverage": "cat ./coverage/lcov.info | coveralls"
+    "coverage": "cat ./coverage/lcov.info | codecov"
   },
   "repository": {
     "type": "git",
@@ -43,7 +43,6 @@
     "browser-sync": "^2.16.0",
     "chai": "^3.5.0",
     "codecov": "^2.2.0",
-    "coveralls": "^2.11.16",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-allimgbase64": "^0.1.1",

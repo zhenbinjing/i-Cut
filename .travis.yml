@@ -15,6 +15,9 @@ script:
  - npm run jsmin
 after_script:
  - npm run coverage
+env:  
+  global:
+    - CODECOV_TOKEN:"81dd77ca-ab9f-46b8-bf96-3e1a5e5e1ba3"
 after_success:
     - bash <(curl -s https://codecov.io/bash)
  

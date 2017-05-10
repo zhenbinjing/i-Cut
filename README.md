@@ -2,7 +2,7 @@
 ===========================
 
 [![Build Status](https://travis-ci.org/zhenbinjing/i-Cut.svg?branch=master)](https://travis-ci.org/zhenbinjing/i-Cut)
-[![Coverage Status](https://coveralls.io/repos/github/zhenbinjing/i-Cut/badge.svg?branch=master)](https://coveralls.io/github/zhenbinjing/i-Cut?branch=master)
+[![codecov](https://codecov.io/gh/zhenbinjing/i-Cut/branch/master/graph/badge.svg)](https://codecov.io/gh/zhenbinjing/i-Cut)
 [![devDependencies Status](https://david-dm.org/zhenbinjing/i-Cut/dev-status.svg)](https://david-dm.org/zhenbinjing/i-Cut?type=dev)
 [![npm](https://img.shields.io/npm/v/i-cut.svg)](https://www.npmjs.com/package/i-cut)
 [![MIT Licence](https://img.shields.io/npm/l/i-cut.svg)](https://opensource.org/licenses/mit-license.php)
