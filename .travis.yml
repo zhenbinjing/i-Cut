@@ -2,18 +2,17 @@ sudo: false
 language: node_js
 node_js:
   - "7.5.0"
-before_install: npm install
+before_install: 
+  - npm install
 cache:
   directories:
     - node_modules
 script: 
- - npm test
- - npm run gulp
- - npm run gulpmin
- - npm run jsts
- - npm run jsbabel
- - npm run jsmin
-after_script:
- - npm run coverage
+  - npm run gulp
+  - npm run gulpmin
+  - npm run jsts
+  - npm run jsbabel
+  - npm run jsmin
+  - npm run coverage
 after_success:
-    - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
