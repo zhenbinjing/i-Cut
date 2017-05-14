@@ -22,7 +22,7 @@ function getEntry() {
 module.exports = {
 	entry: getEntry(),	
 	output: {
-        path: path.join(__dirname, "src/js/es6/es5"),
+        path: path.join(__dirname, "../src/js/es6/es5"),
         filename: "[name].js"
 	},   
 	resolve: {},
@@ -34,7 +34,7 @@ module.exports = {
 				babelrc: false,
 				presets: [["es2015", { "modules": false, "loose": true }]]
 			},
-			include: [path.resolve(process.cwd(), 'src/js/es6/build')],		//把要处理的目录包括进来
+			include: [path.resolve(process.cwd(), 'src/js/es6/build')],	//把要处理的目录包括进来
 			exclude: [nodeModulesPath]					//排除不处理的目录
 		}]	
 	}

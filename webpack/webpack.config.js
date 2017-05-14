@@ -25,7 +25,7 @@ module.exports = {
 	devtool: "false", //添加.map文件调试 source-map
 	entry: getEntry(),	
 	output: {
-        path: path.join(__dirname, "dist/js"),
+        path: path.join(__dirname, "../dist/js"),
         //publicPath: "dist/js/", 上线路径  https：//...
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"

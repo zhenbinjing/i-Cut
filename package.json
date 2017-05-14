@@ -7,10 +7,10 @@
     "test": "mocha",
     "gulp": "gulp",
     "gulpmin": "gulp min",
-    "jsts": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.ts.js",
-    "jsbabel": "node ./node_modules/webpack/bin/webpack.js -p --config ./webpack.config.babel.js",
-    "jsmin": "node ./node_modules/webpack/bin/webpack.js -p --config ./webpack.config.js",
-    "codecov": "istanbul cover ./node_modules/mocha/bin/_mocha ./chai/add.test.js"
+    "jsts": "webpack --config ./webpack/webpack.config.ts.js",
+    "jsbabel": "webpack -p --config ./webpack/webpack.config.babel.js",
+    "jsmin": "webpack --config ./webpack/webpack.config.js",
+    "codecov": "istanbul cover ./node_modules/mocha/bin/_mocha ./src/js/chai/add.test.js"
   },
   "repository": {
     "type": "git",
