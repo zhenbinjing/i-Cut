@@ -13,7 +13,6 @@ script:
   - npm run jsts
   - npm run jsbabel
   - npm run jsmin
-  - npm run codecov
   - npm run karma
 after_success:
   - bash <(curl -s https://codecov.io/bash)
