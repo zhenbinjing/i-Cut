@@ -1,5 +1,5 @@
 ﻿'use strict';
-var add = require('../function/add.js');
+var add = require('../../function/add.js');
 var expect = require('chai').expect;
 
 describe('加法函数的测试', function() {
