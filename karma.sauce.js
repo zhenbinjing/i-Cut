@@ -18,7 +18,7 @@ var customLaunchers = {
 	sl_android_4_4: createCustomLauncher('android', null, '4.4'),
 	//sl_android_5_1: createCustomLauncher('android', null, '5.1'),
 	// pc 
-	//sl_mac_safari: createCustomLauncher('safari', 'OS X 10.11'),	
+	sl_mac_safari: createCustomLauncher('safari', 'OS X 10.11'),	
 	sl_mac_firefox: createCustomLauncher('firefox', 'Windows 7'),	
 	sl_mac_chrome: createCustomLauncher('chrome', 'Windows 7'),
 	sl_ie_11: createCustomLauncher('internet explorer', 'Windows 7', '11'),
