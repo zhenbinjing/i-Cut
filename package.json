@@ -11,7 +11,7 @@
     "jsbabel": "webpack -p --config ./webpack/webpack.config.babel.js",
     "jsmin": "webpack -p --config ./webpack/webpack.config.js",
     "karma": "karma start ./karma.conf.js --single-run",
-	"sauce": "karma start ./karma.sauce.js --single-run"
+    "sauce": "karma start ./karma.sauce.js --single-run"
   },
   "repository": {
     "type": "git",
