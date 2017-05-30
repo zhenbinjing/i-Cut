@@ -1,0 +1,956 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>i-Cut</title>
+<meta name="keywords" content="flex_grid_flexbox_grid-layout_responsive_rem" />
+<meta name="description" content="一个快速成形，全终端适配的CSS框架!" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<link rel="stylesheet" href="src/css/adjust.css">
+<link rel="stylesheet" href="src/css/emmet.css">
+<link rel="stylesheet" href="src/css/flexgrid.css">
+<link rel="stylesheet" href="src/css/opencolor.css">
+<link rel="stylesheet" href="assets/index.css">
+<script>
+(function (doc, win) {
+        var docEl = doc.documentElement,
+          isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+          dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
+          dpr = window.top === window.self? dpr : 1,
+          dpr = 1,
+          scale = 1 / dpr,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        docEl.dataset.dpr = dpr;
+        var metaEl = doc.createElement('meta');
+        metaEl.name = 'viewport';
+        metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+        docEl.firstElementChild.appendChild(metaEl);
+        var recalc = function () {
+            var designW = 750;
+            var width = docEl.clientWidth;
+            if (width / dpr > designW) {	
+                width = designW * dpr;
+            }
+            docEl.style.fontSize = 100 * (width / designW) + 'px';
+          };
+        recalc()
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body>
+<div class="container">
+		<div class="row ta-xs-c">
+				<div class="col-xs-12 fz-xs-100 mt-xs-100">i-Cut</div>
+				<div class="col-xs-12 fz-xs-30 mt-xs-30 mb-xs-30">一个快速成形，全终端适配的CSS框架</div>
+				<div class="col-xs-12 fz-xs-0 ta-xs-c mb-xs-100">
+						<div class="d-xs-ib w250 fz-xs-30 lh-xs-200p mr-xs-100 bdrs-xs-10 bdw-xs-3 bdw-sm-1 bds-solid bdc-blue-7"><a href="https://github.com/zhenbinjing/i-Cut/archive/master.zip" target="_blank" class="c-blue-7">Download</a></div>
+						<div class="d-xs-ib w250 fz-xs-30 lh-xs-200p bdrs-xs-10 bdw-xs-3 bdw-sm-1 bds-solid bdc-blue-7"><a href="https://github.com/zhenbinjing/i-Cut" target="_blank" class="c-blue-7">Github</a></div>
+				</div>
+		</div>
+</div>
+<div id="nav" class="bgc-gray-9">
+		<div class="container fz-xs-20 ta-xs-c">
+				<ul class="row pb-xs-20">
+						<li class="grow-xs-1"><a href="#emmet" class="d-xs-b p-xs-10 bgc-gray-7 mt-xs-20 c-white-0">Emmet</a></li>
+						<li class="grow-xs-1"><a href="#rwd_emmet" class="d-xs-b p-xs-10 bgc-gray-7 mt-xs-20 c-white-0">RWD_Emmet</a></li>
+				</ul>
+		</div>
+</div>
+<div class="bgc-gray-1">
+		<div id="emmet"></div>
+		<div class="container">
+				<div class="row">
+						<div class="col-xs-12 fz-xs-50 mt-xs-30">Emmet</div>
+						<div class="col-xs-12 fz-xs-24 fz-sm-16 lh-xs-250p bdbw-xs-3 bdbw-sm-1 bdbs-solid bdc-gray-4">基于Emmet命名的css原子类库，没有添加标示。</div>
+						<div class="col-xs-12 mt-xs-30">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 lh-xs-200p">visibility</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.v-h</span> {visibility: hidden;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.v-v</span> {visibility: visible;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">font-weight</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fw-b</span> {font-weight: bold; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fw-n</span> {font-weight: normal;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fw-l</span> {font-weight: lighter;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fw-br</span> {font-weight: bolder;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">font-style</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fs-i</span> {font-style: italic; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fs-n</span> {font-style: normal;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">vertical-align</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.va-t</span> {vertical-align: top; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.va-m</span> {vertical-align: middle;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.va-b</span> {vertical-align: bottom;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.va-tb</span> {vertical-align: text-bottom;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.va-tt</span> {vertical-align: text-top;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.va-sp</span> {vertical-align: super;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.va-sb</span> {vertical-align: sub;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">text-transform</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.tt-n</span> {text-transform: none; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.tt-c</span> {text-transform: capitalize;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.tt-u</span> {text-transform: uppercase;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.tt-l</span> {text-transform: lowercase;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">background-repeat</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgr-n</span> {background-repeat: no-repeat; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgr-x</span> {background-repeat: repeat-x;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgr-y</span> {background-repeat: repeat-y;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgr-r</span> {background-repeat: round;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgr-s</span> {background-repeat: space;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">background-attachment</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bga-f</span> {background-attachment: fixed; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">background-size</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgs-cv</span> {background-size: cover; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgs-ct</span> {background-size: contain; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">background-clip</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgc-pd</span> {background-clip: padding-box; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgc-bb</span> {background-clip: border-box; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgc-cb</span> {background-clip: content-box; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">background-origin</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgo-pd</span> {background-origin: padding-box; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgo-bb</span> {background-origin: border-box; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgo-cb</span> {background-origin: content-box; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">list-style-type</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lst-n</span> {list-style-type: none; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lst-d</span> {list-style-type: disc; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lst-c</span> {list-style-type: circle; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lst-s</span> {list-style-type: square; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lst-u</span> {list-style-type: upper-roman; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lst-l</span> {list-style-type: lower-alpha; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lst-dc</span> {list-style-type: decimal; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">cursor</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.cur-p</span> {cursor: pointer; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.cur-t</span> {cursor: text; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.cur-m</span> {cursor: move; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.cur-c</span> {cursor: crosshair; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.cur-h</span> {cursor: help; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.cur-d</span> {cursor: default; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">box-sizing</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bxz-cb</span> {box-sizing: content-box; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bxz-bb</span> {box-sizing: border-box; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">overflow</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ov-a</span> {overflow: auto; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ov-v</span> {overflow: visible; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ov-h</span> {overflow: hidden; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ov-s</span> {overflow: scroll; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">overflow-x</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ovx-a</span> {overflow-x: auto; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ovx-v</span> {overflow-x: visible; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ovx-h</span> {overflow-x: hidden; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ovx-s</span> {overflow-x: scroll; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">overflow-y</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ovy-a</span> {overflow-y: auto; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ovy-v</span> {overflow-y: visible; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ovy-h</span> {overflow-y: hidden; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ovy-s</span> {overflow-y: scroll; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">outline-style</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ols-n</span> {outline-style: none; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ols-dt</span> {outline-style: dotted; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ols-ds</span> {outline-style: dashed; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ols-sl</span> {outline-style: solid; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ols-db</span> {outline-style: double; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-style</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bds-dt</span> {border-style: dotted; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bds-ds</span> {border-style: dashed; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bds-sl</span> {border-style: solid; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bds-db</span> {border-style: double; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-top-style</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdts-dt</span> {border-top-style: dotted; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdts-ds</span> {border-top-style: dashed; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdts-sl</span> {border-top-style: solid; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdts-db</span> {border-top-style: double; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-right-style</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdrs-dt</span> {border-right-style: dotted; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdrs-ds</span> {border-right-style: dashed; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdrs-sl</span> {border-right-style: solid; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdrs-db</span> {border-right-style: double; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-bottom-style</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdbs-dt</span> {border-bottom-style: dotted; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdbs-ds</span> {border-bottom-style: dashed; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdbs-sl</span> {border-bottom-style: solid; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdbs-db</span> {border-bottom-style: double; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-left-style</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdls-dt</span> {border-left-style: dotted; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdls-ds</span> {border-left-style: dashed; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdls-sl</span> {border-left-style: solid; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdls-db</span> {border-left-style: double; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">z-index(0-10)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.z1</span> {z-index: 1; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.z4</span> {z-index: 4; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.z7</span> {z-index: 7; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.z10</span> {z-index: 10; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">background-position(常用数值%)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgp_50p0</span>{background-position: 50% 0;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgp_100p0</span>{background-position: 100% 0;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgp_0p50p</span>{background-position:0% 50%;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgp_0p-xs-100p</span>{background-position:0% 100%;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgp_50p50p</span>{background-position:50% 50%;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgp_50p-xs-100p</span>{background-position:50% 100%;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgp_100p50p</span>{background-position:100% 50%;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bgp_100p-xs-100p</span>{background-position:100% 100%;}</code></pre>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</div>
+<div class="bgc-gray-1">
+		<div id="rwd_emmet"></div>
+		<div class="container">
+				<div class="row">
+						<div class="col-xs-12 fz-xs-50 mt-xs-30">RWD_Emmet</div>
+						<div class="col-xs-12 fz-xs-24 lh160p fz-sm-16 lh-sm-250p bdbw-xs-3 bdbw-sm-1 bdbs-solid bdc-gray-4">常在响应式中编写最多的属性可以添加标示，方便调用，自行在 src/sass/emmet.scss 添加需要的属性</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">display</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.d-(xs,sm,md,lg)-n</span> {display: none;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.d-(xs,sm,md,lg)-i</span> {display: inline;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.d-(xs,sm,md,lg)-b</span> {display: block;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.d-(xs,sm,md,lg)-ib</span> {display: inline-block;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.d-(xs,sm,md,lg)-f</span> {display: flex;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.d-(xs,sm,md,lg)-g</span> {display: grid;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.d-(xs,sm,md,lg)-t</span> {display: table;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.d-(xs,sm,md,lg)-bc</span> {display: table-cell;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">float</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fl-(xs,sm,md,lg)-n</span> {float: none;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fl-(xs,sm,md,lg)-l</span> {float: left;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fl-(xs,sm,md,lg)-r</span> {float: right;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">clear</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.cl-(xs,sm,md,lg)-n</span> {clear: none; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.cl-(xs,sm,md,lg)-l</span> {clear: left;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.cl-(xs,sm,md,lg)-r</span> {clear: right;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.cl-(xs,sm,md,lg)-b</span> {clear: both;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">position</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pos-(xs,sm,md,lg)-s</span> {position: static; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pos-(xs,sm,md,lg)-f</span> {position: fixed;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pos-(xs,sm,md,lg)-r</span> {position: relative;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pos-(xs,sm,md,lg)-a</span> {position: absolute;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">text-align</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ta-(xs,sm,md,lg)-c</span> {text-align: center; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ta-(xs,sm,md,lg)-l</span> {text-align: left;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ta-(xs,sm,md,lg)-r</span> {text-align: right;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ta-(xs,sm,md,lg)-j</span> {text-align: justify;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">text-align-last</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.tal-(xs,sm,md,lg)-c</span> {text-align-last: center; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.tal-(xs,sm,md,lg)-l</span> {text-align-last: left;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.tal-(xs,sm,md,lg)-r</span> {text-align-last: right;}</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.tal-(xs,sm,md,lg)-j</span> {text-align-last: justify;}</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-style</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bd-(xs,sm,md,lg)-n</span> {border-style: none; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdts-(xs,sm,md,lg)-n</span> {border-style: none; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdrs-(xs,sm,md,lg)-n</span> {border-style: none; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdbs-(xs,sm,md,lg)-n</span> {border-style: none; }</code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdls-(xs,sm,md,lg)-n</span> {border-style: none; }</code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">采用rem方案 1rem=100px</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">font-size (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fz-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.fz-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">text-indent (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ti-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ti-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">padding(0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.p-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.p-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">padding-top (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pt-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pt-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">padding-right (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pr-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pr-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">padding-bottom (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pb-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pb-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">padding-left (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pl-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.pl-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">margin (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.m-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.m-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">margin-top (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.mt-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.mt-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">margin-right (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.mr-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.mr-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">margin-bottom (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.mb-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.mb-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">margin-left (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ml-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.ml-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-radius (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdrs-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdrs-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-top-left-radius (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.btlr-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.btlr-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-top-right-radius (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.btrr-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.btrr-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-bottom-right-radius (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bbrr-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bbrr-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-bottom-left-radius (0-100)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bblr-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bblr-(xs,sm,md,lg)-100</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">outline-offset (0-10)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.olo-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.olo-(xs,sm,md,lg)-10</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">outline-width (0-10)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.olw-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.olw-(xs,sm,md,lg)-10</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-width (0-10)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdw-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdw-(xs,sm,md,lg)-10</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-top-width (0-10)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdtw-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdtw-(xs,sm,md,lg)-10</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-right-width (0-10)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdrw-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdrw-(xs,sm,md,lg)-10</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-bottom-width (0-10)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdbw-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdbw-(xs,sm,md,lg)-10</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">border-left-width (0-10)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdlw-(xs,sm,md,lg)-0</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.bdlw-(xs,sm,md,lg)-10</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">width 和 line-height 采用 % 作为单位，并用 p 作为后缀</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">width (0p-100p)</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.w-(xs,sm,md,lg)-0p</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.w-(xs,sm,md,lg)-100p</span></code></pre>
+										</div>
+								</div>
+						</div>
+						<div class="col-xs-12">
+								<div class="row fz-xs-24 fz-sm-16">
+										<div class="col-xs-12 fz-xs-30 mt-xs-30 lh-xs-300p">line-height (100p-1000p) 数值相隔 10%</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lh-(xs,sm,md,lg)-100p</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lh-(xs,sm,md,lg)-110p</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lh-(xs,sm,md,lg)-120p</span> </code></pre>
+										</div>
+										<div class="col-sm-6 mb-xs-20">
+												<pre class="pl-xs-10 lh-xs-250p bdrs-xs-10 bgc-gray-3"><code><span class="c-blue-7">.lh-(xs,sm,md,lg)-1000p</span> </code></pre>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</div>
+<script src="assets/jq-2.1.js"></script> 
+<script src="assets/jquery.nav.js"></script> 
+<script>
+//onePageNav
+$(document).ready(function() {
+$('#nav').onePageNav();
+});
+
+//nav
+window.onload = window.onscroll = function() {
+		var oNav=document.getElementById('nav');
+		var oTop = document.documentElement.scrollTop || document.body.scrollTop;
+		//alert(oTop);
+		if (oTop >= 400) {// 导航离顶部距离
+			if (typeof document.body.style.maxHeight === "undefined") {
+				oNav.style.top = oTop + 'px';
+			} else {
+				oNav.style.position = 'fixed';
+				oNav.style.top = 0;
+				oNav.style.zIndex=10000;
+			}
+		} else {
+			oNav.style.position = 'static';
+			oNav.style.top = 400 + "px";// 导航离顶部距离
+		}				
+};
+</script>
+</body>
+</html>

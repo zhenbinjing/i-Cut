@@ -1,10 +1,11 @@
 ﻿/*! flex-grid 栅格 1rem=100px*/
 
 $sg: .15rem;
-$w1: 751; $ww1: 750;
-$w2: 992; $ww2: 970;
-$w3: 1200; $ww3: 1170;
-$nb: 100; $column: 12;
+$w1: 751; 
+$w2: 992; 
+$w3: 1200; 
+$nb: 100; 
+$column: 12;
 
 @mixin bs {box-sizing: border-box;}
 @mixin pdsg {padding-right: $sg; padding-left: $sg;}
@@ -13,14 +14,15 @@ $nb: 100; $column: 12;
 
 * {@include bs;}
 *:before,*:after {@include bs;}
-.container {/*! width: 100%!important; max-width:1200px; 去掉注释开启适屏模式*/}
-.container,.container-fluid {@include mlra; @include pdsg; }
 
+.container,.container-fluid {@include mlra; @include pdsg; }
 .row{display: flex; flex-flow:row wrap; @include mgsg;}
+
 [class*="col-"],[class*="grow-"]{@include pdsg;}
 [class*="col-"]{flex-basis: $nb + %; max-width: $nb + %;}
 
-.grid,.grid-fluid{display: grid; width: $nb + %; @include mlra;}
+.grid,.grid-fluid{display: grid; width: $nb + %;}
+.container,.grid{width: 100%!important; max-width:1200px; @include mlra;}
 
 @mixin flexgrid ($grid){
 	@content;
@@ -36,7 +38,7 @@ $nb: 100; $column: 12;
 	}
 		
 	$fxw: (nowrap, nowrap),(wrap, wrap),(wr, wrap-reverse);
-	@each $val, $direction in $fxw {		
+	@each $val, $direction in $fxw {
 	.fxw-#{$grid}-#{$val}{flex-wrap: $direction;}	
 	}
 	
@@ -87,7 +89,7 @@ $nb: 100; $column: 12;
 		
 	//设置重复性单元格的行列
 		.rows-#{$grid}-#{$i}{grid-template-rows: repeat($i, 1fr);}
-		.cols-#{$grid}-#{$i}{grid-template-columns: repeat($i, 1fr);}		
+		.cols-#{$grid}-#{$i}{grid-template-columns: repeat($i, 1fr);}
 
 	//单元格的顺序与合并个数	
 		.yaim-#{$grid}-#{$i}{grid-row-start: $i;}
@@ -98,11 +100,11 @@ $nb: 100; $column: 12;
 	}
 
 	//单元格的行列间距
-	@for $i from 1 through $nb {
-		.gapr-#{$grid}-#{$i}{ grid-row-gap: $i/$nb + rem;}
-		.gapc-#{$grid}-#{$i}{ grid-column-gap: $i/$nb + rem;}
-		.gap-#{$grid}-#{$i}{ grid-gap: $i/$nb + rem;}
-	}
+		@for $i from 1 through $nb {
+			.gapr-#{$grid}-#{$i}{ grid-row-gap: $i/$nb + rem;}
+			.gapc-#{$grid}-#{$i}{ grid-column-gap: $i/$nb + rem;}
+			.gap-#{$grid}-#{$i}{ grid-gap: $i/$nb + rem;}
+		}
 
 	//网格自动流
 	$gaf: (row:row, column:column);
@@ -113,10 +115,9 @@ $nb: 100; $column: 12;
 }
 
 @include flexgrid (xs){}
-$flexgrid-data: (sm, $w1, $ww1),(md, $w2, $ww2),(lg, $w3, $ww3);
-@each $grid, $w, $ww in $flexgrid-data {
+$flexgrid-data: (sm, $w1),(md, $w2),(lg, $w3);
+@each $grid, $w in $flexgrid-data {
 	@media only screen and (min-width: $w + px){		
-		.container,.grid{width: $ww + px;}
 		@include flexgrid ($grid){}	
 	}	
 }

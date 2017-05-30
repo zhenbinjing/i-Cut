@@ -6,9 +6,6 @@
 *:before, *:after {
   box-sizing: border-box; }
 
-.container {
-  /*! width: 100%!important; max-width:1200px; 去掉注释开启适屏模式*/ }
-
 .container, .container-fluid {
   margin-left: auto;
   margin-right: auto;
@@ -31,7 +28,11 @@
 
 .grid, .grid-fluid {
   display: grid;
-  width: 100%;
+  width: 100%; }
+
+.container, .grid {
+  width: 100% !important;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -1479,8 +1480,6 @@
   grid-auto-flow: column; }
 
 @media only screen and (min-width: 751px) {
-  .container, .grid {
-    width: 750px; }
   .col-sm-1 {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
@@ -2449,8 +2448,6 @@
     grid-auto-flow: column; } }
 
 @media only screen and (min-width: 992px) {
-  .container, .grid {
-    width: 970px; }
   .col-md-1 {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
@@ -3419,8 +3416,6 @@
     grid-auto-flow: column; } }
 
 @media only screen and (min-width: 1200px) {
-  .container, .grid {
-    width: 1170px; }
   .col-lg-1 {
     flex-basis: 8.33333%;
     max-width: 8.33333%; }
