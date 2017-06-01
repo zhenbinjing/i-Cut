@@ -32,7 +32,7 @@
 
 .container, .grid {
   width: 100% !important;
-  max-width: 1200px;
+  max-width: 12rem;
   margin-left: auto;
   margin-right: auto; }
 

@@ -22,7 +22,7 @@ $column: 12;
 [class*="col-"]{flex-basis: $nb + %; max-width: $nb + %;}
 
 .grid,.grid-fluid{display: grid; width: $nb + %;}
-.container,.grid{width: 100%!important; max-width:1200px; @include mlra;}
+.container,.grid{width: 100%!important; max-width:12rem; @include mlra;}
 
 @mixin flexgrid ($grid){
 	@content;
