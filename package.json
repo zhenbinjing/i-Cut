@@ -1,10 +1,9 @@
 {
   "name": "i-cut",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "mocha",
     "gulp": "gulp",
     "gulpmin": "gulp min",
     "jsts": "webpack --config ./webpack/webpack.config.ts.js",
