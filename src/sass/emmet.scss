@@ -198,7 +198,7 @@ $nb: 100;
 	@for $i from 0 through $nb {.w-#{$grid}-#{$i}p{width: $i + %;}}
 
 	//行高百分比//
-	@for $i from 10 through $nb {.lh-#{$grid}-#{$i*10}p{line-height: $i*10 + %;}}	
+	@for $i from 10 through $nb {.lh-#{$grid}-#{$i}{line-height: $i/10;}}	
 
 	//边框宽度//
 	@for $i from 1 through 10 {	
