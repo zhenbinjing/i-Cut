@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "1.6.8",
+  "version": "1.6.9",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
@@ -42,7 +42,7 @@
     "babili-webpack-plugin": "^0.1.1",
     "browser-sync": "^2.18.12",
     "chai": "^4.0.0",
-    "del": "^2.2.2",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-allimgbase64": "^0.1.1",
     "gulp-autoprefixer": "^4.0.0",
