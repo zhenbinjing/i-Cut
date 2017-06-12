@@ -9,6 +9,7 @@
     "jsts": "webpack --config ./webpack/webpack.config.ts.js",
     "jsbabel": "webpack -p --config ./webpack/webpack.config.babel.js",
     "jsmin": "webpack -p --config ./webpack/webpack.config.js",
+    "rollup": "rollup -c ./rollup.config.js",
     "karma": "karma start ./karma.conf.js --single-run",
     "sauce": "karma start ./karma.sauce.js --single-run"
   },
@@ -72,6 +73,8 @@
     "karma-webpack": "^2.0.3",
     "mocha": "^3.4.2",
     "phantomjs-prebuilt": "^2.1.14",
+    "rollup": "^0.42.0",
+    "rollup-plugin-buble": "^0.15.0",
     "webpack": "^2.6.1"
   }
 }
