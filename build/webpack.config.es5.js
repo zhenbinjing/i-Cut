@@ -5,14 +5,14 @@ let srcDir = path.resolve(process.cwd(), 'src');
 let nodeModulesPath = path.resolve(process.cwd(), 'node_modules');
 
 function getEntry() {
-	var jsPath = path.resolve(srcDir, 'js/es6/build');
+	var jsPath = path.resolve(srcDir, 'js/es6/ts');
 	var dirs = fs.readdirSync(jsPath);
 	var matchs = [], files = {};
 	dirs.forEach(function (item) {
         matchs = item.match(/(.+)\.js$/);
         console.log(matchs);
         if (matchs) {
-		files[matchs[1]] = path.resolve(srcDir, 'js/es6/build', item);
+		files[matchs[1]] = path.resolve(srcDir, 'js/es6', item);
 	}
 	});
 	console.log(JSON.stringify(files));
@@ -22,7 +22,7 @@ function getEntry() {
 module.exports = {
 	entry: getEntry(),	
 	output: {
-        path: path.join(__dirname, "../src/js/es6/es5"),
+        path: path.join(__dirname, "../src/js/es5"),
         filename: "[name].js"
 	},   
 	resolve: {},

@@ -10,10 +10,9 @@ cache:
 script: 
   - npm run gulp
   - npm run gulpmin
-  - npm run jsts
-  - npm run jsbabel
-  - npm run jsmin
+  - npm run webpack
   - npm run rollup
+  - npm run rbabel
   - npm run karma
 after_success:
   - bash <(curl -s https://codecov.io/bash)

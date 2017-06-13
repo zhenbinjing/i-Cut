@@ -3,4 +3,5 @@ class A {
         return "AAAA";
     }
 }
+
 export default A;

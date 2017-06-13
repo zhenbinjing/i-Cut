@@ -1,3 +1,3 @@
-import { A, B } from './components/index';
+import { A, B } from './cm/index';
 let a = new A();
 a.render();
