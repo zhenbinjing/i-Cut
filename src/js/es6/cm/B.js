@@ -1,6 +1,6 @@
 class B {
     render() {
-        return "BBBB";
+        return 'BBBB';
     }
 }
 
