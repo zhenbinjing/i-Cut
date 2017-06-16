@@ -11,7 +11,7 @@
 
 i-Cut 是一个快速成形，全终端适配的CSS框架，采用 [Flexbox](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex) 与 [Grid-Layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid) 布局结合而成，让你轻松快速搭建项目雏形。
 
-### 切图铺助
+## 切图铺助
 
 免标工具：[Zeplin](https://zeplin.io/)、[Zeplin 教程](http://blog.163.com/zbj_jbz/blog/static/212615164201692210316119/)
 
