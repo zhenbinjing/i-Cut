@@ -10,15 +10,15 @@ export default {
   plugins: [ 
 	buble(),
 	babel({
-      exclude: 'node_modules/**',
-	  plugins: ['external-helpers'],
-      externalHelpers: true
-    }),
+	    exclude: 'node_modules/**',
+	    plugins: ['external-helpers'],
+	    externalHelpers: true
+	}),
 	eslint({
-      //exclude: [
-      //  'src/styles/**',
-      //]
-    }),
+	   //exclude: [
+	   //  'src/styles/**',
+	   //]
+	}),
 	uglify()
   ]
 };

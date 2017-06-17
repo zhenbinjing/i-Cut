@@ -48,7 +48,7 @@ module.exports = function(config) {
 
 	// list of files / patterns to load in the browser
 	files: [
-		'./src/js/chai/index.js'
+		'./src/js/e2e/index.js'
 	],
 
 	// list of files to exclude
@@ -57,7 +57,7 @@ module.exports = function(config) {
 	// preprocess matching files before serving them to the browser
 	// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 	preprocessors: {
-		'./src/js/chai/index.js': ['webpack']
+		'./src/js/e2e/index.js': ['webpack']
 	},
 
 	// test results reporter to use
@@ -67,13 +67,15 @@ module.exports = function(config) {
 	  
 	webpack: {
         module: {
-            rules: [{
-                // instrument only testing sources with Istanbul
-                
+            rules:[{
                     test: /\.js$/,
-                    include: path.resolve('./src/js/chai'),
+                    include: path.resolve('./src/js/e2e'),
                     loader: 'istanbul-instrumenter-loader'
-		}]
+                  },{
+                    test: /\.js$/,
+                    loader: 'babel-loader',
+                    query: { presets: ['es2015']}
+                  }]   
 		}
 	},
 
