@@ -1,5 +1,6 @@
 ﻿'use strict';
 //let CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+let UglifyJsPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
 let path = require('path');
 let fs = require('fs');
 let srcDir = path.resolve(process.cwd(), 'src');
@@ -39,6 +40,7 @@ module.exports = {
 		}          
 	},	
 	plugins: [
+		new UglifyJsPlugin()
 		//将公共代码抽离出来合并为一个文件
 		//new CommonsChunkPlugin('common'),
 		//提供全局的变量，在模块中使用无需用require引入
