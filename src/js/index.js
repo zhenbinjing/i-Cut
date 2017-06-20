@@ -1,5 +1,5 @@
-﻿var TouchSlide = require('./plugins/TouchSlide.js');
-var scrollLoad = require('./plugins/scrollLoad.js');
+﻿import TouchSlide from './plugins/TouchSlide';
+import scrollLoad from './plugins/scrollLoad';
 TouchSlide({ 
 	slideCell:"#focus",
 	titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
@@ -9,4 +9,4 @@ TouchSlide({
 	autoPage:true,//自动分页
 	switchLoad:"_src"
 });
-scrollLoad();
+scrollLoad({src:'xsrc',time: 100});

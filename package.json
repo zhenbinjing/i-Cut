@@ -6,10 +6,8 @@
   "scripts": {
     "gulp": "gulp",
     "gulpmin": "gulp min",
-    "webpack": "webpack -p --config ./build/webpack.config.js",
-    "wkts": "webpack --config ./build/webpack.config.ts.js",
-    "wbabel": "webpack -p --config ./build/webpack.config.es5.js",
     "rollup": "rollup -c ./build/rollup.config.js",
+    "rpts": "rollup -c ./build/rollup.config.ts.js",
     "rbabel": "rollup -c ./build/rollup.config.es5.js",
     "karma": "karma start ./karma.conf.js --single-run",
     "sauce": "karma start ./karma.sauce.js --single-run"
@@ -38,7 +36,6 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
-    "babili-webpack-plugin": "^0.1.1",
     "browser-sync": "^2.18.12",
     "chai": "^4.0.0",
     "del": "^3.0.0",

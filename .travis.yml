@@ -10,8 +10,8 @@ cache:
 script: 
   - npm run gulp
   - npm run gulpmin
-  - npm run webpack
   - npm run rollup
+  - npm run rpts
   - npm run rbabel
   - npm run karma
 after_success:
