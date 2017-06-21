@@ -1,5 +1,6 @@
 ﻿'use strict';
 //let CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+let webpack = require('webpack');
 let UglifyJsPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
 let path = require('path');
 let fs = require('fs');
@@ -39,7 +40,8 @@ module.exports = {
 		//jquery: srcDir + "/js/lib/jquery.min.js",
 		}          
 	},	
-	plugins: [
+	plugins: [		
+		new webpack.optimize.ModuleConcatenationPlugin(),
 		new UglifyJsPlugin()
 		//将公共代码抽离出来合并为一个文件
 		//new CommonsChunkPlugin('common'),
