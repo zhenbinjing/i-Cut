@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "1.7.5",
+  "version": "1.7.6",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
@@ -58,7 +58,7 @@
     "istanbul-instrumenter-loader": "^2.0.0",
     "karma": "^1.7.0",
     "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^2.1.1",
+    "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
     "karma-coverage-istanbul-reporter": "^1.3.0",
     "karma-mocha": "^1.3.0",
