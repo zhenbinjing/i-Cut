@@ -1,12 +1,12 @@
 {
   "name": "i-cut",
-  "version": "1.7.8",
+  "version": "1.7.9",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
     "gulp": "gulp",
-	"webp": "gulp webp",
-	"base": "gulp base",
+    "webp": "gulp webp",
+    "base": "gulp base",
     "rollup": "rollup -c ./build/rollup.config.js",
     "rpts": "rollup -c ./build/rollup.config.ts.js",
     "rbabel": "rollup -c ./build/rollup.config.es5.js",
