@@ -40,34 +40,42 @@ gulp.task('cssDeal',['sass'],function(){
 		compatibility: 'ie8',
 		keepBreaks:false,
 		keepSpecialComments: '*'
+	}))
+	.pipe(autoprefixer({
+	browsers: [
+	'last 2 version',						//- 主流浏览器的最新两个版本
+	'ios 7',							//- IOS7版本
+	'android 2.3',							//- android 2.3版本
+	'Firefox >= 20',						//- 火狐浏览器的版本大于或等于20
+	'last 2 Explorer versions'],					//- IE的最新两个版本 'last 2 Explorer versions'
+	cascade: true,							//- 是否美化属性值 默认：true 像这样：-webkit-transform: rotate(45deg); transform: rotate(45deg);
+	remove:true							//- 是否去掉不必要的前缀 默认：true 
 	}))	
 	.pipe(concat('index.css'))					//- 合并后的文件名
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				//- 输出文件本地
 });
 
+gulp.task('svgDeal',function(){
+	return gulp.src('./'+y_Sz+'/img/**/*.svg')			//- 压缩svg
+	.pipe(svgmin())
+	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
+});
+
+gulp.task('imgDeal',['svgDeal'],function(){
+	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
+	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o'))		//- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩	
+	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
+});
+
 gulp.task('htmlDeal',function(){					//- 修改html的dom
 	var date = new Date().getTime();
-	gulp.src('./'+y_Sz+'/**/*.html')
+	return gulp.src('./'+y_Sz+'/**/*.html')
 	.pipe(replace(/_VERSION_/gi, date))
 	.pipe(processhtml())
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
-gulp.task('imgDeal',function(){
-	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
-	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o'))		//- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩		
-	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
-});
-
-gulp.task('svgDeal',function(){
-	gulp.src('./'+y_Sz+'/img/**/*.svg')				//- 压缩svg
-	.pipe(svgmin())
-	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
-});
-
-/*-------------(htmlmin,font,cssper,webp,base64,bs)需要时手动添加执行或修改-----------------*/
-
-gulp.task('htmlmin',function(){										
+gulp.task('htmlmin',['htmlDeal'],function(){										
 	var options = {
 	removeComments: true,						//- 清除HTML注释
 	collapseWhitespace: true,					//- 压缩HTML
@@ -93,21 +101,7 @@ gulp.task('font',['fontSpider'],function(){				//- 先把fs命令执行完后，
 	.pipe(gulp.dest('./'+y_Dz+'/icon'));
 });
 
-gulp.task('cssper',function(){						
-	gulp.src(['./'+y_Dz+'/css/**/*.css'])							
-	.pipe(autoprefixer({
-	browsers: [
-	'last 2 version',						//- 主流浏览器的最新两个版本
-	'ios 7',							//- IOS7版本
-	'android 2.3',							//- android 2.3版本
-	'Firefox >= 20',						//- 火狐浏览器的版本大于或等于20
-	'last 2 Explorer versions'],					//- IE的最新两个版本 'last 2 Explorer versions'
-	cascade: true,							//- 是否美化属性值 默认：true 像这样：-webkit-transform: rotate(45deg); transform: rotate(45deg);
-	remove:true							//- 是否去掉不必要的前缀 默认：true 
-	}))
-	.pipe(concat('index.css'))					//- 合并后的文件名
-	.pipe(gulp.dest('./'+y_Dz+'/css'));				//- 输出文件本地
-});
+/*-------------(webp,base64,bs)需要时手动添加执行或修改-----------------*/
 
 gulp.task('base64',['css64'],function() {				//- img转base64	
 	gulp.src('./'+y_Dz+'/**/*.html')
@@ -115,7 +109,7 @@ gulp.task('base64',['css64'],function() {				//- img转base64
    	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
-gulp.task('css64',['webp'],function(){						
+gulp.task('css64',function(){						
 	return gulp.src(['./'+y_Dz+'/css/**/*.css'])										
 	.pipe(css64({
 	extensions: ['jpg','png','gif','webp'],
@@ -126,7 +120,7 @@ gulp.task('css64',['webp'],function(){
 });
 
 gulp.task('webp',['webp_css'],function(){
-	return del(['./'+y_Dz+'/img/**/*.{jpg,png,gif}', '!./'+y_Dz+'/img/**/*.{webp}']) 	
+	return del(['./'+y_Dz+'/img/**/*.{jpg,png,gif}', '!./'+y_Dz+'/img/**/*.{webp}'])
 });	 
 
 gulp.task('webp_css',['webp_html'],function(){
@@ -143,20 +137,18 @@ gulp.task('webp_html',['webp_img'],function(){
 });
 
 gulp.task('webp_img',function(){
-	return gulp.src('./'+y_Dz+'/img/**/*.{jpg,png,gif}')	
+	return gulp.src('./'+y_Dz+'/img/**/*.{jpg,png,gif}')		//- 自行添加图片格式
 	.pipe(webp())
 	.pipe(gulp.dest('./'+y_Dz+'/img/'))
 });
 
 gulp.task('bs',function(){
-	browserSync({
+	browserSync.init({
 	files: "**",							//- 监控所有文件
-	server: {baseDir: './'+y_Dz+'/'}				//- 目标文件夹路径
+	server: {baseDir: './'+y_Dz+'/',index: "rem.html"},				//- 目标文件夹路径
+	open : false	
 	});
 });
 
 //default
-gulp.task('default',['cssDeal','imgDeal','htmlDeal','svgDeal']);
-
-//min
-gulp.task('min',['htmlmin','font','cssper','webp','base64']);
+gulp.task('default',['cssDeal','imgDeal','htmlmin','font']);
