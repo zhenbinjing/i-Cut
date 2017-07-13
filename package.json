@@ -5,8 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "gulp": "gulp",
-    "webp": "gulp webp",
-    "base": "gulp base64",
+    "imgmin": "gulp webp && gulp base64",
     "rollup": "rollup -c ./build/rollup.config.js",
     "rpts": "rollup -c ./build/rollup.config.ts.js",
     "rbabel": "rollup -c ./build/rollup.config.es5.js",

@@ -9,8 +9,7 @@ cache:
     - node_modules
 script: 
   - npm run gulp
-  - npm run webp
-  - npm run base
+  - npm run imgmin
   - npm run rollup
   - npm run rpts
   - npm run rbabel
