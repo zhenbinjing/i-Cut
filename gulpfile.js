@@ -15,17 +15,11 @@ var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
-var del = require('del');						//- 管理文件
-var path = require("path");
+var del = require('del');						//- 删除文件功能模块
+var path = require("path");						//- 路径模块
 
 var y_Sz="src";								//- 源码环境路径
-var y_Dz="dist";							//- 上线环境路径
-
-gulp.task('sass', function () {
-	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
-	.pipe(sass().on('error', sass.logError))
-	.pipe(gulp.dest('./'+y_Sz+'/css/'));
-});	 
+var y_Dz="dist";							//- 上线环境路径	 
 
 gulp.task('cssDeal',['sass'],function(){						
 	var date=new Date().getTime();					//- 创建版本时间	
@@ -48,17 +42,17 @@ gulp.task('cssDeal',['sass'],function(){
 	'android 2.3',							//- android 2.3版本
 	'Firefox >= 20',						//- 火狐浏览器的版本大于或等于20
 	'last 2 Explorer versions'],					//- IE的最新两个版本 'last 2 Explorer versions'
-	cascade: true,							//- 是否美化属性值 默认：true 像这样：-webkit-transform: rotate(45deg); transform: rotate(45deg);
+	cascade: true,							//- 是否美化属性值 默认：true 
 	remove:true							//- 是否去掉不必要的前缀 默认：true 
 	}))	
 	.pipe(concat('index.css'))					//- 合并后的文件名
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				//- 输出文件本地
 });
 
-gulp.task('svgDeal',function(){
-	return gulp.src('./'+y_Sz+'/img/**/*.svg')			//- 压缩svg
-	.pipe(svgmin())
-	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
+gulp.task('sass', function () {
+	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
+	.pipe(sass().on('error', sass.logError))
+	.pipe(gulp.dest('./'+y_Sz+'/css/'));
 });
 
 gulp.task('imgDeal',['svgDeal'],function(){
@@ -67,12 +61,10 @@ gulp.task('imgDeal',['svgDeal'],function(){
 	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
 });
 
-gulp.task('htmlDeal',function(){					//- 修改html的dom
-	var date = new Date().getTime();
-	return gulp.src('./'+y_Sz+'/**/*.html')
-	.pipe(replace(/_VERSION_/gi, date))
-	.pipe(processhtml())
-	.pipe(gulp.dest('./'+y_Dz+'/'));
+gulp.task('svgDeal',function(){
+	return gulp.src('./'+y_Sz+'/img/**/*.svg')			//- 压缩svg
+	.pipe(svgmin())
+	.pipe(gulp.dest('./'+y_Dz+'/img'));				
 });
 
 gulp.task('htmlmin',['htmlDeal'],function(){										
@@ -82,23 +74,31 @@ gulp.task('htmlmin',['htmlDeal'],function(){
 	minifyJS: true,							//- 压缩页面JS
 	minifyCSS: true							//- 压缩页面CSS
 	};
-	gulp.src('./'+y_Dz+'/**/*.html')				//- 压缩页面路径
+	gulp.src('./'+y_Dz+'/**/*.html')
 	.pipe(htmlmin(options))
-	.pipe(gulp.dest('./'+y_Dz+'/'));				//- 输出路径	
+	.pipe(gulp.dest('./'+y_Dz+'/'));					
 });
 
-gulp.task('fontSpider',function(){
-	return gulp.src(path.resolve(process.cwd(), y_Sz) + '/*.html')	//- 删除多余的字体和图标，添加return返回最终的数据流
-	.pipe(fontSpider());
+gulp.task('htmlDeal',function(){					//- 修改html的dom
+	var date = new Date().getTime();
+	return gulp.src('./'+y_Sz+'/**/*.html')
+	.pipe(replace(/_VERSION_/gi, date))
+	.pipe(processhtml())
+	.pipe(gulp.dest('./'+y_Dz+'/'));
 });		
 
-gulp.task('font',['fontSpider'],function(){				//- 先把fs命令执行完后，再去执行cp命令，fs需要添加return
+gulp.task('font',['fontSpider'],function(){				//- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
 	gulp.src(['./'+y_Sz+'/font/**'],{				//- 被复制的文件夹下的所有文件
 	base: './'+y_Sz+'/font'})					//- 被复制的目标路径 	
-	.pipe(gulp.dest('./'+y_Dz+'/font'))				//- 输出路径	
+	.pipe(gulp.dest('./'+y_Dz+'/font'))					
 	gulp.src(['./'+y_Sz+'/icon/**'],{				
 	base: './'+y_Sz+'/icon'})					
 	.pipe(gulp.dest('./'+y_Dz+'/icon'));
+});
+
+gulp.task('fontSpider',function(){
+	return gulp.src(path.resolve(process.cwd(), y_Sz) + '/*.html')	//- 删除多余的字体和图标
+	.pipe(fontSpider());
 });
 
 /*-------------(webp,base64,bs)需要时手动添加执行或修改-----------------*/
@@ -109,7 +109,7 @@ gulp.task('base64',['css64'],function() {				//- img转base64
    	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
-gulp.task('css64',function(){						
+gulp.task('css64',function(){						//- css转base64						
 	return gulp.src(['./'+y_Dz+'/css/**/*.css'])										
 	.pipe(css64({
 	extensions: ['jpg','png','gif','webp'],
@@ -119,8 +119,8 @@ gulp.task('css64',function(){
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				
 });
 
-gulp.task('webp',['webp_css'],function(){
-	return del(['./'+y_Dz+'/img/**/*.{jpg,png,gif}', '!./'+y_Dz+'/img/**/*.{webp}'])
+gulp.task('webp',['webp_css'],function(){				//- Webp转换
+	del(['./'+y_Dz+'/img/**/*.{jpg,png,gif}', '!./'+y_Dz+'/img/**/*.{webp}'])
 });	 
 
 gulp.task('webp_css',['webp_html'],function(){
@@ -145,7 +145,7 @@ gulp.task('webp_img',function(){
 gulp.task('bs',function(){
 	browserSync.init({
 	files: "**",							//- 监控所有文件
-	server: {baseDir: './'+y_Dz+'/',index: "rem.html"},				//- 目标文件夹路径
+	server: {baseDir: './'+y_Dz+'/',index: "rem.html"},		//- 引索
 	open : false	
 	});
 });
