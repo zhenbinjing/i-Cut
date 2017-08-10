@@ -23,8 +23,8 @@ var y_Dz="dist";							//- 上线环境路径
 
 gulp.task('cssDeal',['sass'],function(){						
 	var date=new Date().getTime();					//- 创建版本时间	
-	gulp.src(['./'+y_Sz+'/css/**/*.css'])				//- 需要处理的css文件，放到一个字符串数组里	
-	.pipe(replace(/_VERSION_/gi,date))				//- 文件指纹							
+	gulp.src(['./'+y_Sz+'/css/**/*.css'])				//- 需要处理的css文件，放到一个字符串数组里								
+	.pipe(replace(/_VERSION_/gi,date))				//- 文件指纹
 	.pipe(uncss({
 	html: ['./'+y_Sz+'/**/*.html'],					//- 检查的页面
 	ignore: ['abc','.abc','#abc']					//- 忽略的标签 class or id or 分号隔开
