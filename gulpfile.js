@@ -14,6 +14,8 @@ var webp = require('gulp-webp');					//- 转webp图片
 var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
+var uglify = require('gulp-uglify');					//- js压缩
+var pump = require('pump');						//- 报错提示
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 删除文件功能模块
 var path = require("path");						//- 路径模块
@@ -99,6 +101,17 @@ gulp.task('font',['fontSpider'],function(){				//- 先把fontSpider命令执行�
 gulp.task('fontSpider',function(){
 	return gulp.src(path.resolve(process.cwd(), y_Sz) + '/*.html')	//- 删除多余的字体和图标
 	.pipe(fontSpider());
+});
+
+gulp.task('jsmin', function (cb) {					//- 合并压缩js
+	  pump([
+			gulp.src('./'+y_Sz+'/js/*.js'),
+			uglify(),
+			concat('index.js'),
+			gulp.dest('./'+y_Dz+'/js')
+		],
+		cb
+	  );
 });
 
 /*-------------(webp,base64,bs)需要时手动添加执行或修改-----------------*/
