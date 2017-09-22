@@ -58,9 +58,12 @@ gulp.task('sass', function () {
 });
 
 gulp.task('imgDeal',['svgDeal'],function(){
-	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg,gif,ico}')
+	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg}')
 	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o'))		//- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩	
-	.pipe(gulp.dest('./'+y_Dz+'/img'));				//- 输出路径
+	.pipe(gulp.dest('./'+y_Dz+'/img/'));				//- 输出路径
+	gulp.src(['./'+y_Sz+'/img/*.gif'],{				//- 复制一些不用压缩的图片
+	base: './'+y_Sz+'/img/'})					
+	.pipe(gulp.dest('./'+y_Dz+'/img/'));
 });
 
 gulp.task('svgDeal',function(){
@@ -104,14 +107,12 @@ gulp.task('fontSpider',function(){
 });
 
 gulp.task('jsmin', function (cb) {					//- 合并压缩js
-	  pump([
-			gulp.src('./'+y_Sz+'/js/*.js'),
-			uglify(),
-			concat('index.js'),
-			gulp.dest('./'+y_Dz+'/js')
-		],
-		cb
-	  );
+	pump([
+	gulp.src('./'+y_Sz+'/js/*.js'),
+	uglify(),
+	concat('index.js'),
+	gulp.dest('./'+y_Dz+'/js')
+	],cb);
 });
 
 /*-------------(webp,base64,bs)需要时手动添加执行或修改-----------------*/
@@ -126,31 +127,32 @@ gulp.task('css64',function(){						//- css转base64
 	return gulp.src(['./'+y_Dz+'/css/**/*.css'])										
 	.pipe(css64({
 	extensions: ['jpg','png','gif','webp'],
-	maxImageSize: 8*1024 // bytes 
+	maxImageSize: 8*1024,// bytes
+	deleteAfterEncoding: true					//- 被编码后是否删除图像
 	}))
 	.pipe(concat('index.css'))					
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				
 });
 
 gulp.task('webp',['webp_css'],function(){				//- Webp转换
-	del(['./'+y_Dz+'/img/**/*.{jpg,png,gif}', '!./'+y_Dz+'/img/**/*.{webp}'])
+	del(['./'+y_Dz+'/img/**/*.{jpg,png}', '!./'+y_Dz+'/img/**/*.{webp}'])
 });	 
 
 gulp.task('webp_css',['webp_html'],function(){
 	return gulp.src(['./'+y_Dz+'/css/**/*.css'])	
-	.pipe(replace(/.(jpg|png|gif)/gi,'.webp'))
+	.pipe(replace(/.(jpg|png)/gi,'.webp'))
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				
 });
 
 gulp.task('webp_html',['webp_img'],function(){					
 	return gulp.src('./'+y_Dz+'/**/*.html')
-	.pipe(replace(/.(jpg|png|gif)/gi,'.webp'))
+	.pipe(replace(/.(jpg|png)/gi,'.webp'))
 	.pipe(processhtml())
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
 gulp.task('webp_img',function(){
-	return gulp.src('./'+y_Dz+'/img/**/*.{jpg,png,gif}')		//- 自行添加图片格式
+	return gulp.src('./'+y_Dz+'/img/**/*.{jpg,png}')		//- 自行添加图片格式
 	.pipe(webp())
 	.pipe(gulp.dest('./'+y_Dz+'/img/'))
 });
