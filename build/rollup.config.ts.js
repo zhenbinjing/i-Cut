@@ -3,14 +3,16 @@
 //import commonjs from 'rollup-plugin-commonjs';
 
 export default {
-  entry: './src/js/es6/main.js',
-  dest: './src/js/es6/ts/main.js',	
-  format: 'es',
-//moduleName: 'icut', 
-//sourceMap: 'true',
+  input: './src/js/es6/main.js',
+  output: {
+	   file:'./src/js/es6/ts/main.js',	
+  	   format: 'es'
+	   //moduleName: 'icut', 
+	   //sourceMap: 'true',
+  },
   plugins: [ 
 	minify()
 	//resolve({ jsnext: true, main: true, browser: true, }), 
 	//commonjs()
-  ],
+  ]
 };

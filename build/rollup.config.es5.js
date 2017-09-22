@@ -4,9 +4,11 @@ import eslint from 'rollup-plugin-eslint';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
-  entry: './src/js/es6/ts/main.js',
-  dest: './src/js/es5/main.js',
-  format: 'iife',
+  input: './src/js/es6/ts/main.js',
+  output:{ 
+	   file:'./src/js/es5/main.js',
+	   format: 'iife'
+  },  
   plugins: [ 
 	buble(),
 	babel({
