@@ -13,7 +13,6 @@ addons:
   chrome: stable # have Travis install chrome stable
 script: 
   - npm run gulp
-  - npm run imgmin
   - npm run rollup
   - npm run rpts
   - npm run rbabel
