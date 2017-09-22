@@ -7,8 +7,8 @@ export default {
   output: {
 	   file:'./src/js/es6/ts/main.js',	
   	   format: 'es'
-	   //moduleName: 'icut', 
-	   //sourceMap: 'true',
+	   //name: 'icut', 
+	   //sourcemap: 'true',
   },
   plugins: [ 
 	minify()
