@@ -117,18 +117,18 @@ gulp.task('jsmin', function (cb) {					//- 合并压缩js
 
 /*-------------(webp,base64,bs)需要时手动添加执行或修改-----------------*/
 
-gulp.task('HtmlBase64',function() {				//- img转base64	
+gulp.task('HtmlBase64',function() {					//- img转base64	
 	gulp.src('./'+y_Dz+'/**/*.html')
-   	.pipe(img64({limit: '8kb',deleteAfterEncoding:true}))
+   	.pipe(img64({limit: '8kb',deleteAfterEncoding:true}))		//- 被编码后是否删除图像
    	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
-gulp.task('CssBase64',function(){						//- css转base64						
+gulp.task('CssBase64',function(){					//- css转base64						
 	return gulp.src(['./'+y_Dz+'/css/**/*.css'])										
 	.pipe(css64({
 	extensions: ['jpg','png','svg','gif','webp'],
 	maxImageSize: 2*1024,// bytes
-	deleteAfterEncoding: true					//- 被编码后是否删除图像
+	deleteAfterEncoding: true
 	}))
 	.pipe(concat('index.css'))					
 	.pipe(gulp.dest('./'+y_Dz+'/css'));				
