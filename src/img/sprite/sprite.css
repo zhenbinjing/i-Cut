@@ -1,0 +1,20 @@
+.<%=common %> {
+	display: inline-block;
+	background-image: url("<%=pngPath%>");
+	background-image: url("<%=svgPath%>");	
+	background-repeat: no-repeat;
+	background-size: <%= relWidth %>rem <%= relHeight %>rem;
+}
+
+<% _.forEach(svg, function(svgItem) { %>
+
+  .<%=svgItem.name%> {
+	background-position: <%= svgItem.relPositionX %>rem <%= svgItem.relPositionY %>rem;
+	width: <%= svgItem.relWidth %>rem;
+	height: <%= svgItem.relHeight %>rem;
+  }
+
+
+<% }); %>
+
+

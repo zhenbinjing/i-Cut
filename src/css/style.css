@@ -34,20 +34,6 @@
 
 /*-----------------------------图标----------------------------*/
 
-@font-face { 
-	font-family: "iconfont";
-	src: url('../icon/iconfont.eot'); 
-	src: url('../icon/iconfont.eot') format('embedded-opentype'), 
-	     url('../icon/iconfont.woff') format('woff'), 
-	     url('../icon/iconfont.ttf') format('truetype'),
-	     url('../icon/iconfont.svg') format('svg');
- }
-.iconfont { 
-  font-family:"iconfont" !important;
-  font-style:normal;
-  -webkit-font-smoothing: antialiased;	
-  -moz-osx-font-smoothing: grayscale;
- }
 .aaa{background: url(../img/d.gif);}
 /*grid*/
 html,.grid-template{height: 100%;}

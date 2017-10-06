@@ -1,0 +1,47 @@
+.icon {
+	display: inline-block;
+	background-image: url("../img/sprite/sprite.png");
+	background-image: url("../img/sprite/sprite.svg");	
+	background-repeat: no-repeat;
+	background-size: 0.32rem 1.28rem;
+}
+
+
+
+  .svg1 {
+	background-position: 0rem 0rem;
+	width: 0.32rem;
+	height: 0.32rem;
+  }
+
+
+
+
+  .svg2 {
+	background-position: 0rem -0.32rem;
+	width: 0.32rem;
+	height: 0.32rem;
+  }
+
+
+
+
+  .svg3 {
+	background-position: 0rem -0.64rem;
+	width: 0.32rem;
+	height: 0.32rem;
+  }
+
+
+
+
+  .svg4 {
+	background-position: 0rem -0.96rem;
+	width: 0.32rem;
+	height: 0.32rem;
+  }
+
+
+
+
+
