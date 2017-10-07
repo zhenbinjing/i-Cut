@@ -17,7 +17,7 @@ var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
 var uglify = require('gulp-uglify');					//- js压缩
-var htmlurl = require('gulp-html-url-prefix');		//- html文件添加域名前缀
+var htmlurl = require('gulp-html-url-prefix');				//- html文件添加域名前缀
 var pump = require('pump');						//- 报错提示
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 删除文件功能模块
@@ -34,12 +34,12 @@ gulp.task('cssDeal',['sass'],function(){
 	.pipe(replace(/_VERSION_/gi,date))				//- 文件指纹
 	.pipe(uncss({
 	html: ['./'+y_Sz+'/**/*.html'],					//- 检查的页面
-	ignore: ['abc','.abc','#abc']					//- 忽略的标签 class or id or 分号隔开
+	ignore: ['abc', '.abc', '#abc']					//- 忽略的标签 class or id or 分号隔开
 	}))
 	.pipe(px3rem({remUnit: 100}))					//- px/100转rem值，如果有不想转换的类在值后面加/*no*/
 	.pipe(cleanCSS({						//- 压缩处理成一行,兼容ie
 		compatibility: 'ie8',
-		keepBreaks:false,
+		keepBreaks: false,
 		keepSpecialComments: '*'
 	}))
 	.pipe(autoprefixer({
@@ -70,7 +70,7 @@ gulp.task('imgDeal',function(){
 });
 
 gulp.task('imgCopy',function(){
-	gulp.src(['./'+y_Sz+'/img/*.gif'],{			//- 复制一些不需要处理的图片
+	gulp.src(['./'+y_Sz+'/img/*.gif'],{				//- 复制一些不需要处理的图片
 	base: './'+y_Sz+'/img/'})
 	.pipe(gulp.dest('./'+y_Dz+'/img/'));	
 })
@@ -132,9 +132,9 @@ gulp.task('svgSprite',['svgDeal'],function(){
 });
 
 var config = {	
-    templates: {
-        css: require("fs").readFileSync('./'+y_Sz+'/img/sprite/sprite.css', "utf-8")		
-    },
+	templates: {
+		css: require("fs").readFileSync('./'+y_Sz+'/img/sprite/sprite.css', "utf-8")		
+	},
 	cssFile: '../css/sprite.css',
 	pngPath: '../img/sprite/sprite.png',
 	svgPath: '../img/sprite/sprite.svg',
@@ -144,9 +144,9 @@ var config = {
 };
 
 gulp.task('svgDeal',['svgDel'],function () {	
-    return gulp.src('./'+y_Sz+'/img/sprite/*.svg')
-    .pipe(svgSprite(config))	
-    .pipe(gulp.dest('./'+y_Sz+'/img/'));
+	return gulp.src('./'+y_Sz+'/img/sprite/*.svg')
+	.pipe(svgSprite(config))	
+	.pipe(gulp.dest('./'+y_Sz+'/img/'));
 })
 
 gulp.task('svgDel',function(){
@@ -168,7 +168,6 @@ gulp.task('webp_css',['webp_html'],function(){
 gulp.task('webp_html',['webp_img'],function(){					
 	return gulp.src('./'+y_Dz+'/*.html')
 	.pipe(replace(/.(jpg|png)/gi,'.webp'))
-	.pipe(processhtml())
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
@@ -182,7 +181,7 @@ gulp.task('webp_img',function(){
 
 gulp.task('HtmlBase64',function() {					//- img转base64	
 	gulp.src('./'+y_Dz+'/*.html')
-   	.pipe(img64({limit: '8kb',deleteAfterEncoding:true}))		//- 被编码后是否删除图像
+   	.pipe(img64({limit: '8kb', deleteAfterEncoding: true}))		//- 被编码后是否删除图像
    	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
@@ -202,11 +201,9 @@ gulp.task('CssBase64',function(){					//- css转base64
 /*------------------------------Url----------------------------------*/
 
 gulp.task('HtmlUrl', function() {
-    gulp.src('./'+y_Dz+'/*.html')
-    .pipe(htmlurl({
-      prefix: 'https://i-cut.cc/dist/'
-    }))
-    .pipe(gulp.dest('./'+y_Dz+'/'));
+	gulp.src('./'+y_Dz+'/*.html')
+	.pipe(htmlurl({prefix: 'https://i-cut.cc/dist/'}))
+	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
 /*------------------------------browserSync----------------------------------*/
@@ -214,11 +211,11 @@ gulp.task('HtmlUrl', function() {
 gulp.task('bs',function(){
 	browserSync.init({
 	files: "**",							//- 监控所有文件
-	server: {baseDir: './'+y_Dz+'/',index: "rem.html"},		//- 引索
+	server: {baseDir: './'+y_Dz+'/', index: "rem.html"},		//- 引索
 	open : false	
 	});
 });
 
-//min
+
 gulp.task('min',['cssDeal','imgDeal','imgCopy','htmlmin','font']);
 gulp.task('base64',['HtmlBase64','CssBase64']);
