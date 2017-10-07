@@ -17,6 +17,7 @@ var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
 var uglify = require('gulp-uglify');					//- js压缩
+var urlPrefix = require('gulp-html-url-prefix');		//- 添加域名前缀
 var pump = require('pump');						//- 报错提示
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 删除文件功能模块
@@ -196,6 +197,16 @@ gulp.task('CssBase64',function(){					//- css转base64
 	}))
 	.pipe(concat('index.css'))					
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));				
+});
+
+/*------------------------------Url----------------------------------*/
+
+gulp.task('Url', function() {
+    gulp.src('./'+y_Dz+'/*.html')
+    .pipe(urlPrefix({
+      prefix: 'https://i-cut.cc/dist/'
+    }))
+    .pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
 /*------------------------------browserSync----------------------------------*/
