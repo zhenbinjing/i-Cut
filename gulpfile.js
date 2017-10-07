@@ -18,7 +18,6 @@ var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
 var uglify = require('gulp-uglify');					//- js压缩
 var htmlurl = require('gulp-html-url-prefix');		//- html文件添加域名前缀
-var cssurl = require('gulp-css-url-prefix');		//- css文件添加域名前缀
 var pump = require('pump');						//- 报错提示
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 删除文件功能模块
