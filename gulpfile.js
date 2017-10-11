@@ -22,6 +22,8 @@ var pump = require('pump');						//- 报错提示
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 删除文件功能模块
 var path = require("path");						//- 路径模块
+var critical = require('critical').stream;
+
 
 var y_Sz="src";								//- 源码环境路径
 var y_Dz="dist";							//- 上线环境路径	 
@@ -200,10 +202,25 @@ gulp.task('CssBase64',function(){					//- css转base64
 
 /*------------------------------Url----------------------------------*/
 
-gulp.task('HtmlUrl', function() {
+gulp.task('HtmlUrl', ['Critical'],function() {
 	gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlurl({prefix: 'https://i-cut.cc/dist/'}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
+});
+
+/*------------------------------Critical css----------------------------------*/
+
+gulp.task('Critical', function () {
+	return gulp.src('./'+y_Dz+'/*.html')
+	.pipe(critical({
+	base: 'dist/', 
+	inline: true,
+	css: ['dist/css/index.css'],
+	minify: true,
+	width:320,
+	height:568
+	}))   
+	.pipe(gulp.dest('dist/'));
 });
 
 /*------------------------------browserSync----------------------------------*/
