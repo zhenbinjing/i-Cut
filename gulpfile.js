@@ -215,9 +215,9 @@ gulp.task('HtmlUrl', ['Critical'],function() {
 gulp.task('Critical', function () {
 	return gulp.src('./'+y_Dz+'/*.html')
 	.pipe(critical({
-	base: path.resolve(process.cwd(), y_Dz), 
+	base: 'dist/', 
 	inline: true,
-	css: [path.resolve(process.cwd(), y_Dz) + '/css/index.css'],
+	css: ['dist/css/index.css'],
 	width:320,
 	height:568,
 	pathPrefix: 'https://i-cut.cc/dist/'
@@ -225,7 +225,7 @@ gulp.task('Critical', function () {
 	.pipe(rename(function (path) {
     path.basename += "-c";
 	}))
-	.pipe(gulp.dest(path.resolve(process.cwd(), y_Dz)));
+	.pipe(gulp.dest('dist/'));
 });
 
 /*------------------------------browserSync----------------------------------*/
