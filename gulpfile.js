@@ -195,7 +195,7 @@ gulp.task('Htmlmin',['HtmlUrl'],function(){
 	minifyJS: true,							//- 压缩页面JS
 	minifyCSS: true							//- 压缩页面CSS
 	};
-	gulp.src('./'+y_Dz+'/rem.html')
+	gulp.src('./'+y_Dz+'/rem.cl.html')
 	.pipe(htmlmin(options))
 	.pipe(rename(function (path) {
     path.basename += ".min";
