@@ -4,7 +4,7 @@
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
-    "gulp": "gulp svgSprite && gulp min && gulp webp && gulp base64 && gulp Htmlmin",
+    "gulp": "gulp svgSprite && gulp min && gulp webp && gulp base64 && gulp Critical && gulp Htmlmin",
     "rollup": "rollup -c ./build/rollup.config.js",
     "rpts": "rollup -c ./build/rollup.config.ts.js",
     "rbabel": "rollup -c ./build/rollup.config.es5.js",

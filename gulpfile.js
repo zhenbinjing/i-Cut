@@ -203,7 +203,7 @@ gulp.task('Htmlmin',['HtmlUrl'],function(){
 	.pipe(gulp.dest('./'+y_Dz+'/'));					
 });
 
-gulp.task('HtmlUrl', ['Critical'],function() {
+gulp.task('HtmlUrl',function() {
 	return gulp.src('./'+y_Dz+'/*-c.html')
 	.pipe(htmlurl({prefix: 'https://i-cut.cc/dist/'}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
