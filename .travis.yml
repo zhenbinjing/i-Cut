@@ -13,9 +13,7 @@ addons:
   chrome: stable # have Travis install chrome stable
 script: 
   - npm run gulp
-  - npm run rollup
-  - npm run rpts
-  - npm run rbabel
+  - npm run rmin
   - npm run karma
 after_success:
   - bash <(curl -s https://codecov.io/bash)

@@ -1,16 +1,17 @@
 {
   "name": "i-cut",
-  "version": "1.9.10",
+  "version": "1.9.11",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
-  "scripts": {
-	"clhtml": "node ./build/critical.js",
-    "gulp": "gulp svgSprite && gulp min && gulp webp && gulp base64 && npm run clhtml && gulp Htmlmin && npm run rollup",   
-    "rollup": "rollup -c ./build/rollup.config.js",
-    "rpts": "rollup -c ./build/rollup.config.ts.js",
-    "rbabel": "rollup -c ./build/rollup.config.es5.js",
-    "karma": "karma start ./karma.conf.js --single-run",
-    "sauce": "karma start ./karma.sauce.js --single-run"
+  "scripts": {	
+    "gulp": "gulp svgSprite && gulp min && gulp webp && gulp base64 && npm run clhtml && gulp Htmlmin && npm run rollup", 
+	"clhtml" : "node ./build/critical.js",
+    "rollup" : "rollup -c ./build/rollup.config.js",
+	"rmin" : "npm run rpts && npm run rpbl",
+    "rpts" : "rollup -c ./build/rollup.config.ts.js",
+    "rpbl" : "rollup -c ./build/rollup.config.es5.js",
+    "karma" : "karma start ./karma.conf.js --single-run",
+    "sauce" : "karma start ./karma.sauce.js --single-run"
   },
   "repository": {
     "type": "git",

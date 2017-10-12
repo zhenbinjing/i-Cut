@@ -195,8 +195,11 @@ gulp.task('Htmlmin',['HtmlUrl'],function(){
 	minifyJS: true,							//- 压缩页面JS
 	minifyCSS: true							//- 压缩页面CSS
 	};
-	gulp.src('./'+y_Dz+'/*.html')
+	gulp.src('./'+y_Dz+'/rem.html')
 	.pipe(htmlmin(options))
+	.pipe(rename(function (path) {
+    path.basename += ".min";
+	}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));					
 });
 
