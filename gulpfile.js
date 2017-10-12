@@ -23,7 +23,6 @@ var pump = require('pump');						//- 报错提示
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 删除文件功能模块
 var path = require("path");						//- 路径模块
-var critical = require('critical').stream;
 
 var y_Sz="src";								//- 源码环境路径
 var y_Dz="dist";							//- 上线环境路径	 
@@ -77,16 +76,6 @@ gulp.task('imgCopy',function(){
 	.pipe(gulp.dest('./'+y_Dz+'/img/'));	
 })
 
-/*------------------------------Html----------------------------------*/
-
-gulp.task('htmlDeal',function(){					//- 修改html的dom
-	var date = new Date().getTime();
-	return gulp.src('./'+y_Sz+'/*.html')
-	.pipe(replace(/_VERSION_/gi, date))
-	.pipe(processhtml())
-	.pipe(gulp.dest('./'+y_Dz+'/'));
-});		
-
 /*------------------------------Font----------------------------------*/
 
 gulp.task('font',['fontSpider'],function(){				//- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
@@ -120,8 +109,6 @@ gulp.task('svgSprite',['svgDeal'],function(){
 	.pipe(svg2png())						//- svg转png
 	.pipe(gulp.dest('./'+y_Sz+'/img/sprite/'));
 });
-
-
 
 gulp.task('svgDeal',['svgDel'],function () {	
 	var config = {	
@@ -189,7 +176,7 @@ gulp.task('CssBase64',function(){					//- css转base64
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));				
 });
 
-/*------------------------------Html----------------------------------*/
+/*------------------------------Html----------------------------------*/	
 
 gulp.task('Htmlmin',['HtmlUrl'],function(){										
 	var options = {
@@ -203,31 +190,19 @@ gulp.task('Htmlmin',['HtmlUrl'],function(){
 	.pipe(gulp.dest('./'+y_Dz+'/'));					
 });
 
-gulp.task('HtmlUrl',function() {
+gulp.task('HtmlUrl',['Htmldr'],function() {
 	return gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlurl({prefix: 'https://i-cut.cc/dist/'}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
-/*------------------------------Critical css----------------------------------*/
-
-gulp.task('Critical', function () {
+gulp.task('Htmldr',function(){					//- 修改html的dom
+	var date = new Date().getTime();
 	return gulp.src('./'+y_Dz+'/*.html')
-	.pipe(critical({
-	base: 'dist/', 
-	inline: true,
-	css: ['dist/css/index.css'],
-	width:320,
-	height:568,
-	minify: true,
-	//ignore:[/url\(/,'@font-face'],
-	pathPrefix: '/dist/'
-	})) 
-	.pipe(rename(function (path) {
-    path.basename += "-c";
-	}))
-	.pipe(gulp.dest('dist/'));
-});
+	.pipe(replace(/_VERSION_/gi, date))
+	.pipe(processhtml())
+	.pipe(gulp.dest('./'+y_Dz+'/'));
+});	
 
 /*------------------------------browserSync----------------------------------*/
 
@@ -240,5 +215,5 @@ gulp.task('bs',function(){
 });
 
 
-gulp.task('min',['cssDeal','imgDeal','imgCopy','htmlDeal','font']);
+gulp.task('min',['cssDeal','imgDeal','imgCopy','font']);
 gulp.task('base64',['HtmlBase64','CssBase64']);
