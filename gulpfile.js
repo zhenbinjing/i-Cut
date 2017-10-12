@@ -189,7 +189,7 @@ gulp.task('CssBase64',function(){					//- css转base64
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));				
 });
 
-/*------------------------------Htmlmin----------------------------------*/
+/*------------------------------Html----------------------------------*/
 
 gulp.task('Htmlmin',['HtmlUrl'],function(){										
 	var options = {
@@ -198,13 +198,13 @@ gulp.task('Htmlmin',['HtmlUrl'],function(){
 	minifyJS: true,							//- 压缩页面JS
 	minifyCSS: true							//- 压缩页面CSS
 	};
-	gulp.src('./'+y_Dz+'/*-c.html')
+	gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlmin(options))
 	.pipe(gulp.dest('./'+y_Dz+'/'));					
 });
 
 gulp.task('HtmlUrl',function() {
-	return gulp.src('./'+y_Dz+'/*-c.html')
+	return gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlurl({prefix: 'https://i-cut.cc/dist/'}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
@@ -219,6 +219,7 @@ gulp.task('Critical', function () {
 	css: ['dist/css/index.css'],
 	width:320,
 	height:568,
+	minify: true,
 	//ignore:[/url\(/,'@font-face'],
 	pathPrefix: '/dist/'
 	})) 
