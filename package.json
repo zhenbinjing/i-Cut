@@ -60,7 +60,6 @@
     "gulp-tinypng": "^1.0.2",
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6",
-    "gulp-util": "^3.0.8",
     "gulp-webp": "^2.3.0",
     "istanbul-instrumenter-loader": "^3.0.0",
     "karma": "^1.7.1",

@@ -24,8 +24,6 @@ var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 删除文件功能模块
 var path = require("path");						//- 路径模块
 var critical = require('critical').stream;
-var gutil = require('gulp-util');
-
 
 var y_Sz="src";								//- 源码环境路径
 var y_Dz="dist";							//- 上线环境路径	 
@@ -221,12 +219,12 @@ gulp.task('Critical', function () {
 	css: ['dist/css/index.css'],
 	width:320,
 	height:568,
-	pathPrefix: 'https://i-cut.cc/dist/'
+	//ignore:[/url\(/,'@font-face'],
+	pathPrefix: '/dist/'
 	})) 
 	.pipe(rename(function (path) {
     path.basename += "-c";
 	}))
-	.on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
 	.pipe(gulp.dest('dist/'));
 });
 
