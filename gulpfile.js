@@ -76,6 +76,16 @@ gulp.task('imgCopy',function(){
 	.pipe(gulp.dest('./'+y_Dz+'/img/'));	
 })
 
+/*------------------------------Html----------------------------------*/
+
+gulp.task('Htmldr',function(){					//- 修改html的dom
+	var date = new Date().getTime();
+	return gulp.src('./'+y_Sz+'/*.html')
+	.pipe(replace(/_VERSION_/gi, date))
+	.pipe(processhtml())
+	.pipe(gulp.dest('./'+y_Dz+'/'));
+});	
+
 /*------------------------------Font----------------------------------*/
 
 gulp.task('font',['fontSpider'],function(){				//- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
@@ -176,7 +186,7 @@ gulp.task('CssBase64',function(){					//- css转base64
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));				
 });
 
-/*------------------------------Html----------------------------------*/	
+/*------------------------------Htmlmin----------------------------------*/	
 
 gulp.task('Htmlmin',['HtmlUrl'],function(){										
 	var options = {
@@ -190,19 +200,11 @@ gulp.task('Htmlmin',['HtmlUrl'],function(){
 	.pipe(gulp.dest('./'+y_Dz+'/'));					
 });
 
-gulp.task('HtmlUrl',['Htmldr'],function() {
+gulp.task('HtmlUrl',function() {
 	return gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlurl({prefix: 'https://i-cut.cc/dist/'}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
-
-gulp.task('Htmldr',function(){					//- 修改html的dom
-	var date = new Date().getTime();
-	return gulp.src('./'+y_Dz+'/*.html')
-	.pipe(replace(/_VERSION_/gi, date))
-	.pipe(processhtml())
-	.pipe(gulp.dest('./'+y_Dz+'/'));
-});	
 
 /*------------------------------browserSync----------------------------------*/
 
@@ -214,6 +216,5 @@ gulp.task('bs',function(){
 	});
 });
 
-
-gulp.task('min',['cssDeal','imgDeal','imgCopy','font']);
+gulp.task('min',['cssDeal','imgDeal','imgCopy','Htmldr','font']);
 gulp.task('base64',['HtmlBase64','CssBase64']);
