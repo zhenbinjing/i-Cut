@@ -10,6 +10,33 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="email=no">
+<script type="text/javascript">
+(function (doc, win) {
+        var docEl = doc.documentElement,
+          isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+          dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
+          dpr = window.top === window.self? dpr : 1,
+          dpr = 1,
+          scale = 1 / dpr,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        docEl.dataset.dpr = dpr;
+        var metaEl = doc.createElement('meta');
+        metaEl.name = 'viewport';
+        metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+        docEl.firstElementChild.appendChild(metaEl);
+        var recalc = function () {
+            var designW = 750;
+            var width = docEl.clientWidth;
+            if (width / dpr > designW) {	
+                width = designW * dpr;
+            }
+            docEl.style.fontSize = 100 * (width / designW) + 'px';
+          };
+        recalc()
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+})(document, window);	
+</script>
 <!-- build:css css/index.css?v=_VERSION_-->
 <link rel="stylesheet" href="css/adjust.css">
 <link rel="stylesheet" href="css/emmet.css">
@@ -17,9 +44,8 @@
 <link rel="stylesheet" href="css/opencolor.css">
 <link rel="stylesheet" href="css/style.css">
 <!-- /build --> 
-<!-- build:js https://i-cut.cc/assets/rem.js?v=_VERSION_-->
-<script src="../assets/rem.js"></script>
-<!-- /build -->
+
+
 </head>
 <body class="grid-template">
   <header class="grid-header d-xs-f ai-xs-middle jc-xs-center fz-xs-20 bgc-yellow-7">导航</header>

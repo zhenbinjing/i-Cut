@@ -1,5 +1,6 @@
 ﻿var gulp = require('gulp');
 var concat = require('gulp-concat');					//- 多个文件合并为一个
+var rename = require("gulp-rename");					//- 重命名
 var replace = require('gulp-replace');					//- 文本替换
 var autoprefixer = require('gulp-autoprefixer');			//- 补充浏览器前缀
 var cleanCSS = require('gulp-clean-css');				//- 压缩CSS为一行
@@ -79,18 +80,6 @@ gulp.task('imgCopy',function(){
 
 /*------------------------------Html----------------------------------*/
 
-gulp.task('htmlmin',['htmlDeal'],function(){										
-	var options = {
-	removeComments: true,						//- 清除HTML注释
-	collapseWhitespace: true,					//- 压缩HTML
-	minifyJS: true,							//- 压缩页面JS
-	minifyCSS: true							//- 压缩页面CSS
-	};
-	gulp.src('./'+y_Dz+'/*.html')
-	.pipe(htmlmin(options))
-	.pipe(gulp.dest('./'+y_Dz+'/'));					
-});
-
 gulp.task('htmlDeal',function(){					//- 修改html的dom
 	var date = new Date().getTime();
 	return gulp.src('./'+y_Sz+'/*.html')
@@ -133,7 +122,10 @@ gulp.task('svgSprite',['svgDeal'],function(){
 	.pipe(gulp.dest('./'+y_Sz+'/img/sprite/'));
 });
 
-var config = {	
+
+
+gulp.task('svgDeal',['svgDel'],function () {	
+	var config = {	
 	templates: {
 		css: require("fs").readFileSync('./'+y_Sz+'/img/sprite/sprite.css', "utf-8")		
 	},
@@ -143,9 +135,7 @@ var config = {
 	svg: {sprite: '../img/sprite/sprite.svg'},
 	baseSize: 100,
 	preview: false
-};
-
-gulp.task('svgDeal',['svgDel'],function () {	
+	};
 	return gulp.src('./'+y_Sz+'/img/sprite/*.svg')
 	.pipe(svgSprite(config))	
 	.pipe(gulp.dest('./'+y_Sz+'/img/'));
@@ -200,10 +190,22 @@ gulp.task('CssBase64',function(){					//- css转base64
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));				
 });
 
-/*------------------------------Url----------------------------------*/
+/*------------------------------Htmlmin----------------------------------*/
+
+gulp.task('Htmlmin',['HtmlUrl'],function(){										
+	var options = {
+	removeComments: true,						//- 清除HTML注释
+	collapseWhitespace: true,					//- 压缩HTML
+	minifyJS: true,							//- 压缩页面JS
+	minifyCSS: true							//- 压缩页面CSS
+	};
+	gulp.src('./'+y_Dz+'/*-c.html')
+	.pipe(htmlmin(options))
+	.pipe(gulp.dest('./'+y_Dz+'/'));					
+});
 
 gulp.task('HtmlUrl', ['Critical'],function() {
-	gulp.src('./'+y_Dz+'/*.html')
+	return gulp.src('./'+y_Dz+'/*-c.html')
 	.pipe(htmlurl({prefix: 'https://i-cut.cc/dist/'}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
@@ -213,14 +215,17 @@ gulp.task('HtmlUrl', ['Critical'],function() {
 gulp.task('Critical', function () {
 	return gulp.src('./'+y_Dz+'/*.html')
 	.pipe(critical({
-	base: 'dist/', 
+	base: path.resolve(process.cwd(), y_Dz), 
 	inline: true,
-	css: ['dist/css/index.css'],
-	minify: true,
+	css: [path.resolve(process.cwd(), y_Dz) + '/css/index.css'],
 	width:320,
-	height:568
-	}))   
-	.pipe(gulp.dest('dist/'));
+	height:568,
+	pathPrefix: 'https://i-cut.cc/dist/'
+	})) 
+	.pipe(rename(function (path) {
+    path.basename += "-c";
+	}))
+	.pipe(gulp.dest(path.resolve(process.cwd(), y_Dz)));
 });
 
 /*------------------------------browserSync----------------------------------*/
@@ -234,5 +239,5 @@ gulp.task('bs',function(){
 });
 
 
-gulp.task('min',['cssDeal','imgDeal','imgCopy','htmlmin','font']);
+gulp.task('min',['cssDeal','imgDeal','imgCopy','htmlDeal','font']);
 gulp.task('base64',['HtmlBase64','CssBase64']);
