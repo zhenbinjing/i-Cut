@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CSS Grid</title>  
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<script type="text/javascript">
+(function (doc, win) {
+        var docEl = doc.documentElement,
+          isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+          dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
+          dpr = window.top === window.self? dpr : 1,
+          dpr = 1,
+          scale = 1 / dpr,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        docEl.dataset.dpr = dpr;
+        var metaEl = doc.createElement('meta');
+        metaEl.name = 'viewport';
+        metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+        docEl.firstElementChild.appendChild(metaEl);
+        var recalc = function () {
+            var designW = 750;
+            var width = docEl.clientWidth;
+            if (width / dpr > designW) {	
+                width = designW * dpr;
+            }
+            docEl.style.fontSize = 100 * (width / designW) + 'px';
+          };
+        recalc()
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+})(document, window);	
+</script>
+<link rel="stylesheet" href="https://i-cut.cc/dist/css/index.css?v=1507881211720"/>
+
+
+</head>
+<body class="grid-template">
+  <header class="grid-header d-xs-f ai-xs-middle jc-xs-center fz-xs-20 bgc-yellow-7">导航</header>
+  <main   class="grid-main   d-xs-f ai-xs-middle jc-xs-center fz-xs-20">内容</main>
+  <aside  class="grid-left   d-xs-f ai-xs-middle jc-xs-center fz-xs-20 bgc-gray-3">左侧</aside>
+  <aside  class="grid-right  d-xs-f ai-xs-middle jc-xs-center fz-xs-20 bgc-gray-3">右侧</aside>
+  <footer class="grid-footer d-xs-f ai-xs-middle jc-xs-center fz-xs-20 bgc-gray-7 c-white-0">底部</footer>
+</body>
+</html>
+
+

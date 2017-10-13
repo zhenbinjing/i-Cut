@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FlexboxGrid模版</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<script type="text/javascript">
+(function (doc, win) {
+        var docEl = doc.documentElement,
+          isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+          dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
+          dpr = window.top === window.self? dpr : 1,
+          dpr = 1,
+          scale = 1 / dpr,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        docEl.dataset.dpr = dpr;
+        var metaEl = doc.createElement('meta');
+        metaEl.name = 'viewport';
+        metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+        docEl.firstElementChild.appendChild(metaEl);
+        var recalc = function () {
+            var designW = 750;
+            var width = docEl.clientWidth;
+            if (width / dpr > designW) {	
+                width = designW * dpr;
+            }
+            docEl.style.fontSize = 100 * (width / designW) + 'px';
+          };
+        recalc()
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+})(document, window);	
+</script>
+<link rel="stylesheet" href="https://i-cut.cc/dist/css/index.css?v=1507881211720"/>
+</head>
+
+<body>
+<div class="container">	
+	<div class="row ta-xs-c fz-sm-30 fz-xs-60 c-white-0">
+		<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>
+		<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>
+		<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>
+		<div class="col-lg-2 col-md-3 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>
+		<div class="col-lg-2 col-md-6 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>
+		<div class="col-lg-2 col-md-6 col-sm-4"><div class="bgc-blue-7">2-3-4-12</div></div>												
+	</div>
+	<div class="row ta-xs-c fz-sm-30 fz-xs-60 c-white-0">
+		<div class="col-lg-3 col-sm-4"><div class="bgc-orange-7">3-4-12</div></div>
+		<div class="col-lg-8 col-sm-8 offset-lg-1">
+			<div class="row">
+			<div class="col-xs-3"><div class="bgc-orange-7">3</div></div>
+			<div class="col-xs-9"><div class="bgc-orange-7">9</div></div>
+			</div>
+		</div>
+	</div>
+	<div class="row ta-xs-c fz-sm-30 fz-xs-60 c-white-0 fxd-lg-rr">
+		<div class="grow-xs-1"><div class="bgc-blue-7">1</div></div>
+		<div class="grow-xs-1"><div class="bgc-blue-7">1</div></div>
+		<div class="grow-xs-1"><div class="bgc-blue-7">1</div></div>
+		<div class="grow-xs-1"><div class="bgc-blue-7">1</div></div>
+		<div class="grow-xs-1"><div class="bgc-blue-7">1</div></div>
+	</div>	
+	<div class="row ta-xs-c fz-sm-30 fz-xs-60 c-white-0">
+		<div class="grow-xs-1"><div class="bgc-orange-7">1</div></div>
+		<div class="grow-xs-2"><div class="bgc-orange-7">2</div></div>
+		<div class="grow-xs-3"><div class="bgc-orange-7">3</div></div>
+		<div class="grow-xs-4"><div class="bgc-orange-7">4</div></div>
+		<div class="grow-xs-5"><div class="bgc-orange-7">5</div></div>
+	</div>
+	<div class="row ta-xs-c fz-sm-30 fz-xs-60 c-white-0">
+		<div class="col-lg-4 col-md-6"><div class="bgc-blue-7">a</div></div>
+		<div class="col-lg-4 col-md-12 order-lg-0 order-md-first order-xs-last"><div class="bgc-blue-7">b</div></div>
+		<div class="col-lg-4 col-md-6"><div class="bgc-blue-7">c</div></div>
+	</div>
+</div>
+</body>
+</html>
