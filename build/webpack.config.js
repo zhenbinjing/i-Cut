@@ -40,15 +40,20 @@ module.exports = {
 		//jquery: srcDir + "/js/lib/jquery.min.js",
 		}          
 	},	
-	plugins: [		
+	plugins: [	
+		//提升变量作用域
 		new webpack.optimize.ModuleConcatenationPlugin(),
+		
+		//将公共代码抽离出来合并为一个文件		
+		new webpack.optimize.CommonsChunkPlugin({
+			name: "commons",
+			filename: "commons.js",
+		}),
 		new UglifyJsPlugin()
-		//将公共代码抽离出来合并为一个文件
-		//new CommonsChunkPlugin('common'),
 		//提供全局的变量，在模块中使用无需用require引入
 		//new webpack.ProvidePlugin({
         	//    jQuery: "jquery",
         	//    $: "jquery",
-        	//}),		
+		//}),
 		]
 };
