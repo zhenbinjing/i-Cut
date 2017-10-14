@@ -207,8 +207,8 @@ gulp.task('HtmlUrl',function() {
 	return gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlurl({
 		prefix: 'https://i-cut.cc/dist/',
-		arrtdate: ["img:src", "img:srcset", "img:t-src", "img:data-src", "script:src", "link:href"]
- }))
+		arrtdate: ["img:src", "img:srcset", "img:s-src", "img:data-src", "script:src", "link:href"]
+	}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
