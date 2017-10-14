@@ -7,6 +7,6 @@ TouchSlide({
 	effect:"left", 
 	autoPlay:true,//自动播放
 	autoPage:true,//自动分页
-	switchLoad:"data-src"
+	switchLoad:"_src"
 });
 scrollLoad({src:'data-src',time: 100});

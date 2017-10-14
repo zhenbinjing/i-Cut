@@ -18,7 +18,7 @@ var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
 var uglify = require('gulp-uglify');					//- js压缩
-var htmlurl = require('gulp-html-url-prefix');				//- html文件添加域名前缀
+var htmlurl = require('gulp-html-url-prefix-custom');	//- html文件添加域名前缀
 var pump = require('pump');						//- 报错提示
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 删除文件功能模块
@@ -205,7 +205,10 @@ gulp.task('Htmlmin',['HtmlUrl'],function(){
 
 gulp.task('HtmlUrl',function() {
 	return gulp.src('./'+y_Dz+'/*.html')
-	.pipe(htmlurl({prefix: 'https://i-cut.cc/dist/'}))
+	.pipe(htmlurl({
+		prefix: 'https://i-cut.cc/dist/',
+		arrtdate: ["img:src", "img:srcset", "img:_src", "img:data-src", "script:src", "link:href"]
+ }))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });
 
