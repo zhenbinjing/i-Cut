@@ -68,7 +68,18 @@
 </div>
 <br/><br/><br/><br/><br/><br/><br/>
 <img src="img/d2.gif" s-src="img/c.png?v=_VERSION_" class="bdtw-xs-3 bdts-solid bdc-orange-7" alt="" />
-<script src="js/index.js?v=_VERSION_"></script>
+<script type="text/javascript">
+function downloadJSAtOnload() {
+var element = document.createElement("script");
+element.src = "js/index.js?v=_VERSION_";
+document.body.appendChild(element);
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
 </all-img-base64>
 </body>
 </html>
