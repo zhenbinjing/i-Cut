@@ -11,6 +11,6 @@ critical.generate({
     height: 568,
 	minify: true,
 	//ignore: ['@font-face',/url\(/]
-	pathPrefix: 'https://i-cut.cc/dist/',
+	pathPrefix: '/dist/',
 	dest: 'rem.min.html'
 })	
