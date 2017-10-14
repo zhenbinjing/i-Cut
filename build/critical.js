@@ -12,8 +12,5 @@ critical.generate({
 	minify: true,
 	//ignore: ['@font-face',/url\(/]
 	pathPrefix: '/dist/',
-	dest: 'rem.cl.html',
-	penthouse: {
-        blockJSRequests: false,
-    }
+	dest: 'rem.cl.html'
 })	
