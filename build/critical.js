@@ -10,7 +10,7 @@ critical.generate({
     width: 320,
     height: 568,
 	minify: true,
-	//ignore: ['@font-face',/url\(/]
-	pathPrefix: '/dist/',
+	ignore: ['@font-face',/url\(/],
+	//pathPrefix: '/dist/',
 	dest: 'rem.min.html'
 })	
