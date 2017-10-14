@@ -18,7 +18,7 @@ var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var processhtml = require('gulp-processhtml');				//- html更改模板
 var htmlmin = require('gulp-htmlmin');					//- html压缩
 var uglify = require('gulp-uglify');					//- js压缩
-var htmlurl = require('gulp-html-url-prefix-custom');	//- html文件添加域名前缀
+var htmlurl = require('gulp-html-url-prefix-custom');			//- html文件添加域名前缀
 var pump = require('pump');						//- 报错提示
 var browserSync = require('browser-sync');				//- 浏览器同步测试工具
 var del = require('del');						//- 删除文件功能模块
@@ -78,7 +78,7 @@ gulp.task('imgCopy',function(){
 
 /*------------------------------Html----------------------------------*/
 
-gulp.task('Htmldr',function(){					//- 修改html的dom
+gulp.task('Htmldr',function(){						//- 修改html的dom
 	var date = new Date().getTime();
 	return gulp.src('./'+y_Sz+'/*.html')
 	.pipe(replace(/_VERSION_/gi, date))
@@ -195,15 +195,15 @@ gulp.task('Htmlmin',['HtmlUrl'],function(){
 	minifyJS: true,							//- 压缩页面JS
 	minifyCSS: true							//- 压缩页面CSS
 	};
-	gulp.src('./'+y_Dz+'/rem.cl.html')
+	gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlmin(options))
-	.pipe(rename(function (path) {
-    path.basename += ".min";
-	}))
+	//.pipe(rename(function (path) {
+	//path.basename += ".min";
+	//}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));					
-});
+	});
 
-gulp.task('HtmlUrl',function() {
+gulp.task('HtmlUrl',function() {					//- 添加绝对域名路径
 	return gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlurl({
 		prefix: 'https://i-cut.cc/dist/',
