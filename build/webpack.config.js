@@ -1,5 +1,4 @@
 ﻿'use strict';
-//let CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 let webpack = require('webpack');
 let UglifyJsPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
 let path = require('path');
@@ -45,11 +44,14 @@ module.exports = {
 		new webpack.optimize.ModuleConcatenationPlugin(),
 		
 		//将公共代码抽离出来合并为一个文件		
-		new webpack.optimize.CommonsChunkPlugin({
-			name: "commons",
-			filename: "commons.js",
-		}),
+		//new webpack.optimize.CommonsChunkPlugin({
+		//	name: "commons",
+		//	filename: "commons.js",
+		//}),
+		
+		//压缩
 		new UglifyJsPlugin()
+		
 		//提供全局的变量，在模块中使用无需用require引入
 		//new webpack.ProvidePlugin({
         	//    jQuery: "jquery",

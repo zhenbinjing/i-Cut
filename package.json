@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "1.9.14",
+  "version": "1.9.15",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
@@ -50,7 +50,7 @@
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-font-spider": "^0.3.6",
-    "gulp-html-url-prefix-custom": "^0.1.0",
+    "gulp-html-url-prefix-custom": "^0.2.0",
     "gulp-htmlmin": "^3.0.0",
     "gulp-processhtml": "^1.1.0",
     "gulp-px3rem": "^0.3.0",
