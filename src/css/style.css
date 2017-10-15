@@ -18,9 +18,11 @@
 .focus .hd ul { display: inline-block; height: 11px;/*no*/ padding: 3px 5px;/*no*/ background-color: rgba(255,255,255,0.7); border-radius: 6px;/*no*/ font-size: 0; vertical-align: top; }
 .focus .hd ul li { display: inline-block; width: 5px;/*no*/ height: 5px;/*no*/ border-radius:5px;/*no*/ background: #ccc; margin: 0 5px;/*no*/  vertical-align: top; overflow: hidden; }
 .focus .hd ul .on { background: #e75223; }
-.focus .bd { position: relative; z-index: 0; }
-.focus .bd li img{ max-width:100%; }
+.focus .bd {position: relative; z-index: 0; }
+.focus .bd ul li{display: inline-block;}
+.focus .bd ul li img{ max-width:100%; }
 
+.bgc-e9e7e2{background-color: #e9e7e2;}
 
 /*-----------------------------字体-----------------------------*/
 
@@ -36,7 +38,7 @@
 
 /*-----------------------------图标----------------------------*/
 
-.aaa{background: url(../img/d.gif);}
+.aaa{background: url(../img/2.gif);}
 /*grid*/
 html,.grid-template{height: 100%;}
 
