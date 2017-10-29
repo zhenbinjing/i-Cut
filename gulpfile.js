@@ -1,6 +1,5 @@
 ﻿var gulp = require('gulp');
 var concat = require('gulp-concat');					//- 多个文件合并为一个
-var rename = require("gulp-rename");					//- 重命名
 var replace = require('gulp-replace');					//- 文本替换
 var autoprefixer = require('gulp-autoprefixer');			//- 补充浏览器前缀
 var cleanCSS = require('gulp-clean-css');				//- 压缩CSS为一行
@@ -13,6 +12,7 @@ var tinypng = require('gulp-tinypng');					//- png图片压缩
 var svgmin = require('gulp-svgmin');					//- svg图片压缩
 var svgSprite = require("gulp-svg-sprites");				//- svg合并
 var svg2png = require("gulp-svg2png");					//- svg转png
+var svgcss = require('gulp-svg-css');					//- svg-datauri
 var webp = require('gulp-webp');					//- 转webp图片
 var fontSpider = require('gulp-font-spider');				//- 删除没用到的字体
 var processhtml = require('gulp-processhtml');				//- html更改模板
@@ -29,32 +29,32 @@ var y_Dz="dist";							//- 上线环境路径
 
 /*------------------------------Css----------------------------------*/
 
-gulp.task('cssDeal',['sass'],function(){						
+gulp.task('cssDeal',['sass'],function(){		
 	var date=new Date().getTime();					//- 创建版本时间	
 	gulp.src(['./'+y_Sz+'/css/*.css'])				//- 需要处理的css文件，放到一个字符串数组里								
 	.pipe(replace(/_VERSION_/gi,date))				//- 文件指纹
-	.pipe(uncss({
-	html: ['./'+y_Sz+'/**/*.html'],					//- 检查的页面
-	ignore: ['abc', '.abc', '#abc']					//- 忽略的标签 class or id or 分号隔开
-	}))
 	.pipe(px3rem({remUnit: 100}))					//- px/100转rem值，如果有不想转换的类在值后面加/*no*/
+	.pipe(uncss({
+		html: ['./'+y_Sz+'/**/*.html'],				//- 检查的页面
+		ignore: ['abc', '.abc', '#abc']				//- 忽略的标签 class or id or 分号隔开
+	}))
 	.pipe(cleanCSS({						//- 压缩处理成一行,兼容ie
 		compatibility: 'ie8',
 		keepBreaks: false,
 		keepSpecialComments: '*'
 	}))
 	.pipe(autoprefixer({
-	browsers: [
-	'last 2 version',						//- 主流浏览器的最新两个版本
-	'ios 7',							//- IOS7版本
-	'android 2.3',							//- android 2.3版本
-	'last 2 Explorer versions'],					//- IE的最新两个版本 'last 2 Explorer versions'
-	cascade: true,							//- 是否美化属性值 默认：true 
-	remove:true							//- 是否去掉不必要的前缀 默认：true 
-	}))	
+		browsers: [
+		'last 2 version',					//- 主流浏览器的最新两个版本
+		'ios 7',						//- IOS7版本
+		'android 2.3',						//- android 2.3版本
+		'last 2 Explorer versions'],				//- IE的最新两个版本 'last 2 Explorer versions'
+		cascade: true,						//- 是否美化属性值 默认：true 
+		remove:true						//- 是否去掉不必要的前缀 默认：true 
+	}))
 	.pipe(concat('index.css'))					//- 合并后的文件名
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));				//- 输出文件本地
-});
+})
 
 gulp.task('sass', function () {
 	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
@@ -78,7 +78,7 @@ gulp.task('imgCopy',function(){
 
 /*------------------------------Html----------------------------------*/
 
-gulp.task('Htmldr',function(){						//- 修改html的dom
+gulp.task('Htmldr',function(){						
 	var date = new Date().getTime();
 	return gulp.src('./'+y_Sz+'/*.html')
 	.pipe(replace(/_VERSION_/gi, date))
@@ -95,13 +95,13 @@ gulp.task('font',['fontSpider'],function(){				//- 先把fontSpider命令执行�
 });
 
 gulp.task('fontSpider',function(){
-	return gulp.src(path.resolve(process.cwd(), y_Sz) + '/*.html')	//- 删除多余的字体和图标
+	return gulp.src(path.resolve(process.cwd(), y_Sz) + '/*.html')	
 	.pipe(fontSpider());
 });
 
 /*------------------------------Jsmin----------------------------------*/
 
-gulp.task('jsmin', function (cb) {					//- 合并压缩js
+gulp.task('jsmin', function (cb) {					
 	pump([
 	gulp.src('./'+y_Sz+'/js/*.js'),
 	uglify(),
@@ -112,12 +112,18 @@ gulp.task('jsmin', function (cb) {					//- 合并压缩js
 
 /*------------------------------SVG----------------------------------*/
 
-gulp.task('svgSprite',['svgDeal'],function(){
-	gulp.src('./'+y_Sz+'/img/sprite/sprite.svg')	
-	.pipe(svgmin())							//- svg压缩
-	.pipe(gulp.dest('./'+y_Dz+'/img/sprite/'))
-	.pipe(svg2png())						//- svg转png
-	.pipe(gulp.dest('./'+y_Sz+'/img/sprite/'));
+gulp.task('svgSprite',['svgMin'],function(){
+	gulp.src('./'+y_Sz+'/img/sprite/sprite.svg')
+	.pipe(svg2png())						
+	.pipe(gulp.dest('./'+y_Sz+'/img/sprite/'))
+});
+
+gulp.task('svgMin',['svgDeal'],function(){
+	return gulp.src('./'+y_Sz+'/img/sprite/sprite.svg')
+	.pipe(svgmin())							
+	.pipe(gulp.dest('./'+y_Dz+'/img/sprite/'))	
+	.pipe(svgcss({fileName: 'svgcss'}))
+	.pipe(gulp.dest('./'+y_Sz+'/css/'))
 });
 
 gulp.task('svgDeal',['svgDel'],function () {	
@@ -125,6 +131,7 @@ gulp.task('svgDeal',['svgDel'],function () {
 	templates: {
 		css: require("fs").readFileSync('./'+y_Sz+'/img/sprite/sprite.css', "utf-8")		
 	},
+	common: 'icon-sprite',
 	cssFile: '../css/sprite.css',
 	pngPath: '../img/sprite/sprite.png',
 	svgPath: '../img/sprite/sprite.svg',
@@ -143,7 +150,7 @@ gulp.task('svgDel',function(){
 
 /*------------------------------Webp----------------------------------*/
 
-gulp.task('webp',['webp_css'],function(){				//- Webp转换
+gulp.task('webp',['webp_css'],function(){				
 	del(['./'+y_Dz+'/img/**/*.{jpg,png}', '!./'+y_Dz+'/img/**/*.{webp}'])
 });	 
 
@@ -160,14 +167,14 @@ gulp.task('webp_html',['webp_img'],function(){
 });
 
 gulp.task('webp_img',function(){
-	return gulp.src('./'+y_Dz+'/img/**/*.{jpg,png}')		//- 自行添加图片格式
+	return gulp.src('./'+y_Dz+'/img/**/*.{jpg,png}')		
 	.pipe(webp())
 	.pipe(gulp.dest('./'+y_Dz+'/img/'))
 });
 
 /*------------------------------HtmlBase64---------------------------------*/
 
-gulp.task('HtmlBase64',function() {					//- img转base64	
+gulp.task('HtmlBase64',function() {					
 	gulp.src('./'+y_Dz+'/*.html')
    	.pipe(img64({limit: '8kb', deleteAfterEncoding: true}))		//- 被编码后是否删除图像
    	.pipe(gulp.dest('./'+y_Dz+'/'));
@@ -175,10 +182,10 @@ gulp.task('HtmlBase64',function() {					//- img转base64
 
 /*------------------------------CssBase64----------------------------------*/
 
-gulp.task('CssBase64',function(){					//- css转base64						
+gulp.task('CssBase64',function(){										
 	return gulp.src(['./'+y_Dz+'/css/*.css'])										
 	.pipe(css64({
-	extensions: ['jpg','png','svg','gif','webp'],
+	extensions: ['jpg','png','gif','webp'],
 	maxImageSize: 2*1024,// bytes
 	deleteAfterEncoding: true
 	}))
@@ -197,13 +204,10 @@ gulp.task('Htmlmin',['HtmlUrl'],function(){
 	};
 	gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlmin(options))
-	//.pipe(rename(function (path) {
-	//path.basename += ".min";
-	//}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));					
 	});
 
-gulp.task('HtmlUrl',function() {					//- 添加绝对域名路径
+gulp.task('HtmlUrl',function() {					
 	return gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlurl({
 		prefix: 'https://i-cut.cc/dist/',
