@@ -6,11 +6,11 @@ var lj = path.resolve(process.cwd(), y_Dz);
 critical.generate({
 	inline: true,
 	base: lj,
-	src: 'rem.html',     
+	src: 'index.html',     
 	width: 320,
 	height: 568,
 	minify: true,
 	ignore: ['@font-face',/url\(/],
 	//pathPrefix: '/dist/',
-	dest: 'rem.min.html'
+	dest: 'index.min.html'
 })	
