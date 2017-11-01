@@ -12,5 +12,5 @@ critical.generate({
 	minify: true,
 	ignore: ['@font-face',/url\(/],
 	//pathPrefix: '/dist/',
-	dest: 'index.min.html'
+	dest: 'index.html'
 })	
