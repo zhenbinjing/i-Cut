@@ -29,7 +29,7 @@ var y_Dz="dist";                                            //- 上线环境路�
 
 /*------------------------------Css----------------------------------*/
 
-gulp.task('cssDeal',function () {
+gulp.task('cssDeal',['cssMin'],function () {
 	gulp.src(['./'+y_Dz+'/css/*.css'])
 	.pipe(cleanCSS({compatibility: 'ie8',keepSpecialComments: '*'}))
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));
