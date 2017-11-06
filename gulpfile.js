@@ -29,13 +29,13 @@ var y_Dz="dist";                                            //- 上线环境路�
 
 /*------------------------------Css----------------------------------*/
 
-gulp.task('cssDeal',['cssMin'],function () {
+gulp.task('cssMin',['cssDeal'],function () {
 	gulp.src(['./'+y_Dz+'/css/*.css'])
 	.pipe(cleanCSS({compatibility: 'ie8',keepSpecialComments: '*'}))
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));
 });
 
-gulp.task('cssMin',['sass'],function(){		
+gulp.task('cssDeal',['Sass'],function(){		
 	var date=new Date().getTime();                     //- 创建版本时间	
 	return gulp.src(['./'+y_Sz+'/css/*.css'])          //- 需要处理的css文件，放到一个字符串数组里								
 	.pipe(replace(/_VERSION_/gi,date))                 //- 文件指纹
@@ -57,7 +57,7 @@ gulp.task('cssMin',['sass'],function(){
        .pipe(gulp.dest('./'+y_Dz+'/css/'));                //- 输出文件本地
 })
 
-gulp.task('sass', function () {
+gulp.task('Sass', function () {
 	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(gulp.dest('./'+y_Sz+'/css/'));
@@ -79,7 +79,7 @@ gulp.task('imgCopy',function(){
 
 /*------------------------------Html----------------------------------*/
 
-gulp.task('Htmldr',function(){						
+gulp.task('htmlDeal',function(){						
 	var date = new Date().getTime();
 	return gulp.src('./'+y_Sz+'/*.html')
 	.pipe(replace(/_VERSION_/gi, date))
@@ -89,7 +89,7 @@ gulp.task('Htmldr',function(){
 
 /*------------------------------Font----------------------------------*/
 
-gulp.task('font',['fontSpider'],function(){             //- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
+gulp.task('fontCopy',['fontSpider'],function(){             //- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
     gulp.src(['./'+y_Sz+'/font/**'],{                   //- 被复制的文件夹下的所有文件
     base: './'+y_Sz+'/font'})                           //- 被复制的目标路径 	
 	.pipe(gulp.dest('./'+y_Dz+'/font/'))					
@@ -102,7 +102,7 @@ gulp.task('fontSpider',function(){
 
 /*------------------------------Jsmin----------------------------------*/
 
-gulp.task('jsmin', function (cb) {					
+gulp.task('jsMin', function (cb) {					
 	pump([
 	gulp.src('./'+y_Sz+'/js/*.js'),
 	uglify(),
@@ -175,7 +175,7 @@ gulp.task('webp_img',function(){
 
 /*------------------------------HtmlBase64---------------------------------*/
 
-gulp.task('HtmlBase64',function() {					
+gulp.task('htmlBase64',function() {					
 	gulp.src('./'+y_Dz+'/*.html')
    	.pipe(img64({limit: '8kb', deleteAfterEncoding: true}))   //- 被编码后是否删除图像
    	.pipe(gulp.dest('./'+y_Dz+'/'));
@@ -183,7 +183,7 @@ gulp.task('HtmlBase64',function() {
 
 /*------------------------------CssBase64----------------------------------*/
 
-gulp.task('CssBase64',function(){										
+gulp.task('cssBase64',function(){										
 	return gulp.src(['./'+y_Dz+'/css/*.css'])										
 	.pipe(css64({
 	extensions: ['jpg','png','gif','webp'],
@@ -196,7 +196,7 @@ gulp.task('CssBase64',function(){
 
 /*------------------------------Htmlmin----------------------------------*/	
 
-gulp.task('Htmlmin',['HtmlUrl'],function(){										
+gulp.task('htmlMin',['htmlUrl'],function(){										
 	var options = {
 	removeComments: true,                                    //- 清除HTML注释
 	collapseWhitespace: true,                                //- 压缩HTML
@@ -208,7 +208,7 @@ gulp.task('Htmlmin',['HtmlUrl'],function(){
 	.pipe(gulp.dest('./'+y_Dz+'/'));					
 	});
 
-gulp.task('HtmlUrl',function() {					
+gulp.task('htmlUrl',function() {					
 	return gulp.src('./'+y_Dz+'/*.html')
 	.pipe(htmlurl({
 		prefix: 'https://i-cut.cc/dist/',
@@ -227,5 +227,5 @@ gulp.task('bs',function(){
 	});
 });
 
-gulp.task('min',['cssDeal','imgDeal','imgCopy','Htmldr','font']);
-gulp.task('base64',['HtmlBase64','CssBase64']);
+gulp.task('min',['cssMin','imgDeal','imgCopy','htmlDeal','fontCopy']);
+gulp.task('base64',['htmlBase64','cssBase64']);
