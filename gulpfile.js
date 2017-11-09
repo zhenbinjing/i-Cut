@@ -18,6 +18,7 @@ var fontSpider = require('gulp-font-spider');               //- 删除没用到�
 var processhtml = require('gulp-processhtml');              //- html更改模板
 var htmlmin = require('gulp-htmlmin');                      //- html压缩
 var uglify = require('gulp-uglify');                        //- js压缩
+let uglifyes = require('gulp-uglify-es').default;           //- es6压缩
 var htmlurl = require('gulp-html-url-prefix-custom');       //- html文件添加域名前缀
 var pump = require('pump');                                 //- 报错提示
 var browserSync = require('browser-sync');                  //- 浏览器同步测试工具
@@ -109,6 +110,12 @@ gulp.task('jsMin', function (cb) {
 	concat('index.js'),
 	gulp.dest('./'+y_Dz+'/js/')
 	],cb);
+});
+
+gulp.task("esMin", function () {
+	gulp.src('./'+y_Sz+'/js/plugins/lazyload.js')
+	.pipe(uglifyes())
+	.pipe(gulp.dest('./'+y_Dz+'/js/'));
 });
 
 /*------------------------------SVG----------------------------------*/
@@ -227,5 +234,5 @@ gulp.task('bs',function(){
 	});
 });
 
-gulp.task('min',['cssMin','imgDeal','imgCopy','htmlDeal','fontCopy']);
+gulp.task('min',['cssMin','imgDeal','imgCopy','htmlDeal','fontCopy','esMin']);
 gulp.task('base64',['htmlBase64','cssBase64']);
