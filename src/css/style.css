@@ -28,11 +28,11 @@
 /*-----------------------------字体-----------------------------*/
 
 @font-face { 
-	font-family: 'jdxsj';
-	src: url('../font/cjxjt.eot');
-	src: url('../font/cjxjt.eot') format('embedded-opentype'),
-		 url('../font/cjxjt.woff') format('woff'),
-		 url('../font/cjxjt.ttf') format('truetype'),
-		 url('../font/cjxjt.svg') format('svg');	 
+	font-family: 'stfyt';
+	src: url('../font/stfyt.eot');
+	src: url('../font/stfyt.eot') format('embedded-opentype'),
+		 url('../font/stfyt.woff') format('woff'),
+		 url('../font/stfyt.ttf') format('truetype'),
+		 url('../font/stfyt.svg') format('svg');	 
  }
-.jdxsj { font-family: 'jdxsj'; }
+.stfyt{ font-family: 'stfyt'; }
