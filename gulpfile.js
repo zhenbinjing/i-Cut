@@ -113,7 +113,7 @@ gulp.task('jsMin', function (cb) {
 });
 
 gulp.task("esMin", function () {
-	gulp.src('./'+y_Sz+'/js/plugins/lazyload.js')
+	gulp.src('./'+y_Sz+'/js/*.js')
 	.pipe(uglifyes())
 	.pipe(gulp.dest('./'+y_Dz+'/js/'));
 });
@@ -234,5 +234,5 @@ gulp.task('bs',function(){
 	});
 });
 
-gulp.task('min',['cssMin','imgDeal','imgCopy','htmlDeal','fontCopy','esMin']);
+gulp.task('min',['cssMin','imgDeal','imgCopy','htmlDeal','fontCopy']);
 gulp.task('base64',['htmlBase64','cssBase64']);

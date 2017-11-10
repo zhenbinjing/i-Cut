@@ -1,4 +1,5 @@
 ﻿import TouchSlide from './plugins/TouchSlide';
+import scrollLoad from './plugins/scrollLoad';
 TouchSlide({ 
 	slideCell:"#focus",
 	titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
@@ -8,4 +9,8 @@ TouchSlide({
 	interTime:4000,//切换时间
 	autoPage:true,//自动分页
 	switchLoad:"s-src"
+});
+scrollLoad({  
+	src:'data-src',
+	time: 100
 });
