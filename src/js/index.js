@@ -12,5 +12,5 @@ TouchSlide({
 });
 scrollLoad({  
 	src:'data-src',
-	time: 0
+	time: 100
 });
