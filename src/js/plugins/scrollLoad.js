@@ -5,7 +5,7 @@ export default function scrollLoad (options) {
                 return p1.toUpperCase();
             });
         };
-        this.getStyle = function (element, property) {
+        function getStyle (element, property) {
             if (arguments.length != 2) return false;
             var value = element.style[camelize(property)];
             if (!value) {
@@ -28,7 +28,8 @@ export default function scrollLoad (options) {
                 var attrSrc = docImg[i].getAttribute(defaults.src),
                     o = docImg[i], tag = o.nodeName.toLowerCase();
                 if (o) {
-                    postPage = o.getBoundingClientRect().top + window.document.documentElement.scrollTop + window.document.body.scrollTop; postWindow = postPage + Number(this.getStyle(o, 'height').replace('px', ''));
+                    var postPage = o.getBoundingClientRect().top + window.document.documentElement.scrollTop + window.document.body.scrollTop; 
+		    var postWindow = postPage + Number(getStyle(o, 'height').replace('px', ''));
                     if ((postPage > offsetPage && postPage < offsetWindow) || (postWindow > offsetPage && postWindow < offsetWindow)) {
                         if (tag === "img" && attrSrc !== null) {
                             o.setAttribute("src", attrSrc);

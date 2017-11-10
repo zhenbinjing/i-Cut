@@ -6,11 +6,11 @@ TouchSlide({
 	mainCell:".bd ul", 
 	effect:"left", 
 	autoPlay:true,//自动播放,
-	interTime:4000,//切换时间
+	interTime:3000,//切换时间
 	autoPage:true,//自动分页
 	switchLoad:"s-src"
 });
 scrollLoad({  
 	src:'data-src',
-	time: 100
+	time: 0
 });
