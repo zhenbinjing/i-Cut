@@ -1,4 +1,6 @@
-﻿import uglify from 'rollup-plugin-uglify';
+﻿import buble from 'rollup-plugin-buble';
+import babel from 'rollup-plugin-babel';
+import uglify from 'rollup-plugin-uglify';
 
 export default {
   input: './src/js/index.js',
@@ -12,7 +14,13 @@ export default {
             // iife – 使用于<script> 标签引用的方式
             // umd – 适用于CommonJs和AMD风格通用模式
   },
-  plugins: [ 	
+  plugins: [
+	buble(),
+	babel({
+	    exclude: 'node_modules/**',
+	    plugins: ['external-helpers'],
+	    externalHelpers: true
+	}),	
 	uglify()
   ]
 };
