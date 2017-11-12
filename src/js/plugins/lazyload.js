@@ -26,7 +26,7 @@
 	  }
 	}
 
-	function throttle(fn, mustRun = 100) {
+	function throttle(fn, mustRun = 500) {
 	  const timer = null;
 	  let previous = null;
 	  return function() {
