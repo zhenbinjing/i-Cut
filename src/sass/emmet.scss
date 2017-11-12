@@ -15,6 +15,10 @@ $nb0:0; $nb50:50%; $nb100:100%;
 @for $i from 0 through 10 {	
 	.z-#{$i}{z-index:$i; }
 }
+@for $i from 0 through 10 {	
+	.op-#{$i}{opacity:$i/10; }
+}
+
 
 //背景百分比定位//
 .bgp_50p0  { background-position: $nb50 $nb0; } 		// center top
