@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "1.10.11",
+  "version": "1.10.12",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
@@ -11,8 +11,8 @@
     "rollup": "rollup -c ./build/rollup.config.js",
     "rpts": "rollup -c ./build/rollup.config.ts.js",
     "rpbl": "rollup -c ./build/rollup.config.es5.js",
-    "karma": "karma start ./karma.conf.js --single-run",
-    "sauce": "karma start ./karma.sauce.js --single-run"
+    "karma": "karma start ./build/karma.conf.js --single-run",
+    "sauce": "karma start ./build/karma.sauce.js --single-run"
   },
   "repository": {
     "type": "git",
@@ -77,7 +77,7 @@
     "karma-webpack": "^2.0.5",
     "mocha": "^4.0.1",
     "pump": "^1.0.2",
-    "rollup": "^0.50.0",
+    "rollup": "^0.51.5",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-babel-minify": "^3.1.2",
     "rollup-plugin-buble": "^0.17.0",

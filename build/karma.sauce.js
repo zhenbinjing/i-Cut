@@ -1,6 +1,6 @@
 ﻿var webpack = require('webpack');
 var path = require('path');
-var sauce = require('./sauce.json');
+var sauce = require('../sauce.json');
 
 function createCustomLauncher (browser, platform, version) {
 	return {
@@ -48,7 +48,7 @@ module.exports = function(config) {
 
 	// list of files / patterns to load in the browser
 	files: [
-		'./src/js/e2e/index.js'
+		'../src/js/e2e/index.js'
 	],
 
 	// list of files to exclude
@@ -57,7 +57,7 @@ module.exports = function(config) {
 	// preprocess matching files before serving them to the browser
 	// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 	preprocessors: {
-		'./src/js/e2e/index.js': ['webpack']
+		'../src/js/e2e/index.js': ['webpack']
 	},
 
 	// test results reporter to use
@@ -81,13 +81,13 @@ module.exports = function(config) {
 
 	coverageIstanbulReporter: {       
 		  reports: ['html', 'lcovonly', 'text-summary'],
-		  dir: './coverage', 
+		  dir: path.resolve(__dirname, '../coverage'),
 		  'report-config': {
 				html: {   
-				 subdir: 'html'
+				 subdir: './html'
 				},
 				lcovonly: {			
-				 file: 'coverage.lcov'
+				 file: './coverage.lcov'
 				},
 			    'text-summary': {
           		file: null
@@ -95,6 +95,10 @@ module.exports = function(config) {
 		  },
 		  fixWebpackSourcePaths: true		
 	},
+	
+	coverageReporter: {      
+        dir: '../coverage'      
+    },
 
 	// web server port
 	port: 9876,
