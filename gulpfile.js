@@ -20,7 +20,7 @@ var processhtml = require('gulp-processhtml');              //- html更改模板
 var htmlmin = require('gulp-htmlmin');                      //- html压缩
 var uglify = require('gulp-uglify');                        //- js压缩
 var rev = require('gulp-rev');                              //- md5时间戳
-var revCollector = require('gulp-rev-collector');           //- 改为md5版本l路径
+var revCollector = require('gulp-rev-collector');           //- 改为md5版本路径
 var htmlurl = require('gulp-html-url-prefix-custom');       //- html文件添加域名前缀
 var pump = require('pump');                                 //- 报错提示
 var browserSync = require('browser-sync');                  //- 浏览器同步测试工具
@@ -211,7 +211,7 @@ gulp.task('cssBase64',function(){
 /*-------------------------------------Rev-----------------------------------*/	
 
 gulp.task('revDelfile', function () {
-    del('./'+y_Rz+'/');
+	del('./'+y_Rz+'/');
 	del('./'+y_Rn+'/');
 });
 
