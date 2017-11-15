@@ -57,8 +57,8 @@ gulp.task('cssDeal',['Sass'],function(){
 	return gulp.src(['./'+y_Sz+'/css/*.css'])          //- 需要处理的css文件，放到一个字符串数组里								
 	.pipe(px3rem({remUnit: 100}))                      //- px/100转rem值，如果有不想转换的类在值后面加/*no*/
 	.pipe(uncss({
-        html: ['./'+y_Sz+'/**/*.html'],                   //- 检查的页面
-        ignore: ['abc', '.abc', '#abc']                   //- 忽略的标签 class or id or 分号隔开
+        html: ['./'+y_Sz+'/**/*.html'],                    //- 检查的页面
+        ignore: ['abc', '.abc', '#abc']                    //- 忽略的标签 class or id or 分号隔开
 	}))
 	.pipe(autoprefixer({
 		browsers: [
@@ -104,8 +104,8 @@ gulp.task('htmlDeal',function(){
 /*------------------------------Font----------------------------------*/
 
 gulp.task('fontCopy',['fontSpider'],function(){             //- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
-    gulp.src(['./'+y_Sz+'/font/**'],{                   //- 被复制的文件夹下的所有文件
-    base: './'+y_Sz+'/font'})                           //- 被复制的目标路径 	
+	gulp.src(['./'+y_Sz+'/font/**'],{                   //- 被复制的文件夹下的所有文件
+	base: './'+y_Sz+'/font'})                           //- 被复制的目标路径 	
 	.pipe(gulp.dest('./'+y_Dz+'/font/'))					
 });
 
