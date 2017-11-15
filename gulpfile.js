@@ -36,7 +36,6 @@ var y_Rn="revjson";                                         //- 缓存json
 
 gulp.task('distDelFile',function(){	
 	del('./'+y_Dz+'/');	 
-	del('.gulp');	 
 })
 
 /*------------------------------Css----------------------------------*/
@@ -166,7 +165,8 @@ gulp.task('svgDel',function(){
 /*------------------------------Webp----------------------------------*/
 
 gulp.task('webp',['webp_css'],function(){				
-	del(['./'+y_Dz+'/img/**/*.{jpg,png}', '!./'+y_Dz+'/img/**/*.{webp}'])
+	del(['./'+y_Dz+'/img/**/*.{jpg,png}', '!./'+y_Dz+'/img/**/*.{webp}']);
+	del('.gulp');	
 });	 
 
 gulp.task('webp_css',['webp_html'],function(){
