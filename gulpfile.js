@@ -5,6 +5,7 @@ var autoprefixer = require('gulp-autoprefixer');            //- 补充浏览器�
 var cleanCSS = require('gulp-clean-css');                   //- 压缩CSS为一行
 var px3rem = require('gulp-px3rem');                        //- px转rem
 var uncss = require('gulp-uncss');                          //- 删除没用到的css
+var csso = require('gulp-csso');                            //- 深入优化css
 var sass = require('gulp-sass');                            //- scss文件编译
 var css64 = require('gulp-base64');                         //- css文件转base64
 var img64 = require('gulp-allimgbase64');                   //- img转base64
@@ -18,28 +19,42 @@ var fontSpider = require('gulp-font-spider');               //- 删除没用到�
 var processhtml = require('gulp-processhtml');              //- html更改模板
 var htmlmin = require('gulp-htmlmin');                      //- html压缩
 var uglify = require('gulp-uglify');                        //- js压缩
-let uglifyes = require('gulp-uglify-es').default;           //- es6压缩
+var rev = require('gulp-rev');                              //- md5时间戳
+var revCollector = require('gulp-rev-collector');           //- 改为md5版本l路径
 var htmlurl = require('gulp-html-url-prefix-custom');       //- html文件添加域名前缀
 var pump = require('pump');                                 //- 报错提示
 var browserSync = require('browser-sync');                  //- 浏览器同步测试工具
 var del = require('del');                                   //- 删除文件功能模块
 var path = require("path");                                 //- 路径模块
 
-var y_Sz="src";                                             //- 源码环境路径
-var y_Dz="dist";                                            //- 上线环境路径	 
+var y_Sz="src";                                             //- 源码版本
+var y_Dz="dist";                                            //- 上线版本
+var y_Rz="rev";                                             //- 缓存版本
+var y_Rn="revjson";                                         //- 缓存json	
+
+/*------------------------------Del dist----------------------------------*/
+
+gulp.task('distDelFile',function(){	
+	del('./'+y_Dz+'/');	 
+	del('.gulp');	 
+})
 
 /*------------------------------Css----------------------------------*/
 
-gulp.task('cssMin',['cssDeal'],function () {
+gulp.task('cssOO',['cssMin'],function () {
 	gulp.src(['./'+y_Dz+'/css/*.css'])
+	.pipe(csso())
+	.pipe(gulp.dest('./'+y_Dz+'/css/'));
+});
+
+gulp.task('cssMin',['cssDeal'],function () {
+	return gulp.src(['./'+y_Dz+'/css/*.css'])
 	.pipe(cleanCSS({compatibility: 'ie8',keepSpecialComments: '*'}))
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));
 });
 
-gulp.task('cssDeal',['Sass'],function(){		
-	var date=new Date().getTime();                     //- 创建版本时间	
+gulp.task('cssDeal',['Sass'],function(){	
 	return gulp.src(['./'+y_Sz+'/css/*.css'])          //- 需要处理的css文件，放到一个字符串数组里								
-	.pipe(replace(/_VERSION_/gi,date))                 //- 文件指纹
 	.pipe(px3rem({remUnit: 100}))                      //- px/100转rem值，如果有不想转换的类在值后面加/*no*/
 	.pipe(uncss({
         html: ['./'+y_Sz+'/**/*.html'],                   //- 检查的页面
@@ -81,9 +96,7 @@ gulp.task('imgCopy',function(){
 /*------------------------------Html----------------------------------*/
 
 gulp.task('htmlDeal',function(){						
-	var date = new Date().getTime();
 	return gulp.src('./'+y_Sz+'/*.html')
-	.pipe(replace(/_VERSION_/gi, date))
 	.pipe(processhtml())
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });	
@@ -110,12 +123,6 @@ gulp.task('jsMin', function (cb) {
 	concat('index.js'),
 	gulp.dest('./'+y_Dz+'/js/')
 	],cb);
-});
-
-gulp.task("esMin", function () {
-	gulp.src('./'+y_Sz+'/js/*.js')
-	.pipe(uglifyes())
-	.pipe(gulp.dest('./'+y_Dz+'/js/'));
 });
 
 /*------------------------------SVG----------------------------------*/
@@ -191,7 +198,7 @@ gulp.task('htmlBase64',function() {
 /*------------------------------CssBase64----------------------------------*/
 
 gulp.task('cssBase64',function(){										
-	return gulp.src(['./'+y_Dz+'/css/*.css'])										
+	gulp.src(['./'+y_Dz+'/css/*.css'])										
 	.pipe(css64({
 	extensions: ['jpg','png','gif','webp'],
 	maxImageSize: 2*1024,// bytes
@@ -199,6 +206,59 @@ gulp.task('cssBase64',function(){
 	}))
 	.pipe(concat('index.css'))					
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));				
+});
+
+/*-------------------------------------Rev-----------------------------------*/	
+
+gulp.task('revDelfile', function () {
+    del('./'+y_Rz+'/');
+	del('./'+y_Rn+'/');
+});
+
+gulp.task('revHtml',['revStyle'],function () {
+	gulp.src(['./'+y_Rn+'/**/*.json', './'+y_Dz+'/*.html'])
+	.pipe(revCollector())
+	.pipe(gulp.dest('./'+y_Rz+'/'));
+});
+
+gulp.task('revStyle',function () {
+	return gulp.src(['./'+y_Rn+'/**/*.json', './'+y_Rz+'/css/*.css'])
+	.pipe(revCollector())
+	.pipe(gulp.dest('./'+y_Rz+'/css/'));
+});
+
+gulp.task('revDeal',['revCss','revJs','revFont','revImg']);
+
+gulp.task('revCss',function(){										
+	gulp.src(['./'+y_Dz+'/css/*.css'])										
+	.pipe(rev())
+	.pipe(gulp.dest('./'+y_Rz+'/css/'))
+	.pipe(rev.manifest())
+	.pipe(gulp.dest('./'+y_Rn+'/css/'))	
+});
+
+gulp.task('revJs',function(){										
+	gulp.src(['./'+y_Dz+'/js/*.js'])										
+	.pipe(rev())	
+	.pipe(gulp.dest('./'+y_Rz+'/js/'))
+	.pipe(rev.manifest())
+	.pipe(gulp.dest('./'+y_Rn+'/js/'));
+});
+
+gulp.task('revFont',function(){										
+	gulp.src(['./'+y_Dz+'/font/*.*'])										
+	.pipe(rev())	
+	.pipe(gulp.dest('./'+y_Rz+'/font/'))
+	.pipe(rev.manifest())
+	.pipe(gulp.dest('./'+y_Rn+'/font/'));
+});
+
+gulp.task('revImg',function(){										
+	gulp.src(['./'+y_Dz+'/img/**/*.*'])										
+	.pipe(rev())
+	.pipe(gulp.dest('./'+y_Rz+'/img/'))
+	.pipe(rev.manifest())
+	.pipe(gulp.dest('./'+y_Rn+'/img/'));			
 });
 
 /*------------------------------Htmlmin----------------------------------*/	
@@ -210,18 +270,18 @@ gulp.task('htmlMin',['htmlUrl'],function(){
 	minifyJS: true,                                          //- 压缩页面JS
 	minifyCSS: true                                          //- 压缩页面CSS
 	};
-	gulp.src('./'+y_Dz+'/*.html')
+	gulp.src('./'+y_Rz+'/*.html')
 	.pipe(htmlmin(options))
-	.pipe(gulp.dest('./'+y_Dz+'/'));					
+	.pipe(gulp.dest('./'+y_Rz+'/'));					
 	});
 
 gulp.task('htmlUrl',function() {					
-	return gulp.src('./'+y_Dz+'/*.html')
+	return gulp.src('./'+y_Rz+'/*.html')
 	.pipe(htmlurl({
-		prefix: 'https://i-cut.cc/dist/',
+		prefix: 'https://i-cut.cc/rev/',
 		attrdata: ["img:src", "img:srcset", "img:s-src", "img:data-src", "script:src", "link:href"]
 	}))
-	.pipe(gulp.dest('./'+y_Dz+'/'));
+	.pipe(gulp.dest('./'+y_Rz+'/'));
 });
 
 /*------------------------------browserSync----------------------------------*/
@@ -234,5 +294,5 @@ gulp.task('bs',function(){
 	});
 });
 
-gulp.task('min',['cssMin','imgDeal','imgCopy','htmlDeal','fontCopy']);
+gulp.task('min',['cssOO','imgDeal','imgCopy','htmlDeal','fontCopy']);
 gulp.task('base64',['htmlBase64','cssBase64']);
