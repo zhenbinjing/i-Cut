@@ -68,8 +68,8 @@ gulp.task('cssDeal',['Sass'],function(){
 		cascade: true,                             //- 是否美化属性值 默认：true 
 		remove:true                                //- 是否去掉不必要的前缀 默认：true 
 	}))
-       .pipe(concat('index.css'))                          //- 合并后的文件名
-       .pipe(gulp.dest('./'+y_Dz+'/css/'));                //- 输出文件本地
+	.pipe(concat('index.css'))                         //- 合并后的文件名
+	.pipe(gulp.dest('./'+y_Dz+'/css/'));               //- 输出文件本地
 })
 
 gulp.task('Sass', function () {
@@ -80,31 +80,35 @@ gulp.task('Sass', function () {
 
 /*------------------------------Img----------------------------------*/
 
-gulp.task('imgDeal',function(){
-	gulp.src('./'+y_Sz+'/img/**/*.{png,jpg}')
-	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o'))//- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩	
-	.pipe(gulp.dest('./'+y_Dz+'/img/'));              //- 输出路径	
-});
+gulp.task('imgDeal',['imgCopy'],function(){                //- 删除压缩后的图片 
+	del('.gulp');
+})
 
-gulp.task('imgCopy',function(){
-	gulp.src(['./'+y_Sz+'/img/*.gif'],{               //- 复制一些不需要处理的图片
+gulp.task('imgCopy',['imgMin'],function(){
+	return gulp.src(['./'+y_Sz+'/img/*.gif'],{         //- 复制一些不需要处理的图片
 	base: './'+y_Sz+'/img/'})
 	.pipe(gulp.dest('./'+y_Dz+'/img/'));	
 })
 
+gulp.task('imgMin',function(){
+	return gulp.src('./'+y_Sz+'/img/**/*.{png,jpg}')
+	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o')) //- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩	
+	.pipe(gulp.dest('./'+y_Dz+'/img/'));               //- 输出路径	
+});
+
 /*------------------------------Html----------------------------------*/
 
 gulp.task('htmlDeal',function(){						
-	return gulp.src('./'+y_Sz+'/*.html')
+	gulp.src('./'+y_Sz+'/*.html')
 	.pipe(processhtml())
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });	
 
 /*------------------------------Font----------------------------------*/
 
-gulp.task('fontCopy',['fontSpider'],function(){             //- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
-	gulp.src(['./'+y_Sz+'/font/**'],{                   //- 被复制的文件夹下的所有文件
-	base: './'+y_Sz+'/font'})                           //- 被复制的目标路径 	
+gulp.task('fontCopy',['fontSpider'],function(){            //- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
+	gulp.src(['./'+y_Sz+'/font/**'],{                  //- 被复制的文件夹下的所有文件
+	base: './'+y_Sz+'/font'})                          //- 被复制的目标路径 	
 	.pipe(gulp.dest('./'+y_Dz+'/font/'))					
 });
 
@@ -165,8 +169,7 @@ gulp.task('svgDel',function(){
 /*------------------------------Webp----------------------------------*/
 
 gulp.task('webp',['webp_css'],function(){				
-	del(['./'+y_Dz+'/img/**/*.{jpg,png}', '!./'+y_Dz+'/img/**/*.{webp}']);
-	del('.gulp');	
+	del(['./'+y_Dz+'/img/**/*.{jpg,png}', '!./'+y_Dz+'/img/**/*.{webp}']);		
 });	 
 
 gulp.task('webp_css',['webp_html'],function(){
@@ -288,11 +291,11 @@ gulp.task('htmlUrl',function() {
 
 gulp.task('bs',function(){
 	browserSync.init({
-	files: "**",                                           //- 监控所有文件
-	server: {baseDir: './'+y_Dz+'/', index: "rem.html"},   //- 引索
+	files: "**",                                             //- 监控所有文件
+	server: {baseDir: './'+y_Dz+'/', index: "rem.html"},     //- 引索
 	open : false	
 	});
 });
 
-gulp.task('min',['cssOO','imgDeal','imgCopy','htmlDeal','fontCopy']);
+gulp.task('min',['cssOO','imgDeal','htmlDeal','fontCopy']);
 gulp.task('base64',['htmlBase64','cssBase64']);
