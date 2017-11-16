@@ -119,7 +119,7 @@ gulp.task('fontSpider',function(){
 
 /*------------------------------Jsmin----------------------------------*/
 
-gulp.task('jsMin', function (cb) {					
+gulp.task('jsMin', function (cb) {
 	pump([
 	gulp.src('./'+y_Sz+'/js/*.js'),
 	uglify(),
@@ -130,21 +130,21 @@ gulp.task('jsMin', function (cb) {
 
 /*------------------------------SVG----------------------------------*/
 
-gulp.task('svgSprite',['svgMin'],function(){
+gulp.task('svgDeal',['svgMin'],function(){                     
 	gulp.src('./'+y_Sz+'/img/sprite/sprite.svg')
-	.pipe(svg2png())						
+	.pipe(svg2png())                                       //- svg转png
 	.pipe(gulp.dest('./'+y_Sz+'/img/sprite/'))
 });
 
-gulp.task('svgMin',['svgDeal'],function(){
+gulp.task('svgMin',['svgSprite'],function(){                   
 	return gulp.src('./'+y_Sz+'/img/sprite/sprite.svg')
-	.pipe(svgmin())							
-	.pipe(gulp.dest('./'+y_Dz+'/img/sprite/'))	
-	.pipe(svgcss({fileName: 'svgcss'}))
-	.pipe(gulp.dest('./'+y_Sz+'/css/'))
+	.pipe(svgmin())                                        //- 压缩文件	
+	.pipe(gulp.dest('./'+y_Sz+'/img/sprite/'))
+	.pipe(svgcss({fileName: 'svgcss'}))                    //- DataURI方案
+	.pipe(gulp.dest('./'+y_Sz+'/css/'))	
 });
 
-gulp.task('svgDeal',['svgDel'],function () {	
+gulp.task('svgSprite',['svgDel'],function () {	
 	var config = {	
 	templates: {
 		css: require("fs").readFileSync('./'+y_Sz+'/img/sprite/sprite.css', "utf-8")		
@@ -266,7 +266,7 @@ gulp.task('revImg',function(){
 
 /*------------------------------Htmlmin----------------------------------*/	
 
-gulp.task('htmlMin',['htmlUrl'],function(){										
+gulp.task('htmlMin',function(){										
 	var options = {
 	removeComments: true,                                    //- 清除HTML注释
 	collapseWhitespace: true,                                //- 压缩HTML
@@ -279,7 +279,7 @@ gulp.task('htmlMin',['htmlUrl'],function(){
 	});
 
 gulp.task('htmlUrl',function() {					
-	return gulp.src('./'+y_Rz+'/*.html')
+	gulp.src('./'+y_Rz+'/*.html')
 	.pipe(htmlurl({
 		prefix: 'https://i-cut.cc/rev/',
 		attrdata: ["img:src", "img:srcset", "img:s-src", "img:data-src", "script:src", "link:href"]
@@ -298,4 +298,4 @@ gulp.task('bs',function(){
 });
 
 gulp.task('min',['cssOO','imgDeal','htmlDeal','fontCopy']);
-gulp.task('base64',['htmlBase64','cssBase64']);
+gulp.task('Base64',['htmlBase64','cssBase64']);

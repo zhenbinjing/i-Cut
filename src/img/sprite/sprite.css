@@ -1,7 +1,7 @@
 .<%=common %> {
 	display: inline-block;
-	background-image: url("<%=pngPath%>");
-	background-image: url("<%=svgPath%>");	
+	background: url("<%=pngPath%>");
+	background-image: url("<%=svgPath%>");
 	background-repeat: no-repeat;
 	background-size: <%= relWidth %>rem <%= relHeight %>rem;
 }

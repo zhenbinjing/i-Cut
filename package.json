@@ -1,12 +1,12 @@
 {
   "name": "i-cut",
-  "version": "1.11.4",
+  "version": "1.11.5",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
     "dev": "npm run gulp && npm run clhtml && npm run rollup && npm run rev",
-    "gulp": "gulp distDelFile && gulp svgSprite && gulp min && gulp webp && gulp base64",
-    "rev": "gulp revDelfile && gulp revDeal && gulp revHtml && gulp htmlMin",
+    "gulp": "gulp distDelFile && gulp svgDeal && gulp min && gulp webp && gulp Base64",
+    "rev": "gulp revDelfile && gulp revDeal && gulp revHtml && gulp htmlUrl && gulp htmlMin",
     "clhtml": "node ./build/critical.js",
     "rollup": "rollup -c ./build/rollup.config.js",
     "rmin": "npm run rpts && npm run rpbl",
