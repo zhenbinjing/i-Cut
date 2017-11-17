@@ -80,12 +80,8 @@ gulp.task('Sass', function () {
 
 /*------------------------------Img----------------------------------*/
 
-gulp.task('imgDeal',['imgCopy'],function(){                //- 删除压缩后的图片 
-	del('.gulp');
-})
-
-gulp.task('imgCopy',['imgMin'],function(){
-	return gulp.src(['./'+y_Sz+'/img/*.gif'],{         //- 复制一些不需要处理的图片
+gulp.task('imgDeal',['imgMin'],function(){
+	gulp.src(['./'+y_Sz+'/img/*.gif'],{                //- 复制一些不需要处理的图片
 	base: './'+y_Sz+'/img/'})
 	.pipe(gulp.dest('./'+y_Dz+'/img/'));	
 })
