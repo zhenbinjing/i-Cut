@@ -9,7 +9,7 @@ var csso = require('gulp-csso');                            //- 深入优化css
 var sass = require('gulp-sass');                            //- scss文件编译
 var css64 = require('gulp-base64');                         //- css文件转base64
 var img64 = require('gulp-allimgbase64');                   //- img转base64
-var tinypng = require('gulp-tinypng');                      //- png图片压缩
+var tinypng = require('gulp-tinypng-nokey');                //- png图片压缩
 var svgmin = require('gulp-svgmin');                        //- svg图片压缩
 var svgSprite = require("gulp-svg-sprites");                //- svg合并
 var svg2png = require("gulp-svg2png");                      //- svg转png
@@ -92,7 +92,7 @@ gulp.task('imgCopy',['imgMin'],function(){
 
 gulp.task('imgMin',function(){
 	return gulp.src('./'+y_Sz+'/img/**/*.{png,jpg}')
-	.pipe(tinypng('i4PmfZF5yvFHbhn_S6vI1D6WcY5OM07o')) //- 去官网注册一下,填写TinyPN API KEY 免费版一个月有500张压缩	
+	.pipe(tinypng())
 	.pipe(gulp.dest('./'+y_Dz+'/img/'));               //- 输出路径	
 });
 
