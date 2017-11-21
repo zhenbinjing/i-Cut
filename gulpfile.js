@@ -95,7 +95,7 @@ gulp.task('imgMin',['rwdImg'],function(){
 });
 
 gulp.task('rwdImg', ['delrwdImg'],function () {                      //- 生成rwd图片
-   return gulp.src('./'+y_Sz+'/img/rwd/*.{png,jpg}')
+	return gulp.src('./'+y_Sz+'/img/rwd/*.{png,jpg}')
 	.pipe(responsive({
 	'*': [
 	{width: '25%',rename: {suffix: '@1x'}},
@@ -121,7 +121,7 @@ gulp.task('htmlDeal',function(){
 	gulp.src('./'+y_Sz+'/*.html')
 	.pipe(processhtml())
 	.pipe(lazyScr({
-    decodeEntities: false,
+	decodeEntities: false,
 	data_src: 'data-src',
 	data_srcset: 'data-srcset',
 	suffix: {1: '@1x', 2: '@2x', 3: '@3x', 4: ''}
