@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "1.12.1",
+  "version": "1.12.2",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
