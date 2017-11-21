@@ -15,6 +15,8 @@ var svgSprite = require("gulp-svg-sprites");                //- svg合并
 var svg2png = require("gulp-svg2png");                      //- svg转png
 var svgcss = require('gulp-svg-css');                       //- svg-datauri
 var webp = require('gulp-webp');                            //- 转webp图片
+var responsive = require('gulp-responsive');                //- 转rwd图片
+var lazyScr = require('gulp-lazysizes-srcset');             //- 设置scrset
 var fontSpider = require('gulp-font-spider');               //- 删除没用到的字体
 var processhtml = require('gulp-processhtml');              //- html更改模板
 var htmlmin = require('gulp-htmlmin');                      //- html压缩
@@ -86,17 +88,44 @@ gulp.task('imgDeal',['imgMin'],function(){
 	.pipe(gulp.dest('./'+y_Dz+'/img/'));	
 })
 
-gulp.task('imgMin',function(){
+gulp.task('imgMin',['rwdImg'],function(){
 	return gulp.src('./'+y_Sz+'/img/**/*.{png,jpg}')
 	.pipe(tinypng())
 	.pipe(gulp.dest('./'+y_Dz+'/img/'));               //- 输出路径	
 });
+
+gulp.task('rwdImg', ['delrwdImg'],function () {                      //- 生成rwd图片
+   return gulp.src('./'+y_Sz+'/img/rwd/*.{png,jpg}')
+	.pipe(responsive({
+	'*': [
+	{width: '25%',rename: {suffix: '@1x'}},
+	{width: '50%',rename: {suffix: '@2x'}},
+	{width: '75%',rename: {suffix: '@3x'}},
+	{width: '100%',rename: {suffix: ''}}
+	]},
+	{
+	progressive: true,
+	withMetadata: false,
+	errorOnEnlargement: false,
+	}))
+	.pipe(gulp.dest('./'+y_Sz+'/img/rwd/'));
+});
+
+gulp.task('delrwdImg',['webp_css'],function(){				
+	return del(['./'+y_Sz+'/img/rwd/*@*.*']);		
+});	
 
 /*------------------------------Html----------------------------------*/
 
 gulp.task('htmlDeal',function(){						
 	gulp.src('./'+y_Sz+'/*.html')
 	.pipe(processhtml())
+	.pipe(lazyScr({
+    decodeEntities: false,
+	data_src: 'data-src',
+	data_srcset: 'data-srcset',
+	suffix: {1: '@1x', 2: '@2x', 3: '@3x', 4: ''}
+	}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });	
 
@@ -182,7 +211,7 @@ gulp.task('webp_html',['webp_img'],function(){
 
 gulp.task('webp_img',function(){
 	return gulp.src('./'+y_Dz+'/img/**/*.{jpg,png}')		
-	.pipe(webp())
+	.pipe(webp({lossless:true}))
 	.pipe(gulp.dest('./'+y_Dz+'/img/'))
 });
 
@@ -278,7 +307,7 @@ gulp.task('htmlUrl',function() {
 	gulp.src('./'+y_Rz+'/*.html')
 	.pipe(htmlurl({
 		prefix: 'https://i-cut.cc/rev/',
-		attrdata: ["img:src", "img:srcset", "img:s-src", "img:data-src", "script:src", "link:href"]
+		attrdata: ["img:src", "img:data-src", "img:s-src", "img:data-srcset", "script:src", "link:href"]
 	}))
 	.pipe(gulp.dest('./'+y_Rz+'/'));
 });

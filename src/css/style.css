@@ -11,6 +11,8 @@
 
 .z2147483647{z-index:2147483647;}
 
+img[data-sizes]{width: 100%;}
+
 /*----------------------------移动组件----------------------------*/
 
 .focus { width: 100%; margin: 0 auto; position: relative; }
