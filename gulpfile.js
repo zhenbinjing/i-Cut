@@ -16,6 +16,9 @@ var svg2png = require("gulp-svg2png");                      //- svg转png
 var svgcss = require('gulp-svg-css');                       //- svg-datauri
 var webp = require('gulp-webp');                            //- 转webp图片
 var responsive = require('gulp-responsive');                //- 转rwd图片
+var imageSet = require('gulp-image-set');                  //- 兼容images-set
+var postcss = require('gulp-postcss');                      //- postcss
+var generatoRrr = require('postcss-image-set-generator');   //- 读取css文件路径转rwd
 var lazyScr = require('gulp-lazysizes-srcset');             //- 设置scrset
 var fontSpider = require('gulp-font-spider');               //- 删除没用到的字体
 var processhtml = require('gulp-processhtml');              //- html更改模板
@@ -37,121 +40,8 @@ var y_Rn="revjson";                                         //- 缓存json
 /*------------------------------Del dist----------------------------------*/
 
 gulp.task('distDelFile',function(){	
-	del('./'+y_Dz+'/');	 
+	del('./'+y_Dz+'/');
 })
-
-/*------------------------------Css----------------------------------*/
-
-gulp.task('cssOO',['cssMin'],function () {
-	gulp.src(['./'+y_Dz+'/css/*.css'])
-	.pipe(csso())
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));
-});
-
-gulp.task('cssMin',['cssDeal'],function () {
-	return gulp.src(['./'+y_Dz+'/css/*.css'])
-	.pipe(cleanCSS({compatibility: 'ie8',keepSpecialComments: '*'}))
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));
-});
-
-gulp.task('cssDeal',['Sass'],function(){	
-	return gulp.src(['./'+y_Sz+'/css/*.css'])          //- 需要处理的css文件，放到一个字符串数组里								
-	.pipe(px3rem({remUnit: 100}))                      //- px/100转rem值，如果有不想转换的类在值后面加/*no*/
-	.pipe(uncss({
-        html: ['./'+y_Sz+'/**/*.html'],                    //- 检查的页面
-        ignore: ['abc', '.abc', '#abc']                    //- 忽略的标签 class or id or 分号隔开
-	}))
-	.pipe(autoprefixer({
-		browsers: [
-		'last 2 version',                          //- 主流浏览器的最新两个版本
-		'ios 7',                                   //- IOS7版本
-		'android 2.3',                             //- android 2.3版本
-		'last 2 Explorer versions'],               //- IE的最新两个版本 'last 2 Explorer versions'
-		cascade: true,                             //- 是否美化属性值 默认：true 
-		remove:true                                //- 是否去掉不必要的前缀 默认：true 
-	}))
-	.pipe(concat('index.css'))                         //- 合并后的文件名
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));               //- 输出文件本地
-})
-
-gulp.task('Sass', function () {
-	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
-	.pipe(sass().on('error', sass.logError))
-	.pipe(gulp.dest('./'+y_Sz+'/css/'));
-});
-
-/*------------------------------Img----------------------------------*/
-
-gulp.task('imgDeal',['imgMin'],function(){
-	gulp.src(['./'+y_Sz+'/img/*.gif'],{                //- 复制一些不需要处理的图片
-	base: './'+y_Sz+'/img/'})
-	.pipe(gulp.dest('./'+y_Dz+'/img/'));	
-})
-
-gulp.task('imgMin',['rwdImg'],function(){
-	return gulp.src('./'+y_Sz+'/img/**/*.{png,jpg}')
-	.pipe(tinypng())
-	.pipe(gulp.dest('./'+y_Dz+'/img/'));               //- 输出路径	
-});
-
-gulp.task('rwdImg', ['delrwdImg'],function () {                      //- 生成rwd图片
-	return gulp.src('./'+y_Sz+'/img/rwd/*.{png,jpg}')
-	.pipe(responsive({
-	'*': [
-	{width: '25%',rename: {suffix: '@1x'}},
-	{width: '50%',rename: {suffix: '@2x'}},
-	{width: '75%',rename: {suffix: '@3x'}},
-	{width: '100%',rename: {suffix: ''}}
-	]},
-	{
-	progressive: true,
-	withMetadata: false,
-	errorOnEnlargement: false,
-	}))
-	.pipe(gulp.dest('./'+y_Sz+'/img/rwd/'));
-});
-
-gulp.task('delrwdImg',['webp_css'],function(){				
-	return del(['./'+y_Sz+'/img/rwd/*@*.*']);		
-});	
-
-/*------------------------------Html----------------------------------*/
-
-gulp.task('htmlDeal',function(){						
-	gulp.src('./'+y_Sz+'/*.html')
-	.pipe(processhtml())
-	.pipe(lazyScr({
-	decodeEntities: false,
-	data_src: 'data-src',
-	data_srcset: 'data-srcset',
-	suffix: {1: '@1x', 2: '@2x', 3: '@3x', 4: ''}
-	}))
-	.pipe(gulp.dest('./'+y_Dz+'/'));
-});	
-
-/*------------------------------Font----------------------------------*/
-
-gulp.task('fontCopy',['fontSpider'],function(){            //- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
-	gulp.src(['./'+y_Sz+'/font/**'],{                  //- 被复制的文件夹下的所有文件
-	base: './'+y_Sz+'/font'})                          //- 被复制的目标路径 	
-	.pipe(gulp.dest('./'+y_Dz+'/font/'))					
-});
-
-gulp.task('fontSpider',function(){
-	return gulp.src(path.resolve(process.cwd(), y_Sz) + '/*.html')	
-	.pipe(fontSpider());
-});
-
-/*------------------------------Jsmin----------------------------------*/
-
-gulp.task('jsMin', function (cb) {
-	pump([
-	gulp.src('./'+y_Sz+'/js/*.js'),
-	uglify(),
-	concat('index.js'),
-	gulp.dest('./'+y_Dz+'/js/')
-	],cb);
-});
 
 /*------------------------------SVG----------------------------------*/
 
@@ -190,6 +80,135 @@ gulp.task('svgSprite',['svgDel'],function () {
 gulp.task('svgDel',function(){
 	return del('./'+y_Sz+'/img/sprite/sprite.svg')	
 })
+
+/*-------------------------------Css-------------------------------------*/
+
+gulp.task('cssAuto',['cssO'],function () {
+	gulp.src(['./'+y_Dz+'/css/*.css'])
+	.pipe(autoprefixer({
+		browsers: [
+		'last 2 version',                          //- 主流浏览器的最新两个版本
+		'ios 7',                                   //- IOS7版本
+		'android 2.3',                             //- android 2.3版本
+		'last 2 Explorer versions'],               //- IE的最新两个版本 'last 2 Explorer versions'
+		cascade: true,                             //- 是否美化属性值 默认：true 
+		remove:true                                //- 是否去掉不必要的前缀 默认：true 
+	}))
+	.pipe(gulp.dest('./'+y_Dz+'/css/'));	
+});
+
+gulp.task('cssO',['image-set'],function () {
+	return gulp.src(['./'+y_Dz+'/css/*.css'])
+	.pipe(csso())
+	.pipe(gulp.dest('./'+y_Dz+'/css/'));	
+});
+
+gulp.task('image-set',['cleanCSS'],function () {	
+	return gulp.src(['./'+y_Dz+'/css/*.css'])
+	.pipe(imageSet())
+	.pipe(gulp.dest('./'+y_Dz+'/css/'));
+});
+
+gulp.task('cleanCSS',['cssMin'],function () {
+	return gulp.src(['./'+y_Dz+'/css/*.css'])
+	.pipe(cleanCSS({compatibility: 'ie8',keepSpecialComments: '*'}))
+	.pipe(gulp.dest('./'+y_Dz+'/css/'));	
+});
+
+gulp.task('cssMin',['Sass'],function(){	
+	return gulp.src(['./'+y_Sz+'/css/*.css'])          //- 需要处理的css文件，放到一个字符串数组里								
+	.pipe(px3rem({remUnit: 100}))                      //- px/100转rem值，如果有不想转换的类在值后面加/*no*/
+	.pipe(uncss({
+        html: ['./'+y_Sz+'/**/*.html'],                    //- 检查的页面
+        ignore: ['abc', '.abc', '#abc']                    //- 忽略的标签 class or id or 分号隔开
+	}))
+	.pipe(postcss([generatoRrr({
+			scales: [1, 2, 3, 4],
+			suffix: '@x',
+			resolutionType: 'x',
+	})]))
+	.pipe(concat('index.css'))                         //- 合并后的文件名
+	.pipe(gulp.dest('./'+y_Dz+'/css/'));               //- 输出文件本地
+})
+
+gulp.task('Sass', function () {
+	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
+	.pipe(sass().on('error', sass.logError))
+	.pipe(gulp.dest('./'+y_Sz+'/css/'));
+});
+
+/*------------------------------Img----------------------------------*/
+
+gulp.task('imgDeal',['imgMin'],function(){
+	gulp.src(['./'+y_Sz+'/img/*.gif'],{                //- 复制一些不需要处理的图片
+	base: './'+y_Sz+'/img/'})
+	.pipe(gulp.dest('./'+y_Dz+'/img/'));	
+})
+
+gulp.task('imgMin',['rwdImg'],function(){
+	return gulp.src('./'+y_Sz+'/img/**/*.{png,jpg}')
+	.pipe(tinypng())
+	.pipe(gulp.dest('./'+y_Dz+'/img/'));               //- 输出路径	
+});
+
+gulp.task('rwdImg', ['delrwdImg'],function () {                      //- 生成rwd图片
+	return gulp.src('./'+y_Sz+'/img/rwd/*.{png,jpg}')
+	.pipe(responsive({
+	'*': [
+	{width: '25%',rename: {suffix: '@x1'}},
+	{width: '50%',rename: {suffix: '@x2'}},
+	{width: '75%',rename: {suffix: '@x3'}},
+	{width: '100%',rename: {suffix: ''}}
+	]},
+	{
+	progressive: true,
+	withMetadata: false,
+	errorOnEnlargement: false,
+	}))
+	.pipe(gulp.dest('./'+y_Sz+'/img/rwd/'));
+});
+
+gulp.task('delrwdImg',function(){				
+	return del(['./'+y_Sz+'/img/rwd/*@x*.*']);		
+});	
+
+/*------------------------------Html----------------------------------*/
+
+gulp.task('htmlDeal',function(){						
+	gulp.src('./'+y_Sz+'/*.html')
+	.pipe(processhtml())
+	.pipe(lazyScr({
+	decodeEntities: false,
+	data_src: 'data-src',
+	data_srcset: 'data-srcset',
+	suffix: {1: '@x1', 2: '@x2', 3: '@x3', 4: ''}
+	}))
+	.pipe(gulp.dest('./'+y_Dz+'/'));
+});	
+
+/*------------------------------Font----------------------------------*/
+
+gulp.task('fontCopy',['fontSpider'],function(){            //- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
+	gulp.src(['./'+y_Sz+'/font/**'],{                  //- 被复制的文件夹下的所有文件
+	base: './'+y_Sz+'/font'})                          //- 被复制的目标路径 	
+	.pipe(gulp.dest('./'+y_Dz+'/font/'))					
+});
+
+gulp.task('fontSpider',function(){
+	return gulp.src(path.resolve(process.cwd(), y_Sz) + '/*.html')	
+	.pipe(fontSpider());
+});
+
+/*------------------------------Jsmin----------------------------------*/
+
+gulp.task('jsMin', function (cb) {
+	pump([
+	gulp.src('./'+y_Sz+'/js/*.js'),
+	uglify(),
+	concat('index.js'),
+	gulp.dest('./'+y_Dz+'/js/')
+	],cb);
+});
 
 /*------------------------------Webp----------------------------------*/
 
@@ -240,7 +259,7 @@ gulp.task('cssBase64',function(){
 
 gulp.task('revDelfile', function () {
 	del('./'+y_Rz+'/');
-	del('./'+y_Rn+'/');
+	del('./'+y_Rn+'/');	
 });
 
 gulp.task('revHtml',['revStyle'],function () {
@@ -322,5 +341,5 @@ gulp.task('bs',function(){
 	});
 });
 
-gulp.task('min',['cssOO','imgDeal','htmlDeal','fontCopy']);
+gulp.task('allmin',['cssAuto','htmlDeal','fontCopy','imgDeal']);
 gulp.task('Base64',['htmlBase64','cssBase64']);

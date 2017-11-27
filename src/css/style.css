@@ -38,3 +38,6 @@ img[data-sizes]{width: 100%;}
 		 url('../font/stfyt.svg') format('svg');	 
  }
 .stfyt{ font-family: 'stfyt'; }
+
+/*-----------------------------响应式背景-----------------------------*/
+.rwd-bg{background-image: image-set(url('../img/bg-rwd/rwd.png') 4x); width: 640px; height: 220px; background-size:contain;}
