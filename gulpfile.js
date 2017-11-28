@@ -16,9 +16,8 @@ var svg2png = require("gulp-svg2png");                      //- svg转png
 var svgcss = require('gulp-svg-css');                       //- svg-datauri
 var webp = require('gulp-webp');                            //- 转webp图片
 var responsive = require('gulp-responsive');                //- 转rwd图片
-var imageSet = require('gulp-image-set');                  //- 兼容images-set
+var imageSet = require('gulp-image-set-plus');              //- 兼容images-set
 var postcss = require('gulp-postcss');                      //- postcss
-var generatoRrr = require('postcss-image-set-generator');   //- 读取css文件路径转rwd
 var lazyScr = require('gulp-lazysizes-srcset');             //- 设置scrset
 var fontSpider = require('gulp-font-spider');               //- 删除没用到的字体
 var processhtml = require('gulp-processhtml');              //- html更改模板
@@ -122,11 +121,6 @@ gulp.task('cssMin',['Sass'],function(){
         html: ['./'+y_Sz+'/**/*.html'],                    //- 检查的页面
         ignore: ['abc', '.abc', '#abc']                    //- 忽略的标签 class or id or 分号隔开
 	}))
-	.pipe(postcss([generatoRrr({
-			scales: [1, 2, 3, 4],
-			suffix: '@x',
-			resolutionType: 'x',
-	})]))
 	.pipe(concat('index.css'))                         //- 合并后的文件名
 	.pipe(gulp.dest('./'+y_Dz+'/css/'));               //- 输出文件本地
 })
@@ -169,7 +163,7 @@ gulp.task('rwdImg', ['delrwdImg'],function () {                      //- 生成r
 });
 
 gulp.task('delrwdImg',function(){				
-	return del(['./'+y_Sz+'/img/rwd/*@x*.*']);		
+	return del(['./'+y_Sz+'/img/**/*@x*.*']);		
 });	
 
 /*------------------------------Html----------------------------------*/
