@@ -10,7 +10,7 @@
 
 	let index = 0;
 	function checkImgs() {
-	  const imgs = document.querySelectorAll('.lazyload');
+	  const imgs = document.querySelectorAll('.bglazy');
 	  for (let i = index; i < imgs.length; i++) {
 		if (isInSight(imgs[i])) {
 		  loadImg(imgs[i]);
@@ -19,11 +19,8 @@
 	  }
 	}
 
-	function loadImg(el) {
-	  if (!el.src) {
-		const source = el.dataset.src;
-		el.src = source;
-	  }
+	function loadImg(el) {	 
+		el.classList.remove('bglazy')	  
 	}
 
 	function throttle(fn, mustRun = 500) {

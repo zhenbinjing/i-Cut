@@ -41,3 +41,14 @@ img[data-sizes]{width: 100%;}
 
 /*-----------------------------响应式背景-----------------------------*/
 .bgrwd{background-image: image-set(url('../img/rwd/bgrwd.png') 4x); width: 640px; height: 220px; background-size:contain;}
+
+/*css 背景延迟加载 image-set*/
+
+/* clean-css ignore:start */
+.bglazy { 
+  background: url(''); 
+  background-image: url(''); 
+  background-image: -webkit-image-set(''); 
+  background-image: image-set('')
+}
+/* clean-css ignore:end */

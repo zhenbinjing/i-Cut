@@ -1,9 +1,6 @@
 ﻿import TouchSlide from './plugins/TouchSlide';
-//如果只是滚动加载就用lazyload
-//import lazyload from './plugins/lazyload';
-//如果是响应式滚动加载就用lazysizes
-import lazysizes from './plugins/lazysizes';
-
+import bglazy from './plugins/bglazy';       //CSS背景延迟加载
+import lazysizes from './plugins/lazysizes'; //HTML背景延迟加载
 
 TouchSlide({ 
 	slideCell:"#focus",
@@ -15,5 +12,5 @@ TouchSlide({
 	autoPage:true,//自动分页
 	switchLoad:"s-src"
 });
-//lazyload();
+bglazy();
 lazysizes();
