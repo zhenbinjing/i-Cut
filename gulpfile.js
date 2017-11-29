@@ -149,9 +149,9 @@ gulp.task('rwdImg', ['delrwdImg'],function () {                      //- 生成r
 	return gulp.src('./'+y_Sz+'/img/rwd/*.{png,jpg}')
 	.pipe(responsive({
 	'*': [
-	{width: '25%',rename: {suffix: '@x1'}},
-	{width: '50%',rename: {suffix: '@x2'}},
-	{width: '75%',rename: {suffix: '@x3'}},
+	{width: '25%',rename: {suffix: '@1x'}},
+	{width: '50%',rename: {suffix: '@2x'}},
+	{width: '75%',rename: {suffix: '@3x'}},
 	{width: '100%',rename: {suffix: ''}}
 	]},
 	{
@@ -163,7 +163,7 @@ gulp.task('rwdImg', ['delrwdImg'],function () {                      //- 生成r
 });
 
 gulp.task('delrwdImg',function(){				
-	return del(['./'+y_Sz+'/img/**/*@x*.*']);		
+	return del(['./'+y_Sz+'/img/**/*@*.*']);		
 });	
 
 /*------------------------------Html----------------------------------*/
@@ -175,7 +175,7 @@ gulp.task('htmlDeal',function(){
 	decodeEntities: false,
 	data_src: 'data-src',
 	data_srcset: 'data-srcset',
-	suffix: {1: '@x1', 2: '@x2', 3: '@x3', 4: ''}
+	suffix: {1: '@1x', 2: '@2x', 3: '@3x', 4: ''}
 	}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 });	
