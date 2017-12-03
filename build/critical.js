@@ -12,7 +12,7 @@ function generateCriticalPath(err, files) {
 				width: 320,
 				height: 568,
 				minify: true,
-				ignore: ['@font-face',/url\(/],
+				ignore: ['.bglazy','@font-face',/url\(/],
 				//pathPrefix: '/dist/',
 				dest: page
 			})	

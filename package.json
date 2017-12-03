@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "1.13.4",
+  "version": "1.13.5",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
@@ -43,7 +43,7 @@
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.13",
     "chai": "^4.1.2",
-    "critical": "^1.0.0",
+    "critical": "^1.1.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-allimgbase64": "^0.4.3",
