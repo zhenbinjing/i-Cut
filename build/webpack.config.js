@@ -1,6 +1,6 @@
 ﻿'use strict';
 let webpack = require('webpack');
-let UglifyJsPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
+let UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 let path = require('path');
 let fs = require('fs');
 let srcDir = path.resolve(process.cwd(), 'src');
@@ -45,7 +45,7 @@ module.exports = {
 		
 		//将公共代码抽离出来合并为一个文件		
 		//new webpack.optimize.CommonsChunkPlugin({
-		//	name: "commons",
+		//	name: "commons",0
 		//	filename: "commons.js",
 		//}),
 		

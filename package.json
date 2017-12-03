@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "1.13.3",
+  "version": "1.13.4",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
@@ -85,7 +85,7 @@
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "^2.0.6",
     "mocha": "^4.0.1",
-    "pump": "^1.0.3",
+    "pump": "^2.0.0",
     "rollup": "^0.52.0",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-babel-minify": "^3.1.2",
@@ -95,6 +95,6 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "uglifyjs-webpack-plugin": "^1.1.1",
-    "webpack": "^3.8.1"
+    "webpack": "^3.9.1"
   }
 }

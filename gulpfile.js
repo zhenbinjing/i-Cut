@@ -330,7 +330,7 @@ gulp.task('htmlUrl',function() {
 gulp.task('bs',function(){
 	browserSync.init({
 	files: "**",                                             //- 监控所有文件
-	server: {baseDir: './'+y_Dz+'/', index: "rem.html"},     //- 引索
+	server: {baseDir: './'+y_Dz+'/', index: "index.html"},     //- 引索
 	open : false	
 	});
 });
