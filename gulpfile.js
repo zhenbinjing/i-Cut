@@ -17,7 +17,6 @@ var svgcss = require('gulp-svg-css');                       //- svg-datauri
 var webp = require('gulp-webp');                            //- 转webp图片
 var responsive = require('gulp-responsive');                //- 转rwd图片
 var imageSet = require('gulp-image-set-plus');              //- 兼容images-set
-var postcss = require('gulp-postcss');                      //- postcss
 var lazyScr = require('gulp-lazysizes-srcset');             //- 设置scrset
 var fontSpider = require('gulp-font-spider');               //- 删除没用到的字体
 var processhtml = require('gulp-processhtml');              //- html更改模板
