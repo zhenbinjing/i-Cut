@@ -754,6 +754,9 @@
 .w-xs-100p {
   width: 100%; }
 
+.lh-xs-0 {
+  line-height: 0; }
+
 .lh-xs-10 {
   line-height: 1; }
 
@@ -6964,6 +6967,8 @@
     width: 99%; }
   .w-sm-100p {
     width: 100%; }
+  .lh-sm-0 {
+    line-height: 0; }
   .lh-sm-10 {
     line-height: 1; }
   .lh-sm-11 {
@@ -11194,6 +11199,8 @@
     width: 99%; }
   .w-md-100p {
     width: 100%; }
+  .lh-md-0 {
+    line-height: 0; }
   .lh-md-10 {
     line-height: 1; }
   .lh-md-11 {
@@ -15424,6 +15431,8 @@
     width: 99%; }
   .w-lg-100p {
     width: 100%; }
+  .lh-lg-0 {
+    line-height: 0; }
   .lh-lg-10 {
     line-height: 1; }
   .lh-lg-11 {

@@ -3,96 +3,96 @@
 	background: url("../img/sprite/sprite.png");
 	background-image: url("../img/sprite/sprite.svg");
 	background-repeat: no-repeat;
-	background-size: 0.32rem 3.2rem;
+	background-size: 0.48rem 4.8rem;
 }
 
 
 
   .svg1 {
 	background-position: 0rem 0rem;
-	width: 0.32rem;
-	height: 0.32rem;
+	width: 0.48rem;
+	height: 0.48rem;
   }
 
 
 
 
   .svg10 {
-	background-position: 0rem -0.32rem;
-	width: 0.32rem;
-	height: 0.32rem;
+	background-position: 0rem -0.48rem;
+	width: 0.48rem;
+	height: 0.48rem;
   }
 
 
 
 
   .svg2 {
-	background-position: 0rem -0.64rem;
-	width: 0.32rem;
-	height: 0.32rem;
+	background-position: 0rem -0.96rem;
+	width: 0.48rem;
+	height: 0.48rem;
   }
 
 
 
 
   .svg3 {
-	background-position: 0rem -0.96rem;
-	width: 0.32rem;
-	height: 0.32rem;
+	background-position: 0rem -1.44rem;
+	width: 0.48rem;
+	height: 0.48rem;
   }
 
 
 
 
   .svg4 {
-	background-position: 0rem -1.28rem;
-	width: 0.32rem;
-	height: 0.32rem;
+	background-position: 0rem -1.92rem;
+	width: 0.48rem;
+	height: 0.48rem;
   }
 
 
 
 
   .svg5 {
-	background-position: 0rem -1.6rem;
-	width: 0.32rem;
-	height: 0.32rem;
+	background-position: 0rem -2.4rem;
+	width: 0.48rem;
+	height: 0.48rem;
   }
 
 
 
 
   .svg6 {
-	background-position: 0rem -1.92rem;
-	width: 0.32rem;
-	height: 0.32rem;
+	background-position: 0rem -2.88rem;
+	width: 0.48rem;
+	height: 0.48rem;
   }
 
 
 
 
   .svg7 {
-	background-position: 0rem -2.24rem;
-	width: 0.32rem;
-	height: 0.32rem;
+	background-position: 0rem -3.36rem;
+	width: 0.48rem;
+	height: 0.48rem;
   }
 
 
 
 
   .svg8 {
-	background-position: 0rem -2.56rem;
-	width: 0.32rem;
-	height: 0.32rem;
+	background-position: 0rem -3.84rem;
+	width: 0.48rem;
+	height: 0.48rem;
   }
 
 
 
 
   .svg9 {
-	background-position: 0rem -2.88rem;
-	width: 0.32rem;
-	height: 0.32rem;
+	background-position: 0rem -4.32rem;
+	width: 0.48rem;
+	height: 0.48rem;
   }
 
 
