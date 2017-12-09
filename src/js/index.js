@@ -1,6 +1,6 @@
 ﻿import TouchSlide from './plugins/TouchSlide';
-import bglazy from './plugins/bglazy';       //CSS背景延迟加载
-import lazysizes from './plugins/lazysizes'; //HTML背景延迟加载
+import bglazy from './plugins/bglazy';       //CSS image-set 背景延迟加载
+import lazysizes from './plugins/lazysizes'; //HTML srcset 图片延迟加载
 
 TouchSlide({ 
 	slideCell:"#focus",
