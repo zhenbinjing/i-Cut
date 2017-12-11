@@ -3,6 +3,6 @@
     ["env",{"modules": false}]
   ],
   "plugins": [
-    "transform-runtime"
+    "external-helpers"
   ]
 }
