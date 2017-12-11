@@ -1,20 +1,21 @@
 <template>
   <div>
-    <div>{{ message }}</div>
-    <router-link to="/vr1">vr1</router-link>
-    <router-link to="/vr2">vr2</router-link>
-    <router-link to="/vr3">vr3</router-link>
-    <router-view></router-view>
-  </div>
+    <h2>{{ message }}</h2>
+    <Vr></Vr>
+    <Vd></Vd>
+  </div>  
 </template>
 
 <script>
+import Vr from './components/Vr.vue';
+import Vd from './components/Vd.vue';
 export default {
   el: '#app',
   data () {
       return {
         message: 'Hello Vue!'
       }
-  }
+  },
+  components: { Vr,Vd }
 }
 </script>
