@@ -9,4 +9,4 @@
 [![MIT Licence](https://img.shields.io/npm/l/i-cut.svg)](https://opensource.org/licenses/mit-license.php)
 [![Build Status](https://saucelabs.com/browser-matrix/icut.svg)](https://saucelabs.com/beta/builds/8913e384e9de43ffb3813d69b4054b8c)
 
-i-Cut 是一个快速成形，全终端适配的CSS框架，采用 [Flexbox](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex) 与 [Grid-Layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid) 布局结合而成，让你轻松快速搭建项目雏形。
+个人技术栈框架，Sass 项目 [FlexGrid](https://i-cut.cc/assets/flexgrid.html) 以及配备 Webpack、Rollup、Gulp 等任务流程。

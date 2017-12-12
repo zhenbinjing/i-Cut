@@ -1,4 +1,4 @@
-//onePageNav
+﻿//onePageNav
 $(document).ready(function() {
 $('#nav').onePageNav();
 });
@@ -8,7 +8,7 @@ window.onload = window.onscroll = function() {
 		var oNav=document.getElementById('nav');
 		var oTop = document.documentElement.scrollTop || document.body.scrollTop;
 		//alert(oTop);
-		if (oTop >= 400) {// 导航离顶部距离
+		if (oTop >= 200) {// 导航离顶部距离
 			if (typeof document.body.style.maxHeight === "undefined") {
 				oNav.style.top = oTop/100 + 'rem';
 			} else {
@@ -18,6 +18,6 @@ window.onload = window.onscroll = function() {
 			}
 		} else {
 			oNav.style.position = 'static';
-			oNav.style.top = 4 + "rem";// 导航离顶部距离
+			oNav.style.top = 2 + "rem";// 导航离顶部距离
 		}				
 };

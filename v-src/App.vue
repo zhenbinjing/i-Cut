@@ -10,7 +10,6 @@
 import Vr from './components/Vr.vue';
 import Vd from './components/Vd.vue';
 export default {
-  el: '#app',
   data () {
       return {
         message: 'Hello Vue!'
