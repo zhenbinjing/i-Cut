@@ -9,6 +9,9 @@
 .h500{height: 5rem;}
 .w250{width: 2.5rem;}
 
+.root{ height:100% }
+.root body{ height:100% }
+
 body{background-color: #EFEFEF;}
 
 #nav .container {  padding-right:.08rem; padding-left:.08rem; }
@@ -24,7 +27,9 @@ body{background-color: #EFEFEF;}
 	.fz-sm-30{font-size:.3rem;}
 	#emmet,#rwd_emmet,#flex,#grid,#color,#animate{height:.5rem;}
 }
+
 /*摇晃*/
+
 .shaking{
 	-webkit-animation:shaking 3s ease-in-out 0s infinite;
 	        animation:shaking 3s ease-in-out 0s infinite;
@@ -44,6 +49,7 @@ body{background-color: #EFEFEF;}
 	        transition-timing-function:ease-in;
 	}
 .shaking:hover{ color: #fff; background-color: #1c7cd6;}
+
 @-webkit-keyframes shaking{
 	0%{-webkit-transform:rotate(0);transform:rotate(0)}5%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}
 	10%{-webkit-transform:rotate(-9deg);transform:rotate(-9deg)}
@@ -72,6 +78,7 @@ body{background-color: #EFEFEF;}
 }
 
 /*路径*/
+
 .ljrq{	
 	width: 1rem;
 	height: 1rem;
@@ -85,6 +92,7 @@ body{background-color: #EFEFEF;}
 	position: absolute;	
 	border-radius: 50%;
 }
+
 .ljrqd1{-webkit-transform: rotateZ(0deg) translateX(1rem); transform: rotateZ(0deg) translateX(1rem)}
 .ljrqd2{-webkit-transform: rotateZ(72deg) translateX(1rem); transform: rotateZ(72deg) translateX(1rem)}
 .ljrqd3{-webkit-transform: rotateZ(144deg) translateX(1rem); transform: rotateZ(144deg) translateX(1rem)}
@@ -103,6 +111,7 @@ body{background-color: #EFEFEF;}
 
 
 /*圆圈*/
+
 .per{		
 	-webkit-perspective: 800px;		
 	        perspective: 800px;		
@@ -141,6 +150,7 @@ body{background-color: #EFEFEF;}
 
 
 /*盒子*/
+
 .per2{
 	-webkit-perspective: 500px;
 	        perspective: 500px;
