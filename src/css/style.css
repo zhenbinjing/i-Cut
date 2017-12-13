@@ -1,6 +1,6 @@
 ﻿/*-----------------------------居中，清除浮动，文字截断(单行，多行)，顶层----------------------------*/
 
-.trbl { top: 0; right: 0; bottom: 0; left: 0 }
+.trbl0 { top: 0; right: 0; bottom: 0; left: 0 }
 .mlra { margin-left: auto; margin-right: auto; }
 
 .clearfix:after { visibility: hidden; display: block; clear: both; content:" "; font-size: 0; height: 0; }
@@ -11,8 +11,7 @@
 
 .z2147483647{z-index:2147483647;}
 
-.root{ height:100% }
-.root body{ height:100% }
+.h100p{ height:100% }
 
 img[data-sizes]{width: 100%;}
 
