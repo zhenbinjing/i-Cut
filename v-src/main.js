@@ -4,6 +4,6 @@ import router from './router/index.js'
 
 const app = new Vue({
   el:"#app",
-  router: router,
+  router,
   render: h => h(App)
 })
