@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "A rapid prototyping, the terminal adapter CSS framework",
   "main": "gulpfile.js",
   "scripts": {
@@ -97,7 +97,7 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "uglifyjs-webpack-plugin": "^1.1.1",
-    "vue": "^2.5.9",
+    "vue": "^2.5.10",
     "vue-loader": "^13.5.0",
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.9",
