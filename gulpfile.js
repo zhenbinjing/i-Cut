@@ -44,23 +44,23 @@ gulp.task('distDelFile',function(){
 /*------------------------------SVG----------------------------------*/
 
 gulp.task('svgDeal',['svgMin'],function(){                     
-	gulp.src('./'+y_Sz+'/img/sprite/sprite.svg')
+	gulp.src('./'+y_Sz+'/static/img/sprite/sprite.svg')
 	.pipe(svg2png())                                       //- svg转png
-	.pipe(gulp.dest('./'+y_Sz+'/img/sprite/'))
+	.pipe(gulp.dest('./'+y_Sz+'/static/img/sprite/'))
 });
 
 gulp.task('svgMin',['svgSprite'],function(){                   
-	return gulp.src('./'+y_Sz+'/img/sprite/sprite.svg')
+	return gulp.src('./'+y_Sz+'/static/img/sprite/sprite.svg')
 	.pipe(svgmin())                                        //- 压缩文件	
-	.pipe(gulp.dest('./'+y_Sz+'/img/sprite/'))
+	.pipe(gulp.dest('./'+y_Sz+'/static/img/sprite/'))
 	.pipe(svgcss({fileName: 'svgcss'}))                    //- DataURI方案
-	.pipe(gulp.dest('./'+y_Sz+'/css/'))	
+	.pipe(gulp.dest('./'+y_Sz+'/static/css/'))	
 });
 
 gulp.task('svgSprite',['svgDel'],function () {	
 	var config = {	
 	templates: {
-		css: require("fs").readFileSync('./'+y_Sz+'/img/sprite/sprite.css', "utf-8")		
+		css: require("fs").readFileSync('./'+y_Sz+'/static/img/sprite/sprite.css', "utf-8")		
 	},
 	common: 'icon-sprite',
 	cssFile: '../css/sprite.css',
@@ -70,19 +70,19 @@ gulp.task('svgSprite',['svgDel'],function () {
 	baseSize: 100,
 	preview: false
 	};
-	return gulp.src('./'+y_Sz+'/img/sprite/*.svg')
+	return gulp.src('./'+y_Sz+'/static/img/sprite/*.svg')
 	.pipe(svgSprite(config))	
-	.pipe(gulp.dest('./'+y_Sz+'/img/'));
+	.pipe(gulp.dest('./'+y_Sz+'/static/img/'));
 })
 
 gulp.task('svgDel',function(){
-	return del('./'+y_Sz+'/img/sprite/sprite.svg')	
+	return del('./'+y_Sz+'/static/img/sprite/sprite.svg')	
 })
 
 /*-------------------------------Css-------------------------------------*/
 
 gulp.task('cssAuto',['cssO'],function () {
-	gulp.src(['./'+y_Dz+'/css/*.css'])
+	gulp.src(['./'+y_Dz+'/static/css/*.css'])
 	.pipe(autoprefixer({
 		browsers: [
 		'last 2 version',                          //- 主流浏览器的最新两个版本
@@ -92,60 +92,59 @@ gulp.task('cssAuto',['cssO'],function () {
 		cascade: true,                             //- 是否美化属性值 默认：true 
 		remove:true                                //- 是否去掉不必要的前缀 默认：true 
 	}))
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));	
+	.pipe(gulp.dest('./'+y_Dz+'/static/css/'));	
 });
 
 gulp.task('cssO',['image-set'],function () {
-	return gulp.src(['./'+y_Dz+'/css/*.css'])
+	return gulp.src(['./'+y_Dz+'/static/css/*.css'])
 	.pipe(csso())
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));	
+	.pipe(gulp.dest('./'+y_Dz+'/static/css/'));	
 });
 
 gulp.task('image-set',['cleanCSS'],function () {	
-	return gulp.src(['./'+y_Dz+'/css/*.css'])
+	return gulp.src(['./'+y_Dz+'/static/css/*.css'])
 	.pipe(imageSet())
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));
+	.pipe(gulp.dest('./'+y_Dz+'/static/css/'));
 });
 
 gulp.task('cleanCSS',['cssMin'],function () {
-	return gulp.src(['./'+y_Dz+'/css/*.css'])
+	return gulp.src(['./'+y_Dz+'/static/css/*.css'])
 	.pipe(cleanCSS({compatibility: 'ie8',keepSpecialComments: '*'}))
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));	
+	.pipe(gulp.dest('./'+y_Dz+'/static/css/'));	
 });
 
 gulp.task('cssMin',['Sass'],function(){	
-	return gulp.src(['./'+y_Sz+'/css/*.css'])          //- 需要处理的css文件，放到一个字符串数组里								
+	return gulp.src(['./'+y_Sz+'/static/css/*.css'])          //- 需要处理的css文件，放到一个字符串数组里								
 	.pipe(px3rem({remUnit: 100}))                      //- px/100转rem值，如果有不想转换的类在值后面加/*no*/
 	.pipe(uncss({
         html: ['./'+y_Sz+'/**/*.html'],                    //- 检查的页面
         ignore: ['abc', '.abc', '#abc']                    //- 忽略的标签 class or id or 分号隔开
 	}))
 	.pipe(concat('index.css'))                         //- 合并后的文件名
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));               //- 输出文件本地
+	.pipe(gulp.dest('./'+y_Dz+'/static/css/'));               //- 输出文件本地
 })
 
 gulp.task('Sass', function () {
-	return gulp.src('./'+y_Sz+'/sass/**/*.scss')
+	return gulp.src('./'+y_Sz+'/static/sass/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
-	.pipe(gulp.dest('./'+y_Sz+'/css/'));
+	.pipe(gulp.dest('./'+y_Sz+'/static/css/'));
 });
-
 /*------------------------------Img----------------------------------*/
 
 gulp.task('imgDeal',['imgMin'],function(){
-	gulp.src(['./'+y_Sz+'/img/*.gif'],{                //- 复制一些不需要处理的图片
-	base: './'+y_Sz+'/img/'})
-	.pipe(gulp.dest('./'+y_Dz+'/img/'));	
+	gulp.src(['./'+y_Sz+'/static/img/*.gif'],{                //- 复制一些不需要处理的图片
+	base: './'+y_Sz+'/static/img/'})
+	.pipe(gulp.dest('./'+y_Dz+'/static/img/'));	
 })
 
 gulp.task('imgMin',['rwdImg'],function(){
-	return gulp.src('./'+y_Sz+'/img/**/*.{png,jpg}')
+	return gulp.src('./'+y_Sz+'/static/img/**/*.{png,jpg}')
 	.pipe(tinypng())
-	.pipe(gulp.dest('./'+y_Dz+'/img/'));               //- 输出路径	
+	.pipe(gulp.dest('./'+y_Dz+'/static/img/'));               //- 输出路径	
 });
 
 gulp.task('rwdImg', ['delrwdImg'],function () {                      //- 生成rwd图片
-	return gulp.src('./'+y_Sz+'/img/rwd/*.{png,jpg}')
+	return gulp.src('./'+y_Sz+'/static/img/rwd/*.{png,jpg}')
 	.pipe(responsive({
 	'*': [
 	{width: '25%',rename: {suffix: '@1x'}},
@@ -158,11 +157,11 @@ gulp.task('rwdImg', ['delrwdImg'],function () {                      //- 生成r
 	withMetadata: false,
 	errorOnEnlargement: false,
 	}))
-	.pipe(gulp.dest('./'+y_Sz+'/img/rwd/'));
+	.pipe(gulp.dest('./'+y_Sz+'/static/img/rwd/'));
 });
 
 gulp.task('delrwdImg',function(){				
-	return del(['./'+y_Sz+'/img/**/*@*.*']);		
+	return del(['./'+y_Sz+'/static/img/**/*@*.*']);		
 });	
 
 /*------------------------------Html----------------------------------*/
@@ -182,9 +181,9 @@ gulp.task('htmlDeal',function(){
 /*------------------------------Font----------------------------------*/
 
 gulp.task('fontCopy',['fontSpider'],function(){            //- 先把fontSpider命令执行完后，再去执行font命令，fontSpider需要添加return
-	gulp.src(['./'+y_Sz+'/font/**'],{                  //- 被复制的文件夹下的所有文件
-	base: './'+y_Sz+'/font'})                          //- 被复制的目标路径 	
-	.pipe(gulp.dest('./'+y_Dz+'/font/'))					
+	gulp.src(['./'+y_Sz+'/static/font/**'],{                  //- 被复制的文件夹下的所有文件
+	base: './'+y_Sz+'/static/font'})                          //- 被复制的目标路径 	
+	.pipe(gulp.dest('./'+y_Dz+'/static/font/'))					
 });
 
 gulp.task('fontSpider',function(){
@@ -196,23 +195,23 @@ gulp.task('fontSpider',function(){
 
 gulp.task('jsMin', function (cb) {
 	pump([
-	gulp.src('./'+y_Sz+'/js/*.js'),
+	gulp.src('./'+y_Sz+'/static/js/*.js'),
 	uglify(),
 	concat('index.js'),
-	gulp.dest('./'+y_Dz+'/js/')
+	gulp.dest('./'+y_Dz+'/static/js/')
 	],cb);
 });
 
 /*------------------------------Webp----------------------------------*/
 
 gulp.task('webp',['webp_css'],function(){				
-	del(['./'+y_Dz+'/img/**/*.{jpg,png}', '!./'+y_Dz+'/img/**/*.{webp}']);		
+	del(['./'+y_Dz+'/static/img/**/*.{jpg,png}', '!./'+y_Dz+'/static/img/**/*.{webp}']);		
 });	 
 
 gulp.task('webp_css',['webp_html'],function(){
-	return gulp.src(['./'+y_Dz+'/css/*.css'])	
+	return gulp.src(['./'+y_Dz+'/static/css/*.css'])	
 	.pipe(replace(/.(jpg|png)/gi,'.webp'))
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));				
+	.pipe(gulp.dest('./'+y_Dz+'/static/css/'));				
 });
 
 gulp.task('webp_html',['webp_img'],function(){					
@@ -222,9 +221,9 @@ gulp.task('webp_html',['webp_img'],function(){
 });
 
 gulp.task('webp_img',function(){
-	return gulp.src('./'+y_Dz+'/img/**/*.{jpg,png}')		
+	return gulp.src('./'+y_Dz+'/static/img/**/*.{jpg,png}')		
 	.pipe(webp({lossless:true}))
-	.pipe(gulp.dest('./'+y_Dz+'/img/'))
+	.pipe(gulp.dest('./'+y_Dz+'/static/img/'))
 });
 
 /*------------------------------HtmlBase64---------------------------------*/
@@ -238,14 +237,14 @@ gulp.task('htmlBase64',function() {
 /*------------------------------CssBase64----------------------------------*/
 
 gulp.task('cssBase64',function(){										
-	gulp.src(['./'+y_Dz+'/css/*.css'])										
+	gulp.src(['./'+y_Dz+'/static/css/*.css'])										
 	.pipe(css64({
 	extensions: ['jpg','png','gif','webp'],
 	maxImageSize: 2*1024,// bytes
 	deleteAfterEncoding: true
 	}))
 	.pipe(concat('index.css'))					
-	.pipe(gulp.dest('./'+y_Dz+'/css/'));				
+	.pipe(gulp.dest('./'+y_Dz+'/static/css/'));				
 });
 
 /*-------------------------------------Rev-----------------------------------*/	
@@ -262,43 +261,43 @@ gulp.task('revHtml',['revStyle'],function () {
 });
 
 gulp.task('revStyle',function () {
-	return gulp.src(['./'+y_Rn+'/**/*.json', './'+y_Rz+'/css/*.css'])
+	return gulp.src(['./'+y_Rn+'/**/*.json', './'+y_Rz+'/static/css/*.css'])
 	.pipe(revCollector())
-	.pipe(gulp.dest('./'+y_Rz+'/css/'));
+	.pipe(gulp.dest('./'+y_Rz+'/static/css/'));
 });
 
 gulp.task('revDeal',['revCss','revJs','revFont','revImg']);
 
 gulp.task('revCss',function(){										
-	gulp.src(['./'+y_Dz+'/css/*.css'])										
+	gulp.src(['./'+y_Dz+'/static/css/*.css'])										
 	.pipe(rev())
-	.pipe(gulp.dest('./'+y_Rz+'/css/'))
+	.pipe(gulp.dest('./'+y_Rz+'/static/css/'))
 	.pipe(rev.manifest())
-	.pipe(gulp.dest('./'+y_Rn+'/css/'))	
+	.pipe(gulp.dest('./'+y_Rn+'/static/css/'))	
 });
 
 gulp.task('revJs',function(){										
-	gulp.src(['./'+y_Dz+'/js/*.js'])										
+	gulp.src(['./'+y_Dz+'/static/js/*.js'])										
 	.pipe(rev())	
-	.pipe(gulp.dest('./'+y_Rz+'/js/'))
+	.pipe(gulp.dest('./'+y_Rz+'/static/js/'))
 	.pipe(rev.manifest())
-	.pipe(gulp.dest('./'+y_Rn+'/js/'));
+	.pipe(gulp.dest('./'+y_Rn+'/static/js/'));
 });
 
 gulp.task('revFont',function(){										
-	gulp.src(['./'+y_Dz+'/font/*.*'])										
+	gulp.src(['./'+y_Dz+'/static/font/*.*'])										
 	.pipe(rev())	
-	.pipe(gulp.dest('./'+y_Rz+'/font/'))
+	.pipe(gulp.dest('./'+y_Rz+'/static/font/'))
 	.pipe(rev.manifest())
-	.pipe(gulp.dest('./'+y_Rn+'/font/'));
+	.pipe(gulp.dest('./'+y_Rn+'/static/font/'));
 });
 
 gulp.task('revImg',function(){										
-	gulp.src(['./'+y_Dz+'/img/**/*.*'])										
+	gulp.src(['./'+y_Dz+'/static/img/**/*.*'])										
 	.pipe(rev())
-	.pipe(gulp.dest('./'+y_Rz+'/img/'))
+	.pipe(gulp.dest('./'+y_Rz+'/static/img/'))
 	.pipe(rev.manifest())
-	.pipe(gulp.dest('./'+y_Rn+'/img/'));			
+	.pipe(gulp.dest('./'+y_Rn+'/static/img/'));			
 });
 
 /*------------------------------Htmlmin----------------------------------*/	
@@ -318,7 +317,7 @@ gulp.task('htmlMin',function(){
 gulp.task('htmlUrl',function() {					
 	gulp.src('./'+y_Rz+'/*.html')
 	.pipe(htmlurl({
-		prefix: 'https://i-cut.cc/rev/',
+		prefix: 'https://i-cut.cc/rev/static',
 		attrdata: ["img:src", "img:data-src", "img:s-src", "img:data-srcset", "script:src", "link:href"]
 	}))
 	.pipe(gulp.dest('./'+y_Rz+'/'));

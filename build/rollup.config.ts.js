@@ -3,9 +3,9 @@
 //import commonjs from 'rollup-plugin-commonjs';
 
 export default {
-  input: './src/js/es6/main.js',
+  input: './src/static/js/es6/main.js',
   output: {
-	   file:'./src/js/es6/ts/main.js',	
+	   file:'./src/static/js/es6/ts/main.js',	
   	   format: 'es'
 	   //name: 'icut', 
 	   //sourcemap: 'true',

@@ -3,7 +3,7 @@ let webpack = require('webpack');
 let UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 let path = require('path');
 let fs = require('fs');
-let srcDir = path.resolve(process.cwd(), 'src');
+let srcDir = path.resolve(process.cwd(), 'src/static');
 
 //获取多页面的每个入口文件，用于配置中的entry
 function getEntry() {
@@ -26,7 +26,7 @@ module.exports = {
 	devtool: "false", //添加.map文件调试 source-map
 	entry: getEntry(),
 	output: {
-        path: path.join(__dirname, "../dist/js"),
+        path: path.join(__dirname, "../dist/static/js"),
         //publicPath: "dist/js", 上线路径  https：//...
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"

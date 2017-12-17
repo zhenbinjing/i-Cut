@@ -4,9 +4,9 @@ import eslint from 'rollup-plugin-eslint';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
-  input: './src/js/es6/ts/main.js',
+  input: './src/static/js/es6/ts/main.js',
   output:{ 
-	   file:'./src/js/es5/main.js',
+	   file:'./src/static/js/es5/main.js',
 	   format: 'iife'
   },  
   plugins: [ 

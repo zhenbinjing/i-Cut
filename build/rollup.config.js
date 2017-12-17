@@ -3,9 +3,9 @@ import babel from 'rollup-plugin-babel';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
-  input: './src/js/index.js',
+  input: './src/static/js/index.js',
   output: { 
-	    file:'./dist/js/index.js',
+	    file:'./dist/static/js/index.js',
 	    format: 'iife'
             // output format - 'amd', 'cjs', 'es6', 'iife', 'umd'
             // amd – 使用像requirejs一样的银木块定义
