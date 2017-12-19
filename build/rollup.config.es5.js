@@ -1,4 +1,4 @@
-import buble from 'rollup-plugin-buble';
+﻿import buble from 'rollup-plugin-buble';
 import babel from 'rollup-plugin-babel';
 import eslint from 'rollup-plugin-eslint';
 import uglify from 'rollup-plugin-uglify';
@@ -21,6 +21,11 @@ export default {
 	   //  'src/styles/**',
 	   //]
 	}),
-	uglify()
+	uglify({
+            //mangle: true	
+            //保留关键变量
+            mangle: {reserved: ['tsa','TSA']},
+            toplevel: true
+        })
   ]
 };

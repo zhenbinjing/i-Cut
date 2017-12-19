@@ -1,7 +1,7 @@
-class B {
+class TSB {
     render() {
         return 'BBBB';
     }
 }
 
-export default B;
+export default TSB;

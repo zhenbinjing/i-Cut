@@ -1,3 +1,3 @@
-import { A, B } from './cm/index';
-let a = new A();
-a.render();
+import { TSA, TSB } from './cm/index';
+let tsa = new TSA();
+tsa.render();

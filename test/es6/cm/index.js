@@ -1,4 +1,4 @@
-import A from './A';
-import B from './B';
+import TSA from './A';
+import TSB from './B';
 
-export { A, B };
+export { TSA, TSB };

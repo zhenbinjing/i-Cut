@@ -1,7 +1,7 @@
-class A {
+class TSA {
     render() {
         return 'AAAA';
     }
 }
 
-export default A;
+export default TSA;

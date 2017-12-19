@@ -1,1 +1,1 @@
-class A{render(){return'AAAA'}}let a=new A;a.render();
+class TSA{render(){return'AAAA'}}let tsa=new TSA;tsa.render();

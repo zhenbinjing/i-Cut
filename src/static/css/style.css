@@ -54,3 +54,9 @@ img[data-sizes]{width: 100%;}
   background-image: image-set('')
 }
 /* clean-css ignore:end */
+
+/* uncss:ignore start */
+
+/* all rules in here will be ignored */
+
+/* uncss:ignore end */
