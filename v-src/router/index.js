@@ -9,6 +9,10 @@ import Vr3 from '../components/Vr3.vue'
 export default new VueRouter({    
     routes: [
       {
+        path: '/',
+        redirect: '/vr1'
+      },
+      {
         path: '/vr1',
         component: Vr1
       },
@@ -20,5 +24,6 @@ export default new VueRouter({
         path: '/vr3',
         component: Vr3
       }
-    ]
+    ],
+    linkActiveClass: 'active'
 });

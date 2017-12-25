@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <h2>{{ message }}</h2>
+  <div class="main">
+    <h1>{{ message }}</h1>
     <h2>Vue-router</h2>
+    <div class="router">
     <router-link to="/vr1">vr1</router-link>
     <router-link to="/vr2">vr2</router-link>
     <router-link to="/vr3">vr3</router-link>
     <router-view></router-view>
+    </div>
     <Vd></Vd>
     <h2>Vuex</h2>
     <Vuexs></Vuexs>
@@ -26,3 +28,17 @@ export default {
   components: { Vd,Vuexs }
 }
 </script>
+
+<style>
+html,body{ height: 100%}
+body{display: flex; justify-content: center; align-items: center; margin: 0 }
+div { text-align: center }
+h1,h2,h4 { font-size:40px; color:#42b983; padding: 10px 0; margin: 0; line-height: 1 }
+h4 { color:black; font-size: 20px;}
+a { text-decoration: none; color:black; }
+a.active { color:#0062f5 }
+</style>
+<!--
+<style lang="sass" rel="stylesheets/sass">
+</style>
+-->

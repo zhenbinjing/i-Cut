@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fz24">
     <Display></Display>
     <Increment></Increment>
   </div>

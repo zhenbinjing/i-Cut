@@ -1,7 +1,7 @@
 <template>
   <div id="Vd">
     <h2>{{ message }}</h2>
-    <div v-for="article in articles">
+    <div v-for="article in articles" class="asios_text">
         {{article.name}}
     </div>
   </div>
@@ -17,7 +17,7 @@ export default {
       }
   },
   mounted () {
-    axios.get('/axios.json')
+    axios.get('https://i-cut.cc/axios.json')
     .then(response => {
        this.articles = response.data
       // console.log(this.articles)
@@ -25,3 +25,10 @@ export default {
   }
 }
 </script>
+
+<!--添加 scoped 属性 css只作用在此组件上-->
+<style scoped>
+.asios_text {
+  color: black; font-size: 20px; text-decoration:underline
+}
+</style>

@@ -8,9 +8,9 @@ module.exports = merge(baseConfig, {
     entry: path.join(root, 'v-src/main.js'),  // 入口文件路径
     output: {
     path: path.join(root, 'v-dist'),  // 出口目录
-    filename: 'main.js'  // 出口文件名
+    filename: 'static/js/main.js'  // 出口文件名
     },
     plugins: [       
-		new webpack.HotModuleReplacementPlugin()		
+    new webpack.HotModuleReplacementPlugin()
     ]	
 });

@@ -12,22 +12,42 @@ module.exports = merge(baseConfig, {
 	entry: path.join(root, 'v-src/main.js'),  // 入口文件路径
     output: {
     path: path.join(root, 'v-dist'),  // 出口目录
-    filename: '[name].[chunkhash].js'  // 出口文件名
+    filename: 'static/js/[name].[chunkhash].js'  // 出口文件名
     }, 
-	plugins: [
-	 //提升变量作用域
-	 new webpack.optimize.ModuleConcatenationPlugin(),
-	 //压缩
-	 new UglifyJsPlugin(),
-	 //复制编辑html
-	 new HtmlWebpackPlugin({
+	plugins: [      
+	    //提升变量作用域
+      new webpack.optimize.ModuleConcatenationPlugin(),
+      //缓存
+      new webpack.HashedModuleIdsPlugin(),
+      //提取公共模块
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendor',
+        minChunks: function (module) {
+          return (
+            module.resource &&
+            /\.js$/.test(module.resource) &&
+            module.resource.indexOf(
+              path.join(__dirname, '../node_modules')
+            ) === 0
+          )
+        }
+      }),
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'manifest',
+        minChunks: Infinity
+      }),
+	    //压缩
+	    new UglifyJsPlugin(),
+	    //复制编辑html
+ 	    new HtmlWebpackPlugin({
              template: path.join(root, 'v-src/index.html'), // 模板文件
              inject: 'body', // js的script注入到body底部
              minify: {
                    removeComments: true,
                    collapseWhitespace: true,
                    removeAttributeQuotes: true			
-             }
+             },
+             minifyJS:true
      })
     ]
 });	

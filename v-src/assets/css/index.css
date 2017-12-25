@@ -1,0 +1,5 @@
+* { box-sizing: border-box }
+*:before, *:after { box-sizing: border-box }
+.fz24{font-size:24px}
+.main{width:100%;}
+.router{font-size:30px}
