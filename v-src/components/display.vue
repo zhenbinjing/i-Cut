@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h4>Count is {{ getCount }}</h4>
-  </div>
+    <div class="display">
+      <div class="fz30">Count is {{ getCount }}</div>
+    </div>
 </template>
 
 <script>

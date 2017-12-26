@@ -33,8 +33,8 @@ export default {
 html,body{ height: 100%}
 body{display: flex; justify-content: center; align-items: center; margin: 0 }
 div { text-align: center }
-h1,h2,h4 { font-size:40px; color:#42b983; padding: 10px 0; margin: 0; line-height: 1 }
-h4 { color:black; font-size: 20px;}
+button{font-size: 30px; vertical-align:middle}
+h1,h2 { font-size:60px; color:#42b983; padding: 20px 0; margin: 0; line-height: 1 }
 a { text-decoration: none; color:black; }
 a.active { color:#0062f5 }
 </style>

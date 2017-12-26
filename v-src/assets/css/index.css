@@ -1,5 +1,6 @@
 * { box-sizing: border-box }
 *:before, *:after { box-sizing: border-box }
-.fz24{font-size:24px}
+.fz30{font-size: 30px}
 .main{width:100%;}
-.router{font-size:30px}
+.router{font-size:50px}
+.vuex{line-height: 1}

@@ -1,5 +1,5 @@
 <template>
-  <div class="fz24">
+  <div class="vuex">
     <Display></Display>
     <Increment></Increment>
   </div>

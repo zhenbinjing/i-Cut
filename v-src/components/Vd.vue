@@ -29,6 +29,6 @@ export default {
 <!--添加 scoped 属性 css只作用在此组件上-->
 <style scoped>
 .asios_text {
-  color: black; font-size: 20px; text-decoration:underline
+  color: black; font-size: 30px; text-decoration:underline
 }
 </style>
