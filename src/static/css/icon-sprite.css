@@ -1,0 +1,61 @@
+.icon-sprite{ background-image: url("../img/icon/sprite.png"); }
+.icon1{
+  display: inline-block;
+  background-position: 0px 0px;
+  width: 48px;
+  height: 48px;
+}
+.icon10{
+  display: inline-block;
+  background-position: -48px 0px;
+  width: 48px;
+  height: 48px;
+}
+.icon2{
+  display: inline-block;
+  background-position: 0px -48px;
+  width: 48px;
+  height: 48px;
+}
+.icon3{
+  display: inline-block;
+  background-position: -96px -96px;
+  width: 48px;
+  height: 43px;
+}
+.icon4{
+  display: inline-block;
+  background-position: -48px -48px;
+  width: 48px;
+  height: 48px;
+}
+.icon5{
+  display: inline-block;
+  background-position: -96px 0px;
+  width: 48px;
+  height: 48px;
+}
+.icon6{
+  display: inline-block;
+  background-position: -144px 0px;
+  width: 48px;
+  height: 43px;
+}
+.icon7{
+  display: inline-block;
+  background-position: -96px -48px;
+  width: 48px;
+  height: 48px;
+}
+.icon8{
+  display: inline-block;
+  background-position: -48px -96px;
+  width: 48px;
+  height: 45px;
+}
+.icon9{
+  display: inline-block;
+  background-position: 0px -96px;
+  width: 48px;
+  height: 48px;
+}

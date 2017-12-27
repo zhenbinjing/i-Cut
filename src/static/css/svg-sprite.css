@@ -1,7 +1,7 @@
-.icon-sprite {
+.svg-sprite {
 	display: inline-block;
-	background: url("../img/sprite/sprite.png");
-	background-image: url("../img/sprite/sprite.svg");
+	background: url("../img/svg/sprite.png");
+	background-image: url("../img/svg/sprite.svg");
 	background-repeat: no-repeat;
 	background-size: 0.48rem 4.8rem;
 }

@@ -10,6 +10,8 @@ var sass = require('gulp-sass');                            //- scss文件编译
 var css64 = require('gulp-base64');                         //- css文件转base64
 var img64 = require('gulp-allimgbase64');                   //- img转base64
 var tinypng = require('gulp-tinypng-nokey');                //- png图片压缩
+var spritesmith = require('gulp.spritesmith');              //- css雪碧图
+var merge = require('merge-stream');                        //- 合并流
 var svgmin = require('gulp-svgmin');                        //- svg图片压缩
 var svgSprite = require("gulp-svg-sprites");                //- svg合并
 var svg2png = require("gulp-svg2png");                      //- svg转png
@@ -43,40 +45,62 @@ gulp.task('distDelFile',function(){
 
 /*------------------------------SVG----------------------------------*/
 
+gulp.task('cssSprite',['delIcon'],function(){
+	var spriteData = gulp.src('./'+y_Sz+'/static/img/icon/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'icon-sprite.css',
+    cssTemplate: './'+y_Sz+'/static/img/icon/sprite.css.handlebars'
+    }));
+	
+	var imgStream = spriteData.img
+    .pipe(gulp.dest('./'+y_Sz+'/static/img/icon/'));
+ 
+    var cssStream = spriteData.css
+    .pipe(gulp.dest('./'+y_Sz+'/static/css/'));
+	
+    return merge(imgStream, cssStream);
+});
+
+gulp.task('delIcon',function(){
+	return del('./'+y_Sz+'/static/img/icon/sprite.png')	
+})
+
+/*------------------------------SVG----------------------------------*/
+
 gulp.task('svgDeal',['svgMin'],function(){                     
-	gulp.src('./'+y_Sz+'/static/img/sprite/sprite.svg')
+	gulp.src('./'+y_Sz+'/static/img/svg/sprite.svg')
 	.pipe(svg2png())                                       //- svg转png
-	.pipe(gulp.dest('./'+y_Sz+'/static/img/sprite/'))
+	.pipe(gulp.dest('./'+y_Sz+'/static/img/svg/'))
 });
 
 gulp.task('svgMin',['svgSprite'],function(){                   
-	return gulp.src('./'+y_Sz+'/static/img/sprite/sprite.svg')
+	return gulp.src('./'+y_Sz+'/static/img/svg/sprite.svg')
 	.pipe(svgmin())                                        //- 压缩文件	
-	.pipe(gulp.dest('./'+y_Sz+'/static/img/sprite/'))
-	.pipe(svgcss({fileName: 'svgcss'}))                    //- DataURI方案
+	.pipe(gulp.dest('./'+y_Sz+'/static/img/svg/'))
+	.pipe(svgcss({fileName: 'svgcss', cssPrefix: 'svg-',}))                    //- DataURI方案
 	.pipe(gulp.dest('./'+y_Sz+'/static/css/'))	
 });
 
 gulp.task('svgSprite',['svgDel'],function () {	
 	var config = {	
 	templates: {
-		css: require("fs").readFileSync('./'+y_Sz+'/static/img/sprite/sprite.css', "utf-8")		
+		css: require("fs").readFileSync('./'+y_Sz+'/static/img/svg/sprite.css', "utf-8")		
 	},
-	common: 'icon-sprite',
-	cssFile: '../css/sprite.css',
-	pngPath: '../img/sprite/sprite.png',
-	svgPath: '../img/sprite/sprite.svg',
-	svg: {sprite: '../img/sprite/sprite.svg'},
+	common: 'svg-sprite',
+	cssFile: '../css/svg-sprite.css',
+	pngPath: '../img/svg/sprite.png',
+	svgPath: '../img/svg/sprite.svg',
+	svg: {sprite: '../img/svg/sprite.svg'},
 	baseSize: 100,
 	preview: false
 	};
-	return gulp.src('./'+y_Sz+'/static/img/sprite/*.svg')
+	return gulp.src('./'+y_Sz+'/static/img/svg/*.svg')
 	.pipe(svgSprite(config))	
 	.pipe(gulp.dest('./'+y_Sz+'/static/img/'));
 })
 
 gulp.task('svgDel',function(){
-	return del('./'+y_Sz+'/static/img/sprite/sprite.svg')	
+	return del('./'+y_Sz+'/static/img/svg/sprite.svg')	
 })
 
 /*-------------------------------Css-------------------------------------*/
@@ -138,7 +162,7 @@ gulp.task('imgDeal',['imgMin'],function(){
 })
 
 gulp.task('imgMin',['rwdImg'],function(){
-	return gulp.src('./'+y_Sz+'/static/img/**/*.{png,jpg}')
+	return gulp.src(['./'+y_Sz+'/static/img/**/*.{png,jpg}', '!./'+y_Sz+'/static/img/icon/icon*.png'])
 	.pipe(tinypng())
 	.pipe(gulp.dest('./'+y_Dz+'/static/img/'));               //- 输出路径	
 });
@@ -332,6 +356,6 @@ gulp.task('bs',function(){
 	open : false	
 	});
 });
-
+gulp.task('allimg',['distDelFile','cssSprite','svgDeal']);
 gulp.task('allmin',['cssAuto','htmlDeal','fontCopy','imgDeal']);
 gulp.task('Base64',['htmlBase64','cssBase64']);

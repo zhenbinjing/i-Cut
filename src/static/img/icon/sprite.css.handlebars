@@ -1,0 +1,9 @@
+.icon-sprite{ background-image: url("../img/icon/sprite.png"); }
+{{#sprites}}
+.{{name}}{
+  display: inline-block;
+  background-position: {{px.offset_x}} {{px.offset_y}};
+  width: {{px.width}};
+  height: {{px.height}};
+}
+{{/sprites}}
