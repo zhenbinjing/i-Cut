@@ -49,6 +49,7 @@ gulp.task('cssSprite',['delIcon'],function(){
 	var spriteData = gulp.src('./'+y_Sz+'/static/img/icon/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: 'icon-sprite.css',
+	algorithm: 'top-down',
     cssTemplate: './'+y_Sz+'/static/img/icon/sprite.css.handlebars'
     }));
 	
@@ -56,6 +57,7 @@ gulp.task('cssSprite',['delIcon'],function(){
     .pipe(gulp.dest('./'+y_Sz+'/static/img/icon/'));
  
     var cssStream = spriteData.css
+	.pipe(csso())
     .pipe(gulp.dest('./'+y_Sz+'/static/css/'));
 	
     return merge(imgStream, cssStream);
@@ -356,6 +358,6 @@ gulp.task('bs',function(){
 	open : false	
 	});
 });
-gulp.task('allimg',['distDelFile','cssSprite','svgDeal']);
+
 gulp.task('allmin',['cssAuto','htmlDeal','fontCopy','imgDeal']);
 gulp.task('Base64',['htmlBase64','cssBase64']);
