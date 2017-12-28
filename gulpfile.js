@@ -43,7 +43,7 @@ gulp.task('distDelFile',function(){
 	del('./'+y_Dz+'/');
 })
 
-/*------------------------------SVG----------------------------------*/
+/*------------------------------cssSprite----------------------------------*/
 
 gulp.task('cssSprite',['delIcon'],function(){
 	var spriteData = gulp.src('./'+y_Sz+'/static/img/icon/*.png').pipe(spritesmith({
