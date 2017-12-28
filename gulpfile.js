@@ -47,20 +47,20 @@ gulp.task('distDelFile',function(){
 
 gulp.task('cssSprite',['delIcon'],function(){
 	var spriteData = gulp.src('./'+y_Sz+'/static/img/icon/*.png').pipe(spritesmith({
-    imgName: 'sprite.png',
-    cssName: 'icon-sprite.css',
+	imgName: 'sprite.png',
+	cssName: 'icon-sprite.css',
 	algorithm: 'top-down',
-    cssTemplate: './'+y_Sz+'/static/img/icon/sprite.css.handlebars'
-    }));
+	cssTemplate: './'+y_Sz+'/static/img/icon/sprite.css.handlebars'
+	}));
 	
 	var imgStream = spriteData.img
-    .pipe(gulp.dest('./'+y_Sz+'/static/img/icon/'));
+	.pipe(gulp.dest('./'+y_Sz+'/static/img/icon/'));
  
-    var cssStream = spriteData.css
+	var cssStream = spriteData.css
 	.pipe(csso())
-    .pipe(gulp.dest('./'+y_Sz+'/static/css/'));
+	.pipe(gulp.dest('./'+y_Sz+'/static/css/'));
 	
-    return merge(imgStream, cssStream);
+	return merge(imgStream, cssStream);
 });
 
 gulp.task('delIcon',function(){

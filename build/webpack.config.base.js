@@ -43,7 +43,7 @@ module.exports = {
             } // .js文件使用babel-loader，切记排除node_modules目录               
   ]},
   plugins: [      
-	 //复制编辑html
+      //复制编辑html
       new HtmlWebpackPlugin({
             template: path.join(root, 'v-src/index.html'), // 模板文件
             inject: 'body' // js的script注入到body底部            
