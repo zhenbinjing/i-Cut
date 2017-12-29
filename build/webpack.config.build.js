@@ -14,7 +14,10 @@ module.exports = merge(baseConfig, {
              path: path.join(root, 'v-dist'),  // 出口目录
              filename: 'static/js/[name].[chunkhash].js'  // 出口文件名
 	}, 
-	plugins: [      
+	plugins: [
+    new webpack.DefinePlugin({
+        'process.env': require('../config/dev.env')
+    }),      
 	//提升变量作用域
 	new webpack.optimize.ModuleConcatenationPlugin(),
 	//缓存
@@ -29,8 +32,7 @@ module.exports = merge(baseConfig, {
              module.resource.indexOf(
               path.join(__dirname, '../node_modules')
              ) === 0
-             )
-             }
+             )}
 	}),
 	new webpack.optimize.CommonsChunkPlugin({
              name: 'manifest',
@@ -46,7 +48,7 @@ module.exports = merge(baseConfig, {
                    removeComments: true,
                    collapseWhitespace: true,
                    removeAttributeQuotes: true			
-	}
+	     }
 	})
     ]
 });	

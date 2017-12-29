@@ -10,7 +10,10 @@ module.exports = merge(baseConfig, {
     path: path.join(root, 'v-dist'),  // 出口目录
     filename: 'static/js/main.js'  // 出口文件名
     },
-    plugins: [       
+    plugins: [     
+    new webpack.DefinePlugin({
+        'process.env': require('../config/prod.env')
+    }),     
     new webpack.HotModuleReplacementPlugin()
     ]	
 });

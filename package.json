@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.4.7",
+  "version": "2.4.8",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -39,9 +39,14 @@
     "url": "https://github.com/zhenbinjing/i-Cut/issues"
   },
   "homepage": "https://github.com/zhenbinjing/i-Cut#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "vue": "^2.5.13",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
-    "axios": "^0.17.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -108,12 +113,9 @@
     "rollup-plugin-uglify": "^2.0.1",
     "sass-loader": "^6.0.6",
     "uglifyjs-webpack-plugin": "^1.1.4",
-    "vue": "^2.5.13",
     "vue-loader": "^13.6.1",
-    "vue-router": "^3.0.1",
     "vue-style-loader": "^3.0.3",
     "vue-template-compiler": "^2.5.13",
-    "vuex": "^3.0.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1"
