@@ -1,19 +1,18 @@
 ﻿var fs = require('fs');
 var path = require('path')
 var root = path.resolve(__dirname, '..') // 项目的根目录绝对路径
-var rm = require('rimraf');
 var webpack = require('webpack')
 var merge = require('webpack-merge')
 var baseConfig = require('./webpack.config.base')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-module.exports = merge(baseConfig, {
+module.exports = merge(baseConfig, {	
 	entry: path.join(root, 'v-src/main.js'),  // 入口文件路径
 	output: {
              path: path.join(root, 'v-dist'),  // 出口目录
              filename: 'static/js/[name].[chunkhash].js'  // 出口文件名
-	}, 
+    },     
 	plugins: [
     new webpack.DefinePlugin({
         'process.env': require('../config/dev.env')
@@ -49,9 +48,9 @@ module.exports = merge(baseConfig, {
                    collapseWhitespace: true,
                    removeAttributeQuotes: true			
 	     }
-	})
+    }) 
     ]
-});	
+});
 
 //删除之前的文件
 let emptyDir = function (fileUrl) {

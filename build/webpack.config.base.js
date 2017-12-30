@@ -21,7 +21,7 @@ module.exports = {
                               fallback: 'vue-style-loader'
                         }),
                         css: ExtractTextPlugin.extract({
-                              use: ['css-loader', 'autoprefixer-loader', 'px2rem-loader?remUnit=100'],
+                              use: ['css-loader?minimize', 'autoprefixer-loader', 'px2rem-loader?remUnit=100'],
                               fallback: 'vue-style-loader'
                         })
                         }}
@@ -53,6 +53,6 @@ module.exports = {
             assetNameRegExp: /\.css$/,
             cssProcessor: require('cssnano'),
             cssProcessorOptions: { discardComments: { removeAll: true } }
-      })     
+      })
  ]
 }
