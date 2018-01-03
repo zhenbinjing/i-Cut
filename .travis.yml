@@ -12,8 +12,8 @@ sudo: false  # no need for virtualization.
 addons:
   chrome: stable # have Travis install chrome stable
 script: 
-  - npm run dev
-  - npm run v-dist
+  - npm run gulp
+  - npm run build
   - npm run karma
 after_success:
   - bash <(curl -s https://codecov.io/bash)

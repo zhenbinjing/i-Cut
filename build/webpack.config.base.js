@@ -4,10 +4,11 @@ var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
+const packageConfig = require('../package.json')
 
 module.exports = {
   resolve: {
+      extensions: ['.js', '.vue', '.json'],
       alias: {'vue': 'vue/dist/vue.js'}
   },
   module: { // 配置loader
