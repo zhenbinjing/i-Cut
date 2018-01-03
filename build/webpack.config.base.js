@@ -1,10 +1,9 @@
-﻿var path = require('path')
-var root = path.resolve(__dirname, '..') // 项目的根目录绝对路径
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
-var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const packageConfig = require('../package.json')
+﻿const path = require('path')
+const root = path.resolve(__dirname, '..') // 项目的根目录绝对路径
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   resolve: {

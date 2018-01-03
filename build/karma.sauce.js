@@ -1,6 +1,6 @@
-﻿var webpack = require('webpack');
-var path = require('path');
-var sauce = require('../sauce.json');
+﻿const webpack = require('webpack');
+const path = require('path');
+const sauce = require('../sauce.json');
 
 function createCustomLauncher (browser, platform, version) {
 	return {
