@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.4.10",
+  "version": "2.4.11",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -86,7 +86,7 @@
     "gulp-tinypng-nokey": "^1.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6",
-    "gulp-webp": "^2.3.0",
+    "gulp-webp": "^3.0.0",
     "gulp.spritesmith": "^6.7.0",
     "html-webpack-plugin": "^2.30.1",
     "istanbul-instrumenter-loader": "^3.0.0",
