@@ -24,8 +24,8 @@ var fontSpider = require('gulp-font-spider');               //- 删除没用到�
 var processhtml = require('gulp-processhtml');              //- html更改模板
 var htmlmin = require('gulp-htmlmin');                      //- html压缩
 var uglify = require('gulp-uglify');                        //- js压缩
-var rev = require('gulp-rev');                              //- md5时间戳
-var revCollector = require('gulp-rev-collector');           //- 改为md5版本路径
+var rev = require('gulp-rev');                              //- 添加哈希值
+var revCollector = require('gulp-rev-collector');           //- 改为哈希值版本路径
 var htmlurl = require('gulp-html-url-prefix-custom');       //- html文件添加域名前缀
 var pump = require('pump');                                 //- 报错提示
 var browserSync = require('browser-sync');                  //- 浏览器同步测试工具
@@ -304,7 +304,7 @@ gulp.task('revCss',function(){
 
 gulp.task('revJs',function(){										
 	gulp.src(['./'+y_Dz+'/static/js/*.js'])										
-	.pipe(rev())	
+	.pipe(rev())
 	.pipe(gulp.dest('./'+y_Rz+'/static/js/'))
 	.pipe(rev.manifest())
 	.pipe(gulp.dest('./'+y_Rn+'/static/js/'));
@@ -312,7 +312,7 @@ gulp.task('revJs',function(){
 
 gulp.task('revFont',function(){										
 	gulp.src(['./'+y_Dz+'/static/font/*.*'])										
-	.pipe(rev())	
+	.pipe(rev())
 	.pipe(gulp.dest('./'+y_Rz+'/static/font/'))
 	.pipe(rev.manifest())
 	.pipe(gulp.dest('./'+y_Rn+'/static/font/'));
