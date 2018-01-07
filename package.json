@@ -1,13 +1,13 @@
 {
   "name": "i-cut",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
-    "gulp": "gulp default && npm run clhtml && npm run rollup && npm run rev",
+    "gulp": "gulp default --color && npm run clhtml && npm run rollup && npm run rev",
     "clhtml": "node ./build/critical.js",    
     "rollup": "rollup -c ./build/rollup.config.js",
-    "rev": "gulp revAll && gulp htmlAll",  
+    "rev": "gulp revAll --color && gulp htmlAll --color",  
     "rmin": "npm run rpts && npm run rpbl",
     "rpts": "rollup -c ./build/rollup.config.ts.js",
     "rpbl": "rollup -c ./build/rollup.config.es5.js",
