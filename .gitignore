@@ -3,4 +3,3 @@ coverage
 package-lock.json
 sauce.json
 revjson
-*.map
