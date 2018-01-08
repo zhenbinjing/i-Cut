@@ -66,7 +66,7 @@ const webpackConfig = merge(baseConfig, {
                    collapseWhitespace: true,
                    removeAttributeQuotes: true			
 	     }
-        })
-    ]
+	})
+]
 });
 module.exports = webpackConfig

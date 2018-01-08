@@ -1,0 +1,2 @@
+webpackJsonp([1],{MtAW:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s=function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v(this._s(this.message2))])};s._withStripped=!0;var n={render:s,staticRenderFns:[]},i=n;var u=r("VU/8")({data:function(){return{message2:"vue-router 2"}}},i,!1,null,null,null);u.options.__file="v-src\\components\\Vr2.vue";t.default=u.exports}});
+//# sourceMappingURL=1.d015518bba8f1a9142c4.js.map
