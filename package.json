@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.5.7",
+  "version": "2.5.8",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "rpbl": "rollup -c ./build/rollup.config.es5.js",
     "build": "node ./build/build.js",
     "dev": "webpack-dev-server --inline --progress --config ./build/webpack.config.dev.js",
-    "test": "karma start --single-run --browsers ChromeHeadless ./build/karma.conf.js",
+    "test": "karma start ./build/karma.conf.js --single-run",
     "sauce": "karma start ./build/karma.sauce.js --single-run"
   },
   "repository": {
