@@ -40,7 +40,14 @@ module.exports = {
             },          
             {
             test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/
-            } // .js文件使用babel-loader，切记排除node_modules目录               
+            }, // .js文件使用babel-loader，切记排除node_modules目录    
+            {
+                  test: /\.(png|jpg|svg|gif|webp)$/,
+                  loader: 'file-loader',
+                  options: {
+                    name: 'static/img/[name].[ext]?[hash]'
+                  }
+            }      
   ]},
   plugins: [      
       //复制编辑html

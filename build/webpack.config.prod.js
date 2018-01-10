@@ -15,7 +15,8 @@ const webpackConfig = merge(baseConfig, {
 	output: {
              path: path.join(root, 'v-dist'),  // 出口目录
              filename: 'static/js/[name].[chunkhash].js',  // 出口文件名
-             chunkFilename: ('static/js/[id].[chunkhash].js')
+             chunkFilename: ('static/js/[id].[chunkhash].js'),
+             publicPath: '/v-dist/' //在github上预览
 	},     
 	plugins: [
 	new webpack.DefinePlugin({
@@ -65,8 +66,8 @@ const webpackConfig = merge(baseConfig, {
                    removeComments: true,
                    collapseWhitespace: true,
                    removeAttributeQuotes: true			
-	     }
-	})
+       }
+  })
 ]
 });
 module.exports = webpackConfig

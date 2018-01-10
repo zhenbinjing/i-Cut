@@ -1,31 +1,22 @@
 <template>
-  <div class="main">
-    <h1>{{ message }}</h1>
-    <h2>Vue-router</h2>
-    <div class="router">
-    <router-link to="/vr1">vr1</router-link>
-    <router-link to="/vr2">vr2</router-link>
-    <router-link to="/vr3">vr3</router-link>
-    <router-view></router-view>
-    </div>
-    <Vd></Vd>
-    <h2>Vuex</h2>
+  <div class="main">   
+    <hello></hello>    
+    <router></router>  
+    <Asios></Asios>    
     <Vuexs></Vuexs>
   </div>  
 </template>
 
 <script>
+import hello from './components/hello.vue';
+import router from './components/router.vue';
+import Asios from './components/Asios.vue';
+
 import Vuex from 'vuex'
-import Vd from './components/Vd.vue';
 import Vuexs from './components/Vuexs.vue';
 
 export default {
-  data () {
-      return {
-        message: 'Hello Vue!'
-      }
-  },
-  components: { Vd,Vuexs }
+  components: { hello ,router, Asios, Vuexs }
 }
 </script>
 
@@ -37,6 +28,7 @@ button{font-size: 30px; vertical-align:middle}
 h1,h2 { font-size:60px; color:#42b983; padding: 20px 0; margin: 0; line-height: 1 }
 a { text-decoration: none; color:black; }
 a.active { color:#0062f5 }
+img{max-width: 100%;}
 </style>
 <!--
 <style lang="sass" rel="stylesheets/sass">

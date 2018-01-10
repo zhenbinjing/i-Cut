@@ -16,13 +16,15 @@ const devWebpackConfig = merge(baseConfig, {
     },
     output: {
     path: path.join(root, 'v-dist'),  // 出口目录
-    filename: 'static/js/app.js'  // 出口文件名
+    filename: 'static/js/app.js',  // 出口文件名
+    publicPath: '/'
     },
     devServer:{        
         //是否不输出日记
         quiet: true,
         host: HOST || 'localhost',
         port: PORT || 8080,
+        publicPath: '/',
     },
     plugins: [     
     new webpack.DefinePlugin({
