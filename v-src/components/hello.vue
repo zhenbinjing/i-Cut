@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <p class="logo"><img src="../assets/img/logo.png" alt="logo"></p>
-    <p>{{ message }}</p>
+    <p class="fz40">{{ message }}</p>
   </div>
 </template>
 

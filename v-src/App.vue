@@ -29,6 +29,7 @@ h1,h2 { font-size:60px; color:#42b983; padding: 20px 0; margin: 0; line-height: 
 a { text-decoration: none; color:black; }
 a.active { color:#0062f5 }
 img{max-width: 100%;}
+p{ padding: 0; margin: 0}
 </style>
 <!--
 <style lang="sass" rel="stylesheets/sass">

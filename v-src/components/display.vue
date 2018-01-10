@@ -1,6 +1,6 @@
 <template>
     <div class="display">
-      <div class="fz30">Count is {{ getCount }}</div>
+      <div class="fz40">Count is {{ getCount }}</div>
     </div>
 </template>
 

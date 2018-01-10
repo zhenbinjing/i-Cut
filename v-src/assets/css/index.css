@@ -1,9 +1,7 @@
 * { box-sizing: border-box }
 *:before, *:after { box-sizing: border-box }
-.fz30{font-size: 30px}
+.fz40{font-size: 40px}
 .main{width:100%;}
-.hello p{ font-size: 40px; padding: 0; margin: 0}
 .hello img{widht:200px; height: 200px;}
 .router{font-size:50px}
-.view{font-size: 40px;}
 .vuex{line-height: 1}
