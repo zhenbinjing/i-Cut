@@ -4,11 +4,16 @@ Vue.use(VueRouter);
 
 import Vr1 from '../components/Vr1.vue'
 
+//同步加载路由或用于静态化
+//import Vr2 from '../components/Vr2.vue'
+//import Vr3 from '../components/Vr3.vue'
+
 //异步加载路由
 const Vr2 = () => import('../components/Vr2.vue')
 const Vr3 = () => import('../components/Vr3.vue')
 
 export default new VueRouter({    
+    //mode: 'history',  //开启history模式
     routes: [
       {
         path: '/',

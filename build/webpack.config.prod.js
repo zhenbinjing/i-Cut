@@ -6,6 +6,7 @@ const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+//const PrerenderSpaPlugin = require('prerender-spa-plugin')  // 页面静态化
 
 const webpackConfig = merge(baseConfig, {	
 	devtool: '#source-map',
@@ -16,7 +17,8 @@ const webpackConfig = merge(baseConfig, {
              path: path.join(root, 'v-dist'),  // 出口目录
              filename: 'static/js/[name].[chunkhash].js',  // 出口文件名
              chunkFilename: ('static/js/[id].[chunkhash].js'),
-             publicPath: '/v-dist/' //在github上预览
+             publicPath: '/v-dist/' //在github上预览(客户端渲染)
+             //publicPath: '/' //在本地上预览(静态化)
 	},     
 	plugins: [
 	new webpack.DefinePlugin({
@@ -67,7 +69,16 @@ const webpackConfig = merge(baseConfig, {
                    collapseWhitespace: true,
                    removeAttributeQuotes: true			
        }
-  })
+  }),
+  /*new PrerenderSpaPlugin(
+    // Absolute path to compiled SPA
+    path.join(__dirname, '../v-dist'),
+    // List of routes to prerender
+    [ '/','/vr1', '/vr2', '/vr3' ],
+    {
+      captureAfterTime: 5000  //先加载json,让程序运行5秒之后,再捕获渲染后的数据行为(axios)
+    }
+  )*/
 ]
 });
 module.exports = webpackConfig
