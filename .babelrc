@@ -3,6 +3,7 @@
     ["env",{"modules": false}]
   ],
   "plugins": [
-    "transform-runtime","syntax-dynamic-import"
+    "transform-runtime",
+    "syntax-dynamic-import"
   ]
 }
