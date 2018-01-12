@@ -7,14 +7,13 @@
 </template>
 
 <script>
+import Vuex from 'vuex'
+import store from '../vuex/store.js' 
 import Display from './display.vue'
 import Increment from './increment.vue'
-import store from '../vuex/store.js' 
 
 export default {
-  components: {
-    Display,Increment
-  },
-  store 
+  components: { Display, Increment },
+  store
 }
 </script>

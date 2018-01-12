@@ -7,3 +7,8 @@
     <router-view class="fz40"></router-view>
     </div>
 </template>
+
+<script>
+import router from '../router/index.js'
+export default { router }
+</script>

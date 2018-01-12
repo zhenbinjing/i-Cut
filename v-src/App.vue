@@ -11,12 +11,10 @@
 import hello from './components/hello.vue';
 import router from './components/router.vue';
 import Asios from './components/Asios.vue';
-
-import Vuex from 'vuex'
 import Vuexs from './components/Vuexs.vue';
 
 export default {
-  components: { hello ,router, Asios, Vuexs }
+  components: { hello, router, Asios, Vuexs }
 }
 </script>
 
