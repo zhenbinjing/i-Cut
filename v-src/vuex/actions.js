@@ -1,6 +1,2 @@
-export const increment = function ({ commit, state }) {
-  commit('increment', 1) //
-}
-export const decrement = function ({ commit, state }) {
-  commit('decrement', 1)
-}
+export const increment = ({ commit, state }) => commit('increment')
+export const decrement = ({ commit, state }) => commit('decrement')
