@@ -1,5 +1,5 @@
 <template>
-  <div class="main">   
+  <div id="app">   
     <hello></hello>    
     <router></router>  
     <Asios></Asios>    
