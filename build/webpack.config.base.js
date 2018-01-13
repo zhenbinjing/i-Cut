@@ -17,11 +17,11 @@ module.exports = {
                   loader: 'vue-loader', options: { 
                         loaders:{ 
                         sass: ExtractTextPlugin.extract({
-                              use: ['css-loader?minimize', 'autoprefixer-loader', 'sass-loader'],
+                              use: ['css-loader?minimize', 'postcss-loader', 'sass-loader'],
                               fallback: 'vue-style-loader'
                         }),
                         css: ExtractTextPlugin.extract({
-                              use: ['css-loader?minimize', 'autoprefixer-loader', 'px2rem-loader?remUnit=100'],
+                              use: ['css-loader?minimize', 'postcss-loader', 'px2rem-loader?remUnit=100'],
                               fallback: 'vue-style-loader'
                         })
                         }}
@@ -29,13 +29,13 @@ module.exports = {
             {
             test: /\.css$/,
                   use: ExtractTextPlugin.extract({
-                        use: ['css-loader?minimize', 'autoprefixer-loader', 'px2rem-loader?remUnit=100']
+                        use: ['css-loader?minimize', 'postcss-loader', 'px2rem-loader?remUnit=100']
                   })
             },  
             {
             test: /\.scss/,
                   use: ExtractTextPlugin.extract({
-                       use: ['css-loader?minimize', 'autoprefixer-loader', 'sass-loader']
+                       use: ['css-loader?minimize', 'postcss-loader', 'sass-loader']
                   })
             },          
             {
