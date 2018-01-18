@@ -2,9 +2,8 @@ import Vue from 'vue';
 import VueRouter  from 'vue-router'
 Vue.use(VueRouter);
 
-import Vr1 from '../components/Vr1.vue'
-
 //同步加载路由
+import Vr1 from '../components/Vr1.vue'
 //import Vr2 from '../components/Vr2.vue'
 //import Vr3 from '../components/Vr3.vue'
 
@@ -12,8 +11,10 @@ import Vr1 from '../components/Vr1.vue'
 const Vr2 = () => import('../components/Vr2.vue')
 const Vr3 = () => import('../components/Vr3.vue')
 
-export default new VueRouter({    
-    //mode: 'history',  //开启history模式
+
+export function createRouter () {
+  return new VueRouter({ 
+    mode: 'history',  //开启history模式
     routes: [
       {
         path: '/',
@@ -33,4 +34,5 @@ export default new VueRouter({
       }
     ],
     linkActiveClass: 'active'
-});
+})
+}

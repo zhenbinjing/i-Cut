@@ -14,7 +14,10 @@
     "build": "node ./build/build.js",
     "dev": "webpack-dev-server --inline --progress --config ./build/webpack.config.dev.js",
     "test": "karma start ./build/karma.conf.js --single-run",
-    "sauce": "karma start ./build/karma.sauce.js --single-run"
+    "sauce": "karma start ./build/karma.sauce.js --single-run",
+    "ssr": "rimraf v-dist && npm run build:client && npm run build:server && node server",
+    "build:client": "cross-env NODE_ENV=production webpack --config ./build/webpack.config.client.js --progress --hide-modules",
+    "build:server": "cross-env NODE_ENV=production webpack --config ./build/webpack.config.server.js --progress --hide-modules"
   },
   "repository": {
     "type": "git",
@@ -40,8 +43,11 @@
   "homepage": "https://github.com/zhenbinjing/i-Cut#readme",
   "dependencies": {
     "axios": "^0.17.1",
+    "koa": "^2.4.1",
+    "koa-static": "^4.0.2",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.13",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -56,6 +62,7 @@
     "browser-sync": "^2.23.2",
     "chai": "^4.1.2",
     "critical": "^1.1.0",
+    "cross-env": "^5.1.3",
     "css-loader": "^0.28.7",
     "del": "^3.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -125,6 +132,7 @@
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
-    "webpack-merge": "^4.1.1"
+    "webpack-merge": "^4.1.1",
+    "webpack-node-externals": "^1.6.0"
   }
 }

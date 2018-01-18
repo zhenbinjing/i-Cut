@@ -68,17 +68,16 @@ const webpackConfig = merge(baseConfig, {
                    removeComments: true,
                    collapseWhitespace: true,
                    removeAttributeQuotes: true			
-       }
-  }),
-  /*new PrerenderSpaPlugin(
-    // Absolute path to compiled SPA
-    path.join(__dirname, '../v-dist'),
-    // List of routes to prerender
-    [ '/','/vr1', '/vr2', '/vr3' ],
-    {
-      captureAfterTime: 5000  //先加载json,让程序运行5秒之后,再捕获渲染后的数据行为(axios)
-    }
-  )*/
+             }
+	}),
+	/*new PrerenderSpaPlugin(
+	// Absolute path to compiled SPA
+	path.join(__dirname, '../v-dist'),
+	// List of routes to prerender
+	[ '/','/vr1', '/vr2', '/vr3' ],
+	{
+	captureAfterTime: 5000  //先加载json,让程序运行5秒之后,再捕获渲染后的数据行为(axios)
+	})*/
 ]
 });
 module.exports = webpackConfig
