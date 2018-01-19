@@ -6,6 +6,9 @@ const { createBundleRenderer } = require('vue-server-renderer')
 
 const resolve = file => path.resolve(__dirname, file)
 
+const serve = require('koa-static');
+const favicon = require('koa-favicon')
+
 // 生成服务端渲染函数
 const renderer = createBundleRenderer(require('./v-dist/vue-ssr-server-bundle.json'), {
   // 推荐
@@ -22,8 +25,9 @@ function renderToString (context) {
   })
 }
 
-app.use(require('koa-static')(resolve('./v-dist')))
+app.use(serve(resolve('./v-dist')))
 
+app.use(favicon(path.resolve(__dirname, 'v-src/assets/img/logo.png')))
 // response
 app.use(async (ctx, next) => {
   try {
@@ -43,6 +47,6 @@ app.use(async (ctx, next) => {
   }
 })
 
-app.listen(8001)
-  .on('listening', () => console.log('服务已启动：localhost:8001'))
+app.listen(7001)
+  .on('listening', () => console.log('服务已启动：localhost:7001'))
   .on('error', err => console.log(err))

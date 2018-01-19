@@ -4,3 +4,6 @@
   export const decrement = state => {
     state.count = state.count - 1
   }
+ /* export const TOPICS_LIST = (state, topics) => {
+    state.topics = topics
+  }*/

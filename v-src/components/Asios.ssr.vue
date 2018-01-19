@@ -1,27 +1,28 @@
 <template>
   <div class="asios">
-    <h2>{{ message }}</h2>
-    <div v-for="article in articles" class="asios_text" :key="article.name">
-        {{article.name}}
+    <h2>Axios</h2>
+    <div v-for="topic in topics" class="asios_text" :key="topic.name">
+        {{topic.name}}
     </div>
   </div>
 </template>
 
 <script>
-import axios  from 'axios'
+import { mapGetters } from 'vuex'
+
+const fetchInitialData = ({ store }) => {
+  return store.dispatch(`getTopics`)
+}
+
 export default {
-  data () {
-      return {
-        message: 'Axios',
-        articles: []
-      }
+  asyncData: fetchInitialData,
+  computed: {
+    ...mapGetters({
+      topics: 'getTopics'
+    })
   },
   mounted () {
-    axios.get('https://i-cut.cc/axios.json')
-    .then(response => {
-       this.articles = response.data
-      // console.log(this.articles)
-    })    
+    fetchInitialData({ store:this.$store })
   }
 }
 </script>

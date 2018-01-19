@@ -11,7 +11,7 @@
 import hello from './components/hello.vue';
 import router from './components/router.ssr.vue';
 import Asios from './components/Asios.ssr.vue';
-import Vuexs from './components/Vuexs.vue';
+import Vuexs from './components/Vuexs.ssr.vue';
 
 export default {
   components: { hello, router, Asios, Vuexs }
