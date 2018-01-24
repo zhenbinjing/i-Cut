@@ -18,7 +18,7 @@ const config = merge(base, {
     path: path.resolve(__dirname, '../v-dist/'),
     publicPath: '/v-dist/',
     filename: 'static/js/client-bundle.[chunkhash].js',
-    chunkFilename: ('static/js/client-bundle.[chunkhash].js'),
+    chunkFilename: ('static/js/[id].[chunkhash].js')
   },
   plugins: [
     // strip dev-only code in Vue source
