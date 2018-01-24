@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const isProd = process.env.NODE_ENV === 'production';
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 7000;
 const express = require('express');
 const app = express();
 const { createBundleRenderer } = require('vue-server-renderer');

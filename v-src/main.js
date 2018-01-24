@@ -2,7 +2,7 @@ import Vue  from 'vue'
 import css  from './assets/allcss.js'
 import App from './App.vue'
 import router from './router/index.js'
-import store from './vuex/state.js'
+import store from './vuex/store.js'
 import { sync } from 'vuex-router-sync'
 
 sync(store, router)
