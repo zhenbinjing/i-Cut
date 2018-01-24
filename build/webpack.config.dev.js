@@ -6,6 +6,7 @@ const baseConfig = require('./webpack.config.base')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin'); // 这个插件能够更好的在终端看到webpack运行时的错误和警告等信息。可以提升开发体验。
 const portfinder =require('portfinder'); // 查找一个未使用的端口
 const utils = require('./utils') // 消息传送
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -26,7 +27,11 @@ const devWebpackConfig = merge(baseConfig, {
         port: PORT || 8080,
         publicPath: '/',
     },
-    plugins: [     
+    plugins: [ 
+    new HtmlWebpackPlugin({
+            template: path.join(root, 'v-src/index.html'), // 模板文件
+            inject: 'body' // js的script注入到body底部            
+    }),     
     new webpack.DefinePlugin({
         'process.env': require('../config/dev.env')
     }),     

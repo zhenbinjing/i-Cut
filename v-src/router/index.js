@@ -4,16 +4,17 @@ Vue.use(VueRouter);
 
 import Vr1 from '../components/Vr1.vue'
 
-//同步加载路由
-//import Vr2 from '../components/Vr2.vue'
-//import Vr3 from '../components/Vr3.vue'
+//同步加载路由(服务端渲染)
+//import Axios from '../components/Axios.vue'
+//import Vuexs from '../components/Vuexs.vue'
 
-//异步加载路由
-const Vr2 = () => import('../components/Vr2.vue')
-const Vr3 = () => import('../components/Vr3.vue')
+//异步加载路由(客户端渲染)
+const Axios = () => import('../components/Axios.vue')
+const Vuexs = () => import('../components/Vuexs.vue')
 
 export default new VueRouter({    
-    //mode: 'history',  //开启history模式
+    //去掉下面注释开启服务端渲染 history 模式
+    //mode: 'history',  
     routes: [
       {
         path: '/',
@@ -24,12 +25,12 @@ export default new VueRouter({
         component: Vr1
       },
       {
-        path: '/vr2',
-        component: Vr2
+        path: '/axios',
+        component: Axios
       },
       {
-        path: '/vr3',
-        component: Vr3
+        path: '/vuex',
+        component: Vuexs
       }
     ],
     linkActiveClass: 'active'

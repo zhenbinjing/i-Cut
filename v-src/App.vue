@@ -2,19 +2,15 @@
   <div id="app">   
     <hello></hello>    
     <router></router>  
-    <Asios></Asios>    
-    <Vuexs></Vuexs>
   </div>  
 </template>
 
 <script>
 import hello from './components/hello.vue';
 import router from './components/router.vue';
-import Asios from './components/Asios.vue';
-import Vuexs from './components/Vuexs.vue';
 
 export default {
-  components: { hello, router, Asios, Vuexs }
+  components: { hello, router }
 }
 </script>
 

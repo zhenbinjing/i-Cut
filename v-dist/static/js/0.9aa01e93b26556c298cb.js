@@ -1,2 +1,0 @@
-webpackJsonp([0],{"4dtk":function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s=function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v(this._s(this.message3))])};s._withStripped=!0;var n={render:s,staticRenderFns:[]},i=n;var u=r("VU/8")({data:function(){return{message3:"vue-router 3"}}},i,!1,null,null,null);u.options.__file="v-src\\components\\Vr3.vue";t.default=u.exports}});
-//# sourceMappingURL=0.9aa01e93b26556c298cb.js.map

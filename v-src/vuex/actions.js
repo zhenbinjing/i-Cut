@@ -1,6 +1,3 @@
-export const increment = ({ commit, state }) => commit('increment')
-export const decrement = ({ commit, state }) => commit('decrement')
-/*
 import request from 'axios'
 
 export const getTopics = ({ commit, state }) => {
@@ -11,4 +8,7 @@ export const getTopics = ({ commit, state }) => {
   }).catch((error) => {
     console.log(error)
   })
-}*/
+}
+
+export const increment = ({ commit }) => commit('increment');
+export const decrement = ({ commit }) => commit('decrement');

@@ -1,9 +1,9 @@
+  export const TOPICS_LIST = (state, topics) => {
+    state.topics = topics
+  }
   export const increment =  state => {
-    state.count = state.count + 1
+    state.count++
   }
   export const decrement = state => {
-    state.count = state.count - 1
+    state.count--
   }
- /* export const TOPICS_LIST = (state, topics) => {
-    state.topics = topics
-  }*/

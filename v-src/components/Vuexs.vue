@@ -8,12 +8,10 @@
 
 <script>
 import Vuex from 'vuex'
-import store from '../vuex/state.js' 
 import Display from './display.vue'
 import Increment from './increment.vue'
 
 export default {
-  components: { Display, Increment },
-  store
+  components: { Display, Increment }
 }
 </script>

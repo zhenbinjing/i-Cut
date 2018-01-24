@@ -1,7 +1,6 @@
 ﻿const path = require('path')
 const root = path.resolve(__dirname, '..') // 项目的根目录绝对路径
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
@@ -49,12 +48,7 @@ module.exports = {
                   }
             }      
   ]},
-  plugins: [      
-      //复制编辑html
-      new HtmlWebpackPlugin({
-            template: path.join(root, 'v-src/index.html'), // 模板文件
-            inject: 'body' // js的script注入到body底部            
-      }),     
+  plugins: [           
       new ExtractTextPlugin({ filename: 'static/css/index.[chunkhash].css', allChunks:true }),
       new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/,

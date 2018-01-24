@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <script>!function(a,b){var f,g,h,i,c=a.documentElement,d=navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),e=d?Math.min(b.devicePixelRatio,3):1;e=window.top===window.self?e:1,e=1,f=1/e,g="orientationchange"in window?"orientationchange":"resize",c.dataset.dpr=e,h=a.createElement("meta"),h.name="viewport",h.content="initial-scale="+f+",maximum-scale="+f+", minimum-scale="+f,c.firstElementChild.appendChild(h),i=function(){var a=750,b=c.clientWidth;b/e>a&&(b=a*e),c.style.cssText="font-size:"+100*(b/a)+"px;"+"max-width:"+b+"px;"+"margin:auto;"},i(),a.addEventListener&&b.addEventListener(g,i,!1)}(document,window);</script>
-<title>{{ title }}</title>
+<title>Vue Demo</title>
+                <% for (var chunk of webpack.chunks) {
+                        for (var file of chunk.files) {
+                          if (file.match(/\.(js|css)$/)) { %>
+                    <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
 </head>
 
 <body>
