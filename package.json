@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.6.3",
+  "version": "2.6.4",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -14,11 +14,12 @@
     "build": "node ./build/build.js",
     "dev": "webpack-dev-server --inline --progress --config ./build/webpack.config.dev.js",
     "test": "karma start ./build/karma.conf.js --single-run",
-    "sauce": "karma start ./build/karma.sauce.js --single-run",
-    "ssr": "rimraf v-dist && npm run build:client && npm run build:server && npm run build:node",  
-    "build:node":"cross-env NODE_ENV=production node server",
+    "sauce": "karma start ./build/karma.sauce.js --single-run",    
+    "start": "node server",
+    "start:prod": "cross-env NODE_DEV=production node server",
+    "ssr": "rimraf ./v-dist && npm run build:client && npm run build:server && npm run start:prod",
     "build:client": "cross-env NODE_ENV=production webpack --config ./build/webpack.config.client.js --progress --hide-modules",
-    "build:server": "cross-env NODE_ENV=production webpack --config ./build/webpack.config.server.js --progress --hide-modules"
+    "build:server": "cross-env NODE_ENV=production webpack --config ./build/webpack.config.server.js --progress --hide-modules"    
   },
   "repository": {
     "type": "git",
