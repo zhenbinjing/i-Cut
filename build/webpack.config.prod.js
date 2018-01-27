@@ -6,6 +6,9 @@ const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const loadMinified = require('./load-minified')
 //const PrerenderSpaPlugin = require('prerender-spa-plugin')  // 页面静态化
 
 const webpackConfig = merge(baseConfig, {	
@@ -61,15 +64,37 @@ const webpackConfig = merge(baseConfig, {
         parallel: true
 	}),
 	//复制编辑html
-	new HtmlWebpackPlugin({
-             template: path.join(root, 'v-src/index.html'), // 模板文件
-             inject: 'body', // js的script注入到body底部
-             minify: {
-                   removeComments: true,
-                   collapseWhitespace: true,
-                   removeAttributeQuotes: true			
-             }
-	}),
+  new HtmlWebpackPlugin({
+    //template: path.join(root, 'v-src/index.html'), // 模板文件
+    template: path.join(root, 'v-src/index.pwa.html'), // 模板文件
+    inject: 'body',
+    minify: {
+      removeComments: true,
+      collapseWhitespace: true,
+      removeAttributeQuotes: true
+      // more options:
+      // https://github.com/kangax/html-minifier#options-quick-reference
+    },
+    // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+    chunksSortMode: 'dependency',
+    serviceWorkerLoader: `<script>${loadMinified(path.join(__dirname,
+      './service-worker-prod.js'))}</script>`
+  }),
+  new CopyWebpackPlugin([
+    {
+      from: path.resolve(__dirname, '../static'),
+      to: 'static',
+      ignore: ['.*']
+    }
+  ]),
+  // service worker caching
+  new SWPrecacheWebpackPlugin({
+    cacheId: 'i-cut',
+    filename: 'service-worker.js',
+    staticFileGlobs: ['v-dist/**/*.{js,html,css}'],
+    minify: true,
+    stripPrefix: 'v-dist/'
+  })
 	/*new PrerenderSpaPlugin(
 	// Absolute path to compiled SPA
 	path.join(__dirname, '../v-dist'),

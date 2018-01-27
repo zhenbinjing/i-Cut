@@ -1,4 +1,5 @@
-﻿const path = require('path')
+﻿const fs = require('fs')
+const path = require('path')
 const root = path.resolve(__dirname, '..')
 const webpack = require('webpack')
 const merge = require('webpack-merge') //合并执行任务
@@ -29,8 +30,11 @@ const devWebpackConfig = merge(baseConfig, {
     },
     plugins: [ 
     new HtmlWebpackPlugin({
-            template: path.join(root, 'v-src/index.html'), // 模板文件
-            inject: 'body' // js的script注入到body底部            
+      //template: path.join(root, 'v-src/index.html'), // 模板文件
+      template: path.join(root, 'v-src/index.pwa.html'), // 模板文件
+      inject: 'body',
+      serviceWorkerLoader: `<script>${fs.readFileSync(path.join(__dirname,
+        './service-worker-dev.js'), 'utf-8')}</script>`
     }),     
     new webpack.DefinePlugin({
         'process.env': require('../config/dev.env')
