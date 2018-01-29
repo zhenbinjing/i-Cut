@@ -100,7 +100,6 @@ const webpackConfig = merge(baseConfig, {
       /index\.html$/,
       /\.map$/,
       /\.css$/,
-      /\.png$/,
       /\.svg$/,
       /\.eot$/
     ]
