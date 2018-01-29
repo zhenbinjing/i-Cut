@@ -92,8 +92,17 @@ const webpackConfig = merge(baseConfig, {
     cacheId: 'i-cut',
     filename: 'service-worker.js',
     staticFileGlobs: ['v-dist/**/*.*'],
+    stripPrefix: 'v-dist/',
     minify: true,
-    stripPrefix: 'v-dist/'
+    dontCacheBustUrlsMatching: false,
+    mergeStaticsConfig: true,    
+    staticFileGlobsIgnorePatterns: [
+      /index\.html$/,
+      /\.map$/,
+      /\.css$/,
+      /\.svg$/,
+      /\.eot$/
+    ]
   })
 	/*new PrerenderSpaPlugin(
 	// Absolute path to compiled SPA
