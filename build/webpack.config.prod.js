@@ -93,16 +93,7 @@ const webpackConfig = merge(baseConfig, {
     filename: 'service-worker.js',
     staticFileGlobs: ['v-dist/**/*.*'],
     stripPrefix: 'v-dist/',
-    minify: true,
-    dontCacheBustUrlsMatching: false,
-    mergeStaticsConfig: true,    
-    staticFileGlobsIgnorePatterns: [
-      /index\.html$/,
-      /\.map$/,
-      /\.css$/,
-      /\.svg$/,
-      /\.eot$/
-    ]
+    minify: true
   })
 	/*new PrerenderSpaPlugin(
 	// Absolute path to compiled SPA
