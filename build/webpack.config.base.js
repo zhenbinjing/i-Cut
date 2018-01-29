@@ -44,7 +44,7 @@ module.exports = {
                   test: /\.(png|jpg|svg|gif|webp)$/,
                   loader: 'file-loader',
                   options: {
-                    name: 'static/img/[name].[ext]?[hash]'
+                    name: 'static/img/[name].[hash].[ext]'
                   }
             }      
   ]},
