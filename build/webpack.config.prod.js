@@ -1,5 +1,6 @@
 ﻿const fs = require('fs');
 const path = require('path')
+const glob = require('glob-all')
 const root = path.resolve(__dirname, '..') // 项目的根目录绝对路径
 const webpack = require('webpack')
 const merge = require('webpack-merge')
@@ -9,6 +10,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const loadMinified = require('./load-minified')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 //const PrerenderSpaPlugin = require('prerender-spa-plugin')  // 页面静态化
 
 const webpackConfig = merge(baseConfig, {	
@@ -26,7 +28,14 @@ const webpackConfig = merge(baseConfig, {
 	plugins: [
 	new webpack.DefinePlugin({
              'process.env': require('../config/prod.env')
-	}),      
+  }),
+  new PurgecssPlugin({
+    paths: glob.sync([
+      path.join(__dirname, './../v-src/index.html'),
+      path.join(__dirname, './../**/*.vue'),
+      path.join(__dirname, './../v-src/**/*.js')
+    ])
+  }),
 	//提升变量作用域
 	new webpack.optimize.ModuleConcatenationPlugin(),
 	//缓存

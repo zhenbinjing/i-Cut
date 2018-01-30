@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -74,6 +74,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "glob-all": "^3.1.0",
     "gulp": "^4.0.0",
     "gulp-allimgbase64": "^0.4.3",
     "gulp-autoprefixer": "^4.1.0",
@@ -122,6 +123,7 @@
     "postcss-loader": "^2.0.10",
     "prerender-spa-plugin": "^2.1.0",
     "pump": "^2.0.0",
+    "purgecss-webpack-plugin": "^0.19.0",
     "px2rem-loader": "^0.1.7",
     "rollup": "^0.55.0",
     "rollup-plugin-babel": "^3.0.2",

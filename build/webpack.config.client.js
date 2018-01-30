@@ -1,9 +1,11 @@
 const path = require('path')
+const glob = require('glob-all')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
 const HTMLPlugin = require('html-webpack-plugin')
 const SWPrecachePlugin = require('sw-precache-webpack-plugin')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 const config = merge(base, {
   entry: {
@@ -29,6 +31,13 @@ const config = merge(base, {
     // extract vendor chunks for better caching
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
+    }),
+    new PurgecssPlugin({
+      paths: glob.sync([
+        path.join(__dirname, './../v-src/index.html'),
+        path.join(__dirname, './../**/*.vue'),
+        path.join(__dirname, './../v-src/**/*.js')
+      ])
     }),
     // generate output HTML
     new HTMLPlugin({
