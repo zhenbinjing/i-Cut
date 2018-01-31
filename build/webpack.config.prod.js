@@ -11,6 +11,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const loadMinified = require('./load-minified')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
+const HtmlCriticalPlugin  = require('./webpack.config.critical')
 //const PrerenderSpaPlugin = require('prerender-spa-plugin')  // 页面静态化
 
 const webpackConfig = merge(baseConfig, {	
@@ -28,14 +29,27 @@ const webpackConfig = merge(baseConfig, {
 	plugins: [
 	new webpack.DefinePlugin({
              'process.env': require('../config/prod.env')
-  }),
-  new PurgecssPlugin({
-    paths: glob.sync([
-      path.join(__dirname, './../v-src/index.html'),
-      path.join(__dirname, './../**/*.vue'),
-      path.join(__dirname, './../v-src/**/*.js')
-    ])
-  }),
+        }),
+		new PurgecssPlugin({
+        paths: glob.sync([
+              path.join(__dirname, './../v-src/index.html'),
+              path.join(__dirname, './../**/*.vue'),
+              path.join(__dirname, './../v-src/**/*.js')
+        ])
+		}),
+		new HtmlCriticalPlugin({
+            base: path.resolve(__dirname, '../'),
+            src: 'v-dist/index.html',
+            dest: 'v-dist/index.html',
+            inline: true,
+            minify: true,
+            width: 375,
+            height: 565,
+            penthouse: {
+              blockJSRequests: false,
+			},
+			ignore: ['@font-face',/url\(/]
+      }),		
 	//提升变量作用域
 	new webpack.optimize.ModuleConcatenationPlugin(),
 	//缓存
@@ -73,46 +87,46 @@ const webpackConfig = merge(baseConfig, {
         parallel: true
 	}),
 	//复制编辑html
-  new HtmlWebpackPlugin({
-    //template: path.join(root, 'v-src/index.html'), // 模板文件
-    template: path.join(root, 'v-src/index.pwa.html'), // 模板文件
-    inject: 'body',
-    minify: {
-      removeComments: true,
-      collapseWhitespace: true,
-      removeAttributeQuotes: true
-      // more options:
-      // https://github.com/kangax/html-minifier#options-quick-reference
-    },
-    // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-    chunksSortMode: 'dependency',
-    serviceWorkerLoader: `<script>${loadMinified(path.join(__dirname,
-      './service-worker-prod.js'))}</script>`
-  }),
-  new CopyWebpackPlugin([
-    {
-      from: path.resolve(__dirname, '../static'),
-      to: 'static',
-      ignore: ['.*']
-    }
-  ]),
-  // service worker caching
-  new SWPrecacheWebpackPlugin({
-    cacheId: 'i-cut',
-    filename: 'service-worker.js',
-    staticFileGlobs: ['v-dist/**/*.*'],
-    stripPrefix: 'v-dist/',
-    minify: true,
-    mergeStaticsConfig: true,
-    dontCacheBustUrlsMatching: false,
-    staticFileGlobsIgnorePatterns: [
-      /index\.html$/,
-      /\.map$/,
-      /\.css$/,
-      /\.svg$/,
-      /\.eot$/
-    ]
-  })
+  	new HtmlWebpackPlugin({
+    	//template: path.join(root, 'v-src/index.html'), // 模板文件
+    	template: path.join(root, 'v-src/index.pwa.html'), // 模板文件
+    	inject: 'body',
+    	minify: {
+      	removeComments: true,
+      	collapseWhitespace: true,
+      	removeAttributeQuotes: true
+      	// more options:
+      	// https://github.com/kangax/html-minifier#options-quick-reference
+    	},
+    	// necessary to consistently work with multiple chunks via CommonsChunkPlugin
+    	chunksSortMode: 'dependency',
+    	serviceWorkerLoader: `<script>${loadMinified(path.join(__dirname,
+      	'./service-worker-prod.js'))}</script>`
+  	}),
+  	new CopyWebpackPlugin([
+   	 {
+     	 from: path.resolve(__dirname, '../static'),
+     	 to: 'static',
+     	 ignore: ['.*']
+   	 }
+  	]),
+  	// service worker caching
+  	new SWPrecacheWebpackPlugin({
+   	 cacheId: 'i-cut',
+    	filename: 'service-worker.js',
+   	 staticFileGlobs: ['v-dist/**/*.*'],
+   	 stripPrefix: 'v-dist/',
+   	 minify: true,
+   	 mergeStaticsConfig: true,
+    	dontCacheBustUrlsMatching: false,
+    	staticFileGlobsIgnorePatterns: [
+    	  /index\.html$/,
+     	 /\.map$/,
+      	/\.css$/,
+      	/\.svg$/,
+      	/\.eot$/
+    	]
+  	})
 	/*new PrerenderSpaPlugin(
 	// Absolute path to compiled SPA
 	path.join(__dirname, '../v-dist'),

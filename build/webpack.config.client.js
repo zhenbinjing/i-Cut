@@ -6,6 +6,7 @@ const base = require('./webpack.config.base')
 const HTMLPlugin = require('html-webpack-plugin')
 const SWPrecachePlugin = require('sw-precache-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
+const HtmlCriticalPlugin  = require('./webpack.config.critical')
 
 const config = merge(base, {
   entry: {
@@ -38,6 +39,19 @@ const config = merge(base, {
         path.join(__dirname, './../**/*.vue'),
         path.join(__dirname, './../v-src/**/*.js')
       ])
+    }),
+    new HtmlCriticalPlugin({
+      base: path.resolve(__dirname, '../'),
+      src: 'v-dist/index.html',
+      dest: 'v-dist/index.html',
+      inline: true,
+      minify: true,
+      width: 375,
+      height: 565,
+      penthouse: {
+        blockJSRequests: false,
+      },
+      ignore: ['@font-face',/url\(/]
     }),
     // generate output HTML
     new HTMLPlugin({
