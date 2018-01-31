@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Router</h2>
+    <div class="title">Router</div>
     <div>{{ message1 }}</div>
   </div>
 </template>

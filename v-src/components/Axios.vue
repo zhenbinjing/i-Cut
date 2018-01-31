@@ -1,6 +1,6 @@
 <template>
   <div class="axios">
-    <h2>Axios</h2>
+    <div class="title">Axios</div>
     <div v-for="topic in topics" class="axios_text" :key="topic.name">
         {{topic.name}}
     </div>

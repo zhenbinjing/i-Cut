@@ -1,6 +1,6 @@
 <template>
   <div class="vuex">
-    <h2>Vuex</h2>
+    <div class="title">Vuex</div>
     <Display></Display>
     <Increment></Increment>
   </div>
