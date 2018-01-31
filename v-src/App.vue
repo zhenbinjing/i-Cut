@@ -19,7 +19,7 @@ html,body{ height: 100%}
 body{display: flex; justify-content: center; align-items: center; margin: 0 }
 div { text-align: center }
 button{font-size: 30px; vertical-align:middle}
-.title { font-size:60px; color:#42b983; padding: 20px 0; margin: 0; line-height: 1; font-weight: bold }
+.title { font-size:60px; color: #57BB8A; padding: 20px 0; margin: 0; line-height: 1; font-weight: bold }
 a { text-decoration: none; color:black; }
 a.active { color:#0062f5 }
 img{max-width: 100%;}
