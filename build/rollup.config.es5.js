@@ -20,7 +20,7 @@ export default {
 	   //exclude: [
 	   //  'src/styles/**',
 	   //]
-	}),
+	}),	
 	uglify({
             //mangle: true	
             //保留关键变量

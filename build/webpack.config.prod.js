@@ -30,14 +30,16 @@ const webpackConfig = merge(baseConfig, {
 	new webpack.DefinePlugin({
              'process.env': require('../config/prod.env')
         }),
-		new PurgecssPlugin({
+        //删除没用的css
+	new PurgecssPlugin({
         paths: glob.sync([
               path.join(__dirname, './../v-src/index.html'),
               path.join(__dirname, './../**/*.vue'),
               path.join(__dirname, './../v-src/**/*.js')
         ])
-		}),
-		new HtmlCriticalPlugin({
+	}),
+        //提取首屏关键的css
+	new HtmlCriticalPlugin({
             base: path.resolve(__dirname, '../'),
             src: 'v-dist/index.html',
             dest: 'v-dist/index.html',
@@ -45,11 +47,9 @@ const webpackConfig = merge(baseConfig, {
             minify: true,
             width: 375,
             height: 565,
-            penthouse: {
-              blockJSRequests: false,
-			},
-			ignore: ['@font-face',/url\(/]
-      }),		
+            penthouse: { blockJSRequests: false	},
+	    ignore: ['@font-face',/url\(/]
+	}),		
 	//提升变量作用域
 	new webpack.optimize.ModuleConcatenationPlugin(),
 	//缓存
@@ -131,7 +131,7 @@ const webpackConfig = merge(baseConfig, {
 	// Absolute path to compiled SPA
 	path.join(__dirname, '../v-dist'),
 	// List of routes to prerender
-	[ '/','/vr1', '/vr2', '/vr3' ],
+	[ '/','/vr1', '/axios', '/vuex' ],
 	{
 	captureAfterTime: 5000  //先加载json,让程序运行5秒之后,再捕获渲染后的数据行为(axios)
 	})*/

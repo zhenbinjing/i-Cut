@@ -33,25 +33,25 @@ const config = merge(base, {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     }),
+    //删除没用的css
     new PurgecssPlugin({
-      paths: glob.sync([
-        path.join(__dirname, './../v-src/index.html'),
-        path.join(__dirname, './../**/*.vue'),
-        path.join(__dirname, './../v-src/**/*.js')
-      ])
+    paths: glob.sync([
+          path.join(__dirname, './../v-src/index.html'),
+          path.join(__dirname, './../**/*.vue'),
+          path.join(__dirname, './../v-src/**/*.js')
+    ])
     }),
+    //提取首屏关键的css
     new HtmlCriticalPlugin({
-      base: path.resolve(__dirname, '../'),
-      src: 'v-dist/index.html',
-      dest: 'v-dist/index.html',
-      inline: true,
-      minify: true,
-      width: 375,
-      height: 565,
-      penthouse: {
-        blockJSRequests: false,
-      },
-      ignore: ['@font-face',/url\(/]
+        base: path.resolve(__dirname, '../'),
+        src: 'v-dist/index.html',
+        dest: 'v-dist/index.html',
+        inline: true,
+        minify: true,
+        width: 375,
+        height: 565,
+        penthouse: { blockJSRequests: false	},
+        ignore: ['@font-face',/url\(/]
     }),
     // generate output HTML
     new HTMLPlugin({
