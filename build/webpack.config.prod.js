@@ -36,7 +36,7 @@ const webpackConfig = merge(baseConfig, {
               path.join(__dirname, './../v-src/index.html'),
               path.join(__dirname, './../**/*.vue'),
               path.join(__dirname, './../v-src/**/*.js')
-        ])
+       ])
 	}),
         //提取首屏关键的css
 	new HtmlCriticalPlugin({

@@ -1,7 +1,10 @@
 <template>
   <div class="axios">
     <div class="title">Axios</div>
-    <div v-for="topic in topics" class="axios_text" :key="topic.name">
+     <div v-if=" topics == '' ">
+        <loading></loading> 
+    </div>
+    <div v-else v-for="topic in topics" class="axios_text" :key="topic.name">
         {{topic.name}}
     </div>
   </div>
@@ -9,12 +12,14 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import loading from './loading.vue';
 
 const fetchInitialData = store => {
   return store.dispatch('getTopics');
 };
 
 export default {
+  components: { loading },
   prefetch: fetchInitialData,
   computed: {
     ...mapGetters({

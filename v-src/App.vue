@@ -1,7 +1,7 @@
 <template>
-  <div id="app">   
-    <hello></hello>    
-    <router></router>  
+  <div id="app">
+      <hello></hello>    
+      <router></router>  
   </div>  
 </template>
 
