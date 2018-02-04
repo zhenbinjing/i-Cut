@@ -7,6 +7,7 @@ const HTMLPlugin = require('html-webpack-plugin')
 const SWPrecachePlugin = require('sw-precache-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const HtmlCriticalPlugin  = require('./webpack.config.critical')
+const root = path.resolve(__dirname, '..')
 
 const config = merge(base, {
   entry: {
@@ -20,8 +21,8 @@ const config = merge(base, {
   output: {
     path: path.resolve(__dirname, '../v-dist/'),
     publicPath: '/v-dist/',
-    filename: 'static/js/client-bundle.[chunkhash].js',
-    chunkFilename: ('static/js/[id].[chunkhash].js')
+    filename: 'static/js/[name].[chunkhash].js',
+    chunkFilename: 'static/js/[id].[chunkhash].js'
   },
   plugins: [
     // strip dev-only code in Vue source
@@ -31,7 +32,25 @@ const config = merge(base, {
     }),
     // extract vendor chunks for better caching
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
+      name: 'vendor',
+      minChunks: function (module) {
+      return (
+      module.resource &&
+      /\.js$/.test(module.resource) &&
+      module.resource.indexOf(
+       path.join(__dirname, '../node_modules')
+      ) === 0
+      )}
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+          name: 'manifest',
+          minChunks: Infinity
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+          name: 'app',
+          async: 'vendor-async',
+          children: true,
+          minChunks: 3
     }),
     //删除没用的css
     new PurgecssPlugin({
@@ -43,7 +62,7 @@ const config = merge(base, {
     }),
     //提取首屏关键的css
     new HtmlCriticalPlugin({
-        base: path.resolve(__dirname, '../'),
+        base: root,
         src: 'v-dist/index.html',
         dest: 'v-dist/index.html',
         inline: true,

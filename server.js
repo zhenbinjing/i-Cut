@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const isProd = process.env.NODE_ENV === 'production';
-const port = process.env.PORT || 7000;
 const express = require('express');
 const app = express();
 const { createBundleRenderer } = require('vue-server-renderer');
@@ -80,7 +79,14 @@ app.get('*', (req, res) => {
 /* ---------------------------------------
    Start Engines
 ---------------------------------------- */
+var num = GetRandomNum(7000, 8000);	
+function GetRandomNum(Min, Max) {
+			var Range = Max - Min;
+			var Rand = Math.random();
+			return (Min + Math.round(Rand * Range));
+}
 
+const port = num || 7000;
 app.listen(port, () => {
   console.log(`server started at http://localhost:${port}`)
 })

@@ -22,7 +22,7 @@ const webpackConfig = merge(baseConfig, {
 	output: {
              path: path.join(root, 'v-dist'),  // 出口目录
              filename: 'static/js/[name].[chunkhash].js',  // 出口文件名
-             chunkFilename: ('static/js/[id].[chunkhash].js'),
+             chunkFilename: 'static/js/[id].[chunkhash].js',
              publicPath: '/v-dist/' //在github上预览(客户端渲染)
              //publicPath: '/' //在本地上预览(静态化)
 	},     
@@ -40,15 +40,15 @@ const webpackConfig = merge(baseConfig, {
 	}),
         //提取首屏关键的css
 	new HtmlCriticalPlugin({
-            base: path.resolve(__dirname, '../'),
+			base: root,
             src: 'v-dist/index.html',
             dest: 'v-dist/index.html',
             inline: true,
-            minify: true,
+			minify: true,
             width: 375,
             height: 565,
             penthouse: { blockJSRequests: false	},
-	    ignore: ['@font-face',/url\(/]
+            ignore: ['@font-face',/url\(/]
 	}),		
 	//提升变量作用域
 	new webpack.optimize.ModuleConcatenationPlugin(),
