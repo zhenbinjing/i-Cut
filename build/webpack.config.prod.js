@@ -47,7 +47,12 @@ const webpackConfig = merge(baseConfig, {
 			minify: true,
             width: 375,
             height: 565,
-            penthouse: { blockJSRequests: false	},
+			penthouse: { 
+				blockJSRequests: false,
+				forceInclude: [  //必须包含的类
+					'.title', 'a.active', '.fz40'
+			    ]
+			},
             ignore: ['@font-face',/url\(/]
 	}),		
 	//提升变量作用域

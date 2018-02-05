@@ -69,7 +69,12 @@ const config = merge(base, {
         minify: true,
         width: 375,
         height: 565,
-        penthouse: { blockJSRequests: false	},
+        penthouse: { 
+          blockJSRequests: false,
+          forceInclude: [  //必须包含的类
+            '.title', 'a.active', '.fz40'
+            ]
+        },
         ignore: ['@font-face',/url\(/]
     }),
     // generate output HTML
