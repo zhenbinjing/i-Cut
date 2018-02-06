@@ -10,4 +10,6 @@
 [![npm](https://img.shields.io/npm/v/i-cut.svg)](https://www.npmjs.com/package/i-cut)
 [![Build Status](https://saucelabs.com/browser-matrix/icut.svg)](https://saucelabs.com/beta/builds/8913e384e9de43ffb3813d69b4054b8c)
 
-个人技术栈框架，Sass 项目 [FlexGrid](https://i-cut.cc/assets/flexgrid.html) 以及配备 Webpack、Rollup、Gulp 等任务流程。
+个人技术栈框架，Sass 项目 [FlexGrid](https://i-cut.cc/assets/flexgrid.html)，Gulp 项目 [工作流](https://i-cut.cc/dist/)，Vue 项目[打包构建](https://i-cut.cc/v-dist/#/vr1) 以及简单的持续集成，代码覆盖率，跨浏览器测试等任务流程。
+
+
