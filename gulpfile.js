@@ -209,7 +209,7 @@ function htmlDeal(){
 	decodeEntities: false,
 	data_src: 'data-src',
 	data_srcset: 'data-srcset',
-	suffix: {1: '@1x', 2: '@2x', 3: '@3x', 4: ''}
+	suffix: {'1x': '@1x', '2x': '@2x', '3x': '@3x', '4x': ''}
 	}))
 	.pipe(gulp.dest('./'+y_Dz+'/'));
 };
