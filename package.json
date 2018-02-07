@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.7.17",
+  "version": "2.7.18",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
