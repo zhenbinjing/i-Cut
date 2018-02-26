@@ -11,7 +11,6 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const loadMinified = require('./load-minified')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
-const HtmlCriticalPlugin  = require('./webpack.config.critical')
 //const PrerenderSpaPlugin = require('prerender-spa-plugin')  // 页面静态化
 
 const webpackConfig = merge(baseConfig, {	
@@ -38,23 +37,6 @@ const webpackConfig = merge(baseConfig, {
               path.join(__dirname, './../v-src/**/*.js')
        ])
 	}),
-        //提取首屏关键的css
-	new HtmlCriticalPlugin({
-			base: root,
-            src: 'v-dist/index.html',
-            dest: 'v-dist/index.html',
-            inline: true,
-			minify: true,
-            width: 375,
-            height: 565,
-			penthouse: { 
-				blockJSRequests: false,
-				forceInclude: [  //必须包含的类
-					'.title', 'a.active', '.fz40'
-			    ]
-			},
-            ignore: ['@font-face',/url\(/]
-	}),		
 	//提升变量作用域
 	new webpack.optimize.ModuleConcatenationPlugin(),
 	//缓存

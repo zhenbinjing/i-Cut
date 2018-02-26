@@ -1,6 +1,5 @@
 ﻿import buble from 'rollup-plugin-buble';
 import babel from 'rollup-plugin-babel';
-import eslint from 'rollup-plugin-eslint';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
@@ -15,11 +14,6 @@ export default {
 	    exclude: 'node_modules/**',
 	    plugins: ['external-helpers'],
 	    externalHelpers: true
-	}),
-	eslint({
-	   //exclude: [
-	   //  'src/styles/**',
-	   //]
 	}),	
 	uglify({
             //mangle: true	
