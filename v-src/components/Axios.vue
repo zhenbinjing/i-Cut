@@ -1,11 +1,16 @@
 <template>
   <div class="axios">
     <div class="title">Axios</div>
-     <div v-if=" topics == '' ">
-        <loading></loading> 
+    <div v-if=" topics == '' ">
+      <loading/> 
     </div>
-    <div v-else v-for="topic in topics" class="axios_text" :key="topic.name">
-        {{topic.name}}
+    <div v-else>
+      <div 
+        v-for="topic in topics" 
+        :key="topic.name" 
+        class="axios_text">
+        {{ topic.name }}
+      </div>
     </div>
   </div>
 </template>
@@ -14,9 +19,7 @@
 import { mapGetters } from 'vuex';
 import loading from './loading.vue';
 
-const fetchInitialData = store => {
-  return store.dispatch('getTopics');
-};
+const fetchInitialData = store => store.dispatch('getTopics');
 
 export default {
   components: { loading },
@@ -34,8 +37,13 @@ export default {
 
 <!--添加 scoped 属性 css只作用在此组件上-->
 <style scoped>
-.axios{font-size: 0;}
+.axios {
+  font-size: 0;
+}
 .axios_text {
-  color: black; font-size: 40px; display: inline-block; padding: 0 10px;
+  color: black;
+  font-size: 40px;
+  display: inline-block;
+  padding: 0 10px;
 }
 </style>

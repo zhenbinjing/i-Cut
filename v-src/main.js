@@ -1,17 +1,18 @@
-import Vue  from 'vue'
-import css  from './assets/allcss.js'
-import App from './App.vue'
-import router from './router/index.js'
-import store from './vuex/store.js'
-import { sync } from 'vuex-router-sync'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import { sync } from 'vuex-router-sync';
+import App from './App.vue';
+import router from './router';
+import store from './vuex/store';
 
-sync(store, router)
+sync(store, router);
+Vue.use(Vuex);
 
 const app = new Vue({
-  el:"#app",  // 开启服务端渲染要注释掉
+  el: '#app', // 开启服务端渲染要注释掉
   router,
   store,
   ...App
-})
+});
 
-export { app, router, store }
+export { app, router, store };

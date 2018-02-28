@@ -6,12 +6,11 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        message1: 'vue-router'
-      }
-    }
-   
+export default {
+  data() {
+    return {
+      message1: 'vue-router'
+    };
   }
+};
 </script>

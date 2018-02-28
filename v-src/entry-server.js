@@ -6,15 +6,17 @@ export default context => {
   // call prefetch hooks on components matched by the route
   const s = Date.now();
 
-  return Promise.all(router.getMatchedComponents().map(component => {
-    if (component.prefetch) {
-      return component.prefetch(store);
-    }
-  })).then(() => {
+  return Promise.all(
+    router.getMatchedComponents().map(component => {
+      if (component.prefetch) {
+        return component.prefetch(store);
+      }
+    })
+  ).then(() => {
     console.log(`data pre-fetch: ${Date.now() - s}ms`);
     // set initial store on context
     // the request handler will inline the state in the HTML response.
-    //context.state = store.state;
+    // context.state = store.state;
     context.initialState = store.state;
     return app;
   });

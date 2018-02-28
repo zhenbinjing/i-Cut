@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-import * as getters from './getters.js'
-import * as actions from './actions.js'
-import * as mutations from './mutations.js'
+import * as getters from './getters';
+import * as actions from './actions';
+import * as mutations from './mutations';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 const state = {
   topics: [],
@@ -17,6 +17,6 @@ const state = {
 export default new Vuex.Store({
   state,
   getters,
-  actions, 
-  mutations  
-})
+  actions,
+  mutations
+});

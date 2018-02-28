@@ -1,17 +1,16 @@
 <template>
   <div class="vuex">
     <div class="title">Vuex</div>
-    <Display></Display>
-    <Increment></Increment>
+    <Display/>
+    <Increment/>
   </div>
 </template>
 
 <script>
-import Vuex from 'vuex'
-import Display from './display.vue'
-import Increment from './increment.vue'
+import Display from './display.vue';
+import Increment from './increment.vue';
 
 export default {
   components: { Display, Increment }
-}
+};
 </script>
