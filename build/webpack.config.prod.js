@@ -100,7 +100,7 @@ const webpackConfig = merge(baseConfig, {
   	// service worker caching
   	new SWPrecacheWebpackPlugin({
    	 cacheId: 'i-cut',
-    	filename: 'service-worker.js',
+   	 filename: 'service-worker.js',
    	 staticFileGlobs: ['v-dist/**/*.*'],
    	 stripPrefix: 'v-dist/',
    	 minify: true,

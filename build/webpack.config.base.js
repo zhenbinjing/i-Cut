@@ -20,7 +20,7 @@ module.exports = {
                               fallback: 'vue-style-loader'
                         }),
                         css: ExtractTextPlugin.extract({
-                              use: ['css-loader?minimize', 'postcss-loader', 'px2rem-loader?remUnit=100'],
+                              use: ['css-loader?minimize', 'postcss-loader'],
                               fallback: 'vue-style-loader'
                         })
                         }}
@@ -28,7 +28,7 @@ module.exports = {
             {
             test: /\.css$/,
                   use: ExtractTextPlugin.extract({
-                        use: ['css-loader?minimize', 'postcss-loader', 'px2rem-loader?remUnit=100']
+                        use: ['css-loader?minimize', 'postcss-loader']
                   })
             },  
             {

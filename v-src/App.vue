@@ -15,7 +15,6 @@ export default {
 </script>
 
 <style>
-@import './assets/css/index.css';
 html,
 body {
   height: 100%;
@@ -55,9 +54,6 @@ p {
   padding: 0;
   margin: 0;
 }
-</style>
-<style lang="sass" rel="stylesheets/sass">
- @import "./assets/css/sass.scss";
 </style>
 <!--
 <style lang="sass" rel="stylesheets/sass">

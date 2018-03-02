@@ -1,6 +1,10 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import { sync } from 'vuex-router-sync';
+
+import './assets/css/index.css';
+import './assets/css/sass.scss';
+
 import App from './App.vue';
 import router from './router';
 import store from './vuex/store';
