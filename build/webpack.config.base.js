@@ -24,18 +24,6 @@ module.exports = {
                               fallback: 'vue-style-loader'
                         })
                         }}
-            }, 
-            {
-            test: /\.css$/,
-                  use: ExtractTextPlugin.extract({
-                        use: ['css-loader?minimize', 'postcss-loader']
-                  })
-            },  
-            {
-            test: /\.scss/,
-                  use: ExtractTextPlugin.extract({
-                       use: ['css-loader?minimize', 'postcss-loader', 'sass-loader']
-                  })
             },          
             {
             test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/

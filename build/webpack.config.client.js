@@ -4,7 +4,6 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
 const HTMLPlugin = require('html-webpack-plugin')
-const SWPrecachePlugin = require('sw-precache-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const root = path.resolve(__dirname, '..')
 
@@ -89,13 +88,6 @@ if (process.env.NODE_ENV === 'production') {
       compress: {
         warnings: false
       }
-    }),
-    // auto generate service worker
-    new SWPrecachePlugin({
-      cacheId: 'i-cut',
-      filename: 'service-worker.js',
-      dontCacheBustUrlsMatching: /./,
-      staticFileGlobsIgnorePatterns: [/index\.html$/, /\.map$/]
     })
   )
 }
