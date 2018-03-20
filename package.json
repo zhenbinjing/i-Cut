@@ -132,7 +132,6 @@
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.0.10",
     "postcss-px2rem": "^0.3.0",
-    "postcss-scss": "^1.0.4",
     "prerender-spa-plugin": "^2.1.0",
     "prettier": "^1.10.2",
     "prettier-eslint": "^8.8.1",
