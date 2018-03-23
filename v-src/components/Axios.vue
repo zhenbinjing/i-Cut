@@ -4,7 +4,7 @@
     <div v-if=" topics == '' ">
       <loading/> 
     </div>
-    <div v-else>
+    <div v-show=" topics != '' ">
       <div 
         v-for="topic in topics" 
         :key="topic.name" 
