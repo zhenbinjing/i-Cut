@@ -29,12 +29,13 @@ module.exports = {
             test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/
             }, // .js文件使用babel-loader，切记排除node_modules目录    
             {
-                  test: /\.(png|jpg|svg|gif|webp)$/,
-                  loader: 'file-loader',
+                  test: /\.(png|jpg|svg|gif|webp|woff2|woff|eot|ttf|otf|mp4|webm|ogg|mp3|wav|flac|aac)$/,
+                  loader: 'url-loader',
                   options: {
-                    name: 'static/img/[name].[hash].[ext]'
+                        limit: 10000,
+                        name: 'static/assets/[name].[hash:7].[ext]'
                   }
-            }      
+            },     
   ]},
   plugins: [           
       new ExtractTextPlugin({ filename: 'static/css/index.[chunkhash].css', allChunks:true }),

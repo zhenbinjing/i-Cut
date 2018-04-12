@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.9.9",
+  "version": "2.9.10",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -81,7 +81,6 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-vue": "^4.4.0",
     "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.6",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "glob-all": "^3.1.0",
     "gulp": "^4.0.0",
@@ -149,6 +148,7 @@
     "sw-precache-webpack-plugin": "^0.11.4",
     "uglify-es": "^3.3.10",
     "uglifyjs-webpack-plugin": "^1.1.8",
+    "url-loader": "^1.0.1",
     "vue-loader": "^14.2.2",
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
