@@ -31,6 +31,7 @@ module.exports = function(config) {
 	reporters: ['spec','coverage','coverage-istanbul'],
 	  
 	webpack: {
+		mode: 'production',
         module: {
             rules:[{
                     test: /\.js$/,

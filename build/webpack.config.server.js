@@ -5,15 +5,23 @@ const base = require('./webpack.config.base')
 const nodeExternals = require('webpack-node-externals')
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
 
+if (process.env.NODE_ENV === 'production') {
+  moshi = 'production'
+}
+else {
+  moshi = 'development'
+};
+
 module.exports = merge(base, {
+  mode: moshi,
   target: 'node',
   entry: './v-src/entry-server.js',
   resolve: {
     modules: [path.resolve(__dirname, 'v-src'), 'node_modules'],
-    extensions: ['.js', '.vue', '.json']   
+    extensions: ['.js', '.vue', '.json']
   },
   output: {
-    path: path.resolve(__dirname, '../v-dist'),
+    path: path.resolve(__dirname, '../v-dist/'),
     publicPath: '/v-dist/',
     filename: 'server-bundle.js',
     libraryTarget: 'commonjs2'
@@ -24,10 +32,6 @@ module.exports = merge(base, {
     whitelist: /\.css$/
   }),
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-      'process.env.VUE_ENV': '"server"'
-    }),
     new VueSSRServerPlugin()
   ]
 })

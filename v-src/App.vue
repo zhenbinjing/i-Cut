@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <hello/>    
-    <router/>  
+    <router/>
   </div>  
 </template>
 
@@ -16,7 +16,6 @@ export default {
 
 <style>
 @import './assets/css/index.css';
-
 html,
 body {
   height: 100%;

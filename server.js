@@ -57,7 +57,6 @@ function errorHandler(err) {
 }
 
 app.use('/v-dist', serve('./v-dist', true));
-app.use('/service-worker.js', serve('./v-dist/service-worker.js'));
 app.use(favicon(path.resolve(__dirname, 'v-src/assets/img/logo.png')));
 
 app.get('*', (req, res) => {

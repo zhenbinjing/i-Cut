@@ -7,10 +7,17 @@ const HTMLPlugin = require('html-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const root = path.resolve(__dirname, '..')
 
+if (process.env.NODE_ENV === 'production') {
+  moshi = 'production'
+}
+else {
+  moshi = 'development'
+};
+
 const config = merge(base, {
+  mode: moshi,
   entry: {
-    app: './v-src/entry-client.js',
-    vendor: ['vue', 'vue-router', 'vuex', 'vuex-router-sync', 'axios']
+    app: './v-src/entry-client.js'
   },
   resolve: {
     modules: [path.resolve(__dirname, 'v-src'), 'node_modules'],
@@ -20,76 +27,55 @@ const config = merge(base, {
     path: path.resolve(__dirname, '../v-dist/'),
     publicPath: '/v-dist/',
     filename: 'static/js/[name].[chunkhash].js',
-    chunkFilename: 'static/js/[id].[chunkhash].js'
+    chunkFilename: 'static/js/[name].[chunkhash].js'
+  },
+  optimization: {
+    runtimeChunk: {
+      name: "manifest"
+    },
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          priority: -20,
+          chunks: "all"
+        }
+      }
+    }
   },
   plugins: [
-    // strip dev-only code in Vue source
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-      'process.env.VUE_ENV': '"client"'
-    }),
-    // extract vendor chunks for better caching
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: function (module) {
-      return (
-      module.resource &&
-      /\.js$/.test(module.resource) &&
-      module.resource.indexOf(
-       path.join(__dirname, '../node_modules')
-      ) === 0
-      )}
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-          name: 'manifest',
-          minChunks: Infinity
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-          name: 'app',
-          async: 'vendor-async',
-          children: true,
-          minChunks: 3
-    }),
     //删除没用的css
     new PurgecssPlugin({
-    paths: glob.sync([
-          path.join(__dirname, './../v-src/index.html'),
-          path.join(__dirname, './../**/*.vue'),
-          path.join(__dirname, './../v-src/**/*.js')
-    ])
+      paths: glob.sync([
+        path.join(__dirname, './../v-src/index.html'),
+        path.join(__dirname, './../**/*.vue'),
+        path.join(__dirname, './../v-src/**/*.js')
+      ])
     }),
     // generate output HTML
     new HTMLPlugin({
       template: 'v-src/index.template.html',
       inject: 'body',
-      minify : {
-          html5                          : true,
-          collapseWhitespace             : true,
-          removeRedundantAttributes      : true,
-          removeScriptTypeAttributes     : true,
-          // removeComments                 : true, // ACK. This strips out the <!-- vue-ssr-outlet--> DO NOT USE.
-          // minifyCSS                      : true,
-          // minifyJS                       : true,
-          // minifyURLs                     : false,
-          // removeAttributeQuotes          : true,
-          // removeEmptyAttributes          : true,
-          // removeOptionalTags             : true,
-          // removeStyleLinkTypeAttributes  : true,
-          // useShortDoctype                : true
+      filename: 'index.html',
+      minify: {
+        html5: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeAttributeQuotes: true
+        // removeComments                 : true, // ACK. This strips out the <!-- vue-ssr-outlet--> DO NOT USE.
+        // minifyCSS                      : true,
+        // minifyJS                       : true,
+        // minifyURLs                     : false,
+        // removeAttributeQuotes          : true,
+        // removeEmptyAttributes          : true,
+        // removeOptionalTags             : true,
+        // removeStyleLinkTypeAttributes  : true,
+        // useShortDoctype                : true
       }
     })
   ]
 });
-
-if (process.env.NODE_ENV === 'production') {
-  config.plugins.push(
-    // minify JS
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
-  )
-}
 
 module.exports = config
