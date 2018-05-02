@@ -3,6 +3,10 @@ const root = path.resolve(__dirname, '..') // 项目的根目录绝对路径
 const webpack = require('webpack')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { VueLoaderPlugin } = require('vue-loader');
+
+const env = process.env.NODE_ENV
+const isProduction = env === 'production'
 
 module.exports = {
       //不显示打包的css信息
@@ -20,25 +24,17 @@ module.exports = {
                   {
                         test: /\.vue$/,
                         loader: 'vue-loader',
-                        options: {
-                              loaders: {
-                                    js: ['babel-loader'],
-                                    css: [
-                                          'vue-style-loader',
-                                          MiniCssExtractPlugin.loader,
-                                          'css-loader?minimize',
-                                          'postcss-loader'
-                                    ],
-                                    sass: [
-                                          'vue-style-loader',
-                                          MiniCssExtractPlugin.loader,
-                                          'css-loader?minimize',
-                                          'postcss-loader',
-                                          'sass-loader'
-                                    ]
-                              }
-                        }
+                        exclude: /node_modules/
                   },
+                  {
+                        test: /.(s(c|a)ss|css)$/i,
+                        use: [
+                              isProduction ? MiniCssExtractPlugin.loader : "vue-style-loader",                              
+                              "css-loader?minimize",
+                              "postcss-loader",
+                              "sass-loader"
+                        ]
+                  }, 
                   {
                         test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/
                   },    // .js文件使用babel-loader，切记排除node_modules目录    
@@ -53,6 +49,7 @@ module.exports = {
             ]
       },
       plugins: [
+            new VueLoaderPlugin(),
             new MiniCssExtractPlugin({
                   filename: 'static/css/index.[chunkhash].css'
             }),
