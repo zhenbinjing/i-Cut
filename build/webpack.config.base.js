@@ -14,6 +14,10 @@ module.exports = {
             entrypoints: false,
             children: false
       },
+      // 关闭文件过大的提示
+      performance: {
+            hints: false  
+      },
       //配置省略的后缀名和文件路径
       resolve: {
             extensions: ['.js', '.vue', '.json'],
