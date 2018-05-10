@@ -1,9 +1,10 @@
 ﻿const path = require('path')
 const root = path.resolve(__dirname, '..') // 项目的根目录绝对路径
 const webpack = require('webpack')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { VueLoaderPlugin } = require('vue-loader');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const { VueLoaderPlugin } = require('vue-loader')
+const config = require('./config')
 
 const env = process.env.NODE_ENV
 const isProduction = env === 'production'
@@ -47,7 +48,7 @@ module.exports = {
                         loader: 'url-loader',
                         options: {
                               limit: 10000,
-                              name: 'static/assets/[name].[hash:7].[ext]'
+                              name: config.file.urlLoaderName
                         }
                   },
             ]
@@ -55,7 +56,7 @@ module.exports = {
       plugins: [
             new VueLoaderPlugin(),
             new MiniCssExtractPlugin({
-                  filename: 'static/css/index.[chunkhash].css'
+                  filename: config.file.miniCssName
             }),
             new OptimizeCssAssetsPlugin({
                   assetNameRegExp: /\.css$/,

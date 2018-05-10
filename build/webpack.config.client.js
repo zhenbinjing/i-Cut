@@ -5,7 +5,7 @@ const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
 const HTMLPlugin = require('html-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
-const root = path.resolve(__dirname, '..')
+const config = require('./config')
 
 if (process.env.NODE_ENV === 'production') {
   moshi = 'production'
@@ -14,20 +14,20 @@ else {
   moshi = 'development'
 };
 
-const config = merge(base, {
+const configs = merge(base, {
   mode: moshi,
   entry: {
-    app: './v-src/entry-client.js'
+    app: config.route.clientapp
   },
   resolve: {
-    modules: [path.resolve(__dirname, 'v-src'), 'node_modules'],
+    modules: [config.route.src, 'node_modules'],
     extensions: ['.js', '.vue', '.json']
   },
   output: {
-    path: path.resolve(__dirname, '../v-dist/'),
-    publicPath: '/v-dist/',
-    filename: 'static/js/[name].[chunkhash].js',
-    chunkFilename: 'static/js/[name].[chunkhash].js'
+    path: config.route.dist,
+    publicPath: config.route.publicPath,
+    filename: config.file.outputJsName,
+    chunkFilename: config.file.outputJsName
   },
   optimization: {
     runtimeChunk: {
@@ -47,15 +47,11 @@ const config = merge(base, {
   plugins: [
     //删除没用的css
     new PurgecssPlugin({
-      paths: glob.sync([
-        path.join(__dirname, './../v-src/index.html'),
-        path.join(__dirname, './../**/*.vue'),
-        path.join(__dirname, './../v-src/**/*.js')
-      ])
+      paths: glob.sync(config.plugin.purgecss)
     }),
     // generate output HTML
     new HTMLPlugin({
-      template: 'v-src/index.template.html',
+      template: config.route.ssrhtml,
       inject: 'body',
       filename: 'index.html',
       minify: {
@@ -78,4 +74,4 @@ const config = merge(base, {
   ]
 });
 
-module.exports = config
+module.exports = configs

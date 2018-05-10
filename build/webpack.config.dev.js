@@ -1,6 +1,6 @@
 ﻿const fs = require('fs')
 const path = require('path')
-const root = path.resolve(__dirname, '..')
+const config = require('./config')
 const webpack = require('webpack')
 const merge = require('webpack-merge') //合并执行任务
 const baseConfig = require('./webpack.config.base')
@@ -15,11 +15,11 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 const devWebpackConfig = merge(baseConfig, {
   mode: 'development',
   entry: {
-    app: path.join(root, 'v-src/main.js') // 入口文件路径
+    app: config.route.app // 入口文件路径
   },
   output: {
-    path: path.join(root, 'v-dist'),  // 出口目录
-    filename: 'static/js/app.js',  // 出口文件名
+    path: config.route.dist,  // 出口目录
+    filename: config.file.devJsName,  // 出口文件名
     publicPath: '/'
   },
   devServer: {
@@ -31,8 +31,7 @@ const devWebpackConfig = merge(baseConfig, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      //template: path.join(root, 'v-src/index.html'), // 模板文件
-      template: path.join(root, 'v-src/index.pwa.html'), // 模板文件
+      template: config.route.html, // 模板文件
       inject: 'body',
       serviceWorkerLoader: `<script>${fs.readFileSync(path.join(__dirname,
         './service-worker-dev.js'), 'utf-8')}</script>`

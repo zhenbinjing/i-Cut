@@ -2,9 +2,10 @@
 const rm = require('rimraf')
 const chalk = require('chalk')
 const path = require('path')
-const root = path.resolve(__dirname, '../v-dist')
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.config.prod')
+const config = require('./config')
+const root = config.route.dist
 
 const spinner = ora('building for production...')
 spinner.start()

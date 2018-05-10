@@ -1,7 +1,7 @@
 ﻿const fs = require('fs');
 const path = require('path')
 const glob = require('glob-all')
-const root = path.resolve(__dirname, '..') // 项目的根目录绝对路径
+const config = require('./config')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
@@ -10,19 +10,19 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const loadMinified = require('./load-minified')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
-//const PrerenderSpaPlugin = require('prerender-spa-plugin')  // 页面静态化
+const PrerenderSpaPlugin = require('prerender-spa-plugin')  // 页面静态化
 
 const webpackConfig = merge(baseConfig, {
 	mode: 'production',
 	devtool: '#source-map',
 	entry: {
-		app: path.join(root, 'v-src/main.js') // 入口文件路径
+		app: config.route.app // 入口文件路径
 	},
 	output: {
-		path: path.join(root, 'v-dist'),  // 出口目录
-		filename: 'static/js/[name].[chunkhash].js',  // 出口文件名
-		chunkFilename: 'static/js/[name].[chunkhash].js',
-		publicPath: '/v-dist/' //在github上预览(客户端渲染)
+		path: config.route.dist,  // 出口目录
+		filename: config.file.outputJsName,  // 出口文件名
+		chunkFilename: config.file.outputJsName,
+		publicPath: config.route.publicPath //在github上预览(客户端渲染)
 		//publicPath: '/' //在本地上预览(静态化)
 	},
 	optimization: {
@@ -43,18 +43,13 @@ const webpackConfig = merge(baseConfig, {
 	plugins: [
 		//删除没用的css
 		new PurgecssPlugin({
-			paths: glob.sync([
-				path.join(__dirname, './../v-src/index.html'),
-				path.join(__dirname, './../**/*.vue'),
-				path.join(__dirname, './../v-src/**/*.js')
-			])
+			paths: glob.sync(config.plugin.purgecss)
 		}),
 		//缓存
 		new webpack.HashedModuleIdsPlugin(),
 		//复制编辑html
 		new HtmlWebpackPlugin({
-			//template: path.join(root, 'v-src/index.html'), // 模板文件
-			template: path.join(root, 'v-src/index.pwa.html'), // 模板文件
+			template: config.route.html, // 模板文件
 			inject: 'body',
 			minify: {
 				removeComments: true,
@@ -70,8 +65,8 @@ const webpackConfig = merge(baseConfig, {
 		}),
 		new CopyWebpackPlugin([
 			{
-				from: path.resolve(__dirname, '../static'),
-				to: 'static/assets/',
+				from: config.plugin.copy.from,
+				to: config.plugin.copy.to,
 				ignore: ['.*']
 			}
 		]),
@@ -79,8 +74,8 @@ const webpackConfig = merge(baseConfig, {
 		new SWPrecacheWebpackPlugin({
 			cacheId: 'i-cut',
 			filename: 'service-worker.js',
-			staticFileGlobs: ['v-dist/**/*.*'],
-			stripPrefix: 'v-dist/',
+			staticFileGlobs: [config.plugin.sw.staticFileGlobs],
+			stripPrefix: config.plugin.sw.stripPrefix,
 			minify: true,
 			mergeStaticsConfig: true,
 			dontCacheBustUrlsMatching: false,
@@ -94,7 +89,7 @@ const webpackConfig = merge(baseConfig, {
 		})
 		/*new PrerenderSpaPlugin(
 		// Absolute path to compiled SPA
-		path.join(__dirname, '../v-dist'),
+		config.route.dist,
 		// List of routes to prerender
 		[ '/','/vr1', '/axios', '/vuex' ],
 		{

@@ -4,6 +4,7 @@ const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
 const nodeExternals = require('webpack-node-externals')
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
+const config = require('./config')
 
 if (process.env.NODE_ENV === 'production') {
   moshi = 'production'
@@ -15,14 +16,14 @@ else {
 module.exports = merge(base, {
   mode: moshi,
   target: 'node',
-  entry: './v-src/entry-server.js',
+  entry: config.route.serverapp,
   resolve: {
-    modules: [path.resolve(__dirname, 'v-src'), 'node_modules'],
+    modules: [config.route.src, 'node_modules'],
     extensions: ['.js', '.vue', '.json']
   },
   output: {
-    path: path.resolve(__dirname, '../v-dist/'),
-    publicPath: '/v-dist/',
+    path: config.route.dist,
+    publicPath: config.route.publicPath,
     filename: 'server-bundle.js',
     libraryTarget: 'commonjs2'
   },

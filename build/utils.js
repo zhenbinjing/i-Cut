@@ -1,5 +1,5 @@
-const path = require("path");
-const packageConfig = require("../package.json");
+const config = require('./config')
+const packageConfig = require("../package.json")
 
 exports.createNotifierCallback = () => {
   const notifier = require('node-notifier')
@@ -14,7 +14,7 @@ exports.createNotifierCallback = () => {
       title: packageConfig.name,
       message: severity + ': ' + error.name,
       subtitle: filename || '',
-      icon: path.join(__dirname, '../v-src/assets/img/logo.png')
+      icon: config.icon.src
     })
   }
 }
