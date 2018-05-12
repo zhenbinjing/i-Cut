@@ -1,4 +1,3 @@
-const path = require('path')
 const glob = require('glob-all')
 const webpack = require('webpack')
 const merge = require('webpack-merge')

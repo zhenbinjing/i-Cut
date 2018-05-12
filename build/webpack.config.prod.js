@@ -1,5 +1,4 @@
-﻿const fs = require('fs');
-const path = require('path')
+﻿const path = require('path')
 const glob = require('glob-all')
 const config = require('./config')
 const webpack = require('webpack')
