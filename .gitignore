@@ -3,3 +3,4 @@ coverage
 package-lock.json
 sauce.json
 revjson
+*.log

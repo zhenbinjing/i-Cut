@@ -12,7 +12,7 @@ Vue.use(Vuex);
 sync(store, router);
 
 const app = new Vue({
-  //el: '#app', // 开启服务端渲染要注释掉
+  el: '#app', // 开启服务端渲染要注释掉
   router,
   store,
   ...App

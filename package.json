@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.11.6",
+  "version": "2.11.7",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -58,7 +58,7 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^8.5.0",
+    "autoprefixer": "^8.5.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
@@ -137,7 +137,7 @@
     "prettier-eslint-cli": "^4.7.1",
     "pump": "^3.0.0",
     "purgecss-webpack-plugin": "^1.1.0",
-    "rollup": "^0.59.1",
+    "rollup": "^0.59.3",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-babel-minify": "^5.0.0",
     "rollup-plugin-buble": "^0.19.2",
