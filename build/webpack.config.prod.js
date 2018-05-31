@@ -86,7 +86,8 @@ const webpackConfig = merge(baseConfig, {
 		staticDir:config.route.dist,
 		routes:[ '/','/vr1', '/axios', '/vuex' ],
 		renderer: new Renderer({
-		captureAfterTime: 5000  //先加载json,让程序运行5秒之后,再捕获渲染后的数据行为(axios)
+		headless: false,
+		renderAfterTime: 5000  //先加载json,让程序运行5秒之后,再捕获渲染后的数据行为(axios)
 		})
 		})*/
 	]
