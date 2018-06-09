@@ -36,17 +36,20 @@ button {
 .title {
   font-size: 60px;
   color: #57bb8a;
-  padding: 20px 0;
   margin: 0;
   line-height: 1;
   font-weight: bold;
 }
 a {
   text-decoration: none;
-  color: black;
+  font-size: 60px;
+  color: #57bb8a;
+  margin: 0;
+  line-height: 2.4;
+  font-weight: bold;
 }
 a.active {
-  color: #0062f5;
+  color: #35495e;
 }
 img {
   max-width: 100%;
@@ -54,6 +57,9 @@ img {
 p {
   padding: 0;
   margin: 0;
+}
+button {
+  color: #35495e;
 }
 </style>
 <style lang="sass" rel="stylesheets/sass">

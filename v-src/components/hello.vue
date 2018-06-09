@@ -1,18 +1,25 @@
 <template>
   <div class="hello">
-    <p class="logo"><img 
-      src="../assets/img/logo.png" 
-      alt="logo"></p>
-    <p class="fz40">{{ message }}</p>
+    <p class="logo" v-for="topic in topics.data2" :key="topic.logo">      
+      <img :src=" topic.logo " alt="logo">
+    </p>
   </div>
 </template>
 
 <script>
+
+import { mapGetters } from 'vuex';
+const fetchInitialData = store => store.dispatch('getTopics');
+
 export default {
-  data() {
-    return {
-      message: 'Hello Vue!'
-    };
+  prefetch: fetchInitialData,
+  computed: {
+    ...mapGetters({
+      topics: 'getTopics'    
+    })
+  },
+  mounted() {
+    fetchInitialData(this.$store);
   }
 };
 </script>

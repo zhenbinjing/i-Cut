@@ -1,24 +1,23 @@
 ﻿<template>
   <div class="axios">
-    <div class="title">Axios</div>
     <div v-if=" topics == '' ">
       <loading/> 
     </div>
     <div v-show=" topics != '' ">
       <div 
-        v-for="topic in topics" 
-        :key="topic.name" 
+        v-for="topic in topics.data" 
+        :key="topic.text" 
         class="axios_text">
-        {{ topic.name }}
+        {{ topic.text }}      
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
 import loading from './loading.vue';
 
+import { mapGetters } from 'vuex';
 const fetchInitialData = store => store.dispatch('getTopics');
 
 export default {
@@ -41,7 +40,7 @@ export default {
   font-size: 0;
 }
 .axios_text {
-  color: black;
+  color: #35495e;
   font-size: 40px;
   display: inline-block;
   padding: 0 10px;

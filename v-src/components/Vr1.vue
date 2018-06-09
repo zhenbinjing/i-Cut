@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div class="title">Router</div>
     <div>{{ message1 }}</div>
   </div>
 </template>
