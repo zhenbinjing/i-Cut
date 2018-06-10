@@ -4,7 +4,7 @@ import request from 'axios';
 
 export const getTopics = ({ commit, state }) =>
   request
-  .get(`/axios.json`)
+  .get(`http://i-cut.cc/axios.json`)
     .then(response => {
       if (response.statusText === 'OK') {
         commit('TOPICS_LIST', response.data);
