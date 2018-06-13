@@ -1,10 +1,10 @@
 import request from 'axios';
 
-const API_PROXY = 'https://bird.ioliu.cn/v1/?url=';
+//const API_PROXY = 'https://bird.ioliu.cn/v1/?url=';
 
 export const getTopics = ({ commit, state }) =>
   request
-  .get(`${API_PROXY}http://i-cut.cc/axios.json`)
+  .get(`/axios.json`)
     .then(response => {
       if (response.statusText === 'OK') {
         commit('TOPICS_LIST', response.data);
