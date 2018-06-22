@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <p class="logo" v-for="topic in topics.data2" :key="topic.logo">      
-      <img :src=" topic.logo " alt="logo">
+      <img :src="topic.logo" alt="logo">
     </p>
   </div>
 </template>
