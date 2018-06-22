@@ -15,9 +15,9 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 const webpackConfig = merge(baseConfig, {
 	mode: 'production',
 	devtool: '#source-map',
-	entry: {
-		app: config.route.app // 入口文件路径
-	},
+	entry: [
+		'babel-polyfill', config.route.app // 入口文件路径
+	],
 	output: {
 		path: config.route.dist,  // 出口目录
 		filename: config.file.outputJsName,  // 出口文件名

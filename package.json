@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.11.12",
+  "version": "2.11.13",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -47,7 +47,7 @@
   "homepage": "https://github.com/zhenbinjing/i-Cut#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "cross-env": "^5.1.6",
+    "cross-env": "^5.2.0",
     "express": "^4.16.3",
     "lru-cache": "^4.1.3",
     "serve-favicon": "^2.5.0",
@@ -58,7 +58,7 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^8.6.1",
+    "autoprefixer": "^8.6.3",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
@@ -71,11 +71,11 @@
     "browser-sync": "^2.24.4",
     "chai": "^4.1.2",
     "copy-webpack-plugin": "^4.5.1",
-    "critical": "^1.3.2",
+    "critical": "^1.3.3",
     "css-loader": "^0.28.11",
     "del": "^3.0.0",
     "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-prettier": "^2.6.0",
@@ -112,7 +112,7 @@
     "gulp.spritesmith": "^6.9.0",
     "html-webpack-plugin": "^3.2.0",
     "istanbul-instrumenter-loader": "^3.0.1",
-    "karma": "^2.0.2",
+    "karma": "^2.0.4",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
@@ -137,7 +137,7 @@
     "prettier-eslint-cli": "^4.7.1",
     "pump": "^3.0.0",
     "purgecss-webpack-plugin": "^1.2.0",
-    "rollup": "^0.60.1",
+    "rollup": "^0.60.7",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-babel-minify": "^5.0.0",
     "rollup-plugin-buble": "^0.19.2",
@@ -152,11 +152,11 @@
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.12.0",
-    "webpack-cli": "^3.0.3",
+    "webpack-cli": "^3.0.8",
     "webpack-dev-middleware": "^3.1.3",
     "webpack-dev-server": "^3.1.4",
     "webpack-hot-middleware": "^2.22.2",
-    "webpack-merge": "^4.1.2",
+    "webpack-merge": "^4.1.3",
     "webpack-node-externals": "^1.7.2"
   }
 }

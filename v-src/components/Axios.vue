@@ -15,9 +15,9 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import loading from './loading.vue';
 
-import { mapGetters } from 'vuex';
 const fetchInitialData = store => store.dispatch('getTopics');
 
 export default {
