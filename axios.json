@@ -1,4 +1,4 @@
-{
-    "data":[{"text":"text1"},{"text":"text2"},{"text":"text3"}],
-    "data2":[{"logo":"https://i-cut.cc/v-dist/static/assets/icons/logo.png"}]
+{ 
+    "logo":{"avatar":"https://i-cut.cc/v-dist/static/assets/icons/logo.png"},
+    "text":[{"value":"text1"},{"value":"text2"},{"value":"text3"}]
 }

@@ -1,36 +1,35 @@
 ﻿<template>
   <div class="axios">
-    <div v-if=" topics == '' ">
+    <div v-if=" datas == '' ">
       <loading/> 
     </div>
-    <div v-show=" topics != '' ">
+    <div v-show=" datas != '' ">
       <div 
-        v-for="topic in topics.data" 
-        :key="topic.text" 
+        v-for="data in datas" 
+        :key="data.value" 
         class="axios_text">
-        {{ topic.text }}      
+        {{ data.value }}      
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import axios from 'axios';
 import loading from './loading.vue';
 
-const fetchInitialData = store => store.dispatch('getTopics');
-
 export default {
-  components: { loading },
-  prefetch: fetchInitialData,
-  computed: {
-    ...mapGetters({
-      topics: 'getTopics'
+  data() {
+    return {
+      datas: {}
+    }
+  },
+  created() {
+    axios.get('https://i-cut.cc/axios.json').then((res) => {
+      this.datas = res.data.text
     })
   },
-  mounted() {
-    fetchInitialData(this.$store);
-  }
+  components: { loading }
 };
 </script>
 

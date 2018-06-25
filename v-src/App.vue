@@ -1,15 +1,26 @@
 <template>
   <div id="app">
-    <hello/>    
+    <hello :data="data"/>    
     <router/>
   </div>  
 </template>
 
 <script>
+import axios from 'axios';
 import hello from './components/hello.vue';
 import router from './components/router.vue';
 
 export default {
+  data() {
+    return {
+      data: {}
+    }
+  },
+  created() {
+    axios.get('https://i-cut.cc/axios.json').then((res) => {
+      this.data = res.data.logo
+    })
+  },
   components: { hello, router }
 };
 </script>
