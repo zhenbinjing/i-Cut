@@ -1,5 +1,6 @@
 { 
     "logo":{"avatar":"https://i-cut.cc/v-dist/static/assets/icons/logo.png"},
+    "router":{"vaule":"vue-router"},
     "text":[{"value":"text1"},{"value":"text2"},{"value":"text3"}],
-    "number":{"count":0}
+    "number":{"count":0}    
 }

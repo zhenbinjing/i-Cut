@@ -1,16 +1,12 @@
-import request from 'axios';
+import axios from 'axios';
+
+export const getData = ({ commit, state }) =>
+    axios.get(`https://i-cut.cc/axios.json`)
+        .then(res => { commit('DATA_LIST', res.data) });
 
 export const loadings = ({ commit, state }) =>
-  request
-    .get(`https://i-cut.cc/axios.json`)
-    .then(response => {
-      if (response.statusText === 'OK') {
-        commit('loadings', response.data);
-      }
-    })
-    .catch(error => {
-      console.log(error);
-    });
+    axios.get(`https://i-cut.cc/axios.json`)
+        .then(res => { commit('Count_LIST', res.data) });
 
 export const increment = ({ commit }) => commit('increment');
 export const decrement = ({ commit }) => commit('decrement');

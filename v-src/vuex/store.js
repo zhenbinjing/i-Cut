@@ -8,6 +8,7 @@ import * as mutations from './mutations';
 Vue.use(Vuex);
 
 const state = {
+  data: {},
   count: "空"
 };
 

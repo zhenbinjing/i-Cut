@@ -5,7 +5,7 @@
     </div>
     <div v-show=" datas != '' ">
       <div 
-        v-for="data in datas" 
+        v-for="data in datas.text" 
         :key="data.value" 
         class="axios_text">
         {{ data.value }}      
@@ -15,20 +15,21 @@
 </template>
 
 <script>
-import axios from 'axios';
+import { mapGetters } from 'vuex';
 import loading from './loading.vue';
+
+const fetchInitialData = store => store.dispatch('getData');
 
 export default {
   components: { loading },
-  data() {
-    return {
-      datas: {}
-    };
+  prefetch: fetchInitialData,
+  computed: {
+    ...mapGetters({
+      datas: 'getData'
+    })
   },
-  created() {
-    axios.get('https://i-cut.cc/axios.json').then(res => {
-      this.datas = res.data.text;
-    });
+  mounted() {
+    fetchInitialData(this.$store);
   }
 };
 </script>
