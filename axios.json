@@ -1,4 +1,5 @@
 { 
     "logo":{"avatar":"https://i-cut.cc/v-dist/static/assets/icons/logo.png"},
-    "text":[{"value":"text1"},{"value":"text2"},{"value":"text3"}]
+    "text":[{"value":"text1"},{"value":"text2"},{"value":"text3"}],
+    "number":{"count":0}
 }

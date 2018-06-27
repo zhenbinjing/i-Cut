@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
     <p class="logo">     
-      <img :src="data.avatar" alt="logo">
+      <img 
+        :src="data.avatar" 
+        alt="logo">
     </p>
   </div>
 </template>

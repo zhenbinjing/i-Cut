@@ -1,6 +1,30 @@
+export const loadings = (state, data) => {
+  state.count = data.number.count;
+};
+
 export const increment = state => {
-  state.count += 1;
+  if(state.count === "空")
+  {
+    state.count = "点击初始化值"
+  }
+  else if(state.count === "点击初始化值")
+  {
+    state.count = "点击初始化值"
+  } 
+  else{
+    state.count += 1;
+  }
 };
 export const decrement = state => {
-  state.count -= 1;
+  if(state.count === "空")
+  {
+    state.count = "点击初始化值"
+  }
+  else if(state.count === "点击初始化值")
+  {
+    state.count = "点击初始化值"
+  } 
+  else{
+    state.count -= 1;
+  }
 };

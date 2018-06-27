@@ -19,17 +19,17 @@ import axios from 'axios';
 import loading from './loading.vue';
 
 export default {
+  components: { loading },
   data() {
     return {
       datas: {}
-    }
+    };
   },
   created() {
-    axios.get('https://i-cut.cc/axios.json').then((res) => {
-      this.datas = res.data.text
-    })
-  },
-  components: { loading }
+    axios.get('https://i-cut.cc/axios.json').then(res => {
+      this.datas = res.data.text;
+    });
+  }
 };
 </script>
 

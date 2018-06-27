@@ -1,7 +1,8 @@
 <template>
   <div class="increment">
-    <button @click="increment">Increment +1</button>
-    <button @click="decrement">Decrement -1</button>
+    <button @click="loadings">加载初始值</button>
+    <button @click="increment">增加 1</button>
+    <button @click="decrement">减少 1</button>
   </div>
 </template>
 
@@ -9,6 +10,6 @@
 import { mapActions } from 'vuex';
 
 export default {
-  methods: mapActions(['increment', 'decrement'])
+  methods: mapActions(['loadings', 'increment', 'decrement'])
 };
 </script>
