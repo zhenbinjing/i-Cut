@@ -3,13 +3,10 @@
     <div v-if=" datas == '' ">
       <loading/> 
     </div>
-    <div v-show=" datas != '' ">
-      <div 
-        v-for="data in datas.text" 
-        :key="data.value" 
-        class="axios_text">
-        {{ data.value }}      
-      </div>
+    <div v-else v-for="data in datas.text" 
+         :key="data.value" 
+         class="axios_text">
+         {{ data.value }}      
     </div>
   </div>
 </template>

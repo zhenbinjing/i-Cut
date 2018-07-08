@@ -1,22 +1,23 @@
 <template>
   <div class="vue-router">
-    <div>{{ datas.vaule }}</div>
+    <div>{{ datas.router.value }}</div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import { mapGetters } from 'vuex';
+
+const fetchInitialData = store => store.dispatch('getData');
 
 export default {
-  data() {
-    return {
-      datas: ''
-    };
+  prefetch: fetchInitialData,
+  computed: {
+    ...mapGetters({
+      datas: 'getData'
+    })
   },
-  created() {
-    axios.get('https://i-cut.cc/axios.json').then(res => {
-      this.datas = res.data.router;
-    });
+  mounted() {
+    fetchInitialData(this.$store);
   }
 };
 </script>
