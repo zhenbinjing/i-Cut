@@ -1,6 +1,6 @@
 <template>
   <div class="vue-router">
-    <div>{{ datas.router.value }}</div>
+    <div v-for="data in datas" :key="data.value">{{ data.value }}</div>
   </div>
 </template>
 
