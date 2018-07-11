@@ -1,5 +1,9 @@
-export const DATA_LIST = (state, data) => {
-  state.data = data;
+export const ROUTER_LIST = (state, data) => {
+  state.router = data.router;
+};
+
+export const TEXT_LIST = (state, data) => {
+  state.text = data.text;
 };
 
 export const COUNT_LIST = (state, data) => {

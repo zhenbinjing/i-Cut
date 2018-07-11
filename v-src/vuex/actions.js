@@ -1,12 +1,19 @@
 import axios from 'axios';
 
-export const getData = ({ commit, state }) =>
-  axios.get('https://i-cut.cc/axios.json').then(res => {
-    commit('DATA_LIST', res.data);
+const httpGet = 'https://i-cut.cc/axios.json';
+
+export const getRouter = ({ commit, state }) =>
+  axios.get(httpGet).then(res => {
+    commit('ROUTER_LIST', res.data);
+  });
+
+export const getText = ({ commit, state }) =>
+  axios.get(httpGet).then(res => {
+    commit('TEXT_LIST', res.data);
   });
 
 export const loadings = ({ commit, state }) =>
-  axios.get('https://i-cut.cc/axios.json').then(res => {
+  axios.get(httpGet).then(res => {
     commit('COUNT_LIST', res.data);
   });
 

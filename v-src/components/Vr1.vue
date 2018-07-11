@@ -1,23 +1,23 @@
 <template>
   <div class="vue-router">
-    <div v-for="data in datas" :key="data.value">{{ data.value }}</div>
+    {{ RouterData.value }}
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
 
-const fetchInitialData = store => store.dispatch('getData');
+const fetchRouterlData = store => store.dispatch('getRouter');
 
 export default {
-  prefetch: fetchInitialData,
+  prefetch: fetchRouterlData,
   computed: {
     ...mapGetters({
-      datas: 'getData'
+      RouterData: 'getRouter'
     })
   },
   mounted() {
-    fetchInitialData(this.$store);
+    fetchRouterlData(this.$store);
   }
 };
 </script>

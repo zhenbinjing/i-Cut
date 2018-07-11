@@ -14,7 +14,9 @@ export default {
     data: {
       type: Object,
       default() {
-        return { avatar: 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' }; // 默认值
+        return {
+          avatar: 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+        }; // 默认值
       }
     }
   }

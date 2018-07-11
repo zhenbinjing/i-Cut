@@ -1,27 +1,26 @@
 <template>
   <div id="app">
-    <hello :data="data.logo"/>    
+    <hello :data="data"/>    
     <router/>
   </div>  
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import axios from 'axios';
 import hello from './components/hello.vue';
 import router from './components/router.vue';
 
-const fetchInitialData = store => store.dispatch('getData');
-
 export default {
   components: { hello, router },
-  prefetch: fetchInitialData,
-  computed: {
-    ...mapGetters({
-      data: 'getData'
-    })
+  data() {
+    return {
+      data: {}
+    };
   },
-  mounted() {
-    fetchInitialData(this.$store);
+  created() {
+    axios.get('https://i-cut.cc/axios.json').then(res => {
+      this.data = res.data.logo;
+    });
   }
 };
 </script>

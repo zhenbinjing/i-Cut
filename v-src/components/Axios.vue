@@ -1,38 +1,41 @@
 ﻿<template>
   <div class="axios">
-    <div v-if=" datas == '' ">
+    <div v-if=" TextData == '' ">
       <loading/> 
     </div>
-    <div v-else v-for="data in datas.text" 
-         :key="data.value" 
-         class="axios_text">
-         {{ data.value }}      
+    <div 
+      v-for="datas in TextData" 
+      v-else 
+      :key="datas.value" 
+      class="axios_text">
+      {{ datas.value }}      
     </div>
   </div>
 </template>
+
 
 <script>
 import { mapGetters } from 'vuex';
 import loading from './loading.vue';
 
-const fetchInitialData = store => store.dispatch('getData');
+const fetchTextData = store => store.dispatch('getText');
 
 export default {
   components: { loading },
-  prefetch: fetchInitialData,
+  prefetch: fetchTextData,
   computed: {
     ...mapGetters({
-      datas: 'getData'
+      TextData: 'getText'
     })
   },
   mounted() {
-    fetchInitialData(this.$store);
+    fetchTextData(this.$store);
   }
 };
 </script>
 
 <!--添加 scoped 属性 css只作用在此组件上-->
-<style scoped>
+<style>
 .axios {
   font-size: 0;
 }
