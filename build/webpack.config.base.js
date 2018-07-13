@@ -21,7 +21,10 @@ module.exports = {
       //配置省略的后缀名和文件路径
       resolve: {
             extensions: ['.js', '.vue', '.json'],
-            alias: { 'vue': 'vue/dist/vue.js' }
+            alias: {
+                   'vue': 'vue/dist/vue.js',
+                   '@': path.resolve(__dirname, '../v-src/components')
+            }
       },
       module: { // 配置loader
             rules: [
