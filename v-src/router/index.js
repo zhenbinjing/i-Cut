@@ -2,15 +2,15 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 // 同步加载路由(服务端渲染)
-import c_vr1 from '@/vr1.vue';
-// import c_axios from '@/axios.vue';
-// import c_vuexs from '@/vuexs.vue';
+import Vr1 from '@/Vr1.vue';
+// import Axios from '@/Axios.vue';
+// import Vuexs from '@/Vuexs.vue';
 
 Vue.use(VueRouter);
 
 // 异步加载路由(客户端渲染)
-const c_axios = () => import('@/axios.vue');
-const c_vuexs = () => import('@/vuexs.vue');
+const Axios = () => import('@/Axios.vue');
+const Vuexs = () => import('@/Vuexs.vue');
 
 export default new VueRouter({
   // 去掉下面注释开启服务端渲染 history 模式
@@ -22,15 +22,15 @@ export default new VueRouter({
     },
     {
       path: '/vr1',
-      component: c_vr1
+      component: Vr1
     },
     {
       path: '/axios',
-      component: c_axios
+      component: Axios
     },
     {
       path: '/vuex',
-      component: c_vuexs
+      component: Vuexs
     }
   ],
   linkActiveClass: 'active'

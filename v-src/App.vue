@@ -7,8 +7,8 @@
 
 <script>
 import axios from 'axios';
-import hello from './components/hello.vue';
-import router from './components/router.vue';
+import hello from '@/hello.vue';
+import router from '@/router.vue';
 
 export default {
   components: { hello, router },
