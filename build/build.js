@@ -5,12 +5,11 @@ const path = require('path')
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.config.prod')
 const config = require('./config')
-const root = config.route.dist
 
 const spinner = ora('building for production...')
 spinner.start()
 
-rm(path.join(root), err => {
+rm(path.join(config.route.dist), err => {
   if (err) throw err
   webpack(webpackConfig, (err, stats) => {
     spinner.stop()
