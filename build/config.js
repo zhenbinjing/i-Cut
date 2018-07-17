@@ -3,11 +3,11 @@ const root = path.resolve(__dirname, '..')
 
 const vdist = 'v-dist'
 const vsrc = 'v-src'
-const static = 'static'
+const vstatic = 'static'
 
 const d_root = path.resolve(root, vdist)
 const s_root = path.resolve(root, vsrc)
-const statics = path.resolve(root, static)
+const s_static = path.resolve(root, vstatic)
 
 
 module.exports = {
@@ -29,10 +29,10 @@ module.exports = {
    },
    //文件
    file: {
-        urlLoaderName: static + '/assets/[name].[hash:7].[ext]',
-        miniCssName: static + '/css/index.[chunkhash].css',
-        outputJsName: static + '/js/[name].[chunkhash].js',
-        devJsName: static + '/js/app.js'
+        urlLoaderName: vstatic + '/assets/[name].[hash:7].[ext]',
+        miniCssName: vstatic + '/css/index.[chunkhash].css',
+        outputJsName: vstatic + '/js/[name].[chunkhash].js',
+        devJsName: vstatic + '/js/app.js'
    },
    //插件
    plugin:{
@@ -42,8 +42,8 @@ module.exports = {
          path.join(s_root, '**/*.js')
      ],
      copy:{
-         from: statics,
-         to: static + '/assets'
+         from: s_static,
+         to: vstatic + '/assets'
      },
      sw:{
          staticFileGlobs: vdist + '/**/*.*',
