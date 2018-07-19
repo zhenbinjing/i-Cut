@@ -30,19 +30,19 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-35f7402fd1.css",
-    "revision": "9143bda035c1d7bbd59ae8caac907672"
+    "revision": "43a301c6dcfcee0be9827030edbe7339"
   },
   {
-    "url": "static/font/stfyt-675a6e9d0f.woff",
-    "revision": "675a6e9d0f4e9064c76ce742222241d4"
+    "url": "static/font/stfyt-054322662b.woff",
+    "revision": "054322662b389ca348e4b09a7c2d86fb"
   },
   {
-    "url": "static/font/stfyt-952c1bab34.eot",
-    "revision": "952c1bab34e150b6a28e1ce19ee8ab12"
+    "url": "static/font/stfyt-69ac4bb1db.ttf",
+    "revision": "69ac4bb1dba708d08b6422e2ceb83712"
   },
   {
-    "url": "static/font/stfyt-aafc2a4964.ttf",
-    "revision": "aafc2a4964133fd4c86950d615e78786"
+    "url": "static/font/stfyt-a16b2c37cc.eot",
+    "revision": "a16b2c37cce631032aaa039c61b858e1"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
@@ -158,7 +158,7 @@ self.__precacheManifest = [
   },
   {
     "url": "static/pwa/workbox-sw.js",
-    "revision": "555ce8dfb01b84d06d015637601fd15a"
+    "revision": "8268280476a2ac769e488e19ea12a72d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
