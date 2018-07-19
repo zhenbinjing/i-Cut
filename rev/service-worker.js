@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
+importScripts("https://i-cut.cc/rev/static/pwa/workbox-sw.js");
 
 workbox.core.setCacheNameDetails({prefix: "gulp-pwa-demo"});
 
