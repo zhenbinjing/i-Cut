@@ -30,19 +30,19 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-35f7402fd1.css",
-    "revision": "881a4c312c6c34f3b9a72d83268ab98d"
+    "revision": "9143bda035c1d7bbd59ae8caac907672"
   },
   {
-    "url": "static/font/stfyt-89e784dc3c.ttf",
-    "revision": "89e784dc3c24317f486fbcd1f3b9eb19"
+    "url": "static/font/stfyt-675a6e9d0f.woff",
+    "revision": "675a6e9d0f4e9064c76ce742222241d4"
   },
   {
-    "url": "static/font/stfyt-a3a1c07b91.woff",
-    "revision": "a3a1c07b91e83696e1fc41005c6f8363"
+    "url": "static/font/stfyt-952c1bab34.eot",
+    "revision": "952c1bab34e150b6a28e1ce19ee8ab12"
   },
   {
-    "url": "static/font/stfyt-ac2ec242dc.eot",
-    "revision": "ac2ec242dc71de54b11812b01add3445"
+    "url": "static/font/stfyt-aafc2a4964.ttf",
+    "revision": "aafc2a4964133fd4c86950d615e78786"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
@@ -155,6 +155,10 @@ self.__precacheManifest = [
   {
     "url": "static/pwa/safari-pinned-tab.svg",
     "revision": "36d3bc5286e4fe2776af301e59fe8131"
+  },
+  {
+    "url": "static/pwa/workbox-sw.js",
+    "revision": "555ce8dfb01b84d06d015637601fd15a"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
