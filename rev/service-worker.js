@@ -30,19 +30,19 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-35f7402fd1.css",
-    "revision": "43a301c6dcfcee0be9827030edbe7339"
+    "revision": "bdd0bcdb61a4292c2384bc13a1624848"
   },
   {
-    "url": "static/font/stfyt-054322662b.woff",
-    "revision": "054322662b389ca348e4b09a7c2d86fb"
+    "url": "static/font/stfyt-5ef10931eb.woff",
+    "revision": "5ef10931ebefdb3e9b93a17cdd8bf41c"
   },
   {
-    "url": "static/font/stfyt-69ac4bb1db.ttf",
-    "revision": "69ac4bb1dba708d08b6422e2ceb83712"
+    "url": "static/font/stfyt-8ffa57818b.ttf",
+    "revision": "8ffa57818b389a219f4fe4b08044dc1d"
   },
   {
-    "url": "static/font/stfyt-a16b2c37cc.eot",
-    "revision": "a16b2c37cce631032aaa039c61b858e1"
+    "url": "static/font/stfyt-a15182784b.eot",
+    "revision": "a15182784bdaf0d57e9c97af90bfa089"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
@@ -157,8 +157,12 @@ self.__precacheManifest = [
     "revision": "36d3bc5286e4fe2776af301e59fe8131"
   },
   {
+    "url": "static/pwa/workbox-core.prod.js",
+    "revision": "e0ad604f62caa8c5fbd945b30a94c96d"
+  },
+  {
     "url": "static/pwa/workbox-sw.js",
-    "revision": "8268280476a2ac769e488e19ea12a72d"
+    "revision": "767bc43f700ca3985a790164c3ba739e"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
