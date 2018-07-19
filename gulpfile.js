@@ -27,10 +27,12 @@ const  uglify = require('gulp-uglify');                        //- js压缩
 const  rev = require('gulp-rev');                              //- 添加哈希值
 const  revCollector = require('gulp-rev-collector');           //- 改为哈希值版本路径
 const  htmlurl = require('gulp-html-url-prefix-custom');       //- html文件添加域名前缀
+const  htmlimport = require('gulp-html-import');               //- html模板
 const  pump = require('pump');                                 //- 报错提示
 const  browserSync = require('browser-sync');                  //- 浏览器同步测试工具
 const  del = require('del');                                   //- 删除文件功能模块
 const  path = require("path");                                 //- 路径模块
+const  workbox = require('workbox-build');                     //- PWA生成器
 
 const  y_Sz="src";                                             //- 源码版本
 const  y_Dz="dist";                                            //- 上线版本
@@ -39,11 +41,11 @@ const  y_Rn="revjson";                                         //- 缓存json
 
 /*------------------------------Del dist----------------------------------*/
 
-function distDelFile(){
-	return del('./'+y_Dz+'/');
+function revDelFile(){
+	return del('./'+y_Rz+'/');
 }
 
-gulp.task(distDelFile)
+gulp.task(revDelFile)
 
 /*------------------------------cssSprite---------------------------------*/
 
@@ -293,14 +295,6 @@ gulp.task('baseAll', gulp.series(cssBase64, htmlBase64));
 
 /*-------------------------------------Rev-----------------------------------*/	
 
-function revDelfile(){
-	return del('./'+y_Rz+'/');
-}
-
-function revDeljson() {
-	return del('./'+y_Rn+'/');	
-}
-
 function revHtml(){
 	return gulp.src(['./'+y_Rn+'/**/*.json', './'+y_Dz+'/*.html'])
 	.pipe(revCollector())
@@ -345,7 +339,81 @@ function revImg(){
 	.pipe(gulp.dest('./'+y_Rn+'/static/img/'));			
 }
 
-gulp.task('revAll', gulp.series(revDelfile, revDeljson, gulp.parallel(revImg, revFont, revJs, revCss), revStyle, revHtml));
+gulp.task('revAll', gulp.series(gulp.parallel(revImg, revFont, revJs, revCss), revStyle, revHtml));
+
+/*----------------------------------PWA---------------------------------------*/
+
+function ServiceWorkers(){
+	return workbox
+	.generateSW({
+		cacheId: 'gulp-pwa-demo', // 设置前缀
+		globDirectory: './' + y_Rz, //匹配根目录
+		globPatterns: ['**/*.*'], // 匹配的文件
+		globIgnores: ['service-worker.js'], // 忽略的文件
+		swDest: './' + y_Rz + '/service-worker.js', // 输出 Service worker 文件
+		clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
+		skipWaiting: true, // 强制等待中的 Service Worker 被激活
+		runtimeCaching: [
+			// 配置路由请求缓存 对应 workbox.routing.registerRoute
+			{
+				urlPattern: /.*\.js/, // 匹配文件
+				handler: 'networkFirst' // 网络优先
+			},
+			{
+				urlPattern: /.*\.css/,
+				handler: 'staleWhileRevalidate', // 缓存优先同时后台更新
+				options: {
+					// 这里可以设置 cacheName 和添加插件
+					plugins: [
+						{
+							cacheableResponse: {
+								statuses: [0, 200]
+							}
+						}
+					]
+				}
+			},
+			{
+				urlPattern: /.*\.(?:png|jpg|jpeg|webp|svg|gif)/,
+				handler: 'cacheFirst', // 缓存优先
+				options: {
+					plugins: [
+						{
+							expiration: {
+								maxAgeSeconds: 24 * 60 * 60, // 最长缓存时间,
+								maxEntries: 50 // 最大缓存图片数量
+							}
+						}
+					]
+				}
+			},
+			{
+				urlPattern: /.*\.html/,
+				handler: 'networkFirst'
+			}
+		]
+	})
+	.then(() => {
+		console.info('Service worker generation completed.');
+	})
+	.catch(error => {
+		console.warn('Service worker generation failed: ' + error);
+	});
+}
+
+function htmlImport(){
+	return gulp.src('./'+y_Dz+'/index.html')
+    .pipe(htmlimport('./'+y_Sz+'/static/pwa/'))
+    .pipe(gulp.dest('./'+y_Rz+'/')); 
+}
+
+function iconCopy(){
+	return gulp.src(['./'+y_Sz+'/static/pwa/*.*'],{        //- 复制图片
+	base: './'+y_Sz+'/static/pwa/'})
+	.pipe(gulp.dest('./'+y_Rz+'/static/pwa/'));	
+}
+
+gulp.task('PWA',gulp.series(iconCopy, htmlImport, ServiceWorkers));
 
 /*------------------------------Htmlmin----------------------------------*/	
 
@@ -370,7 +438,11 @@ function HtmlUrl(){
 	.pipe(gulp.dest('./'+y_Rz+'/'));
 }
 
-gulp.task('htmlAll', gulp.series(HtmlUrl, HtmlMin));
+function delFile(){				
+	return del(['./'+y_Dz, './'+y_Rn]);		
+}
+
+gulp.task('htmlAll', gulp.series(HtmlUrl, HtmlMin, delFile));
 
 /*------------------------------browserSync----------------------------------*/
 
@@ -384,4 +456,4 @@ function browser(){
 
 gulp.task(browser);
 
-gulp.task('default', gulp.series('distDelFile', 'cssSprite', 'svgSprite', 'cssAll', 'imgAll', 'htmlDeal', 'fontAll', 'webpAll', 'baseAll'));
+gulp.task('default', gulp.series('revDelFile', 'cssSprite', 'svgSprite', 'cssAll', 'imgAll', 'htmlDeal', 'fontAll', 'webpAll', 'baseAll'));

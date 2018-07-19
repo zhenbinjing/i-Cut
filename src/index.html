@@ -6,37 +6,12 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="email=no">
-<script>
-(function (doc, win) {
-	var docEl = doc.documentElement,
-	isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
-	dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
-	dpr = window.top === window.self? dpr : 1, 
-	dpr = 1,
-	scale = 1 / dpr,
-	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
-        docEl.dataset.dpr = dpr;
-        var metaEl = doc.createElement('meta');
-        metaEl.name = 'viewport';
-        metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
-        docEl.firstElementChild.appendChild(metaEl);
-        var recalc = function () {
-            var designW = 640;		//把你的手机设计稿宽度填写进去
-            var width = docEl.clientWidth;
-            if (width / dpr > designW) {	
-                width = designW * dpr;
-            }
-		docEl.style.cssText = "font-size:" + 100 * (width / designW) + "px;" + "max-width:" + width + "px;" + "margin:auto;";
-          };
-        recalc()
-        if (!doc.addEventListener) return;
-        win.addEventListener(resizeEvt, recalc, false);
-})(document, window);
-</script>
+
+<!-- pwa header-->
+@import "pwa-header.html"
+
 <!-- build:css static/css/index.css-->
 <link rel="stylesheet" href="static/css/adjust.css">
 <link rel="stylesheet" href="static/css/emmet.css">
@@ -47,6 +22,33 @@
 <link rel="stylesheet" href="static/css/svg-sprite.css">
 <link rel="stylesheet" href="static/css/svgcss.css">
 <!-- /build -->
+<script>
+	(function (doc, win) {
+		var docEl = doc.documentElement,
+		isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+		dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
+		dpr = window.top === window.self? dpr : 1, 
+		dpr = 1,
+		scale = 1 / dpr,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+			docEl.dataset.dpr = dpr;
+			var metaEl = doc.createElement('meta');
+			metaEl.name = 'viewport';
+			metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+			docEl.firstElementChild.appendChild(metaEl);
+			var recalc = function () {
+				var designW = 640;		//把你的手机设计稿宽度填写进去
+				var width = docEl.clientWidth;
+				if (width / dpr > designW) {	
+					width = designW * dpr;
+				}
+			docEl.style.cssText = "font-size:" + 100 * (width / designW) + "px;" + "max-width:" + width + "px;" + "margin:auto;";
+			  };
+			recalc()
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+	})(document, window);
+</script>
 </head>
 
 <body class="bgc-e9e7e2">
@@ -192,7 +194,9 @@
 				<p>Lazysizes</p>
 		</div>
 		<div><img class="lazyload va-t" data-src="static/img/rwd/rwd.png" data-sizes="auto" alt=""></div>
-		<script async src="static/js/index.js"></script> 
+		<script async src="static/js/index.js"></script>		
 </all-img-base64>
+<!-- pwa script-->
+@import "pwa-script.html"
 </body>
 </html>
