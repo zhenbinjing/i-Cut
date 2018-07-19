@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://i-cut.cc/rev/static/pwa/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 workbox.core.setCacheNameDetails({prefix: "gulp-pwa-demo"});
 
@@ -30,19 +30,19 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-35f7402fd1.css",
-    "revision": "bdd0bcdb61a4292c2384bc13a1624848"
+    "revision": "0ae9d10a747dd0e94e4056a6ca6b5f1d"
   },
   {
-    "url": "static/font/stfyt-5ef10931eb.woff",
-    "revision": "5ef10931ebefdb3e9b93a17cdd8bf41c"
+    "url": "static/font/stfyt-0d2ff5b49a.eot",
+    "revision": "0d2ff5b49af005197916a2e36cbf3986"
   },
   {
-    "url": "static/font/stfyt-8ffa57818b.ttf",
-    "revision": "8ffa57818b389a219f4fe4b08044dc1d"
+    "url": "static/font/stfyt-21db94029a.ttf",
+    "revision": "21db94029a2d247c6128750fcf11820a"
   },
   {
-    "url": "static/font/stfyt-a15182784b.eot",
-    "revision": "a15182784bdaf0d57e9c97af90bfa089"
+    "url": "static/font/stfyt-41734dd2c8.woff",
+    "revision": "41734dd2c80f0d1bf9def43420ef9c3e"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
@@ -157,12 +157,8 @@ self.__precacheManifest = [
     "revision": "36d3bc5286e4fe2776af301e59fe8131"
   },
   {
-    "url": "static/pwa/workbox-core.prod.js",
-    "revision": "e0ad604f62caa8c5fbd945b30a94c96d"
-  },
-  {
     "url": "static/pwa/workbox-sw.js",
-    "revision": "767bc43f700ca3985a790164c3ba739e"
+    "revision": "53015f4d1cfae276d86489d6f5ee9e13"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
