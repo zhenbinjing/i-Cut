@@ -11,10 +11,10 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("/v-dist/static/assets/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/v-dist/precache-manifest.3204b8f79bf984ac84ae1405c957430a.js"
+  "/v-dist/precache-manifest.9c45b6aee4f9b35b2a2afaecd136b60c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-pwa"});

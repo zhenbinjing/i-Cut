@@ -6,7 +6,6 @@ const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const loadMinified = require('./load-minified')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 //const PrerenderSPAPlugin = require('prerender-spa-plugin') // 页面静态化

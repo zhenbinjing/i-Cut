@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "1a034e64d80905128113e5272a5ab95e",
-    "url": "/v-dist/static/assets/icons/apple-touch-icon-152x152.png"
+    "revision": "0ff1bc4d14e5c9abcacba7c600d97814",
+    "url": "/v-dist/static/assets/icons/android-chrome-512x512.png"
   },
   {
     "url": "/v-dist/static/css/index.491e9c36961f54065489.css"
@@ -22,8 +22,8 @@ self.__precacheManifest = [
     "url": "/v-dist/static/js/manifest.935ce696bcc3c196c6ec.js"
   },
   {
-    "revision": "04094c981e19b077458ac5d414185112",
-    "url": "/v-dist/static/assets/icons/logo.png"
+    "revision": "7a2fa8fc2aff558ca7b7e6d5dddb5315",
+    "url": "/v-dist/static/assets/icons/favicon.ico"
   },
   {
     "revision": "53015f4d1cfae276d86489d6f5ee9e13",
@@ -45,8 +45,8 @@ self.__precacheManifest = [
     "url": "/v-dist/static/assets/icons/msapplication-icon-144x144.png"
   },
   {
-    "revision": "7a2fa8fc2aff558ca7b7e6d5dddb5315",
-    "url": "/v-dist/static/assets/icons/favicon.ico"
+    "revision": "04094c981e19b077458ac5d414185112",
+    "url": "/v-dist/static/assets/icons/logo.png"
   },
   {
     "revision": "98b614336d9a12cb3f7bedb001da6fca",
@@ -57,8 +57,8 @@ self.__precacheManifest = [
     "url": "/v-dist/static/assets/icons/favicon-16x16.png"
   },
   {
-    "revision": "0ff1bc4d14e5c9abcacba7c600d97814",
-    "url": "/v-dist/static/assets/icons/android-chrome-512x512.png"
+    "revision": "1a034e64d80905128113e5272a5ab95e",
+    "url": "/v-dist/static/assets/icons/apple-touch-icon-152x152.png"
   },
   {
     "revision": "f130a0b70e386170cf6f011c0ca8c4f4",
