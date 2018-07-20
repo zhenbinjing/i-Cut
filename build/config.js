@@ -42,9 +42,6 @@ module.exports = {
      copy:{
          from: s_root + '/assets/pwa',
          to: vstatic + '/assets'
-     },
-     sw:{
-        filePath:path.join(s_root, 'sw-register.js')
      }
    },
 }
