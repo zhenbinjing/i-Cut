@@ -34,5 +34,17 @@
     <!-- Todo: only include in production -->
     <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
     <!-- built files will be auto injected -->
+    <script>
+    if ('serviceWorker' in navigator) {
+           navigator.serviceWorker.register('<%= htmlWebpackPlugin.files.publicPath %>service-worker.js')
+         .then(function(registration) {
+           console.log('Service Worker registration successful with scope: ',
+           registration.scope);
+         })
+         .catch(function(err) {
+           console.log('Service Worker registration failed: ', err);
+        });
+    }
+    </script>
   </body>
 </html>

@@ -1,5 +1,4 @@
-﻿const fs = require('fs')
-const path = require('path')
+﻿const path = require('path')
 const config = require('./config')
 const webpack = require('webpack')
 const merge = require('webpack-merge') //合并执行任务
@@ -32,9 +31,7 @@ const devWebpackConfig = merge(baseConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: config.route.html, // 模板文件
-      inject: 'body',
-      serviceWorkerLoader: `<script>${fs.readFileSync(path.join(__dirname,
-        './service-worker-dev.js'), 'utf-8')}</script>`
+      inject: 'body'
     }),
     new webpack.HotModuleReplacementPlugin()
   ]

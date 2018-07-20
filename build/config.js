@@ -7,8 +7,6 @@ const vstatic = 'static'
 
 const d_root = path.resolve(root, vdist)
 const s_root = path.resolve(root, vsrc)
-const s_static = path.resolve(root, vstatic)
-
 
 module.exports = {
    //路径    
@@ -42,12 +40,11 @@ module.exports = {
          path.join(s_root, '**/*.js')
      ],
      copy:{
-         from: s_static,
+         from: s_root + '/assets/pwa',
          to: vstatic + '/assets'
      },
      sw:{
-         staticFileGlobs: vdist + '/**/*.*',
-         stripPrefix: vdist + '/'
+        filePath:path.join(s_root, 'sw-register.js')
      }
    },
 }

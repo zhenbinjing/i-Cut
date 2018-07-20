@@ -5,10 +5,10 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const loadMinified = require('./load-minified')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 //const PrerenderSPAPlugin = require('prerender-spa-plugin') // 页面静态化
 //const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 
@@ -53,11 +53,10 @@ const webpackConfig = merge(baseConfig, {
 			minify: {
 				removeComments: true,
 				collapseWhitespace: true,
-				removeAttributeQuotes: true
+				removeAttributeQuotes: true,
+				minifyJS:true
 			},			
-			chunksSortMode: 'dependency',
-			serviceWorkerLoader: `<script>${loadMinified(path.join(__dirname,
-				'./service-worker-prod.js'))}</script>`
+			chunksSortMode: 'dependency'
 		}),
 		new CopyWebpackPlugin([
 			{
@@ -65,23 +64,20 @@ const webpackConfig = merge(baseConfig, {
 				to: config.plugin.copy.to,
 				ignore: ['.*']
 			}
-		]),
-		new SWPrecacheWebpackPlugin({
-			cacheId: 'i-cut',
-			filename: 'service-worker.js',
-			staticFileGlobs: [config.plugin.sw.staticFileGlobs],
-			stripPrefix: config.plugin.sw.stripPrefix,
-			minify: true,
-			mergeStaticsConfig: true,
-			dontCacheBustUrlsMatching: false,
-			staticFileGlobsIgnorePatterns: [
-				/index\.html$/,
-				/\.map$/,
-				/\.css$/,
-				/\.svg$/,
-				/\.eot$/
-			]
-		})
+		]),		
+		new WorkboxPlugin.GenerateSW({
+            cacheId: 'vue-pwa', // 设置前缀
+            skipWaiting: true, // 强制等待中的 Service Worker 被激活
+            clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
+			swDest: 'service-wroker.js', // 输出 Service worker 文件
+            runtimeCaching: [
+                // 配置路由请求缓存
+                {
+                    urlPattern: /.*\.js/, // 匹配文件
+                    handler: 'networkFirst' // 网络优先
+                }
+            ]
+        })
 		/*new PrerenderSPAPlugin({
 		staticDir:config.route.dist,
 		routes:[ '/','/vr1', '/axios', '/vuex' ],
