@@ -5,14 +5,14 @@
 export default {
   input: './test/es6/main.js',
   output: {
-	   file:'./test/es6/ts/main.js',	
+	   file:'./test/es6/ts/main.js',
   	   format: 'es'
-	   //name: 'icut', 
+	   //name: 'icut',
 	   //sourcemap: 'true',
   },
-  plugins: [ 
+  plugins: [
 	minify()
-	//resolve({ jsnext: true, main: true, browser: true, }), 
+	//resolve({ jsnext: true, main: true, browser: true, }),
 	//commonjs()
   ]
 };

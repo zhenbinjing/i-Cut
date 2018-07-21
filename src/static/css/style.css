@@ -31,13 +31,13 @@ img[data-sizes]{width: 100%;}
 
 /*-----------------------------字体-----------------------------*/
 
-@font-face { 
+@font-face {
 	font-family: 'stfyt';
 	src: url('../font/stfyt.eot');
 	src: url('../font/stfyt.eot') format('embedded-opentype'),
 		 url('../font/stfyt.woff') format('woff'),
 		 url('../font/stfyt.ttf') format('truetype'),
-		 url('../font/stfyt.svg') format('svg');	 
+		 url('../font/stfyt.svg') format('svg');
  }
 .stfyt{ font-family: 'stfyt'; }
 
@@ -47,10 +47,10 @@ img[data-sizes]{width: 100%;}
 /*css 背景延迟加载 image-set*/
 
 /* clean-css ignore:start */
-.bglazy { 
-  background: url(''); 
-  background-image: url(''); 
-  background-image: -webkit-image-set(''); 
+.bglazy {
+  background: url('');
+  background-image: url('');
+  background-image: -webkit-image-set('');
   background-image: image-set('')
 }
 /* clean-css ignore:end */

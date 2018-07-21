@@ -1,5 +1,5 @@
 ﻿export default function lazyload (){
-	
+
 	function isInSight(el) {
 	  const bound = el.getBoundingClientRect();
 	  const clientHeight = window.innerHeight;
@@ -19,8 +19,8 @@
 	  }
 	}
 
-	function loadImg(el) {	 
-		el.classList.remove('bglazy')	  
+	function loadImg(el) {
+		el.classList.remove('bglazy')
 	}
 
 	function throttle(fn, mustRun = 500) {

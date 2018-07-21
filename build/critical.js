@@ -8,14 +8,14 @@ function generateCriticalPath(err, files) {
 			critical.generate({
 				inline: true,
 				base: './',
-				src: page,     
+				src: page,
 				width: 500,
 				height: 200,
 				minify: true,
 				ignore: ['.bglazy','@font-face',/url\(/],
 				//pathPrefix: '/dist/',
 				dest: page
-			})	
+			})
 	});
 }
 

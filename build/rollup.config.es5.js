@@ -4,19 +4,19 @@ import { uglify } from 'rollup-plugin-uglify';
 
 export default {
   input: './test/es6/ts/main.js',
-  output:{ 
+  output:{
 	   file:'./test/es5/main.js',
 	   format: 'iife'
-  },  
-  plugins: [ 
+  },
+  plugins: [
 	buble(),
 	babel({
 	    exclude: 'node_modules/**',
 	    plugins: ['external-helpers'],
 	    externalHelpers: true
-	}),	
+	}),
 	uglify({
-            //mangle: true	
+            //mangle: true
             //保留关键变量
             mangle: {reserved: ['tsa','TSA']},
             toplevel: true

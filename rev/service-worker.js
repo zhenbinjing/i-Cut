@@ -26,27 +26,27 @@ workbox.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "8ea9ea7fa4c90592f7606b973ef9f84a"
+    "revision": "11f9f29c0292fe852768b0eb9ff06f73"
   },
   {
     "url": "static/css/index-35f7402fd1.css",
-    "revision": "2d8cab4f024243d68f571de38633a9eb"
+    "revision": "54435788b31c951e4c2a620bbc5d57dd"
   },
   {
-    "url": "static/font/stfyt-7b45d6d846.ttf",
-    "revision": "7b45d6d846a512e99941e9c86eaf9f46"
+    "url": "static/font/stfyt-0a2187aa74.eot",
+    "revision": "0a2187aa74863e662c93b2498a619dae"
+  },
+  {
+    "url": "static/font/stfyt-633084f2ff.ttf",
+    "revision": "633084f2ff2bc2d21169c4fc224b521e"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
   },
   {
-    "url": "static/font/stfyt-c0df39fb67.woff",
-    "revision": "c0df39fb67efdb9404881355fe0ebdd1"
-  },
-  {
-    "url": "static/font/stfyt-ed76df150f.eot",
-    "revision": "ed76df150fea00aa483a4d8d7f00a444"
+    "url": "static/font/stfyt-e0642375d8.woff",
+    "revision": "e0642375d8eb209f41cb6afa2c9a0533"
   },
   {
     "url": "static/img/a-9542fffc42.webp",
@@ -138,7 +138,7 @@ self.__precacheManifest = [
   },
   {
     "url": "static/pwa/manifest.json",
-    "revision": "4f19afaeefbd73813392c90e369b1f7d"
+    "revision": "973cee5ecb6781e98f5113ed0bfdc48a"
   },
   {
     "url": "static/pwa/mstile-150x150.png",
@@ -146,11 +146,11 @@ self.__precacheManifest = [
   },
   {
     "url": "static/pwa/pwa-header.html",
-    "revision": "7fbd0933cbd2ad4eb4bf18f4305f718d"
+    "revision": "4afeb036b451bd6cd2c5bf3179e0a30f"
   },
   {
     "url": "static/pwa/pwa-script.html",
-    "revision": "6e5e762a39da2fc15ce8d47432b3983d"
+    "revision": "8cd7ab27275e21c5df53621385062a3c"
   },
   {
     "url": "static/pwa/safari-pinned-tab.svg",
@@ -158,7 +158,7 @@ self.__precacheManifest = [
   },
   {
     "url": "static/pwa/workbox-sw.js",
-    "revision": "53015f4d1cfae276d86489d6f5ee9e13"
+    "revision": "06da38385218ae9eba0fd70937aa906c"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();

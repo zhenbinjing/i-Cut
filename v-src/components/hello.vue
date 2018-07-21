@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
-    <p class="logo">     
-      <img 
-        :src="data.avatar" 
+    <p class="logo">
+      <img
+        :src="data.avatar"
         alt="logo">
     </p>
   </div>

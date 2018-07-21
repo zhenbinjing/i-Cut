@@ -9,10 +9,10 @@ const d_root = path.resolve(root, vdist)
 const s_root = path.resolve(root, vsrc)
 
 module.exports = {
-   //路径    
+   //路径
    route: {
-        dist: path.join(d_root), 
-        src: path.join(s_root),     
+        dist: path.join(d_root),
+        src: path.join(s_root),
         publicPath: '/'+ vdist + '/',
         app: path.join(s_root, 'main.js'),
         components:path.join(s_root + '/components'),

@@ -4,7 +4,7 @@ import { uglify }  from 'rollup-plugin-uglify';
 
 export default {
   input: './src/static/js/index.js',
-  output: { 
+  output: {
 	    file:'./dist/static/js/index.js',
 	    format: 'iife'
             // output format - 'amd', 'cjs', 'es6', 'iife', 'umd'
@@ -20,7 +20,7 @@ export default {
 	    exclude: 'node_modules/**',
 	    plugins: ['external-helpers'],
 	    externalHelpers: true
-	}),	
+	}),
 	uglify()
   ]
 };

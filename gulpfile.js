@@ -37,7 +37,7 @@ const workbox = require('workbox-build');                     //- PWA生成器
 const y_Sz = "src";                                             //- 源码版本
 const y_Dz = "dist";                                            //- 上线版本
 const y_Rz = "rev";                                             //- 缓存版本
-const y_Rn = "revjson";                                         //- 缓存json	
+const y_Rn = "revjson";                                         //- 缓存json
 
 /*------------------------------Del rev-----------------------------------*/
 
@@ -83,7 +83,7 @@ function svgCss() {
 
 function svgMin() {
 	return gulp.src('./' + y_Sz + '/static/img/svg/sprite.svg')
-		.pipe(svgmin())                                                            //- 压缩文件	
+		.pipe(svgmin())                                                            //- 压缩文件
 		.pipe(svg2png())                                                           //- svg转png
 		.pipe(gulp.dest('./' + y_Sz + '/static/img/svg/'));
 }
@@ -122,8 +122,8 @@ function cssAuto() {
 				'ios 7',                                          //- IOS7版本
 				'android 2.3',                                    //- android 2.3版本
 				'last 2 Explorer versions'],                      //- IE的最新两个版本 'last 2 Explorer versions'
-			cascade: true,                                    //- 是否美化属性值 默认：true 
-			remove: true                                       //- 是否去掉不必要的前缀 默认：true 
+			cascade: true,                                    //- 是否美化属性值 默认：true
+			remove: true                                       //- 是否去掉不必要的前缀 默认：true
 		}))
 		.pipe(gulp.dest('./' + y_Dz + '/static/css/'));
 }
@@ -147,7 +147,7 @@ function CleanCss() {
 }
 
 function cssMin() {
-	return gulp.src(['./' + y_Sz + '/static/css/*.css'])          //- 需要处理的css文件，放到一个字符串数组里								
+	return gulp.src(['./' + y_Sz + '/static/css/*.css'])          //- 需要处理的css文件，放到一个字符串数组里
 		.pipe(px3rem({ remUnit: 100 }))                             //- px/100转rem值，如果有不想转换的类在值后面加/*no*/
 		.pipe(uncss({
 			html: ['./' + y_Sz + '/**/*.html'],                           //- 检查的页面
@@ -225,7 +225,7 @@ gulp.task(htmlDeal);
 function FontCopy() {
 	return gulp.src(['./' + y_Sz + '/static/font/**'], {                  //- 被复制的文件夹下的所有文件
 		base: './' + y_Sz + '/static/font'
-	})                                 //- 被复制的目标路径 	
+	})                                 //- 被复制的目标路径
 		.pipe(gulp.dest('./' + y_Dz + '/static/font/'));
 }
 

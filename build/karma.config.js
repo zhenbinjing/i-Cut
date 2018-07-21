@@ -29,7 +29,7 @@ module.exports = function(config) {
 	// possible values: 'dots', 'progress'
 	// available reporters: https://npmjs.org/browse/keyword/karma-reporter
 	reporters: ['spec','coverage','coverage-istanbul'],
-	  
+
 	webpack: {
 		mode: 'production',
         module: {
@@ -41,31 +41,31 @@ module.exports = function(config) {
                     test: /\.js$/,
                     loader: 'babel-loader',
                     query: { presets: ['env']}
-                  }]   
+                  }]
 		}
 	},
 
-	coverageIstanbulReporter: {       
+	coverageIstanbulReporter: {
 		  reports: ['html', 'lcovonly', 'text-summary'],
 		  dir: path.resolve(__dirname, '../coverage'),
 		  'report-config': {
-				html: {   
+				html: {
 				 subdir: './html'
 				},
-				lcovonly: {			
+				lcovonly: {
 				 file: './coverage.lcov'
 				},
 			    'text-summary': {
           		file: null
         		}
 		  },
-		  fixWebpackSourcePaths: true		
+		  fixWebpackSourcePaths: true
 	},
-		
-    coverageReporter: {      
-        dir: '../coverage'      
+
+    coverageReporter: {
+        dir: '../coverage'
     },
-		
+
 	// web server port
 	port: 9876,
 
@@ -96,6 +96,6 @@ module.exports = function(config) {
 	// Concurrency level
 	// how many browser should be started simultaneous
 	concurrency: Infinity
-	
+
   })
 }

@@ -12,16 +12,16 @@ function createCustomLauncher (browser, platform, version) {
 }
 
 var customLaunchers = {
-	// Mobile 
+	// Mobile
 	sl_ios_9_safari: createCustomLauncher('iphone', null, '9.3'),
 	sl_android_4_4: createCustomLauncher('android', null, '4.4'),
-	// pc 
-	sl_mac_safari: createCustomLauncher('safari', 'OS X 10.11'),	
-	sl_mac_firefox: createCustomLauncher('firefox', 'Windows 7'),	
+	// pc
+	sl_mac_safari: createCustomLauncher('safari', 'OS X 10.11'),
+	sl_mac_firefox: createCustomLauncher('firefox', 'Windows 7'),
 	sl_mac_chrome: createCustomLauncher('chrome', 'Windows 7'),
 	sl_ie_11: createCustomLauncher('internet explorer', 'Windows 7', '11'),
 	sl_edge: createCustomLauncher('MicrosoftEdge', 'Windows 10')
-	
+
 };
 
 var maxExecuteTime = 5*60*1000;
@@ -62,7 +62,7 @@ module.exports = function(config) {
 	// possible values: 'dots', 'progress'
 	// available reporters: https://npmjs.org/browse/keyword/karma-reporter
 	reporters: ['spec','coverage','coverage-istanbul','saucelabs'],
-	  
+
 	webpack: {
         mode: 'production',
         module: {
@@ -74,29 +74,29 @@ module.exports = function(config) {
                     test: /\.js$/,
                     loader: 'babel-loader',
                     query: { presets: ['env']}
-                  }]   
+                  }]
 		}
 	},
 
-	coverageIstanbulReporter: {       
+	coverageIstanbulReporter: {
 		  reports: ['html', 'lcovonly', 'text-summary'],
 		  dir: path.resolve(__dirname, '../coverage'),
 		  'report-config': {
-				html: {   
+				html: {
 				 subdir: './html'
 				},
-				lcovonly: {			
+				lcovonly: {
 				 file: './coverage.lcov'
 				},
 			    'text-summary': {
           		file: null
         		}
 		  },
-		  fixWebpackSourcePaths: true		
+		  fixWebpackSourcePaths: true
 	},
-	
-	coverageReporter: {      
-        dir: '../coverage'      
+
+	coverageReporter: {
+        dir: '../coverage'
     },
 
 	// web server port
@@ -137,6 +137,6 @@ module.exports = function(config) {
 	// Concurrency level
 	// how many browser should be started simultaneous
 	concurrency: Infinity
-	
+
 	})
 }

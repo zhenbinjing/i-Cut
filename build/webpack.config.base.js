@@ -16,7 +16,7 @@ module.exports = {
       },
       // 关闭文件过大的提示
       performance: {
-            hints: false  
+            hints: false
       },
       //配置省略的后缀名和文件路径
       resolve: {
@@ -36,15 +36,15 @@ module.exports = {
                   {
                         test: /.(s(c|a)ss|css)$/i,
                         use: [
-                              isProduction ? MiniCssExtractPlugin.loader : "vue-style-loader",                              
+                              isProduction ? MiniCssExtractPlugin.loader : "vue-style-loader",
                               "css-loader?minimize",
                               "postcss-loader",
                               "sass-loader"
                         ]
-                  }, 
+                  },
                   {
                         test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/
-                  },    // .js文件使用babel-loader，切记排除node_modules目录    
+                  },    // .js文件使用babel-loader，切记排除node_modules目录
                   {
                         test: /\.(png|jpg|svg|gif|webp|woff2|woff|eot|ttf|otf|mp4|webm|ogg|mp3|wav|flac|aac)$/,
                         loader: 'url-loader',

@@ -1,8 +1,8 @@
 ﻿$sg: .15rem;
-$w1: 751; 
-$w2: 992; 
-$w3: 1200; 
-$nb: 100; 
+$w1: 751;
+$w2: 992;
+$w3: 1200;
+$nb: 100;
 $column: 12;
 
 @mixin bs {box-sizing: border-box;}
@@ -24,57 +24,57 @@ $column: 12;
 
 @mixin flexgrid ($grid){
 	@content;
-	
+
 	//flex
 	@for $i from 1 through $column {.col-#{$grid}-#{$i}{flex-basis: $nb / $column * $i + %; max-width: $nb / $column * $i + %;}}
 	@for $i from 0 through $column {.grow-#{$grid}-#{$i}{flex-grow: $i;} .shrink-#{$grid}-#{$i}{flex-shrink: $i;}}
 	@for $i from 0 through ($column - 1) {.offset-#{$grid}-#{$i}{margin-left: $nb / $column * $i + %;}}
-		
+
 	$fxd: (row, row),(rr, row-reverse),(cn, column),(cr,column-reverse );
-	@each $val, $direction in $fxd {		
-	.fxd-#{$grid}-#{$val}{flex-direction: $direction;}		
+	@each $val, $direction in $fxd {
+	.fxd-#{$grid}-#{$val}{flex-direction: $direction;}
 	}
-		
+
 	$fxw: (nowrap, nowrap),(wrap, wrap),(wr, wrap-reverse);
 	@each $val, $direction in $fxw {
-	.fxw-#{$grid}-#{$val}{flex-wrap: $direction;}	
+	.fxw-#{$grid}-#{$val}{flex-wrap: $direction;}
 	}
-	
+
 	//alignment
 
 	$ac: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(between, space-between),(around, space-around),(evenly, space-evenly);
-	@each $val, $direction in $ac {		
-	.ac-#{$grid}-#{$val}{align-content: $direction;}	
+	@each $val, $direction in $ac {
+	.ac-#{$grid}-#{$val}{align-content: $direction;}
 	}
 
 	$ai: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(baseline, baseline);
-	@each $val, $direction in $ai {		
-	.ai-#{$grid}-#{$val}{align-items: $direction;}	
+	@each $val, $direction in $ai {
+	.ai-#{$grid}-#{$val}{align-items: $direction;}
 	}
 
 	$as: (top, flex-start),(middle, center),(bottom, flex-end),(stretch, stretch),(baseline, baseline);
-	@each $val, $direction in $as {		
-	.as-#{$grid}-#{$val}{align-self: $direction;}	
+	@each $val, $direction in $as {
+	.as-#{$grid}-#{$val}{align-self: $direction;}
 	}
 
 	$jc: (start, flex-start),(center, center),(end, flex-end),(between, space-between),(around, space-around),(evenly, space-evenly);
-	@each $val, $direction in $jc {		
-	.jc-#{$grid}-#{$val}{justify-content: $direction;}	
-	}	
+	@each $val, $direction in $jc {
+	.jc-#{$grid}-#{$val}{justify-content: $direction;}
+	}
 
 	$ji: (start, start),(center, center),(end, end),(stretch,stretch);
-	@each $val, $direction in $ji {		
-	.ji-#{$grid}-#{$val}{justify-items: $direction;}	
+	@each $val, $direction in $ji {
+	.ji-#{$grid}-#{$val}{justify-items: $direction;}
 	}
 
 	$js: (start, start),(center, center),(end, end),(stretch,stretch);
-	@each $val, $direction in $js {		
-	.js-#{$grid}-#{$val}{justify-self: $direction;}	
+	@each $val, $direction in $js {
+	.js-#{$grid}-#{$val}{justify-self: $direction;}
 	}
 
 	$order: (first, -1),(last, 999);
-	@each $val, $direction in $order {		
-	.order-#{$grid}-#{$val}{order: $direction;}	
+	@each $val, $direction in $order {
+	.order-#{$grid}-#{$val}{order: $direction;}
 	}
 
 	@for $i from 0 through $column{
@@ -82,19 +82,19 @@ $column: 12;
 	}
 
 	//Grid
-	
+
 	@for $i from 1 through $column {
-		
+
 	//设置重复性单元格的行列
 		.rows-#{$grid}-#{$i}{grid-template-rows: repeat($i, 1fr);}
 		.cols-#{$grid}-#{$i}{grid-template-columns: repeat($i, 1fr);}
 
-	//单元格的顺序与合并个数	
+	//单元格的顺序与合并个数
 		.yaim-#{$grid}-#{$i}{grid-row-start: $i;}
-		.xaim-#{$grid}-#{$i}{grid-column-start: $i;}	
-	
+		.xaim-#{$grid}-#{$i}{grid-column-start: $i;}
+
 		.mrow-#{$grid}-#{$i}{grid-row-end: span $i;}
-		.mcol-#{$grid}-#{$i}{grid-column-end: span $i;}		
+		.mcol-#{$grid}-#{$i}{grid-column-end: span $i;}
 	}
 
 	//单元格的行列间距
@@ -106,8 +106,8 @@ $column: 12;
 
 	//网格自动流
 	$gaf: (row:row, column:column);
-		@each $val, $direction in $gaf {		
-		.flow-#{$grid}-#{$val}{grid-auto-flow: $direction;}	
+		@each $val, $direction in $gaf {
+		.flow-#{$grid}-#{$val}{grid-auto-flow: $direction;}
 	}
 
 }
@@ -115,7 +115,7 @@ $column: 12;
 @include flexgrid (xs){}
 $flexgrid-data: (sm, $w1),(md, $w2),(lg, $w3);
 @each $grid, $w in $flexgrid-data {
-	@media only screen and (min-width: $w + px){		
-		@include flexgrid ($grid){}	
-	}	
+	@media only screen and (min-width: $w + px){
+		@include flexgrid ($grid){}
+	}
 }

@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Display from './display.vue';
-import Increment from './increment.vue';
+import Display from '@/display.vue';
+import Increment from '@/increment.vue';
 
 export default {
   components: { Display, Increment }

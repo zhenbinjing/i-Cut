@@ -16,7 +16,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import loading from './loading.vue';
+import loading from '@/loading.vue';
 
 const fetchTextData = store => store.dispatch('getText');
 
