@@ -14,7 +14,7 @@
         var recalc = function () {
             var designW = 750;
             var width = docEl.clientWidth;
-            if (width / dpr > designW) {	
+            if (width / dpr > designW) {
                 width = designW * dpr;
             }
             docEl.style.fontSize = 100 * (width / designW) + 'px';

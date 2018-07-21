@@ -19,5 +19,5 @@ window.onload = window.onscroll = function() {
 		} else {
 			oNav.style.position = 'static';
 			oNav.style.top = 2 + "rem";// 导航离顶部距离
-		}				
+		}
 };

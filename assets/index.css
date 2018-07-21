@@ -78,17 +78,17 @@ body{background-color: #EFEFEF;}
 
 /*路径*/
 
-.ljrq{	
+.ljrq{
 	width: 1rem;
 	height: 1rem;
 	margin: 1rem auto;
 	-webkit-animation: ljanxz 5s infinite linear;
 	        animation: ljanxz 5s infinite linear;
 }
-.ljrq div{	
-	width: 1rem; 
-	height: 1rem; 
-	position: absolute;	
+.ljrq div{
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
 	border-radius: 50%;
 }
 
@@ -102,7 +102,7 @@ body{background-color: #EFEFEF;}
 	0% {-webkit-transform: rotateZ(0);transform: rotateZ(0);}
 	100% {-webkit-transform: rotateZ(360deg);transform: rotateZ(360deg); }
 }
-	
+
 @keyframes ljanxz {
 	0% {-webkit-transform: rotateZ(0);transform: rotateZ(0);}
 	100% {-webkit-transform: rotateZ(360deg);transform: rotateZ(360deg); }
@@ -111,16 +111,16 @@ body{background-color: #EFEFEF;}
 
 /*圆圈*/
 
-.per{		
-	-webkit-perspective: 800px;		
-	        perspective: 800px;		
-	-webkit-perspective-origin: top center;		
+.per{
+	-webkit-perspective: 800px;
+	        perspective: 800px;
+	-webkit-perspective-origin: top center;
 	        perspective-origin: top center;
-	height: 3rem; 
+	height: 3rem;
 	text-align: center;
 }
-.rq{		
-	-webkit-transform-style: preserve-3d;		
+.rq{
+	-webkit-transform-style: preserve-3d;
 	        transform-style: preserve-3d;
 	margin-top: 1rem;
 	display: inline-block;
@@ -130,12 +130,12 @@ body{background-color: #EFEFEF;}
 	-webkit-animation: anxz 5s infinite linear;
 	        animation: anxz 5s infinite linear;
 }
-.rq div{	
-	-webkit-backface-visibility:visible;	
+.rq div{
+	-webkit-backface-visibility:visible;
 	        backface-visibility:visible;
-	width: 1rem; 
-	height: 1rem; 
-	position: absolute;			
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
 }
 .rqd1{-webkit-transform: rotateY(0deg) translateZ(1.95839rem);transform: rotateY(0deg) translateZ(1.95839rem)}
 .rqd2{-webkit-transform: rotateY(40deg) translateZ(1.95839rem);transform: rotateY(40deg) translateZ(1.95839rem)}
@@ -155,24 +155,24 @@ body{background-color: #EFEFEF;}
 	        perspective: 500px;
 	-webkit-perspective-origin: 50% -5%;
 	        perspective-origin: 50% -5%;
-	height: 3rem; 
+	height: 3rem;
 }
 .he{
 	-webkit-transform-style: preserve-3d;
-	        transform-style: preserve-3d;	
+	        transform-style: preserve-3d;
 	position: relative;
 	left: 50%;
 	top:50%;
 	width: 1.5rem;
 	height: 1.5rem;
 	margin-left: -0.75rem;
-	margin-top:-0.75rem;		
-	-webkit-animation: anxz 5s infinite linear;		
+	margin-top:-0.75rem;
+	-webkit-animation: anxz 5s infinite linear;
 	        animation: anxz 5s infinite linear;
 }
 .he div{
 	-webkit-backface-visibility:visible;
-	        backface-visibility:visible;		
+	        backface-visibility:visible;
 	background:rgba(28, 124, 214,0.1);
 	width: 1.5rem;
 	height: 1.5rem;
@@ -181,19 +181,19 @@ body{background-color: #EFEFEF;}
 	line-height: 1.5rem;
 	border: 1px solid #4dadf7;
 }
-	
+
 .before{-webkit-transform: translateZ(.75rem);transform: translateZ(.75rem);}
 .after{-webkit-transform: rotateY(180deg) translateZ(.75rem);transform: rotateY(180deg) translateZ(.75rem);}
 .right{-webkit-transform: rotateY(90deg) translateZ(.75rem);transform: rotateY(90deg) translateZ(.75rem);}
 .left{-webkit-transform: rotateY(-90deg) translateZ(.75rem);transform: rotateY(-90deg) translateZ(.75rem);}
 .top{-webkit-transform: rotateX(90deg) translateZ(.75rem);transform: rotateX(90deg) translateZ(.75rem);}
 .bottom{ -webkit-transform: rotate3d(1,0,0,-90deg) translate3d(0px, 0px, .75rem) scale3d(1,1,1); transform: rotate3d(1,0,0,-90deg) translate3d(0px, 0px, .75rem) scale3d(1,1,1);}
-	
+
 @-webkit-keyframes anxz {
 	0% {-webkit-transform: rotateY(0);transform: rotateY(0);}
 	100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg); }
 }
-	
+
 @keyframes anxz {
 	0% {-webkit-transform: rotateY(0);transform: rotateY(0);}
 	100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg); }
