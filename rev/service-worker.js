@@ -11,9 +11,9 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://i-cut.cc/rev/static/pwa/workbox-sw.js");
+importScripts("/rev/static/pwa/workbox-sw.js");
 
-workbox.core.setCacheNameDetails({prefix: "gulp-pwa-demo"});
+workbox.core.setCacheNameDetails({prefix: "gulp-pwa"});
 
 workbox.skipWaiting();
 workbox.clientsClaim();
@@ -30,23 +30,23 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-35f7402fd1.css",
-    "revision": "0ae9d10a747dd0e94e4056a6ca6b5f1d"
+    "revision": "2d8cab4f024243d68f571de38633a9eb"
   },
   {
-    "url": "static/font/stfyt-0d2ff5b49a.eot",
-    "revision": "0d2ff5b49af005197916a2e36cbf3986"
-  },
-  {
-    "url": "static/font/stfyt-21db94029a.ttf",
-    "revision": "21db94029a2d247c6128750fcf11820a"
-  },
-  {
-    "url": "static/font/stfyt-41734dd2c8.woff",
-    "revision": "41734dd2c80f0d1bf9def43420ef9c3e"
+    "url": "static/font/stfyt-7b45d6d846.ttf",
+    "revision": "7b45d6d846a512e99941e9c86eaf9f46"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
+  },
+  {
+    "url": "static/font/stfyt-c0df39fb67.woff",
+    "revision": "c0df39fb67efdb9404881355fe0ebdd1"
+  },
+  {
+    "url": "static/font/stfyt-ed76df150f.eot",
+    "revision": "ed76df150fea00aa483a4d8d7f00a444"
   },
   {
     "url": "static/img/a-9542fffc42.webp",

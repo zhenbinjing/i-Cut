@@ -39,7 +39,7 @@ const y_Dz = "dist";                                            //- 上线版本
 const y_Rz = "rev";                                             //- 缓存版本
 const y_Rn = "revjson";                                         //- 缓存json	
 
-/*------------------------------Del dist----------------------------------*/
+/*------------------------------Del rev-----------------------------------*/
 
 function revDelFile() {
 	return del('./' + y_Rz + '/');
@@ -349,7 +349,7 @@ gulp.task('revAll', gulp.series(gulp.parallel(revImg, revFont, revJs, revCss), r
 function ServiceWorkers() {
 	return workbox
 		.generateSW({
-			cacheId: 'gulp-pwa-demo', // 设置前缀
+			cacheId: 'gulp-pwa', // 设置前缀
 			globDirectory: './' + y_Rz, //匹配根目录
 			globPatterns: ['**/*.*'], // 匹配的文件
 			globIgnores: ['service-worker.js'], // 忽略的文件

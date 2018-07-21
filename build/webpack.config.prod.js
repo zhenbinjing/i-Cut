@@ -53,8 +53,8 @@ const webpackConfig = merge(baseConfig, {
 				removeComments: true,
 				collapseWhitespace: true,
 				removeAttributeQuotes: true,
-				minifyJS:true
-			},			
+				minifyJS: true
+			},
 			chunksSortMode: 'dependency'
 		}),
 		new CopyWebpackPlugin([
@@ -63,13 +63,13 @@ const webpackConfig = merge(baseConfig, {
 				to: config.plugin.copy.to,
 				ignore: ['.*']
 			}
-		]),		
+		]),
 		new WorkboxPlugin.GenerateSW({
-            cacheId: 'vue-pwa', // 设置前缀
-            skipWaiting: true, // 强制等待中的 Service Worker 被激活
-            clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
+			cacheId: 'vue-pwa', // 设置前缀
+			skipWaiting: true, // 强制等待中的 Service Worker 被激活
+			clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
 			swDest: 'service-worker.js', // 输出 Service worker 文件
-            runtimeCaching: [
+			runtimeCaching: [
 				// 配置路由请求缓存 对应 workbox.routing.registerRoute
 				{
 					urlPattern: /.*\.js/, // 匹配文件
@@ -108,7 +108,7 @@ const webpackConfig = merge(baseConfig, {
 					handler: 'networkFirst'
 				}
 			]
-        })
+		})
 		/*new PrerenderSPAPlugin({
 		staticDir:config.route.dist,
 		routes:[ '/','/vr1', '/axios', '/vuex' ],

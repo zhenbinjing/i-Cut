@@ -3,6 +3,8 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
 const HTMLPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const config = require('./config')
 
@@ -48,6 +50,13 @@ const configs = merge(base, {
     new PurgecssPlugin({
       paths: glob.sync(config.plugin.purgecss)
     }),
+    new CopyWebpackPlugin([
+			{
+				from: config.plugin.copy.from,
+				to: config.plugin.copy.to,
+				ignore: ['.*']
+			}
+		]),
     // generate output HTML
     new HTMLPlugin({
       template: config.route.ssrhtml,
@@ -69,7 +78,52 @@ const configs = merge(base, {
         // removeStyleLinkTypeAttributes  : true,
         // useShortDoctype                : true
       }
-    })
+    }),
+    new WorkboxPlugin.GenerateSW({
+			cacheId: 'vue-pwa', // 设置前缀
+			skipWaiting: true, // 强制等待中的 Service Worker 被激活
+			clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
+			swDest: 'service-worker.js', // 输出 Service worker 文件
+			runtimeCaching: [
+				// 配置路由请求缓存 对应 workbox.routing.registerRoute
+				{
+					urlPattern: /.*\.js/, // 匹配文件
+					handler: 'networkFirst' // 网络优先
+				},
+				{
+					urlPattern: /.*\.css/,
+					handler: 'staleWhileRevalidate', // 缓存优先同时后台更新
+					options: {
+						// 这里可以设置 cacheName 和添加插件
+						plugins: [
+							{
+								cacheableResponse: {
+									statuses: [0, 200]
+								}
+							}
+						]
+					}
+				},
+				{
+					urlPattern: /.*\.(?:png|jpg|jpeg|webp|svg|gif)/,
+					handler: 'cacheFirst', // 缓存优先
+					options: {
+						plugins: [
+							{
+								expiration: {
+									maxAgeSeconds: 24 * 60 * 60, // 最长缓存时间,
+									maxEntries: 50 // 最大缓存图片数量
+								}
+							}
+						]
+					}
+				},
+				{
+					urlPattern: /.*\.html/,
+					handler: 'networkFirst'
+				}
+			]
+		})
   ]
 });
 

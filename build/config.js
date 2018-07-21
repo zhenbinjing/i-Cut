@@ -19,7 +19,9 @@ module.exports = {
         html: path.join(s_root, 'index.pwa.html'),
         clientapp: path.join(s_root, 'entry-client.js'),
         serverapp: path.join(s_root, 'entry-server.js'),
-        ssrhtml: path.join(s_root, 'index.template.html')
+        ssrhtml: path.join(s_root, 'index.pwa.ssr.html'),
+        ssrdex:'/' + vdist,
+        ssrdexs:'./' + vdist
     },
    //图标
    icon:{
