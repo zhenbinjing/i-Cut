@@ -14,10 +14,10 @@
 importScripts("/v-dist/static/assets/workbox-sw.js");
 
 importScripts(
-  "/v-dist/precache-manifest.69e0f1d6f9be2dba0b33cb0bb1af7857.js"
+  "/v-dist/precache-manifest.7ae62f5030a2dc9b9a91f574965e7df4.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "vue-pwa"});
+workbox.core.setCacheNameDetails({prefix: "VUEPWA"});
 
 workbox.skipWaiting();
 workbox.clientsClaim();

@@ -13,7 +13,7 @@
 
 importScripts("/rev/static/pwa/workbox-sw.js");
 
-workbox.core.setCacheNameDetails({prefix: "gulp-pwa"});
+workbox.core.setCacheNameDetails({prefix: "GPWA"});
 
 workbox.skipWaiting();
 workbox.clientsClaim();
@@ -30,23 +30,23 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-35f7402fd1.css",
-    "revision": "54435788b31c951e4c2a620bbc5d57dd"
+    "revision": "8d5bd9c92cb5fcea3974a9caa6fbd901"
   },
   {
-    "url": "static/font/stfyt-0a2187aa74.eot",
-    "revision": "0a2187aa74863e662c93b2498a619dae"
+    "url": "static/font/stfyt-5f67a1bcd3.eot",
+    "revision": "5f67a1bcd398030f8891a850e8b5b1f3"
   },
   {
-    "url": "static/font/stfyt-633084f2ff.ttf",
-    "revision": "633084f2ff2bc2d21169c4fc224b521e"
+    "url": "static/font/stfyt-6ff4b1d512.ttf",
+    "revision": "6ff4b1d512ad2b6efdc030d13aa89f68"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
   },
   {
-    "url": "static/font/stfyt-e0642375d8.woff",
-    "revision": "e0642375d8eb209f41cb6afa2c9a0533"
+    "url": "static/font/stfyt-fe2c7a2670.woff",
+    "revision": "fe2c7a2670ce804ff2b8b8e40788bf9d"
   },
   {
     "url": "static/img/a-9542fffc42.webp",
@@ -138,7 +138,7 @@ self.__precacheManifest = [
   },
   {
     "url": "static/pwa/manifest.json",
-    "revision": "973cee5ecb6781e98f5113ed0bfdc48a"
+    "revision": "119892d240612cbc59fd994033533650"
   },
   {
     "url": "static/pwa/mstile-150x150.png",

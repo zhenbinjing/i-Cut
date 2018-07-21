@@ -349,7 +349,7 @@ gulp.task('revAll', gulp.series(gulp.parallel(revImg, revFont, revJs, revCss), r
 function ServiceWorkers() {
 	return workbox
 		.generateSW({
-			cacheId: 'gulp-pwa', // 设置前缀
+			cacheId: 'GPWA', // 设置前缀
 			globDirectory: './' + y_Rz, //匹配根目录
 			globPatterns: ['**/*.*'], // 匹配的文件
 			globIgnores: ['service-worker.js'], // 忽略的文件
