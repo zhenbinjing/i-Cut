@@ -80,7 +80,7 @@ const configs = merge(base, {
       }
     }),
     new WorkboxPlugin.GenerateSW({
-      cacheId: 'vue-pwa', // 设置前缀
+      cacheId: 'VUEPWA', // 设置前缀
       skipWaiting: true, // 强制等待中的 Service Worker 被激活
       clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
       swDest: 'service-worker.js', // 输出 Service worker 文件
