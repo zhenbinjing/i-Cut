@@ -1,6 +1,6 @@
 {
-    "name": "Gpwa",
-    "short_name": "Gpwa",
+    "name": "GPWA",
+    "short_name": "GPWA",
     "icons": [
         {
           "src": "/rev/static/pwa/android-chrome-192x192.png",
