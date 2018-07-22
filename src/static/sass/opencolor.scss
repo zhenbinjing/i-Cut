@@ -14,7 +14,7 @@ $color-data:
 (yellow, #fff9db, #fff3bf, #ffec99, #ffe066, #ffd43b, #fcc419, #fab005, #f59f00, #f08c00, #e67700),
 (orange, #fff4e6, #ffe8cc, #ffd8a8, #ffc078, #ffa94d, #ff922b, #fd7e14, #f76707, #e8590c, #d9480f);
 
-$cc-data:(c:color, bgc:background-color, olc:outline-color, bdc:border-color);
+$cc-data:(c:color, bgc:background-color);
 @mixin color ($class,$varclass){
 	@content;
 	@each $color, $c0, $c1, $c2, $c3, $c4, $c5, $c6, $c7, $c8, $c9 in $color-data{

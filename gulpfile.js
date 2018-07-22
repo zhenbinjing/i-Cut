@@ -162,7 +162,7 @@ function Sass() {
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./' + y_Sz + '/static/css/'));
 }
-
+gulp.task(Sass);
 gulp.task('cssAll', gulp.series(Sass, cssMin, CleanCss, ImageSet, CSSO, cssAuto));
 
 /*------------------------------Img----------------------------------*/

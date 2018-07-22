@@ -15,10 +15,14 @@ $nb0:0; $nb50:50%; $nb100:100%;
 @for $i from 0 through 10 {
 	.z-#{$i}{z-index:$i; }
 }
+//透明度
 @for $i from 0 through 10 {
 	.op-#{$i}{opacity:$i/10; }
 }
-
+//缩进
+@for $i from 0 through 10 {
+	.ti-#{$i}{text-indent:$i + em;}
+}
 
 //背景百分比定位//
 .bgp_50p0  { background-position: $nb50 $nb0; } 		// center top
@@ -52,6 +56,18 @@ $fs:(i:italic, n:$nl);
 $va:(t:$t, m:middle, b:$b, tb:text-bottom, tt:text-top, sp:super, sb:sub);
 @each $val, $direction in $va {
 	.va-#{$val}{vertical-align: $direction;}
+}
+
+//文字排版//
+$ta:(c:$c, l:$l, r:$r, j:$j);
+@each $val, $direction in $ta {
+  .ta-#{$val}{text-align: $direction; }
+}
+
+//文字排版最后一行//
+$tal:(c:$c, l:$l, r:$r, j:$j);
+@each $val, $direction in $tal {
+  .tal-#{$val}{text-align-last: $direction; }
 }
 
 //字母大小写//
@@ -108,6 +124,12 @@ $cur:(p:pointer, t:text, m:move, c:crosshair, h:help, d:default);
 	.cur-#{$val}{cursor: $direction; }
 }
 
+//清除浮动//
+$cl:(n:$n, l:$l, r:$r, b:$bh);
+@each $val, $direction in $cl {
+	.cl-#{$val}{clear: $direction;}
+}
+
 //绘制元素//
 $bxz:(bxz-cb:$cb, bxz-bb:$bb);
 @each $val, $direction in $bxz {
@@ -127,23 +149,6 @@ $ovy:(a:$a, v:$v, h:$h, s:$s);
 @each $val, $direction in $ovy {
 	.ovy-#{$val}{overflow-y: $direction; }
 }
-
-//边框：点 虚线 实线 双实线//
-$bds: ($dt, $dt),($ds, $ds),($sl, $sl),($du,$du);
-@each $val, $direction in $bds {
-	.bds-#{$val}{border-style: $direction;}
-	.bdts-#{$val}{border-top-style: $direction;}
-	.bdrs-#{$val}{border-right-style: $direction;}
-	.bdbs-#{$val}{border-bottom-style: $direction;}
-	.bdls-#{$val}{border-left-style: $direction;}
-}
-
-//轮廓样式//
-$ols:($n:$n, $dt:$dt, $ds:$ds, $sl:$sl, $du:$du);
-@each $val, $direction in $ols {
-	.ols-#{$val}{outline-style: $direction; }
-}
-
 
 //-----------------------------media width-----------------------------//
 $w1: 751;
@@ -167,36 +172,11 @@ $nb: 100;
 		.fl-#{$grid}-#{$val}{float: $direction;}
 	}
 
-	//清除浮动//
-	$cl:(n:$n, l:$l, r:$r, b:$bh);
-	@each $val, $direction in $cl {
-		.cl-#{$grid}-#{$val}{clear: $direction;}
-	}
-
 	//定位//
 	$pos:(s:static, f:$f, r:relative, a:absolute);
 	@each $val, $direction in $pos {
 		.pos-#{$grid}-#{$val}{position: $direction;}
 	}
-
-	//文字排版//
-	$ta:(c:$c, l:$l, r:$r, j:$j);
-	@each $val, $direction in $ta {
-		.ta-#{$grid}-#{$val}{text-align: $direction; }
-	}
-
-	//文字排版最后一行//
-	$tal:(c:$c, l:$l, r:$r, j:$j);
-	@each $val, $direction in $tal {
-		.tal-#{$grid}-#{$val}{text-align-last: $direction; }
-	}
-
-	//边框隐藏//
-	.bd-#{$grid}-n{border:$n;}
-	.bdts-#{$grid}-n{border-top-style:$n;}
-	.bdrs-#{$grid}-n{border-right-style:$n;}
-	.bdbs-#{$grid}-n{border-bottom-style:$n;}
-	.bdls-#{$grid}-n{border-left-style:$n;}
 
 	//宽度百分比//
 	@for $i from 0 through $nb {.w-#{$grid}-#{$i}p{width: $i + %;}}
@@ -205,29 +185,11 @@ $nb: 100;
 	.lh-#{$grid}-0{line-height: 0;}
 	@for $i from 10 through $nb {.lh-#{$grid}-#{$i}{line-height: $i/10;}}
 
-	//边框宽度//
-	@for $i from 1 through 10 {
-	.bdw-#{$grid}-#{$i}{border-width:$i/$nb + rem;}
-	.bdtw-#{$grid}-#{$i}{border-top-width:$i/$nb + rem;}
-	.bdrw-#{$grid}-#{$i}{border-right-width:$i/$nb + rem;}
-	.bdbw-#{$grid}-#{$i}{border-bottom-width:$i/$nb + rem;}
-	.bdlw-#{$grid}-#{$i}{border-left-width:$i/$nb + rem ;}
-	}
-
-	//轮廓//
-	@for $i from 0 through 10 {
-	.olo-#{$grid}-#{$i}{outline-offset:$i/$nb + rem;}
-	.olw-#{$grid}-#{$i}{outline-width:$i/$nb + rem;}
-	}
-
 	//box//
 	@for $i from 0 through $nb {
 
 	//字体//
 	.fz-#{$grid}-#{$i}{font-size:$i/$nb + rem;}
-
-	//缩进//
-	.ti-#{$grid}-#{$i}{text-indent:$i/$nb + rem;}
 
 	//表格间距//
 	.bdsp-#{$grid}-#{$i}{border-spacing:$i/$nb + rem;}
@@ -244,16 +206,12 @@ $nb: 100;
 	.mt-#{$grid}-#{$i}{margin-top:$i/$nb + rem;}
 	.mr-#{$grid}-#{$i}{margin-right:$i/$nb + rem;}
 	.mb-#{$grid}-#{$i}{margin-bottom:$i/$nb + rem;}
-	.ml-#{$grid}-#{$i}{margin-left:$i/$nb + rem;}
+  .ml-#{$grid}-#{$i}{margin-left:$i/$nb + rem;}
 
-	//圆角//
-	.bdrs-#{$grid}-#{$i}{border-radius:$i/$nb + rem;}
-	.btrr-#{$grid}-#{$i}{border-top-right-radius:$i/$nb + rem;}
-	.btlr-#{$grid}-#{$i}{border-top-left-radius:$i/$nb + rem;}
-	.bbrr-#{$grid}-#{$i}{border-bottom-right-radius:$i/$nb + rem;}
-	.bblr-#{$grid}-#{$i}{border-bottom-left-radius:$i/$nb + rem;}
+  //圆角//
+  .bdrs-#{$grid}-#{$i}{border-radius:$i/$nb + rem;}
 
-	}
+  }
 }
 
 @include media (xs){}

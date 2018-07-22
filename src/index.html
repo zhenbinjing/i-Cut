@@ -27,7 +27,7 @@
 		var docEl = doc.documentElement,
 		isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
 		dpr = isIOS? Math.min(win.devicePixelRatio, 3) : 1,
-		dpr = window.top === window.self? dpr : 1, 
+		dpr = window.top === window.self? dpr : 1,
 		dpr = 1,
 		scale = 1 / dpr,
 		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
@@ -39,7 +39,7 @@
 			var recalc = function () {
 				var designW = 640;		//把你的手机设计稿宽度填写进去
 				var width = docEl.clientWidth;
-				if (width / dpr > designW) {	
+				if (width / dpr > designW) {
 					width = designW * dpr;
 				}
 			docEl.style.cssText = "font-size:" + 100 * (width / designW) + "px;" + "max-width:" + width + "px;" + "margin:auto;";
@@ -53,7 +53,7 @@
 
 <body class="bgc-e9e7e2">
 <all-img-base64>
-		<div class="ta-xs-c fz-xs-36 lh-xs-54 c-orange-7">
+		<div class="ta-c fz-xs-36 lh-xs-54 c-orange-7">
 				<p>Banner</p>
 		</div>
 		<div id="focus" class="focus">
@@ -69,7 +69,7 @@
 						</ul>
 				</div>
 		</div>
-		<div class="ta-xs-c fz-xs-36 lh-xs-54 c-orange-7">
+		<div class="ta-c fz-xs-36 lh-xs-54 c-orange-7">
 				<p>Flex Box</p>
 		</div>
 		<div class="container-fluid">
@@ -142,10 +142,10 @@
 						</div>
 				</div>
 		</div>
-		<div class="ta-xs-c fz-xs-36 lh-xs-54 c-orange-7">
+		<div class="ta-c fz-xs-36 lh-xs-54 c-orange-7">
 				<p>Web Font</p>
 		</div>
-		<div class="ta-xs-c c-orange-7">
+		<div class="ta-c c-orange-7">
 				<div class="stfyt lh-xs-20">
 						<h1 class="fz-xs-30">《清平调》·李白</h1>
 						<div class="fz-xs-24">
@@ -161,10 +161,10 @@
 						</div>
 				</div>
 		</div>
-		<div class="ta-xs-c fz-xs-36 lh-xs-54 c-orange-7">
+		<div class="ta-c fz-xs-36 lh-xs-54 c-orange-7">
 			<p>Css Sprite</p>
 		</div>
-		<div class="ta-xs-c fz-xs-0">
+		<div class="ta-c fz-xs-0">
 		<span class="icon-sprite icon1"></span>
 		<span class="icon-sprite icon2"></span>
 		<span class="icon-sprite icon3"></span>
@@ -176,25 +176,25 @@
 		<span class="icon-sprite icon9"></span>
 		<span class="icon-sprite icon10"></span>
 		</div>
-		<div class="ta-xs-c fz-xs-36 lh-xs-54 c-orange-7">
+		<div class="ta-c fz-xs-36 lh-xs-54 c-orange-7">
 				<p>SVG Sprite</p>
 		</div>
-		<div class="ta-xs-c fz-xs-0"> <span class="svg-sprite svg1"></span> <span class="svg-sprite svg2"></span> <span class="svg-sprite svg3"></span> <span class="svg-sprite svg4"></span> <span class="svg-sprite svg5"></span> <span class="svg-sprite svg6"></span> <span class="svg-sprite svg7"></span> <span class="svg-sprite svg8"></span> <span class="svg-sprite svg9"></span> <span class="svg-sprite svg10"></span></div>
-		<div class="ta-xs-c fz-xs-36 lh-xs-54 c-orange-7">
+		<div class="ta-c fz-xs-0"> <span class="svg-sprite svg1"></span> <span class="svg-sprite svg2"></span> <span class="svg-sprite svg3"></span> <span class="svg-sprite svg4"></span> <span class="svg-sprite svg5"></span> <span class="svg-sprite svg6"></span> <span class="svg-sprite svg7"></span> <span class="svg-sprite svg8"></span> <span class="svg-sprite svg9"></span> <span class="svg-sprite svg10"></span></div>
+		<div class="ta-c fz-xs-36 lh-xs-54 c-orange-7">
 				<p>Scroll Load</p>
 		</div>
 		<div><img class="lazyload va-t" data-src="static/img/c.png" alt=""></div>
 		<div class="mt-xs-30 mb-xs-30"><img class="lazyload va-t" data-src="static/img/d.png" alt=""></div>
 		<div><img class="lazyload va-t" data-src="static/img/e.png" alt=""></div>
-		<div class="ta-xs-c fz-xs-36 lh-xs-54 c-orange-7">
+		<div class="ta-c fz-xs-36 lh-xs-54 c-orange-7">
 				<p>image-set</p>
 		</div>
 		<div class="bgrwd bglazy"></div>
-		<div class="ta-xs-c fz-xs-36 lh-xs-54 c-orange-7">
+		<div class="ta-c fz-xs-36 lh-xs-54 c-orange-7">
 				<p>Lazysizes</p>
 		</div>
 		<div><img class="lazyload va-t" data-src="static/img/rwd/rwd.png" data-sizes="auto" alt=""></div>
-		<script async src="static/js/index.js"></script>		
+		<script async src="static/js/index.js"></script>
 </all-img-base64>
 <!-- pwa script-->
 @import "pwa-script.html"
