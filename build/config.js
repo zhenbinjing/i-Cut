@@ -38,7 +38,7 @@ module.exports = {
   //插件
   plugin: {
     purgecss: [
-      path.join(s_root, 'index.html'),
+      path.join(s_root, 'index.pwa.html'),
       path.join(s_root, '**/*.vue'),
       path.join(s_root, '**/*.js')
     ],
