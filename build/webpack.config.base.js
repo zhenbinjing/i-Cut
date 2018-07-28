@@ -70,7 +70,7 @@ module.exports = {
       cssProcessorOptions: { discardComments: { removeAll: true } }
     }),
     new GenerateJsonPlugin('static/pwa/manifest.json',
-    {
+      {
         'name': 'VUEPWA',
         'short_name': 'VUEPWA',
         'icons': [
@@ -89,7 +89,14 @@ module.exports = {
         'display': 'standalone',
         'background_color': '#000000',
         'theme_color': '#4DBA87'
-    }
+      },
+      (key, value) => {
+        if (value === 'VUEPWA') {
+          return 'VUEPWA';
+        }
+        return value;
+      },
+      2
     ),
     new CopyWebpackPlugin([
       {

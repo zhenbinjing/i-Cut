@@ -72,7 +72,7 @@ const configs = merge(base, {
       }
     }),
     new GenerateJsonPlugin('static/pwa/manifest.json',
-    {
+      {
         'name': 'VUEPWA',
         'short_name': 'VUEPWA',
         'icons': [
@@ -91,7 +91,14 @@ const configs = merge(base, {
         'display': 'standalone',
         'background_color': '#000000',
         'theme_color': '#4DBA87'
-    }
+      },
+      (key, value) => {
+        if (value === 'VUEPWA') {
+          return 'VUEPWA';
+        }
+        return value;
+      },
+      2
     )
   ]
 });

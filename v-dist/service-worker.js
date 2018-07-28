@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/v-dist/precache-manifest.b414acca502a703dd0d52bfd5b4cf13b.js"
+  "/v-dist/precache-manifest.e4026504f7674dee5385799e83f8fe81.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "VUEPWA"});
