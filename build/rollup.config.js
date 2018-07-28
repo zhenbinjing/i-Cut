@@ -3,9 +3,9 @@ import babel from 'rollup-plugin-babel';
 import { uglify } from 'rollup-plugin-uglify';
 
 export default {
-  input: './src/static/js/index.js',
+  input: './test/es6/ts/main.js',
   output: {
-    file: './dist/static/js/index.js',
+    file: './test/es5/main.js',
     format: 'iife'
     // output format - 'amd', 'cjs', 'es6', 'iife', 'umd'
     // amd – 使用像requirejs一样的银木块定义
@@ -21,6 +21,11 @@ export default {
       plugins: ['external-helpers'],
       externalHelpers: true
     }),
-    uglify()
+    uglify({
+      //mangle: true
+      //保留关键变量
+      mangle: { reserved: ['tsa', 'TSA'] },
+      toplevel: true
+    })
   ]
 };

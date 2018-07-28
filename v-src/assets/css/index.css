@@ -1,9 +1,0 @@
-* { box-sizing: border-box }
-*:before, *:after { box-sizing: border-box }
-.fz40{font-size: 40px;color: #35495e;}
-.main{width:100%;}
-.hello{font-size: 0;}
-.hello img{width:200px; height: 200px;}
-.router{font-size:50px}
-.vuex{line-height: 1}
-.increment{margin-top:20px}

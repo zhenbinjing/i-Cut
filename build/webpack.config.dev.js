@@ -5,8 +5,8 @@ const merge = require('webpack-merge') //合并执行任务
 const baseConfig = require('./webpack.config.base')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin'); // 这个插件能够更好的在终端看到webpack运行时的错误和警告等信息。可以提升开发体验。
 const portfinder = require('portfinder'); // 查找一个未使用的端口
-const utils = require('./utils') // 消息传送
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const packageConfig = require('../package.json')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -50,10 +50,29 @@ module.exports = new Promise((resolve, reject) => {
           messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
         },
         onErrors: true
-          ? utils.createNotifierCallback()
+          ? createNotifierCallback()
           : undefined
       }))
       resolve(devWebpackConfig)
     }
   })
 })
+
+// 报错消息传送
+function createNotifierCallback() {
+  const notifier = require('node-notifier')
+
+  return (severity, errors) => {
+    if (severity !== 'error') return
+
+    const error = errors[0]
+    const filename = error.file && error.file.split('!').pop()
+
+    notifier.notify({
+      title: packageConfig.name,
+      message: severity + ': ' + error.name,
+      subtitle: filename || '',
+      icon: config.icon.src
+    })
+  }
+}

@@ -1,8 +1,8 @@
 sudo: false
 language: node_js
 node_js:
-  - "8.11.1"
-before_install: 
+  - "8.11.3"
+before_install:
   - npm install
 cache:
   directories:
@@ -11,7 +11,7 @@ dist: trusty # needs Ubuntu Trusty
 sudo: false  # no need for virtualization.
 addons:
   chrome: stable # have Travis install chrome stable
-script: 
+script:
   - npm run gulp
   - npm run build
   - npm run test

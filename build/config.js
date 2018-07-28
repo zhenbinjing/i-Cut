@@ -13,19 +13,20 @@ module.exports = {
   route: {
     dist: path.join(d_root),
     src: path.join(s_root),
-    publicPath: '/' + vdist + '/',
+    publicPath: process.env.NODE_ENV === 'production' ? '/' + vdist + '/' : '/',
     app: path.join(s_root, 'main.js'),
     components: path.join(s_root + '/components'),
     html: path.join(s_root, 'index.pwa.html'),
     clientapp: path.join(s_root, 'entry-client.js'),
     serverapp: path.join(s_root, 'entry-server.js'),
     ssrhtml: path.join(s_root, 'index.pwa.ssr.html'),
+    ssrPath: '/' + vdist + '/',
     ssrdex: '/' + vdist,
     ssrdexs: './' + vdist
   },
   //图标
   icon: {
-    src: path.join(s_root, 'assets/img/logo.png')
+    src: path.join(s_root, vstatic + '/img/logo.png')
   },
   //文件
   file: {
@@ -42,8 +43,8 @@ module.exports = {
       path.join(s_root, '**/*.js')
     ],
     copy: {
-      from: s_root + '/assets/pwa',
-      to: vstatic + '/assets'
+      from: s_root + '/' + vstatic + '/pwa',
+      to: vstatic + '/pwa'
     }
   },
 }

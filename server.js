@@ -1,12 +1,13 @@
-const fs = require('fs');
-const path = require('path');
-const isProd = process.env.NODE_ENV === 'production';
-const express = require('express');
-const app = express();
-const { createBundleRenderer } = require('vue-server-renderer');
-const favicon = require('serve-favicon');
-const resolve = file => path.resolve(__dirname, file);
+const fs = require('fs')
+const path = require('path')
+const chalk = require('chalk')
+const express = require('express')
+const app = express()
+const { createBundleRenderer } = require('vue-server-renderer')
+const favicon = require('serve-favicon')
 const config = require('./build/config')
+const resolve = file => path.resolve(__dirname, file)
+const isProd = process.env.NODE_ENV === 'production'
 
 let renderer;
 
@@ -79,7 +80,7 @@ app.get('*', (req, res) => {
 /* ---------------------------------------
    Start Engines
 ---------------------------------------- */
-var num = GetRandomNum(7000, 8000);	
+var num = GetRandomNum(7000, 8000);
 function GetRandomNum(Min, Max) {
 			var Range = Max - Min;
 			var Rand = Math.random();
@@ -88,5 +89,5 @@ function GetRandomNum(Min, Max) {
 
 const port = num || 7000;
 app.listen(port, () => {
-  console.log(`server started at http://localhost:${port}`)
+  console.log(chalk.cyan(`   server started at http://localhost:${port} \n`))
 })

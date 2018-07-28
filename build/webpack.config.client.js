@@ -3,9 +3,8 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
 const HTMLPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const WorkboxPlugin = require('workbox-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
+const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 const config = require('./config')
 
 if (process.env.NODE_ENV === 'production') {
@@ -26,21 +25,21 @@ const configs = merge(base, {
   },
   output: {
     path: config.route.dist,
-    publicPath: config.route.publicPath,
+    publicPath: config.route.ssrPath,
     filename: config.file.outputJsName,
     chunkFilename: config.file.outputJsName
   },
   optimization: {
     runtimeChunk: {
-      name: "manifest"
+      name: 'manifest'
     },
     splitChunks: {
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: "vendors",
+          name: 'vendors',
           priority: -20,
-          chunks: "all"
+          chunks: 'all'
         }
       }
     }
@@ -50,13 +49,6 @@ const configs = merge(base, {
     new PurgecssPlugin({
       paths: glob.sync(config.plugin.purgecss)
     }),
-    new CopyWebpackPlugin([
-      {
-        from: config.plugin.copy.from,
-        to: config.plugin.copy.to,
-        ignore: ['.*']
-      }
-    ]),
     // generate output HTML
     new HTMLPlugin({
       template: config.route.ssrhtml,
@@ -79,51 +71,28 @@ const configs = merge(base, {
         // useShortDoctype                : true
       }
     }),
-    new WorkboxPlugin.GenerateSW({
-      cacheId: 'VUEPWA', // 设置前缀
-      skipWaiting: true, // 强制等待中的 Service Worker 被激活
-      clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
-      swDest: 'service-worker.js', // 输出 Service worker 文件
-      runtimeCaching: [
-        // 配置路由请求缓存 对应 workbox.routing.registerRoute
-        {
-          urlPattern: /.*\.js/, // 匹配文件
-          handler: 'networkFirst' // 网络优先
-        },
-        {
-          urlPattern: /.*\.css/,
-          handler: 'staleWhileRevalidate', // 缓存优先同时后台更新
-          options: {
-            // 这里可以设置 cacheName 和添加插件
-            plugins: [
-              {
-                cacheableResponse: {
-                  statuses: [0, 200]
-                }
-              }
-            ]
+    new GenerateJsonPlugin('static/pwa/manifest.json',
+    {
+        'name': 'VUEPWA',
+        'short_name': 'VUEPWA',
+        'icons': [
+          {
+            'src': config.route.ssrPath + 'static/pwa/icons/android-chrome-192x192.png',
+            'sizes': '192x192',
+            'type': 'image/png'
+          },
+          {
+            'src': config.route.ssrPath + 'static/pwa/icons/android-chrome-512x512.png',
+            'sizes': '512x512',
+            'type': 'image/png'
           }
-        },
-        {
-          urlPattern: /.*\.(?:png|jpg|jpeg|webp|svg|gif)/,
-          handler: 'cacheFirst', // 缓存优先
-          options: {
-            plugins: [
-              {
-                expiration: {
-                  maxAgeSeconds: 24 * 60 * 60, // 最长缓存时间,
-                  maxEntries: 50 // 最大缓存图片数量
-                }
-              }
-            ]
-          }
-        },
-        {
-          urlPattern: /.*\.html/,
-          handler: 'networkFirst'
-        }
-      ]
-    })
+        ],
+        'start_url': '/vr1',
+        'display': 'standalone',
+        'background_color': '#000000',
+        'theme_color': '#4DBA87'
+    }
+    )
   ]
 });
 

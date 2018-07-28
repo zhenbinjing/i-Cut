@@ -3,6 +3,9 @@ const webpack = require('webpack')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { VueLoaderPlugin } = require('vue-loader')
+const GenerateJsonPlugin = require('generate-json-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 const config = require('./config')
 
 const env = process.env.NODE_ENV
@@ -11,6 +14,7 @@ const isProduction = env === 'production'
 module.exports = {
   //不显示打包的css信息
   stats: {
+    colors: true,
     entrypoints: false,
     children: false
   },
@@ -64,6 +68,79 @@ module.exports = {
       assetNameRegExp: /\.css$/,
       cssProcessor: require('cssnano'),
       cssProcessorOptions: { discardComments: { removeAll: true } }
+    }),
+    new GenerateJsonPlugin('static/pwa/manifest.json',
+    {
+        'name': 'VUEPWA',
+        'short_name': 'VUEPWA',
+        'icons': [
+          {
+            'src': config.route.publicPath + 'static/pwa/icons/android-chrome-192x192.png',
+            'sizes': '192x192',
+            'type': 'image/png'
+          },
+          {
+            'src': config.route.publicPath + 'static/pwa/icons/android-chrome-512x512.png',
+            'sizes': '512x512',
+            'type': 'image/png'
+          }
+        ],
+        'start_url': config.route.publicPath + 'index.html',
+        'display': 'standalone',
+        'background_color': '#000000',
+        'theme_color': '#4DBA87'
+    }
+    ),
+    new CopyWebpackPlugin([
+      {
+        from: config.plugin.copy.from,
+        to: config.plugin.copy.to
+      }
+    ]),
+    new WorkboxPlugin.GenerateSW({
+      cacheId: 'VUEPWA', // 设置前缀
+      skipWaiting: true, // 强制等待中的 Service Worker 被激活
+      clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
+      swDest: 'service-worker.js', // 输出 Service worker 文件
+      runtimeCaching: [
+        // 配置路由请求缓存 对应 workbox.routing.registerRoute
+        {
+          urlPattern: /.*\.js/, // 匹配文件
+          handler: 'networkFirst' // 网络优先
+        },
+        {
+          urlPattern: /.*\.css/,
+          handler: 'staleWhileRevalidate', // 缓存优先同时后台更新
+          options: {
+            // 这里可以设置 cacheName 和添加插件
+            plugins: [
+              {
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            ]
+          }
+        },
+        {
+          urlPattern: /.*\.(?:png|jpg|jpeg|webp|svg|gif)/,
+          handler: 'cacheFirst', // 缓存优先
+          options: {
+            plugins: [
+              {
+                expiration: {
+                  maxAgeSeconds: 24 * 60 * 60, // 最长缓存时间,
+                  maxEntries: 50 // 最大缓存图片数量
+                }
+              }
+            ]
+          }
+        },
+        {
+          urlPattern: /.*\.html/,
+          handler: 'networkFirst'
+        }
+      ]
     })
   ]
 }

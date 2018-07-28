@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("/rev/static/pwa/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 workbox.core.setCacheNameDetails({prefix: "GPWA"});
 
@@ -30,23 +30,23 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-f0cbd25e16.css",
-    "revision": "8b9f53d1335e996c50b76c465f8fc844"
+    "revision": "66d163dffdbab21e2d4e1cd264ac92ca"
   },
   {
-    "url": "static/font/stfyt-94ff83ac90.woff",
-    "revision": "94ff83ac904ecdcfbca84411bd4d6c56"
+    "url": "static/font/stfyt-13f386cd77.eot",
+    "revision": "13f386cd77dd68f1f1ab7c0bd4fb5e66"
   },
   {
-    "url": "static/font/stfyt-b17fbd82a4.ttf",
-    "revision": "b17fbd82a4bc1d043c6ceb264cc24643"
+    "url": "static/font/stfyt-9217813ad6.ttf",
+    "revision": "9217813ad6d28afcc8108f01bf4f536b"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
   },
   {
-    "url": "static/font/stfyt-d15908d917.eot",
-    "revision": "d15908d917c534df98b1e3915082b21a"
+    "url": "static/font/stfyt-fc0d924e3f.woff",
+    "revision": "fc0d924e3f7298a2cd1a552de6ddb1f3"
   },
   {
     "url": "static/img/a-9542fffc42.webp",
@@ -145,20 +145,8 @@ self.__precacheManifest = [
     "revision": "8ace526a6715cd6cc8be3ae5e242df8d"
   },
   {
-    "url": "static/pwa/pwa-header.html",
-    "revision": "4afeb036b451bd6cd2c5bf3179e0a30f"
-  },
-  {
-    "url": "static/pwa/pwa-script.html",
-    "revision": "8cd7ab27275e21c5df53621385062a3c"
-  },
-  {
     "url": "static/pwa/safari-pinned-tab.svg",
     "revision": "36d3bc5286e4fe2776af301e59fe8131"
-  },
-  {
-    "url": "static/pwa/workbox-sw.js",
-    "revision": "06da38385218ae9eba0fd70937aa906c"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();

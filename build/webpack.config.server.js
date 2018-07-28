@@ -22,7 +22,7 @@ module.exports = merge(base, {
   },
   output: {
     path: config.route.dist,
-    publicPath: config.route.publicPath,
+    publicPath: config.route.ssrPath,
     filename: 'server-bundle.js',
     libraryTarget: 'commonjs2'
   },
