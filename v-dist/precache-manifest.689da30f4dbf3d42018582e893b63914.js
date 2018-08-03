@@ -19,7 +19,7 @@ self.__precacheManifest = [
     "url": "/v-dist/static/js/1.d2098118388868cba1d8.js"
   },
   {
-    "url": "/v-dist/static/js/vendors.9978ebdcce83634494ad.js"
+    "url": "/v-dist/static/js/vendors.895b0796eaac61e7492d.js"
   },
   {
     "url": "/v-dist/static/js/manifest.049fb944211d73e906f5.js"
@@ -39,12 +39,12 @@ self.__precacheManifest = [
     "url": "/v-dist/static/js/2.856b22c171c76341d995.js"
   },
   {
-    "revision": "4bb1a55479d61843b89a2fdafa7849b3",
-    "url": "/v-dist/static/pwa/icons/favicon-16x16.png"
-  },
-  {
     "revision": "98b614336d9a12cb3f7bedb001da6fca",
     "url": "/v-dist/static/pwa/icons/favicon-32x32.png"
+  },
+  {
+    "revision": "4bb1a55479d61843b89a2fdafa7849b3",
+    "url": "/v-dist/static/pwa/icons/favicon-16x16.png"
   },
   {
     "revision": "7a2fa8fc2aff558ca7b7e6d5dddb5315",

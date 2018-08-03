@@ -30,23 +30,23 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-f0cbd25e16.css",
-    "revision": "47afe887aeb316e9a19f9a9194f7efcd"
+    "revision": "f184904579c2bc64796ce2a1479273d4"
   },
   {
-    "url": "static/font/stfyt-658153971f.eot",
-    "revision": "658153971f35f7bcef07c6ff8a09a266"
+    "url": "static/font/stfyt-5ebedf3f50.eot",
+    "revision": "5ebedf3f50d4ec4f4eaf9529339defbf"
+  },
+  {
+    "url": "static/font/stfyt-97beb5cc9e.woff",
+    "revision": "97beb5cc9e0d31fb6d5ff70be69f3131"
+  },
+  {
+    "url": "static/font/stfyt-a46749e309.ttf",
+    "revision": "a46749e309fd9743593d491dcf3c589a"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
-  },
-  {
-    "url": "static/font/stfyt-c7ec031a66.woff",
-    "revision": "c7ec031a668aac6ce39e78e71c131efc"
-  },
-  {
-    "url": "static/font/stfyt-d9ccf662d1.ttf",
-    "revision": "d9ccf662d193f3af006eb2c2b70089f8"
   },
   {
     "url": "static/img/a-9542fffc42.webp",
