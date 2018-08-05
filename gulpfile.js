@@ -1,9 +1,10 @@
 ﻿const gulp = require('gulp');
 const concat = require('gulp-concat');                        //- 多个文件合并为一个
 const replace = require('gulp-replace');                      //- 文本替换
-const autoprefixer = require('gulp-autoprefixer');            //- 补充浏览器前缀
+const postcss = require('gulp-postcss');                      //- px转rem
+const pxtorem = require('postcss-pxtorem');                   //- px转rem
+const autoprefixer = require('autoprefixer');                 //- 补充浏览器前缀
 const cleanCSS = require('gulp-clean-css');                   //- 压缩CSS为一行
-const px3rem = require('gulp-px3rem');                        //- px转rem
 const uncss = require('gulp-uncss');                          //- 删除没用到的css
 const csso = require('gulp-csso');                            //- 深入优化css
 const sass = require('gulp-sass');                            //- scss文件编译
@@ -120,16 +121,18 @@ gulp.task('svgSprite', gulp.series(svgDel, svgDeal, svgMin, svgCss));
 /*-------------------------------Css-------------------------------------*/
 
 function cssAuto() {
+  var processors = [
+    autoprefixer({
+      browsers: 'last 1 version'
+    }),
+    pxtorem({
+      rootValue: 100,            //- px/100转rem值，如果有不想转换的类在值后面改大写PX
+      propList:['*'],            //- 需要转换的属性
+      // selectorBlackList: []      //- 不需要转换的属性
+    })
+  ];
   return gulp.src(['./' + y_Dz + '/static/css/*.css'])
-    .pipe(autoprefixer({
-      browsers: [
-        'last 2 version',                                 //- 主流浏览器的最新两个版本
-        'ios 7',                                          //- IOS7版本
-        'android 2.3',                                    //- android 2.3版本
-        'last 2 Explorer versions'],                      //- IE的最新两个版本 'last 2 Explorer versions'
-      cascade: true,                                      //- 是否美化属性值 默认：true
-      remove: true                                        //- 是否去掉不必要的前缀 默认：true
-    }))
+    .pipe(postcss(processors))
     .pipe(gulp.dest('./' + y_Dz + '/static/css/'));
 }
 
@@ -153,7 +156,6 @@ function CleanCss() {
 
 function cssMin() {
   return gulp.src(['./' + y_Sz + '/static/css/*.css'])         //- 需要处理的css文件，放到一个字符串数组里
-    .pipe(px3rem({ remUnit: 100 }))                            //- px/100转rem值，如果有不想转换的类在值后面加/*no*/
     .pipe(uncss({
       html: ['./' + y_Sz + '/**/*.html'],                      //- 检查的页面
       ignore: ['abc', '.abc', '#abc']                          //- 忽略的标签 class or id or 分号隔开
@@ -167,7 +169,7 @@ function Sass() {
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./' + y_Sz + '/static/css/'));
 }
-
+gulp.task(cssAuto)
 gulp.task('cssAll', gulp.series(Sass, cssMin, CleanCss, ImageSet, CSSO, cssAuto));
 
 /*------------------------------Img----------------------------------*/
