@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.18.2",
+  "version": "2.19.0",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -93,7 +93,7 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-image-set-plus": "^0.2.0",
     "gulp-lazysizes-srcset": "^0.2.0",
-    "gulp-postcss": "^7.0.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-processhtml": "^1.2.0",
     "gulp-replace": "^1.0.0",
     "gulp-responsive": "^2.11.0",
@@ -146,7 +146,7 @@
     "vue-loader": "^15.2.6",
     "vue-style-loader": "^4.1.1",
     "vue-template-compiler": "^2.5.17",
-    "webpack": "^4.16.4",
+    "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "webpack-dev-middleware": "^3.1.3",
     "webpack-dev-server": "^3.1.5",

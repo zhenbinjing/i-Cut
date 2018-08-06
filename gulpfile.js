@@ -505,12 +505,6 @@ function browser() {
 
 gulp.task(browser);
 
-gulp.task('online', gulp.series(
-  'revAll',
-  'PWA',
-  'htmlAll'
-));
-
 gulp.task('default', gulp.series(
   'revDelFile',
   'cssSprite',
@@ -525,3 +519,8 @@ gulp.task('default', gulp.series(
   'jsMin'
 ));
 
+gulp.task('online', gulp.series(
+  'revAll',
+  'PWA',
+  'htmlAll'
+));
