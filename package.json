@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.19.1",
+  "version": "2.19.2",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -110,7 +110,7 @@
     "gulp.spritesmith": "^6.9.0",
     "html-webpack-plugin": "^3.2.0",
     "istanbul-instrumenter-loader": "^3.0.1",
-    "karma": "^2.0.5",
+    "karma": "^3.0.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
