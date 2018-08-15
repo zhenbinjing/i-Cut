@@ -16,27 +16,27 @@ self.__precacheManifest = [
     "url": "/v-dist/static/pwa/icons/apple-touch-icon-152x152.png"
   },
   {
-    "url": "/v-dist/static/js/1.f8d4bd20d8bed636f9f0.js"
+    "url": "/v-dist/static/js/1.c1e1c7af4617bdc838cc.js"
   },
   {
-    "url": "/v-dist/static/js/vendors.895b0796eaac61e7492d.js"
+    "url": "/v-dist/static/js/vendors.e65a5d4f1ca8a943f03a.js"
   },
   {
-    "url": "/v-dist/static/js/manifest.b034faa00f76ec455f4e.js"
+    "url": "/v-dist/static/js/manifest.1bb09a3fd68738b4f48d.js"
   },
   {
     "revision": "b89032a4a5a1879f30ba05a13947f26f",
     "url": "/v-dist/static/pwa/icons/msapplication-icon-144x144.png"
   },
   {
-    "url": "/v-dist/static/js/main.09e0704b7c5dcc476d37.js"
+    "url": "/v-dist/static/js/main.1d4bb97f29da0bcd5d40.js"
   },
   {
     "revision": "0ff1bc4d14e5c9abcacba7c600d97814",
     "url": "/v-dist/static/pwa/icons/android-chrome-512x512.png"
   },
   {
-    "url": "/v-dist/static/js/2.856b22c171c76341d995.js"
+    "url": "/v-dist/static/js/2.5b6ffea724dfb98dfe14.js"
   },
   {
     "revision": "4bb1a55479d61843b89a2fdafa7849b3",
@@ -55,9 +55,9 @@ self.__precacheManifest = [
     "url": "/v-dist/static/pwa/icons/logo.png"
   },
   {
-    "url": "/v-dist/static/css/index.f8d4bd20d8bed636f9f0.css"
+    "url": "/v-dist/static/css/index.c1e1c7af4617bdc838cc.css"
   },
   {
-    "url": "/v-dist/static/css/index.09e0704b7c5dcc476d37.css"
+    "url": "/v-dist/static/css/index.1d4bb97f29da0bcd5d40.css"
   }
 ];

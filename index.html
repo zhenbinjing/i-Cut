@@ -1,34 +1,62 @@
 ﻿<!doctype html>
 <html class="h100p">
+
 <head>
-<meta charset="utf-8">
-<title>i-Cut</title>
-<meta name="keywords" content="flex_grid_flexbox_grid-layout_responsive_rem" />
-<meta name="description" content="个人技术栈项目" />
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="format-detection" content="telephone=no">
-<meta name="format-detection" content="email=no">
-<link rel="stylesheet" href="https://i-cut.cc/src/static/css/adjust.css">
-<link rel="stylesheet" href="https://i-cut.cc/src/static/css/emmet.css">
-<link rel="stylesheet" href="https://i-cut.cc/src/static/css/flexgrid.css">
-<link rel="stylesheet" href="https://i-cut.cc/src/static/css/opencolor.css">
-<link rel="stylesheet" href="https://i-cut.cc/assets/index.css">
-<script src="https://i-cut.cc/assets/rem.js"></script>
+  <meta charset="utf-8">
+  <title>i-Cut</title>
+  <meta name="keywords" content="flex_grid_flexbox_grid-layout_responsive_rem" />
+  <meta name="description" content="个人技术栈项目" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <link rel="stylesheet" href="https://i-cut.cc/src/static/css/adjust.css">
+  <link rel="stylesheet" href="https://i-cut.cc/src/static/css/emmet.css">
+  <link rel="stylesheet" href="https://i-cut.cc/src/static/css/flexgrid.css">
+  <link rel="stylesheet" href="https://i-cut.cc/src/static/css/opencolor.css">
+  <link rel="stylesheet" href="https://i-cut.cc/assets/index.css">
+  <script>
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+        dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+        dpr = window.top === window.self ? dpr : 1,
+        dpr = 1,
+        scale = 1 / dpr,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+      docEl.dataset.dpr = dpr;
+      var metaEl = doc.createElement('meta');
+      metaEl.name = 'viewport';
+      metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+      docEl.firstElementChild.appendChild(metaEl);
+      var recalc = function () {
+        var designW = 750;
+        var width = docEl.clientWidth;
+        if (width / dpr > designW) {
+          width = designW * dpr;
+        }
+        docEl.style.fontSize = 100 * (width / designW) + 'px';
+      };
+      recalc()
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+    })(document, window);
+  </script>
 </head>
 
 <body class="d-xs-f jc-xs-center ai-xs-middle h100p">
-     <div class="ta-c">
-	  <div class="fz-xs-100">i-Cut</div>
-          <div class="fz-xs-60 fz-sm-30 mt-xs-60 mt-sm-30">个人技术栈项目</div>
-          <div class="fz-xs-30 fz-sm-16 mt-xs-60 mt-sm-30">安装：npm install i-cut</div>
-	  <div class="fz-xs-30 fz-sm-16 mt-xs-20 mt-sm-10">git clone git@github.com:zhenbinjing/i-Cut.git</div>
-	  <div class="fz-xs-40 fz-sm-20 mt-xs-40 mt-ms-20">
-	  <a href="https://i-cut.cc/assets/flexgrid.html" target="_blank" class="bgc-black-0 c-white-0 bdrs-xs-10 pt-xs-20 pb-xs-20 pt-sm-10 pb-sm-10 d-xs-b mb-xs-20">Flexgrid 布局</a>
-	  <a href="https://i-cut.cc/rev/" target="_blank" class="bgc-black-0 c-white-0 bdrs-xs-10 pt-xs-20 pb-xs-20 pt-sm-10 pb-sm-10 d-xs-b mb-xs-20">Gulp 自动化</a>
-	  <a href="https://i-cut.cc/v-dist/#/vr1" target="_blank" class="bgc-black-0 c-white-0 bdrs-xs-10 pt-xs-20 pb-xs-20  pt-sm-10 pb-sm-10 d-xs-b">Vue 技术栈</a>
-	  </div>
-     </div>
+  <div class="ta-c">
+    <div class="fz-xs-100">i-Cut</div>
+    <div class="fz-xs-60 fz-sm-30 mt-xs-60 mt-sm-30">个人技术栈项目</div>
+    <div class="fz-xs-30 fz-sm-16 mt-xs-60 mt-sm-30">安装：npm install i-cut</div>
+    <div class="fz-xs-30 fz-sm-16 mt-xs-20 mt-sm-10">git clone git@github.com:zhenbinjing/i-Cut.git</div>
+    <div class="fz-xs-40 fz-sm-20 mt-xs-40 mt-ms-20">
+      <a href="https://i-cut.cc/assets/flexgrid.html" target="_blank" class="bgc-black-0 c-white-0 bdrs-xs-10 pt-xs-20 pb-xs-20 pt-sm-10 pb-sm-10 d-xs-b mb-xs-20">Flexgrid 布局</a>
+      <a href="https://i-cut.cc/rev/" target="_blank" class="bgc-black-0 c-white-0 bdrs-xs-10 pt-xs-20 pb-xs-20 pt-sm-10 pb-sm-10 d-xs-b mb-xs-20">Gulp 自动化</a>
+      <a href="https://i-cut.cc/v-dist/#/vr1" target="_blank" class="bgc-black-0 c-white-0 bdrs-xs-10 pt-xs-20 pb-xs-20  pt-sm-10 pb-sm-10 d-xs-b">Vue 技术栈</a>
+    </div>
+  </div>
 </body>
+
 </html>
