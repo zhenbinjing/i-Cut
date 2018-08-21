@@ -3,7 +3,8 @@ const root = path.resolve(__dirname, '..')
 
 const vdist = 'v-dist'
 const vsrc = 'v-src'
-const vstatic = 'static'
+const slash = '/'
+const current = './'
 
 const d_root = path.resolve(root, vdist)
 const s_root = path.resolve(root, vsrc)
@@ -11,40 +12,42 @@ const s_root = path.resolve(root, vsrc)
 module.exports = {
   //路径
   route: {
-    dist: path.join(d_root),
-    src: path.join(s_root),
-    publicPath: process.env.NODE_ENV === 'production' ? '/' + vdist + '/' : '/',
-    app: path.join(s_root, 'main.js'),
-    components: path.join(s_root + '/components'),
-    html: path.join(s_root, 'index.pwa.html'),
-    clientapp: path.join(s_root, 'entry-client.js'),
-    serverapp: path.join(s_root, 'entry-server.js'),
-    ssrhtml: path.join(s_root, 'index.pwa.ssr.html'),
-    ssrPath: '/' + vdist + '/',
-    ssrdex: '/' + vdist,
-    ssrdexs: './' + vdist
+    dist: d_root,
+    src: s_root,
+    publicPath:  process.env.NODE_ENV === 'production' ? slash + vdist + slash : slash ,
+    app: s_root + '/main.js',
+    components: s_root + '/components',
+    html: s_root + '/index.html',
+    clientapp: s_root + '/entry-client.js',
+    serverapp: s_root + '/entry-server.js',
+    ssrPath: slash + vdist + slash,
+    ssrdex: slash + vdist,
+    ssrdexs: current + vdist
   },
   //图标
   icon: {
-    src: path.join(s_root, vstatic + '/img/logo.png')
+    src: s_root + '/static/img/logo.png',
+    pwaicon1: 'static/pwa/icons/android-chrome-192x192.png',
+    pwaicon2: 'static/pwa/icons/android-chrome-512x512.png'
   },
   //文件
   file: {
-    urlLoaderName: vstatic + '/assets/[name].[hash:7].[ext]',
-    miniCssName: vstatic + '/css/index.[chunkhash].css',
-    outputJsName: vstatic + '/js/[name].[chunkhash].js',
-    devJsName: vstatic + '/js/app.js'
+    urlLoaderName: 'static/assets/[name].[hash:7].[ext]',
+    miniCssName: 'static/css/index.[chunkhash].css',
+    outputJsName: 'static/js/[name].[chunkhash].js',
+    devJsName: 'static/js/app.js',
+    manifestName: 'static/pwa/manifest.json',
   },
   //插件
   plugin: {
     purgecss: [
-      path.join(s_root, 'index.pwa.html'),
-      path.join(s_root, '**/*.vue'),
-      path.join(s_root, '**/*.js')
+      s_root + '/index.html',
+      s_root + '/**/*.vue',
+      s_root + '/**/*.js'
     ],
     copy: {
-      from: s_root + '/' + vstatic + '/pwa',
-      to: vstatic + '/pwa'
+      from: s_root + '/static/pwa',
+      to: 'static/pwa'
     }
   },
 }

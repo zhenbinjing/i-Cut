@@ -1,5 +1,4 @@
 const glob = require('glob-all')
-const webpack = require('webpack')
 const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
 const HTMLPlugin = require('html-webpack-plugin')
@@ -51,18 +50,18 @@ const configs = merge(base, {
     }),
     // generate output HTML
     new HTMLPlugin({
-      template: config.route.ssrhtml,
+      template: config.route.html,
       inject: 'body',
       filename: 'index.html',
       minify: {
         html5: true,
+        minifyJS: true,
         collapseWhitespace: true,
         removeRedundantAttributes: true,
         removeScriptTypeAttributes: true,
-        removeAttributeQuotes: true
+        removeAttributeQuotes: true,
         // removeComments                 : true, // ACK. This strips out the <!-- vue-ssr-outlet--> DO NOT USE.
         // minifyCSS                      : true,
-        // minifyJS                       : true,
         // minifyURLs                     : false,
         // removeAttributeQuotes          : true,
         // removeEmptyAttributes          : true,
@@ -71,23 +70,23 @@ const configs = merge(base, {
         // useShortDoctype                : true
       }
     }),
-    new GenerateJsonPlugin('static/pwa/manifest.json',
+    new GenerateJsonPlugin(config.file.manifestName,
       {
         'name': 'VUEPWA',
         'short_name': 'VUEPWA',
         'icons': [
           {
-            'src': config.route.ssrPath + 'static/pwa/icons/android-chrome-192x192.png',
+            'src': config.route.ssrPath + config.icon.pwaicon1,
             'sizes': '192x192',
             'type': 'image/png'
           },
           {
-            'src': config.route.ssrPath + 'static/pwa/icons/android-chrome-512x512.png',
+            'src': config.route.ssrPath + config.icon.pwaicon2,
             'sizes': '512x512',
             'type': 'image/png'
           }
         ],
-        'start_url': '/vr1',
+        'start_url': '/',
         'display': 'standalone',
         'background_color': '#000000',
         'theme_color': '#4DBA87'
@@ -99,7 +98,7 @@ const configs = merge(base, {
         return value;
       },
       2
-    )
+    ),
   ]
 });
 

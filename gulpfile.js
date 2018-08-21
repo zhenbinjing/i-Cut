@@ -497,9 +497,7 @@ gulp.task('htmlAll', gulp.series(HtmlUrl, HtmlMin, delFile));
 
 function browser() {
   return browserSync.init({
-    files: "**",                                               //- 监控所有文件
-    server: { baseDir: './', index: "index.html" },            //- 引索
-    open: false
+    server: { baseDir: './' },            //- 引索
   });
 }
 

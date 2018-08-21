@@ -1,6 +1,4 @@
-﻿const path = require('path')
-const webpack = require('webpack')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+﻿const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { VueLoaderPlugin } = require('vue-loader')
 const GenerateJsonPlugin = require('generate-json-webpack-plugin')
@@ -69,23 +67,23 @@ module.exports = {
       cssProcessor: require('cssnano'),
       cssProcessorOptions: { discardComments: { removeAll: true } }
     }),
-    new GenerateJsonPlugin('static/pwa/manifest.json',
+    new GenerateJsonPlugin(config.file.manifestName,
       {
         'name': 'VUEPWA',
         'short_name': 'VUEPWA',
         'icons': [
           {
-            'src': config.route.publicPath + 'static/pwa/icons/android-chrome-192x192.png',
+            'src': config.route.publicPath + config.icon.pwaicon1,
             'sizes': '192x192',
             'type': 'image/png'
           },
           {
-            'src': config.route.publicPath + 'static/pwa/icons/android-chrome-512x512.png',
+            'src': config.route.publicPath + config.icon.pwaicon2,
             'sizes': '512x512',
             'type': 'image/png'
           }
         ],
-        'start_url': config.route.publicPath + 'index.html',
+        'start_url': config.route.publicPath,
         'display': 'standalone',
         'background_color': '#000000',
         'theme_color': '#4DBA87'

@@ -9,8 +9,10 @@
   <title>Vue PWA</title>
   <meta name="keywords" content="Vue PWA" />
   <meta name="description" content="Vue PWA" />
+
   <link rel="icon" type="image/png" sizes="32x32" href="<%= htmlWebpackPlugin.files.publicPath %>static/pwa/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<%= htmlWebpackPlugin.files.publicPath %>static/pwa/icons/favicon-16x16.png">
+
   <!--[if IE]><link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/pwa/icons/favicon.ico"><![endif]-->
   <!-- Add to home screen for Android and modern mobile browsers -->
   <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>static/pwa/manifest.json">
@@ -22,6 +24,7 @@
   <meta name="apple-mobile-web-app-title" content="Vue PWA">
   <link rel="apple-touch-icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/pwa/icons/apple-touch-icon-152x152.png">
   <link rel="mask-icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/pwa/icons/safari-pinned-tab.svg" color="#4DBA87">
+
   <!-- Add to home screen for Windows -->
   <meta name="msapplication-TileImage" content="<%= htmlWebpackPlugin.files.publicPath %>static/pwa/icons/msapplication-icon-144x144.png">
   <meta name="msapplication-TileColor" content="#000000">
@@ -30,45 +33,14 @@
           if (file.match(/\.(js|css)$/)) { %>
     <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
     <% }}} %>
+
 </head>
 
 <body>
   <div id="app"></div>
+  <!--vue-ssr-outlet-->
   <script>
-    (function () {
-      'use strict';
-      var isLocalhost = Boolean(window.location.hostname === 'localhost' ||
-        window.location.hostname === '[::1]' ||
-        window.location.hostname.match(
-          /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
-        )
-      );
-      window.addEventListener('load', function () {
-        if ('serviceWorker' in navigator &&
-          (window.location.protocol === 'https:' || isLocalhost)) {
-          navigator.serviceWorker.register('<%= htmlWebpackPlugin.files.publicPath %>service-worker.js')
-            .then(function (registration) {
-              registration.onupdatefound = function () {
-                if (navigator.serviceWorker.controller) {
-                  var installingWorker = registration.installing;
-                  installingWorker.onstatechange = function () {
-                    switch (installingWorker.state) {
-                      case 'installed':
-                        break;
-                      case 'redundant':
-                        throw new Error('The installing ' +
-                          'service worker became redundant.');
-                      default:
-                    }
-                  };
-                }
-              };
-            }).catch(function (e) {
-              console.error('Error during service worker registration:', e);
-            });
-        }
-      });
-    })();
+    !function () { "use strict"; var a = Boolean("localhost" === window.location.hostname || "[::1]" === window.location.hostname || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)); window.addEventListener("load", function () { "serviceWorker" in navigator && ("https:" === window.location.protocol || a) && navigator.serviceWorker.register("<%= htmlWebpackPlugin.files.publicPath %>service-worker.js").then(function (a) { a.onupdatefound = function () { if (navigator.serviceWorker.controller) { var b = a.installing; b.onstatechange = function () { switch (b.state) { case "installed": break; case "redundant": throw new Error("The installing service worker became redundant.") } } } } }).catch(function (a) { console.error("Error during service worker registration:", a) }) }) }();
   </script>
 </body>
 

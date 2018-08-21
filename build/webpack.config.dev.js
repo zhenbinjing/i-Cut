@@ -1,5 +1,4 @@
-﻿const path = require('path')
-const config = require('./config')
+﻿const config = require('./config')
 const webpack = require('webpack')
 const merge = require('webpack-merge') //合并执行任务
 const baseConfig = require('./webpack.config.base')

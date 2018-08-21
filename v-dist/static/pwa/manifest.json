@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/v-dist/index.html",
+  "start_url": "/v-dist/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#4DBA87"
