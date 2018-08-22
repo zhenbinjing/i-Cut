@@ -29,16 +29,20 @@ const configs = merge(base, {
     chunkFilename: config.file.outputJsName
   },
   optimization: {
-    runtimeChunk: {
-      name: 'manifest'
-    },
     splitChunks: {
       cacheGroups: {
-        vendor: {
+        vendors: {
+          name: `chunk-vendors`,
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
+          priority: -10,
+          chunks: 'initial'
+        },
+        common: {
+          name: `chunk-common`,
+          minChunks: 2,
           priority: -20,
-          chunks: 'all'
+          chunks: 'initial',
+          reuseExistingChunk: true
         }
       }
     }
