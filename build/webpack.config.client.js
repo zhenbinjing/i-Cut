@@ -1,3 +1,4 @@
+const rm = require('rimraf')
 const glob = require('glob-all')
 const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
@@ -7,7 +8,11 @@ const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 const config = require('./config')
 
 if (process.env.NODE_ENV === 'production') {
-  moshi = 'production'
+  moshi = 'production';
+  rm(config.route.dist, err => {
+    if (err) throw err
+    console.log('delete build file...')
+  })
 }
 else {
   moshi = 'development'
