@@ -18,14 +18,14 @@ const devWebpackConfig = merge(baseConfig, {
   output: {
     path: config.route.dist,  // 出口目录
     filename: config.file.devJsName,  // 出口文件名
-    publicPath: '/'
+    publicPath: config.route.publicPath
   },
   devServer: {
     //是否不输出日记
     quiet: true,
     host: HOST || 'localhost',
     port: PORT || 8080,
-    publicPath: '/',
+    publicPath: config.route.publicPath
   },
   plugins: [
     new HtmlWebpackPlugin({
