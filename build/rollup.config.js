@@ -18,8 +18,7 @@ export default {
     buble(),
     babel({
       exclude: 'node_modules/**',
-      plugins: ['external-helpers'],
-      externalHelpers: true
+      runtimeHelpers: true
     }),
     uglify({
       //mangle: true

@@ -27,8 +27,8 @@ module.exports = {
   //图标
   icon: {
     src: s_root + '/static/img/logo.png',
-    pwaicon1: 'static/pwa/icons/android-chrome-192x192.png',
-    pwaicon2: 'static/pwa/icons/android-chrome-512x512.png'
+    pwaicon1: 'static/icons/android-chrome-192x192.png',
+    pwaicon2: 'static/icons/android-chrome-512x512.png'
   },
   //文件
   file: {
@@ -36,7 +36,7 @@ module.exports = {
     miniCssName: 'static/css/index.[chunkhash].css',
     outputJsName: 'static/js/[name].[chunkhash].js',
     devJsName: 'static/js/app.js',
-    manifestName: 'static/pwa/manifest.json',
+    manifestName: 'manifest.json',
   },
   //插件
   plugin: {
@@ -46,8 +46,8 @@ module.exports = {
       s_root + '/**/*.js'
     ],
     copy: {
-      from: s_root + '/static/pwa',
-      to: 'static/pwa'
+      from: s_root + '/static/icons',
+      to: 'static/icons'
     }
   },
 }

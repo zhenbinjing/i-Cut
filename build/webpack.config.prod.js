@@ -12,7 +12,7 @@ const webpackConfig = merge(baseConfig, {
   mode: 'production',
   devtool: '#source-map',
   entry: [
-    // 'babel-polyfill', // 转es5,兼容低端浏览器
+    //'@babel/polyfill', // 转es5,兼容低端浏览器
     config.route.app // 入口文件路径
   ],
   output: {
