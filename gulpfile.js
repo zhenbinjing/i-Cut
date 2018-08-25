@@ -328,8 +328,7 @@ function jsMin() {
           buble(),
           babel({
             exclude: 'node_modules/**',
-            plugins: ['external-helpers'],
-            externalHelpers: true
+            runtimeHelpers: true
           }),
           uglify()
         ]

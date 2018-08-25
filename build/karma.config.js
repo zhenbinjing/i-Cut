@@ -36,11 +36,12 @@ module.exports = function (config) {
         rules: [{
           test: /\.js$/,
           include: path.resolve('./test/e2e'),
-          loader: 'istanbul-instrumenter-loader'
+          loader: 'istanbul-instrumenter-loader',
+          options: { esModules: true }
         }, {
           test: /\.js$/,
           loader: 'babel-loader',
-          query: { presets: ['env'] }
+          query: { presets: ['@babel/preset-env'] }
         }]
       }
     },
