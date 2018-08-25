@@ -14,7 +14,9 @@ else {
 module.exports = merge(base, {
   mode: moshi,
   target: 'node',
-  entry: config.route.serverapp,
+  entry: {
+    app: config.route.serverapp
+  },
   resolve: {
     modules: [config.route.src, 'node_modules'],
     extensions: ['.js', '.vue', '.json']

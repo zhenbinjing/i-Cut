@@ -8,16 +8,16 @@ self.__precacheManifest = [
     "url": "/v-dist/static/icons/safari-pinned-tab.svg"
   },
   {
-    "url": "/v-dist/static/js/main.98451a2703e824362744.js"
+    "url": "/v-dist/static/js/app.12945839f08ab35daa98.js"
   },
   {
-    "url": "/v-dist/static/js/1.726c74456842c7e0ce00.js"
+    "url": "/v-dist/static/js/1.0eab48cc363fe2f40f6f.js"
   },
   {
     "url": "/v-dist/static/js/2.46ab385cf6bee9809a32.js"
   },
   {
-    "url": "/v-dist/static/js/chunk-vendors.160e184aa05676e864d2.js"
+    "url": "/v-dist/static/js/chunk-vendors.c323c26cec5c29b20018.js"
   },
   {
     "revision": "b89032a4a5a1879f30ba05a13947f26f",
@@ -48,9 +48,9 @@ self.__precacheManifest = [
     "url": "/v-dist/static/icons/android-chrome-192x192.png"
   },
   {
-    "url": "/v-dist/static/css/index.98451a2703e824362744.css"
+    "url": "/v-dist/static/css/index.12945839f08ab35daa98.css"
   },
   {
-    "url": "/v-dist/static/css/index.726c74456842c7e0ce00.css"
+    "url": "/v-dist/static/css/index.0eab48cc363fe2f40f6f.css"
   }
 ];

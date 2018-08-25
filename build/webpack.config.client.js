@@ -20,10 +20,9 @@ else {
 
 const configs = merge(base, {
   mode: moshi,
-  entry: [
-    // '@babel/polyfill', // 转es5,兼容低端浏览器
-    config.route.clientapp
-  ],
+  entry:{
+    app: config.route.clientapp // 入口文件路径
+  },
   resolve: {
     modules: [config.route.src, 'node_modules'],
     extensions: ['.js', '.vue', '.json']

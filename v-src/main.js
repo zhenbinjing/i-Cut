@@ -1,4 +1,5 @@
-import '@babel/polyfill';
+import 'core-js/es6/promise';
+
 import Vue from 'vue';
 import Vuex from 'vuex';
 import { sync } from 'vuex-router-sync';
