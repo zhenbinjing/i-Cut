@@ -1,6 +1,10 @@
-﻿const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+﻿const glob = require('glob-all')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { VueLoaderPlugin } = require('vue-loader')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const PreloadWebpackPlugin = require('preload-webpack-plugin')
 const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin')
@@ -58,6 +62,10 @@ module.exports = {
     ]
   },
   plugins: [
+    //删除没用的css
+    new PurgecssPlugin({
+      paths: glob.sync(config.plugin.purgecss)
+    }),
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: config.file.miniCssName
@@ -66,6 +74,24 @@ module.exports = {
       assetNameRegExp: /\.css$/,
       cssProcessor: require('cssnano'),
       cssProcessorOptions: { discardComments: { removeAll: true } }
+    }),
+    new HtmlWebpackPlugin({
+      template: config.route.html,
+      inject: 'body',
+      filename: 'index.html',
+      minify: {
+        html5: true,
+        minifyJS: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeAttributeQuotes: true
+      },
+      chunksSortMode: 'dependency'
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      include: 'asyncChunks'
     }),
     new GenerateJsonPlugin(config.file.manifestName,
       {

@@ -454,13 +454,20 @@ function htmlImport() {
 }
 
 function iconCopy() {
-  return gulp.src(['./' + y_Sz + '/static/pwa/*.{png,ico,svg,json}'], {        //- 复制文件
+  return gulp.src(['./' + y_Sz + '/static/pwa/*.{png,ico,svg}'], {        //- 复制文件
     base: './' + y_Sz + '/static/pwa/'
   })
     .pipe(gulp.dest('./' + y_Rz + '/static/pwa/'));
 }
 
-gulp.task('PWA', gulp.series(iconCopy, htmlImport, ServiceWorkers));
+function jsonCopy() {
+  return gulp.src(['./' + y_Sz + '/static/pwa/*.json'], {        //- 复制文件
+    base: './' + y_Sz + '/static/pwa/'
+  })
+    .pipe(gulp.dest('./' + y_Rz + '/'));
+}
+
+gulp.task('PWA', gulp.series(iconCopy, jsonCopy, htmlImport, ServiceWorkers));
 
 /*------------------------------Htmlmin----------------------------------*/
 

@@ -1,10 +1,6 @@
-﻿const glob = require('glob-all')
-const config = require('./config')
-const webpack = require('webpack')
+﻿const config = require('./config')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const PurgecssPlugin = require('purgecss-webpack-plugin')
 //const PrerenderSPAPlugin = require('prerender-spa-plugin') // 页面静态化
 //const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 
@@ -41,23 +37,6 @@ const webpackConfig = merge(baseConfig, {
     }
   },
   plugins: [
-    //删除没用的css
-    new PurgecssPlugin({
-      paths: glob.sync(config.plugin.purgecss)
-    }),
-    //缓存
-    new webpack.HashedModuleIdsPlugin(),
-    new HtmlWebpackPlugin({
-      template: config.route.html, // 模板文件
-      inject: 'body',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true,
-        minifyJS: true
-      },
-      chunksSortMode: 'dependency'
-    })
     /*new PrerenderSPAPlugin({
     staticDir:config.route.dist,
     routes:[ '/','/vr1', '/axios', '/vuex' ],

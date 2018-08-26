@@ -1,10 +1,8 @@
 ﻿const config = require('./config')
-const webpack = require('webpack')
 const merge = require('webpack-merge') //合并执行任务
 const baseConfig = require('./webpack.config.base')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin'); // 这个插件能够更好的在终端看到webpack运行时的错误和警告等信息。可以提升开发体验。
 const portfinder = require('portfinder'); // 查找一个未使用的端口
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const packageConfig = require('../package.json')
 
 const HOST = process.env.HOST
@@ -26,14 +24,7 @@ const devWebpackConfig = merge(baseConfig, {
     host: HOST || 'localhost',
     port: PORT || 8080,
     publicPath: config.route.publicPath
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: config.route.html, // 模板文件
-      inject: 'body'
-    }),
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  }
 });
 
 module.exports = new Promise((resolve, reject) => {

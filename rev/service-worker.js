@@ -26,27 +26,31 @@ workbox.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "76361826dd248a18c335156b49d43abc"
+    "revision": "b86de38d70b1cea232daad497a269b02"
+  },
+  {
+    "url": "manifest.json",
+    "revision": "119892d240612cbc59fd994033533650"
   },
   {
     "url": "static/css/index-c68d935553.css",
-    "revision": "05979e4ca2520eedcab12523652c46da"
+    "revision": "910bab22cbba412c4107876969928b61"
   },
   {
-    "url": "static/font/stfyt-550cfc0868.woff",
-    "revision": "550cfc086849732fa10b99212bdf8f12"
+    "url": "static/font/stfyt-0eb6539efd.eot",
+    "revision": "0eb6539efdfdd3e97fcb18286d3299c4"
   },
   {
-    "url": "static/font/stfyt-9a334065d7.ttf",
-    "revision": "9a334065d77685f80f2978cf574a9de8"
+    "url": "static/font/stfyt-24e5a47598.woff",
+    "revision": "24e5a4759890450ea71c40382188f41c"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
   },
   {
-    "url": "static/font/stfyt-de9c2e1810.eot",
-    "revision": "de9c2e1810bef27ab07c509028a4d546"
+    "url": "static/font/stfyt-f269560533.ttf",
+    "revision": "f2695605334759cc2b6d3ee5ca41cfdb"
   },
   {
     "url": "static/img/a-9542fffc42.webp",
@@ -135,14 +139,6 @@ self.__precacheManifest = [
   {
     "url": "static/pwa/favicon.ico",
     "revision": "97f4686f9a4d212e3cda86e0c1bcfc62"
-  },
-  {
-    "url": "static/pwa/manifest.json",
-    "revision": "119892d240612cbc59fd994033533650"
-  },
-  {
-    "url": "static/pwa/mstile-150x150.png",
-    "revision": "8ace526a6715cd6cc8be3ae5e242df8d"
   },
   {
     "url": "static/pwa/safari-pinned-tab.svg",

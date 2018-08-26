@@ -1,9 +1,6 @@
 const rm = require('rimraf')
-const glob = require('glob-all')
 const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
-const HTMLPlugin = require('html-webpack-plugin')
-const PurgecssPlugin = require('purgecss-webpack-plugin')
 const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 const config = require('./config')
 
@@ -53,32 +50,6 @@ const configs = merge(base, {
     }
   },
   plugins: [
-    //删除没用的css
-    new PurgecssPlugin({
-      paths: glob.sync(config.plugin.purgecss)
-    }),
-    // generate output HTML
-    new HTMLPlugin({
-      template: config.route.html,
-      inject: 'body',
-      filename: 'index.html',
-      minify: {
-        html5: true,
-        minifyJS: true,
-        collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeAttributeQuotes: true,
-        // removeComments                 : true, // ACK. This strips out the <!-- vue-ssr-outlet--> DO NOT USE.
-        // minifyCSS                      : true,
-        // minifyURLs                     : false,
-        // removeAttributeQuotes          : true,
-        // removeEmptyAttributes          : true,
-        // removeOptionalTags             : true,
-        // removeStyleLinkTypeAttributes  : true,
-        // useShortDoctype                : true
-      }
-    }),
     new GenerateJsonPlugin(config.file.manifestName,
       {
         'name': 'VUEPWA',
