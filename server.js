@@ -59,6 +59,8 @@ function errorHandler(err) {
 }
 
 app.use(config.route.ssrdex, serve(config.route.ssrdexs, true));
+app.use('/manifest.json', serve(config.route.ssrdexs +'/manifest.json', true))
+app.use('/service-worker.js', serve(config.route.ssrdexs +'/service-worker.js'))
 app.use(favicon(config.icon.src));
 
 app.get('*', (req, res) => {

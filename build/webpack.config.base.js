@@ -77,6 +77,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: config.route.html,
+      //template: config.route.ssrhtml,
       inject: 'body',
       filename: 'index.html',
       minify: {

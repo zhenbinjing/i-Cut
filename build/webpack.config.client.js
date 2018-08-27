@@ -1,7 +1,6 @@
 const rm = require('rimraf')
 const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
-const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 const config = require('./config')
 
 if (process.env.NODE_ENV === 'production') {
@@ -17,7 +16,7 @@ else {
 
 const configs = merge(base, {
   mode: moshi,
-  entry:{
+  entry: {
     app: config.route.clientapp // 入口文件路径
   },
   resolve: {
@@ -48,38 +47,7 @@ const configs = merge(base, {
         }
       }
     }
-  },
-  plugins: [
-    new GenerateJsonPlugin(config.file.manifestName,
-      {
-        'name': 'VUEPWA',
-        'short_name': 'VUEPWA',
-        'icons': [
-          {
-            'src': config.route.ssrPath + config.icon.pwaicon1,
-            'sizes': '192x192',
-            'type': 'image/png'
-          },
-          {
-            'src': config.route.ssrPath + config.icon.pwaicon2,
-            'sizes': '512x512',
-            'type': 'image/png'
-          }
-        ],
-        'start_url': '/',
-        'display': 'standalone',
-        'background_color': '#000000',
-        'theme_color': '#4DBA87'
-      },
-      (key, value) => {
-        if (value === 'VUEPWA') {
-          return 'VUEPWA';
-        }
-        return value;
-      },
-      2
-    ),
-  ]
+  }
 });
 
 module.exports = configs

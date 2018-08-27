@@ -20,6 +20,7 @@ module.exports = {
     html: s_root + '/index.html',
     clientapp: s_root + '/entry-client.js',
     serverapp: s_root + '/entry-server.js',
+    ssrhtml: s_root + '/index.ssr.html',
     ssrPath: slash + vdist + slash,
     ssrdex: slash + vdist,
     ssrdexs: current + vdist
