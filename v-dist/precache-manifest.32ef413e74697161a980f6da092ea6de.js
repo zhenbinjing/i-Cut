@@ -8,16 +8,16 @@ self.__precacheManifest = [
     "url": "/v-dist/static/icons/safari-pinned-tab.svg"
   },
   {
-    "url": "/v-dist/static/js/app.7afb6de32b7fdb3377ea.js"
+    "url": "/v-dist/static/js/app.74fd969fed36f78baf4f.js"
   },
   {
-    "url": "/v-dist/static/js/1.421e49679a68934635dc.js"
+    "url": "/v-dist/static/js/1.17a08b41563c61d56af3.js"
   },
   {
-    "url": "/v-dist/static/js/2.350fdbc2a3b4084db95d.js"
+    "url": "/v-dist/static/js/2.a5ca6fa8b2244b516fa7.js"
   },
   {
-    "url": "/v-dist/static/js/chunk-vendors.01272e6b407b714e8784.js"
+    "url": "/v-dist/static/js/chunk-vendors.802f2d8b10e2b7648e71.js"
   },
   {
     "revision": "04094c981e19b077458ac5d414185112",
@@ -44,13 +44,13 @@ self.__precacheManifest = [
     "url": "/v-dist/static/icons/android-chrome-512x512.png"
   },
   {
-    "url": "/v-dist/static/css/index.7afb6de32b7fdb3377ea.css"
+    "url": "/v-dist/static/css/index.74fd969fed36f78baf4f.css"
   },
   {
-    "url": "/v-dist/static/css/index.421e49679a68934635dc.css"
+    "url": "/v-dist/static/css/index.17a08b41563c61d56af3.css"
   },
   {
-    "revision": "da9137148c67aafcbbbb25e81554911d",
+    "revision": "8bf6fd7b87d5894ba964e3afc77c5802",
     "url": "/v-dist/index.html"
   }
 ];
