@@ -14,6 +14,7 @@ const env = process.env.NODE_ENV
 const isProduction = env === 'production'
 
 module.exports = {
+  externals: {}, //不打包的库
   //不显示打包的css信息
   stats: {
     colors: true,
@@ -28,7 +29,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue': 'vue/dist/vue.min.js',
+      'vue': process.env.NODE_ENV === 'production' ? 'vue/dist/vue.runtime.min.js' : 'vue/dist/vue.js',
       '@': config.route.components
     }
   },
@@ -77,7 +78,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: config.route.html,
-      //template: config.route.ssrhtml,
+      //template: config.route.ssrhtml,  //ssr 模板
       inject: 'body',
       filename: 'index.html',
       minify: {

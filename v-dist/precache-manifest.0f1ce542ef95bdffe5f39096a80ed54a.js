@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "f130a0b70e386170cf6f011c0ca8c4f4",
-    "url": "/v-dist/static/icons/android-chrome-192x192.png"
+    "revision": "0ff1bc4d14e5c9abcacba7c600d97814",
+    "url": "/v-dist/static/icons/android-chrome-512x512.png"
   },
   {
     "revision": "f78c0251d6ddd56ee219a1830ded71b4",
     "url": "/v-dist/static/icons/safari-pinned-tab.svg"
   },
   {
-    "url": "/v-dist/static/js/app.74fd969fed36f78baf4f.js"
+    "url": "/v-dist/static/js/main.bca7dcaaf80f7e1c16f6.js"
   },
   {
-    "url": "/v-dist/static/js/1.17a08b41563c61d56af3.js"
+    "url": "/v-dist/static/js/1.281b5bd64e39949cf857.js"
   },
   {
-    "url": "/v-dist/static/js/2.a5ca6fa8b2244b516fa7.js"
+    "url": "/v-dist/static/js/2.0f4dc68ec07671bddcc7.js"
   },
   {
-    "url": "/v-dist/static/js/chunk-vendors.802f2d8b10e2b7648e71.js"
+    "url": "/v-dist/static/js/chunk-vendors.5d80f0b10fe6a608f1f3.js"
   },
   {
     "revision": "04094c981e19b077458ac5d414185112",
@@ -40,17 +40,17 @@ self.__precacheManifest = [
     "url": "/v-dist/static/icons/apple-touch-icon-152x152.png"
   },
   {
-    "revision": "0ff1bc4d14e5c9abcacba7c600d97814",
-    "url": "/v-dist/static/icons/android-chrome-512x512.png"
+    "revision": "f130a0b70e386170cf6f011c0ca8c4f4",
+    "url": "/v-dist/static/icons/android-chrome-192x192.png"
   },
   {
-    "url": "/v-dist/static/css/index.74fd969fed36f78baf4f.css"
+    "url": "/v-dist/static/css/index.bca7dcaaf80f7e1c16f6.css"
   },
   {
-    "url": "/v-dist/static/css/index.17a08b41563c61d56af3.css"
+    "url": "/v-dist/static/css/index.281b5bd64e39949cf857.css"
   },
   {
-    "revision": "8bf6fd7b87d5894ba964e3afc77c5802",
+    "revision": "f4519af55e42ef5fe52661456baecf21",
     "url": "/v-dist/index.html"
   }
 ];

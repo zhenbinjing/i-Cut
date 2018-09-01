@@ -16,9 +16,10 @@ else {
 
 const configs = merge(base, {
   mode: moshi,
-  entry: {
-    app: config.route.clientapp // 入口文件路径
-  },
+  entry: [
+    'promise-polyfill/src/polyfill',
+    config.route.clientapp // 入口文件路径
+  ],
   resolve: {
     modules: [config.route.src, 'node_modules'],
     extensions: ['.js', '.vue', '.json']
