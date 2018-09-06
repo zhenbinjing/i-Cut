@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/v-dist/static/js/2.a5ca6fa8b2244b516fa7.js"
   },
   {
-    "url": "/v-dist/static/js/chunk-vendors.27df6cfe9fe979901cc4.js"
+    "url": "/v-dist/static/js/chunk-vendors.a87a7f04d7594f9353ea.js"
   },
   {
     "revision": "f130a0b70e386170cf6f011c0ca8c4f4",
@@ -50,7 +50,7 @@ self.__precacheManifest = [
     "url": "/v-dist/static/icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "07b89d83e640eba2619ffa63652afd23",
+    "revision": "0a375d9e309db15d63c06ac75002dca0",
     "url": "/v-dist/index.html"
   }
 ];
