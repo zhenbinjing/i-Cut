@@ -16,7 +16,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 const islegacy = process.env.LEGACY === 'legacy'
 const ismodern = process.env.MODERN === 'modern'
 const ismdlegacy = process.env.MDLEGACY === 'mdlegacy'
-const isvuessr = process.env.VUE_SSR = 'ssr'
+const isvuessr = process.env.VUE_SSR === 'ssr'
 
 //判断模式调用不同的路径前缀（pwa）
 const swpublicPath = isvuessr ? config.route.roots : config.route.publicPath
