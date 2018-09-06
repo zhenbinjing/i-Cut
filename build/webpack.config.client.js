@@ -4,13 +4,9 @@ const config = require('./config')
 
 const isLegacy = process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? 'promise-polyfill/src/polyfill' : '';
 
-const moshi = process.env.NODE_ENV === 'production' ? 'production' : 'development'
-
 const configs = merge(base, {
-  mode: moshi,
-  entry: [
-    config.route.clientapp // 入口文件路径
-  ],
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  entry: [],
   resolve: {
     modules: [config.route.src, 'node_modules'],
     extensions: ['.js', '.vue', '.json']
@@ -42,8 +38,14 @@ const configs = merge(base, {
   }
 });
 
-if (isLegacy) {
-  configs.entry.push(isLegacy)
+if(isLegacy){
+  configs.entry.push(
+    isLegacy,config.route.clientapp
+  )
+}else{
+  configs.entry.push(
+    config.route.clientapp
+  )
 }
 
 module.exports = configs

@@ -4,14 +4,12 @@ const baseConfig = require('./webpack.config.base')
 //const PrerenderSPAPlugin = require('prerender-spa-plugin') // 页面静态化
 //const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 
-const islegacy = process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? 'promise-polyfill/src/polyfill' : '',
+const isLegacy = process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? 'promise-polyfill/src/polyfill' : '';
 
 webpackConfig = merge(baseConfig, {
   mode: 'production',
   devtool: '#source-map',
-  entry: [
-    config.route.app // 入口文件路径
-  ],
+  entry: [],
   output: {
     path: config.route.dist,  // 出口目录
     filename: config.file.outputJsName,  // 出口文件名
@@ -50,7 +48,14 @@ webpackConfig = merge(baseConfig, {
   ]
 });
 
-if(islegacy){
-  webpackConfig.entry.push(islegacy)
+if(isLegacy){
+  webpackConfig.entry.push(
+    isLegacy,config.route.app
+  )
+}else{
+  webpackConfig.entry.push(
+    config.route.app
+  )
 }
+
 module.exports = webpackConfig

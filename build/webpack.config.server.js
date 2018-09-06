@@ -4,10 +4,8 @@ const nodeExternals = require('webpack-node-externals')
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
 const config = require('./config')
 
-var moshi = process.env.NODE_ENV === 'production' ? 'production' : 'development'
-
 module.exports = merge(base, {
-  mode: moshi,
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   target: 'node',
   entry: {
     app: config.route.serverapp
