@@ -12,12 +12,14 @@ const s_root = path.resolve(root, vsrc)
 module.exports = {
   //路径
   route: {
+    roots: slash,
     dist: d_root,
     src: s_root,
     publicPath:  process.env.NODE_ENV === 'production' ? slash + vdist + slash : slash ,
     app: s_root + '/main.js',
     components: s_root + '/components',
     html: s_root + '/index.html',
+    dhtml: d_root + '/index.html',
     clientapp: s_root + '/entry-client.js',
     serverapp: s_root + '/entry-server.js',
     ssrhtml: s_root + '/index.ssr.html',
@@ -35,7 +37,7 @@ module.exports = {
   file: {
     urlLoaderName: 'static/assets/[name].[hash:7].[ext]',
     miniCssName: 'static/css/index.[chunkhash].css',
-    outputJsName: 'static/js/[name].[chunkhash].js',
+    outputJsName: process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? 'static/js/legacy.[name].[chunkhash].js' : 'static/js/[name].[chunkhash].js',
     devJsName: 'static/js/app.js',
     manifestName: 'manifest.json',
   },

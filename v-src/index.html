@@ -18,15 +18,13 @@
   <link rel="icon" type="image/png" sizes="16x16" href="<%= htmlWebpackPlugin.files.publicPath %>static/icons/favicon-16x16.png">
   <link rel="apple-touch-icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/icons/apple-touch-icon-152x152.png">
   <link rel="mask-icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/icons/safari-pinned-tab.svg" color="#4DBA87">
-  <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>manifest.json">
+  <%= htmlWebpackPlugin.options.serviceWorkerJson %>
 </head>
 
 <body>
   <div id="app"></div>
-  <!--service-worker-->
-  <script>
-    !function () { "use strict"; var a = Boolean("localhost" === window.location.hostname || "[::1]" === window.location.hostname || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)); window.addEventListener("load", function () { "serviceWorker" in navigator && ("https:" === window.location.protocol || a) && navigator.serviceWorker.register("<%= htmlWebpackPlugin.files.publicPath %>service-worker.js").then(function (a) { a.onupdatefound = function () { if (navigator.serviceWorker.controller) { var b = a.installing; b.onstatechange = function () { switch (b.state) { case "installed": break; case "redundant": throw new Error("The installing service worker became redundant.") } } } } }).catch(function (a) { console.error("Error during service worker registration:", a) }) }) }();
-  </script>
+  <!--vue-ssr-outlet-->
+  <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
 </body>
 
 </html>

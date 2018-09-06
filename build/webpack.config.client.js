@@ -1,23 +1,14 @@
-const rm = require('rimraf')
 const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
 const config = require('./config')
 
-if (process.env.NODE_ENV === 'production') {
-  moshi = 'production';
-  rm(config.route.dist, err => {
-    if (err) throw err
-    console.log('delete build file...')
-  })
-}
-else {
-  moshi = 'development'
-};
+const isLegacy = process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? 'promise-polyfill/src/polyfill' : '';
+
+const moshi = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 
 const configs = merge(base, {
   mode: moshi,
   entry: [
-    'promise-polyfill/src/polyfill',
     config.route.clientapp // 入口文件路径
   ],
   resolve: {
@@ -50,5 +41,9 @@ const configs = merge(base, {
     }
   }
 });
+
+if (isLegacy) {
+  configs.entry.push(isLegacy)
+}
 
 module.exports = configs

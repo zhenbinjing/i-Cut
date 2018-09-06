@@ -8,12 +8,20 @@ const PreloadWebpackPlugin = require('preload-webpack-plugin')
 const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin')
+const ModuleHtmlPlugin = require('./modern-bundle-plugin')
+
 const config = require('./config')
 
-const env = process.env.NODE_ENV
-const isProduction = env === 'production'
+const isProduction = process.env.NODE_ENV === 'production'
+const islegacy = process.env.LEGACY === 'legacy'
+const ismodern = process.env.MODERN === 'modern'
+const ismdlegacy = process.env.MDLEGACY === 'mdlegacy'
+const isvuessr = process.env.VUE_SSR = 'ssr'
 
-module.exports = {
+//判断模式调用不同的路径前缀（pwa）
+const swpublicPath = isvuessr ? config.route.roots : config.route.publicPath
+
+const webpackBasesConfig = {
   externals: {}, //不打包的库
   //不显示打包的css信息
   stats: {
@@ -43,7 +51,7 @@ module.exports = {
       {
         test: /.(s(c|a)ss|css)$/i,
         use: [
-          isProduction ? MiniCssExtractPlugin.loader : "vue-style-loader",
+          isProduction && !ismdlegacy ? MiniCssExtractPlugin.loader : "vue-style-loader",
           "css-loader?minimize",
           "postcss-loader",
           "sass-loader"
@@ -67,7 +75,6 @@ module.exports = {
     new PurgecssPlugin({
       paths: glob.sync(config.plugin.purgecss)
     }),
-    new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: config.file.miniCssName
     }),
@@ -76,9 +83,27 @@ module.exports = {
       cssProcessor: require('cssnano'),
       cssProcessorOptions: { discardComments: { removeAll: true } }
     }),
+    new VueLoaderPlugin()
+  ]
+}
+
+//防止二次复制
+if (!ismdlegacy) {
+  webpackBasesConfig.plugins.push(
+    new CopyWebpackPlugin([
+      {
+        from: config.plugin.copy.from,
+        to: config.plugin.copy.to
+      }
+    ])
+  )
+}
+
+//legacy和mdlegacy模式公用的配置
+if (islegacy || ismdlegacy) {
+  webpackBasesConfig.plugins.push(
     new HtmlWebpackPlugin({
-      template: config.route.html,
-      //template: config.route.ssrhtml,  //ssr 模板
+      template: ismdlegacy ? config.route.dhtml : config.route.html,
       inject: 'body',
       filename: 'index.html',
       minify: {
@@ -89,10 +114,35 @@ module.exports = {
         removeScriptTypeAttributes: true,
         removeAttributeQuotes: true
       },
-      chunksSortMode: 'dependency'
+      serviceWorkerJson: '',
+      serviceWorkerLoader: ''
+    })
+  )
+}
+
+//除了legacy和mdlegacy模式之外，其它模式都用这些插件
+if (!islegacy && !ismdlegacy) {
+  webpackBasesConfig.plugins.push(
+    new HtmlWebpackPlugin({
+      template: config.route.html,
+      inject: 'body',
+      filename: 'index.html',
+      minify: {
+        html5: true,
+        minifyJS: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeAttributeQuotes: true
+      },
+      chunksSortMode: 'dependency',
+      serviceWorkerJson: `<link rel="manifest" href="` + swpublicPath + `manifest.json">`,
+      serviceWorkerLoader: `<script>
+      !function () { "use strict"; var a = Boolean("localhost" === window.location.hostname || "[::1]" === window.location.hostname || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)); window.addEventListener("load", function () { "serviceWorker" in navigator && ("https:" === window.location.protocol || a) && navigator.serviceWorker.register("` + swpublicPath + `service-worker.js").then(function (a) { a.onupdatefound = function () { if (navigator.serviceWorker.controller) { var b = a.installing; b.onstatechange = function () { switch (b.state) { case "installed": break; case "redundant": throw new Error("The installing service worker became redundant.") } } } } }).catch(function (a) { console.error("Error during service worker registration:", a) }) }) }();
+    </script>`
     }),
     new PreloadWebpackPlugin({
-      rel: 'preload',
+      rel: 'prefetch',
       include: 'asyncChunks'
     }),
     new GenerateJsonPlugin(config.file.manifestName,
@@ -124,12 +174,6 @@ module.exports = {
       },
       2
     ),
-    new CopyWebpackPlugin([
-      {
-        from: config.plugin.copy.from,
-        to: config.plugin.copy.to
-      }
-    ]),
     new WorkboxPlugin.GenerateSW({
       cacheId: 'VUEPWA', // 设置前缀
       skipWaiting: true, // 强制等待中的 Service Worker 被激活
@@ -175,5 +219,37 @@ module.exports = {
         }
       ]
     })
-  ]
+  )
 }
+
+//首先构建异步文件，再构建预加载文件
+if (ismodern) {
+  webpackBasesConfig.plugins.push(
+    new PreloadWebpackPlugin({
+      rel: 'prefetch',
+      include: 'asyncChunks'
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      include: 'initial',
+      as(entry) {
+        if (/\.css$/.test(entry)) return 'style';
+        return 'script';
+      }
+    })
+  )
+}
+
+//首先构建v-src中的模板，在构建完后，基于这个基础，再二次构建目标的文件夹模板
+if (ismdlegacy || ismodern) {
+  webpackBasesConfig.plugins.push(
+    new ModuleHtmlPlugin({
+      template: ismodern ? config.route.html : config.route.dhtml,
+      filename: 'index.html',
+      inject: 'body'
+    })
+  )
+}
+
+
+module.exports = webpackBasesConfig
