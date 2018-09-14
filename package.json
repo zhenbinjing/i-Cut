@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.23.0",
+  "version": "2.23.2",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.0.1",
     "@babel/plugin-external-helpers": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
@@ -152,17 +152,17 @@
     "sass-loader": "^7.1.0",
     "serve-favicon": "^2.5.0",
     "url-loader": "^1.1.1",
-    "vue-loader": "^15.4.1",
+    "vue-loader": "^15.4.2",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17",
-    "webpack": "^4.18.0",
+    "webpack": "^4.19.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-middleware": "^3.3.0",
     "webpack-dev-server": "^3.1.8",
-    "webpack-hot-middleware": "^2.23.1",
+    "webpack-hot-middleware": "^2.24.0",
     "webpack-merge": "^4.1.4",
     "webpack-node-externals": "^1.7.2",
-    "workbox-build": "^3.4.1",
-    "workbox-webpack-plugin": "^3.4.1"
+    "workbox-build": "^3.5.0",
+    "workbox-webpack-plugin": "^3.5.0"
   }
 }

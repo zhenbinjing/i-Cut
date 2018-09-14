@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js");
 
 workbox.core.setCacheNameDetails({prefix: "GPWA"});
 
@@ -34,23 +34,23 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-c68d935553.css",
-    "revision": "07a7a113d75911e3ea5c22dd90ccedd0"
+    "revision": "fada8374b97f477b3ac6922cb6a1927c"
   },
   {
-    "url": "static/font/stfyt-251bb83fbb.ttf",
-    "revision": "251bb83fbb42f18ba9f81b7f8cfb1c7f"
+    "url": "static/font/stfyt-1016ce60c1.eot",
+    "revision": "1016ce60c1d2e5d78c7450085a438103"
   },
   {
-    "url": "static/font/stfyt-72fbd342ec.woff",
-    "revision": "72fbd342ec6b6c9bf19521adffcd1343"
+    "url": "static/font/stfyt-74e530cd0a.ttf",
+    "revision": "74e530cd0acc6823d89a07ede8901d83"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
   },
   {
-    "url": "static/font/stfyt-cb12b164ea.eot",
-    "revision": "cb12b164eacd01c880667aca594dfd8e"
+    "url": "static/font/stfyt-ce70c559a2.woff",
+    "revision": "ce70c559a2fb0497541c80e36a9de45d"
   },
   {
     "url": "static/img/a-9542fffc42.webp",
@@ -149,6 +149,6 @@ workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(/.*\.js/, workbox.strategies.networkFirst(), 'GET');
-workbox.routing.registerRoute(/.*\.css/, workbox.strategies.staleWhileRevalidate({ plugins: [{"cacheableResponse":{"statuses":[0,200]}}] }), 'GET');
-workbox.routing.registerRoute(/.*\.(?:png|jpg|jpeg|webp|svg|gif)/, workbox.strategies.cacheFirst({ plugins: [{"expiration":{"maxAgeSeconds":86400,"maxEntries":50}}] }), 'GET');
+workbox.routing.registerRoute(/.*\.css/, workbox.strategies.staleWhileRevalidate({ plugins: [{ cacheableResponse: { statuses: [ 0, 200 ] } }] }), 'GET');
+workbox.routing.registerRoute(/.*\.(?:png|jpg|jpeg|webp|svg|gif)/, workbox.strategies.cacheFirst({ "cacheName":"img-cache", plugins: [new workbox.expiration.Plugin({"maxEntries":60,"maxAgeSeconds":2592000,"purgeOnQuotaError":false}), new workbox.cacheableResponse.Plugin({"statuses":[0,200]})] }), 'GET');
 workbox.routing.registerRoute(/.*\.html/, workbox.strategies.networkFirst(), 'GET');

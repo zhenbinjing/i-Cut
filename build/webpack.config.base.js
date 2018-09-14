@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const PreloadWebpackPlugin = require('preload-webpack-plugin')
 const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const WorkboxPlugin = require('workbox-webpack-plugin')
+const { GenerateSW } = require('workbox-webpack-plugin');
 const ModuleHtmlPlugin = require('./modern-bundle-plugin')
 
 const config = require('./config')
@@ -170,7 +170,7 @@ if (!islegacy && !ismdlegacy) {
       },
       2
     ),
-    new WorkboxPlugin.GenerateSW({
+    new GenerateSW({
       cacheId: 'VUEPWA', // 设置前缀
       skipWaiting: true, // 强制等待中的 Service Worker 被激活
       clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
@@ -199,14 +199,14 @@ if (!islegacy && !ismdlegacy) {
           urlPattern: /.*\.(?:png|jpg|jpeg|webp|svg|gif)/,
           handler: 'cacheFirst', // 缓存优先
           options: {
-            plugins: [
-              {
-                expiration: {
-                  maxAgeSeconds: 24 * 60 * 60, // 最长缓存时间,
-                  maxEntries: 50 // 最大缓存图片数量
-                }
-              }
-            ]
+            cacheName: "img-cache",
+            expiration: {
+              maxEntries: 60,
+              maxAgeSeconds: 30 * 24 * 60 * 60 // 30 Days
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
           }
         },
         {
@@ -219,13 +219,13 @@ if (!islegacy && !ismdlegacy) {
 }
 
 //公共的preload设置
-if(!ismodern && !ismdlegacy){
+if (!ismodern && !ismdlegacy) {
   webpackBasesConfig.plugins.push(
-  new PreloadWebpackPlugin({
-    rel: 'prefetch',
-    include: 'asyncChunks'
-  })
-)
+    new PreloadWebpackPlugin({
+      rel: 'prefetch',
+      include: 'asyncChunks'
+    })
+  )
 }
 
 //首先构建异步文件，再构建预加载文件

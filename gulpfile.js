@@ -36,7 +36,7 @@ const { uglify } = require('rollup-plugin-uglify')            //- 压缩js
 const browserSync = require('browser-sync');                  //- 浏览器同步测试工具
 const del = require('del');                                   //- 删除文件功能模块
 const path = require("path");                                 //- 路径模块
-const workbox = require('workbox-build');                     //- PWA生成器
+const { generateSW } = require('workbox-build');                     //- PWA生成器
 const glob = require('glob');
 
 
@@ -127,7 +127,7 @@ function cssAuto() {
     }),
     pxtorem({
       rootValue: 100,            //- px/100转rem值，如果有不想转换的类在值后面改大写PX
-      propList:['*'],            //- 需要转换的属性
+      propList: ['*'],            //- 需要转换的属性
       // selectorBlackList: []      //- 不需要转换的属性
     })
   ];
@@ -390,55 +390,54 @@ gulp.task('revAll', gulp.series(gulp.parallel(revImg, revFont, revJs, revCss), r
 /*----------------------------------PWA---------------------------------------*/
 
 function ServiceWorkers() {
-  return workbox
-    .generateSW({
-      cacheId: 'GPWA', // 设置前缀
-      globDirectory: './' + y_Rz, //匹配根目录
-      globPatterns: ['**/*.*'], // 匹配的文件
-      globIgnores: ['service-worker.js'], // 忽略的文件
-      swDest: './' + y_Rz + '/service-worker.js', // 输出 Service worker 文件
-      clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
-      skipWaiting: true, // 强制等待中的 Service Worker 被激活
-      runtimeCaching: [
-        // 配置路由请求缓存 对应 workbox.routing.registerRoute
-        {
-          urlPattern: /.*\.js/, // 匹配文件
-          handler: 'networkFirst' // 网络优先
-        },
-        {
-          urlPattern: /.*\.css/,
-          handler: 'staleWhileRevalidate', // 缓存优先同时后台更新
-          options: {
-            // 这里可以设置 cacheName 和添加插件
-            plugins: [
-              {
-                cacheableResponse: {
-                  statuses: [0, 200]
-                }
+  return generateSW({
+    cacheId: 'GPWA', // 设置前缀
+    globDirectory: './' + y_Rz, //匹配根目录
+    globPatterns: ['**/*.*'], // 匹配的文件
+    globIgnores: ['service-worker.js'], // 忽略的文件
+    swDest: './' + y_Rz + '/service-worker.js', // 输出 Service worker 文件
+    clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
+    skipWaiting: true, // 强制等待中的 Service Worker 被激活
+    runtimeCaching: [
+      // 配置路由请求缓存 对应 workbox.routing.registerRoute
+      {
+        urlPattern: /.*\.js/, // 匹配文件
+        handler: 'networkFirst' // 网络优先
+      },
+      {
+        urlPattern: /.*\.css/,
+        handler: 'staleWhileRevalidate', // 缓存优先同时后台更新
+        options: {
+          // 这里可以设置 cacheName 和添加插件
+          plugins: [
+            {
+              cacheableResponse: {
+                statuses: [0, 200]
               }
-            ]
-          }
-        },
-        {
-          urlPattern: /.*\.(?:png|jpg|jpeg|webp|svg|gif)/,
-          handler: 'cacheFirst', // 缓存优先
-          options: {
-            plugins: [
-              {
-                expiration: {
-                  maxAgeSeconds: 24 * 60 * 60, // 最长缓存时间,
-                  maxEntries: 50 // 最大缓存图片数量
-                }
-              }
-            ]
-          }
-        },
-        {
-          urlPattern: /.*\.html/,
-          handler: 'networkFirst'
+            }
+          ]
         }
-      ]
-    })
+      },
+      {
+        urlPattern: /.*\.(?:png|jpg|jpeg|webp|svg|gif)/,
+        handler: 'cacheFirst', // 缓存优先
+        options: {
+          cacheName: "img-cache",
+          expiration: {
+            maxEntries: 60,
+            maxAgeSeconds: 30 * 24 * 60 * 60 // 30 Days
+          },
+          cacheableResponse: {
+            statuses: [0, 200]
+          }
+        }
+      },
+      {
+        urlPattern: /.*\.html/,
+        handler: 'networkFirst'
+      }
+    ]
+  })
     .then(() => {
       console.info('Service worker generation completed.');
     })
