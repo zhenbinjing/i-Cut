@@ -41,7 +41,7 @@ a {
     font-size: 60px;
     color: #57bb8a;
     margin: 0;
-    line-height: 2.4;
+    line-height: 2;
     font-weight: bold;
 }
 
@@ -100,7 +100,17 @@ button {
 }
 
 .router {
-    font-size: 50px
+  font-size: 50px
+}
+
+.router_img {
+  font-size: 0;
+  text-align: center;
+}
+
+.router_img img{
+  width: 200px;
+  height: 80px;
 }
 
 .vuex {

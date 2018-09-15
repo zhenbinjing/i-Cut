@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/v-dist/static/icons/apple-touch-icon-152x152.png"
   },
   {
-    "url": "/v-dist/static/css/index.48f481642cef6d48e057.css"
+    "url": "/v-dist/static/css/index.2b0edad13d53e5ebeeb7.css"
   },
   {
-    "url": "/v-dist/static/css/index.9c37481d34b9af62e509.css"
+    "url": "/v-dist/static/css/index.b3cb5f05e0cfb6452634.css"
   },
   {
-    "url": "/v-dist/static/js/1.9c37481d34b9af62e509.js"
+    "url": "/v-dist/static/js/1.b3cb5f05e0cfb6452634.js"
   },
   {
-    "url": "/v-dist/static/js/2.a5ca6fa8b2244b516fa7.js"
+    "url": "/v-dist/static/js/2.3ee6468fe0eaea09f7c8.js"
   },
   {
     "url": "/v-dist/static/js/chunk-vendors.a87a7f04d7594f9353ea.js"
@@ -23,19 +23,23 @@ self.__precacheManifest = [
     "url": "/v-dist/static/icons/android-chrome-192x192.png"
   },
   {
-    "url": "/v-dist/static/js/main.48f481642cef6d48e057.js"
+    "revision": "0ff1bc4d14e5c9abcacba7c600d97814",
+    "url": "/v-dist/static/icons/android-chrome-512x512.png"
+  },
+  {
+    "url": "/v-dist/static/js/main.2b0edad13d53e5ebeeb7.js"
+  },
+  {
+    "revision": "98b614336d9a12cb3f7bedb001da6fca",
+    "url": "/v-dist/static/icons/favicon-32x32.png"
   },
   {
     "revision": "4bb1a55479d61843b89a2fdafa7849b3",
     "url": "/v-dist/static/icons/favicon-16x16.png"
   },
   {
-    "revision": "0ff1bc4d14e5c9abcacba7c600d97814",
-    "url": "/v-dist/static/icons/android-chrome-512x512.png"
-  },
-  {
-    "revision": "98b614336d9a12cb3f7bedb001da6fca",
-    "url": "/v-dist/static/icons/favicon-32x32.png"
+    "revision": "f78c0251d6ddd56ee219a1830ded71b4",
+    "url": "/v-dist/static/icons/safari-pinned-tab.svg"
   },
   {
     "revision": "7a2fa8fc2aff558ca7b7e6d5dddb5315",
@@ -46,11 +50,11 @@ self.__precacheManifest = [
     "url": "/v-dist/static/icons/logo.png"
   },
   {
-    "revision": "f78c0251d6ddd56ee219a1830ded71b4",
-    "url": "/v-dist/static/icons/safari-pinned-tab.svg"
+    "revision": "e58f89802d653b57bd3f5aec37d04d71",
+    "url": "/v-dist/static/assets/hld.e58f898.png"
   },
   {
-    "revision": "49f9b0920eb6c4b688176db1afb4b925",
+    "revision": "6a9791d8ece1a225f294e1509224de00",
     "url": "/v-dist/index.html"
   }
 ];

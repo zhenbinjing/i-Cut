@@ -67,7 +67,7 @@ const webpackBasesConfig = {
           limit: 10000,
           name: config.file.urlLoaderName
         }
-      },
+      }
     ]
   },
   plugins: [

@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.23.2",
+  "version": "2.23.3",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -74,13 +74,14 @@
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "del": "^3.0.0",
-    "eslint": "^5.5.0",
+    "eslint": "^5.6.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-vue": "^4.7.1",
     "express": "^4.16.3",
+    "file-loader": "^2.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "fs-extra": "^7.0.0",
     "generate-json-webpack-plugin": "^0.3.1",
