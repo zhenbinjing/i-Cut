@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.24.0",
+  "version": "2.24.1",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -149,7 +149,7 @@
     "rollup-plugin-buble": "^0.19.2",
     "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-uglify": "^6.0.0",
+    "rollup-plugin-uglify": "^5.0.2",
     "sass-loader": "^7.1.0",
     "serve-favicon": "^2.5.0",
     "url-loader": "^1.1.1",
