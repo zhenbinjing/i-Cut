@@ -29,14 +29,14 @@ const revCollector = require('gulp-rev-collector');           //- 改为哈希�
 const htmlurl = require('gulp-html-url-prefix-custom');       //- html文件添加域名前缀
 const htmlimport = require('gulp-html-import');               //- html模板
 const critical = require('critical');                         //- 提取关键css
-const rollup = require('gulp-better-rollup')                  //- rollup
+const rollup = require('./build/gulp-better-rollup')          //- rollup
 const buble = require('rollup-plugin-buble')                  //- 转换es5
 const babel = require('rollup-plugin-babel')                  //- 转换es5
 const { uglify } = require('rollup-plugin-uglify')            //- 压缩js
 const browserSync = require('browser-sync');                  //- 浏览器同步测试工具
 const del = require('del');                                   //- 删除文件功能模块
 const path = require("path");                                 //- 路径模块
-const { generateSW } = require('workbox-build');                     //- PWA生成器
+const { generateSW } = require('workbox-build');              //- PWA生成器
 const glob = require('glob');
 
 

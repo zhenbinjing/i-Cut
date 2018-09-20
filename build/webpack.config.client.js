@@ -1,8 +1,17 @@
+const rm = require('rimraf')
 const merge = require('webpack-merge')
 const base = require('./webpack.config.base')
 const config = require('./config')
 
 const isLegacy = process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? 'promise-polyfill/src/polyfill' : '';
+const ismdlegacy = process.env.MDLEGACY === 'mdlegacy'
+
+if (!ismdlegacy) {
+  rm(config.route.dist, err => {
+    if (err) throw err
+    console.log("delete build file")
+  })
+}
 
 const configs = merge(base, {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',

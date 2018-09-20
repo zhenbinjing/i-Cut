@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js");
 
 workbox.core.setCacheNameDetails({prefix: "GPWA"});
 
@@ -26,7 +26,7 @@ workbox.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "4a29e7f1d95103603a3a2012ed3879d1"
+    "revision": "b86de38d70b1cea232daad497a269b02"
   },
   {
     "url": "manifest.json",
@@ -34,23 +34,23 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-c68d935553.css",
-    "revision": "3c4d53c533edd3db62de028c66df2324"
+    "revision": "1c03bf3924170415a141a51d1255b7b9"
   },
   {
-    "url": "static/font/stfyt-61dc5ddef4.woff",
-    "revision": "61dc5ddef4d2b2efb521d3c6a72ed783"
+    "url": "static/font/stfyt-13ab86810d.eot",
+    "revision": "13ab86810d84b4b1615b7b6347330fa1"
+  },
+  {
+    "url": "static/font/stfyt-58668917e0.woff",
+    "revision": "58668917e0ca7866d9eb6e964a4a5039"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
   },
   {
-    "url": "static/font/stfyt-dff939d664.eot",
-    "revision": "dff939d664aa3880bbd50df0c190b5af"
-  },
-  {
-    "url": "static/font/stfyt-eb779c4854.ttf",
-    "revision": "eb779c4854d8610fc96679b6c085ec2d"
+    "url": "static/font/stfyt-ba395591eb.ttf",
+    "revision": "ba395591eb204efa0966e7bf0e8505b6"
   },
   {
     "url": "static/img/a-9542fffc42.webp",
@@ -113,8 +113,8 @@ self.__precacheManifest = [
     "revision": "37c61b32d09e37d1a0aeffff080af06a"
   },
   {
-    "url": "static/js/index-dc8b1cf98e.js",
-    "revision": "dc8b1cf98ed58f45c4674b457e3b6748"
+    "url": "static/js/index-47f6b231e6.js",
+    "revision": "47f6b231e68d852a740167e5ad29232b"
   },
   {
     "url": "static/pwa/android-chrome-192x192.png",
