@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "1a034e64d80905128113e5272a5ab95e",
-    "url": "/v-dist/static/icons/apple-touch-icon-152x152.png"
+    "revision": "4bb1a55479d61843b89a2fdafa7849b3",
+    "url": "/v-dist/static/icons/favicon-16x16.png"
   },
   {
     "url": "/v-dist/static/css/index.e3fed522e66a11edaa2d.css"
@@ -17,7 +17,7 @@ self.__precacheManifest = [
     "url": "/v-dist/static/js/2.3ee6468fe0eaea09f7c8.js"
   },
   {
-    "url": "/v-dist/static/js/chunk-vendors.27df6cfe9fe979901cc4.js"
+    "url": "/v-dist/static/js/chunk-vendors.a87a7f04d7594f9353ea.js"
   },
   {
     "revision": "04094c981e19b077458ac5d414185112",
@@ -35,12 +35,12 @@ self.__precacheManifest = [
     "url": "/v-dist/static/icons/android-chrome-512x512.png"
   },
   {
-    "revision": "4bb1a55479d61843b89a2fdafa7849b3",
-    "url": "/v-dist/static/icons/favicon-16x16.png"
-  },
-  {
     "revision": "98b614336d9a12cb3f7bedb001da6fca",
     "url": "/v-dist/static/icons/favicon-32x32.png"
+  },
+  {
+    "revision": "1a034e64d80905128113e5272a5ab95e",
+    "url": "/v-dist/static/icons/apple-touch-icon-152x152.png"
   },
   {
     "revision": "7a2fa8fc2aff558ca7b7e6d5dddb5315",
@@ -54,7 +54,7 @@ self.__precacheManifest = [
     "url": "/v-dist/static/assets/hld.e58f898.png"
   },
   {
-    "revision": "a555201e68b7c5c4c091c16da92c236c",
+    "revision": "eb01c8c09263c5f5d4e4bcf1ca4d4959",
     "url": "/v-dist/index.html"
   }
 ];
