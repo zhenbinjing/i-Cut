@@ -7,7 +7,7 @@ import App from './App.vue';
 import router from './router';
 import store from './vuex/store';
 
-fastclick.attach(document.body)
+fastclick.attach(document.body);
 
 Vue.config.productionTip = false;
 Vue.use(Vuex);

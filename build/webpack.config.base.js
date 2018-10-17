@@ -222,18 +222,8 @@ if (!islegacy && !ismdlegacy && isProduction) {
   )
 }
 
-//公共的preload设置
-if (!ismodern && !ismdlegacy) {
-  webpackBasesConfig.plugins.push(
-    new PreloadWebpackPlugin({
-      rel: 'prefetch',
-      include: 'asyncChunks'
-    })
-  )
-}
-
 //首先构建异步文件，再构建预加载文件
-if (ismodern) {
+if (!ismodern && !ismdlegacy || ismodern) {
   webpackBasesConfig.plugins.push(
     new PreloadWebpackPlugin({
       rel: 'prefetch',
