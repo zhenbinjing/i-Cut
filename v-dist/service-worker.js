@@ -11,10 +11,10 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/v-dist/precache-manifest.346fd98ec9808c6af677343c09409f9d.js"
+  "/v-dist/precache-manifest.065150b4a11b681194894a280d978f67.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "VUEPWA"});
