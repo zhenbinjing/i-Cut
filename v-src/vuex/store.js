@@ -9,7 +9,7 @@ Vue.use(Vuex);
 
 const state = {
   router: {},
-  text: {},
+  text: '',
   count: '空'
 };
 

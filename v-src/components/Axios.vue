@@ -1,14 +1,13 @@
 ﻿<template>
   <div class="axios">
-    <div v-if=" TextData == '' ">
+    <div v-show=" TextData == '' ">
       <loading/>
     </div>
     <div
-      v-for="datas in TextData"
-      v-else
-      :key="datas.value"
+      v-for="textdatas in TextData"
+      :key="textdatas.value"
       class="axios_text">
-      {{ datas.value }}
+      {{ textdatas.value }}
     </div>
   </div>
 </template>
