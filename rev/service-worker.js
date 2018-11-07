@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 workbox.core.setCacheNameDetails({prefix: "GPWA"});
 
@@ -34,23 +34,23 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-c68d935553.css",
-    "revision": "aac19c839ffa2bf9c855ffdb30b6520f"
+    "revision": "cbdf2f206ef37e2fc16512f64fde29af"
   },
   {
-    "url": "static/font/stfyt-284b35bdd2.woff",
-    "revision": "284b35bdd2194079f9b9a998f32d193d"
+    "url": "static/font/stfyt-55bcafac5b.woff",
+    "revision": "55bcafac5b8be49d8d512a8d668c282e"
   },
   {
-    "url": "static/font/stfyt-630376d040.ttf",
-    "revision": "630376d04077b086a26b0c8a3f9af53f"
-  },
-  {
-    "url": "static/font/stfyt-a3d092fa6d.eot",
-    "revision": "a3d092fa6dfd4c2aef61e199478bf43e"
+    "url": "static/font/stfyt-7fe9506591.ttf",
+    "revision": "7fe95065912c1bfa3b34e66326053eb4"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
+  },
+  {
+    "url": "static/font/stfyt-e2157cddf1.eot",
+    "revision": "e2157cddf1fd60df313761537cbc8ac1"
   },
   {
     "url": "static/img/a-9542fffc42.webp",
