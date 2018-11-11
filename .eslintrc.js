@@ -24,13 +24,16 @@ module.exports = {
       // 禁止检查模块路径
       "import/no-unresolved": 0,
       // 不允许对 function 的参数进行重新赋值
-      "no-param-reassign": 0,   
+      "no-param-reassign": 0,
       // 禁止出现未使用过的变量
       "no-unused-vars": ["error", {
         "args": "none"
       }],
       "prettier/prettier": ["error", {
         "singleQuote": true
-      }]
+      }],
+      "vue/max-attributes-per-line" :"off",
+      "vue/html-indent": "off",
+      "vue/html-self-closing": "off"
     }
   }

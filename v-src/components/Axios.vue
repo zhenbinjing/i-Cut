@@ -1,17 +1,15 @@
 ﻿<template>
   <div class="axios">
-    <div v-show=" TextData == '' ">
-      <loading/>
-    </div>
+    <div v-show="TextData == ''"><loading /></div>
     <div
       v-for="textdatas in TextData"
       :key="textdatas.value"
-      class="axios_text">
+      class="axios_text"
+    >
       {{ textdatas.value }}
     </div>
   </div>
 </template>
-
 
 <script>
 import { mapGetters } from 'vuex';
@@ -33,7 +31,7 @@ export default {
 };
 </script>
 
-<!--添加 scoped 属性 css只作用在此组件上-->
+<!-- 添加 scoped 属性 css只作用在此组件上 -->
 <style>
 .axios {
   font-size: 0;

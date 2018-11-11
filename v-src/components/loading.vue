@@ -1,13 +1,13 @@
 <template>
   <div class="timeline-item">
     <div class="animated-background">
-      <div class="background-masker header-top"/>
-      <div class="background-masker header-left"/>
-      <div class="background-masker header-right"/>
-      <div class="background-masker header-bottom"/>
-      <div class="background-masker subheader-left"/>
-      <div class="background-masker subheader-right"/>
-      <div class="background-masker subheader-bottom"/>
+      <div class="background-masker header-top" />
+      <div class="background-masker header-left" />
+      <div class="background-masker header-right" />
+      <div class="background-masker header-bottom" />
+      <div class="background-masker subheader-left" />
+      <div class="background-masker subheader-right" />
+      <div class="background-masker subheader-bottom" />
     </div>
   </div>
 </template>

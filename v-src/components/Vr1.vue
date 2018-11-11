@@ -1,11 +1,7 @@
 <template>
   <div class="vue-router">
     {{ RouterData.value }}
-    <div class="router_img">
-      <img
-        src="../static/img/hld.png"
-        alt="">
-    </div>
+    <div class="router_img"><img src="../static/img/hld.png" alt="" /></div>
   </div>
 </template>
 

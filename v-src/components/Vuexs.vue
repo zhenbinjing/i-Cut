@@ -1,7 +1,7 @@
 <template>
   <div class="vuex">
-    <Display/>
-    <Increment/>
+    <Display />
+    <Increment />
   </div>
 </template>
 
