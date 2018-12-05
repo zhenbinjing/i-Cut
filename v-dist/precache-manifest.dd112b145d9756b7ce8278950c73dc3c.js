@@ -1,6 +1,6 @@
 self.__precacheManifest = [
   {
-    "url": "/v-dist/static/js/main.7f06eba17b3b381d320f.js"
+    "url": "/v-dist/static/js/main.a24cdda1a2037dec412c.js"
   },
   {
     "url": "/v-dist/static/js/chunk-vendors.be66a72296880d195b27.js"
@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/v-dist/static/js/2.2a826ec6f50a619920af.js"
   },
   {
-    "url": "/v-dist/static/css/index.7f06eba17b3b381d320f.css"
+    "url": "/v-dist/static/css/index.a24cdda1a2037dec412c.css"
   },
   {
     "url": "/v-dist/static/css/index.2a826ec6f50a619920af.css"
@@ -22,7 +22,7 @@ self.__precacheManifest = [
     "url": "/v-dist/static/assets/hld.e58f898.png"
   },
   {
-    "revision": "a378badfaa004f6f0c3eb4af4e91bb44",
+    "revision": "e9659464026897106fb182dc352c10cd",
     "url": "/v-dist/index.html"
   }
 ];

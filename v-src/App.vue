@@ -4,11 +4,11 @@
 
 <script>
 import axios from 'axios';
-import hello from '@/hello.vue';
-import router from '@/router.vue';
+import Hello from '@/hello.vue';
+import Router from '@/router.vue';
 
 export default {
-  components: { hello, router },
+  components: { Hello, Router },
   data() {
     return {
       data: {}
