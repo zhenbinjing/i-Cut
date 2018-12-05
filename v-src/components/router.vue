@@ -1,9 +1,9 @@
 <template>
   <div class="router">
     <div class="title">Ecosystem</div>
-    <router-link to="/vr1">router</router-link>
-    <router-link to="/axios">axios</router-link>
-    <router-link to="/vuex">vuex</router-link>
-    <router-view class="fz40" />
+    <RouterLink to="/vr1"> router </RouterLink>
+    <RouterLink to="/axios"> axios </RouterLink>
+    <RouterLink to="/vuex"> vuex </RouterLink>
+    <RouterView class="fz40" />
   </div>
 </template>

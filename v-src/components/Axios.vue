@@ -1,6 +1,6 @@
 ﻿<template>
   <div class="axios">
-    <div v-show="TextData == ''"><loading /></div>
+    <div v-show="TextData == ''"><Loading /></div>
     <div
       v-for="textdatas in TextData"
       :key="textdatas.value"
@@ -13,12 +13,12 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import loading from '@/loading.vue';
+import Loading from '@/loading.vue';
 
 const fetchTextData = store => store.dispatch('getText');
 
 export default {
-  components: { loading },
+  components: { Loading },
   prefetch: fetchTextData,
   computed: {
     ...mapGetters({

@@ -1,5 +1,5 @@
 <template>
-  <div id="app"><hello :data="data" /> <router /></div>
+  <div id="app"><Hello :data="data" /> <Router /></div>
 </template>
 
 <script>

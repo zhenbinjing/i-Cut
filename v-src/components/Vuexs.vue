@@ -1,8 +1,5 @@
 <template>
-  <div class="vuex">
-    <Display />
-    <Increment />
-  </div>
+  <div class="vuex"><Display /> <Increment /></div>
 </template>
 
 <script>
