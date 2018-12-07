@@ -52,7 +52,7 @@ const webpackBasesConfig = {
         test: /.(s(c|a)ss|css)$/i,
         use: [
           isProduction && !ismdlegacy ? MiniCssExtractPlugin.loader : "vue-style-loader",
-          "css-loader?minimize",
+          "css-loader",
           "postcss-loader",
           "sass-loader"
         ]
