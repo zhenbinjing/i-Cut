@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const chalk = require('chalk')
 const express = require('express')
+const LRU = require("lru-cache")
 const app = express()
 const { createBundleRenderer } = require('vue-server-renderer')
 const favicon = require('serve-favicon')
@@ -23,7 +24,7 @@ if (isProd) {
 
   renderer = createBundleRenderer(bundle, {
     template,
-    cache: require('lru-cache')({
+    cache: new LRU({
       max: 1000,
       maxAge: 1000 * 60 * 15
     })
