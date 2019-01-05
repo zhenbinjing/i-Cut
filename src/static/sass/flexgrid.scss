@@ -3,6 +3,7 @@ $w1: 751;
 $w2: 992;
 $w3: 1200;
 $nb: 100;
+$nb1:1%;
 $column: 12;
 
 @mixin bs {box-sizing: border-box;}
@@ -17,18 +18,18 @@ $column: 12;
 .row{display: flex; flex-flow:row wrap; @include mgsg;}
 
 [class*="col-"],[class*="grow-"]{@include pdsg;}
-[class*="col-"]{flex-basis: $nb + %; max-width: $nb + %;}
+[class*="col-"]{flex-basis: $nb*$nb1; max-width: $nb*$nb1;}
 
-.grid,.grid-fluid{display: grid; width: $nb + %;}
+.grid,.grid-fluid{display: grid; width: $nb*$nb1;}
 .container,.grid{width: 100%!important; max-width:12rem; @include mlra;}
 
 @mixin flexgrid ($grid){
 	@content;
 
 	//flex
-	@for $i from 1 through $column {.col-#{$grid}-#{$i}{flex-basis: $nb / $column * $i + %; max-width: $nb / $column * $i + %;}}
+	@for $i from 1 through $column {.col-#{$grid}-#{$i}{flex-basis: $nb / $column * $i*$nb1; max-width: $nb / $column * $i*$nb1;}}
 	@for $i from 0 through $column {.grow-#{$grid}-#{$i}{flex-grow: $i;} .shrink-#{$grid}-#{$i}{flex-shrink: $i;}}
-	@for $i from 0 through ($column - 1) {.offset-#{$grid}-#{$i}{margin-left: $nb / $column * $i + %;}}
+	@for $i from 0 through ($column - 1) {.offset-#{$grid}-#{$i}{margin-left: $nb / $column * $i*$nb1;}}
 
 	$fxd: (row, row),(rr, row-reverse),(cn, column),(cr,column-reverse );
 	@each $val, $direction in $fxd {

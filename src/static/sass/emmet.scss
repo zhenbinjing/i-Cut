@@ -7,7 +7,8 @@ $b:bottom; $c:center; $l:left; $r:right; $t:top;
 //边框样式//
 $dt:dotted; $ds:dashed; $sl:solid; $du:double;
 //常用数值//
-$nb0:0; $nb50:50%; $nb100:100%;
+$nb0:0; $nb1:1%; $nb50:50%; $nb100:100%;
+
 
 //======================================自然属性=======================================//
 
@@ -179,7 +180,7 @@ $nb: 100;
 	}
 
 	//宽度百分比//
-	@for $i from 0 through $nb {.w-#{$grid}-#{$i}p{width: $i + %;}}
+	@for $i from 0 through $nb {.w-#{$grid}-#{$i}p{width: $i*$nb1;}}
 
 	//行高倍数//
 	.lh-#{$grid}-0{line-height: 0;}
