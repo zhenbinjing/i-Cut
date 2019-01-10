@@ -1,1 +1,8 @@
-class TSA{render(){return"AAAA"}}let tsa=new TSA;tsa.render();
+class TSA {
+    render() {
+        return 'AAAA';
+    }
+}
+
+let tsa = new TSA();
+tsa.render();
