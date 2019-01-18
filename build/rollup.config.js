@@ -3,7 +3,7 @@ import babel from 'rollup-plugin-babel';
 import { uglify } from 'rollup-plugin-uglify';
 
 export default {
-  input: './test/es6/ts/main.js',
+  input: './test/es6/main.js',
   output: {
     file: './test/es5/main.js',
     format: 'iife'
