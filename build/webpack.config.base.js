@@ -51,10 +51,10 @@ const webpackBasesConfig = {
       {
         test: /.(s(c|a)ss|css)$/i,
         use: [
-          isProduction && !ismdlegacy ? MiniCssExtractPlugin.loader : "vue-style-loader",
-          "css-loader",
-          "postcss-loader",
-          "sass-loader"
+          isProduction && !ismdlegacy ? MiniCssExtractPlugin.loader : 'vue-style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
         ],
         exclude: /node_modules/
       },
@@ -63,11 +63,17 @@ const webpackBasesConfig = {
       },
       {
         test: /\.(png|jpg|svg|gif|webp|woff2|woff|eot|ttf|otf|mp4|webm|ogg|mp3|wav|flac|aac)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: config.file.urlLoaderName
-        }
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: config.file.urlLoaderName
+            }
+          }, {
+            loader: 'image-webpack-loader'
+          }
+        ]
       }
     ]
   },
@@ -166,7 +172,7 @@ if (!islegacy && !ismdlegacy && isProduction) {
           urlPattern: /.*\.(?:png|jpg|jpeg|webp|svg|gif)/,
           handler: 'cacheFirst', // 缓存优先
           options: {
-            cacheName: "img-cache",
+            cacheName: 'img-cache',
             expiration: {
               maxEntries: 60,
               maxAgeSeconds: 30 * 24 * 60 * 60 // 30 Days
