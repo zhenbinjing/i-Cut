@@ -34,7 +34,9 @@ module.exports = {
   },
   //文件
   file: {
-    urlLoaderName: 'static/assets/[name].[hash:7].[ext]',
+    imgUrlName: 'static/img/[name].[hash:7].[ext]',
+    videoUrlName: 'static/video/[name].[hash:7].[ext]',
+    fontUrlName: 'static/font/[name].[hash:7].[ext]',
     miniCssName: 'static/css/index.[chunkhash].css',
     outputJsName: process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? 'static/js/legacy.[name].[chunkhash].js' : 'static/js/[name].[chunkhash].js',
     devJsName: 'static/js/app.js',

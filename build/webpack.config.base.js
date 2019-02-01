@@ -62,19 +62,37 @@ const webpackBasesConfig = {
         test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|svg|gif|webp|woff2|woff|eot|ttf|otf|mp4|webm|ogg|mp3|wav|flac|aac)$/,
+        test: /\.(png|jpg|gif|webp|svg)$/,
         use: [
           {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: config.file.urlLoaderName
+              name: config.file.imgUrlName
             }
-          }, {
+          },
+          {
             loader: 'image-webpack-loader'
           }
         ]
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: config.file.fontUrlName
+        }
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: config.file.videoUrlName
+        }
       }
+
     ]
   },
   plugins: [

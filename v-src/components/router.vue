@@ -1,5 +1,5 @@
 <template>
-  <div class="router">
+  <div class="router amrcaxbc">
     <div class="title">Ecosystem</div>
     <RouterLink to="/vr1"> router </RouterLink>
     <RouterLink to="/axios"> axios </RouterLink>
