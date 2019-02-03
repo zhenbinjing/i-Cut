@@ -5,10 +5,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const PreloadWebpackPlugin = require('preload-webpack-plugin')
-const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const { GenerateSW } = require('workbox-webpack-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin')
 const ModuleHtmlPlugin = require('./modern-bundle-plugin')
 
 const config = require('./config')
@@ -223,19 +222,6 @@ if (!ismdlegacy) {
       as(entry) {
         if (/\.css$/.test(entry)) return 'style';
         return 'script';
-      }
-    }),
-    new HtmlCriticalWebpackPlugin({
-      base: config.route.dist,
-      src: 'index.html',
-      dest: 'index.html',
-      inline: true,
-      minify: true,
-      extract: true,
-      width: 500,
-      height: 200,
-      penthouse: {
-        blockJSRequests: false,
       }
     }),
     new CopyWebpackPlugin([
