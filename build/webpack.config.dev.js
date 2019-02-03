@@ -1,7 +1,7 @@
 ﻿const config = require('./config')
 const merge = require('webpack-merge') //合并执行任务
 const baseConfig = require('./webpack.config.base')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin'); // 这个插件能够更好的在终端看到webpack运行时的错误和警告等信息。可以提升开发体验。
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin') // 这个插件能够更好的在终端看到webpack运行时的错误和警告等信息。可以提升开发体验。
 const portfinder = require('portfinder'); // 查找一个未使用的端口
 const packageConfig = require('../package.json')
 
