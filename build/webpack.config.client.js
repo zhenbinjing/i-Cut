@@ -4,12 +4,13 @@ const base = require('./webpack.config.base')
 const config = require('./config')
 
 const isLegacy = process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? 'promise-polyfill/src/polyfill' : '';
-const ismdlegacy = process.env.MDLEGACY === 'mdlegacy'
+const isMdlegacy = process.env.MDLEGACY === 'mdlegacy'
+const isNodeenv = process.env.NODE_ENV === 'development'
 
-if (!ismdlegacy) {
+if (!isMdlegacy && !isNodeenv) {
   rm(config.route.dist, err => {
     if (err) throw err
-    console.log("delete build file")
+    console.log("delete build file \n")
   })
 }
 

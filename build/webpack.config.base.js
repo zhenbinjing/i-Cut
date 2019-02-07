@@ -13,13 +13,13 @@ const ModuleHtmlPlugin = require('./modern-bundle-plugin')
 const config = require('./config')
 
 const isProduction = process.env.NODE_ENV === 'production'
-const islegacy = process.env.LEGACY === 'legacy'
-const ismodern = process.env.MODERN === 'modern'
-const ismdlegacy = process.env.MDLEGACY === 'mdlegacy'
-const isvuessr = process.env.VUE_SSR === 'ssr'
+const isLegacy = process.env.LEGACY === 'legacy'
+const isModern = process.env.MODERN === 'modern'
+const isMdlegacy = process.env.MDLEGACY === 'mdlegacy'
+const isVuessr = process.env.VUE_SSR === 'ssr'
 
 //判断模式调用不同的路径前缀（pwa）
-const swpublicPath = isvuessr ? config.route.roots : config.route.publicPath
+const swpublicPath = isVuessr ? config.route.roots : config.route.publicPath
 
 const webpackBasesConfig = {
   externals: {}, //不打包的库
@@ -51,7 +51,7 @@ const webpackBasesConfig = {
       {
         test: /.(s(c|a)ss|css)$/i,
         use: [
-          isProduction && !ismdlegacy ? MiniCssExtractPlugin.loader : 'vue-style-loader',
+          isProduction && !isMdlegacy ? MiniCssExtractPlugin.loader : 'vue-style-loader',
           'css-loader',
           'postcss-loader',
           'sass-loader'
@@ -92,7 +92,6 @@ const webpackBasesConfig = {
           name: config.file.videoUrlName
         }
       }
-
     ]
   },
   plugins: [
@@ -111,7 +110,7 @@ const webpackBasesConfig = {
     new VueLoaderPlugin(),
     //区分不同模式采用不用配置
     new HtmlWebpackPlugin({
-      template: ismdlegacy ? config.route.dhtml : config.route.html,
+      template: isMdlegacy ? config.route.dhtml : config.route.html,
       inject: 'body',
       filename: 'index.html',
       minify: {
@@ -123,14 +122,14 @@ const webpackBasesConfig = {
         removeAttributeQuotes: true
       },
       chunksSortMode: 'dependency',
-      serviceWorkerJson: !islegacy && !ismdlegacy && isProduction ? `<link rel="manifest" href="` + swpublicPath + `manifest.json">` : '',
-      serviceWorkerLoader: !islegacy && !ismdlegacy && isProduction ? `<script>!function () { "use strict"; var a = Boolean("localhost" === window.location.hostname || "[::1]" === window.location.hostname || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)); window.addEventListener("load", function () { "serviceWorker" in navigator && ("https:" === window.location.protocol || a) && navigator.serviceWorker.register("` + swpublicPath + `service-worker.js").then(function (a) { a.onupdatefound = function () { if (navigator.serviceWorker.controller) { var b = a.installing; b.onstatechange = function () { switch (b.state) { case "installed": break; case "redundant": throw new Error("The installing service worker became redundant.") } } } } }).catch(function (a) { console.error("Error during service worker registration:", a) }) }) }();</script>` : ''
+      serviceWorkerJson: !isLegacy && !isMdlegacy && isProduction ? `<link rel="manifest" href="` + swpublicPath + `manifest.json">` : '',
+      serviceWorkerLoader: !isLegacy && !isMdlegacy && isProduction ? `<script>!function () { "use strict"; var a = Boolean("localhost" === window.location.hostname || "[::1]" === window.location.hostname || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)); window.addEventListener("load", function () { "serviceWorker" in navigator && ("https:" === window.location.protocol || a) && navigator.serviceWorker.register("` + swpublicPath + `service-worker.js").then(function (a) { a.onupdatefound = function () { if (navigator.serviceWorker.controller) { var b = a.installing; b.onstatechange = function () { switch (b.state) { case "installed": break; case "redundant": throw new Error("The installing service worker became redundant.") } } } } }).catch(function (a) { console.error("Error during service worker registration:", a) }) }) }();</script>` : ''
     })
   ]
 }
 
 //构建模式添加PWA功能
-if (!islegacy && !ismdlegacy && isProduction) {
+if (!isLegacy && !isMdlegacy && isProduction) {
   webpackBasesConfig.plugins.push(
     new GenerateJsonPlugin(config.file.manifestName,
       {
@@ -210,7 +209,7 @@ if (!islegacy && !ismdlegacy && isProduction) {
 }
 
 //除了回退模式外，其他模式先构建异步文件，再构建预加载文件，以及复制相关文件
-if (!ismdlegacy) {
+if (!isMdlegacy) {
   webpackBasesConfig.plugins.push(
     new PreloadWebpackPlugin({
       rel: 'prefetch',
@@ -234,10 +233,10 @@ if (!ismdlegacy) {
 }
 
 //首先构建v-src中的模板，在构建完后，基于这个基础，再二次构建目标的文件夹模板
-if (ismodern || ismdlegacy) {
+if (isModern || isMdlegacy) {
   webpackBasesConfig.plugins.push(
     new ModuleHtmlPlugin({
-      template: ismodern ? config.route.html : config.route.dhtml,
+      template: isModern ? config.route.html : config.route.dhtml,
       filename: 'index.html',
       inject: 'body'
     })
