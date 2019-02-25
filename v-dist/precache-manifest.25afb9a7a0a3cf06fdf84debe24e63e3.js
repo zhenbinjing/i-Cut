@@ -3,7 +3,7 @@ self.__precacheManifest = [
     "url": "/v-dist/static/js/main.f0c37e7c220f590e7041.js"
   },
   {
-    "url": "/v-dist/static/js/chunk-vendors.515c59dec0de6767fe60.js"
+    "url": "/v-dist/static/js/chunk-vendors.5fc5541d1353164da134.js"
   },
   {
     "url": "/v-dist/static/js/3.f101886f8f0e15ac3052.js"
@@ -22,7 +22,7 @@ self.__precacheManifest = [
     "url": "/v-dist/static/css/index.be2afb0ad0f46507f17e.css"
   },
   {
-    "revision": "1925809190b5d64b7ab31a77a7687fd2",
+    "revision": "bc19c6d753b70e8d35a505b0894b9358",
     "url": "/v-dist/index.html"
   }
 ];
