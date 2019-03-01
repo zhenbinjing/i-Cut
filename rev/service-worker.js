@@ -11,12 +11,12 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js");
 
 workbox.core.setCacheNameDetails({prefix: "GPWA"});
 
-workbox.skipWaiting();
-workbox.clientsClaim();
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -26,31 +26,31 @@ workbox.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "2f683dd2cda106d2b88e98038bfa88c8"
+    "revision": "d98fec8896a35ba28c07cdcbe13a0342"
   },
   {
     "url": "manifest.json",
-    "revision": "119892d240612cbc59fd994033533650"
+    "revision": "f54abb887837ec79b6b2b6740f708995"
   },
   {
     "url": "static/css/index-c68d935553.css",
-    "revision": "7b078ba2b9c01aea50ca022cfdd4a0a6"
+    "revision": "ede24ddb363e6142a7efb5827a95f448"
   },
   {
-    "url": "static/font/stfyt-3b238634f2.ttf",
-    "revision": "3b238634f2933eaf5e236560b379e287"
+    "url": "static/font/stfyt-70b438a0f0.ttf",
+    "revision": "70b438a0f0c7be43608d67d39d950283"
+  },
+  {
+    "url": "static/font/stfyt-7815e2f3a9.eot",
+    "revision": "7815e2f3a92be950688d31f312c3082f"
+  },
+  {
+    "url": "static/font/stfyt-7bba1b5834.woff",
+    "revision": "7bba1b58349e140cad8d01e6ea2ac0db"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
-  },
-  {
-    "url": "static/font/stfyt-c641c058c4.woff",
-    "revision": "c641c058c41436ffb9f81f033331cddd"
-  },
-  {
-    "url": "static/font/stfyt-f192478704.eot",
-    "revision": "f192478704d7931d917e3036ec27c551"
   },
   {
     "url": "static/img/a-831e026675.webp",
@@ -145,10 +145,9 @@ self.__precacheManifest = [
     "revision": "36d3bc5286e4fe2776af301e59fe8131"
   }
 ].concat(self.__precacheManifest || []);
-workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/.*\.js/, workbox.strategies.networkFirst(), 'GET');
-workbox.routing.registerRoute(/.*\.css/, workbox.strategies.staleWhileRevalidate({ plugins: [{ cacheableResponse: { statuses: [ 0, 200 ] } }] }), 'GET');
-workbox.routing.registerRoute(/.*\.(?:png|jpg|jpeg|webp|svg|gif)/, workbox.strategies.cacheFirst({ "cacheName":"img-cache", plugins: [new workbox.expiration.Plugin({"maxEntries":60,"maxAgeSeconds":2592000,"purgeOnQuotaError":false}), new workbox.cacheableResponse.Plugin({"statuses":[0,200]})] }), 'GET');
-workbox.routing.registerRoute(/.*\.html/, workbox.strategies.networkFirst(), 'GET');
+workbox.routing.registerRoute(/.*\.js/, new workbox.strategies.NetworkFirst(), 'GET');
+workbox.routing.registerRoute(/.*\.css/, new workbox.strategies.StaleWhileRevalidate({ plugins: [{ cacheableResponse: { statuses: [ 0, 200 ] } }] }), 'GET');
+workbox.routing.registerRoute(/.*\.(?:png|jpg|jpeg|webp|svg|gif)/, new workbox.strategies.CacheFirst({ "cacheName":"img-cache", plugins: [new workbox.expiration.Plugin({ maxEntries: 60, maxAgeSeconds: 2592000, purgeOnQuotaError: false }), new workbox.cacheableResponse.Plugin({ statuses: [ 0, 200 ] })] }), 'GET');
+workbox.routing.registerRoute(/.*\.html/, new workbox.strategies.NetworkFirst(), 'GET');

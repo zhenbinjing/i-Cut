@@ -169,11 +169,11 @@ if (!isLegacy && !isMdlegacy && isProduction) {
         // 配置路由请求缓存 对应 workbox.routing.registerRoute
         {
           urlPattern: /.*\.js/, // 匹配文件
-          handler: 'networkFirst' // 网络优先
+          handler: 'NetworkFirst' // 网络优先
         },
         {
           urlPattern: /.*\.css/,
-          handler: 'staleWhileRevalidate', // 缓存优先同时后台更新
+          handler: 'StaleWhileRevalidate', // 缓存优先同时后台更新
           options: {
             // 这里可以设置 cacheName 和添加插件
             plugins: [
@@ -187,7 +187,7 @@ if (!isLegacy && !isMdlegacy && isProduction) {
         },
         {
           urlPattern: /.*\.(?:png|jpg|jpeg|webp|svg|gif)/,
-          handler: 'cacheFirst', // 缓存优先
+          handler: 'CacheFirst', // 缓存优先
           options: {
             cacheName: 'img-cache',
             expiration: {
@@ -201,7 +201,7 @@ if (!isLegacy && !isMdlegacy && isProduction) {
         },
         {
           urlPattern: /.*\.html/,
-          handler: 'networkFirst'
+          handler: 'NetworkFirst'
         }
       ]
     })
