@@ -45,11 +45,10 @@ class ModuleHtmlPlugin {
       // 在 htmlWebpackPlugin 处理好模板的时候我们再处理下，把页面上 <script nomudule=""> 处理成 <script nomudule>，正则全局处理下
 
       compilation.hooks.htmlWebpackPluginAfterHtmlProcessing.tap(id, data => {
-        if (!ismdlegacy) {
-          //data.html = data.html.replace(/(<link as=script .*?)rel=preload>/g, '$1rel="modulepreload">')
-          data.html = data.html.replace(/(<link as=script .*?)rel=preload>/g, '$1rel="modulepreload" crossorigin="use-credentials">')
-        }
-        data.html = data.html.replace(/\snomodule="">/g, ' nomodule>')
+       
+        data.html = data.html
+        .replace(/(<link as=script .*?)rel=preload>/g, '$1rel="modulepreload" crossorigin="use-credentials">')
+        .replace(/\snomodule="">/g, ' nomodule>')
       })
     })
   }
