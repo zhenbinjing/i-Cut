@@ -46,8 +46,8 @@ class ModuleHtmlPlugin {
 
       compilation.hooks.htmlWebpackPluginAfterHtmlProcessing.tap(id, data => {
         if (!ismdlegacy) {
-          data.html = data.html.replace(/(<link as=script .*?)rel=preload>/g, '$1rel="modulepreload">')
-          //data.html = data.html.replace(/(<link as=script .*?)rel=preload>/g, '$1rel="modulepreload" crossorigin="use-credentials">')
+          //data.html = data.html.replace(/(<link as=script .*?)rel=preload>/g, '$1rel="modulepreload">')
+          data.html = data.html.replace(/(<link as=script .*?)rel=preload>/g, '$1rel="modulepreload" crossorigin="use-credentials">')
         }
         data.html = data.html.replace(/\snomodule="">/g, ' nomodule>')
       })
