@@ -11,15 +11,16 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.1.0/workbox-sw.js");
 
 importScripts(
-  "/v-dist/precache-manifest.82f38c800d79643190278bce5e8d62ac.js"
+  "/v-dist/precache-manifest.ee2508c015c5b10c6c3880ff62acb308.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "VUEPWA"});
 
 workbox.core.skipWaiting();
+
 workbox.core.clientsClaim();
 
 /**
