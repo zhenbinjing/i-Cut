@@ -4,7 +4,7 @@ const baseConfig = require('./webpack.config.base')
 //const PrerenderSPAPlugin = require('prerender-spa-plugin') // 页面静态化
 //const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 
-const isLegacy = process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? 'promise-polyfill/src/polyfill' : '';
+const isLegacy = process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? '@babel/polyfill' : '';
 
 webpackConfig = merge(baseConfig, {
   mode: 'production',

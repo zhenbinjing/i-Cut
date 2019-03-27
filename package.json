@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.29.7",
+  "version": "2.29.8",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -48,7 +48,6 @@
     "axios": "^0.18.0",
     "core-js": "^3.0.0",
     "fastclick": "^1.0.6",
-    "promise-polyfill": "8.1.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.2",
     "vue-server-renderer": "^2.6.10",
@@ -61,6 +60,7 @@
     "@babel/plugin-external-helpers": "^7.2.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/polyfill": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/runtime": "^7.4.2",
     "autoprefixer": "^9.5.0",
