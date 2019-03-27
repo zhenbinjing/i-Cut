@@ -67,7 +67,7 @@ const webpackBasesConfig = {
           {
             loader: 'url-loader',
             options: {
-              limit: 10000,
+              limit: 5120,
               name: config.file.imgUrlName
             }
           },
@@ -80,7 +80,7 @@ const webpackBasesConfig = {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 5120,
           name: config.file.fontUrlName
         }
       },
@@ -88,7 +88,7 @@ const webpackBasesConfig = {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/,
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 5120,
           name: config.file.videoUrlName
         }
       }
