@@ -10,7 +10,7 @@ const d_root = path.resolve(root, vdist)
 const s_root = path.resolve(root, vsrc)
 
 module.exports = {
-  //路径
+  //路径文件
   route: {
     roots: slash,
     dist: d_root,
@@ -24,15 +24,16 @@ module.exports = {
     serverapp: s_root + '/entry-server.js',
     ssrPath: slash + vdist + slash,
     ssrdex: slash + vdist,
-    ssrdexs: current + vdist
+    ssrdexs: current + vdist,
+    font: s_root + '/static/font/'
   },
-  //图标
+  //图标文件
   icon: {
     src: s_root + '/static/img/logo.png',
     pwaicon1: 'static/icons/android-chrome-192x192.png',
     pwaicon2: 'static/icons/android-chrome-512x512.png'
   },
-  //文件
+  //文件命名
   file: {
     imgUrlName: 'static/img/[name].[hash:7].[ext]',
     videoUrlName: 'static/video/[name].[hash:7].[ext]',

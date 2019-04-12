@@ -10,10 +10,16 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2
     box-sizing: border-box
 }
 
-@font-face {
-	font-family: 'amrcaxbc';
-	src: url('./static/font/amrcaxbc.ttf') format('truetype')
- }
+  @font-face {
+    font-family: 'amrcaxbc';
+    src: url('./static/font/amrcaxbc.eot');
+    src: url('./static/font/amrcaxbc.eot?#iefix') format('embedded-opentype'),
+         url('./static/font/amrcaxbc.woff') format('woff'),
+         url('./static/font/amrcaxbc.ttf') format('truetype'),
+         url('./static/font/amrcaxbc.svg#FontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
 .amrcaxbc{ font-family: 'amrcaxbc'; }
 
 html,

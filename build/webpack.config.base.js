@@ -63,6 +63,7 @@ const webpackBasesConfig = {
       },
       {
         test: /\.(png|jpg|gif|webp|svg)$/,
+        exclude: [config.route.font], //排除字体中的文件，防止冲突。
         use: [
           {
             loader: 'url-loader',
@@ -77,7 +78,7 @@ const webpackBasesConfig = {
         ]
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 5120,
