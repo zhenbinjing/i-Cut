@@ -8,7 +8,7 @@ const isLegacy = process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'md
 
 webpackConfig = merge(baseConfig, {
   mode: 'production',
-  devtool: '#source-map',
+  devtool: 'cheap-module-source-map',
   entry: [],
   output: {
     path: config.route.dist,  // 出口目录

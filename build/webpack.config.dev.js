@@ -10,6 +10,7 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseConfig, {
   mode: 'development',
+  devtool: 'cheap-module-eval-source-map',
   entry: {
     app: config.route.app // 入口文件路径
   },
@@ -21,6 +22,8 @@ const devWebpackConfig = merge(baseConfig, {
   devServer: {
     //是否不输出日记
     quiet: true,
+    //打开浏览器
+    open: true,
     host: HOST || 'localhost',
     port: PORT || 8080,
     publicPath: config.route.publicPath

@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 workbox.core.setCacheNameDetails({prefix: "GPWA"});
 
@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "d98fec8896a35ba28c07cdcbe13a0342"
+    "revision": "f51c800d74dec9242d95a72146bb8351"
   },
   {
     "url": "manifest.json",
@@ -35,19 +35,19 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-c68d935553.css",
-    "revision": "38dfc2a4ca1fab97ff2541cf9f691fcb"
+    "revision": "277c048fc1c993ed4dc979e4801fd3b2"
   },
   {
-    "url": "static/font/stfyt-33aac7e449.eot",
-    "revision": "33aac7e4490df158ad53fc5420487afb"
+    "url": "static/font/stfyt-06180433e9.ttf",
+    "revision": "06180433e96964221fe63d7db907e0d5"
   },
   {
-    "url": "static/font/stfyt-887232547e.woff",
-    "revision": "887232547e2285e0f259019d2870406c"
+    "url": "static/font/stfyt-126043c854.woff",
+    "revision": "126043c854ec11d748814939e1eedb35"
   },
   {
-    "url": "static/font/stfyt-9c19179607.ttf",
-    "revision": "9c19179607698b1aac101d5062b0c1b3"
+    "url": "static/font/stfyt-3a5ccecd39.eot",
+    "revision": "3a5ccecd3952f9a64e89a7f269efe1bd"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
@@ -82,32 +82,32 @@ self.__precacheManifest = [
     "revision": "041be88fc8ab72119c715e012aceb719"
   },
   {
-    "url": "static/img/rwd/bgrwd@1x-39a2865f77.webp",
-    "revision": "39a2865f7754afe0a5a84c54e2427f20"
+    "url": "static/img/rwd/bgrwd@1x-6f349ffd99.webp",
+    "revision": "6f349ffd99e780e7f1bf19777179f7ea"
   },
   {
-    "url": "static/img/rwd/bgrwd@2x-a80b1d8db8.webp",
-    "revision": "a80b1d8db871824da3b4a0c4d4d452c6"
+    "url": "static/img/rwd/bgrwd@2x-bc5c589cfe.webp",
+    "revision": "bc5c589cfe137493dd91b4a291f8ed93"
   },
   {
-    "url": "static/img/rwd/bgrwd@3x-9f76a6f10d.webp",
-    "revision": "9f76a6f10d7b71bf68e79bd8c98a5265"
+    "url": "static/img/rwd/bgrwd@3x-9f42f74d3d.webp",
+    "revision": "9f42f74d3dad70bb8132f8de9114c3f0"
   },
   {
     "url": "static/img/rwd/rwd-041be88fc8.webp",
     "revision": "041be88fc8ab72119c715e012aceb719"
   },
   {
-    "url": "static/img/rwd/rwd@1x-39a2865f77.webp",
-    "revision": "39a2865f7754afe0a5a84c54e2427f20"
+    "url": "static/img/rwd/rwd@1x-6f349ffd99.webp",
+    "revision": "6f349ffd99e780e7f1bf19777179f7ea"
   },
   {
-    "url": "static/img/rwd/rwd@2x-a80b1d8db8.webp",
-    "revision": "a80b1d8db871824da3b4a0c4d4d452c6"
+    "url": "static/img/rwd/rwd@2x-bc5c589cfe.webp",
+    "revision": "bc5c589cfe137493dd91b4a291f8ed93"
   },
   {
-    "url": "static/img/rwd/rwd@3x-9f76a6f10d.webp",
-    "revision": "9f76a6f10d7b71bf68e79bd8c98a5265"
+    "url": "static/img/rwd/rwd@3x-9f42f74d3d.webp",
+    "revision": "9f42f74d3dad70bb8132f8de9114c3f0"
   },
   {
     "url": "static/img/svg/sprite-25e7e4a971.webp",

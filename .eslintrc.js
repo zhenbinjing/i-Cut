@@ -32,7 +32,14 @@ module.exports = {
       "prettier/prettier": ["error", {
         "singleQuote": true
       }],
-      "vue/max-attributes-per-line" :"off",
+      //强制每行的最大属性数
+      "vue/max-attributes-per-line" :["error", {
+        "singleline": 4, //单行的时候，最多三个属性
+        "multiline": { //多行的时候，最多一个属性
+          "max": 1,
+          "allowFirstLine": true  //多行时，属性对齐
+        }
+      }],
       "vue/html-indent": "off",
       "vue/html-self-closing": "off",
       "vue/singleline-html-element-content-newline": "off"
