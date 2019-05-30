@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "f51c800d74dec9242d95a72146bb8351"
+    "revision": "89ac3b56f32faa916f54d1467d68f578"
   },
   {
     "url": "manifest.json",
@@ -35,19 +35,19 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-c68d935553.css",
-    "revision": "277c048fc1c993ed4dc979e4801fd3b2"
+    "revision": "1d1bfccc78698faa3cca02c397bc0fbb"
   },
   {
-    "url": "static/font/stfyt-06180433e9.ttf",
-    "revision": "06180433e96964221fe63d7db907e0d5"
+    "url": "static/font/stfyt-2ecf1c98ca.woff",
+    "revision": "2ecf1c98caf46025f650a8335305f6b6"
   },
   {
-    "url": "static/font/stfyt-126043c854.woff",
-    "revision": "126043c854ec11d748814939e1eedb35"
+    "url": "static/font/stfyt-3364433fac.eot",
+    "revision": "3364433fac67eb1ed0aec3cf61c97e50"
   },
   {
-    "url": "static/font/stfyt-3a5ccecd39.eot",
-    "revision": "3a5ccecd3952f9a64e89a7f269efe1bd"
+    "url": "static/font/stfyt-7d15e20a87.ttf",
+    "revision": "7d15e20a87b06b4564523b17b3bfcc15"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
