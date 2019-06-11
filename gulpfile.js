@@ -123,8 +123,9 @@ gulp.task('svgSprite', gulp.series(svgDel, svgDeal, svgMin, svgCss));
 function cssAuto() {
   var processors = [
     autoprefixer({
-      browsers: 'last 1 version'
-    }),
+			cascade: true,                                    //- 是否美化属性值 默认：true 
+			remove: true                                       //- 是否去掉不必要的前缀 默认：true 
+		}),
     pxtorem({
       rootValue: 100,            //- px/100转rem值，如果有不想转换的类在值后面改大写PX
       propList: ['*'],            //- 需要转换的属性

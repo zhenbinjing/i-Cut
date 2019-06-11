@@ -106,7 +106,7 @@ const webpackBasesConfig = {
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/,
       cssProcessor: require('cssnano'),
-      cssProcessorOptions: { discardComments: { removeAll: true } }
+      cssProcessorOptions: isProduction ? { safe: true, map: { inline: false } }: { safe: true,autoprefixer: {remove: false}}
     }),
     new VueLoaderPlugin(),
     //区分不同模式采用不用配置

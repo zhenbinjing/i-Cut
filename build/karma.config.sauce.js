@@ -13,8 +13,15 @@ function createCustomLauncher(browser, platform, version) {
 
 var customLaunchers = {
   // Mobile
-  sl_ios_9_safari: createCustomLauncher('iphone', null, '9.3'),
-  sl_android_4_4: createCustomLauncher('android', null, '4.4'),
+  //sl_ios_9_7_safari: createCustomLauncher('safari','iphone'),
+  sl_iphone_11_3: {
+    base: 'SauceLabs',
+    browserName: 'Safari',
+    deviceName: 'iPhone Simulator',
+    platformVersion: '11.3',
+    platformName: 'iOS',
+  },
+  sl_android_5_1: createCustomLauncher('android', null, '5.1'),
   // pc
   sl_mac_safari: createCustomLauncher('safari', 'OS X 10.11'),
   sl_mac_firefox: createCustomLauncher('firefox', 'Windows 7'),
