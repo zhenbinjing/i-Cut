@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7d9e8d507198f0b830ab5293bb047f46",
+    "revision": "218b2cfbc3724541d84b937c2a734440",
     "url": "/v-dist/index.html"
   },
   {
@@ -8,10 +8,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/v-dist/manifest.json"
   },
   {
-    "url": "/v-dist/static/css/index.57dc28c3131899834fdf.css"
+    "url": "/v-dist/static/css/index.8ac62025cd67e0d34b3e.css"
   },
   {
-    "url": "/v-dist/static/css/index.9d93ea44ba7e4f1a6213.css"
+    "url": "/v-dist/static/css/index.ddfd506d19ba5e178e0f.css"
   },
   {
     "revision": "3d9ceafd6db69a5e82a079b12e5a1bd3",
@@ -34,7 +34,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/v-dist/static/img/hld.27ffe07.png"
   },
   {
-    "url": "/v-dist/static/js/2.57dc28c3131899834fdf.js"
+    "url": "/v-dist/static/js/2.8ac62025cd67e0d34b3e.js"
   },
   {
     "url": "/v-dist/static/js/3.dd45013b8ade5d307575.js"
@@ -43,6 +43,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/v-dist/static/js/chunk-vendors.c6c30e22d59ce069441b.js"
   },
   {
-    "url": "/v-dist/static/js/main.9d93ea44ba7e4f1a6213.js"
+    "url": "/v-dist/static/js/main.ddfd506d19ba5e178e0f.js"
   }
 ]);
