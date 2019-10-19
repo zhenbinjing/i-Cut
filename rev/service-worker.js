@@ -35,23 +35,23 @@ self.__precacheManifest = [
   },
   {
     "url": "static/css/index-a50df32d53.css",
-    "revision": "519c62d73c18bd4c1ecd6337c085ac4f"
+    "revision": "102f25af2c70272c2c1c7217ab17560f"
   },
   {
-    "url": "static/font/stfyt-5991c64c67.ttf",
-    "revision": "5991c64c6750a7d0a329f58da5d90243"
+    "url": "static/font/stfyt-02731efe92.woff",
+    "revision": "02731efe920985be0d2f86f040df5b3f"
   },
   {
-    "url": "static/font/stfyt-5e2fe82b81.woff",
-    "revision": "5e2fe82b816e5261b7a94f6183c66ec1"
-  },
-  {
-    "url": "static/font/stfyt-7aa7bf4914.eot",
-    "revision": "7aa7bf49147da2597c8b8e2ae58f0033"
+    "url": "static/font/stfyt-1c993046cf.ttf",
+    "revision": "1c993046cf5b97e0d4f89d2654cd3d7f"
   },
   {
     "url": "static/font/stfyt-b99b89d949.svg",
     "revision": "b99b89d94951632a1e676a4bbd48dfbe"
+  },
+  {
+    "url": "static/font/stfyt-d7d84ce4d5.eot",
+    "revision": "d7d84ce4d56f0b4794c7ec8e8c74eefd"
   },
   {
     "url": "static/img/a-831e026675.webp",
