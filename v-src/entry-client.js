@@ -1,6 +1,6 @@
-import { app, router, store } from './main';
+import { app, router, store } from "./main";
 
-import fastclick from 'fastclick';
+import fastclick from "fastclick";
 fastclick.attach(document.body);
 
 if (window.__INITIAL_STATE__) {
@@ -35,5 +35,5 @@ router.onReady(() => {
       .catch(next);
   });
 
-  app.$mount('#app');
+  app.$mount("#app");
 });

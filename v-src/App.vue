@@ -3,9 +3,9 @@
 </template>
 
 <script>
-import axios from 'axios';
-import Hello from '@/hello.vue';
-import Router from '@/router.vue';
+import axios from "axios";
+import Hello from "@/hello.vue";
+import Router from "@/router.vue";
 
 export default {
   components: { Hello, Router },
@@ -15,7 +15,7 @@ export default {
     };
   },
   created() {
-    axios.get('https://i-cut.cc/axios.json').then(res => {
+    axios.get("https://i-cut.cc/axios.json").then(res => {
       this.data = res.data.logo;
     });
   }
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style>
-@import './static/css/index.css';
+@import "./static/css/index.css";
 </style>
 <style lang="sass" rel="stylesheets/sass">
 @import './static/css/sass.scss';

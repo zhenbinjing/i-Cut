@@ -1,4 +1,4 @@
-import { app, router, store } from './main';
+import { app, router, store } from "./main";
 
 export default context => {
   // set router's location
