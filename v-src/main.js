@@ -1,11 +1,11 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import fastclick from 'fastclick';
+import Vue from "vue";
+import Vuex from "vuex";
+import fastclick from "fastclick";
 // import { sync } from 'vuex-router-sync'; // 清除注释开启服务端渲染
 
-import App from './App.vue';
-import router from './router';
-import store from './vuex/store';
+import App from "./App.vue";
+import router from "./router";
+import store from "./vuex/store";
 
 fastclick.attach(document.body);
 
@@ -14,7 +14,7 @@ Vue.use(Vuex);
 // sync(store, router); // 清除注释开启服务端渲染
 
 const app = new Vue({
-  el: '#app', // 注释掉开启服务端渲染
+  el: "#app", // 注释掉开启服务端渲染
   router,
   store,
   ...App
