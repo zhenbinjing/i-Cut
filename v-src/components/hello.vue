@@ -13,10 +13,10 @@ export default {
       type: Object,
       default() {
         return {
-          avatar: ""
+          avatar: "",
         }; // 默认值
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>

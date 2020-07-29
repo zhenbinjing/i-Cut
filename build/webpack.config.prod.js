@@ -1,5 +1,5 @@
 ﻿const config = require('./config')
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
 //const PrerenderSPAPlugin = require('prerender-spa-plugin') // 页面静态化
 //const Renderer = PrerenderSPAPlugin.PuppeteerRenderer

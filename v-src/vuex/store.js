@@ -10,7 +10,7 @@ Vue.use(Vuex);
 const state = {
   router: {},
   text: "",
-  count: "空"
+  count: "空",
 };
 
 // 整合初始状态和变更函数，我们就得到了我们所需的 store
@@ -19,5 +19,5 @@ export default new Vuex.Store({
   state,
   getters,
   actions,
-  mutations
+  mutations,
 });

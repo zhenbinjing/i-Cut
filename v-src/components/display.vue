@@ -8,6 +8,6 @@
 import { mapGetters } from "vuex";
 
 export default {
-  computed: mapGetters(["getCount"])
+  computed: mapGetters(["getCount"]),
 };
 </script>

@@ -17,7 +17,7 @@ const app = new Vue({
   el: "#app", // 注释掉开启服务端渲染
   router,
   store,
-  ...App
+  ...App,
 });
 
 export { app, router, store };

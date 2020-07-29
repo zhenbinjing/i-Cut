@@ -11,14 +11,14 @@ export default {
   components: { Hello, Router },
   data() {
     return {
-      data: {}
+      data: {},
     };
   },
   created() {
-    axios.get("https://i-cut.cc/axios.json").then(res => {
+    axios.get("https://i-cut.cc/axios.json").then((res) => {
       this.data = res.data.logo;
     });
-  }
+  },
 };
 </script>
 

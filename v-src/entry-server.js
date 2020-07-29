@@ -1,13 +1,13 @@
 import { app, router, store } from "./main";
 
-export default context => {
+export default (context) => {
   // set router's location
   router.push(context.url);
   // call prefetch hooks on components matched by the route
   const s = Date.now();
 
   return Promise.all(
-    router.getMatchedComponents().map(component => {
+    router.getMatchedComponents().map((component) => {
       if (component.prefetch) {
         return component.prefetch(store);
       }

@@ -224,12 +224,12 @@ if (!isMdlegacy) {
         return 'script';
       }
     }),
-    new CopyWebpackPlugin([
-      {
+    new CopyWebpackPlugin({
+      patterns:[{
         from: config.plugin.copy.from,
         to: config.plugin.copy.to
-      }
-    ])
+      }]
+    })
   )
 }
 

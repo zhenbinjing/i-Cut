@@ -7,6 +7,6 @@ import Display from "@/display.vue";
 import Increment from "@/increment.vue";
 
 export default {
-  components: { Display, Increment }
+  components: { Display, Increment },
 };
 </script>

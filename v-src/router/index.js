@@ -18,20 +18,20 @@ export default new VueRouter({
   routes: [
     {
       path: "/",
-      redirect: "/vr1"
+      redirect: "/vr1",
     },
     {
       path: "/vr1",
-      component: Vr1
+      component: Vr1,
     },
     {
       path: "/axios",
-      component: Axios
+      component: Axios,
     },
     {
       path: "/vuex",
-      component: Vuexs
-    }
+      component: Vuexs,
+    },
   ],
-  linkActiveClass: "active"
+  linkActiveClass: "active",
 });
