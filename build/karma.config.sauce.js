@@ -14,20 +14,20 @@ function createCustomLauncher(browser, platform, version) {
 var customLaunchers = {
   // Mobile
   //sl_ios_9_7_safari: createCustomLauncher('safari','iphone'),
-  sl_iphone_11_3: {
-    base: 'SauceLabs',
-    browserName: 'Safari',
-    deviceName: 'iPhone Simulator',
-    platformVersion: '11.3',
-    platformName: 'iOS',
-  },
-  sl_android_5_1: createCustomLauncher('android', null, '5.1'),
+  // sl_iphone_11_3: {
+  //   base: 'SauceLabs',
+  //   browserName: 'Safari',
+  //   deviceName: 'iPhone Simulator',
+  //   platformVersion: '11.3',
+  //   platformName: 'iOS',
+  // },
+  //sl_android_5_1: createCustomLauncher('android', null, '5.1'),
   // pc
-  sl_mac_safari: createCustomLauncher('safari', 'OS X 10.11'),
-  sl_mac_firefox: createCustomLauncher('firefox', 'Windows 7'),
-  sl_mac_chrome: createCustomLauncher('chrome', 'Windows 7'),
-  sl_ie_11: createCustomLauncher('internet explorer', 'Windows 7', '11'),
-  sl_edge: createCustomLauncher('MicrosoftEdge', 'Windows 10')
+  // sl_mac_safari: createCustomLauncher('safari', 'OS X 10.11', '9.0' ),
+   sl_mac_firefox: createCustomLauncher('firefox', 'Windows 7'),
+   sl_mac_chrome: createCustomLauncher('chrome', 'Windows 7'),
+   sl_ie_11: createCustomLauncher('internet explorer', 'Windows 7', '11'),
+   sl_edge: createCustomLauncher('MicrosoftEdge', 'Windows 10')
 
 };
 
