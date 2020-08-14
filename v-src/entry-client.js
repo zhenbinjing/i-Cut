@@ -1,8 +1,5 @@
 import { app, router, store } from "./main";
 
-import fastclick from "fastclick";
-fastclick.attach(document.body);
-
 if (window.__INITIAL_STATE__) {
   store.replaceState(window.__INITIAL_STATE__);
 }
