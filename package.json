@@ -132,7 +132,7 @@
     "merge-stream": "^2.0.0",
     "mini-css-extract-plugin": "^0.10.0",
     "mocha": "^8.0.1",
-    "node-notifier": "^7.0.2",
+    "node-notifier": "^8.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "ora": "^5.0.0",
     "portfinder": "^1.0.25",
