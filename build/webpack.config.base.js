@@ -70,7 +70,8 @@ const webpackBasesConfig = {
             loader: 'url-loader',
             options: {
               limit: 5120,
-              name: config.file.imgUrlName
+              name: config.file.imgUrlName,
+              esModule:false
             }
           },
           {
@@ -83,7 +84,8 @@ const webpackBasesConfig = {
         loader: 'url-loader',
         options: {
           limit: 5120,
-          name: config.file.fontUrlName
+          name: config.file.fontUrlName,
+          esModule:false
         }
       },
       {
@@ -91,7 +93,8 @@ const webpackBasesConfig = {
         loader: 'url-loader',
         options: {
           limit: 5120,
-          name: config.file.videoUrlName
+          name: config.file.videoUrlName,
+          esModule:false
         }
       }
     ]
