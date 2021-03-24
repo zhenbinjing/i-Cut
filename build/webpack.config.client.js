@@ -1,5 +1,5 @@
 const rm = require('rimraf')
-const merge = require('webpack-merge')
+const  { merge } = require('webpack-merge')
 const base = require('./webpack.config.base')
 const config = require('./config')
 
