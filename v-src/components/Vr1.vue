@@ -8,15 +8,15 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
-const fetchRouterlData = (store) => store.dispatch("getRouter");
+const fetchRouterlData = (store) => store.dispatch('getRouter');
 
 export default {
   prefetch: fetchRouterlData,
   computed: {
     ...mapGetters({
-      RouterData: "getRouter",
+      RouterData: 'getRouter',
     }),
   },
   mounted() {
