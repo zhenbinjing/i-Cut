@@ -20,11 +20,6 @@ module.exports = {
     components: s_root + '/components',
     html: s_root + '/index.html',
     dhtml: d_root + '/index.html',
-    clientapp: s_root + '/entry-client.js',
-    serverapp: s_root + '/entry-server.js',
-    ssrPath: slash + vdist + slash,
-    ssrdex: slash + vdist,
-    ssrdexs: current + vdist,
     font: s_root + '/static/font/'
   },
   //图标文件
