@@ -9,8 +9,9 @@ const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseConfig, {
+  target: 'web',
   mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval',
   entry: {
     app: config.route.app // 入口文件路径
   },

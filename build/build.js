@@ -5,15 +5,12 @@ const webpack = require('webpack')
 const webpackConfig = require('./webpack.config.prod')
 const config = require('./config')
 
-const ismodern = process.env.MODERN === 'modern'
-const ismdlegacy = process.env.MDLEGACY === 'mdlegacy'
 
-if (!ismdlegacy) {
-  rm(config.route.dist, err => {
+rm(config.route.dist, err => {
     if (err) throw err
     console.log("delete build file")
-  })
-}
+})
+
 
 const spinner = ora('building for production...')
 spinner.start()
@@ -34,20 +31,10 @@ webpack(webpackConfig, (err, stats) => {
     process.exit(1)
   }
 
-  if (ismodern) {
-    console.log(chalk.yellow('  Build complete ES2015+.\n'))
-  }
-
-  if (ismdlegacy) {
-    console.log(chalk.yellow('  Build complete legacy.\n'))
-    console.log(chalk.yellow('  Build complete modern mode.\n'))
-  }
-
-  if (!ismodern && !ismdlegacy) {
     console.log(chalk.cyan('  Build complete.\n'))
     console.log(chalk.yellow(
       '  Tip: built files are meant to be served over an HTTP server.\n' +
       '  Opening index.html over file:// won\'t work.\n'
     ))
-  }
+
 })

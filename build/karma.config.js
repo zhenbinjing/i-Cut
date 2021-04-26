@@ -14,7 +14,7 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '../test/e2e/index.js'
+      {pattern : '../test/e2e/index.js',  watched: false}
     ],
     // list of files to exclude
     exclude: [],
@@ -41,7 +41,7 @@ module.exports = function (config) {
         }, {
           test: /\.js$/,
           loader: 'babel-loader',
-          query: { presets: ['@babel/preset-env'] }
+         // query: { presets: ['@babel/preset-env'] }
         }]
       }
     },

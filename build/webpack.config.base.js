@@ -1,25 +1,21 @@
 ﻿const glob = require('glob-all')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+//const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const PreloadWebpackPlugin = require('preload-webpack-plugin')
 const GenerateJsonPlugin = require('generate-json-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { GenerateSW } = require('workbox-webpack-plugin')
-const ModuleHtmlPlugin = require('./modern-bundle-plugin')
 
 const config = require('./config')
 
 const isProduction = process.env.NODE_ENV === 'production'
-const isLegacy = process.env.LEGACY === 'legacy'
-const isModern = process.env.MODERN === 'modern'
-const isMdlegacy = process.env.MDLEGACY === 'mdlegacy'
-const isVuessr = process.env.VUE_SSR === 'ssr'
+
 
 //判断模式调用不同的路径前缀（pwa）
-const swpublicPath = isVuessr ? config.route.roots : config.route.publicPath
+const swpublicPath =  config.route.publicPath
 
 const webpackBasesConfig = {
   externals: {}, //不打包的库
@@ -51,7 +47,7 @@ const webpackBasesConfig = {
       {
         test: /.(s(c|a)ss|css)$/i,
         use: [
-          isProduction && !isMdlegacy ? MiniCssExtractPlugin.loader : 
+          isProduction ? MiniCssExtractPlugin.loader : 
           'style-loader',
           'css-loader',
           'postcss-loader',
@@ -99,6 +95,15 @@ const webpackBasesConfig = {
       }
     ]
   },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin({
+        minify: CssMinimizerPlugin.cleanCssMinify,
+        minify: CssMinimizerPlugin.cssoMinify
+      }),
+    ],
+  },
   plugins: [
     //删除没用的css
     new PurgecssPlugin({
@@ -107,15 +112,15 @@ const webpackBasesConfig = {
     new MiniCssExtractPlugin({
       filename: config.file.miniCssName
     }),
-    new OptimizeCssAssetsPlugin({
-      assetNameRegExp: /\.css$/,
-      cssProcessor: require('cssnano'),
-      cssProcessorOptions: isProduction ? { safe: true, map: { inline: false } }: { safe: true,autoprefixer: {remove: false}}
-    }),
+    // new OptimizeCssAssetsPlugin({
+    //   assetNameRegExp: /\.css$/,
+    //   cssProcessor: require('cssnano'),
+    //   cssProcessorOptions: isProduction ? { safe: true, map: { inline: false } }: { safe: true,autoprefixer: {remove: false}}
+    // }),
     new VueLoaderPlugin(),
     //区分不同模式采用不用配置
     new HtmlWebpackPlugin({
-      template: isMdlegacy ? config.route.dhtml : config.route.html,
+      template: config.route.html,
       inject: 'body',
       filename: 'index.html',
       minify: {
@@ -126,15 +131,15 @@ const webpackBasesConfig = {
         removeScriptTypeAttributes: true,
         removeAttributeQuotes: true
       },
-      chunksSortMode: 'dependency',
-      serviceWorkerJson: !isLegacy && !isMdlegacy && isProduction ? `<link rel="manifest" href="` + swpublicPath + `manifest.json">` : '',
-      serviceWorkerLoader: !isLegacy && !isMdlegacy && isProduction ? `<script>!function () { "use strict"; var a = Boolean("localhost" === window.location.hostname || "[::1]" === window.location.hostname || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)); window.addEventListener("load", function () { "serviceWorker" in navigator && ("https:" === window.location.protocol || a) && navigator.serviceWorker.register("` + swpublicPath + `service-worker.js").then(function (a) { a.onupdatefound = function () { if (navigator.serviceWorker.controller) { var b = a.installing; b.onstatechange = function () { switch (b.state) { case "installed": break; case "redundant": throw new Error("The installing service worker became redundant.") } } } } }).catch(function (a) { console.error("Error during service worker registration:", a) }) }) }();</script>` : ''
+      chunksSortMode: 'auto',
+      serviceWorkerJson:   isProduction ? `<link rel="manifest" href="` + swpublicPath + `manifest.json">` : '',
+      serviceWorkerLoader: isProduction ? `<script>!function () { "use strict"; var a = Boolean("localhost" === window.location.hostname || "[::1]" === window.location.hostname || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)); window.addEventListener("load", function () { "serviceWorker" in navigator && ("https:" === window.location.protocol || a) && navigator.serviceWorker.register("` + swpublicPath + `service-worker.js").then(function (a) { a.onupdatefound = function () { if (navigator.serviceWorker.controller) { var b = a.installing; b.onstatechange = function () { switch (b.state) { case "installed": break; case "redundant": throw new Error("The installing service worker became redundant.") } } } } }).catch(function (a) { console.error("Error during service worker registration:", a) }) }) }();</script>` : ''
     })
   ]
 }
 
 //构建模式添加PWA功能
-if (!isLegacy && !isMdlegacy && isProduction) {
+if (isProduction) {
   webpackBasesConfig.plugins.push(
     new GenerateJsonPlugin(config.file.manifestName,
       {
@@ -209,24 +214,6 @@ if (!isLegacy && !isMdlegacy && isProduction) {
           handler: 'NetworkFirst'
         }
       ]
-    })
-  )
-}
-
-//除了回退模式外，其他模式先构建异步文件，再构建预加载文件，以及复制相关文件
-if (!isMdlegacy) {
-  webpackBasesConfig.plugins.push(
-    new PreloadWebpackPlugin({
-      rel: 'prefetch',
-      include: 'asyncChunks'
-    }),
-    new PreloadWebpackPlugin({
-      rel: 'preload',
-      include: 'initial',
-      as(entry) {
-        if (/\.css$/.test(entry)) return 'style';
-        return 'script';
-      }
     }),
     new CopyWebpackPlugin({
       patterns:[{
@@ -236,17 +223,5 @@ if (!isMdlegacy) {
     })
   )
 }
-
-//首先构建v-src中的模板，在构建完后，基于这个基础，再二次构建目标的文件夹模板
-if (isModern || isMdlegacy) {
-  webpackBasesConfig.plugins.push(
-    new ModuleHtmlPlugin({
-      template: isModern ? config.route.html : config.route.dhtml,
-      filename: 'index.html',
-      inject: 'body'
-    })
-  )
-}
-
 
 module.exports = webpackBasesConfig

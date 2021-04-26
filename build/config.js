@@ -4,7 +4,6 @@ const root = path.resolve(__dirname, '..')
 const vdist = 'v-dist'
 const vsrc = 'v-src'
 const slash = '/'
-const current = './'
 
 const d_root = path.resolve(root, vdist)
 const s_root = path.resolve(root, vsrc)

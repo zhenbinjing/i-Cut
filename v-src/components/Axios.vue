@@ -12,17 +12,17 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import Loading from '@/loading.vue';
+import { mapGetters } from "vuex";
+import Loading from "@/loading.vue";
 
-const fetchTextData = (store) => store.dispatch('getText');
+const fetchTextData = (store) => store.dispatch("getText");
 
 export default {
   components: { Loading },
   prefetch: fetchTextData,
   computed: {
     ...mapGetters({
-      TextData: 'getText',
+      TextData: "getText",
     }),
   },
   mounted() {

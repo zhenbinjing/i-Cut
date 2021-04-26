@@ -81,7 +81,7 @@ module.exports = function (config) {
         }, {
           test: /\.js$/,
           loader: 'babel-loader',
-          query: { presets: ['@babel/preset-env'] }
+         // query: { presets: ['@babel/preset-env'] }
         }]
       }
     },
