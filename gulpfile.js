@@ -519,11 +519,9 @@ gulp.task('default', gulp.series(
   'webpAll',
   'baseAll',
   'criticals',
-  'jsMin'
-));
-
-gulp.task('online', gulp.series(
+  'jsMin',
   'revAll',
   'PWA',
   'htmlAll'
 ));
+

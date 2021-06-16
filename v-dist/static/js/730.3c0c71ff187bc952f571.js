@@ -1,6 +1,6 @@
-(self["webpackChunki_cut"] = self["webpackChunki_cut"] || []).push([[464],{
+(self["webpackChunki_cut"] = self["webpackChunki_cut"] || []).push([[730],{
 
-/***/ 4464:
+/***/ 2730:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,7 +12,7 @@ __webpack_require__.d(__webpack_exports__, {
   "default": function() { return /* binding */ Axios; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/Axios.vue?vue&type=template&id=729515ec&
+;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/Axios.vue?vue&type=template&id=5fb9750c&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"axios"},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.TextData == ''),expression:"TextData == ''"}]},[_c('Loading')],1),_vm._v(" "),_vm._l((_vm.TextData),function(textdatas){return _c('div',{key:textdatas.value,staticClass:"axios_text"},[_vm._v("\n    "+_vm._s(textdatas.value)+"\n  ")])})],2)}
 var staticRenderFns = []
 
@@ -71,7 +71,7 @@ var component = (0,componentNormalizer/* default */.Z)(
 
 
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0,defineProperty/* default */.Z)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -92,7 +92,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 var fetchTextData = function fetchTextData(store) {
-  return store.dispatch("getText");
+  return store.dispatch('getText');
 };
 
 /* harmony default export */ var Axiosvue_type_script_lang_js_ = ({
@@ -101,7 +101,7 @@ var fetchTextData = function fetchTextData(store) {
   },
   prefetch: fetchTextData,
   computed: _objectSpread({}, (0,vuex_esm/* mapGetters */.Se)({
-    TextData: "getText"
+    TextData: 'getText'
   })),
   mounted: function mounted() {
     fetchTextData(this.$store);
@@ -134,4 +134,4 @@ var Axios_component = (0,componentNormalizer/* default */.Z)(
 /***/ })
 
 }]);
-//# sourceMappingURL=464.c1418b9578b475f5762e.js.map
+//# sourceMappingURL=730.3c0c71ff187bc952f571.js.map

@@ -1,7 +1,7 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 5000:
+/***/ 4759:
 /***/ (function(__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -58,7 +58,7 @@ var vue_runtime_min = __webpack_require__(3718);
 var vue_runtime_min_default = /*#__PURE__*/__webpack_require__.n(vue_runtime_min);
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__(629);
-;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/App.vue?vue&type=template&id=586c016e&
+;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/App.vue?vue&type=template&id=43261ea4&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('Hello',{attrs:{"data":_vm.data}}),_vm._v(" "),_c('Router')],1)}
 var staticRenderFns = []
 
@@ -66,9 +66,9 @@ var staticRenderFns = []
 // EXTERNAL MODULE: ./node_modules/axios/index.js
 var axios = __webpack_require__(9669);
 var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
-;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/hello.vue?vue&type=template&id=f22570c4&
-var hellovue_type_template_id_f22570c4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"hello"},[_c('p',{staticClass:"logo"},[_c('img',{attrs:{"src":_vm.data.avatar,"alt":"logo"}})])])}
-var hellovue_type_template_id_f22570c4_staticRenderFns = []
+;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/hello.vue?vue&type=template&id=5ba2903e&
+var hellovue_type_template_id_5ba2903e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"hello"},[_c('p',{staticClass:"logo"},[_c('img',{attrs:{"src":_vm.data.avatar,"alt":"logo"}})])])}
+var hellovue_type_template_id_5ba2903e_staticRenderFns = []
 
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/hello.vue?vue&type=script&lang=js&
@@ -86,7 +86,7 @@ var hellovue_type_template_id_f22570c4_staticRenderFns = []
       type: Object,
       default: function _default() {
         return {
-          avatar: ""
+          avatar: ''
         }; // 默认值
       }
     }
@@ -106,8 +106,8 @@ var componentNormalizer = __webpack_require__(1900);
 ;
 var component = (0,componentNormalizer/* default */.Z)(
   components_hellovue_type_script_lang_js_,
-  hellovue_type_template_id_f22570c4_render,
-  hellovue_type_template_id_f22570c4_staticRenderFns,
+  hellovue_type_template_id_5ba2903e_render,
+  hellovue_type_template_id_5ba2903e_staticRenderFns,
   false,
   null,
   null,
@@ -161,7 +161,7 @@ var router_component = (0,componentNormalizer/* default */.Z)(
   created: function created() {
     var _this = this;
 
-    axios_default().get("https://i-cut.cc/axios.json").then(function (res) {
+    axios_default().get('https://i-cut.cc/axios.json').then(function (res) {
       _this.data = res.data.logo;
     });
   }
@@ -202,12 +202,12 @@ var es_string_iterator = __webpack_require__(8783);
 var web_dom_collections_iterator = __webpack_require__(3948);
 // EXTERNAL MODULE: ./node_modules/vue-router/dist/vue-router.esm.js
 var vue_router_esm = __webpack_require__(8345);
-;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/Vr1.vue?vue&type=template&id=55efa808&
-var Vr1vue_type_template_id_55efa808_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-router"},[_vm._v("\n  "+_vm._s(_vm.RouterData.value)+"\n  "),_vm._m(0)])}
-var Vr1vue_type_template_id_55efa808_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"router_img"},[_c('img',{attrs:{"src":__webpack_require__(6551),"alt":""}})])}]
+;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/Vr1.vue?vue&type=template&id=bb04e620&
+var Vr1vue_type_template_id_bb04e620_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-router"},[_vm._v("\n  "+_vm._s(_vm.RouterData.value)+"\n  "),_vm._m(0)])}
+var Vr1vue_type_template_id_bb04e620_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"router_img"},[_c('img',{attrs:{"src":__webpack_require__(6551),"alt":""}})])}]
 
 
-;// CONCATENATED MODULE: ./v-src/components/Vr1.vue?vue&type=template&id=55efa808&
+;// CONCATENATED MODULE: ./v-src/components/Vr1.vue?vue&type=template&id=bb04e620&
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/Vr1.vue?vue&type=script&lang=js&
 
@@ -218,7 +218,7 @@ var Vr1vue_type_template_id_55efa808_staticRenderFns = [function () {var _vm=thi
 
 
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0,defineProperty/* default */.Z)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -234,13 +234,13 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 var fetchRouterlData = function fetchRouterlData(store) {
-  return store.dispatch("getRouter");
+  return store.dispatch('getRouter');
 };
 
 /* harmony default export */ var Vr1vue_type_script_lang_js_ = ({
   prefetch: fetchRouterlData,
   computed: _objectSpread({}, (0,vuex_esm/* mapGetters */.Se)({
-    RouterData: "getRouter"
+    RouterData: 'getRouter'
   })),
   mounted: function mounted() {
     fetchRouterlData(this.$store);
@@ -258,8 +258,8 @@ var fetchRouterlData = function fetchRouterlData(store) {
 ;
 var Vr1_component = (0,componentNormalizer/* default */.Z)(
   components_Vr1vue_type_script_lang_js_,
-  Vr1vue_type_template_id_55efa808_render,
-  Vr1vue_type_template_id_55efa808_staticRenderFns,
+  Vr1vue_type_template_id_bb04e620_render,
+  Vr1vue_type_template_id_bb04e620_staticRenderFns,
   false,
   null,
   null,
@@ -280,28 +280,28 @@ var Vr1_component = (0,componentNormalizer/* default */.Z)(
 vue_runtime_min_default().use(vue_router_esm/* default */.Z);
 
 var Axios = function Axios() {
-  return __webpack_require__.e(/* import() */ 464).then(__webpack_require__.bind(__webpack_require__, 4464));
+  return __webpack_require__.e(/* import() */ 730).then(__webpack_require__.bind(__webpack_require__, 2730));
 };
 
 var Vuexs = function Vuexs() {
-  return __webpack_require__.e(/* import() */ 709).then(__webpack_require__.bind(__webpack_require__, 3709));
+  return __webpack_require__.e(/* import() */ 570).then(__webpack_require__.bind(__webpack_require__, 2570));
 };
 
 /* harmony default export */ var v_src_router = (new vue_router_esm/* default */.Z({
   routes: [{
-    path: "/",
-    redirect: "/vr1"
+    path: '/',
+    redirect: '/vr1'
   }, {
-    path: "/vr1",
+    path: '/vr1',
     component: Vr1
   }, {
-    path: "/axios",
+    path: '/axios',
     component: Axios
   }, {
-    path: "/vuex",
+    path: '/vuex',
     component: Vuexs
   }],
-  linkActiveClass: "active"
+  linkActiveClass: 'active'
 }));
 ;// CONCATENATED MODULE: ./v-src/vuex/getters.js
 var getRouter = function getRouter(state) {
@@ -315,32 +315,32 @@ var getCount = function getCount(state) {
 };
 ;// CONCATENATED MODULE: ./v-src/vuex/actions.js
 
-var httpGet = "https://i-cut.cc/axios.json";
+var httpGet = 'https://i-cut.cc/axios.json';
 var actions_getRouter = function getRouter(_ref) {
   var commit = _ref.commit;
   return axios_default().get(httpGet).then(function (res) {
-    commit("ROUTER_LIST", res.data);
+    commit('ROUTER_LIST', res.data);
   });
 };
 var actions_getText = function getText(_ref2) {
   var commit = _ref2.commit;
   return axios_default().get(httpGet).then(function (res) {
-    commit("TEXT_LIST", res.data);
+    commit('TEXT_LIST', res.data);
   });
 };
 var loadings = function loadings(_ref3) {
   var commit = _ref3.commit;
   return axios_default().get(httpGet).then(function (res) {
-    commit("COUNT_LIST", res.data);
+    commit('COUNT_LIST', res.data);
   });
 };
 var increment = function increment(_ref4) {
   var commit = _ref4.commit;
-  return commit("increment");
+  return commit('increment');
 };
 var decrement = function decrement(_ref5) {
   var commit = _ref5.commit;
-  return commit("decrement");
+  return commit('decrement');
 };
 ;// CONCATENATED MODULE: ./v-src/vuex/mutations.js
 var ROUTER_LIST = function ROUTER_LIST(state, data) {
@@ -352,8 +352,8 @@ var TEXT_LIST = function TEXT_LIST(state, data) {
 var COUNT_LIST = function COUNT_LIST(state, data) {
   state.count = data.number.count;
 };
-var texts = "空";
-var ctexts = "点击加载初始化值";
+var texts = '空';
+var ctexts = '点击加载初始化值';
 var mutations_increment = function increment(state) {
   if (state.count === texts) {
     state.count = ctexts;
@@ -381,8 +381,8 @@ var mutations_decrement = function decrement(state) {
 vue_runtime_min_default().use(vuex_esm/* default */.ZP);
 var state = {
   router: {},
-  text: "",
-  count: "空"
+  text: '',
+  count: '空'
 }; // 整合初始状态和变更函数，我们就得到了我们所需的 store
 // 至此，这个 store 就可以链接到我们的应用中
 
@@ -401,7 +401,7 @@ var state = {
 
 
 
-function main_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function main_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function main_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { main_ownKeys(Object(source), true).forEach(function (key) { (0,defineProperty/* default */.Z)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { main_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -413,7 +413,7 @@ function main_objectSpread(target) { for (var i = 1; i < arguments.length; i++) 
 (vue_runtime_min_default()).config.productionTip = false;
 vue_runtime_min_default().use(vuex_esm/* default */.ZP);
 var app = new (vue_runtime_min_default())(main_objectSpread({
-  el: "#app",
+  el: '#app',
   router: v_src_router,
   store: store
 }, App));
@@ -533,7 +533,7 @@ module.exports = __webpack_require__.p + "static/img/hld.f056505.png";
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/js/" + chunkId + "." + {"464":"c1418b9578b475f5762e","709":"635f16f05dddabc13870"}[chunkId] + ".js";
+/******/ 			return "static/js/" + chunkId + "." + {"570":"96a713721182642b9d10","730":"3c0c71ff187bc952f571"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -542,7 +542,7 @@ module.exports = __webpack_require__.p + "static/img/hld.f056505.png";
 /******/ 		// This function allow to reference all chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/css/index." + "c1418b9578b475f5762e" + ".css";
+/******/ 			return "static/css/index." + "3c0c71ff187bc952f571" + ".css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -682,7 +682,7 @@ module.exports = __webpack_require__.p + "static/img/hld.f056505.png";
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 			var cssChunks = {"464":1};
+/******/ 			var cssChunks = {"730":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {
@@ -792,9 +792,9 @@ module.exports = __webpack_require__.p + "static/img/hld.f056505.png";
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [998], function() { return __webpack_require__(5000); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [998], function() { return __webpack_require__(4759); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.0190ccd6f77ae0192e02.js.map
+//# sourceMappingURL=main.13565b68d3308b73c24f.js.map
