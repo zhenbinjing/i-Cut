@@ -1,7 +1,7 @@
 ﻿i-Cut
 ===========================
 
-[![Build Status](https://travis-ci.org/zhenbinjing/i-Cut.svg?branch=master)](https://travis-ci.org/zhenbinjing/i-Cut)
+[![Build Status](https://api.travis-ci.com/zhenbinjing/i-Cut.svg?branch=master)](https://travis-ci.com/zhenbinjing/i-Cut)
 [![codecov](https://codecov.io/gh/zhenbinjing/i-Cut/branch/master/graph/badge.svg)](https://codecov.io/gh/zhenbinjing/i-Cut)
 [![dependencies Status](https://david-dm.org/zhenbinjing/i-Cut/status.svg)](https://david-dm.org/zhenbinjing/i-Cut)
 [![devDependencies Status](https://david-dm.org/zhenbinjing/i-Cut/dev-status.svg)](https://david-dm.org/zhenbinjing/i-Cut?type=dev)
