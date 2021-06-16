@@ -1,6 +1,6 @@
 {
   "name": "i-cut",
-  "version": "2.31.0",
+  "version": "2.31.1",
   "description": "Personal technical style and development direction",
   "main": "gulpfile.js",
   "scripts": {
@@ -10,8 +10,7 @@
     "lint": "eslint --fix v-src/**/*.{js,vue}",
     "format": "prettier --write v-src/**/*.{js,vue}",
     "rmin": "rollup -c ./build/rollup.config.js",
-    "test": "karma start ./build/karma.config.js --single-run",
-    "sauce": "karma start ./build/karma.config.sauce.js --single-run"
+    "test": "karma start ./build/karma.config.js --single-run"
   },
   "repository": {
     "type": "git",
