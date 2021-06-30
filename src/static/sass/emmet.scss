@@ -1,4 +1,5 @@
-﻿//======================================变量=======================================//
+﻿@use "sass:math";
+//======================================变量=======================================//
 
 //常用值//
 $a:auto; $f:fixed; $j:justify; $h:hidden; $n:none; $v:visible; $s:scroll; $nl:normal; $bh:both; $pd:padding-box; $bb:border-box; $cb:content-box;
@@ -18,7 +19,7 @@ $nb0:0; $nb1:1%; $nb50:50%; $nb100:100%;
 }
 //透明度
 @for $i from 0 through 10 {
-	.op-#{$i}{opacity:$i/10; }
+	.op-#{$i}{opacity: math.div($i, 10); }
 }
 //缩进
 @for $i from 0 through 10 {
@@ -184,33 +185,33 @@ $nb: 100;
 
 	//行高倍数//
 	.lh-#{$grid}-0{line-height: 0;}
-	@for $i from 10 through $nb {.lh-#{$grid}-#{$i}{line-height: $i/10;}}
+	@for $i from 10 through $nb {.lh-#{$grid}-#{$i}{line-height: math.div($i, 10);}}
 
 	//box//
 	@for $i from 0 through $nb {
 
 	//字体//
-	.fz-#{$grid}-#{$i}{font-size:$i/$nb + rem;}
+	.fz-#{$grid}-#{$i}{font-size: math.div($i, $nb) + rem;}
 
 	//表格间距//
-	.bdsp-#{$grid}-#{$i}{border-spacing:$i/$nb + rem;}
+	.bdsp-#{$grid}-#{$i}{border-spacing: math.div($i, $nb) + rem;}
 
 	//内间距//
-	.p-#{$grid}-#{$i}{padding:$i/$nb + rem;}
-	.pt-#{$grid}-#{$i}{padding-top:$i/$nb + rem;}
-	.pr-#{$grid}-#{$i}{padding-right:$i/$nb + rem;}
-	.pb-#{$grid}-#{$i}{padding-bottom:$i/$nb + rem;}
-	.pl-#{$grid}-#{$i}{padding-left:$i/$nb + rem;}
+	.p-#{$grid}-#{$i}{padding:math.div($i, $nb) + rem;}
+	.pt-#{$grid}-#{$i}{padding-top:math.div($i, $nb) + rem;}
+	.pr-#{$grid}-#{$i}{padding-right:math.div($i, $nb) + rem;}
+	.pb-#{$grid}-#{$i}{padding-bottom:math.div($i, $nb) + rem;}
+	.pl-#{$grid}-#{$i}{padding-left:math.div($i, $nb) + rem;}
 
 	//外间距//
-	.m-#{$grid}-#{$i}{margin:$i/$nb + rem;}
-	.mt-#{$grid}-#{$i}{margin-top:$i/$nb + rem;}
-	.mr-#{$grid}-#{$i}{margin-right:$i/$nb + rem;}
-	.mb-#{$grid}-#{$i}{margin-bottom:$i/$nb + rem;}
-  .ml-#{$grid}-#{$i}{margin-left:$i/$nb + rem;}
+	.m-#{$grid}-#{$i}{margin:math.div($i, $nb) + rem;}
+	.mt-#{$grid}-#{$i}{margin-top:math.div($i, $nb)+ rem;}
+	.mr-#{$grid}-#{$i}{margin-right:math.div($i, $nb) + rem;}
+	.mb-#{$grid}-#{$i}{margin-bottom:math.div($i, $nb) + rem;}
+  .ml-#{$grid}-#{$i}{margin-left:math.div($i, $nb) + rem;}
 
   //圆角//
-  .bdrs-#{$grid}-#{$i}{border-radius:$i/$nb + rem;}
+  .bdrs-#{$grid}-#{$i}{border-radius:math.div($i, $nb) + rem;}
 
   }
 }

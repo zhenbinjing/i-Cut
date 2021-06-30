@@ -18,16 +18,16 @@ $cc-data:(c:color, bgc:background-color);
 @mixin color ($class,$varclass){
 	@content;
 	@each $color, $c0, $c1, $c2, $c3, $c4, $c5, $c6, $c7, $c8, $c9 in $color-data{
-		.#{$class}-#{$color}-0{#{$varclass}:$c0;}
-		.#{$class}-#{$color}-1{#{$varclass}:$c1;}
-		.#{$class}-#{$color}-2{#{$varclass}:$c2;}
-		.#{$class}-#{$color}-3{#{$varclass}:$c3;}
-		.#{$class}-#{$color}-4{#{$varclass}:$c4;}
-		.#{$class}-#{$color}-5{#{$varclass}:$c5;}
-		.#{$class}-#{$color}-6{#{$varclass}:$c6;}
-		.#{$class}-#{$color}-7{#{$varclass}:$c7;}
-		.#{$class}-#{$color}-8{#{$varclass}:$c8;}
-		.#{$class}-#{$color}-9{#{$varclass}:$c9;}
+		.#{$class}-#{''+$color}-0{#{$varclass}:$c0;}
+		.#{$class}-#{''+$color}-1{#{$varclass}:$c1;}
+		.#{$class}-#{''+$color}-2{#{$varclass}:$c2;}
+		.#{$class}-#{''+$color}-3{#{$varclass}:$c3;}
+		.#{$class}-#{''+$color}-4{#{$varclass}:$c4;}
+		.#{$class}-#{''+$color}-5{#{$varclass}:$c5;}
+		.#{$class}-#{''+$color}-6{#{$varclass}:$c6;}
+		.#{$class}-#{''+$color}-7{#{$varclass}:$c7;}
+		.#{$class}-#{''+$color}-8{#{$varclass}:$c8;}
+		.#{$class}-#{''+$color}-9{#{$varclass}:$c9;}
 		}
 }
 @each $class, $varclass in $cc-data{

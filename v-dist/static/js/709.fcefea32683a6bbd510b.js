@@ -1,6 +1,6 @@
-(self["webpackChunki_cut"] = self["webpackChunki_cut"] || []).push([[570],{
+(self["webpackChunki_cut"] = self["webpackChunki_cut"] || []).push([[709],{
 
-/***/ 2570:
+/***/ 3709:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,14 +12,14 @@ __webpack_require__.d(__webpack_exports__, {
   "default": function() { return /* binding */ Vuexs; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/Vuexs.vue?vue&type=template&id=13800674&
+;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/Vuexs.vue?vue&type=template&id=48b67718&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vuex"},[_c('Display'),_vm._v(" "),_c('Increment')],1)}
 var staticRenderFns = []
 
 
-;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/display.vue?vue&type=template&id=6f1524c8&
-var displayvue_type_template_id_6f1524c8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"display"},[_c('div',{staticClass:"fz40"},[_vm._v("Count is "+_vm._s(_vm.getCount))])])}
-var displayvue_type_template_id_6f1524c8_staticRenderFns = []
+;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/display.vue?vue&type=template&id=2baf34f0&
+var displayvue_type_template_id_2baf34f0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"display"},[_c('div',{staticClass:"fz40"},[_vm._v("Count is "+_vm._s(_vm.getCount))])])}
+var displayvue_type_template_id_2baf34f0_staticRenderFns = []
 
 
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
@@ -33,7 +33,7 @@ var vuex_esm = __webpack_require__(629);
 //
 
 /* harmony default export */ var displayvue_type_script_lang_js_ = ({
-  computed: (0,vuex_esm/* mapGetters */.Se)(['getCount'])
+  computed: (0,vuex_esm/* mapGetters */.Se)(["getCount"])
 });
 ;// CONCATENATED MODULE: ./v-src/components/display.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_displayvue_type_script_lang_js_ = (displayvue_type_script_lang_js_); 
@@ -49,8 +49,8 @@ var componentNormalizer = __webpack_require__(1900);
 ;
 var component = (0,componentNormalizer/* default */.Z)(
   components_displayvue_type_script_lang_js_,
-  displayvue_type_template_id_6f1524c8_render,
-  displayvue_type_template_id_6f1524c8_staticRenderFns,
+  displayvue_type_template_id_2baf34f0_render,
+  displayvue_type_template_id_2baf34f0_staticRenderFns,
   false,
   null,
   null,
@@ -59,9 +59,9 @@ var component = (0,componentNormalizer/* default */.Z)(
 )
 
 /* harmony default export */ var display = (component.exports);
-;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/increment.vue?vue&type=template&id=25880655&
-var incrementvue_type_template_id_25880655_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"increment"},[_c('button',{on:{"click":_vm.loadings}},[_vm._v("加载初始值")]),_vm._v(" "),_c('button',{on:{"click":_vm.increment}},[_vm._v("增加 1")]),_vm._v(" "),_c('button',{on:{"click":_vm.decrement}},[_vm._v("减少 1")])])}
-var incrementvue_type_template_id_25880655_staticRenderFns = []
+;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/increment.vue?vue&type=template&id=09be7515&
+var incrementvue_type_template_id_09be7515_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"increment"},[_c('button',{on:{"click":_vm.loadings}},[_vm._v("加载初始值")]),_vm._v(" "),_c('button',{on:{"click":_vm.increment}},[_vm._v("增加 1")]),_vm._v(" "),_c('button',{on:{"click":_vm.decrement}},[_vm._v("减少 1")])])}
+var incrementvue_type_template_id_09be7515_staticRenderFns = []
 
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./v-src/components/increment.vue?vue&type=script&lang=js&
@@ -75,7 +75,7 @@ var incrementvue_type_template_id_25880655_staticRenderFns = []
 //
 
 /* harmony default export */ var incrementvue_type_script_lang_js_ = ({
-  methods: (0,vuex_esm/* mapActions */.nv)(['loadings', 'increment', 'decrement'])
+  methods: (0,vuex_esm/* mapActions */.nv)(["loadings", "increment", "decrement"])
 });
 ;// CONCATENATED MODULE: ./v-src/components/increment.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_incrementvue_type_script_lang_js_ = (incrementvue_type_script_lang_js_); 
@@ -89,8 +89,8 @@ var incrementvue_type_template_id_25880655_staticRenderFns = []
 ;
 var increment_component = (0,componentNormalizer/* default */.Z)(
   components_incrementvue_type_script_lang_js_,
-  incrementvue_type_template_id_25880655_render,
-  incrementvue_type_template_id_25880655_staticRenderFns,
+  incrementvue_type_template_id_09be7515_render,
+  incrementvue_type_template_id_09be7515_staticRenderFns,
   false,
   null,
   null,
@@ -138,4 +138,4 @@ var Vuexs_component = (0,componentNormalizer/* default */.Z)(
 /***/ })
 
 }]);
-//# sourceMappingURL=570.96a713721182642b9d10.js.map
+//# sourceMappingURL=709.fcefea32683a6bbd510b.js.map

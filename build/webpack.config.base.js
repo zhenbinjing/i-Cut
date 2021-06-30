@@ -1,6 +1,5 @@
 ﻿const glob = require('glob-all')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
-//const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader')
@@ -112,11 +111,6 @@ const webpackBasesConfig = {
     new MiniCssExtractPlugin({
       filename: config.file.miniCssName
     }),
-    // new OptimizeCssAssetsPlugin({
-    //   assetNameRegExp: /\.css$/,
-    //   cssProcessor: require('cssnano'),
-    //   cssProcessorOptions: isProduction ? { safe: true, map: { inline: false } }: { safe: true,autoprefixer: {remove: false}}
-    // }),
     new VueLoaderPlugin(),
     //区分不同模式采用不用配置
     new HtmlWebpackPlugin({

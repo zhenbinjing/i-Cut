@@ -1,4 +1,6 @@
-﻿$sg: .15rem;
+﻿@use "sass:math";
+
+$sg: .15rem;
 $w1: 751;
 $w2: 992;
 $w3: 1200;
@@ -27,9 +29,9 @@ $column: 12;
 	@content;
 
 	//flex
-	@for $i from 1 through $column {.col-#{$grid}-#{$i}{flex-basis: $nb / $column * $i*$nb1; max-width: $nb / $column * $i*$nb1;}}
+	@for $i from 1 through $column {.col-#{$grid}-#{$i}{flex-basis: math.div($nb, $column) * $i*$nb1; max-width: math.div($nb, $column) * $i * $nb1;}}
 	@for $i from 0 through $column {.grow-#{$grid}-#{$i}{flex-grow: $i;} .shrink-#{$grid}-#{$i}{flex-shrink: $i;}}
-	@for $i from 0 through ($column - 1) {.offset-#{$grid}-#{$i}{margin-left: $nb / $column * $i*$nb1;}}
+	@for $i from 0 through ($column - 1) {.offset-#{$grid}-#{$i}{margin-left: math.div($nb, $column) * $i*$nb1;}}
 
 	$fxd: (row, row),(rr, row-reverse),(cn, column),(cr,column-reverse );
 	@each $val, $direction in $fxd {
@@ -100,9 +102,9 @@ $column: 12;
 
 	//单元格的行列间距
 		@for $i from 1 through $nb {
-			.gapr-#{$grid}-#{$i}{ grid-row-gap: $i/$nb + rem;}
-			.gapc-#{$grid}-#{$i}{ grid-column-gap: $i/$nb + rem;}
-			.gap-#{$grid}-#{$i}{ grid-gap: $i/$nb + rem;}
+			.gapr-#{$grid}-#{$i}{ grid-row-gap: math.div($i, $nb) + rem;}
+			.gapc-#{$grid}-#{$i}{ grid-column-gap: math.div($i, $nb)+ rem;}
+			.gap-#{$grid}-#{$i}{ grid-gap: math.div($i, $nb) + rem;}
 		}
 
 	//网格自动流
