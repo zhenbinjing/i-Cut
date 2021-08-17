@@ -181,11 +181,11 @@ if (isProduction) {
           options: {
             // 这里可以设置 cacheName 和添加插件
             plugins: [
-              {
-                cacheableResponse: {
-                  statuses: [0, 200]
-                }
-              }
+              // {
+              //   cacheableResponse: {
+              //     statuses: [0, 200]
+              //   }
+              // }
             ]
           }
         },
@@ -198,9 +198,9 @@ if (isProduction) {
               maxEntries: 60,
               maxAgeSeconds: 30 * 24 * 60 * 60 // 30 Days
             },
-            cacheableResponse: {
-              statuses: [0, 200]
-            }
+            // cacheableResponse: {
+            //   statuses: [0, 200]
+            // }
           }
         },
         {

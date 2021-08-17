@@ -1,9 +1,9 @@
+"use strict";
 (self["webpackChunki_cut"] = self["webpackChunki_cut"] || []).push([[709],{
 
 /***/ 3709:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
