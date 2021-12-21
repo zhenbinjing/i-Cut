@@ -1,4 +1,6 @@
-﻿﻿const gulp = require('gulp');
+﻿﻿// import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
+const gulp = require('gulp');
 const concat = require('gulp-concat');                        //- 多个文件合并为一个
 const replace = require('gulp-replace');                      //- 文本替换
 const postcss = require('gulp-postcss');                      //- px转rem

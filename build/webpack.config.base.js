@@ -48,7 +48,13 @@ const webpackBasesConfig = {
         use: [
           isProduction ? MiniCssExtractPlugin.loader : 
           'style-loader',
-          'css-loader',
+          {
+            loader: "css-loader",
+            options: {
+              url: true, 
+              esModule: false  //6.0之后默认是开启了 esModule: true
+            },
+          },
           'postcss-loader',
           'sass-loader'
         ],
@@ -70,7 +76,11 @@ const webpackBasesConfig = {
             }
           },
           {
-            loader: 'image-webpack-loader'
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true, // webpack@1.x
+              disable: true, // webpack@2.x and newer
+            }
           }
         ]
       },

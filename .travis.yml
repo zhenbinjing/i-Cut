@@ -1,14 +1,13 @@
 sudo: false
 language: node_js
 node_js:
-  - "10.24.0"
+  - "12.22.4"
 before_install:
   - npm install
 cache:
   directories:
     - node_modules
 dist: trusty # needs Ubuntu Trusty
-sudo: false  # no need for virtualization.
 addons:
   chrome: stable # have Travis install chrome stable
 script:
