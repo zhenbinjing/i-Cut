@@ -5,8 +5,6 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin') // 这个
 const portfinder = require('portfinder'); // 查找一个未使用的端口
 const packageConfig = require('../package.json')
 
-const HOST = process.env.HOST
-const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseConfig, {
   target: 'web',
@@ -21,13 +19,8 @@ const devWebpackConfig = merge(baseConfig, {
     publicPath: config.route.publicPath
   },
   devServer: {
-    //是否不输出日记
-    quiet: true,
-    //打开浏览器
-    open: true,
-    host: HOST || 'localhost',
-    port: PORT || 8080,
-    publicPath: config.route.publicPath
+    port: 8080,
+    open: true
   }
 });
 

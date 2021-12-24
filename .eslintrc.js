@@ -10,10 +10,8 @@ module.exports = {
     ],
     "plugins": ["prettier", "import", "vue"],
     "parserOptions": {
-      "parser": "babel-eslint",
-      "sourceType": "module",
-      "allowImportExportEverywhere": true,
-      "codeFrame": false
+      "parser": "@babel/eslint-parser",
+      "requireConfigFile": false
     },
     "rules": {
       // 使用单引号
@@ -33,11 +31,12 @@ module.exports = {
         "singleQuote": true
       }],
       //强制每行的最大属性数
-      "vue/max-attributes-per-line" :["error", {
-        "singleline": 4, //单行的时候，最多三个属性
-        "multiline": { //多行的时候，最多一个属性
-          "max": 1,
-          "allowFirstLine": true  //多行时，属性对齐
+      "vue/max-attributes-per-line": ["error", {
+        "singleline": {
+          "max": 4
+        },      
+        "multiline": {
+          "max": 1
         }
       }],
       "vue/html-indent": "off",
