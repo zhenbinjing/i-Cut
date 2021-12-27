@@ -1,9 +1,8 @@
 ﻿const config = require('./config')
 const { merge } = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
+const TerserPlugin = require("terser-webpack-plugin")
 
-
-const isLegacy = process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? '@babel/polyfill' : '';
 
 webpackConfig = merge(baseConfig, {
   mode: 'production',
@@ -15,36 +14,26 @@ webpackConfig = merge(baseConfig, {
     chunkFilename: config.file.outputJsName,
     publicPath: config.route.publicPath //在github上预览(客户端渲染)
   },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        vendors: {
-          name: `chunk-vendors`,
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          chunks: 'initial'
-        },
-        common: {
-          name: `chunk-common`,
-          minChunks: 2,
-          priority: -20,
-          chunks: 'initial',
-          reuseExistingChunk: true
+  optimization:{
+    minimize: true,
+    minimizer: [new TerserPlugin({  test: /\.js(\?.*)?$/i,})],
+    runtimeChunk:'single',
+    splitChunks:{
+        cacheGroups:{
+            vendor:{
+                test:/[\\/]node_modules[\\/]/,
+                name:'vendor',
+                chunks:'all'
+            }
         }
-      }
-    }
-  },
+    },
+    usedExports:true
+},
   plugins: []
 });
 
-if(isLegacy){
-  webpackConfig.entry.push(
-    isLegacy,config.route.app
-  )
-}else{
   webpackConfig.entry.push(
     config.route.app
   )
-}
 
 module.exports = webpackConfig

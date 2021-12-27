@@ -33,7 +33,7 @@ module.exports = {
     videoUrlName: 'static/video/[name].[hash:7].[ext]',
     fontUrlName: 'static/font/[name].[hash:7].[ext]',
     miniCssName: 'static/css/index.[chunkhash].css',
-    outputJsName: process.env.LEGACY === 'legacy' || process.env.MDLEGACY === 'mdlegacy' ? 'static/js/legacy.[name].[chunkhash].js' : 'static/js/[name].[chunkhash].js',
+    outputJsName: 'static/js/[name].[chunkhash].js',
     devJsName: 'static/js/app.js',
     manifestName: 'manifest.json',
   },
